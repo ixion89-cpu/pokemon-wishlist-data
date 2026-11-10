@@ -396,6 +396,64 @@ function openFilters(id, payload) {
     if (e.target.id === "sheet") e.currentTarget.remove();
   });
 }
+function countryName(code) {
+  if (!code) return "";
+  try {
+    return new Intl.DisplayNames(["it"], { type: "region" }).of(code) || code;
+  } catch (e) {
+    return code;
+  }
+}
+function reviewLine(offer) {
+  const parts = [];
+  if (offer.avg_rating_percentage != null && offer.avg_rating_percentage !== "") {
+    parts.push(new Intl.NumberFormat("it-IT", { maximumFractionDigits: 0 }).format(offer.avg_rating_percentage) + "%");
+  }
+  if (offer.feedbacks_count) {
+    parts.push(new Intl.NumberFormat("it-IT", { useGrouping: true }).format(offer.feedbacks_count) + " recensioni");
+  }
+  return parts.join(" · ");
+}
+function offerRows(list, link, zero) {
+  const rows = Array.isArray(list) ? list : [];
+  if (!rows.length) return `<p class="quiet">Nessuna offerta ${zero ? "Zero" : "diretta"} in questo momento.</p>`;
+  return `<div class="offer-list">${rows.map((offer) => {
+    const bits = [reviewLine(offer), countryName(offer.country_code)].filter(Boolean);
+    if (zero && offer.ct_zero_avg_shipping_days != null && offer.ct_zero_avg_shipping_days !== "") {
+      bits.push("spedizione media " + offer.ct_zero_avg_shipping_days + " giorni");
+    }
+    const qty = offer.quantity != null ? "Qtà " + offer.quantity : "";
+    if (qty) bits.push(qty);
+    const href = link || "#";
+    return `<a class="offer-row" href="${esc(href)}" target="_blank" rel="noopener">
+      <div><div class="who">${esc(offer.username || "Venditore")}</div><p class="meta">${esc(bits.join(" · "))}</p></div>
+      <div class="price">${money(offer.price_eur)}</div>
+    </a>`;
+  }).join("")}</div>`;
+}
+function offersSection(card, link) {
+  return `<section class="offers">
+    <h2>Migliori offerte</h2>
+    <p class="quiet">Near Mint, non gradate, ${card.target_language === "jp" ? "giapponese" : "italiano"}. Fino a 5 per lista.</p>
+    <h3>CardTrader Zero</h3>
+    ${offerRows(card.offers_zero, link, true)}
+    <h3>CardTrader</h3>
+    ${offerRows(card.offers_ct, link, false)}
+  </section>`;
+}
+function stockText(card) {
+  const qty = num(card.qty_mint_nm_target_lang);
+  const listings = num(card.listings_mint_nm_target_lang);
+  if (qty == null && listings == null) return "";
+  const zQty = num(card.qty_mint_nm_target_lang_zero);
+  const zList = num(card.listings_mint_nm_target_lang_zero);
+  const lang = card.target_language === "jp" ? "giapponese" : "italiano";
+  let line = `${qty == null ? "n/d" : qty} copie in vendita in ${lang}, condizione Mint o Near Mint`;
+  if (listings != null) line += ` · ${listings} annunci`;
+  if (zQty != null) line += ` · di cui ${zQty} copie Zero`;
+  if (zList != null) line += ` (${zList} annunci)`;
+  return `<p class="quiet">${esc(line)}</p>`;
+}
 function seriesFor(card) {
   const rows = (state.csv && state.csv.get(card.id)) || [];
   const target = [];
@@ -538,6 +596,8 @@ async function renderCard(id, cardId) {
     marketLine = `<p class="quiet">Mercato CardTrader, tutte le lingue: ${signedMoney(marketChange.diff)} dal ${formatDay(marketChange.start.date)} al ${formatDay(marketChange.end.date)}. Non è il prezzo in lingua target.</p>`;
   }
   const link = safeUrl(card.cardtrader_link);
+  const stockLine = stockText(card);
+  const offersHtml = offersSection(card, link);
   view.innerHTML = `
     <p class="kicker"><a href="#/c/${encodeURIComponent(id)}">‹ Raccoglitore</a></p>
     <div class="stage">
@@ -557,7 +617,9 @@ async function renderCard(id, cardId) {
       ${q.price == null && anyLang != null ? `<p class="quiet">Riferimento NM in altre lingue: ${money(anyLang)}. Non entra nel totale.</p>` : ""}
       ${marketLine}
       <p><span class="pill ${today ? "today" : ""}">${today ? "Aggiornato oggi" : "Aggiornato il " + formatDay(updated)}</span></p>
+      ${stockLine}
     </section>
+    ${offersHtml}
     <section class="chart-card">
       <div class="ranges">${available.map((p) => `<button class="chip ${p.id === state.cardRange ? "on" : ""}" type="button" data-card-range="${p.id}">${p.label}</button>`).join("")}</div>
       ${chartSvg(shown, false)}

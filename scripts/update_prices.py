@@ -118,16 +118,69 @@ def fetch(bid, lang=None, cond=None, page=1):
 
 
 def products(bid, lang=None, cond=None):
-    out, page, first = [], 1, None
+    out, page, first, extra = [], 1, None, {}
     while page <= 10:
         d = fetch(bid, lang, cond, page)
         first = first or d
         out += d.get("products") or []
+        extra.update(d.get("users_extra_data") or {})
         if d.get("products_last_page_reached", True):
             break
         page += 1
         time.sleep(1)
-    return out, first
+    return out, first, extra
+
+
+def is_zero_seller(p):
+    user = p.get("user")
+    return isinstance(user, dict) and bool(user.get("can_sell_via_hub"))
+
+
+def listing_qty(p):
+    try:
+        return int(p.get("quantity") or 0)
+    except (TypeError, ValueError):
+        return 0
+
+
+def offer_from(p, extra):
+    user = p.get("user") or {}
+    uid = user.get("id")
+    info = {}
+    if isinstance(extra, dict):
+        info = extra.get(str(uid)) or extra.get(uid) or {}
+        if not isinstance(info, dict):
+            info = {}
+    cents = (p.get("price") or {}).get("cents")
+    row = {
+        "user_id": uid,
+        "username": user.get("username"),
+        "country_code": user.get("country_code"),
+        "price_eur": round(cents / 100, 2) if isinstance(cents, (int, float)) else None,
+        "quantity": listing_qty(p),
+        "avg_rating_percentage": info.get("avg_rating_percentage"),
+        "feedbacks_count": info.get("feedbacks_count"),
+    }
+    if info.get("ct_zero_avg_shipping_days") is not None:
+        row["ct_zero_avg_shipping_days"] = info.get("ct_zero_avg_shipping_days")
+    return row
+
+
+def top_offers(listings, extra, want_zero, limit=5):
+    chosen = [p for p in listings if is_zero_seller(p) is want_zero and (p.get("price") or {}).get("cents") is not None]
+    chosen.sort(key=lambda p: (p["price"]["cents"], (p.get("user") or {}).get("username") or ""))
+    return [offer_from(p, extra) for p in chosen[:limit]]
+
+
+def mint_nm_stock(listings):
+    qty = zero_qty = zero_n = 0
+    for p in listings:
+        q = listing_qty(p)
+        qty += q
+        if is_zero_seller(p):
+            zero_n += 1
+            zero_qty += q
+    return qty, len(listings), zero_qty, zero_n
 
 
 def ok(p, lang, cond):
@@ -164,17 +217,24 @@ def main():
             # più i venditori Zero. Da un IP fuori dall'Italia le copie ITA non-Zero
             # (can_sell_via_hub false) possono mancare del tutto: non vanno scartate
             # se invece sono nella risposta.
-            nm, d0 = products(bid, lang, "Near Mint")
+            nm, d0, nm_extra = products(bid, lang, "Near Mint")
             nm = [p for p in nm if ok(p, lang, "Near Mint")]
             # Il minimo normale include anche i venditori non-Zero (can_sell_via_hub false).
             # Il filtro Zero si applica solo a zprices, mai a questa lista.
             prices = sorted(p["price"]["cents"] / 100 for p in nm)
-            zprices = sorted(
-                p["price"]["cents"] / 100 for p in nm
-                if isinstance(p.get("user"), dict) and p["user"].get("can_sell_via_hub")
-            )
+            zprices = sorted(p["price"]["cents"] / 100 for p in nm if is_zero_seller(p))
+            rec["offers_zero"] = top_offers(nm, nm_extra, True)
+            rec["offers_ct"] = top_offers(nm, nm_extra, False)
             time.sleep(1)
-            anynm, _ = products(bid, None, "Near Mint")
+            mint, _, _ = products(bid, lang, "Mint")
+            mint = [p for p in mint if ok(p, lang, "Mint")]
+            stock_qty, stock_n, stock_z_qty, stock_z_n = mint_nm_stock(nm + mint)
+            rec["qty_mint_nm_target_lang"] = stock_qty
+            rec["listings_mint_nm_target_lang"] = stock_n
+            rec["qty_mint_nm_target_lang_zero"] = stock_z_qty
+            rec["listings_mint_nm_target_lang_zero"] = stock_z_n
+            time.sleep(1)
+            anynm, _, _ = products(bid, None, "Near Mint")
             anyp = sorted(p["price"]["cents"] / 100 for p in anynm if ok(p, None, "Near Mint"))
             bp = d0["blueprint"]
             img = (bp.get("image") or {}).get("show", {}).get("url") or bp.get("image_url")
@@ -228,7 +288,10 @@ def main():
             rec.update({k: prev.get(k) for k in ("image_url", "price_min_ita_nm_eur", "price_min_target_lang_nm_eur",
                          "listings_target_lang_nm", "price_2nd_target_lang_nm_eur", "price_min_any_lang_nm_eur",
                          "ct_market_all_lang_eur", "price_source", "price_min_ita_nm_zero_eur",
-                         "price_min_target_lang_nm_zero_eur", "listings_target_lang_nm_zero")})
+                         "price_min_target_lang_nm_zero_eur", "listings_target_lang_nm_zero",
+                         "offers_zero", "offers_ct", "qty_mint_nm_target_lang",
+                         "listings_mint_nm_target_lang", "qty_mint_nm_target_lang_zero",
+                         "listings_mint_nm_target_lang_zero")})
             rec["fetch_error"] = str(e)[:200]
         rec["release_year"] = release_year_for(c, bp, set_years)
         price, source = buy_quote(rec)
@@ -259,7 +322,9 @@ def main():
     cols = ["rank_by_price", "id", "order", "name", "set", "set_code", "number", "rarity", "target_language",
             "release_year", "price_min_ita_nm_eur", "price_min_target_lang_nm_eur", "price_2nd_target_lang_nm_eur",
             "listings_target_lang_nm", "price_min_ita_nm_zero_eur", "price_min_target_lang_nm_zero_eur",
-            "listings_target_lang_nm_zero", "price_min_any_lang_nm_eur", "ct_market_all_lang_eur", "tier",
+            "listings_target_lang_nm_zero", "qty_mint_nm_target_lang", "listings_mint_nm_target_lang",
+            "qty_mint_nm_target_lang_zero", "listings_mint_nm_target_lang_zero",
+            "price_min_any_lang_nm_eur", "ct_market_all_lang_eur", "tier",
             "buy_price_eur", "buy_price_source", "price_source", "confidence", "notes", "cardtrader_link",
             "image_url", "last_updated"]
     with open(os.path.join(DATA, "wishlist.csv"), "w", newline="") as f:

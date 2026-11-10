@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-11-10T18:36:45+01:00",
+ "generated_at": "2026-11-10T19:19:18+01:00",
  "currency": "EUR",
  "price_definition": "Prezzo di riferimento (buy_price_eur): minimo Near Mint nella lingua target (ITA, o JP per carte solo giapponesi) dei venditori CardTrader Zero, se esiste una copia; altrimenti minimo Near Mint nella lingua target di tutti i venditori. Non gradate, spedizione esclusa. buy_price_source vale zero oppure cardtrader.",
  "summary": {
   "cards": 67,
   "priced": 67,
-  "total_eur": 13846.69,
+  "total_eur": 13844.91,
   "zero_priced": 64,
-  "zero_total_eur": 12551.77,
+  "zero_total_eur": 12549.99,
   "tiers": {
    "A: <50€": 14,
    "B: 50-150€": 27,
@@ -33,6 +33,12 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 2,
+   "listings_mint_nm_target_lang": 2,
+   "qty_mint_nm_target_lang_zero": 0,
+   "listings_mint_nm_target_lang_zero": 0,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/127519/show_mewtwo-gx-secret-rare-78-73-shining-legends.jpg",
    "price_min_ita_nm_eur": 1100.64,
    "price_min_target_lang_nm_eur": 1100.64,
@@ -45,12 +51,12 @@
    "ct_market_all_lang_eur": 823.35,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 1100.64,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 1,
    "release_year": 2017,
-   "buy_price_source": "cardtrader"
+   "buy_price_eur": 1100.64,
+   "buy_price_source": "cardtrader",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 1
   },
   {
    "id": "p1-5",
@@ -68,6 +74,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 5621,
+     "username": "Card Universe",
+     "country_code": "IT",
+     "price_eur": 900.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 12860,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 183865,
+     "username": "EternallGames",
+     "country_code": "IT",
+     "price_eur": 1450.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 16035,
+     "ct_zero_avg_shipping_days": 10
+    },
+    {
+     "user_id": 86502,
+     "username": "ChimeraTrading",
+     "country_code": "IT",
+     "price_eur": 1500.58,
+     "quantity": 1,
+     "avg_rating_percentage": 98.8,
+     "feedbacks_count": 118621,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 7977,
+     "username": "Onecardtcgstore",
+     "country_code": "IT",
+     "price_eur": 1500.62,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 22281,
+     "ct_zero_avg_shipping_days": 10
+    },
+    {
+     "user_id": 302294,
+     "username": "BrilliantStars",
+     "country_code": "IT",
+     "price_eur": 1799.99,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 17790,
+     "ct_zero_avg_shipping_days": 9
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 6,
+   "listings_mint_nm_target_lang": 6,
+   "qty_mint_nm_target_lang_zero": 6,
+   "listings_mint_nm_target_lang_zero": 6,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/200493/show_gengar-vmax-271-264-fusion-strike.png",
    "price_min_ita_nm_eur": 900.64,
    "price_min_target_lang_nm_eur": 900.64,
@@ -80,12 +143,12 @@
    "ct_market_all_lang_eur": 659.02,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 900.64,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 2,
    "release_year": 2021,
-   "buy_price_source": "zero"
+   "buy_price_eur": 900.64,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 2
   },
   {
    "id": "p4-2",
@@ -103,6 +166,23 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 117801,
+     "username": "TOWERSELLER",
+     "country_code": "IT",
+     "price_eur": 800.63,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 36873,
+     "ct_zero_avg_shipping_days": 4
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 1,
+   "listings_mint_nm_target_lang": 1,
+   "qty_mint_nm_target_lang_zero": 1,
+   "listings_mint_nm_target_lang_zero": 1,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/129830/show_magikarp-wailord-gx-rare-ultra-161-181-team-up.jpg",
    "price_min_ita_nm_eur": 800.63,
    "price_min_target_lang_nm_eur": 800.63,
@@ -115,12 +195,12 @@
    "ct_market_all_lang_eur": 500.16,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 800.63,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 3,
    "release_year": 2019,
-   "buy_price_source": "zero"
+   "buy_price_eur": 800.63,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 3
   },
   {
    "id": "p4-3",
@@ -138,6 +218,23 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 89,
+     "username": "Meg",
+     "country_code": "IT",
+     "price_eur": 700.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 46575,
+     "ct_zero_avg_shipping_days": 6
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 1,
+   "listings_mint_nm_target_lang": 1,
+   "qty_mint_nm_target_lang_zero": 1,
+   "listings_mint_nm_target_lang_zero": 1,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/129834/show_gengar-mimikyu-gx-rare-ultra-165-181-team-up.jpg",
    "price_min_ita_nm_eur": 700.64,
    "price_min_target_lang_nm_eur": 700.64,
@@ -150,12 +247,12 @@
    "ct_market_all_lang_eur": 557.53,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 700.64,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 4,
    "release_year": 2019,
-   "buy_price_source": "zero"
+   "buy_price_eur": 700.64,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 4
   },
   {
    "id": "p1-4",
@@ -173,6 +270,62 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 3972,
+     "username": "TolarianAcademy",
+     "country_code": "IT",
+     "price_eur": 700.59,
+     "quantity": 1,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 57465,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 224993,
+     "username": "UnanimeCenter",
+     "country_code": "IT",
+     "price_eur": 701.28,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 9613,
+     "ct_zero_avg_shipping_days": 26
+    },
+    {
+     "user_id": 520811,
+     "username": "ForgeTCG it",
+     "country_code": "IT",
+     "price_eur": 755.64,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 1434
+    },
+    {
+     "user_id": 356501,
+     "username": "Pixelpartyta",
+     "country_code": "IT",
+     "price_eur": 755.65,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 6803,
+     "ct_zero_avg_shipping_days": 11
+    },
+    {
+     "user_id": 431773,
+     "username": "Galaktikstore",
+     "country_code": "IT",
+     "price_eur": 891.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 6742,
+     "ct_zero_avg_shipping_days": 5
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 6,
+   "listings_mint_nm_target_lang": 5,
+   "qty_mint_nm_target_lang_zero": 6,
+   "listings_mint_nm_target_lang_zero": 5,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/221558/show_giratina-v-ultra-rare-186-196-lost-origin.jpg",
    "price_min_ita_nm_eur": 700.59,
    "price_min_target_lang_nm_eur": 700.59,
@@ -185,12 +338,12 @@
    "ct_market_all_lang_eur": 642.07,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 700.59,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 5,
    "release_year": 2022,
-   "buy_price_source": "zero"
+   "buy_price_eur": 700.59,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 5
   },
   {
    "id": "p1-7",
@@ -208,6 +361,23 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 21929,
+     "username": "Galactus Roma",
+     "country_code": "IT",
+     "price_eur": 644.38,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 139806,
+     "ct_zero_avg_shipping_days": 9
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 1,
+   "listings_mint_nm_target_lang": 1,
+   "qty_mint_nm_target_lang_zero": 1,
+   "listings_mint_nm_target_lang_zero": 1,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/166427/show_umbreon-v-189-203-evolving-skies.png",
    "price_min_ita_nm_eur": 644.38,
    "price_min_target_lang_nm_eur": 644.38,
@@ -220,12 +390,12 @@
    "ct_market_all_lang_eur": 366.9,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 644.38,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 6,
    "release_year": 2021,
-   "buy_price_source": "zero"
+   "buy_price_eur": 644.38,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 6
   },
   {
    "id": "p1-3",
@@ -243,6 +413,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 263691,
+     "username": "Alepoke89",
+     "country_code": "IT",
+     "price_eur": 540.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 8239,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 352350,
+     "username": "Nik_Gmts",
+     "country_code": "IT",
+     "price_eur": 545.63,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 1241,
+     "ct_zero_avg_shipping_days": 26
+    },
+    {
+     "user_id": 11531,
+     "username": "Il Covo del Nerd",
+     "country_code": "IT",
+     "price_eur": 550.54,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 92850,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 86502,
+     "username": "ChimeraTrading",
+     "country_code": "IT",
+     "price_eur": 550.58,
+     "quantity": 1,
+     "avg_rating_percentage": 98.8,
+     "feedbacks_count": 118621,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 3972,
+     "username": "TolarianAcademy",
+     "country_code": "IT",
+     "price_eur": 550.59,
+     "quantity": 1,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 57465,
+     "ct_zero_avg_shipping_days": 9
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 11,
+   "listings_mint_nm_target_lang": 11,
+   "qty_mint_nm_target_lang_zero": 11,
+   "listings_mint_nm_target_lang_zero": 11,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/166430/show_dragonite-v-192-203-evolving-skies.png",
    "price_min_ita_nm_eur": 540.64,
    "price_min_target_lang_nm_eur": 540.64,
@@ -255,12 +482,12 @@
    "ct_market_all_lang_eur": 537.04,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 540.64,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 7,
    "release_year": 2021,
-   "buy_price_source": "zero"
+   "buy_price_eur": 540.64,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 7
   },
   {
    "id": "p6-8",
@@ -278,24 +505,71 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 183865,
+     "username": "EternallGames",
+     "country_code": "IT",
+     "price_eur": 529.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 16035,
+     "ct_zero_avg_shipping_days": 10
+    },
+    {
+     "user_id": 67565,
+     "username": "Bombocards",
+     "country_code": "IT",
+     "price_eur": 570.07,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 2316,
+     "ct_zero_avg_shipping_days": 28
+    },
+    {
+     "user_id": 203590,
+     "username": "JeffPesos - GTCorciano",
+     "country_code": "IT",
+     "price_eur": 651.53,
+     "quantity": 1,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 5055,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 21929,
+     "username": "Galactus Roma",
+     "country_code": "IT",
+     "price_eur": 755.62,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 139806,
+     "ct_zero_avg_shipping_days": 9
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 4,
+   "listings_mint_nm_target_lang": 4,
+   "qty_mint_nm_target_lang_zero": 4,
+   "listings_mint_nm_target_lang_zero": 4,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/158383/show_galarian-moltres-v-ultra-rare-177-198-chilling-reign.jpg",
    "price_min_ita_nm_eur": 529.64,
    "price_min_target_lang_nm_eur": 529.64,
    "listings_target_lang_nm": 4,
    "price_2nd_target_lang_nm_eur": 570.07,
-   "price_min_any_lang_nm_eur": 220.64,
+   "price_min_any_lang_nm_eur": 200.63,
    "price_min_ita_nm_zero_eur": 529.64,
    "price_min_target_lang_nm_zero_eur": 529.64,
    "listings_target_lang_nm_zero": 4,
    "ct_market_all_lang_eur": 243.25,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 529.64,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 8,
    "release_year": 2021,
-   "buy_price_source": "zero"
+   "buy_price_eur": 529.64,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 8
   },
   {
    "id": "p1-6",
@@ -313,6 +587,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 518022,
+     "username": "M M_COLLECTION_CARDS",
+     "country_code": "IT",
+     "price_eur": 470.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 73,
+     "ct_zero_avg_shipping_days": 23
+    },
+    {
+     "user_id": 21929,
+     "username": "Galactus Roma",
+     "country_code": "IT",
+     "price_eur": 511.51,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 139806,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 384185,
+     "username": "FedEli al TCG",
+     "country_code": "IT",
+     "price_eur": 528.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 4675,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 11531,
+     "username": "Il Covo del Nerd",
+     "country_code": "IT",
+     "price_eur": 530.62,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 92850,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 5173,
+     "username": "DailyTrading",
+     "country_code": "IT",
+     "price_eur": 600.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 53199,
+     "ct_zero_avg_shipping_days": 28
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 5,
+   "listings_mint_nm_target_lang": 5,
+   "qty_mint_nm_target_lang_zero": 5,
+   "listings_mint_nm_target_lang_zero": 5,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/166450/show_sylveon-vmax-secret-rare-212-203-evolving-skies.png",
    "price_min_ita_nm_eur": 470.64,
    "price_min_target_lang_nm_eur": 470.64,
@@ -325,12 +656,12 @@
    "ct_market_all_lang_eur": 457.55,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 470.64,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 9,
    "release_year": 2021,
-   "buy_price_source": "zero"
+   "buy_price_eur": 470.64,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 9
   },
   {
    "id": "p4-6",
@@ -348,6 +679,23 @@
    "italian_edition_exists": false,
    "confidence": "alta",
    "notes": "Carta SOLO GIAPPONESE (SM12a Tag All Stars SR): nessuna edizione italiana, prezzo in giapponese.",
+   "offers_zero": [
+    {
+     "user_id": 415014,
+     "username": "Nagumi",
+     "country_code": "DE",
+     "price_eur": 450.62,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 1228,
+     "ct_zero_avg_shipping_days": 7
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 2,
+   "listings_mint_nm_target_lang": 1,
+   "qty_mint_nm_target_lang_zero": 2,
+   "listings_mint_nm_target_lang_zero": 1,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/260585/show_togepi-cleffa-igglybuff-gx-secret-rare-186-173-tag-team-gx-tag-all-stars.jpg",
    "price_min_ita_nm_eur": null,
    "price_min_target_lang_nm_eur": 450.62,
@@ -360,12 +708,12 @@
    "ct_market_all_lang_eur": 450.62,
    "price_source": "CardTrader min JP Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 450.62,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 10,
    "release_year": 2019,
-   "buy_price_source": "zero"
+   "buy_price_eur": 450.62,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 10
   },
   {
    "id": "p1-1",
@@ -383,6 +731,53 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 86502,
+     "username": "ChimeraTrading",
+     "country_code": "IT",
+     "price_eur": 400.53,
+     "quantity": 2,
+     "avg_rating_percentage": 98.8,
+     "feedbacks_count": 118621,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 139875,
+     "username": "CARDLEADER",
+     "country_code": "IT",
+     "price_eur": 480.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 92690,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 21929,
+     "username": "Galactus Roma",
+     "country_code": "IT",
+     "price_eur": 503.27,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 139806,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 314185,
+     "username": "IL-REGNO",
+     "country_code": "IT",
+     "price_eur": 550.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 11126,
+     "ct_zero_avg_shipping_days": 4
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 5,
+   "listings_mint_nm_target_lang": 4,
+   "qty_mint_nm_target_lang_zero": 5,
+   "listings_mint_nm_target_lang_zero": 4,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/166432/show_rayquaza-v-194-203-evolving-skies.png",
    "price_min_ita_nm_eur": 400.53,
    "price_min_target_lang_nm_eur": 400.53,
@@ -395,12 +790,12 @@
    "ct_market_all_lang_eur": 395.18,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 400.53,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 11,
    "release_year": 2021,
-   "buy_price_source": "zero"
+   "buy_price_eur": 400.53,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 11
   },
   {
    "id": "p7-2",
@@ -418,24 +813,81 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 360624,
+     "username": "Orora Games Arezzo",
+     "country_code": "IT",
+     "price_eur": 389.5,
+     "quantity": 1,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 1073,
+     "ct_zero_avg_shipping_days": 28
+    },
+    {
+     "user_id": 36,
+     "username": "Magic Planet",
+     "country_code": "IT",
+     "price_eur": 389.64,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 53338,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 535218,
+     "username": "Wantd it",
+     "country_code": "IT",
+     "price_eur": 389.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 5,
+     "ct_zero_avg_shipping_days": 5
+    },
+    {
+     "user_id": 579485,
+     "username": "Metamorph_shop",
+     "country_code": "IT",
+     "price_eur": 390.13,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 128,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 53427,
+     "username": "Loopgames",
+     "country_code": "IT",
+     "price_eur": 390.14,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 79600,
+     "ct_zero_avg_shipping_days": 9
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 30,
+   "listings_mint_nm_target_lang": 27,
+   "qty_mint_nm_target_lang_zero": 30,
+   "listings_mint_nm_target_lang_zero": 27,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/359488/show_mega-gengar-ex-special-illustration-rare-284-217-ascended-heroes(2).jpg",
    "price_min_ita_nm_eur": 389.5,
    "price_min_target_lang_nm_eur": 389.5,
-   "listings_target_lang_nm": 26,
+   "listings_target_lang_nm": 27,
    "price_2nd_target_lang_nm_eur": 389.64,
    "price_min_any_lang_nm_eur": 389.5,
    "price_min_ita_nm_zero_eur": 389.5,
    "price_min_target_lang_nm_zero_eur": 389.5,
-   "listings_target_lang_nm_zero": 26,
+   "listings_target_lang_nm_zero": 27,
    "ct_market_all_lang_eur": 560.47,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 389.5,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 12,
    "release_year": 2026,
-   "buy_price_source": "zero"
+   "buy_price_eur": 389.5,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 12
   },
   {
    "id": "p7-4",
@@ -453,6 +905,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 164440,
+     "username": "PokePosta-Store",
+     "country_code": "IT",
+     "price_eur": 380.44,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 6750,
+     "ct_zero_avg_shipping_days": 8
+    },
+    {
+     "user_id": 231628,
+     "username": "FeedateShop",
+     "country_code": "IT",
+     "price_eur": 381.08,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 7996,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 84813,
+     "username": "LAMASSTORE",
+     "country_code": "IT",
+     "price_eur": 400.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 288,
+     "ct_zero_avg_shipping_days": 12
+    },
+    {
+     "user_id": 245918,
+     "username": "ManaFlow",
+     "country_code": "IT",
+     "price_eur": 400.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 2198,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 299727,
+     "username": "Teddy s Playroom",
+     "country_code": "IT",
+     "price_eur": 430.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 7813,
+     "ct_zero_avg_shipping_days": 7
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 8,
+   "listings_mint_nm_target_lang": 8,
+   "qty_mint_nm_target_lang_zero": 8,
+   "listings_mint_nm_target_lang_zero": 8,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/418446/show_418446-mega-rayquaza-ex-special-illustration-rare-138-103-delta-reign.webp",
    "price_min_ita_nm_eur": 380.44,
    "price_min_target_lang_nm_eur": 380.44,
@@ -465,12 +974,12 @@
    "ct_market_all_lang_eur": 436.63,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 380.44,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 13,
    "release_year": 2026,
-   "buy_price_source": "zero"
+   "buy_price_eur": 380.44,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 13
   },
   {
    "id": "p3-6",
@@ -488,6 +997,23 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 48383,
+     "username": "Timetwistergames",
+     "country_code": "IT",
+     "price_eur": 375.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 65246,
+     "ct_zero_avg_shipping_days": 28
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 1,
+   "listings_mint_nm_target_lang": 1,
+   "qty_mint_nm_target_lang_zero": 1,
+   "listings_mint_nm_target_lang_zero": 1,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/113276/show_reshiram-zekrom-gx-secret-rare-222-236-cosmic-eclipse.jpg",
    "price_min_ita_nm_eur": 375.64,
    "price_min_target_lang_nm_eur": 375.64,
@@ -500,12 +1026,12 @@
    "ct_market_all_lang_eur": 312.9,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 375.64,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 14,
    "release_year": 2019,
-   "buy_price_source": "zero"
+   "buy_price_eur": 375.64,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 14
   },
   {
    "id": "p5-1",
@@ -523,6 +1049,43 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "Promo SM Black Star SM168: esiste in italiano (4 copie ITA NM su CardTrader al 10/11/2026).",
+   "offers_zero": [
+    {
+     "user_id": 89,
+     "username": "Meg",
+     "country_code": "IT",
+     "price_eur": 330.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 46575,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 7977,
+     "username": "Onecardtcgstore",
+     "country_code": "IT",
+     "price_eur": 340.53,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 22281,
+     "ct_zero_avg_shipping_days": 10
+    },
+    {
+     "user_id": 30415,
+     "username": "Cla89",
+     "country_code": "IT",
+     "price_eur": 530.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 1076,
+     "ct_zero_avg_shipping_days": 6
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 3,
+   "listings_mint_nm_target_lang": 3,
+   "qty_mint_nm_target_lang_zero": 3,
+   "listings_mint_nm_target_lang_zero": 3,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/126964/show_pikachu-zekromtag-team-gx-holo-promo-sm168-sm-black-star-promos.jpg",
    "price_min_ita_nm_eur": 330.64,
    "price_min_target_lang_nm_eur": 330.64,
@@ -535,12 +1098,12 @@
    "ct_market_all_lang_eur": 120.06,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
+   "release_year": 2016,
    "buy_price_eur": 330.64,
+   "buy_price_source": "zero",
    "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 15,
-   "release_year": 2019,
-   "buy_price_source": "zero"
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 15
   },
   {
    "id": "p1-2",
@@ -558,6 +1121,53 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 341828,
+     "username": "CLOECARD_TCG",
+     "country_code": "IT",
+     "price_eur": 319.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 2214,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 203590,
+     "username": "JeffPesos - GTCorciano",
+     "country_code": "IT",
+     "price_eur": 340.57,
+     "quantity": 1,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 5055,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 30639,
+     "username": "Jokerslair",
+     "country_code": "IT",
+     "price_eur": 340.63,
+     "quantity": 1,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 37918,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 21929,
+     "username": "Galactus Roma",
+     "country_code": "IT",
+     "price_eur": 341.56,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 139806,
+     "ct_zero_avg_shipping_days": 9
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 5,
+   "listings_mint_nm_target_lang": 4,
+   "qty_mint_nm_target_lang_zero": 5,
+   "listings_mint_nm_target_lang_zero": 4,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/154020/show_tyranitar-v-155-163-battle-styles.jpg",
    "price_min_ita_nm_eur": 319.64,
    "price_min_target_lang_nm_eur": 319.64,
@@ -567,15 +1177,15 @@
    "price_min_ita_nm_zero_eur": 319.64,
    "price_min_target_lang_nm_zero_eur": 319.64,
    "listings_target_lang_nm_zero": 4,
-   "ct_market_all_lang_eur": 193.12,
+   "ct_market_all_lang_eur": 189.21,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 319.64,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 16,
    "release_year": 2021,
-   "buy_price_source": "zero"
+   "buy_price_eur": 319.64,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 16
   },
   {
    "id": "p7-7",
@@ -593,6 +1203,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 579485,
+     "username": "Metamorph_shop",
+     "country_code": "IT",
+     "price_eur": 263.19,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 128,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 507243,
+     "username": "DeckLab",
+     "country_code": "IT",
+     "price_eur": 274.79,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 1076,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 53427,
+     "username": "Loopgames",
+     "country_code": "IT",
+     "price_eur": 275.41,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 79600,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 29390,
+     "username": "Mondi Paralleli Arconate",
+     "country_code": "IT",
+     "price_eur": 279.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 24241,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 356501,
+     "username": "Pixelpartyta",
+     "country_code": "IT",
+     "price_eur": 279.65,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 6803,
+     "ct_zero_avg_shipping_days": 11
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 32,
+   "listings_mint_nm_target_lang": 29,
+   "qty_mint_nm_target_lang_zero": 32,
+   "listings_mint_nm_target_lang_zero": 29,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/370931/show_mega-charizard-y-ex-gold-secret-rare-294-217-ascended-heroes.jpg",
    "price_min_ita_nm_eur": 263.19,
    "price_min_target_lang_nm_eur": 263.19,
@@ -605,12 +1272,12 @@
    "ct_market_all_lang_eur": 280.49,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 263.19,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 17,
    "release_year": 2026,
-   "buy_price_source": "zero"
+   "buy_price_eur": 263.19,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 17
   },
   {
    "id": "p4-1",
@@ -628,6 +1295,43 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 49706,
+     "username": "LevelUp WeHaveFun",
+     "country_code": "IT",
+     "price_eur": 250.09,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 41335,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 10916,
+     "username": "Fire and Dice",
+     "country_code": "IT",
+     "price_eur": 250.54,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 47340,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 139875,
+     "username": "CARDLEADER",
+     "country_code": "IT",
+     "price_eur": 270.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 92690,
+     "ct_zero_avg_shipping_days": 7
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 3,
+   "listings_mint_nm_target_lang": 3,
+   "qty_mint_nm_target_lang_zero": 3,
+   "listings_mint_nm_target_lang_zero": 3,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/131420/show_slowpoke-psyduck-gx-secret-rare-218-236-unified-minds.jpg",
    "price_min_ita_nm_eur": 250.09,
    "price_min_target_lang_nm_eur": 250.09,
@@ -640,12 +1344,12 @@
    "ct_market_all_lang_eur": 111.6,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 250.09,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 18,
    "release_year": 2019,
-   "buy_price_source": "zero"
+   "buy_price_eur": 250.09,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 18
   },
   {
    "id": "p3-7",
@@ -663,6 +1367,43 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 139875,
+     "username": "CARDLEADER",
+     "country_code": "IT",
+     "price_eur": 235.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 92690,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 37412,
+     "username": "Thekingofgamesud",
+     "country_code": "IT",
+     "price_eur": 250.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 65620,
+     "ct_zero_avg_shipping_days": 10
+    },
+    {
+     "user_id": 21929,
+     "username": "Galactus Roma",
+     "country_code": "IT",
+     "price_eur": 261.22,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 139806,
+     "ct_zero_avg_shipping_days": 9
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 3,
+   "listings_mint_nm_target_lang": 3,
+   "qty_mint_nm_target_lang_zero": 3,
+   "listings_mint_nm_target_lang_zero": 3,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/113269/show_blastoise-piplup-gx-secret-rare-215-236-cosmic-eclipse.jpg",
    "price_min_ita_nm_eur": 235.64,
    "price_min_target_lang_nm_eur": 235.64,
@@ -672,15 +1413,15 @@
    "price_min_ita_nm_zero_eur": 235.64,
    "price_min_target_lang_nm_zero_eur": 235.64,
    "listings_target_lang_nm_zero": 3,
-   "ct_market_all_lang_eur": 161.81,
+   "ct_market_all_lang_eur": 142.12,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 235.64,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 19,
    "release_year": 2019,
-   "buy_price_source": "zero"
+   "buy_price_eur": 235.64,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 19
   },
   {
    "id": "p7-9",
@@ -698,6 +1439,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 125523,
+     "username": "CarrettodiCarta",
+     "country_code": "IT",
+     "price_eur": 216.8,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 12501,
+     "ct_zero_avg_shipping_days": 11
+    },
+    {
+     "user_id": 108080,
+     "username": "OPSSMARKET",
+     "country_code": "IT",
+     "price_eur": 230.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 8122,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 384185,
+     "username": "FedEli al TCG",
+     "country_code": "IT",
+     "price_eur": 269.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 4675,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 53171,
+     "username": "Michaellp",
+     "country_code": "IT",
+     "price_eur": 270.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 8529,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 541580,
+     "username": "Hanamilab bologna",
+     "country_code": "IT",
+     "price_eur": 279.28,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 54,
+     "ct_zero_avg_shipping_days": 7
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 10,
+   "listings_mint_nm_target_lang": 9,
+   "qty_mint_nm_target_lang_zero": 10,
+   "listings_mint_nm_target_lang_zero": 9,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/421157/show_421157-mega-rayquaza-ex-gold-secret-rare-141-103-delta-reign.webp",
    "price_min_ita_nm_eur": 216.8,
    "price_min_target_lang_nm_eur": 216.8,
@@ -710,12 +1508,12 @@
    "ct_market_all_lang_eur": 342.83,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 216.8,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 20,
    "release_year": 2026,
-   "buy_price_source": "zero"
+   "buy_price_eur": 216.8,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 20
   },
   {
    "id": "p6-7",
@@ -733,6 +1531,43 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 34195,
+     "username": "Dracarysviterbo",
+     "country_code": "IT",
+     "price_eur": 199.48,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 29837,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 431773,
+     "username": "Galaktikstore",
+     "country_code": "IT",
+     "price_eur": 248.04,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 6742,
+     "ct_zero_avg_shipping_days": 5
+    },
+    {
+     "user_id": 314185,
+     "username": "IL-REGNO",
+     "country_code": "IT",
+     "price_eur": 248.61,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 11126,
+     "ct_zero_avg_shipping_days": 4
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 3,
+   "listings_mint_nm_target_lang": 3,
+   "qty_mint_nm_target_lang_zero": 3,
+   "listings_mint_nm_target_lang_zero": 3,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/158385/show_galarian-slowking-v-ultra-rare-179-198-chilling-reign.jpg",
    "price_min_ita_nm_eur": 199.48,
    "price_min_target_lang_nm_eur": 199.48,
@@ -745,12 +1580,12 @@
    "ct_market_all_lang_eur": 159.39,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 199.48,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 21,
    "release_year": 2021,
-   "buy_price_source": "zero"
+   "buy_price_eur": 199.48,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 21
   },
   {
    "id": "p4-9",
@@ -768,6 +1603,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 211767,
+     "username": "Hartzz",
+     "country_code": "IT",
+     "price_eur": 172.25,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 57,
+     "ct_zero_avg_shipping_days": 11
+    },
+    {
+     "user_id": 5002,
+     "username": "Magiclizard",
+     "country_code": "IT",
+     "price_eur": 172.63,
+     "quantity": 1,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 62760,
+     "ct_zero_avg_shipping_days": 12
+    },
+    {
+     "user_id": 231628,
+     "username": "FeedateShop",
+     "country_code": "IT",
+     "price_eur": 172.89,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 7996,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 360624,
+     "username": "Orora Games Arezzo",
+     "country_code": "IT",
+     "price_eur": 173.55,
+     "quantity": 1,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 1073,
+     "ct_zero_avg_shipping_days": 28
+    },
+    {
+     "user_id": 11531,
+     "username": "Il Covo del Nerd",
+     "country_code": "IT",
+     "price_eur": 173.58,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 92850,
+     "ct_zero_avg_shipping_days": 4
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 25,
+   "listings_mint_nm_target_lang": 22,
+   "qty_mint_nm_target_lang_zero": 25,
+   "listings_mint_nm_target_lang_zero": 22,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/341099/show_zekrom-ex-special-illustration-rare-166-086-black-bolt.png",
    "price_min_ita_nm_eur": 172.25,
    "price_min_target_lang_nm_eur": 172.25,
@@ -780,12 +1672,12 @@
    "ct_market_all_lang_eur": 176.25,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 172.25,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 22,
    "release_year": 2025,
-   "buy_price_source": "zero"
+   "buy_price_eur": 172.25,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 22
   },
   {
    "id": "p8-1",
@@ -803,6 +1695,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 48675,
+     "username": "Iltempiodikronos",
+     "country_code": "IT",
+     "price_eur": 165.54,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 42779,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 98838,
+     "username": "Pikapikastoreonline",
+     "country_code": "IT",
+     "price_eur": 166.16,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 26902,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 575721,
+     "username": "Primepulltcg",
+     "country_code": "IT",
+     "price_eur": 166.16,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 46,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 368061,
+     "username": "ElDoradoComics",
+     "country_code": "IT",
+     "price_eur": 166.65,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 514,
+     "ct_zero_avg_shipping_days": 32
+    },
+    {
+     "user_id": 38575,
+     "username": "Kami",
+     "country_code": "IT",
+     "price_eur": 167.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 12325,
+     "ct_zero_avg_shipping_days": 31
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 21,
+   "listings_mint_nm_target_lang": 19,
+   "qty_mint_nm_target_lang_zero": 21,
+   "listings_mint_nm_target_lang_zero": 19,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/351691/show_mega-lucario-ex-gold-secret-rare-188-132-mega-evolution.jpg",
    "price_min_ita_nm_eur": 165.54,
    "price_min_target_lang_nm_eur": 165.54,
@@ -815,12 +1764,12 @@
    "ct_market_all_lang_eur": 209.33,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 165.54,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 23,
    "release_year": 2025,
-   "buy_price_source": "zero"
+   "buy_price_eur": 165.54,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 23
   },
   {
    "id": "p6-9",
@@ -838,6 +1787,53 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 352350,
+     "username": "Nik_Gmts",
+     "country_code": "IT",
+     "price_eur": 160.63,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 1241,
+     "ct_zero_avg_shipping_days": 26
+    },
+    {
+     "user_id": 601323,
+     "username": "Wonderabilia",
+     "country_code": "IT",
+     "price_eur": 191.63,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 4,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 21929,
+     "username": "Galactus Roma",
+     "country_code": "IT",
+     "price_eur": 201.48,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 139806,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 37412,
+     "username": "Thekingofgamesud",
+     "country_code": "IT",
+     "price_eur": 220.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 65620,
+     "ct_zero_avg_shipping_days": 10
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 4,
+   "listings_mint_nm_target_lang": 4,
+   "qty_mint_nm_target_lang_zero": 4,
+   "listings_mint_nm_target_lang_zero": 4,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/166418/show_espeon-v-180-203-evolving-skies.png",
    "price_min_ita_nm_eur": 160.63,
    "price_min_target_lang_nm_eur": 160.63,
@@ -850,12 +1846,12 @@
    "ct_market_all_lang_eur": 152.86,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 160.63,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 24,
    "release_year": 2021,
-   "buy_price_source": "zero"
+   "buy_price_eur": 160.63,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 24
   },
   {
    "id": "p3-9",
@@ -873,6 +1869,43 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 48383,
+     "username": "Timetwistergames",
+     "country_code": "IT",
+     "price_eur": 150.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 65246,
+     "ct_zero_avg_shipping_days": 28
+    },
+    {
+     "user_id": 203590,
+     "username": "JeffPesos - GTCorciano",
+     "country_code": "IT",
+     "price_eur": 158.27,
+     "quantity": 1,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 5055,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 10916,
+     "username": "Fire and Dice",
+     "country_code": "IT",
+     "price_eur": 200.54,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 47340,
+     "ct_zero_avg_shipping_days": 9
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 3,
+   "listings_mint_nm_target_lang": 3,
+   "qty_mint_nm_target_lang_zero": 3,
+   "listings_mint_nm_target_lang_zero": 3,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/113295/show_pikachu-secret-rare-241-236-cosmic-eclipse.jpg",
    "price_min_ita_nm_eur": 150.64,
    "price_min_target_lang_nm_eur": 150.64,
@@ -885,12 +1918,12 @@
    "ct_market_all_lang_eur": 108.24,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 150.64,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 25,
    "release_year": 2019,
-   "buy_price_source": "zero"
+   "buy_price_eur": 150.64,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 25
   },
   {
    "id": "p4-7",
@@ -908,24 +1941,81 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 91,
+     "username": "ManaTrust",
+     "country_code": "IT",
+     "price_eur": 150.59,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 147237,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 535218,
+     "username": "Wantd it",
+     "country_code": "IT",
+     "price_eur": 150.64,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 5,
+     "ct_zero_avg_shipping_days": 5
+    },
+    {
+     "user_id": 426083,
+     "username": "Progct01",
+     "country_code": "IT",
+     "price_eur": 153.2,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 74,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 53427,
+     "username": "Loopgames",
+     "country_code": "IT",
+     "price_eur": 160.59,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 79600,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 464513,
+     "username": "Collectistore",
+     "country_code": "IT",
+     "price_eur": 160.6,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 2675,
+     "ct_zero_avg_shipping_days": 7
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 24,
+   "listings_mint_nm_target_lang": 17,
+   "qty_mint_nm_target_lang_zero": 24,
+   "listings_mint_nm_target_lang_zero": 17,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/370914/show_pikachu-ex-special-illustration-rare-276-217-ascended-heroes.jpg",
    "price_min_ita_nm_eur": 150.59,
    "price_min_target_lang_nm_eur": 150.59,
-   "listings_target_lang_nm": 16,
-   "price_2nd_target_lang_nm_eur": 153.2,
+   "listings_target_lang_nm": 17,
+   "price_2nd_target_lang_nm_eur": 150.64,
    "price_min_any_lang_nm_eur": 150.59,
    "price_min_ita_nm_zero_eur": 150.59,
    "price_min_target_lang_nm_zero_eur": 150.59,
-   "listings_target_lang_nm_zero": 16,
+   "listings_target_lang_nm_zero": 17,
    "ct_market_all_lang_eur": 248.32,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 150.59,
-   "tier": "C: >150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 26,
    "release_year": 2026,
-   "buy_price_source": "zero"
+   "buy_price_eur": 150.59,
+   "buy_price_source": "zero",
+   "tier": "C: >150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 26
   },
   {
    "id": "p7-1",
@@ -943,6 +2033,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 48383,
+     "username": "Timetwistergames",
+     "country_code": "IT",
+     "price_eur": 135.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 65246,
+     "ct_zero_avg_shipping_days": 28
+    },
+    {
+     "user_id": 309869,
+     "username": "Alzatebrianza",
+     "country_code": "IT",
+     "price_eur": 140.54,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 7803,
+     "ct_zero_avg_shipping_days": 8
+    },
+    {
+     "user_id": 314185,
+     "username": "IL-REGNO",
+     "country_code": "IT",
+     "price_eur": 140.54,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 11126,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 5002,
+     "username": "Magiclizard",
+     "country_code": "IT",
+     "price_eur": 140.63,
+     "quantity": 1,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 62760,
+     "ct_zero_avg_shipping_days": 12
+    },
+    {
+     "user_id": 356501,
+     "username": "Pixelpartyta",
+     "country_code": "IT",
+     "price_eur": 140.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 6803,
+     "ct_zero_avg_shipping_days": 11
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 17,
+   "listings_mint_nm_target_lang": 14,
+   "qty_mint_nm_target_lang_zero": 17,
+   "listings_mint_nm_target_lang_zero": 14,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/221482/show_aerodactyl-v-ultra-rare-180-196-lost-origin.jpg",
    "price_min_ita_nm_eur": 135.64,
    "price_min_target_lang_nm_eur": 135.64,
@@ -955,12 +2102,12 @@
    "ct_market_all_lang_eur": 191.4,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 135.64,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 27,
    "release_year": 2022,
-   "buy_price_source": "zero"
+   "buy_price_eur": 135.64,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 27
   },
   {
    "id": "p5-3",
@@ -978,6 +2125,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 516883,
+     "username": "IlLoto_TCG",
+     "country_code": "IT",
+     "price_eur": 119.62,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 16,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 541380,
+     "username": "Cardzone_Monza",
+     "country_code": "IT",
+     "price_eur": 119.64,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 246,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 139875,
+     "username": "CARDLEADER",
+     "country_code": "IT",
+     "price_eur": 119.89,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 92690,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 341305,
+     "username": "Logposehouse",
+     "country_code": "IT",
+     "price_eur": 120.54,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 12730,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 40017,
+     "username": "GS-GameOn",
+     "country_code": "IT",
+     "price_eur": 120.63,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 39039,
+     "ct_zero_avg_shipping_days": 29
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 26,
+   "listings_mint_nm_target_lang": 20,
+   "qty_mint_nm_target_lang_zero": 26,
+   "listings_mint_nm_target_lang_zero": 20,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/316779/show_leafeon-ex-special-illustration-rare-144-131-prismatic-evolutions.jpg",
    "price_min_ita_nm_eur": 119.62,
    "price_min_target_lang_nm_eur": 119.62,
@@ -990,12 +2194,12 @@
    "ct_market_all_lang_eur": 226.7,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 119.62,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 28,
    "release_year": 2025,
-   "buy_price_source": "zero"
+   "buy_price_eur": 119.62,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 28
   },
   {
    "id": "p5-5",
@@ -1013,6 +2217,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 341828,
+     "username": "CLOECARD_TCG",
+     "country_code": "IT",
+     "price_eur": 115.62,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 2214,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 85019,
+     "username": "Filipposes",
+     "country_code": "IT",
+     "price_eur": 115.63,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 2516,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 541380,
+     "username": "Cardzone_Monza",
+     "country_code": "IT",
+     "price_eur": 128.64,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 246,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 341305,
+     "username": "Logposehouse",
+     "country_code": "IT",
+     "price_eur": 130.44,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 12730,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 14263,
+     "username": "CerberusTCG",
+     "country_code": "IT",
+     "price_eur": 130.54,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 70640,
+     "ct_zero_avg_shipping_days": 10
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 23,
+   "listings_mint_nm_target_lang": 19,
+   "qty_mint_nm_target_lang_zero": 23,
+   "listings_mint_nm_target_lang_zero": 19,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/315076/show_espeon-ex-special-illustration-rare-155-131-prismatic-evolutions.jpg",
    "price_min_ita_nm_eur": 115.62,
    "price_min_target_lang_nm_eur": 115.62,
@@ -1025,12 +2286,12 @@
    "ct_market_all_lang_eur": 231.49,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 115.62,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 29,
    "release_year": 2025,
-   "buy_price_source": "zero"
+   "buy_price_eur": 115.62,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 29
   },
   {
    "id": "p3-2",
@@ -1048,6 +2309,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 5002,
+     "username": "Magiclizard",
+     "country_code": "IT",
+     "price_eur": 109.63,
+     "quantity": 2,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 62760,
+     "ct_zero_avg_shipping_days": 12
+    },
+    {
+     "user_id": 431773,
+     "username": "Galaktikstore",
+     "country_code": "IT",
+     "price_eur": 119.44,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 6742,
+     "ct_zero_avg_shipping_days": 5
+    },
+    {
+     "user_id": 507243,
+     "username": "DeckLab",
+     "country_code": "IT",
+     "price_eur": 119.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 1076,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 89,
+     "username": "Meg",
+     "country_code": "IT",
+     "price_eur": 120.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 46575,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 263691,
+     "username": "Alepoke89",
+     "country_code": "IT",
+     "price_eur": 125.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 8239,
+     "ct_zero_avg_shipping_days": 6
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 9,
+   "listings_mint_nm_target_lang": 8,
+   "qty_mint_nm_target_lang_zero": 9,
+   "listings_mint_nm_target_lang_zero": 8,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/166422/show_sylveon-v-184-203-evolving-skies.png",
    "price_min_ita_nm_eur": 109.63,
    "price_min_target_lang_nm_eur": 109.63,
@@ -1060,12 +2378,12 @@
    "ct_market_all_lang_eur": 99.44,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 109.63,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 30,
    "release_year": 2021,
-   "buy_price_source": "zero"
+   "buy_price_eur": 109.63,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 30
   },
   {
    "id": "p7-8",
@@ -1083,24 +2401,81 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 541380,
+     "username": "Cardzone_Monza",
+     "country_code": "IT",
+     "price_eur": 109.24,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 246,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 53427,
+     "username": "Loopgames",
+     "country_code": "IT",
+     "price_eur": 109.59,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 79600,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 424938,
+     "username": "FMcollectibles",
+     "country_code": "IT",
+     "price_eur": 109.6,
+     "quantity": 1,
+     "avg_rating_percentage": 98.4,
+     "feedbacks_count": 62,
+     "ct_zero_avg_shipping_days": 12
+    },
+    {
+     "user_id": 464513,
+     "username": "Collectistore",
+     "country_code": "IT",
+     "price_eur": 109.62,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 2675,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 87582,
+     "username": "Rexicomix",
+     "country_code": "IT",
+     "price_eur": 109.62,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 8370,
+     "ct_zero_avg_shipping_days": 4
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 37,
+   "listings_mint_nm_target_lang": 33,
+   "qty_mint_nm_target_lang_zero": 37,
+   "listings_mint_nm_target_lang_zero": 33,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/370932/show_mega-dragonite-ex-gold-secret-rare-295-217-ascended-heroes.jpg",
    "price_min_ita_nm_eur": 109.24,
    "price_min_target_lang_nm_eur": 109.24,
-   "listings_target_lang_nm": 32,
+   "listings_target_lang_nm": 33,
    "price_2nd_target_lang_nm_eur": 109.59,
    "price_min_any_lang_nm_eur": 109.24,
    "price_min_ita_nm_zero_eur": 109.24,
    "price_min_target_lang_nm_zero_eur": 109.24,
-   "listings_target_lang_nm_zero": 32,
+   "listings_target_lang_nm_zero": 33,
    "ct_market_all_lang_eur": 140.13,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 109.24,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 31,
    "release_year": 2026,
-   "buy_price_source": "zero"
+   "buy_price_eur": 109.24,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 31
   },
   {
    "id": "p3-3",
@@ -1118,6 +2493,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 541380,
+     "username": "Cardzone_Monza",
+     "country_code": "IT",
+     "price_eur": 109.14,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 246,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 457070,
+     "username": "Pavornoctis83",
+     "country_code": "IT",
+     "price_eur": 109.62,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 31,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 139875,
+     "username": "CARDLEADER",
+     "country_code": "IT",
+     "price_eur": 109.99,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 92690,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 341305,
+     "username": "Logposehouse",
+     "country_code": "IT",
+     "price_eur": 110.0,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 12730,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 69100,
+     "username": "Windbrook",
+     "country_code": "IT",
+     "price_eur": 110.1,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 6768,
+     "ct_zero_avg_shipping_days": 7
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 16,
+   "listings_mint_nm_target_lang": 13,
+   "qty_mint_nm_target_lang_zero": 16,
+   "listings_mint_nm_target_lang_zero": 13,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/166405/show_leafeon-v-167-203-evolving-skies.png",
    "price_min_ita_nm_eur": 109.14,
    "price_min_target_lang_nm_eur": 109.14,
@@ -1130,12 +2562,12 @@
    "ct_market_all_lang_eur": 111.95,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 109.14,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 32,
    "release_year": 2021,
-   "buy_price_source": "zero"
+   "buy_price_eur": 109.14,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 32
   },
   {
    "id": "p8-2",
@@ -1153,6 +2585,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 596568,
+     "username": "Cardcapital221",
+     "country_code": "IT",
+     "price_eur": 105.44,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 12,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 273434,
+     "username": "CardFusion",
+     "country_code": "IT",
+     "price_eur": 105.52,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 5700,
+     "ct_zero_avg_shipping_days": 11
+    },
+    {
+     "user_id": 299132,
+     "username": "GameVault",
+     "country_code": "IT",
+     "price_eur": 105.64,
+     "quantity": 1,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 1411,
+     "ct_zero_avg_shipping_days": 11
+    },
+    {
+     "user_id": 29390,
+     "username": "Mondi Paralleli Arconate",
+     "country_code": "IT",
+     "price_eur": 105.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 24241,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 356501,
+     "username": "Pixelpartyta",
+     "country_code": "IT",
+     "price_eur": 105.65,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 6803,
+     "ct_zero_avg_shipping_days": 11
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 25,
+   "listings_mint_nm_target_lang": 23,
+   "qty_mint_nm_target_lang_zero": 25,
+   "listings_mint_nm_target_lang_zero": 23,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/399466/show_399466-mega-darkrai-ex-gold-secret-rare-120-084-pitch-black(2).jpg",
    "price_min_ita_nm_eur": 105.44,
    "price_min_target_lang_nm_eur": 105.44,
@@ -1165,12 +2654,12 @@
    "ct_market_all_lang_eur": 107.01,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 105.44,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 33,
    "release_year": 2026,
-   "buy_price_source": "zero"
+   "buy_price_eur": 105.44,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 33
   },
   {
    "id": "p4-4",
@@ -1188,6 +2677,12 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "Gengar & Mimikyu GX 53/181 è la versione normale (non full art); in lista c'è anche l'alt art 165/181.",
+   "offers_zero": [],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 1,
+   "listings_mint_nm_target_lang": 1,
+   "qty_mint_nm_target_lang_zero": 0,
+   "listings_mint_nm_target_lang_zero": 0,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/129626/show_gengar-mimikyu-gx-rare-holo-53-181-team-up.jpg",
    "price_min_ita_nm_eur": 100.64,
    "price_min_target_lang_nm_eur": 100.64,
@@ -1197,15 +2692,15 @@
    "price_min_ita_nm_zero_eur": null,
    "price_min_target_lang_nm_zero_eur": null,
    "listings_target_lang_nm_zero": 0,
-   "ct_market_all_lang_eur": 97.82,
+   "ct_market_all_lang_eur": 95.09,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 100.64,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 34,
    "release_year": 2019,
-   "buy_price_source": "cardtrader"
+   "buy_price_eur": 100.64,
+   "buy_price_source": "cardtrader",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 34
   },
   {
    "id": "p2-9",
@@ -1223,6 +2718,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 139875,
+     "username": "CARDLEADER",
+     "country_code": "IT",
+     "price_eur": 100.63,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 92690,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 309869,
+     "username": "Alzatebrianza",
+     "country_code": "IT",
+     "price_eur": 100.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 7803,
+     "ct_zero_avg_shipping_days": 8
+    },
+    {
+     "user_id": 11531,
+     "username": "Il Covo del Nerd",
+     "country_code": "IT",
+     "price_eur": 100.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 92850,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 87582,
+     "username": "Rexicomix",
+     "country_code": "IT",
+     "price_eur": 100.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 8370,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 40620,
+     "username": "AM Giochi e Fumetti",
+     "country_code": "IT",
+     "price_eur": 105.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 39072,
+     "ct_zero_avg_shipping_days": 9
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 8,
+   "listings_mint_nm_target_lang": 8,
+   "qty_mint_nm_target_lang_zero": 8,
+   "listings_mint_nm_target_lang_zero": 8,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/200745/show_mew-v-251-264-fusion-strike.png",
    "price_min_ita_nm_eur": 100.63,
    "price_min_target_lang_nm_eur": 100.63,
@@ -1235,12 +2787,12 @@
    "ct_market_all_lang_eur": 66.34,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 100.63,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 35,
    "release_year": 2021,
-   "buy_price_source": "zero"
+   "buy_price_eur": 100.63,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 35
   },
   {
    "id": "p5-4",
@@ -1258,6 +2810,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 239780,
+     "username": "SekaiCollectibles",
+     "country_code": "IT",
+     "price_eur": 99.28,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 2522,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 341305,
+     "username": "Logposehouse",
+     "country_code": "IT",
+     "price_eur": 99.3,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 12730,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 139875,
+     "username": "CARDLEADER",
+     "country_code": "IT",
+     "price_eur": 99.38,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 92690,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 301642,
+     "username": "Ec_cards",
+     "country_code": "IT",
+     "price_eur": 99.39,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 5312,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 356501,
+     "username": "Pixelpartyta",
+     "country_code": "IT",
+     "price_eur": 99.4,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 6803,
+     "ct_zero_avg_shipping_days": 11
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 34,
+   "listings_mint_nm_target_lang": 26,
+   "qty_mint_nm_target_lang_zero": 34,
+   "listings_mint_nm_target_lang_zero": 26,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/316788/show_glaceon-ex-special-illustration-rare-150-131-prismatic-evolutions.jpg",
    "price_min_ita_nm_eur": 99.28,
    "price_min_target_lang_nm_eur": 99.28,
@@ -1270,12 +2879,12 @@
    "ct_market_all_lang_eur": 184.41,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 99.28,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 36,
    "release_year": 2025,
-   "buy_price_source": "zero"
+   "buy_price_eur": 99.28,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 36
   },
   {
    "id": "p5-6",
@@ -1293,6 +2902,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 360624,
+     "username": "Orora Games Arezzo",
+     "country_code": "IT",
+     "price_eur": 99.27,
+     "quantity": 1,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 1073,
+     "ct_zero_avg_shipping_days": 28
+    },
+    {
+     "user_id": 48675,
+     "username": "Iltempiodikronos",
+     "country_code": "IT",
+     "price_eur": 118.54,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 42779,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 87582,
+     "username": "Rexicomix",
+     "country_code": "IT",
+     "price_eur": 118.54,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 8370,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 341305,
+     "username": "Logposehouse",
+     "country_code": "IT",
+     "price_eur": 119.34,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 12730,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 431773,
+     "username": "Galaktikstore",
+     "country_code": "IT",
+     "price_eur": 119.44,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 6742,
+     "ct_zero_avg_shipping_days": 5
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 27,
+   "listings_mint_nm_target_lang": 22,
+   "qty_mint_nm_target_lang_zero": 27,
+   "listings_mint_nm_target_lang_zero": 22,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/316792/show_jolteon-ex-special-illustration-rare-153-131-prismatic-evolutions.jpg",
    "price_min_ita_nm_eur": 99.27,
    "price_min_target_lang_nm_eur": 99.27,
@@ -1305,12 +2971,12 @@
    "ct_market_all_lang_eur": 121.58,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 99.27,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 37,
    "release_year": 2025,
-   "buy_price_source": "zero"
+   "buy_price_eur": 99.27,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 37
   },
   {
    "id": "p4-8",
@@ -1328,24 +2994,81 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 364406,
+     "username": "NIKAI",
+     "country_code": "IT",
+     "price_eur": 95.01,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 2603,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 341828,
+     "username": "CLOECARD_TCG",
+     "country_code": "IT",
+     "price_eur": 95.02,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 2214,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 516883,
+     "username": "IlLoto_TCG",
+     "country_code": "IT",
+     "price_eur": 95.05,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 16,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 239780,
+     "username": "SekaiCollectibles",
+     "country_code": "IT",
+     "price_eur": 95.07,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 2522,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 149111,
+     "username": "Collectio cards and games",
+     "country_code": "IT",
+     "price_eur": 95.14,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 9838,
+     "ct_zero_avg_shipping_days": 8
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 46,
+   "listings_mint_nm_target_lang": 38,
+   "qty_mint_nm_target_lang_zero": 46,
+   "listings_mint_nm_target_lang_zero": 38,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/347566/show_mega-lucario-ex-special-illustration-rare-179-132-mega-evolution(2).jpg",
-   "price_min_ita_nm_eur": 95.02,
-   "price_min_target_lang_nm_eur": 95.02,
+   "price_min_ita_nm_eur": 95.01,
+   "price_min_target_lang_nm_eur": 95.01,
    "listings_target_lang_nm": 38,
-   "price_2nd_target_lang_nm_eur": 95.05,
-   "price_min_any_lang_nm_eur": 95.02,
-   "price_min_ita_nm_zero_eur": 95.02,
-   "price_min_target_lang_nm_zero_eur": 95.02,
+   "price_2nd_target_lang_nm_eur": 95.02,
+   "price_min_any_lang_nm_eur": 95.01,
+   "price_min_ita_nm_zero_eur": 95.01,
+   "price_min_target_lang_nm_zero_eur": 95.01,
    "listings_target_lang_nm_zero": 38,
    "ct_market_all_lang_eur": 118.04,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 95.02,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 38,
    "release_year": 2025,
-   "buy_price_source": "zero"
+   "buy_price_eur": 95.01,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 38
   },
   {
    "id": "p3-8",
@@ -1363,6 +3086,12 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 4,
+   "listings_mint_nm_target_lang": 4,
+   "qty_mint_nm_target_lang_zero": 0,
+   "listings_mint_nm_target_lang_zero": 0,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/113265/show_vileplume-gx-secret-rare-211-236-cosmic-eclipse.jpg",
    "price_min_ita_nm_eur": 93.64,
    "price_min_target_lang_nm_eur": 93.64,
@@ -1375,12 +3104,12 @@
    "ct_market_all_lang_eur": 74.92,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 93.64,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 39,
    "release_year": 2019,
-   "buy_price_source": "cardtrader"
+   "buy_price_eur": 93.64,
+   "buy_price_source": "cardtrader",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 39
   },
   {
    "id": "p2-1",
@@ -1398,24 +3127,81 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 441964,
+     "username": "MOBA Store",
+     "country_code": "IT",
+     "price_eur": 90.62,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 347,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 5002,
+     "username": "Magiclizard",
+     "country_code": "IT",
+     "price_eur": 90.63,
+     "quantity": 1,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 62760,
+     "ct_zero_avg_shipping_days": 12
+    },
+    {
+     "user_id": 535218,
+     "username": "Wantd it",
+     "country_code": "IT",
+     "price_eur": 98.64,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 5,
+     "ct_zero_avg_shipping_days": 5
+    },
+    {
+     "user_id": 518022,
+     "username": "M M_COLLECTION_CARDS",
+     "country_code": "IT",
+     "price_eur": 100.0,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 73,
+     "ct_zero_avg_shipping_days": 23
+    },
+    {
+     "user_id": 25843,
+     "username": "Top Game Fucecchio",
+     "country_code": "IT",
+     "price_eur": 100.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 28385,
+     "ct_zero_avg_shipping_days": 27
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 14,
+   "listings_mint_nm_target_lang": 13,
+   "qty_mint_nm_target_lang_zero": 14,
+   "listings_mint_nm_target_lang_zero": 13,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/227867/show_rayquaza-vmax-ultra-rare-tg20-tg30-silver-tempest.jpg",
    "price_min_ita_nm_eur": 90.62,
    "price_min_target_lang_nm_eur": 90.62,
-   "listings_target_lang_nm": 12,
+   "listings_target_lang_nm": 13,
    "price_2nd_target_lang_nm_eur": 90.63,
    "price_min_any_lang_nm_eur": 90.62,
    "price_min_ita_nm_zero_eur": 90.62,
    "price_min_target_lang_nm_zero_eur": 90.62,
-   "listings_target_lang_nm_zero": 12,
+   "listings_target_lang_nm_zero": 13,
    "ct_market_all_lang_eur": 140.49,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 90.62,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 40,
    "release_year": 2022,
-   "buy_price_source": "zero"
+   "buy_price_eur": 90.62,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 40
   },
   {
    "id": "p5-7",
@@ -1433,6 +3219,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 341828,
+     "username": "CLOECARD_TCG",
+     "country_code": "IT",
+     "price_eur": 90.56,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 2214,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 604800,
+     "username": "Dred84900",
+     "country_code": "IT",
+     "price_eur": 90.57,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 184,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 139875,
+     "username": "CARDLEADER",
+     "country_code": "IT",
+     "price_eur": 90.61,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 92690,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 454589,
+     "username": "ExtraBall_Viterbo",
+     "country_code": "IT",
+     "price_eur": 91.17,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 127,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 320374,
+     "username": "Urza s Consulting",
+     "country_code": "IT",
+     "price_eur": 95.48,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 47334,
+     "ct_zero_avg_shipping_days": 7
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 29,
+   "listings_mint_nm_target_lang": 25,
+   "qty_mint_nm_target_lang_zero": 29,
+   "listings_mint_nm_target_lang_zero": 25,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/316783/show_flareon-ex-special-illustration-rare-146-131-prismatic-evolutions.jpg",
    "price_min_ita_nm_eur": 90.56,
    "price_min_target_lang_nm_eur": 90.56,
@@ -1442,15 +3285,15 @@
    "price_min_ita_nm_zero_eur": 90.56,
    "price_min_target_lang_nm_zero_eur": 90.56,
    "listings_target_lang_nm_zero": 25,
-   "ct_market_all_lang_eur": 135.45,
+   "ct_market_all_lang_eur": 139.08,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 90.56,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 41,
    "release_year": 2025,
-   "buy_price_source": "zero"
+   "buy_price_eur": 90.56,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 41
   },
   {
    "id": "p7-5",
@@ -1468,6 +3311,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 270824,
+     "username": "Vjtt98",
+     "country_code": "IT",
+     "price_eur": 87.23,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 2689,
+     "ct_zero_avg_shipping_days": 26
+    },
+    {
+     "user_id": 598200,
+     "username": "Cristiano-9",
+     "country_code": "IT",
+     "price_eur": 87.24,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 132,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 45795,
+     "username": "Scazzoman",
+     "country_code": "IT",
+     "price_eur": 87.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 15863,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 503435,
+     "username": "ParthenopeTCG",
+     "country_code": "IT",
+     "price_eur": 87.74,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 156,
+     "ct_zero_avg_shipping_days": 8
+    },
+    {
+     "user_id": 356037,
+     "username": "Crossoverteramo-1",
+     "country_code": "IT",
+     "price_eur": 88.63,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 867,
+     "ct_zero_avg_shipping_days": 25
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 9,
+   "listings_mint_nm_target_lang": 9,
+   "qty_mint_nm_target_lang_zero": 9,
+   "listings_mint_nm_target_lang_zero": 9,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/421153/show_421153-raikou-ex-special-illustration-rare-136-103-delta-reign.webp",
    "price_min_ita_nm_eur": 87.23,
    "price_min_target_lang_nm_eur": 87.23,
@@ -1480,12 +3380,12 @@
    "ct_market_all_lang_eur": 100.95,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 87.23,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 42,
    "release_year": 2026,
-   "buy_price_source": "zero"
+   "buy_price_eur": 87.23,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 42
   },
   {
    "id": "p2-2",
@@ -1503,6 +3403,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 541380,
+     "username": "Cardzone_Monza",
+     "country_code": "IT",
+     "price_eur": 86.44,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 246,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 441964,
+     "username": "MOBA Store",
+     "country_code": "IT",
+     "price_eur": 86.63,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 347,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 263691,
+     "username": "Alepoke89",
+     "country_code": "IT",
+     "price_eur": 86.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 8239,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 401680,
+     "username": "Daruma Studio",
+     "country_code": "IT",
+     "price_eur": 87.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 1238,
+     "ct_zero_avg_shipping_days": 5
+    },
+    {
+     "user_id": 85866,
+     "username": "FantasyProjectRome",
+     "country_code": "IT",
+     "price_eur": 87.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 48,
+     "ct_zero_avg_shipping_days": 4
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 19,
+   "listings_mint_nm_target_lang": 18,
+   "qty_mint_nm_target_lang_zero": 19,
+   "listings_mint_nm_target_lang_zero": 18,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/221650/show_pikachu-v-ultra-rare-tg16-tg30-lost-origin.jpg",
    "price_min_ita_nm_eur": 86.44,
    "price_min_target_lang_nm_eur": 86.44,
@@ -1515,12 +3472,12 @@
    "ct_market_all_lang_eur": 79.75,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 86.44,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 43,
    "release_year": 2022,
-   "buy_price_source": "zero"
+   "buy_price_eur": 86.44,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 43
   },
   {
    "id": "p3-1",
@@ -1538,6 +3495,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 239780,
+     "username": "SekaiCollectibles",
+     "country_code": "IT",
+     "price_eur": 86.32,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 2522,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 541380,
+     "username": "Cardzone_Monza",
+     "country_code": "IT",
+     "price_eur": 86.34,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 246,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 420661,
+     "username": "Goblin-Queen",
+     "country_code": "IT",
+     "price_eur": 86.88,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 185,
+     "ct_zero_avg_shipping_days": 8
+    },
+    {
+     "user_id": 67565,
+     "username": "Bombocards",
+     "country_code": "IT",
+     "price_eur": 88.41,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 2316,
+     "ct_zero_avg_shipping_days": 28
+    },
+    {
+     "user_id": 3972,
+     "username": "TolarianAcademy",
+     "country_code": "IT",
+     "price_eur": 90.59,
+     "quantity": 1,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 57465,
+     "ct_zero_avg_shipping_days": 9
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 12,
+   "listings_mint_nm_target_lang": 12,
+   "qty_mint_nm_target_lang_zero": 12,
+   "listings_mint_nm_target_lang_zero": 12,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/200739/show_celebi-v-245-264-fusion-strike.png",
    "price_min_ita_nm_eur": 86.32,
    "price_min_target_lang_nm_eur": 86.32,
@@ -1550,12 +3564,12 @@
    "ct_market_all_lang_eur": 55.82,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 86.32,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 44,
    "release_year": 2021,
-   "buy_price_source": "zero"
+   "buy_price_eur": 86.32,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 44
   },
   {
    "id": "p6-1",
@@ -1573,6 +3587,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 91,
+     "username": "ManaTrust",
+     "country_code": "IT",
+     "price_eur": 85.59,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 147237,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 516883,
+     "username": "IlLoto_TCG",
+     "country_code": "IT",
+     "price_eur": 94.49,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 16,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 301642,
+     "username": "Ec_cards",
+     "country_code": "IT",
+     "price_eur": 94.51,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 5312,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 40121,
+     "username": "Arcanumita",
+     "country_code": "IT",
+     "price_eur": 95.59,
+     "quantity": 1,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 37613,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 86502,
+     "username": "ChimeraTrading",
+     "country_code": "IT",
+     "price_eur": 100.08,
+     "quantity": 1,
+     "avg_rating_percentage": 98.8,
+     "feedbacks_count": 118621,
+     "ct_zero_avg_shipping_days": 4
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 31,
+   "listings_mint_nm_target_lang": 23,
+   "qty_mint_nm_target_lang_zero": 31,
+   "listings_mint_nm_target_lang_zero": 23,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/261380/show_zapdos-ex-special-illustration-rare-202-165-151.jpg",
    "price_min_ita_nm_eur": 85.59,
    "price_min_target_lang_nm_eur": 85.59,
@@ -1585,12 +3656,12 @@
    "ct_market_all_lang_eur": 95.54,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 85.59,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 45,
    "release_year": 2023,
-   "buy_price_source": "zero"
+   "buy_price_eur": 85.59,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 45
   },
   {
    "id": "p8-3",
@@ -1608,6 +3679,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 91,
+     "username": "ManaTrust",
+     "country_code": "IT",
+     "price_eur": 85.59,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 147237,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 611954,
+     "username": "Gianluca puteri",
+     "country_code": "IT",
+     "price_eur": 89.95,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 12,
+     "ct_zero_avg_shipping_days": 12
+    },
+    {
+     "user_id": 158176,
+     "username": "1up",
+     "country_code": "IT",
+     "price_eur": 90.52,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 22664,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 5002,
+     "username": "Magiclizard",
+     "country_code": "IT",
+     "price_eur": 90.53,
+     "quantity": 1,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 62760,
+     "ct_zero_avg_shipping_days": 12
+    },
+    {
+     "user_id": 86502,
+     "username": "ChimeraTrading",
+     "country_code": "IT",
+     "price_eur": 90.58,
+     "quantity": 1,
+     "avg_rating_percentage": 98.8,
+     "feedbacks_count": 118621,
+     "ct_zero_avg_shipping_days": 4
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 46,
+   "listings_mint_nm_target_lang": 24,
+   "qty_mint_nm_target_lang_zero": 46,
+   "listings_mint_nm_target_lang_zero": 24,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/390062/show_390062-mega-greninja-ex-gold-secret-rare-122-086-chaos-rising.jpg",
    "price_min_ita_nm_eur": 85.59,
    "price_min_target_lang_nm_eur": 85.59,
@@ -1620,12 +3748,12 @@
    "ct_market_all_lang_eur": 116.08,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 85.59,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 46,
    "release_year": 2026,
-   "buy_price_source": "zero"
+   "buy_price_eur": 85.59,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 46
   },
   {
    "id": "p6-4",
@@ -1643,6 +3771,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 334891,
+     "username": "GTFano",
+     "country_code": "IT",
+     "price_eur": 75.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 735,
+     "ct_zero_avg_shipping_days": 28
+    },
+    {
+     "user_id": 203590,
+     "username": "JeffPesos - GTCorciano",
+     "country_code": "IT",
+     "price_eur": 85.62,
+     "quantity": 1,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 5055,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 335976,
+     "username": "KrakenCards",
+     "country_code": "IT",
+     "price_eur": 85.63,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 5328,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 200065,
+     "username": "Pandaroni",
+     "country_code": "IT",
+     "price_eur": 86.09,
+     "quantity": 1,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 11288,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 69100,
+     "username": "Windbrook",
+     "country_code": "IT",
+     "price_eur": 86.12,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 6768,
+     "ct_zero_avg_shipping_days": 7
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 22,
+   "listings_mint_nm_target_lang": 19,
+   "qty_mint_nm_target_lang_zero": 22,
+   "listings_mint_nm_target_lang_zero": 19,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/235179/show_darkrai-vstar-ultra-rare-gg50-gg70-crown-zenith(2).jpg",
    "price_min_ita_nm_eur": 75.64,
    "price_min_target_lang_nm_eur": 75.64,
@@ -1655,12 +3840,12 @@
    "ct_market_all_lang_eur": 97.36,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 75.64,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 47,
    "release_year": 2023,
-   "buy_price_source": "zero"
+   "buy_price_eur": 75.64,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 47
   },
   {
    "id": "p8-4",
@@ -1678,6 +3863,60 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 614128,
+     "username": "PimpiTCG",
+     "country_code": "IT",
+     "price_eur": 70.55,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 128
+    },
+    {
+     "user_id": 540444,
+     "username": "Filippo Bazzicalupi",
+     "country_code": "IT",
+     "price_eur": 70.63,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 9
+    },
+    {
+     "user_id": 617317,
+     "username": "FOXHOUND-TCG",
+     "country_code": "IT",
+     "price_eur": 75.19,
+     "quantity": 1,
+     "avg_rating_percentage": null,
+     "feedbacks_count": 5866
+    },
+    {
+     "user_id": 5002,
+     "username": "Magiclizard",
+     "country_code": "IT",
+     "price_eur": 79.12,
+     "quantity": 2,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 62760,
+     "ct_zero_avg_shipping_days": 12
+    },
+    {
+     "user_id": 164440,
+     "username": "PokePosta-Store",
+     "country_code": "IT",
+     "price_eur": 79.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 6750,
+     "ct_zero_avg_shipping_days": 8
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 27,
+   "listings_mint_nm_target_lang": 22,
+   "qty_mint_nm_target_lang_zero": 27,
+   "listings_mint_nm_target_lang_zero": 22,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/378969/show_mega-zygarde-ex-gold-secret-rare-124-088-perfect-order.jpg",
    "price_min_ita_nm_eur": 70.55,
    "price_min_target_lang_nm_eur": 70.55,
@@ -1690,12 +3929,12 @@
    "ct_market_all_lang_eur": 78.41,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 70.55,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 48,
    "release_year": 2026,
-   "buy_price_source": "zero"
+   "buy_price_eur": 70.55,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 48
   },
   {
    "id": "p2-3",
@@ -1713,6 +3952,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 341828,
+     "username": "CLOECARD_TCG",
+     "country_code": "IT",
+     "price_eur": 64.14,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 2214,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 301642,
+     "username": "Ec_cards",
+     "country_code": "IT",
+     "price_eur": 65.92,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 5312,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 320374,
+     "username": "Urza s Consulting",
+     "country_code": "IT",
+     "price_eur": 66.62,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 47334,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 538790,
+     "username": "DarkDiamondTCG",
+     "country_code": "IT",
+     "price_eur": 67.59,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 20,
+     "ct_zero_avg_shipping_days": 8
+    },
+    {
+     "user_id": 85866,
+     "username": "FantasyProjectRome",
+     "country_code": "IT",
+     "price_eur": 67.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 48,
+     "ct_zero_avg_shipping_days": 4
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 13,
+   "listings_mint_nm_target_lang": 13,
+   "qty_mint_nm_target_lang_zero": 13,
+   "listings_mint_nm_target_lang_zero": 13,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/221651/show_pikachu-vmax-ultra-rare-tg16-tg30-lost-origin.jpg",
    "price_min_ita_nm_eur": 64.14,
    "price_min_target_lang_nm_eur": 64.14,
@@ -1725,12 +4021,12 @@
    "ct_market_all_lang_eur": 68.5,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 64.14,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 49,
    "release_year": 2022,
-   "buy_price_source": "zero"
+   "buy_price_eur": 64.14,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 49
   },
   {
    "id": "p6-3",
@@ -1748,6 +4044,82 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 334891,
+     "username": "GTFano",
+     "country_code": "IT",
+     "price_eur": 60.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 735,
+     "ct_zero_avg_shipping_days": 28
+    },
+    {
+     "user_id": 231628,
+     "username": "FeedateShop",
+     "country_code": "IT",
+     "price_eur": 61.17,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 7996,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 224993,
+     "username": "UnanimeCenter",
+     "country_code": "IT",
+     "price_eur": 61.28,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 9613,
+     "ct_zero_avg_shipping_days": 26
+    },
+    {
+     "user_id": 352350,
+     "username": "Nik_Gmts",
+     "country_code": "IT",
+     "price_eur": 63.62,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 1241,
+     "ct_zero_avg_shipping_days": 26
+    },
+    {
+     "user_id": 7977,
+     "username": "Onecardtcgstore",
+     "country_code": "IT",
+     "price_eur": 74.53,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 22281,
+     "ct_zero_avg_shipping_days": 10
+    }
+   ],
+   "offers_ct": [
+    {
+     "user_id": 185118,
+     "username": "Moicano",
+     "country_code": "US",
+     "price_eur": 90.85,
+     "quantity": 1,
+     "avg_rating_percentage": null,
+     "feedbacks_count": 0
+    },
+    {
+     "user_id": 151607,
+     "username": "Gabry-11",
+     "country_code": "US",
+     "price_eur": 165.11,
+     "quantity": 1,
+     "avg_rating_percentage": null,
+     "feedbacks_count": 0
+    }
+   ],
+   "qty_mint_nm_target_lang": 44,
+   "listings_mint_nm_target_lang": 29,
+   "qty_mint_nm_target_lang_zero": 42,
+   "listings_mint_nm_target_lang_zero": 27,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/255402/show_charizard-ex-special-illustration-rare-223-197-obsidian-flames(2).jpg",
    "price_min_ita_nm_eur": 60.64,
    "price_min_target_lang_nm_eur": 60.64,
@@ -1760,12 +4132,12 @@
    "ct_market_all_lang_eur": 51.2,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 60.64,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 50,
    "release_year": 2023,
-   "buy_price_source": "zero"
+   "buy_price_eur": 60.64,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 50
   },
   {
    "id": "p5-8",
@@ -1783,6 +4155,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 516883,
+     "username": "IlLoto_TCG",
+     "country_code": "IT",
+     "price_eur": 60.23,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 16,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 231628,
+     "username": "FeedateShop",
+     "country_code": "IT",
+     "price_eur": 60.25,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 7996,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 301642,
+     "username": "Ec_cards",
+     "country_code": "IT",
+     "price_eur": 61.5,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 5312,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 341305,
+     "username": "Logposehouse",
+     "country_code": "IT",
+     "price_eur": 63.54,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 12730,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 17643,
+     "username": "Prophet88",
+     "country_code": "IT",
+     "price_eur": 63.58,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 3322,
+     "ct_zero_avg_shipping_days": 10
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 38,
+   "listings_mint_nm_target_lang": 30,
+   "qty_mint_nm_target_lang_zero": 38,
+   "listings_mint_nm_target_lang_zero": 30,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/316812/show_eevee-ex-special-illustration-rare-167-131-prismatic-evolutions.jpg",
    "price_min_ita_nm_eur": 60.23,
    "price_min_target_lang_nm_eur": 60.23,
@@ -1792,15 +4221,15 @@
    "price_min_ita_nm_zero_eur": 60.23,
    "price_min_target_lang_nm_zero_eur": 60.23,
    "listings_target_lang_nm_zero": 30,
-   "ct_market_all_lang_eur": 117.45,
+   "ct_market_all_lang_eur": 117.56,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 60.23,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 51,
    "release_year": 2025,
-   "buy_price_source": "zero"
+   "buy_price_eur": 60.23,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 51
   },
   {
    "id": "p6-2",
@@ -1818,6 +4247,62 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 611384,
+     "username": "Chiko cards",
+     "country_code": "IT",
+     "price_eur": 57.63,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 1
+    },
+    {
+     "user_id": 37650,
+     "username": "Giogiogemi2",
+     "country_code": "IT",
+     "price_eur": 57.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 6730,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 317602,
+     "username": "Luxtcg",
+     "country_code": "IT",
+     "price_eur": 57.69,
+     "quantity": 2,
+     "avg_rating_percentage": 97.9,
+     "feedbacks_count": 4228,
+     "ct_zero_avg_shipping_days": 8
+    },
+    {
+     "user_id": 146019,
+     "username": "Colledea91",
+     "country_code": "IT",
+     "price_eur": 58.14,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 3124,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 341305,
+     "username": "Logposehouse",
+     "country_code": "IT",
+     "price_eur": 58.54,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 12730,
+     "ct_zero_avg_shipping_days": 4
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 32,
+   "listings_mint_nm_target_lang": 25,
+   "qty_mint_nm_target_lang_zero": 32,
+   "listings_mint_nm_target_lang_zero": 25,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/261321/show_pikachu-illustration-rare-173-165-151.jpg",
    "price_min_ita_nm_eur": 57.63,
    "price_min_target_lang_nm_eur": 57.63,
@@ -1830,12 +4315,12 @@
    "ct_market_all_lang_eur": 57.87,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 57.63,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 52,
    "release_year": 2023,
-   "buy_price_source": "zero"
+   "buy_price_eur": 57.63,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 52
   },
   {
    "id": "p5-9",
@@ -1853,24 +4338,81 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 341828,
+     "username": "CLOECARD_TCG",
+     "country_code": "IT",
+     "price_eur": 52.38,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 2214,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 146019,
+     "username": "Colledea91",
+     "country_code": "IT",
+     "price_eur": 52.39,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 3124,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 98838,
+     "username": "Pikapikastoreonline",
+     "country_code": "IT",
+     "price_eur": 52.39,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 26902,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 535218,
+     "username": "Wantd it",
+     "country_code": "IT",
+     "price_eur": 52.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 5,
+     "ct_zero_avg_shipping_days": 5
+    },
+    {
+     "user_id": 779,
+     "username": "Cardshopaolo",
+     "country_code": "IT",
+     "price_eur": 54.99,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 9819,
+     "ct_zero_avg_shipping_days": 9
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 39,
+   "listings_mint_nm_target_lang": 31,
+   "qty_mint_nm_target_lang_zero": 39,
+   "listings_mint_nm_target_lang_zero": 31,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/265325/show_altaria-ex-special-illustration-rare-253-182-paradox-rift.jpg",
    "price_min_ita_nm_eur": 52.38,
    "price_min_target_lang_nm_eur": 52.38,
-   "listings_target_lang_nm": 30,
+   "listings_target_lang_nm": 31,
    "price_2nd_target_lang_nm_eur": 52.39,
    "price_min_any_lang_nm_eur": 50.63,
    "price_min_ita_nm_zero_eur": 52.38,
    "price_min_target_lang_nm_zero_eur": 52.38,
-   "listings_target_lang_nm_zero": 30,
+   "listings_target_lang_nm_zero": 31,
    "ct_market_all_lang_eur": 50.51,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 52.38,
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 53,
    "release_year": 2023,
-   "buy_price_source": "zero"
+   "buy_price_eur": 52.38,
+   "buy_price_source": "zero",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 53
   },
   {
    "id": "p1-8",
@@ -1888,6 +4430,62 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 516883,
+     "username": "IlLoto_TCG",
+     "country_code": "IT",
+     "price_eur": 49.34,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 16,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 424938,
+     "username": "FMcollectibles",
+     "country_code": "IT",
+     "price_eur": 49.36,
+     "quantity": 1,
+     "avg_rating_percentage": 98.4,
+     "feedbacks_count": 62,
+     "ct_zero_avg_shipping_days": 12
+    },
+    {
+     "user_id": 614128,
+     "username": "PimpiTCG",
+     "country_code": "IT",
+     "price_eur": 49.45,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 128
+    },
+    {
+     "user_id": 158176,
+     "username": "1up",
+     "country_code": "IT",
+     "price_eur": 49.53,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 22664,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 40017,
+     "username": "GS-GameOn",
+     "country_code": "IT",
+     "price_eur": 49.63,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 39039,
+     "ct_zero_avg_shipping_days": 29
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 28,
+   "listings_mint_nm_target_lang": 20,
+   "qty_mint_nm_target_lang_zero": 28,
+   "listings_mint_nm_target_lang_zero": 20,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/235164/show_leafeon-vstar-ultra-rare-gg35-gg70-crown-zenith(2).jpg",
    "price_min_ita_nm_eur": 49.34,
    "price_min_target_lang_nm_eur": 49.34,
@@ -1900,12 +4498,12 @@
    "ct_market_all_lang_eur": 70.2,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 49.34,
-   "tier": "A: <50€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 54,
    "release_year": 2023,
-   "buy_price_source": "zero"
+   "buy_price_eur": 49.34,
+   "buy_price_source": "zero",
+   "tier": "A: <50€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 54
   },
   {
    "id": "p7-3",
@@ -1923,6 +4521,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 86502,
+     "username": "ChimeraTrading",
+     "country_code": "IT",
+     "price_eur": 48.27,
+     "quantity": 1,
+     "avg_rating_percentage": 98.8,
+     "feedbacks_count": 118621,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 426083,
+     "username": "Progct01",
+     "country_code": "IT",
+     "price_eur": 48.27,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 74,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 350311,
+     "username": "RapidStrike_V",
+     "country_code": "IT",
+     "price_eur": 48.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 1171,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 535218,
+     "username": "Wantd it",
+     "country_code": "IT",
+     "price_eur": 48.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 5,
+     "ct_zero_avg_shipping_days": 5
+    },
+    {
+     "user_id": 126669,
+     "username": "Yourpokemoncollection",
+     "country_code": "IT",
+     "price_eur": 48.64,
+     "quantity": 1,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 119,
+     "ct_zero_avg_shipping_days": 29
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 37,
+   "listings_mint_nm_target_lang": 30,
+   "qty_mint_nm_target_lang_zero": 37,
+   "listings_mint_nm_target_lang_zero": 30,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/370918/show_lillie-s-clefairy-ex-special-illustration-rare-280-217-ascended-heroes.jpg",
    "price_min_ita_nm_eur": 48.27,
    "price_min_target_lang_nm_eur": 48.27,
@@ -1935,12 +4590,12 @@
    "ct_market_all_lang_eur": 76.93,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 48.27,
-   "tier": "A: <50€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 55,
    "release_year": 2026,
-   "buy_price_source": "zero"
+   "buy_price_eur": 48.27,
+   "buy_price_source": "zero",
+   "tier": "A: <50€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 55
   },
   {
    "id": "p6-5",
@@ -1958,6 +4613,62 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 516883,
+     "username": "IlLoto_TCG",
+     "country_code": "IT",
+     "price_eur": 46.83,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 16,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 86846,
+     "username": "Bergy",
+     "country_code": "IT",
+     "price_eur": 46.85,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 35047,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 473419,
+     "username": "GsArcade",
+     "country_code": "IT",
+     "price_eur": 46.89,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 46,
+     "ct_zero_avg_shipping_days": 5
+    },
+    {
+     "user_id": 614128,
+     "username": "PimpiTCG",
+     "country_code": "IT",
+     "price_eur": 47.05,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 128
+    },
+    {
+     "user_id": 231628,
+     "username": "FeedateShop",
+     "country_code": "IT",
+     "price_eur": 47.47,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 7996,
+     "ct_zero_avg_shipping_days": 6
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 31,
+   "listings_mint_nm_target_lang": 19,
+   "qty_mint_nm_target_lang_zero": 31,
+   "listings_mint_nm_target_lang_zero": 19,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/265525/show_groudon-199-182-paradox-rift.jpg",
    "price_min_ita_nm_eur": 46.83,
    "price_min_target_lang_nm_eur": 46.83,
@@ -1970,12 +4681,12 @@
    "ct_market_all_lang_eur": 81.94,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 46.83,
-   "tier": "A: <50€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 56,
    "release_year": 2023,
-   "buy_price_source": "zero"
+   "buy_price_eur": 46.83,
+   "buy_price_source": "zero",
+   "tier": "A: <50€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 56
   },
   {
    "id": "p5-2",
@@ -1993,24 +4704,81 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 5002,
+     "username": "Magiclizard",
+     "country_code": "IT",
+     "price_eur": 45.63,
+     "quantity": 1,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 62760,
+     "ct_zero_avg_shipping_days": 12
+    },
+    {
+     "user_id": 535218,
+     "username": "Wantd it",
+     "country_code": "IT",
+     "price_eur": 45.64,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 5,
+     "ct_zero_avg_shipping_days": 5
+    },
+    {
+     "user_id": 426083,
+     "username": "Progct01",
+     "country_code": "IT",
+     "price_eur": 46.26,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 74,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 231628,
+     "username": "FeedateShop",
+     "country_code": "IT",
+     "price_eur": 46.27,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 7996,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 335710,
+     "username": "Dagoa319",
+     "country_code": "IT",
+     "price_eur": 48.59,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 1521,
+     "ct_zero_avg_shipping_days": 10
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 31,
+   "listings_mint_nm_target_lang": 23,
+   "qty_mint_nm_target_lang_zero": 31,
+   "listings_mint_nm_target_lang_zero": 23,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/341102/show_kyurem-ex-special-illustration-rare-165-086-black-bolt.png",
    "price_min_ita_nm_eur": 45.63,
    "price_min_target_lang_nm_eur": 45.63,
-   "listings_target_lang_nm": 22,
-   "price_2nd_target_lang_nm_eur": 46.26,
+   "listings_target_lang_nm": 23,
+   "price_2nd_target_lang_nm_eur": 45.64,
    "price_min_any_lang_nm_eur": 45.63,
    "price_min_ita_nm_zero_eur": 45.63,
    "price_min_target_lang_nm_zero_eur": 45.63,
-   "listings_target_lang_nm_zero": 22,
+   "listings_target_lang_nm_zero": 23,
    "ct_market_all_lang_eur": 62.17,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 45.63,
-   "tier": "A: <50€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 57,
    "release_year": 2025,
-   "buy_price_source": "zero"
+   "buy_price_eur": 45.63,
+   "buy_price_source": "zero",
+   "tier": "A: <50€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 57
   },
   {
    "id": "p2-4",
@@ -2028,6 +4796,62 @@
    "italian_edition_exists": true,
    "confidence": "media",
    "notes": "Numero non leggibile nello screenshot: identificata come Arceus V alt art 166/172 (illustr. kawayoo) dall'artwork. Verificare.",
+   "offers_zero": [
+    {
+     "user_id": 67565,
+     "username": "Bombocards",
+     "country_code": "IT",
+     "price_eur": 37.52,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 2316,
+     "ct_zero_avg_shipping_days": 28
+    },
+    {
+     "user_id": 614128,
+     "username": "PimpiTCG",
+     "country_code": "IT",
+     "price_eur": 38.93,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 128
+    },
+    {
+     "user_id": 14263,
+     "username": "CerberusTCG",
+     "country_code": "IT",
+     "price_eur": 38.97,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 70640,
+     "ct_zero_avg_shipping_days": 10
+    },
+    {
+     "user_id": 104981,
+     "username": "BS GAMES",
+     "country_code": "IT",
+     "price_eur": 39.02,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 11032,
+     "ct_zero_avg_shipping_days": 11
+    },
+    {
+     "user_id": 34195,
+     "username": "Dracarysviterbo",
+     "country_code": "IT",
+     "price_eur": 39.77,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 29837,
+     "ct_zero_avg_shipping_days": 9
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 17,
+   "listings_mint_nm_target_lang": 14,
+   "qty_mint_nm_target_lang_zero": 17,
+   "listings_mint_nm_target_lang_zero": 14,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/206475/show_arceus-v-ultra-rare-166-172-brilliant-stars.jpg",
    "price_min_ita_nm_eur": 37.52,
    "price_min_target_lang_nm_eur": 37.52,
@@ -2040,12 +4864,12 @@
    "ct_market_all_lang_eur": 50.13,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 37.52,
-   "tier": "A: <50€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 58,
    "release_year": 2022,
-   "buy_price_source": "zero"
+   "buy_price_eur": 37.52,
+   "buy_price_source": "zero",
+   "tier": "A: <50€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 58
   },
   {
    "id": "p2-5",
@@ -2063,6 +4887,63 @@
    "italian_edition_exists": true,
    "confidence": "media",
    "notes": "Umbreon V Trainer Gallery TG22 (il numero letto sembrava TG23, che però è Umbreon VMAX; la carta è una V da 200 HP).",
+   "offers_zero": [
+    {
+     "user_id": 10374,
+     "username": "Rocca3corvi",
+     "country_code": "IT",
+     "price_eur": 34.91,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 19092,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 86502,
+     "username": "ChimeraTrading",
+     "country_code": "IT",
+     "price_eur": 35.41,
+     "quantity": 1,
+     "avg_rating_percentage": 98.8,
+     "feedbacks_count": 118621,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 48675,
+     "username": "Iltempiodikronos",
+     "country_code": "IT",
+     "price_eur": 35.42,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 42779,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 533198,
+     "username": "Cicciogamer89tcg uboldo",
+     "country_code": "IT",
+     "price_eur": 35.52,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 42,
+     "ct_zero_avg_shipping_days": 5
+    },
+    {
+     "user_id": 224051,
+     "username": "Otakura com",
+     "country_code": "IT",
+     "price_eur": 35.52,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 153,
+     "ct_zero_avg_shipping_days": 8
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 41,
+   "listings_mint_nm_target_lang": 33,
+   "qty_mint_nm_target_lang_zero": 41,
+   "listings_mint_nm_target_lang_zero": 33,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/206453/show_umbreon-v-illustration-rare-tg22-tg30-brilliant-stars.jpg",
    "price_min_ita_nm_eur": 34.91,
    "price_min_target_lang_nm_eur": 34.91,
@@ -2075,12 +4956,12 @@
    "ct_market_all_lang_eur": 48.91,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 34.91,
-   "tier": "A: <50€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 59,
    "release_year": 2022,
-   "buy_price_source": "zero"
+   "buy_price_eur": 34.91,
+   "buy_price_source": "zero",
+   "tier": "A: <50€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 59
   },
   {
    "id": "p2-8",
@@ -2098,6 +4979,62 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 516883,
+     "username": "IlLoto_TCG",
+     "country_code": "IT",
+     "price_eur": 25.28,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 16,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 336535,
+     "username": "Shahtcg",
+     "country_code": "IT",
+     "price_eur": 25.3,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 1120,
+     "ct_zero_avg_shipping_days": 8
+    },
+    {
+     "user_id": 614128,
+     "username": "PimpiTCG",
+     "country_code": "IT",
+     "price_eur": 25.34,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 128
+    },
+    {
+     "user_id": 11531,
+     "username": "Il Covo del Nerd",
+     "country_code": "IT",
+     "price_eur": 25.38,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 92850,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 433468,
+     "username": "Gotta-collect_em-all",
+     "country_code": "IT",
+     "price_eur": 25.78,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 73,
+     "ct_zero_avg_shipping_days": 9
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 18,
+   "listings_mint_nm_target_lang": 15,
+   "qty_mint_nm_target_lang_zero": 18,
+   "listings_mint_nm_target_lang_zero": 15,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/206627/show_sylveon-v-illustration-rare-tg14-tg30-brilliant-stars.jpg",
    "price_min_ita_nm_eur": 25.28,
    "price_min_target_lang_nm_eur": 25.28,
@@ -2110,12 +5047,12 @@
    "ct_market_all_lang_eur": 46.01,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 25.28,
-   "tier": "A: <50€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 60,
    "release_year": 2022,
-   "buy_price_source": "zero"
+   "buy_price_eur": 25.28,
+   "buy_price_source": "zero",
+   "tier": "A: <50€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 60
   },
   {
    "id": "p1-9",
@@ -2133,6 +5070,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 529899,
+     "username": "Vault21",
+     "country_code": "IT",
+     "price_eur": 25.19,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 1913,
+     "ct_zero_avg_shipping_days": 12
+    },
+    {
+     "user_id": 7977,
+     "username": "Onecardtcgstore",
+     "country_code": "IT",
+     "price_eur": 25.39,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 22281,
+     "ct_zero_avg_shipping_days": 10
+    },
+    {
+     "user_id": 334891,
+     "username": "GTFano",
+     "country_code": "IT",
+     "price_eur": 25.4,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 735,
+     "ct_zero_avg_shipping_days": 28
+    },
+    {
+     "user_id": 140151,
+     "username": "Sampdoria1991",
+     "country_code": "IT",
+     "price_eur": 30.79,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 787,
+     "ct_zero_avg_shipping_days": 30
+    },
+    {
+     "user_id": 289562,
+     "username": "Ricciomilan96",
+     "country_code": "IT",
+     "price_eur": 32.52,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 391,
+     "ct_zero_avg_shipping_days": 8
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 14,
+   "listings_mint_nm_target_lang": 10,
+   "qty_mint_nm_target_lang_zero": 14,
+   "listings_mint_nm_target_lang_zero": 10,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/235190/show_deoxys-vmax-ultra-rare-gg45-gg70-crown-zenith(2).jpg",
    "price_min_ita_nm_eur": 25.19,
    "price_min_target_lang_nm_eur": 25.19,
@@ -2142,15 +5136,15 @@
    "price_min_ita_nm_zero_eur": 25.19,
    "price_min_target_lang_nm_zero_eur": 25.19,
    "listings_target_lang_nm_zero": 10,
-   "ct_market_all_lang_eur": 39.58,
+   "ct_market_all_lang_eur": 39.34,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 25.19,
-   "tier": "A: <50€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 61,
    "release_year": 2023,
-   "buy_price_source": "zero"
+   "buy_price_eur": 25.19,
+   "buy_price_source": "zero",
+   "tier": "A: <50€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 61
   },
   {
    "id": "p2-6",
@@ -2168,6 +5162,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 341828,
+     "username": "CLOECARD_TCG",
+     "country_code": "IT",
+     "price_eur": 25.19,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 2214,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 10374,
+     "username": "Rocca3corvi",
+     "country_code": "IT",
+     "price_eur": 25.4,
+     "quantity": 3,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 19092,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 423905,
+     "username": "MagiMon TCG",
+     "country_code": "IT",
+     "price_eur": 26.1,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 173,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 32839,
+     "username": "Jamaica Card Store",
+     "country_code": "IT",
+     "price_eur": 28.47,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 43301,
+     "ct_zero_avg_shipping_days": 13
+    },
+    {
+     "user_id": 541580,
+     "username": "Hanamilab bologna",
+     "country_code": "IT",
+     "price_eur": 29.4,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 54,
+     "ct_zero_avg_shipping_days": 7
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 21,
+   "listings_mint_nm_target_lang": 16,
+   "qty_mint_nm_target_lang_zero": 21,
+   "listings_mint_nm_target_lang_zero": 16,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/206580/show_mimikyu-v-illustration-rare-tg16-tg30-brilliant-stars.jpg",
    "price_min_ita_nm_eur": 25.19,
    "price_min_target_lang_nm_eur": 25.19,
@@ -2180,12 +5231,12 @@
    "ct_market_all_lang_eur": 35.53,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 25.19,
-   "tier": "A: <50€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 62,
    "release_year": 2022,
-   "buy_price_source": "zero"
+   "buy_price_eur": 25.19,
+   "buy_price_source": "zero",
+   "tier": "A: <50€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 62
   },
   {
    "id": "p2-7",
@@ -2203,6 +5254,62 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 516883,
+     "username": "IlLoto_TCG",
+     "country_code": "IT",
+     "price_eur": 21.85,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 16,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 441964,
+     "username": "MOBA Store",
+     "country_code": "IT",
+     "price_eur": 21.87,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 347,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 614128,
+     "username": "PimpiTCG",
+     "country_code": "IT",
+     "price_eur": 21.9,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 128
+    },
+    {
+     "user_id": 224993,
+     "username": "UnanimeCenter",
+     "country_code": "IT",
+     "price_eur": 22.4,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 9613,
+     "ct_zero_avg_shipping_days": 26
+    },
+    {
+     "user_id": 314185,
+     "username": "IL-REGNO",
+     "country_code": "IT",
+     "price_eur": 25.3,
+     "quantity": 2,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 11126,
+     "ct_zero_avg_shipping_days": 4
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 26,
+   "listings_mint_nm_target_lang": 18,
+   "qty_mint_nm_target_lang_zero": 26,
+   "listings_mint_nm_target_lang_zero": 18,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/206626/show_sylveon-vmax-illustration-rare-tg15-tg30-brilliant-stars.jpg",
    "price_min_ita_nm_eur": 21.85,
    "price_min_target_lang_nm_eur": 21.85,
@@ -2212,15 +5319,15 @@
    "price_min_ita_nm_zero_eur": 21.85,
    "price_min_target_lang_nm_zero_eur": 21.85,
    "listings_target_lang_nm_zero": 18,
-   "ct_market_all_lang_eur": 37.55,
+   "ct_market_all_lang_eur": 37.67,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 21.85,
-   "tier": "A: <50€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 63,
    "release_year": 2022,
-   "buy_price_source": "zero"
+   "buy_price_eur": 21.85,
+   "buy_price_source": "zero",
+   "tier": "A: <50€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 63
   },
   {
    "id": "p6-6",
@@ -2238,6 +5345,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 341828,
+     "username": "CLOECARD_TCG",
+     "country_code": "IT",
+     "price_eur": 18.07,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 2214,
+     "ct_zero_avg_shipping_days": 4
+    },
+    {
+     "user_id": 396152,
+     "username": "Tanukishop",
+     "country_code": "IT",
+     "price_eur": 18.27,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 931,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 121583,
+     "username": "Ds-nerd",
+     "country_code": "IT",
+     "price_eur": 19.22,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 4,
+     "ct_zero_avg_shipping_days": 11
+    },
+    {
+     "user_id": 231628,
+     "username": "FeedateShop",
+     "country_code": "IT",
+     "price_eur": 19.49,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 7996,
+     "ct_zero_avg_shipping_days": 6
+    },
+    {
+     "user_id": 126669,
+     "username": "Yourpokemoncollection",
+     "country_code": "IT",
+     "price_eur": 21.16,
+     "quantity": 1,
+     "avg_rating_percentage": 99.0,
+     "feedbacks_count": 119,
+     "ct_zero_avg_shipping_days": 29
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 34,
+   "listings_mint_nm_target_lang": 29,
+   "qty_mint_nm_target_lang_zero": 34,
+   "listings_mint_nm_target_lang_zero": 29,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/248874/show_tyranitar-222-193-paldea-evolved.jpg",
    "price_min_ita_nm_eur": 18.07,
    "price_min_target_lang_nm_eur": 18.07,
@@ -2250,12 +5414,12 @@
    "ct_market_all_lang_eur": 38.83,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 18.07,
-   "tier": "A: <50€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 64,
    "release_year": 2023,
-   "buy_price_source": "zero"
+   "buy_price_eur": 18.07,
+   "buy_price_source": "zero",
+   "tier": "A: <50€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 64
   },
   {
    "id": "p7-6",
@@ -2273,24 +5437,81 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "offers_zero": [
+    {
+     "user_id": 40017,
+     "username": "GS-GameOn",
+     "country_code": "IT",
+     "price_eur": 10.14,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 39039,
+     "ct_zero_avg_shipping_days": 29
+    },
+    {
+     "user_id": 390319,
+     "username": "PokeMew1992",
+     "country_code": "IT",
+     "price_eur": 11.91,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 46,
+     "ct_zero_avg_shipping_days": 29
+    },
+    {
+     "user_id": 598200,
+     "username": "Cristiano-9",
+     "country_code": "IT",
+     "price_eur": 11.95,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 132,
+     "ct_zero_avg_shipping_days": 7
+    },
+    {
+     "user_id": 32844,
+     "username": "Giulio16g",
+     "country_code": "IT",
+     "price_eur": 11.96,
+     "quantity": 1,
+     "avg_rating_percentage": 98.5,
+     "feedbacks_count": 1721,
+     "ct_zero_avg_shipping_days": 12
+    },
+    {
+     "user_id": 78313,
+     "username": "IgnaTCG",
+     "country_code": "IT",
+     "price_eur": 12.2,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 27880,
+     "ct_zero_avg_shipping_days": 5
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 28,
+   "listings_mint_nm_target_lang": 22,
+   "qty_mint_nm_target_lang_zero": 28,
+   "listings_mint_nm_target_lang_zero": 22,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/421131/show_421131-eevee-illustration-rare-114-103-delta-reign.webp",
-   "price_min_ita_nm_eur": 11.91,
-   "price_min_target_lang_nm_eur": 11.91,
-   "listings_target_lang_nm": 21,
-   "price_2nd_target_lang_nm_eur": 11.95,
-   "price_min_any_lang_nm_eur": 11.91,
-   "price_min_ita_nm_zero_eur": 11.91,
-   "price_min_target_lang_nm_zero_eur": 11.91,
-   "listings_target_lang_nm_zero": 21,
+   "price_min_ita_nm_eur": 10.14,
+   "price_min_target_lang_nm_eur": 10.14,
+   "listings_target_lang_nm": 22,
+   "price_2nd_target_lang_nm_eur": 11.91,
+   "price_min_any_lang_nm_eur": 10.14,
+   "price_min_ita_nm_zero_eur": 10.14,
+   "price_min_target_lang_nm_zero_eur": 10.14,
+   "listings_target_lang_nm_zero": 22,
    "ct_market_all_lang_eur": 13.79,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 11.91,
-   "tier": "A: <50€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 65,
    "release_year": 2026,
-   "buy_price_source": "zero"
+   "buy_price_eur": 10.14,
+   "buy_price_source": "zero",
+   "tier": "A: <50€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 65
   },
   {
    "id": "p3-4",
@@ -2308,6 +5529,63 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "Sylveon VMAX 075/203 è la versione 'normale' (Ultra Rare), non l'alt art: verificare che sia quella voluta.",
+   "offers_zero": [
+    {
+     "user_id": 48383,
+     "username": "Timetwistergames",
+     "country_code": "IT",
+     "price_eur": 7.13,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 65246,
+     "ct_zero_avg_shipping_days": 28
+    },
+    {
+     "user_id": 21929,
+     "username": "Galactus Roma",
+     "country_code": "IT",
+     "price_eur": 9.96,
+     "quantity": 4,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 139806,
+     "ct_zero_avg_shipping_days": 9
+    },
+    {
+     "user_id": 1515,
+     "username": "MagicTime IT",
+     "country_code": "IT",
+     "price_eur": 12.2,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 27149,
+     "ct_zero_avg_shipping_days": 8
+    },
+    {
+     "user_id": 90656,
+     "username": "HolonTower",
+     "country_code": "IT",
+     "price_eur": 13.11,
+     "quantity": 1,
+     "avg_rating_percentage": 98.0,
+     "feedbacks_count": 13385,
+     "ct_zero_avg_shipping_days": 13
+    },
+    {
+     "user_id": 162285,
+     "username": "Mperina31",
+     "country_code": "IT",
+     "price_eur": 15.0,
+     "quantity": 1,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 2371,
+     "ct_zero_avg_shipping_days": 3
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 10,
+   "listings_mint_nm_target_lang": 6,
+   "qty_mint_nm_target_lang_zero": 10,
+   "listings_mint_nm_target_lang_zero": 6,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/166313/show_sylveon-vmax-075-203-evolving-skies.png",
    "price_min_ita_nm_eur": 7.13,
    "price_min_target_lang_nm_eur": 7.13,
@@ -2320,12 +5598,12 @@
    "ct_market_all_lang_eur": 10.65,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 7.13,
-   "tier": "A: <50€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 66,
    "release_year": 2021,
-   "buy_price_source": "zero"
+   "buy_price_eur": 7.13,
+   "buy_price_source": "zero",
+   "tier": "A: <50€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 66
   },
   {
    "id": "p4-5",
@@ -2343,6 +5621,23 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "È la versione normale (Uncommon) 188/214 di Tuonoperduto, non una full art: costa pochi centesimi.",
+   "offers_zero": [
+    {
+     "user_id": 253321,
+     "username": "Maverik54",
+     "country_code": "IT",
+     "price_eur": 2.9,
+     "quantity": 3,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 5521,
+     "ct_zero_avg_shipping_days": 8
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 3,
+   "listings_mint_nm_target_lang": 1,
+   "qty_mint_nm_target_lang_zero": 3,
+   "listings_mint_nm_target_lang_zero": 1,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/122648/show_professor-elm-s-lecture-188-214-lost-thunder.jpg",
    "price_min_ita_nm_eur": 2.9,
    "price_min_target_lang_nm_eur": 2.9,
@@ -2355,12 +5650,12 @@
    "ct_market_all_lang_eur": 1.39,
    "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
    "fetch_error": null,
-   "buy_price_eur": 2.9,
-   "tier": "A: <50€",
-   "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 67,
    "release_year": 2018,
-   "buy_price_source": "zero"
+   "buy_price_eur": 2.9,
+   "buy_price_source": "zero",
+   "tier": "A: <50€",
+   "last_updated": "2026-11-10T19:19:18+01:00",
+   "rank_by_price": 67
   }
  ]
 }

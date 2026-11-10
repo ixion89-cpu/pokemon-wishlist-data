@@ -136,6 +136,17 @@ legend { font-weight: 650; margin-bottom: 8px; }
 .swatch { width: 18px; height: 4px; border-radius: 4px; display: inline-block; margin-right: 6px; vertical-align: middle; }
 .swatch.market { background: repeating-linear-gradient(90deg, #8d867c 0 4px, transparent 4px 7px); height: 0; border-top: 2px dashed #8d867c; }
 .note { background: #fff; border-radius: 16px; padding: 12px 14px; color: var(--muted); }
+.offers h2 { font-family: Fraunces, Georgia, serif; font-size: 26px; margin: 18px 0 4px; }
+.offers h3 { font-size: 15px; margin: 14px 0 8px; }
+.offer-list { display: grid; gap: 8px; }
+.offer-row {
+  display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center;
+  text-decoration: none; background: #fff; border-radius: 16px; padding: 12px 14px;
+  box-shadow: var(--shadow);
+}
+.offer-row .who { font-weight: 600; }
+.offer-row .meta { color: var(--muted); font-size: 13px; margin: 3px 0 0; }
+.offer-row .price { font-size: 18px; }
 .empty {
   background: #fff; border-radius: 22px; padding: 22px; text-align: center; color: var(--muted);
   box-shadow: var(--shadow);

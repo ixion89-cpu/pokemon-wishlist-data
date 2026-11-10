@@ -48,6 +48,10 @@ Campi di ogni carta:
 | `price_min_ita_nm_zero_eur` | minimo ITA NM solo venditori CardTrader Zero (null se non c'è nessuna copia Zero, o se la lingua target non è l'italiano) |
 | `price_min_target_lang_nm_zero_eur` | minimo NM nella lingua target solo venditori CardTrader Zero (null se non c'è nessuna copia Zero) |
 | `listings_target_lang_nm_zero` | quante copie NM nella lingua target sono in vendita da venditori CardTrader Zero (`0` se non ce ne sono) |
+| `offers_zero` / `offers_ct` | fino a 5 annunci Near Mint non gradati più economici, venditori Zero e venditori normali. Ogni riga ha `username`, `user_id`, `country_code`, `price_eur`, `quantity`, `avg_rating_percentage`, `feedbacks_count` e, per Zero, `ct_zero_avg_shipping_days` |
+| `qty_mint_nm_target_lang` | somma delle `quantity` degli annunci non gradati in lingua target, condizione Mint o Near Mint |
+| `listings_mint_nm_target_lang` | quanti sono quegli annunci |
+| `qty_mint_nm_target_lang_zero` / `listings_mint_nm_target_lang_zero` | la stessa disponibilità limitata ai venditori Zero |
 | `price_min_any_lang_nm_eur` | minimo NM in qualsiasi lingua (riferimento / fallback) |
 | `ct_market_all_lang_eur` | "CT market" CardTrader (tutte le lingue), ultimo valore del grafico |
 | `tier` | `A: <50€`, `B: 50-150€`, `C: >150€` |

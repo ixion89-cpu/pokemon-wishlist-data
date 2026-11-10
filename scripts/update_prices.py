@@ -160,10 +160,15 @@ def main():
         rec = dict(c)
         bp = None
         try:
+            # CardTrader include nel JSON solo chi spedisce nel paese del client,
+            # più i venditori Zero. Da un IP fuori dall'Italia le copie ITA non-Zero
+            # (can_sell_via_hub false) possono mancare del tutto: non vanno scartate
+            # se invece sono nella risposta.
             nm, d0 = products(bid, lang, "Near Mint")
             nm = [p for p in nm if ok(p, lang, "Near Mint")]
+            # Il minimo normale include anche i venditori non-Zero (can_sell_via_hub false).
+            # Il filtro Zero si applica solo a zprices, mai a questa lista.
             prices = sorted(p["price"]["cents"] / 100 for p in nm)
-            # CardTrader Zero: venditori che spediscono tramite l'hub CardTrader
             zprices = sorted(
                 p["price"]["cents"] / 100 for p in nm
                 if isinstance(p.get("user"), dict) and p["user"].get("can_sell_via_hub")

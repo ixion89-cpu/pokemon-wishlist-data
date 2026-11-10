@@ -445,13 +445,9 @@ function stockText(card) {
   const qty = num(card.qty_mint_nm_target_lang);
   const listings = num(card.listings_mint_nm_target_lang);
   if (qty == null && listings == null) return "";
-  const zQty = num(card.qty_mint_nm_target_lang_zero);
-  const zList = num(card.listings_mint_nm_target_lang_zero);
   const lang = card.target_language === "jp" ? "giapponese" : "italiano";
   let line = `${qty == null ? "n/d" : qty} copie in vendita in ${lang}, condizione Mint o Near Mint`;
   if (listings != null) line += ` · ${listings} annunci`;
-  if (zQty != null) line += ` · di cui ${zQty} copie Zero`;
-  if (zList != null) line += ` (${zList} annunci)`;
   return `<p class="quiet">${esc(line)}</p>`;
 }
 function seriesFor(card) {

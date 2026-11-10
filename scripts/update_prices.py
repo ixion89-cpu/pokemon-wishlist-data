@@ -173,14 +173,11 @@ def top_offers(listings, extra, want_zero, limit=5):
 
 
 def mint_nm_stock(listings):
-    qty = zero_qty = zero_n = 0
+    """Quantità complessiva Mint+Near Mint, Zero compreso. Nessuno split per tipo di venditore."""
+    qty = 0
     for p in listings:
-        q = listing_qty(p)
-        qty += q
-        if is_zero_seller(p):
-            zero_n += 1
-            zero_qty += q
-    return qty, len(listings), zero_qty, zero_n
+        qty += listing_qty(p)
+    return qty, len(listings)
 
 
 def ok(p, lang, cond):
@@ -228,11 +225,9 @@ def main():
             time.sleep(1)
             mint, _, _ = products(bid, lang, "Mint")
             mint = [p for p in mint if ok(p, lang, "Mint")]
-            stock_qty, stock_n, stock_z_qty, stock_z_n = mint_nm_stock(nm + mint)
+            stock_qty, stock_n = mint_nm_stock(nm + mint)
             rec["qty_mint_nm_target_lang"] = stock_qty
             rec["listings_mint_nm_target_lang"] = stock_n
-            rec["qty_mint_nm_target_lang_zero"] = stock_z_qty
-            rec["listings_mint_nm_target_lang_zero"] = stock_z_n
             time.sleep(1)
             anynm, _, _ = products(bid, None, "Near Mint")
             anyp = sorted(p["price"]["cents"] / 100 for p in anynm if ok(p, None, "Near Mint"))
@@ -290,8 +285,7 @@ def main():
                          "ct_market_all_lang_eur", "price_source", "price_min_ita_nm_zero_eur",
                          "price_min_target_lang_nm_zero_eur", "listings_target_lang_nm_zero",
                          "offers_zero", "offers_ct", "qty_mint_nm_target_lang",
-                         "listings_mint_nm_target_lang", "qty_mint_nm_target_lang_zero",
-                         "listings_mint_nm_target_lang_zero")})
+                         "listings_mint_nm_target_lang")})
             rec["fetch_error"] = str(e)[:200]
         rec["release_year"] = release_year_for(c, bp, set_years)
         price, source = buy_quote(rec)
@@ -323,7 +317,6 @@ def main():
             "release_year", "price_min_ita_nm_eur", "price_min_target_lang_nm_eur", "price_2nd_target_lang_nm_eur",
             "listings_target_lang_nm", "price_min_ita_nm_zero_eur", "price_min_target_lang_nm_zero_eur",
             "listings_target_lang_nm_zero", "qty_mint_nm_target_lang", "listings_mint_nm_target_lang",
-            "qty_mint_nm_target_lang_zero", "listings_mint_nm_target_lang_zero",
             "price_min_any_lang_nm_eur", "ct_market_all_lang_eur", "tier",
             "buy_price_eur", "buy_price_source", "price_source", "confidence", "notes", "cardtrader_link",
             "image_url", "last_updated"]

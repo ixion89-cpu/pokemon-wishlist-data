@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Aggiorna i prezzi minimi CardTrader (lingua target, Near Mint, non gradate) della wishlist.
 
+Registra anche il minimo dei soli venditori CardTrader Zero (nel JSON pubblico:
+user.can_sell_via_hub, cioè chi spedisce tramite l'hub CardTrader).
+
 Uso:
   python3 scripts/update_prices.py            # aggiorna data/*
   python3 scripts/update_prices.py --commit   # aggiorna e fa git commit + push
@@ -72,7 +75,9 @@ def main():
     hist_path = os.path.join(DATA, "price_history.csv")
     existing = list(csv.DictReader(open(hist_path))) if os.path.exists(hist_path) else []
     have_backfill = {r["card_id"] for r in existing if r["kind"] == "backfill"}
-    have_today = {(r["card_id"], r["kind"]) for r in existing if r["date"] == today}
+    # La serie Zero è uno snapshot distinto (language it_zero/jp_zero): non va
+    # soppressa solo perché oggi esiste già lo snapshot della lingua target.
+    have_today = {(r["card_id"], r["kind"], r.get("language", "")) for r in existing if r["date"] == today}
     new_rows, out = [], []
     for c in cards:
         bid, lang = c["cardtrader_blueprint_id"], c.get("target_language", "it")
@@ -81,6 +86,11 @@ def main():
             nm, d0 = products(bid, lang, "Near Mint")
             nm = [p for p in nm if ok(p, lang, "Near Mint")]
             prices = sorted(p["price"]["cents"] / 100 for p in nm)
+            # CardTrader Zero: venditori che spediscono tramite l'hub CardTrader
+            zprices = sorted(
+                p["price"]["cents"] / 100 for p in nm
+                if isinstance(p.get("user"), dict) and p["user"].get("can_sell_via_hub")
+            )
             time.sleep(1)
             anynm, _ = products(bid, None, "Near Mint")
             anyp = sorted(p["price"]["cents"] / 100 for p in anynm if ok(p, None, "Near Mint"))
@@ -92,6 +102,9 @@ def main():
             rec["listings_target_lang_nm"] = len(prices)
             rec["price_2nd_target_lang_nm_eur"] = prices[1] if len(prices) > 1 else None
             rec["price_min_any_lang_nm_eur"] = anyp[0] if anyp else None
+            rec["price_min_ita_nm_zero_eur"] = zprices[0] if (zprices and lang == "it") else None
+            rec["price_min_target_lang_nm_zero_eur"] = zprices[0] if zprices else None
+            rec["listings_target_lang_nm_zero"] = len(zprices)
             g = (bp.get("prices_for_graph") or {}).get("ct_market") or []
             rec["ct_market_all_lang_eur"] = g[-1][1] if g else None
             if prices:
@@ -109,16 +122,21 @@ def main():
                         set_code=c["set_code"], number=c["number"], price_eur=val, language="all",
                         condition="all", listings_count="", source="cardtrader_ct_market_graph_all_languages",
                         kind="backfill"))
-            if (c["id"], "daily_snapshot") not in have_today:
+            if (c["id"], "daily_snapshot", lang) not in have_today:
                 new_rows.append(dict(date=today, card_id=c["id"], blueprint_id=bid, name=c["name"],
                     set_code=c["set_code"], number=c["number"], price_eur=prices[0] if prices else "",
                     language=lang, condition="Near Mint", listings_count=len(prices),
                     source="cardtrader_listings_min", kind="daily_snapshot"))
-                if anyp:
-                    new_rows.append(dict(date=today, card_id=c["id"], blueprint_id=bid, name=c["name"],
-                        set_code=c["set_code"], number=c["number"], price_eur=anyp[0], language="any",
-                        condition="Near Mint", listings_count=len(anyp),
-                        source="cardtrader_listings_min", kind="daily_snapshot"))
+            if (c["id"], "daily_snapshot", lang + "_zero") not in have_today:
+                new_rows.append(dict(date=today, card_id=c["id"], blueprint_id=bid, name=c["name"],
+                    set_code=c["set_code"], number=c["number"], price_eur=zprices[0] if zprices else "",
+                    language=lang + "_zero", condition="Near Mint", listings_count=len(zprices),
+                    source="cardtrader_zero_listings_min", kind="daily_snapshot"))
+            if anyp and (c["id"], "daily_snapshot", "any") not in have_today:
+                new_rows.append(dict(date=today, card_id=c["id"], blueprint_id=bid, name=c["name"],
+                    set_code=c["set_code"], number=c["number"], price_eur=anyp[0], language="any",
+                    condition="Near Mint", listings_count=len(anyp),
+                    source="cardtrader_listings_min", kind="daily_snapshot"))
         except Exception as e:
             prev = {}
             try:
@@ -127,7 +145,8 @@ def main():
                 pass
             rec.update({k: prev.get(k) for k in ("image_url", "price_min_ita_nm_eur", "price_min_target_lang_nm_eur",
                          "listings_target_lang_nm", "price_2nd_target_lang_nm_eur", "price_min_any_lang_nm_eur",
-                         "ct_market_all_lang_eur", "price_source")})
+                         "ct_market_all_lang_eur", "price_source", "price_min_ita_nm_zero_eur",
+                         "price_min_target_lang_nm_zero_eur", "listings_target_lang_nm_zero")})
             rec["fetch_error"] = str(e)[:200]
         rec["buy_price_eur"] = rec.get("price_min_target_lang_nm_eur")
         rec["tier"] = tier(rec["buy_price_eur"])
@@ -140,17 +159,21 @@ def main():
     for i, r in enumerate(out, 1):
         r["rank_by_price"] = i
     priced = [r["buy_price_eur"] for r in out if r["buy_price_eur"] is not None]
+    zpriced = [r["price_min_target_lang_nm_zero_eur"] for r in out if r.get("price_min_target_lang_nm_zero_eur") is not None]
     payload = {"generated_at": stamp, "currency": "EUR",
                "price_definition": "Prezzo minimo CardTrader per copia in lingua target (ITA, o JP per carte solo giapponesi), Near Mint, non gradata, spedizione esclusa",
                "summary": {"cards": len(out), "priced": len(priced), "total_eur": round(sum(priced), 2),
+                           "zero_priced": len(zpriced), "zero_total_eur": round(sum(zpriced), 2),
                            "tiers": {t: sum(1 for r in out if r["tier"] == t) for t in ("A: <50€", "B: 50-150€", "C: >150€", "n/d")}},
+               "zero_definition": "Come sopra, ma solo venditori CardTrader Zero (spedizione tramite hub CardTrader)",
                "cards": out}
     json.dump(payload, open(os.path.join(DATA, "wishlist.json"), "w"), ensure_ascii=False, indent=1)
     os.makedirs(os.path.join(DATA, "history"), exist_ok=True)
     json.dump(payload, open(os.path.join(DATA, "history", f"{today}.json"), "w"), ensure_ascii=False, indent=1)
     cols = ["rank_by_price", "id", "order", "name", "set", "set_code", "number", "rarity", "target_language",
             "price_min_ita_nm_eur", "price_min_target_lang_nm_eur", "price_2nd_target_lang_nm_eur",
-            "listings_target_lang_nm", "price_min_any_lang_nm_eur", "ct_market_all_lang_eur", "tier",
+            "listings_target_lang_nm", "price_min_ita_nm_zero_eur", "price_min_target_lang_nm_zero_eur",
+            "listings_target_lang_nm_zero", "price_min_any_lang_nm_eur", "ct_market_all_lang_eur", "tier",
             "price_source", "confidence", "notes", "cardtrader_link", "image_url", "last_updated"]
     with open(os.path.join(DATA, "wishlist.csv"), "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
@@ -162,7 +185,9 @@ def main():
         w = csv.DictWriter(f, fieldnames=HIST_FIELDS)
         w.writeheader()
         w.writerows(rows)
-    print(f"OK {len(out)} carte, totale {payload['summary']['total_eur']} EUR, +{len(new_rows)} righe storico")
+    s = payload["summary"]
+    print(f"OK {len(out)} carte, totale {s['total_eur']} EUR, "
+          f"zero {s['zero_priced']}/{len(out)} carte per {s['zero_total_eur']} EUR, +{len(new_rows)} righe storico")
     if commit:
         subprocess.run(["git", "-C", ROOT, "add", "data"], check=True)
         r = subprocess.run(["git", "-C", ROOT, "commit", "-m", f"Aggiornamento prezzi {today}"])

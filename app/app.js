@@ -248,6 +248,15 @@ async function loadCsv() {
   state.csv = byCard;
   return byCard;
 }
+function pageValueOf(cards) {
+  let total = 0, missing = 0;
+  for (const card of cards) {
+    const price = quote(card).price;
+    if (price == null) missing += 1;
+    else total += price;
+  }
+  return { total: Math.round(total * 100) / 100, missing };
+}
 function collectionTotal(cards) {
   let total = 0, priced = 0, zero = 0;
   cards.forEach((card) => {
@@ -354,6 +363,7 @@ async function renderBinder(id) {
   state.page = Math.min(Math.max(0, state.page), pages - 1);
   saveFilters();
   const slice = cards.slice(state.page * PAGE_SIZE, state.page * PAGE_SIZE + PAGE_SIZE);
+  const pageSum = pageValueOf(slice);
   const f = filtersFor(id);
   const active = (f.years.length + f.sets.length + f.rarities.length + f.langs.length + f.tiers.length + (f.zeroOnly ? 1 : 0));
   setChrome(meta.name, "Raccoglitore", "home");
@@ -390,7 +400,7 @@ async function renderBinder(id) {
       <div class="holes" aria-hidden="true"><span></span><span></span></div>
       <div class="pager">
         <button class="iconbtn" type="button" data-page="-1" ${state.page === 0 ? "disabled" : ""} aria-label="Pagina precedente">‹</button>
-        <p>Pagina ${state.page + 1} di ${pages}</p>
+        <p>Pagina ${state.page + 1} di ${pages}${slice.length ? `<span class="page-value nums">Valore pagina ${money(pageSum.total)}${pageSum.missing ? ` · ${pageSum.missing} senza prezzo` : ""}</span>` : ""}</p>
         <button class="iconbtn" type="button" data-page="1" ${state.page >= pages - 1 ? "disabled" : ""} aria-label="Pagina successiva">›</button>
       </div>
       ${cards.length ? `<div class="grid">${cells}</div>` : (buy === "bought" ? `<div class="empty"><strong>Nessuna carta acquistata</strong><p>Apri una carta e segna l'acquisto. Resta raggiungibile da Tutte.</p></div>` : `<div class="empty"><strong>Nessuna carta</strong><p>Prova a togliere un filtro, oppure guarda Tutte.</p></div>`)}

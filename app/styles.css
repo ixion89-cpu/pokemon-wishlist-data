@@ -144,7 +144,8 @@ h1 { margin: 0; font-size: 34px; }
 .badge.ct { background: var(--sky); }
 .badge.partial { background: var(--sun); }
 .pager { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px; }
-.pager p { margin: 0; font-weight: 800; }
+.pager p { margin: 0; font-weight: 800; text-align: center; line-height: 1.15; }
+.page-value { display: block; margin-top: 2px; font-size: 13px; font-weight: 800; }
 .iconbtn { width: 44px; padding: 0; }
 .arrows { display: none; }
 .sheet { position: fixed; inset: 0; background: rgba(17, 17, 17, .45); z-index: 40; display: grid; align-items: end; }

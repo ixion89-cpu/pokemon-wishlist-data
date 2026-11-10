@@ -32,12 +32,12 @@ function num(v) {
 function money(v) {
   const n = num(v);
   if (n == null) return "n/d";
-  return new Intl.NumberFormat("it-IT", { style: "currency", currency: "EUR" }).format(n);
+  return new Intl.NumberFormat("it-IT", { style: "currency", currency: "EUR", useGrouping: true }).format(n);
 }
 function signedMoney(v) {
   const n = num(v);
   if (n == null) return "";
-  const body = new Intl.NumberFormat("it-IT", { style: "currency", currency: "EUR" }).format(Math.abs(n));
+  const body = new Intl.NumberFormat("it-IT", { style: "currency", currency: "EUR", useGrouping: true }).format(Math.abs(n));
   return (n > 0 ? "+" : n < 0 ? "−" : "") + body;
 }
 function pct(v) {
@@ -100,9 +100,90 @@ function saveFilters() {
 }
 function filtersFor(id) {
   if (!state.filters[id]) {
-    state.filters[id] = { q: "", years: [], sets: [], rarities: [], langs: [], tiers: [], zeroOnly: false };
+    state.filters[id] = { q: "", years: [], sets: [], rarities: [], langs: [], tiers: [], zeroOnly: false, buy: "todo" };
   }
+  if (!state.filters[id].buy) state.filters[id].buy = "todo";
   return state.filters[id];
+}
+const PURCHASE_KEY = "wl-purchases";
+async function loadPurchaseFile() {
+  if (state.filePurchases) return state.filePurchases;
+  try {
+    const data = await getJson("purchases.json");
+    state.filePurchases = Array.isArray(data) ? data : [];
+  } catch (e) {
+    state.filePurchases = [];
+  }
+  return state.filePurchases;
+}
+function localPurchaseOverrides() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(PURCHASE_KEY) || "{}");
+    return raw && typeof raw === "object" && !Array.isArray(raw) ? raw : {};
+  } catch (e) {
+    return {};
+  }
+}
+function normalizePurchase(row) {
+  return {
+    id: String(row.id),
+    purchased_on: dayKey(row.purchased_on) || null,
+    price_paid_eur: num(row.price_paid_eur),
+  };
+}
+function purchaseMap() {
+  const map = new Map();
+  for (const row of state.filePurchases || []) {
+    if (row && row.id) map.set(String(row.id), normalizePurchase(row));
+  }
+  const local = localPurchaseOverrides();
+  for (const [id, value] of Object.entries(local)) {
+    if (value == null) map.delete(String(id));
+    else map.set(String(id), normalizePurchase({ id, ...value }));
+  }
+  return map;
+}
+function purchaseOf(id) {
+  return purchaseMap().get(String(id)) || null;
+}
+function setPurchaseOverride(id, value) {
+  const all = localPurchaseOverrides();
+  all[String(id)] = value;
+  localStorage.setItem(PURCHASE_KEY, JSON.stringify(all));
+}
+function basketOf(cards) {
+  const map = purchaseMap();
+  let wishlist = 0, remain = 0, spent = 0, fallback = 0, bought = 0;
+  for (const card of cards) {
+    const price = quote(card).price;
+    if (price != null) wishlist += price;
+    const boughtRow = map.get(String(card.id));
+    if (boughtRow) {
+      bought += 1;
+      if (boughtRow.price_paid_eur != null) spent += boughtRow.price_paid_eur;
+      else if (price != null) { spent += price; fallback += 1; }
+    } else if (price != null) remain += price;
+  }
+  return {
+    wishlist, remain, spent, fallback, bought, total: cards.length,
+    done: wishlist > 0 ? Math.max(0, Math.min(100, ((wishlist - remain) / wishlist) * 100)) : 0,
+  };
+}
+function basketHtml(cards, generatedAt) {
+  const b = basketOf(cards);
+  const paidNote = b.fallback ? ` · ${b.fallback} senza prezzo pagato, contato il prezzo attuale` : "";
+  return `<section class="basket" aria-label="Totali">
+    ${sourceStamp(generatedAt)}
+    <div class="tile mint"><p class="k">Totale wishlist</p><b class="nums">${money(b.wishlist)}</b><p class="meta">${b.total} carte</p></div>
+    <div class="tile lilac"><p class="k">Già acquistate</p><b class="nums">${b.bought}/${b.total}</b><p class="meta">${money(b.spent)}${esc(paidNote)}</p></div>
+    <div class="tile sun"><p class="k">Resta da spendere</p><b class="nums">${money(b.remain)}</b>
+      <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(b.done)}" aria-label="Quota del valore già acquistata"><span style="width:${b.done.toFixed(1)}%"></span></div>
+    </div>
+  </section>`;
+}
+function sourceStamp(generatedAt) {
+  const when = generatedAt ? formatDay(generatedAt) : "";
+  return `<p class="stamp">Fonte: CardTrader · NM, Zero se c’è${when ? " · " + esc(when) : ""}</p>`;
 }
 async function getJson(path) {
   const res = await fetch(new URL(path, DATA));
@@ -194,6 +275,9 @@ function applyFilters(cards, id) {
     if (f.langs.length && !f.langs.includes(card.target_language)) return false;
     if (f.tiers.length && !f.tiers.includes(tierOf(price.price))) return false;
     if (f.zeroOnly && price.source !== "zero") return false;
+    const bought = !!purchaseOf(card.id);
+    if (f.buy === "bought" && !bought) return false;
+    if ((f.buy || "todo") === "todo" && bought) return false;
     return true;
   }).slice().sort((a, b) => {
     const pa = quote(a).price, pb = quote(b).price;
@@ -232,8 +316,12 @@ function showError(err) {
 async function render() {
   const r = route();
   state.sheet = false;
+  if (!view.childElementCount) {
+    view.innerHTML = `<div class="skeleton" aria-hidden="true"></div><div class="skeleton" aria-hidden="true"></div>`;
+  }
   try {
     await loadCollections();
+    await loadPurchaseFile();
     if (r.name === "home") await renderHome();
     else if (r.name === "binder") await renderBinder(r.id);
     else if (r.name === "card") await renderCard(r.id, r.card);
@@ -249,15 +337,10 @@ async function renderHome() {
   const blocks = [];
   for (const meta of state.collections) {
     const payload = await loadPayload(meta);
-    const sum = collectionTotal(payload.cards || []);
     blocks.push(`<article class="collection">
-      ${ring(sum.priced, sum.cards)}
-      <div>
-        <h2>${esc(meta.name)}</h2>
-        <p class="meta">${sum.priced} di ${sum.cards} carte con prezzo · ${sum.zero} Zero</p>
-        <p class="total">${money(sum.total)}</p>
-        <a class="btn" href="#/c/${encodeURIComponent(meta.id)}">Apri ›</a>
-      </div>
+      <h2>${esc(meta.name)}</h2>
+      ${basketHtml(payload.cards || [], payload.generated_at)}
+      <a class="btn" href="#/c/${encodeURIComponent(meta.id)}">Apri il raccoglitore</a>
     </article>`);
   }
   view.innerHTML = `<div class="list home-grid">${blocks.join("") || '<div class="empty"><strong>Nessuna collezione</strong></div>'}</div>`;
@@ -274,16 +357,30 @@ async function renderBinder(id) {
   const f = filtersFor(id);
   const active = (f.years.length + f.sets.length + f.rarities.length + f.langs.length + f.tiers.length + (f.zeroOnly ? 1 : 0));
   setChrome(meta.name, "Raccoglitore", "home");
-  const cells = slice.map((card) => {
+    const cells = slice.map((card) => {
     const q = quote(card);
-    return `<a class="sleeve" href="#/c/${encodeURIComponent(id)}/card/${encodeURIComponent(card.id)}">
-      ${art(card, "art")}
+    const bought = purchaseOf(card.id);
+    const src = safeUrl(card.image_url);
+    const img = src
+      ? `<img src="${esc(src)}" alt="${esc(card.name)}">`
+      : `<span class="fallback">${esc((card.name || "?").slice(0, 1))}</span>`;
+    return `<a class="sleeve${bought ? " bought" : ""}" href="#/c/${encodeURIComponent(id)}/card/${encodeURIComponent(card.id)}">
+      ${bought ? `<span class="bought-badge" aria-label="Acquistata">✅</span>` : ""}
+      <div class="art">${img}</div>
+      ${bought ? "" : `<span class="src-badge">${badge(q.source)}</span>`}
+      <div class="price-line"><span class="price">${q.price == null ? "n/d" : money(q.price)}</span></div>
       <p class="name">${esc(card.name)}</p>
-      <div class="price-line"><span class="price">${q.price == null ? "n/d" : money(q.price)}</span>${badge(q.source)}</div>
     </a>`;
   }).join("");
+  const buy = f.buy || "todo";
   view.innerHTML = `
+    ${basketHtml(payload.cards || [], payload.generated_at)}
     <div class="toolbar">
+      <div class="seg" role="tablist" aria-label="Stato acquisto">
+        <button class="chip ${buy === "all" ? "on" : ""}" type="button" data-buy="all">Tutte</button>
+        <button class="chip ${buy === "todo" ? "on" : ""}" type="button" data-buy="todo">Da comprare</button>
+        <button class="chip ${buy === "bought" ? "on" : ""}" type="button" data-buy="bought">Acquistate</button>
+      </div>
       <input class="search" id="q" type="search" placeholder="Cerca nome o numero" value="${esc(f.q)}" enterkeyhint="search">
       <button class="chip ${state.sort === "desc" ? "on" : ""}" type="button" data-sort="desc">Prezzo ↓</button>
       <button class="chip ${state.sort === "asc" ? "on" : ""}" type="button" data-sort="asc">Prezzo ↑</button>
@@ -296,7 +393,7 @@ async function renderBinder(id) {
         <p>Pagina ${state.page + 1} di ${pages}</p>
         <button class="iconbtn" type="button" data-page="1" ${state.page >= pages - 1 ? "disabled" : ""} aria-label="Pagina successiva">›</button>
       </div>
-      ${cards.length ? `<div class="grid">${cells}</div>` : `<div class="empty"><strong>Nessuna carta</strong><p>Prova a togliere un filtro.</p></div>`}
+      ${cards.length ? `<div class="grid">${cells}</div>` : (buy === "bought" ? `<div class="empty"><strong>Nessuna carta acquistata</strong><p>Apri una carta e segna l'acquisto. Resta raggiungibile da Tutte.</p></div>` : `<div class="empty"><strong>Nessuna carta</strong><p>Prova a togliere un filtro, oppure guarda Tutte.</p></div>`)}
       <div class="arrows">
         <button class="iconbtn prev" type="button" data-page="-1" ${state.page === 0 ? "disabled" : ""} aria-label="Pagina precedente">‹</button>
         <button class="iconbtn next" type="button" data-page="1" ${state.page >= pages - 1 ? "disabled" : ""} aria-label="Pagina successiva">›</button>
@@ -386,7 +483,7 @@ function openFilters(id, payload) {
     render();
   });
   form.querySelector("[data-clear]").addEventListener("click", () => {
-    state.filters[id] = { q: f.q, years: [], sets: [], rarities: [], langs: [], tiers: [], zeroOnly: false };
+    state.filters[id] = { q: f.q, years: [], sets: [], rarities: [], langs: [], tiers: [], zeroOnly: false, buy: f.buy || "todo" };
     state.page = 0;
     saveFilters();
     render();
@@ -466,7 +563,7 @@ function seriesFor(card) {
   target.sort((a, b) => a.date.localeCompare(b.date));
   market.sort((a, b) => a.date.localeCompare(b.date));
   return [
-    { id: "target", label: card.target_language === "jp" ? "NM giapponese" : "NM italiano", color: "#0f6e68", fill: true, points: target },
+    { id: "target", label: card.target_language === "jp" ? "NM giapponese" : "NM italiano", color: "#111", fillColor: "#5ff0c0", fill: true, points: target },
     { id: "market", label: "mercato CardTrader, tutte le lingue", color: "#8d867c", fill: false, dashed: true, points: market },
   ];
 }
@@ -501,7 +598,7 @@ function chartSvg(series, dark) {
       const line = seg.map((p, i) => `${i ? "L" : "M"}${xOf(p.date).toFixed(1)} ${yOf(p.value).toFixed(1)}`).join(" ");
       if (s.fill && seg.length > 1) {
         const base = `L${xOf(seg[seg.length - 1].date).toFixed(1)} ${(h - pad.b).toFixed(1)} L${xOf(seg[0].date).toFixed(1)} ${(h - pad.b).toFixed(1)} Z`;
-        parts.push(`<path d="${line} ${base}" fill="${s.color}" opacity="0.16"></path>`);
+        parts.push(`<path d="${line} ${base}" fill="${s.fillColor || s.color}" opacity="0.55"></path>`);
       }
       parts.push(`<path d="${line}" fill="none" stroke="${s.color}" stroke-width="${s.fill ? 2.4 : 1.7}" ${s.dashed ? 'stroke-dasharray="5 4"' : ""} stroke-linejoin="round" stroke-linecap="round"></path>`);
       seg.forEach((p) => parts.push(`<circle cx="${xOf(p.date).toFixed(1)}" cy="${yOf(p.value).toFixed(1)}" r="${seg.length === 1 ? 4.5 : 2.4}" fill="${s.color}"></circle>`));
@@ -514,11 +611,11 @@ function chartSvg(series, dark) {
     });
     flush();
   });
-  const guide = dark ? "rgba(255,255,255,.35)" : "#c4b8a6";
-  const label = dark ? "#c9d4d1" : "#6f675e";
+  const guide = "#111";
+  const label = "#111";
   if (max !== min) {
-    parts.push(`<line x1="${pad.l}" x2="${w - pad.r}" y1="${yOf(max).toFixed(1)}" y2="${yOf(max).toFixed(1)}" stroke="${guide}" stroke-dasharray="3 4"></line>`);
-    parts.push(`<line x1="${pad.l}" x2="${w - pad.r}" y1="${yOf(min).toFixed(1)}" y2="${yOf(min).toFixed(1)}" stroke="${guide}" stroke-dasharray="3 4"></line>`);
+    parts.push(`<line x1="${pad.l}" x2="${w - pad.r}" y1="${yOf(max).toFixed(1)}" y2="${yOf(max).toFixed(1)}" stroke="${guide}" stroke-opacity="0.25" stroke-dasharray="3 4"></line>`);
+    parts.push(`<line x1="${pad.l}" x2="${w - pad.r}" y1="${yOf(min).toFixed(1)}" y2="${yOf(min).toFixed(1)}" stroke="${guide}" stroke-opacity="0.25" stroke-dasharray="3 4"></line>`);
     parts.push(`<text x="${w - pad.r}" y="${(yOf(max) - 3).toFixed(1)}" text-anchor="end" fill="${label}" font-size="10">max ${esc(money(max))}</text>`);
     parts.push(`<text x="${w - pad.r}" y="${(yOf(min) - 3).toFixed(1)}" text-anchor="end" fill="${label}" font-size="10">min ${esc(money(min))}</text>`);
   }
@@ -596,13 +693,14 @@ async function renderCard(id, cardId) {
   const offersHtml = offersSection(card, link);
   view.innerHTML = `
     <p class="kicker"><a href="#/c/${encodeURIComponent(id)}">‹ Raccoglitore</a></p>
+    ${sourceStamp(payload.generated_at)}
     <div class="stage">
       ${prev ? `<button class="peek" type="button" data-goto="${esc(prev.id)}" aria-label="Carta precedente ${esc(prev.name)}">${safeUrl(prev.image_url) ? `<img alt="" src="${esc(safeUrl(prev.image_url))}">` : ""}</button>` : "<span></span>"}
-      ${art(card, "hero")}
+      ${art(card, purchaseOf(card.id) ? "hero bought" : "hero")}
       ${next ? `<button class="peek" type="button" data-goto="${esc(next.id)}" aria-label="Carta successiva ${esc(next.name)}">${safeUrl(next.image_url) ? `<img alt="" src="${esc(safeUrl(next.image_url))}">` : ""}</button>` : "<span></span>"}
     </div>
     ${link ? `<div class="cta-block"><a class="cta-search" href="${esc(link)}" target="_blank" rel="noopener">Apri su CardTrader</a><p class="cta-hint">Su CardTrader scegli la scheda Zero e i filtri ${card.target_language === "jp" ? "Giapponese" : "Italiano"} · Near Mint · Mint</p></div>` : ""}
-    <h2 class="card-name">${esc(card.name)}</h2>
+    <h2 class="card-name">${purchaseOf(card.id) ? "✅ " : ""}${esc(card.name)}</h2>
     <p class="sub">${esc(card.set)} · ${esc(card.number)} · ${esc(card.rarity)} · ${lang.flag} ${lang.name} · <span class="dot">●</span> Monitorato${card.release_year ? " · " + esc(card.release_year) : ""}</p>
     <section class="pricebox">
       <p class="label">PREZZO MINIMO · NM · ${lang.flag} ${lang.name.toUpperCase()}</p>
@@ -616,12 +714,13 @@ async function renderCard(id, cardId) {
       <p><span class="pill ${today ? "today" : ""}">${today ? "Aggiornato oggi" : "Aggiornato il " + formatDay(updated)}</span></p>
       ${stockLine}
     </section>
+    ${purchaseBox(card, q)}
     ${offersHtml}
     <section class="chart-card">
       <div class="ranges">${available.map((p) => `<button class="chip ${p.id === state.cardRange ? "on" : ""}" type="button" data-card-range="${p.id}">${p.label}</button>`).join("")}</div>
       ${chartSvg(shown, false)}
       <div class="legend">
-        <span><i class="swatch" style="background:#0f6e68"></i>${esc(full[0].label)}</span>
+        <span><i class="swatch"></i>${esc(full[0].label)}</span>
         <span><i class="swatch market"></i>mercato CardTrader, tutte le lingue</span>
       </div>
     </section>
@@ -637,10 +736,41 @@ async function renderCard(id, cardId) {
     else if (dx < -48 && next) location.hash = `#/c/${encodeURIComponent(id)}/card/${encodeURIComponent(next.id)}`;
   });
 }
-function snapshotSeries(payloadsByDate) {
+function purchaseBox(card, q) {
+  const bought = purchaseOf(card.id);
+  const paidLabel = bought && bought.price_paid_eur == null ? "prezzo attuale, non hai indicato quanto hai pagato" : money(bought && bought.price_paid_eur);
+  const form = bought ? `<p class="big" style="font-size:28px">✅ Acquistata</p>
+      <p class="meta">${bought.purchased_on ? "Il " + esc(formatDay(bought.purchased_on)) : "Data non indicata"} · ${esc(paidLabel)}</p>
+      <button class="btn" type="button" data-unbuy="${esc(card.id)}">Annulla acquisto</button>`
+    : `<label>Data acquisto<input id="buy-date" type="date" value="${esc(romeToday())}"></label>
+      <label>Prezzo pagato, euro<input id="buy-paid" inputmode="decimal" value="${q.price == null ? "" : String(q.price).replace(".", ",")}" placeholder="opzionale"></label>
+      <button class="btn" type="button" data-buy="${esc(card.id)}">Segna come acquistata</button>`;
+  return `<section class="buybox${bought ? " bought" : ""}">
+    ${form}
+    <p class="quiet">Per tenerlo su tutti i dispositivi, dillo al tuo assistente.</p>
+  </section>`;
+}
+function parsePaid(raw) {
+  const s = String(raw || "").trim();
+  if (!s) return null;
+  const norm = s.includes(",") ? s.replace(/\./g, "").replace(",", ".") : s;
+  const n = Number(norm);
+  return Number.isFinite(n) ? Math.round(n * 100) / 100 : null;
+}
+function basketValue(cards, mode) {
+  let total = 0;
+  for (const card of cards) {
+    const price = quote(card).price;
+    if (price == null) continue;
+    if (mode === "remain" && purchaseOf(card.id)) continue;
+    total += price;
+  }
+  return Math.round(total * 100) / 100;
+}
+function snapshotSeries(payloadsByDate, mode) {
   return [...payloadsByDate.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([date, payload]) => ({
     date,
-    value: collectionTotal(payload.cards || []).total,
+    value: basketValue(payload.cards || [], mode),
     payload,
   }));
 }
@@ -650,8 +780,9 @@ async function renderPerformance() {
   if (!state.perfId) state.perfId = state.collections[0] ? state.collections[0].id : "";
   const meta = state.collections.find((c) => c.id === state.perfId) || state.collections[0];
   const current = await loadPayload(meta);
-  const sum = collectionTotal(current.cards || []);
-  const points = snapshotSeries(state.history).filter((p) => p.payload && p.payload.cards);
+  const basket = basketOf(current.cards || []);
+  if (!state.perfBasket) state.perfBasket = "remain";
+  const points = snapshotSeries(state.history, state.perfBasket).filter((p) => p.payload && p.payload.cards);
   const options = [
     { id: "7G", label: "7G", min: 6 },
     { id: "1M", label: "1M", min: 29 },
@@ -666,25 +797,34 @@ async function renderPerformance() {
   const delta = changeOver(shown, shown.length ? dateNum(shown[shown.length - 1].date) - dateNum(shown[0].date) + 1 : 0);
   let changeHtml = `<p class="quiet">Dati in arrivo. Serve almeno un altro snapshot giornaliero per calcolare la variazione.</p>`;
   if (delta && delta.start) {
-    const cls = delta.diff < 0 ? "down" : "up";
-    changeHtml = `<p class="${cls}">${signedMoney(delta.diff)} dal ${formatDay(delta.start.date)} al ${formatDay(delta.end.date)}</p>`;
+    const cls = delta.diff < 0 ? "down" : delta.diff > 0 ? "up" : "";
+    const arrow = delta.diff < 0 ? "▼" : delta.diff > 0 ? "▲" : "●";
+    changeHtml = `<p class="delta ${cls}">${arrow} ${signedMoney(delta.diff)} dal ${formatDay(delta.start.date)} al ${formatDay(delta.end.date)}</p>`;
   }
-  const contrib = contributionBlock(points);
+  const contrib = contributionBlock(points, state.perfBasket);
+  const headline = state.perfBasket === "remain" ? basket.remain : basket.wishlist;
+  const headlineLabel = state.perfBasket === "remain" ? "Resta da spendere" : "Totale wishlist";
   view.innerHTML = `
+    ${sourceStamp(current.generated_at)}
     <div class="ranges" style="margin-bottom:12px">${state.collections.map((c) => `<button class="chip ${c.id === meta.id ? "on" : ""}" type="button" data-perf-id="${esc(c.id)}">${esc(c.name)}</button>`).join("")}</div>
+    <div class="seg" style="margin-bottom:12px">
+      <button class="chip ${state.perfBasket === "remain" ? "on" : ""}" type="button" data-basket="remain">Da comprare</button>
+      <button class="chip ${state.perfBasket === "all" ? "on" : ""}" type="button" data-basket="all">Tutta la lista</button>
+    </div>
     <section class="perf">
-      <p class="label">OVERVIEW</p>
+      <p class="label">${esc(headlineLabel)}</p>
       <h2>${esc(meta.name)}</h2>
-      <p class="big">${money(sum.total)}</p>
+      <p class="big">${money(headline)}</p>
+      <p class="meta">Wishlist ${money(basket.wishlist)} · già acquistate ${basket.bought}/${basket.total}</p>
       ${changeHtml}
-      <div class="chart-card">${points.length ? chartSvg([{ id: "tot", label: "Totale", color: "#2dd4bf", fill: true, points: shown }], true) : ""}</div>
+      <div class="chart-card">${points.length ? chartSvg([{ id: "tot", label: headlineLabel, color: "#111", fillColor: "#5ff0c0", fill: true, points: shown }], false) : ""}</div>
       <div class="ranges">${available.map((p) => `<button class="chip ${p.id === state.perfRange ? "on" : ""}" type="button" data-perf-range="${p.id}">${p.label}</button>`).join("")}</div>
     </section>
     <h2 class="section-title">Contributo sul totale</h2>
     ${contrib}
   `;
 }
-function contributionBlock(points) {
+function contributionBlock(points, mode) {
   if (points.length < 2) {
     return `<div class="empty"><strong>Dati in arrivo</strong><p>Il contributo delle singole carte si calcola quando esistono almeno due snapshot giornalieri. Oggi ce n'è ${points.length}.</p></div>`;
   }
@@ -699,6 +839,7 @@ function contributionBlock(points) {
   }
   const before = new Map((start.payload.cards || []).map((c) => [c.id, quote(c).price]));
   const rows = (end.payload.cards || []).map((c) => {
+    if (mode === "remain" && purchaseOf(c.id)) return null;
     const now = quote(c).price;
     const was = before.has(c.id) ? before.get(c.id) : null;
     if (now == null || was == null) return null;
@@ -706,7 +847,11 @@ function contributionBlock(points) {
   }).filter(Boolean).sort((a, b) => b.diff - a.diff);
   if (!rows.length) return `<div class="empty"><strong>Dati in arrivo</strong><p>Gli snapshot non hanno prezzi confrontabili.</p></div>`;
   const top = rows[0], low = rows[rows.length - 1];
-  const item = (row, label) => `<article class="contrib"><img alt="" src="${esc(safeUrl(row.card.image_url))}"><div><p class="meta">${label}</p><strong>${esc(row.card.name)}</strong><p class="meta">${formatDay(start.date)} → ${formatDay(end.date)}</p></div><div class="chg ${row.diff < 0 ? "delta down" : "delta up"}">${signedMoney(row.diff)}</div></article>`;
+  const item = (row, label) => {
+    const arrow = row.diff < 0 ? "▼" : row.diff > 0 ? "▲" : "●";
+    const cls = row.diff < 0 ? "down" : row.diff > 0 ? "up" : "";
+    return `<article class="contrib"><img alt="" src="${esc(safeUrl(row.card.image_url))}"><div><p class="meta">${label}</p><strong>${esc(row.card.name)}</strong><p class="meta">${formatDay(start.date)} → ${formatDay(end.date)}</p></div><div class="chg delta ${cls}">${arrow} ${signedMoney(row.diff)}</div></article>`;
+  };
   return `<div class="list">${item(top, "Maggior contributo")}${top.card.id === low.card.id ? "" : item(low, "Minor contributo")}</div>`;
 }
 async function renderMovers() {
@@ -723,17 +868,40 @@ async function renderMovers() {
     rows.push({ card, ...ch });
   });
   rows.sort((a, b) => b.diff - a.diff);
-  const list = rows.map((r) => `<a class="mover" href="#/c/${encodeURIComponent(meta.id)}/card/${encodeURIComponent(r.card.id)}">
+  const list = rows.map((r) => {
+    const arrow = r.diff < 0 ? "▼" : r.diff > 0 ? "▲" : "●";
+    const cls = r.diff < 0 ? "down" : r.diff > 0 ? "up" : "";
+    return `<a class="mover" href="#/c/${encodeURIComponent(meta.id)}/card/${encodeURIComponent(r.card.id)}">
     <img alt="" src="${esc(safeUrl(r.card.image_url))}">
     <div><strong>${esc(r.card.name)}</strong><p class="meta">${esc(r.card.set)} · ${formatDay(r.start.date)} → ${formatDay(r.end.date)}</p><span class="badge partial">tutte le lingue</span></div>
-    <div class="chg ${r.diff < 0 ? "delta down" : "delta up"}">${signedMoney(r.diff)}<br>${pct(r.pct)}</div>
-  </a>`).join("");
+    <div class="chg delta ${cls}">${arrow} ${signedMoney(r.diff)}<br>${arrow} ${pct(r.pct)}</div>
+  </a>`;
+  }).join("");
   view.innerHTML = `
+    ${sourceStamp(payload.generated_at)}
     <div class="empty" style="text-align:left"><strong>Movimenti a 30 giorni — in arrivo</strong>
     <p>Lo storico Near Mint in lingua target parte dal 10 nov 2026 e ha un solo giorno, quindi la variazione ITA/JP non si può ancora calcolare. La lista usa il grafico di mercato CardTrader (tutte le lingue) ed è parziale.</p></div>
     <div class="list" style="margin-top:12px">${list || ""}</div>`;
 }
 view.addEventListener("click", (e) => {
+  const buy = e.target.closest("[data-buy]");
+  if (buy && buy.dataset.buy && ["all", "todo", "bought"].includes(buy.dataset.buy)) {
+    const id = route().id;
+    if (id) { filtersFor(id).buy = buy.dataset.buy; state.page = 0; saveFilters(); render(); }
+    return;
+  }
+  const mark = e.target.closest("[data-buy]");
+  if (mark && mark.dataset.buy && !["all", "todo", "bought"].includes(mark.dataset.buy)) {
+    const date = (document.getElementById("buy-date") || {}).value || romeToday();
+    const paid = parsePaid((document.getElementById("buy-paid") || {}).value);
+    setPurchaseOverride(mark.dataset.buy, { purchased_on: date, price_paid_eur: paid });
+    render();
+    return;
+  }
+  const unbuy = e.target.closest("[data-unbuy]");
+  if (unbuy) { setPurchaseOverride(unbuy.dataset.unbuy, null); render(); return; }
+  const basketBtn = e.target.closest("[data-basket]");
+  if (basketBtn) { state.perfBasket = basketBtn.dataset.basket; render(); return; }
   const sort = e.target.closest("[data-sort]");
   if (sort) { state.sort = sort.dataset.sort; state.page = 0; saveFilters(); render(); return; }
   const page = e.target.closest("[data-page]");

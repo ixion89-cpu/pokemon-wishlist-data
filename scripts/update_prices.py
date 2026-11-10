@@ -309,6 +309,7 @@ def main():
                            "tiers": {t: sum(1 for r in out if r["tier"] == t) for t in ("A: <50€", "B: 50-150€", "C: >150€", "n/d")}},
                "zero_definition": ZERO_DEFINITION,
                "cards": out}
+    # data/purchases.json è la lista acquisti: questo script non deve mai riscriverla.
     json.dump(payload, open(os.path.join(DATA, "wishlist.json"), "w"), ensure_ascii=False, indent=1)
     os.makedirs(os.path.join(DATA, "history"), exist_ok=True)
     json.dump(payload, open(os.path.join(DATA, "history", f"{today}.json"), "w"), ensure_ascii=False, indent=1)

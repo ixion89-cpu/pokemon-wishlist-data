@@ -73,4 +73,14 @@ python3 scripts/update_prices.py --commit
 ```
 Il workflow `.github/workflows/daily.yml` lo esegue ogni giorno alle 06:00 UTC (07:00 a Roma) e fa il commit.
 Per aggiungere/togliere carte modificare `data/cards.json` (serve `cardtrader_blueprint_id`).
-L'app statica in `app/` legge `data/wishlist.json`, `data/history/index.json` più gli snapshot giornalieri e `data/price_history.csv`. Una collezione nuova si aggiunge in `data/collections.json`.
+L'app statica in `app/` legge `data/wishlist.json`, `data/history/index.json` più gli snapshot giornalieri, `data/price_history.csv` e `data/purchases.json`. Una collezione nuova si aggiunge in `data/collections.json`.
+
+## Acquisti `data/purchases.json`
+
+Lista permanente delle carte già comprate. Parte da `[]`. Lo script giornaliero non la scrive e non la cancella.
+
+```json
+[{"id": "id come in wishlist.json", "purchased_on": "YYYY-MM-DD", "price_paid_eur": 12.5}]
+```
+
+`price_paid_eur` può essere `null`. L'app unisce questo file con gli acquisti segnati nel browser. Quelli del browser restano su quel dispositivo finché non vengono scritti in questo file.

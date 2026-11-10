@@ -601,7 +601,7 @@ async function renderCard(id, cardId) {
       ${art(card, "hero")}
       ${next ? `<button class="peek" type="button" data-goto="${esc(next.id)}" aria-label="Carta successiva ${esc(next.name)}">${safeUrl(next.image_url) ? `<img alt="" src="${esc(safeUrl(next.image_url))}">` : ""}</button>` : "<span></span>"}
     </div>
-    ${link ? `<a class="cta-search" href="${esc(link)}" target="_blank" rel="noopener">Cerca su CardTrader (NM-MT · ${card.target_language === "jp" ? "JP" : "ITA"} · Zero)</a>` : ""}
+    ${link ? `<div class="cta-block"><a class="cta-search" href="${esc(link)}" target="_blank" rel="noopener">Apri su CardTrader</a><p class="cta-hint">Su CardTrader scegli la scheda Zero e i filtri ${card.target_language === "jp" ? "Giapponese" : "Italiano"} · Near Mint · Mint</p></div>` : ""}
     <h2 class="card-name">${esc(card.name)}</h2>
     <p class="sub">${esc(card.set)} · ${esc(card.number)} · ${esc(card.rarity)} · ${lang.flag} ${lang.name} · <span class="dot">●</span> Monitorato${card.release_year ? " · " + esc(card.release_year) : ""}</p>
     <section class="pricebox">
@@ -626,7 +626,6 @@ async function renderCard(id, cardId) {
       </div>
     </section>
     ${card.notes ? `<p class="note">${esc(card.notes)}</p>` : ""}
-    ${link ? `<p><a class="btn" href="${esc(link)}" target="_blank" rel="noopener">Apri su CardTrader</a></p>` : ""}
   `;
   let x0 = null;
   const stage = view.querySelector(".stage");

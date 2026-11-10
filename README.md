@@ -3,14 +3,14 @@
 Backend statico (GitHub Pages) con la buying list della wishlist "Wishlist - modern" di Leopoldo Montini
 (67 carte), ordinata per prezzo. Pensato per essere collegato a ChatGPT Sites o a qualsiasi interfaccia.
 
-**Prezzo di riferimento:** minimo CardTrader per copia **italiana, Near Mint, non gradata** (spedizione esclusa).
-Per le carte che esistono solo in giapponese (`target_language = "jp"`) si usa il minimo NM in giapponese.
+**Prezzo di riferimento (`buy_price_eur`):** minimo Near Mint nella lingua target (italiano, oppure giapponese se la carta esiste solo in JP) dei venditori **CardTrader Zero**, se c'è almeno una copia. Altrimenti lo stesso minimo calcolato su tutti i venditori CardTrader. `buy_price_source` vale `zero` oppure `cardtrader`. Ordinamento, `total_eur` e tier usano questo prezzo. Spedizione esclusa, copie gradate escluse.
 
-**Prezzo CardTrader Zero:** stesso filtro (lingua target, Near Mint, non gradata, spedizione esclusa), solo annunci di venditori CardTrader Zero. Nel JSON pubblico sono i prodotti con `user.can_sell_via_hub = true` (il venditore spedisce tramite l'hub CardTrader). Non sostituisce il prezzo di riferimento: ordinamento, `buy_price_eur` e tier restano sul minimo di tutti i venditori.
+**Totale Zero (`zero_total_eur`):** somma dei soli minimi Zero. Una carta senza copia Zero non entra in questo totale, ma resta in `total_eur` se ha un minimo CardTrader.
 
 ## URL pubblici (dopo l'attivazione di GitHub Pages)
 | File | URL |
 |---|---|
+| App | https://ixion89-cpu.github.io/pokemon-wishlist-data/app/ |
 | Wishlist JSON | https://ixion89-cpu.github.io/pokemon-wishlist-data/data/wishlist.json |
 | Wishlist CSV | https://ixion89-cpu.github.io/pokemon-wishlist-data/data/wishlist.csv |
 | Storico prezzi CSV | https://ixion89-cpu.github.io/pokemon-wishlist-data/data/price_history.csv |
@@ -24,10 +24,10 @@ GitHub Pages risponde con `Access-Control-Allow-Origin: *`, quindi i file si pos
 { generated_at, currency: "EUR", price_definition, zero_definition,
   summary: { cards, priced, total_eur, zero_priced, zero_total_eur,
              tiers: {"A: <50€", "B: 50-150€", "C: >150€", "n/d"} },
-  cards: [ ... ]   // già ordinate dal prezzo più alto al più basso (minimo non-Zero)
+  cards: [ ... ]   // ordinate per buy_price_eur, dal più alto al più basso
 }
 ```
-`zero_priced` è il numero di carte con almeno una copia Near Mint di un venditore Zero nella lingua target. `zero_total_eur` è la somma di quei minimi. `zero_definition` ripete il criterio del prezzo di riferimento limitato ai venditori Zero.
+`priced` e `total_eur` contano `buy_price_eur` (Zero se c'è, altrimenti il minimo di tutti i venditori). `zero_priced` e `zero_total_eur` contano solo le carte con una copia Zero.
 
 Campi di ogni carta:
 | campo | significato |
@@ -37,9 +37,12 @@ Campi di ogni carta:
 | `rank_by_price` | posizione nella classifica per prezzo (1 = più cara) |
 | `name`, `set`, `set_code`, `number`, `rarity` | identificazione carta |
 | `target_language` | `it` (oppure `jp` per carte solo giapponesi) |
+| `release_year` | anno di uscita dell'espansione (da `expansion.released_at` di CardTrader, altrimenti `data/set_years.json`) |
 | `italian_edition_exists` | false = la carta non esiste in italiano |
 | `price_min_ita_nm_eur` | **prezzo minimo ITA NM** (null se nessuna copia ITA NM in vendita o carta non ITA) |
-| `price_min_target_lang_nm_eur` / `buy_price_eur` | minimo NM nella lingua target (usato per ordinare e per i tier) |
+| `price_min_target_lang_nm_eur` | minimo NM nella lingua target, tutti i venditori |
+| `buy_price_eur` | prezzo di riferimento: minimo Zero se esiste, altrimenti `price_min_target_lang_nm_eur` |
+| `buy_price_source` | `zero` oppure `cardtrader` (null se nessuno dei due prezzi c'è) |
 | `price_2nd_target_lang_nm_eur` | seconda offerta più bassa (utile per capire se il minimo è un'occasione isolata) |
 | `listings_target_lang_nm` | quante copie NM nella lingua target sono in vendita |
 | `price_min_ita_nm_zero_eur` | minimo ITA NM solo venditori CardTrader Zero (null se non c'è nessuna copia Zero, o se la lingua target non è l'italiano) |
@@ -67,3 +70,4 @@ python3 scripts/update_prices.py --commit
 ```
 Il workflow `.github/workflows/daily.yml` lo esegue ogni giorno alle 06:00 UTC (07:00 a Roma) e fa il commit.
 Per aggiungere/togliere carte modificare `data/cards.json` (serve `cardtrader_blueprint_id`).
+L'app statica in `app/` legge `data/wishlist.json`, `data/history/index.json` più gli snapshot giornalieri e `data/price_history.csv`. Una collezione nuova si aggiunge in `data/collections.json`.

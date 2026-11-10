@@ -1,0 +1,32 @@
+{
+ "note": "Anno di uscita dell'espansione, usato se il blueprint CardTrader non ha released_at. SMBS è l'anno della carta in lista (Pikachu & Zekrom-GX SM168, 2019), non l'inizio del set promo.",
+ "sets": {
+  "SLG": {"year": 2017, "release_date": "2017-10-06", "name": "Shining Legends"},
+  "LOT": {"year": 2018, "release_date": "2018-11-02", "name": "Lost Thunder"},
+  "TEU": {"year": 2019, "release_date": "2019-02-01", "name": "Team Up"},
+  "UNM": {"year": 2019, "release_date": "2019-08-02", "name": "Unified Minds"},
+  "SM12A": {"year": 2019, "release_date": "2019-10-04", "name": "Tag Team GX: Tag All Stars"},
+  "SMBS": {"year": 2019, "release_date": "2019-05-31", "name": "SM Black Star Promos"},
+  "CEC": {"year": 2019, "release_date": "2019-11-01", "name": "Cosmic Eclipse"},
+  "BST": {"year": 2021, "release_date": "2021-03-19", "name": "Battle Styles"},
+  "CRE": {"year": 2021, "release_date": "2021-06-18", "name": "Chilling Reign"},
+  "EVS": {"year": 2021, "release_date": "2021-08-27", "name": "Evolving Skies"},
+  "FST": {"year": 2021, "release_date": "2021-11-12", "name": "Fusion Strike"},
+  "BRS": {"year": 2022, "release_date": "2022-02-25", "name": "Brilliant Stars"},
+  "LORG": {"year": 2022, "release_date": "2022-09-09", "name": "Lost Origin"},
+  "SIT": {"year": 2022, "release_date": "2022-11-11", "name": "Silver Tempest"},
+  "CRZ": {"year": 2023, "release_date": "2023-01-20", "name": "Crown Zenith"},
+  "PAL": {"year": 2023, "release_date": "2023-06-09", "name": "Paldea Evolved"},
+  "OBF": {"year": 2023, "release_date": "2023-08-11", "name": "Obsidian Flames"},
+  "MEW": {"year": 2023, "release_date": "2023-09-22", "name": "151"},
+  "PAR": {"year": 2023, "release_date": "2023-11-03", "name": "Paradox Rift"},
+  "PRE": {"year": 2025, "release_date": "2025-01-17", "name": "Prismatic Evolutions"},
+  "BLK": {"year": 2025, "release_date": "2025-07-18", "name": "Black Bolt"},
+  "MEG": {"year": 2025, "release_date": "2025-09-26", "name": "Mega Evolution"},
+  "ASC": {"year": 2026, "release_date": "2026-01-30", "name": "Ascended Heroes"},
+  "POR": {"year": 2026, "release_date": "2026-03-27", "name": "Perfect Order"},
+  "CRI": {"year": 2026, "release_date": "2026-05-22", "name": "Chaos Rising"},
+  "PBL": {"year": 2026, "release_date": "2026-07-17", "name": "Pitch Black"},
+  "DLR": {"year": 2026, "release_date": "2026-11-06", "name": "Delta Reign"}
+ }
+}

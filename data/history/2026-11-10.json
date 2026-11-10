@@ -1,7 +1,7 @@
 {
  "generated_at": "2026-11-10T18:36:45+01:00",
  "currency": "EUR",
- "price_definition": "Prezzo minimo CardTrader per copia in lingua target (ITA, o JP per carte solo giapponesi), Near Mint, non gradata, spedizione esclusa",
+ "price_definition": "Prezzo di riferimento (buy_price_eur): minimo Near Mint nella lingua target (ITA, o JP per carte solo giapponesi) dei venditori CardTrader Zero, se esiste una copia; altrimenti minimo Near Mint nella lingua target di tutti i venditori. Non gradate, spedizione esclusa. buy_price_source vale zero oppure cardtrader.",
  "summary": {
   "cards": 67,
   "priced": 64,
@@ -15,7 +15,7 @@
    "n/d": 3
   }
  },
- "zero_definition": "Come sopra, ma solo venditori CardTrader Zero (spedizione tramite hub CardTrader)",
+ "zero_definition": "zero_total_eur somma solo i minimi Near Mint in lingua target dei venditori CardTrader Zero. Una carta senza copia Zero non entra in quel totale, ma resta in total_eur se ha un minimo CardTrader.",
  "cards": [
   {
    "id": "p1-5",
@@ -48,7 +48,9 @@
    "buy_price_eur": 900.64,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 1
+   "rank_by_price": 1,
+   "release_year": 2021,
+   "buy_price_source": "zero"
   },
   {
    "id": "p4-2",
@@ -81,7 +83,9 @@
    "buy_price_eur": 800.63,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 2
+   "rank_by_price": 2,
+   "release_year": 2019,
+   "buy_price_source": "zero"
   },
   {
    "id": "p4-3",
@@ -114,7 +118,9 @@
    "buy_price_eur": 700.64,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 3
+   "rank_by_price": 3,
+   "release_year": 2019,
+   "buy_price_source": "zero"
   },
   {
    "id": "p1-4",
@@ -147,7 +153,9 @@
    "buy_price_eur": 700.59,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 4
+   "rank_by_price": 4,
+   "release_year": 2022,
+   "buy_price_source": "zero"
   },
   {
    "id": "p1-7",
@@ -180,7 +188,9 @@
    "buy_price_eur": 644.38,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 5
+   "rank_by_price": 5,
+   "release_year": 2021,
+   "buy_price_source": "zero"
   },
   {
    "id": "p1-3",
@@ -213,7 +223,9 @@
    "buy_price_eur": 540.64,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 6
+   "rank_by_price": 6,
+   "release_year": 2021,
+   "buy_price_source": "zero"
   },
   {
    "id": "p6-8",
@@ -246,7 +258,9 @@
    "buy_price_eur": 529.64,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 7
+   "rank_by_price": 7,
+   "release_year": 2021,
+   "buy_price_source": "zero"
   },
   {
    "id": "p1-6",
@@ -279,7 +293,9 @@
    "buy_price_eur": 470.64,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 8
+   "rank_by_price": 8,
+   "release_year": 2021,
+   "buy_price_source": "zero"
   },
   {
    "id": "p4-6",
@@ -312,7 +328,9 @@
    "buy_price_eur": 450.62,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 9
+   "rank_by_price": 9,
+   "release_year": 2019,
+   "buy_price_source": "zero"
   },
   {
    "id": "p1-1",
@@ -345,7 +363,9 @@
    "buy_price_eur": 400.53,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 10
+   "rank_by_price": 10,
+   "release_year": 2021,
+   "buy_price_source": "zero"
   },
   {
    "id": "p7-2",
@@ -378,7 +398,9 @@
    "buy_price_eur": 389.5,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 11
+   "rank_by_price": 11,
+   "release_year": 2026,
+   "buy_price_source": "zero"
   },
   {
    "id": "p7-4",
@@ -411,7 +433,9 @@
    "buy_price_eur": 380.44,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 12
+   "rank_by_price": 12,
+   "release_year": 2026,
+   "buy_price_source": "zero"
   },
   {
    "id": "p3-6",
@@ -444,7 +468,9 @@
    "buy_price_eur": 375.64,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 13
+   "rank_by_price": 13,
+   "release_year": 2019,
+   "buy_price_source": "zero"
   },
   {
    "id": "p5-1",
@@ -477,7 +503,9 @@
    "buy_price_eur": 330.64,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 14
+   "rank_by_price": 14,
+   "release_year": 2019,
+   "buy_price_source": "zero"
   },
   {
    "id": "p1-2",
@@ -510,7 +538,9 @@
    "buy_price_eur": 319.64,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 15
+   "rank_by_price": 15,
+   "release_year": 2021,
+   "buy_price_source": "zero"
   },
   {
    "id": "p7-7",
@@ -543,7 +573,9 @@
    "buy_price_eur": 263.19,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 16
+   "rank_by_price": 16,
+   "release_year": 2026,
+   "buy_price_source": "zero"
   },
   {
    "id": "p4-1",
@@ -576,7 +608,9 @@
    "buy_price_eur": 250.09,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 17
+   "rank_by_price": 17,
+   "release_year": 2019,
+   "buy_price_source": "zero"
   },
   {
    "id": "p3-7",
@@ -609,7 +643,9 @@
    "buy_price_eur": 235.64,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 18
+   "rank_by_price": 18,
+   "release_year": 2019,
+   "buy_price_source": "zero"
   },
   {
    "id": "p7-9",
@@ -642,7 +678,9 @@
    "buy_price_eur": 216.8,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 19
+   "rank_by_price": 19,
+   "release_year": 2026,
+   "buy_price_source": "zero"
   },
   {
    "id": "p6-7",
@@ -675,7 +713,9 @@
    "buy_price_eur": 199.48,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 20
+   "rank_by_price": 20,
+   "release_year": 2021,
+   "buy_price_source": "zero"
   },
   {
    "id": "p4-9",
@@ -708,7 +748,9 @@
    "buy_price_eur": 172.25,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 21
+   "rank_by_price": 21,
+   "release_year": 2025,
+   "buy_price_source": "zero"
   },
   {
    "id": "p8-1",
@@ -741,7 +783,9 @@
    "buy_price_eur": 165.54,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 22
+   "rank_by_price": 22,
+   "release_year": 2025,
+   "buy_price_source": "zero"
   },
   {
    "id": "p6-9",
@@ -774,7 +818,9 @@
    "buy_price_eur": 160.63,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 23
+   "rank_by_price": 23,
+   "release_year": 2021,
+   "buy_price_source": "zero"
   },
   {
    "id": "p3-9",
@@ -807,7 +853,9 @@
    "buy_price_eur": 150.64,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 24
+   "rank_by_price": 24,
+   "release_year": 2019,
+   "buy_price_source": "zero"
   },
   {
    "id": "p4-7",
@@ -840,7 +888,9 @@
    "buy_price_eur": 150.59,
    "tier": "C: >150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 25
+   "rank_by_price": 25,
+   "release_year": 2026,
+   "buy_price_source": "zero"
   },
   {
    "id": "p7-1",
@@ -873,7 +923,9 @@
    "buy_price_eur": 135.64,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 26
+   "rank_by_price": 26,
+   "release_year": 2022,
+   "buy_price_source": "zero"
   },
   {
    "id": "p5-3",
@@ -906,7 +958,9 @@
    "buy_price_eur": 119.62,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 27
+   "rank_by_price": 27,
+   "release_year": 2025,
+   "buy_price_source": "zero"
   },
   {
    "id": "p5-5",
@@ -939,7 +993,9 @@
    "buy_price_eur": 115.62,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 28
+   "rank_by_price": 28,
+   "release_year": 2025,
+   "buy_price_source": "zero"
   },
   {
    "id": "p3-2",
@@ -972,7 +1028,9 @@
    "buy_price_eur": 109.63,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 29
+   "rank_by_price": 29,
+   "release_year": 2021,
+   "buy_price_source": "zero"
   },
   {
    "id": "p7-8",
@@ -1005,7 +1063,9 @@
    "buy_price_eur": 109.24,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 30
+   "rank_by_price": 30,
+   "release_year": 2026,
+   "buy_price_source": "zero"
   },
   {
    "id": "p3-3",
@@ -1038,7 +1098,9 @@
    "buy_price_eur": 109.14,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 31
+   "rank_by_price": 31,
+   "release_year": 2021,
+   "buy_price_source": "zero"
   },
   {
    "id": "p8-2",
@@ -1071,7 +1133,9 @@
    "buy_price_eur": 105.44,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 32
+   "rank_by_price": 32,
+   "release_year": 2026,
+   "buy_price_source": "zero"
   },
   {
    "id": "p2-9",
@@ -1104,7 +1168,9 @@
    "buy_price_eur": 100.63,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 33
+   "rank_by_price": 33,
+   "release_year": 2021,
+   "buy_price_source": "zero"
   },
   {
    "id": "p5-4",
@@ -1137,7 +1203,9 @@
    "buy_price_eur": 99.28,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 34
+   "rank_by_price": 34,
+   "release_year": 2025,
+   "buy_price_source": "zero"
   },
   {
    "id": "p5-6",
@@ -1170,7 +1238,9 @@
    "buy_price_eur": 99.27,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 35
+   "rank_by_price": 35,
+   "release_year": 2025,
+   "buy_price_source": "zero"
   },
   {
    "id": "p4-8",
@@ -1203,7 +1273,9 @@
    "buy_price_eur": 95.02,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 36
+   "rank_by_price": 36,
+   "release_year": 2025,
+   "buy_price_source": "zero"
   },
   {
    "id": "p2-1",
@@ -1236,7 +1308,9 @@
    "buy_price_eur": 90.62,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 37
+   "rank_by_price": 37,
+   "release_year": 2022,
+   "buy_price_source": "zero"
   },
   {
    "id": "p5-7",
@@ -1269,7 +1343,9 @@
    "buy_price_eur": 90.56,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 38
+   "rank_by_price": 38,
+   "release_year": 2025,
+   "buy_price_source": "zero"
   },
   {
    "id": "p7-5",
@@ -1302,7 +1378,9 @@
    "buy_price_eur": 87.23,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 39
+   "rank_by_price": 39,
+   "release_year": 2026,
+   "buy_price_source": "zero"
   },
   {
    "id": "p2-2",
@@ -1335,7 +1413,9 @@
    "buy_price_eur": 86.44,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 40
+   "rank_by_price": 40,
+   "release_year": 2022,
+   "buy_price_source": "zero"
   },
   {
    "id": "p3-1",
@@ -1368,7 +1448,9 @@
    "buy_price_eur": 86.32,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 41
+   "rank_by_price": 41,
+   "release_year": 2021,
+   "buy_price_source": "zero"
   },
   {
    "id": "p6-1",
@@ -1401,7 +1483,9 @@
    "buy_price_eur": 85.59,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 42
+   "rank_by_price": 42,
+   "release_year": 2023,
+   "buy_price_source": "zero"
   },
   {
    "id": "p8-3",
@@ -1434,7 +1518,9 @@
    "buy_price_eur": 85.59,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 43
+   "rank_by_price": 43,
+   "release_year": 2026,
+   "buy_price_source": "zero"
   },
   {
    "id": "p6-4",
@@ -1467,7 +1553,9 @@
    "buy_price_eur": 75.64,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 44
+   "rank_by_price": 44,
+   "release_year": 2023,
+   "buy_price_source": "zero"
   },
   {
    "id": "p8-4",
@@ -1500,7 +1588,9 @@
    "buy_price_eur": 70.55,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 45
+   "rank_by_price": 45,
+   "release_year": 2026,
+   "buy_price_source": "zero"
   },
   {
    "id": "p2-3",
@@ -1533,7 +1623,9 @@
    "buy_price_eur": 64.14,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 46
+   "rank_by_price": 46,
+   "release_year": 2022,
+   "buy_price_source": "zero"
   },
   {
    "id": "p6-3",
@@ -1566,7 +1658,9 @@
    "buy_price_eur": 60.64,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 47
+   "rank_by_price": 47,
+   "release_year": 2023,
+   "buy_price_source": "zero"
   },
   {
    "id": "p5-8",
@@ -1599,7 +1693,9 @@
    "buy_price_eur": 60.23,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 48
+   "rank_by_price": 48,
+   "release_year": 2025,
+   "buy_price_source": "zero"
   },
   {
    "id": "p6-2",
@@ -1632,7 +1728,9 @@
    "buy_price_eur": 57.63,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 49
+   "rank_by_price": 49,
+   "release_year": 2023,
+   "buy_price_source": "zero"
   },
   {
    "id": "p5-9",
@@ -1665,7 +1763,9 @@
    "buy_price_eur": 52.38,
    "tier": "B: 50-150€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 50
+   "rank_by_price": 50,
+   "release_year": 2023,
+   "buy_price_source": "zero"
   },
   {
    "id": "p1-8",
@@ -1698,7 +1798,9 @@
    "buy_price_eur": 49.34,
    "tier": "A: <50€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 51
+   "rank_by_price": 51,
+   "release_year": 2023,
+   "buy_price_source": "zero"
   },
   {
    "id": "p7-3",
@@ -1731,7 +1833,9 @@
    "buy_price_eur": 48.27,
    "tier": "A: <50€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 52
+   "rank_by_price": 52,
+   "release_year": 2026,
+   "buy_price_source": "zero"
   },
   {
    "id": "p6-5",
@@ -1764,7 +1868,9 @@
    "buy_price_eur": 46.83,
    "tier": "A: <50€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 53
+   "rank_by_price": 53,
+   "release_year": 2023,
+   "buy_price_source": "zero"
   },
   {
    "id": "p5-2",
@@ -1797,7 +1903,9 @@
    "buy_price_eur": 45.63,
    "tier": "A: <50€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 54
+   "rank_by_price": 54,
+   "release_year": 2025,
+   "buy_price_source": "zero"
   },
   {
    "id": "p2-4",
@@ -1830,7 +1938,9 @@
    "buy_price_eur": 37.52,
    "tier": "A: <50€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 55
+   "rank_by_price": 55,
+   "release_year": 2022,
+   "buy_price_source": "zero"
   },
   {
    "id": "p2-5",
@@ -1863,7 +1973,9 @@
    "buy_price_eur": 34.91,
    "tier": "A: <50€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 56
+   "rank_by_price": 56,
+   "release_year": 2022,
+   "buy_price_source": "zero"
   },
   {
    "id": "p2-8",
@@ -1896,7 +2008,9 @@
    "buy_price_eur": 25.28,
    "tier": "A: <50€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 57
+   "rank_by_price": 57,
+   "release_year": 2022,
+   "buy_price_source": "zero"
   },
   {
    "id": "p1-9",
@@ -1929,7 +2043,9 @@
    "buy_price_eur": 25.19,
    "tier": "A: <50€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 58
+   "rank_by_price": 58,
+   "release_year": 2023,
+   "buy_price_source": "zero"
   },
   {
    "id": "p2-6",
@@ -1962,7 +2078,9 @@
    "buy_price_eur": 25.19,
    "tier": "A: <50€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 59
+   "rank_by_price": 59,
+   "release_year": 2022,
+   "buy_price_source": "zero"
   },
   {
    "id": "p2-7",
@@ -1995,7 +2113,9 @@
    "buy_price_eur": 21.85,
    "tier": "A: <50€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 60
+   "rank_by_price": 60,
+   "release_year": 2022,
+   "buy_price_source": "zero"
   },
   {
    "id": "p6-6",
@@ -2028,7 +2148,9 @@
    "buy_price_eur": 18.07,
    "tier": "A: <50€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 61
+   "rank_by_price": 61,
+   "release_year": 2023,
+   "buy_price_source": "zero"
   },
   {
    "id": "p7-6",
@@ -2061,7 +2183,9 @@
    "buy_price_eur": 11.91,
    "tier": "A: <50€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 62
+   "rank_by_price": 62,
+   "release_year": 2026,
+   "buy_price_source": "zero"
   },
   {
    "id": "p3-4",
@@ -2094,7 +2218,9 @@
    "buy_price_eur": 7.13,
    "tier": "A: <50€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 63
+   "rank_by_price": 63,
+   "release_year": 2021,
+   "buy_price_source": "zero"
   },
   {
    "id": "p4-5",
@@ -2127,7 +2253,9 @@
    "buy_price_eur": 2.9,
    "tier": "A: <50€",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 64
+   "rank_by_price": 64,
+   "release_year": 2018,
+   "buy_price_source": "zero"
   },
   {
    "id": "p3-5",
@@ -2160,7 +2288,9 @@
    "buy_price_eur": null,
    "tier": "n/d",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 65
+   "rank_by_price": 65,
+   "release_year": 2017,
+   "buy_price_source": null
   },
   {
    "id": "p3-8",
@@ -2193,7 +2323,9 @@
    "buy_price_eur": null,
    "tier": "n/d",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 66
+   "rank_by_price": 66,
+   "release_year": 2019,
+   "buy_price_source": null
   },
   {
    "id": "p4-4",
@@ -2226,7 +2358,9 @@
    "buy_price_eur": null,
    "tier": "n/d",
    "last_updated": "2026-11-10T18:36:45+01:00",
-   "rank_by_price": 67
+   "rank_by_price": 67,
+   "release_year": 2019,
+   "buy_price_source": null
   }
  ]
 }

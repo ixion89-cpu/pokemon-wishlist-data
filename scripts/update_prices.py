@@ -22,6 +22,81 @@ BASE = "https://www.cardtrader.com/en-EU/cards/{bid}.json"
 TZ = timezone(timedelta(hours=1))  # Europe/Rome (inverno); solo per la data del file
 HIST_FIELDS = ["date", "card_id", "blueprint_id", "name", "set_code", "number", "price_eur",
                "language", "condition", "listings_count", "source", "kind"]
+SET_YEARS_PATH = os.path.join(DATA, "set_years.json")
+PRICE_DEFINITION = (
+    "Prezzo di riferimento (buy_price_eur): minimo Near Mint nella lingua target "
+    "(ITA, o JP per carte solo giapponesi) dei venditori CardTrader Zero, se esiste una copia; "
+    "altrimenti minimo Near Mint nella lingua target di tutti i venditori. "
+    "Non gradate, spedizione esclusa. buy_price_source vale zero oppure cardtrader."
+)
+ZERO_DEFINITION = (
+    "zero_total_eur somma solo i minimi Near Mint in lingua target dei venditori CardTrader Zero. "
+    "Una carta senza copia Zero non entra in quel totale, ma resta in total_eur se ha un minimo CardTrader."
+)
+
+
+def load_set_years():
+    try:
+        with open(SET_YEARS_PATH, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def year_from_raw(raw):
+    if raw is None:
+        return None
+    text = str(raw)
+    if len(text) >= 4 and text[:4].isdigit():
+        year = int(text[:4])
+        if 1990 <= year <= 2100:
+            return year
+    return None
+
+
+def release_year_for(card, blueprint, years):
+    """Anno di uscita dell'espansione: data CardTrader, poi data/set_years.json."""
+    if card.get("release_year"):
+        try:
+            return int(card["release_year"])
+        except (TypeError, ValueError):
+            pass
+    bp = blueprint or {}
+    exp = bp.get("expansion") or {}
+    for raw in (exp.get("released_at"), exp.get("release_date"), bp.get("released_at"), bp.get("release_date")):
+        year = year_from_raw(raw)
+        if year:
+            return year
+    sets = years.get("sets") if isinstance(years.get("sets"), dict) else years
+    info = None
+    if isinstance(sets, dict):
+        info = sets.get(card.get("set_code") or "") or sets.get(card.get("set") or "")
+    if isinstance(info, dict) and info.get("year"):
+        return int(info["year"])
+    return None
+
+
+def buy_quote(rec):
+    """Zero se c'è una copia, altrimenti il minimo CardTrader nella lingua target."""
+    zero = rec.get("price_min_target_lang_nm_zero_eur")
+    normal = rec.get("price_min_target_lang_nm_eur")
+    if zero is not None:
+        return zero, "zero"
+    if normal is not None:
+        return normal, "cardtrader"
+    return None, None
+
+
+def write_history_index():
+    hist = os.path.join(DATA, "history")
+    os.makedirs(hist, exist_ok=True)
+    dates = sorted(
+        name[:-5] for name in os.listdir(hist)
+        if len(name) == 15 and name.endswith(".json") and name[0].isdigit()
+    )
+    with open(os.path.join(hist, "index.json"), "w", encoding="utf-8") as f:
+        json.dump(dates, f, ensure_ascii=False, indent=1)
+        f.write("\n")
 
 
 def fetch(bid, lang=None, cond=None, page=1):
@@ -70,6 +145,7 @@ def tier(price):
 def main():
     commit = "--commit" in sys.argv
     cards = json.load(open(os.path.join(DATA, "cards.json")))
+    set_years = load_set_years()
     now = datetime.now(TZ)
     today, stamp = now.strftime("%Y-%m-%d"), now.isoformat(timespec="seconds")
     hist_path = os.path.join(DATA, "price_history.csv")
@@ -82,6 +158,7 @@ def main():
     for c in cards:
         bid, lang = c["cardtrader_blueprint_id"], c.get("target_language", "it")
         rec = dict(c)
+        bp = None
         try:
             nm, d0 = products(bid, lang, "Near Mint")
             nm = [p for p in nm if ok(p, lang, "Near Mint")]
@@ -148,11 +225,14 @@ def main():
                          "ct_market_all_lang_eur", "price_source", "price_min_ita_nm_zero_eur",
                          "price_min_target_lang_nm_zero_eur", "listings_target_lang_nm_zero")})
             rec["fetch_error"] = str(e)[:200]
-        rec["buy_price_eur"] = rec.get("price_min_target_lang_nm_eur")
-        rec["tier"] = tier(rec["buy_price_eur"])
+        rec["release_year"] = release_year_for(c, bp, set_years)
+        price, source = buy_quote(rec)
+        rec["buy_price_eur"] = price
+        rec["buy_price_source"] = source
+        rec["tier"] = tier(price)
         rec["last_updated"] = stamp
         out.append(rec)
-        print(f'{c["id"]:6} {c["name"][:32]:32} {rec.get("price_min_target_lang_nm_eur")}', flush=True)
+        print(f'{c["id"]:6} {c["name"][:32]:32} {price} {source or "-"}', flush=True)
         time.sleep(1.2)
 
     out.sort(key=lambda r: (r["buy_price_eur"] is None, -(r["buy_price_eur"] or 0)))
@@ -161,20 +241,22 @@ def main():
     priced = [r["buy_price_eur"] for r in out if r["buy_price_eur"] is not None]
     zpriced = [r["price_min_target_lang_nm_zero_eur"] for r in out if r.get("price_min_target_lang_nm_zero_eur") is not None]
     payload = {"generated_at": stamp, "currency": "EUR",
-               "price_definition": "Prezzo minimo CardTrader per copia in lingua target (ITA, o JP per carte solo giapponesi), Near Mint, non gradata, spedizione esclusa",
+               "price_definition": PRICE_DEFINITION,
                "summary": {"cards": len(out), "priced": len(priced), "total_eur": round(sum(priced), 2),
                            "zero_priced": len(zpriced), "zero_total_eur": round(sum(zpriced), 2),
                            "tiers": {t: sum(1 for r in out if r["tier"] == t) for t in ("A: <50€", "B: 50-150€", "C: >150€", "n/d")}},
-               "zero_definition": "Come sopra, ma solo venditori CardTrader Zero (spedizione tramite hub CardTrader)",
+               "zero_definition": ZERO_DEFINITION,
                "cards": out}
     json.dump(payload, open(os.path.join(DATA, "wishlist.json"), "w"), ensure_ascii=False, indent=1)
     os.makedirs(os.path.join(DATA, "history"), exist_ok=True)
     json.dump(payload, open(os.path.join(DATA, "history", f"{today}.json"), "w"), ensure_ascii=False, indent=1)
+    write_history_index()
     cols = ["rank_by_price", "id", "order", "name", "set", "set_code", "number", "rarity", "target_language",
-            "price_min_ita_nm_eur", "price_min_target_lang_nm_eur", "price_2nd_target_lang_nm_eur",
+            "release_year", "price_min_ita_nm_eur", "price_min_target_lang_nm_eur", "price_2nd_target_lang_nm_eur",
             "listings_target_lang_nm", "price_min_ita_nm_zero_eur", "price_min_target_lang_nm_zero_eur",
             "listings_target_lang_nm_zero", "price_min_any_lang_nm_eur", "ct_market_all_lang_eur", "tier",
-            "price_source", "confidence", "notes", "cardtrader_link", "image_url", "last_updated"]
+            "buy_price_eur", "buy_price_source", "price_source", "confidence", "notes", "cardtrader_link",
+            "image_url", "last_updated"]
     with open(os.path.join(DATA, "wishlist.csv"), "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
         w.writeheader()

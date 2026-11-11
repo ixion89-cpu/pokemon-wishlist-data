@@ -25,14 +25,12 @@ HIST_FIELDS = ["date", "card_id", "blueprint_id", "name", "set_code", "number", 
                "price_ctz_eur", "price_ct_eur", "price_avg_eur"]
 SET_YEARS_PATH = os.path.join(DATA, "set_years.json")
 PRICE_DEFINITION = (
-    "Tre prezzi Near Mint separati, lingua target (ITA, o JP per carte solo giapponesi), "
-    "non gradate, spedizione esclusa. Il prezzo è price.cents/100: è già il prezzo che "
-    "mostra CardTrader, fee inclusa, senza aggiungere un'altra fee. "
-    "price_ctz_eur = minimo dei venditori Zero (user.can_sell_via_hub true). "
-    "price_ct_eur = minimo dei venditori normali (can_sell_via_hub false), non il minimo complessivo. "
-    "price_avg_eur = media pesata sulla quantità di tutti gli annunci NM validi (Zero e normali) "
-    "con quantity > 0. "
-    "buy_price_eur resta il minimo Zero se esiste, altrimenti il minimo di tutti i venditori."
+    "price_final_eur è un solo prezzo Near Mint in lingua target (ITA, JP solo per Togepi), "
+    "non gradato, spedizione esclusa. Il prezzo è price.cents/100, già con la fee di CardTrader. "
+    "Default: minimo Zero (price_ctz_eur). Si usa il minimo CardTrader normale (price_ct_eur) "
+    "se non c'è nessuno Zero, oppure se lo Zero costa più del 20% del normale "
+    "(price_ctz_eur > price_ct_eur * 1.20). Se mancano entrambi, si usa price_cm_eur da Cardmarket. "
+    "price_final_source vale ctz, ct o cm. buy_price_eur è uguale a price_final_eur."
 )
 ZERO_DEFINITION = (
     "zero_total_eur somma solo i minimi Near Mint in lingua target dei venditori CardTrader Zero. "
@@ -81,15 +79,67 @@ def release_year_for(card, blueprint, years):
     return None
 
 
-def buy_quote(rec):
-    """Zero se c'è una copia, altrimenti il minimo CardTrader nella lingua target."""
-    zero = rec.get("price_min_target_lang_nm_zero_eur")
-    normal = rec.get("price_min_target_lang_nm_eur")
-    if zero is not None:
-        return zero, "zero"
-    if normal is not None:
-        return normal, "cardtrader"
+def choose_final(ctz, ct, cm):
+    """Zero, salvo se manca o se costa più del 20% rispetto al CardTrader normale."""
+    if ctz is not None and ct is not None and ctz > ct * 1.20:
+        return ct, "ct"
+    if ctz is not None:
+        return ctz, "ctz"
+    if ct is not None:
+        return ct, "ct"
+    if cm is not None:
+        return cm, "cm"
     return None, None
+
+
+def parse_day(text):
+    try:
+        return datetime.strptime(str(text or "")[:10], "%Y-%m-%d").date()
+    except ValueError:
+        return None
+
+
+def load_named_json(name):
+    path = os.path.join(DATA, name)
+    if not os.path.exists(path):
+        return None
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return None
+
+
+def eu_listings(today):
+    """Listini NM visti da un IP europeo. Usati solo se la data è oggi o ieri."""
+    raw = load_named_json("cardtrader_eu_raw.json")
+    if not isinstance(raw, dict):
+        return {}
+    file_day, today_day = parse_day(raw.get("date")), parse_day(today)
+    if not file_day or not today_day or (today_day - file_day).days not in (0, 1):
+        return {}
+    listings = raw.get("listings")
+    return listings if isinstance(listings, dict) else {}
+
+
+def cardmarket_table():
+    raw = load_named_json("cardmarket.json")
+    return raw if isinstance(raw, dict) else {}
+
+
+def eu_groups(rows):
+    fake = []
+    for row in rows or []:
+        if not isinstance(row, dict) or not isinstance(row.get("price_eur"), (int, float)):
+            continue
+        fake.append({
+            "price": {"cents": int(round(float(row["price_eur"]) * 100))},
+            "quantity": row.get("qty", row.get("quantity", 0)),
+            "user": {"can_sell_via_hub": bool(row.get("zero"))},
+        })
+    zero = [p for p in fake if is_zero_seller(p)]
+    direct = [p for p in fake if not is_zero_seller(p)]
+    return group_stats(zero), group_stats(direct), group_stats(fake)
 
 
 def write_history_index():
@@ -238,6 +288,8 @@ def main():
     # La serie Zero è uno snapshot distinto (language it_zero/jp_zero): non va
     # soppressa solo perché oggi esiste già lo snapshot della lingua target.
     have_today = {(r["card_id"], r["kind"], r.get("language", "")) for r in existing if r["date"] == today}
+    eu_map = eu_listings(today)
+    cardmarket = cardmarket_table()
     new_rows, out = [], []
     for c in cards:
         bid, lang = c["cardtrader_blueprint_id"], c.get("target_language", "it")
@@ -266,6 +318,24 @@ def main():
             rec["price_avg_eur"] = astats["avg"]
             rec["listings_nm"] = astats["n"]
             rec["qty_nm"] = astats["qty"]
+            eu_rows = eu_map.get(str(bid))
+            if isinstance(eu_rows, list) and eu_rows:
+                zstats, cstats, astats = eu_groups(eu_rows)
+                zprices = [zstats["min"]] if zstats["min"] is not None else []
+                prices = sorted(p for p in (zstats["min"], cstats["min"]) if p is not None)
+                rec["price_ctz_eur"] = zstats["min"]
+                rec["listings_ctz"] = zstats["n"]
+                rec["qty_ctz"] = zstats["qty"]
+                rec["price_ct_eur"] = cstats["min"]
+                rec["listings_ct"] = cstats["n"]
+                rec["qty_ct"] = cstats["qty"]
+                rec["price_avg_eur"] = astats["avg"]
+                rec["listings_nm"] = astats["n"]
+                rec["qty_nm"] = astats["qty"]
+                rec["price_min_target_lang_nm_zero_eur"] = zstats["min"]
+                rec["listings_target_lang_nm_zero"] = zstats["n"]
+                if lang == "it":
+                    rec["price_min_ita_nm_zero_eur"] = zstats["min"]
             rec["offers_zero"] = top_offers(nm, nm_extra, True)
             rec["offers_ct"] = top_offers(nm, nm_extra, False)
             time.sleep(1)
@@ -337,10 +407,19 @@ def main():
                          "listings_mint_nm_target_lang",
                          "price_ctz_eur", "listings_ctz", "qty_ctz",
                          "price_ct_eur", "listings_ct", "qty_ct",
-                         "price_avg_eur", "listings_nm", "qty_nm")})
+                         "price_avg_eur", "listings_nm", "qty_nm",
+                         "price_cm_eur", "price_cm_avg_eur", "copies_cm", "price_cm_date",
+                         "price_final_eur", "price_final_source")})
             rec["fetch_error"] = str(e)[:200]
         rec["release_year"] = release_year_for(c, bp, set_years)
-        price, source = buy_quote(rec)
+        cm = cardmarket.get(c["id"]) if isinstance(cardmarket.get(c["id"]), dict) else {}
+        rec["price_cm_eur"] = cm.get("min_eur") if isinstance(cm.get("min_eur"), (int, float)) else None
+        rec["price_cm_avg_eur"] = cm.get("avg_eur") if isinstance(cm.get("avg_eur"), (int, float)) else None
+        rec["copies_cm"] = cm.get("copies") if isinstance(cm.get("copies"), (int, float)) else None
+        rec["price_cm_date"] = cm.get("date")
+        price, source = choose_final(rec.get("price_ctz_eur"), rec.get("price_ct_eur"), rec.get("price_cm_eur"))
+        rec["price_final_eur"] = price
+        rec["price_final_source"] = source
         rec["buy_price_eur"] = price
         rec["buy_price_source"] = source
         rec["tier"] = tier(price)
@@ -367,10 +446,14 @@ def main():
                            "ctz_priced": ctz_n, "total_ctz_eur": ctz_sum,
                            "ct_priced": ct_n, "total_ct_eur": ct_sum,
                            "avg_priced": avg_n, "total_avg_eur": avg_sum,
+                           "final_ctz": sum(1 for r in out if r.get("price_final_source") == "ctz"),
+                           "final_ct": sum(1 for r in out if r.get("price_final_source") == "ct"),
+                           "final_cm": sum(1 for r in out if r.get("price_final_source") == "cm"),
                            "tiers": {t: sum(1 for r in out if r["tier"] == t) for t in ("A: <50€", "B: 50-150€", "C: >150€", "n/d")}},
                "zero_definition": ZERO_DEFINITION,
                "cards": out}
-    # data/purchases.json è la lista acquisti: questo script non deve mai riscriverla.
+    # Non riscrivere data/purchases.json, data/cardtrader_eu_raw.json,
+    # data/cardmarket.json né data/tcgnotify_history.json.
     json.dump(payload, open(os.path.join(DATA, "wishlist.json"), "w"), ensure_ascii=False, indent=1)
     os.makedirs(os.path.join(DATA, "history"), exist_ok=True)
     json.dump(payload, open(os.path.join(DATA, "history", f"{today}.json"), "w"), ensure_ascii=False, indent=1)
@@ -381,6 +464,7 @@ def main():
             "listings_target_lang_nm_zero", "qty_mint_nm_target_lang", "listings_mint_nm_target_lang",
             "price_ctz_eur", "listings_ctz", "qty_ctz", "price_ct_eur", "listings_ct", "qty_ct",
             "price_avg_eur", "listings_nm", "qty_nm",
+            "price_cm_eur", "price_final_eur", "price_final_source",
             "price_min_any_lang_nm_eur", "ct_market_all_lang_eur", "tier",
             "buy_price_eur", "buy_price_source", "price_source", "confidence", "notes", "cardtrader_link",
             "image_url", "last_updated"]

@@ -9,7 +9,8 @@ const state = {
   filters: loadFilters(),
   page: Number(sessionStorage.getItem("wl-page") || 0),
   sort: sessionStorage.getItem("wl-sort") || "desc",
-  cardRange: "1M",
+  cardRange: "30G",
+  chartMarket: "cardtrader",
   perfRange: "MAX",
   perfId: sessionStorage.getItem("wl-perf") || "",
   sheet: false,
@@ -46,55 +47,33 @@ function pct(v) {
   const body = new Intl.NumberFormat("it-IT", { maximumFractionDigits: 1, minimumFractionDigits: 1 }).format(Math.abs(n));
   return (n > 0 ? "+" : n < 0 ? "−" : "") + body + "%";
 }
-const PRICE_MODES = [
-  { id: "ctz", label: "CTZ" },
-  { id: "ct", label: "CT" },
-  { id: "avg", label: "Media" },
-  // { id: "cm", label: "CM" }, Cardmarket: previsto, non mostrato.
-];
-const MODE_KEY = "wl-price-mode";
-const MODE_ORDER = {
-  ctz: ["ctz", "ct", "avg"],
-  ct: ["ct", "avg", "ctz"],
-  avg: ["avg", "ctz", "ct"],
-};
-const MODE_KEY_NAME = { ctz: "price_ctz_eur", ct: "price_ct_eur", avg: "price_avg_eur" };
-function priceMode() {
-  const saved = localStorage.getItem(MODE_KEY);
-  return PRICE_MODES.some((m) => m.id === saved) ? saved : "ctz";
-}
-function modeLabel(id) {
-  const found = PRICE_MODES.find((m) => m.id === id);
-  return found ? found.label : id;
-}
 function hasOwn(obj, key) {
   return Object.prototype.hasOwnProperty.call(obj || {}, key);
 }
-function modePrice(card, mode) {
-  if (mode === "ctz") {
-    if (hasOwn(card, "price_ctz_eur")) return num(card.price_ctz_eur);
-    return num(card.price_min_target_lang_nm_zero_eur);
-  }
-  if (!hasOwn(card, MODE_KEY_NAME[mode])) return null;
-  return num(card[MODE_KEY_NAME[mode]]);
+function chooseFinal(ctz, ct, cm) {
+  if (ctz != null && ct != null && ctz > ct * 1.2) return { price: ct, source: "ct" };
+  if (ctz != null) return { price: ctz, source: "ctz" };
+  if (ct != null) return { price: ct, source: "ct" };
+  if (cm != null) return { price: cm, source: "cm" };
+  return { price: null, source: null };
 }
 function quote(card) {
-  const mode = priceMode();
-  const direct = modePrice(card, mode);
-  if (direct != null) return { price: direct, mode, fallback: false, badge: "" };
-  const known = hasOwn(card, MODE_KEY_NAME[mode]) || (mode === "ctz" && hasOwn(card, "price_min_target_lang_nm_zero_eur"));
-  if (!known) return { price: null, mode, fallback: false, badge: "" };
-  for (const next of MODE_ORDER[mode].slice(1)) {
-    const price = modePrice(card, next);
-    if (price != null) return { price, mode: next, fallback: true, badge: "solo " + modeLabel(next) };
+  if (hasOwn(card, "price_final_eur")) {
+    const price = num(card.price_final_eur);
+    if (price != null) return { price, source: card.price_final_source || null };
   }
-  return { price: null, mode, fallback: false, badge: "" };
+  const ctz = num(card.price_ctz_eur);
+  const ctzLegacy = ctz != null || hasOwn(card, "price_ctz_eur") ? ctz : num(card.price_min_target_lang_nm_zero_eur);
+  const picked = chooseFinal(ctzLegacy, num(card.price_ct_eur), num(card.price_cm_eur));
+  if (picked.price != null) return picked;
+  const buy = num(card.buy_price_eur);
+  if (buy == null) return { price: null, source: null };
+  return { price: buy, source: card.buy_price_source === "cardtrader" ? "ct" : "ctz" };
 }
-function modeBar() {
-  const mode = priceMode();
-  return `<div class="seg modebar" role="tablist" aria-label="Listino">${PRICE_MODES.map((m) =>
-    `<button class="chip ${mode === m.id ? "on" : ""}" type="button" data-mode="${m.id}">${m.label}</button>`
-  ).join("")}</div>`;
+function sourceName(source) {
+  if (source === "cm") return "CARDMARKET";
+  if (source === "ct") return "CARDTRADER";
+  return "CARDTRADER ZERO";
 }
 function badge(source) {
   if (source === "zero") return '<span class="badge zero">Zero</span>';
@@ -214,12 +193,10 @@ function basketOf(cards) {
 }
 function basketHtml(cards, generatedAt) {
   const b = basketOf(cards);
-  const reserve = cards.filter((c) => quote(c).fallback).length;
   const paidNote = b.fallback ? ` · ${b.fallback} senza prezzo pagato, contato il prezzo attuale` : "";
-  const reserveNote = reserve ? ` · ${reserve} con prezzo di riserva` : "";
   return `<section class="basket" aria-label="Totali">
     ${sourceStamp(generatedAt)}
-    <div class="tile mint"><p class="k">Totale wishlist</p><b class="nums">${money(b.wishlist)}</b><p class="meta">${b.total} carte${esc(reserveNote)}</p></div>
+    <div class="tile mint"><p class="k">Totale wishlist</p><b class="nums">${money(b.wishlist)}</b><p class="meta">${b.total} carte</p></div>
     <div class="tile lilac"><p class="k">Già acquistate</p><b class="nums">${b.bought}/${b.total}</b><p class="meta">${money(b.spent)}${esc(paidNote)}</p></div>
     <div class="tile sun"><p class="k">Resta da spendere</p><b class="nums">${money(b.remain)}</b>
       <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(b.done)}" aria-label="Quota del valore già acquistata"><span style="width:${b.done.toFixed(1)}%"></span></div>
@@ -228,7 +205,7 @@ function basketHtml(cards, generatedAt) {
 }
 function sourceStamp(generatedAt) {
   const when = generatedAt ? formatDay(generatedAt) : "";
-  return `<p class="stamp">Fonte: CardTrader · ${esc(modeLabel(priceMode()))} · NM lingua target${when ? " · " + esc(when) : ""}</p>`;
+  return `<p class="stamp">Fonte: CardTrader · NM lingua target${when ? " · " + esc(when) : ""}</p>`;
 }
 async function getJson(path) {
   const res = await fetch(new URL(path, DATA));
@@ -431,7 +408,7 @@ async function renderHome() {
       <a class="btn" href="#/c/${encodeURIComponent(meta.id)}">Apri il raccoglitore</a>
     </article>`);
   }
-  view.innerHTML = modeBar() + `<div class="list home-grid">${blocks.join("") || '<div class="empty"><strong>Nessuna collezione</strong></div>'}</div>`;
+  view.innerHTML = `<div class="list home-grid">${blocks.join("") || '<div class="empty"><strong>Nessuna collezione</strong></div>'}</div>`;
 }
 async function renderBinder(id) {
   const meta = state.collections.find((c) => c.id === id);
@@ -449,7 +426,6 @@ async function renderBinder(id) {
     const cells = slice.map((card) => sleeveHtml(card, id)).join("");
   const buy = f.buy || "todo";
   view.innerHTML = `
-    ${modeBar()}
     ${basketHtml(payload.cards || [], payload.generated_at)}
     <div class="toolbar">
       <div class="seg" role="tablist" aria-label="Stato acquisto">
@@ -651,7 +627,7 @@ function presetsFor(points, options) {
 }
 function filterPoints(points, preset, end) {
   if (preset === "MAX" || !end) return points;
-  const days = { "7G": 7, "1M": 30, "3M": 90, "6M": 180, "12M": 365 }[preset];
+  const days = { "7G": 7, "30G": 30, "90G": 90, "1A": 365, "1M": 30, "3M": 90, "6M": 180, "12M": 365 }[preset];
   const start = addDays(end, -(days - 1));
   return points.filter((p) => p.date >= start && p.date <= end);
 }
@@ -716,6 +692,65 @@ function changeOver(points, days) {
   const span = dateNum(end.date) - dateNum(start.date);
   return { start, end, days: span, diff: end.value - start.value, pct: start.value ? ((end.value - start.value) / start.value) * 100 : null };
 }
+async function loadExtra() {
+  if (state.extra) return state.extra;
+  const read = async (name) => {
+    try { return await getJson(name); }
+    catch (e) { return {}; }
+  };
+  state.extra = { cm: await read("cardmarket.json"), hist: await read("tcgnotify_history.json") };
+  return state.extra;
+}
+function finalFromRow(row) {
+  const ctz = num(row.price_ctz_eur);
+  const ct = num(row.price_ct_eur);
+  const picked = chooseFinal(ctz, ct, null);
+  if (picked.price != null) return picked.price;
+  return num(row.price_eur);
+}
+function marketSeries(card) {
+  const rows = ((state.csv && state.csv.get(card.id)) || []).filter((r) => r.kind === "daily_snapshot" && r.language === card.target_language);
+  const min = [], avg = [], copies = [];
+  let notify = false;
+  rows.forEach((r) => {
+    const value = finalFromRow(r);
+    if (value != null) min.push({ date: r.date, value });
+    const mid = num(r.price_avg_eur);
+    if (mid != null) avg.push({ date: r.date, value: mid });
+    const n = num(r.listings_count);
+    if (n != null) copies.push({ date: r.date, value: n });
+  });
+  const extra = (state.extra && state.extra.hist && state.extra.hist[card.id]) || {};
+  (extra.cardtrader || []).forEach((p) => {
+    if (!p || !p.date) return;
+    notify = true;
+    if (num(p.min) != null && !min.some((x) => x.date === p.date)) min.push({ date: p.date, value: num(p.min) });
+    if (num(p.avg) != null && !avg.some((x) => x.date === p.date)) avg.push({ date: p.date, value: num(p.avg) });
+    if (num(p.copies) != null && !copies.some((x) => x.date === p.date)) copies.push({ date: p.date, value: num(p.copies) });
+  });
+  const sort = (list) => list.sort((a, b) => a.date.localeCompare(b.date));
+  return { min: sort(min), avg: sort(avg), copies: sort(copies), notify };
+}
+function cardmarketSeries(card) {
+  const extra = (state.extra && state.extra.hist && state.extra.hist[card.id]) || {};
+  const min = [], avg = [], copies = [];
+  (extra.cardmarket || []).forEach((p) => {
+    if (!p || !p.date) return;
+    if (num(p.min) != null) min.push({ date: p.date, value: num(p.min) });
+    if (num(p.avg) != null) avg.push({ date: p.date, value: num(p.avg) });
+    if (num(p.copies) != null) copies.push({ date: p.date, value: num(p.copies) });
+  });
+  const current = state.extra && state.extra.cm && state.extra.cm[card.id];
+  if (current && current.date) {
+    if (num(current.min_eur) != null && !min.some((x) => x.date === String(current.date).slice(0, 10))) {
+      min.push({ date: String(current.date).slice(0, 10), value: num(current.min_eur) });
+    }
+    if (num(current.avg_eur) != null) avg.push({ date: String(current.date).slice(0, 10), value: num(current.avg_eur) });
+    if (num(current.copies) != null) copies.push({ date: String(current.date).slice(0, 10), value: num(current.copies) });
+  }
+  const sort = (list) => list.sort((a, b) => a.date.localeCompare(b.date));
+  return { min: sort(min), avg: sort(avg), copies: sort(copies), notify: min.length + avg.length + copies.length > 0 };
+}
 async function renderCard(id, cardId) {
   const meta = state.collections.find((c) => c.id === id);
   if (!meta) throw new Error("Collezione sconosciuta");
@@ -729,79 +764,99 @@ async function renderCard(id, cardId) {
   const here = index >= 0 ? index : list.findIndex((c) => c.id === card.id);
   const prev = here > 0 ? list[here - 1] : null;
   const next = here >= 0 && here < list.length - 1 ? list[here + 1] : null;
+  await loadExtra();
   const q = quote(card);
   const lang = langOf(card.target_language);
-  const full = seriesFor(card);
-  const allPoints = full.flatMap((s) => s.points);
+  const pack = state.chartMarket === "cardmarket" ? cardmarketSeries(card) : marketSeries(card);
   const options = [
-    { id: "1M", label: "1M", min: 29 },
-    { id: "3M", label: "3M", min: 89 },
-    { id: "6M", label: "6M", min: 179 },
-    { id: "12M", label: "12M", min: 364 },
-    { id: "MAX", label: "MAX", min: 0 },
+    { id: "7G", label: "7G", min: 6 },
+    { id: "30G", label: "30G", min: 29 },
+    { id: "90G", label: "90G", min: 89 },
+    { id: "1A", label: "1A", min: 364 },
+    { id: "MAX", label: "Max", min: 0 },
   ];
-  const available = presetsFor(allPoints, options);
-  if (!available.some((p) => p.id === state.cardRange)) state.cardRange = available[0] ? available[0].id : "MAX";
-  const end = allPoints.map((p) => p.date).sort().pop();
-  const shown = full.map((s) => ({ ...s, points: filterPoints(s.points, state.cardRange, end) }));
-  const targetChange = changeOver(full[0].points, 30);
-  const marketChange = changeOver(full[1].points, 30);
+  if (!options.some((p) => p.id === state.cardRange)) state.cardRange = "30G";
+  const end = [...pack.min, ...pack.avg, ...pack.copies].map((p) => p.date).sort().pop();
+  const minShown = filterPoints(pack.min, state.cardRange, end);
+  const avgShown = filterPoints(pack.avg, state.cardRange, end);
+  const copiesShown = filterPoints(pack.copies, state.cardRange, end);
+  const change30 = changeOver(pack.min, 30);
+  const show30 = change30 && change30.start && change30.days >= 29;
   const updated = dayKey(card.last_updated);
   const today = updated && updated === romeToday();
   setChrome(meta.name, card.name, "home");
-  const second = num(card.price_2nd_target_lang_nm_eur);
-  const copies = num(card.listings_target_lang_nm);
-  const zeroCopies = num(card.listings_target_lang_nm_zero);
-  const anyLang = num(card.price_min_any_lang_nm_eur);
-  let delta = "";
-  if (targetChange && targetChange.start) {
-    const cls = targetChange.diff < 0 ? "down" : "up";
-    const arrow = targetChange.diff < 0 ? "▼" : "▲";
-    delta = `<p class="delta ${cls}">${arrow} ${pct(targetChange.pct)} · ${signedMoney(targetChange.diff)} in ${targetChange.days} giorni</p>`;
-  } else {
-    delta = `<p class="quiet">Variazione NM: in arrivo. C'è un solo rilevamento in lingua target.</p>`;
-  }
-  let marketLine = "";
-  if (marketChange && marketChange.start) {
-    marketLine = `<p class="quiet">Mercato CardTrader, tutte le lingue: ${signedMoney(marketChange.diff)} dal ${formatDay(marketChange.start.date)} al ${formatDay(marketChange.end.date)}. Non è il prezzo in lingua target.</p>`;
-  }
   const link = safeUrl(card.cardtrader_link);
-  const stockLine = stockText(card);
   const offersHtml = offersSection(card, link);
+  const cm = (state.extra.cm && state.extra.cm[card.id]) || {};
+  const ctPrice = q.source === "ct" ? num(card.price_ct_eur) : (num(card.price_ctz_eur) ?? num(card.price_ct_eur) ?? q.price);
+  const ctCopies = q.source === "ct" ? (num(card.qty_ct) || num(card.listings_ct)) : (num(card.qty_ctz) || num(card.listings_ctz) || num(card.listings_target_lang_nm));
+  const ctWhen = formatDay(updated);
+  const cmPrice = num(card.price_cm_eur) ?? num(cm.min_eur);
+  const cmCopies = num(card.copies_cm) ?? num(cm.copies);
+  const cmWhen = formatDay(card.price_cm_date || cm.date);
+  const avgPrice = num(card.price_avg_eur);
+  const soldCopies = q.source === "cm" ? cmCopies : (q.source === "ct" ? (num(card.qty_ct) || num(card.listings_ct)) : (num(card.qty_ctz) || num(card.listings_ctz)));
+  const period = minShown.length ? minShown : avgShown;
+  const values = period.map((p) => p.value);
+  const periodMin = values.length ? Math.min(...values) : null;
+  const periodMax = values.length ? Math.max(...values) : null;
+  const periodChange = changeOver(minShown, minShown.length ? dateNum(minShown[minShown.length - 1].date) - dateNum(minShown[0].date) + 1 : 0);
+  const arrow = periodChange && periodChange.diff < 0 ? "▼" : "▲";
+  const sideNum = (other, dir) => other ? `<button class="peek" type="button" data-goto="${esc(other.id)}" aria-label="${dir === "prev" ? "Carta precedente" : "Carta successiva"} ${esc(other.name)}"><span>${esc(other.number || "")}</span></button>` : "<span></span>";
   view.innerHTML = `
-    ${modeBar()}
     <p class="kicker"><a href="#/c/${encodeURIComponent(id)}">‹ Raccoglitore</a></p>
-    ${sourceStamp(payload.generated_at)}
     <div class="stage">
-      ${prev ? `<button class="peek" type="button" data-goto="${esc(prev.id)}" aria-label="Carta precedente ${esc(prev.name)}">${safeUrl(prev.image_url) ? `<img alt="" src="${esc(safeUrl(prev.image_url))}">` : ""}</button>` : "<span></span>"}
+      ${sideNum(prev, "prev")}
       ${art(card, purchaseOf(card.id) ? "hero bought" : "hero")}
-      ${next ? `<button class="peek" type="button" data-goto="${esc(next.id)}" aria-label="Carta successiva ${esc(next.name)}">${safeUrl(next.image_url) ? `<img alt="" src="${esc(safeUrl(next.image_url))}">` : ""}</button>` : "<span></span>"}
+      ${sideNum(next, "next")}
     </div>
-    ${link ? `<div class="cta-block"><a class="cta-search" href="${esc(link)}" target="_blank" rel="noopener">Apri su CardTrader</a><p class="cta-hint">Su CardTrader scegli la scheda Zero e i filtri ${card.target_language === "jp" ? "Giapponese" : "Italiano"} · Near Mint · Mint</p></div>` : ""}
     <h2 class="card-name">${purchaseOf(card.id) ? "✅ " : ""}${esc(card.name)}</h2>
-    <p class="sub">${esc(card.set)} · ${esc(card.number)} · ${esc(card.rarity)} · ${lang.flag} ${lang.name} · <span class="dot">●</span> Monitorato${card.release_year ? " · " + esc(card.release_year) : ""}</p>
+    <p class="sub">${esc(card.set)} · ${esc(card.number)} · ${esc(card.rarity)} · ${lang.flag} ${lang.name}${card.release_year ? " · " + esc(card.release_year) : ""}</p>
     <section class="pricebox">
-      <p class="label">${esc(modeLabel(priceMode()))} · NM · ${lang.flag} ${lang.name.toUpperCase()}</p>
-      <div class="row"><p class="big">${q.price == null ? "n/d" : money(q.price)}</p>${q.badge ? `<span class="badge partial">${esc(q.badge)}</span>` : ""}</div>
-      ${delta}
-      ${q.price == null ? `<p class="quiet">Nessuna copia Near Mint non gradata nella lingua target.</p>` : ""}
-      ${second != null ? `<p class="quiet">2ª offerta ${money(second)}</p>` : `<p class="quiet">2ª offerta non disponibile</p>`}
-      <p class="quiet">${copies == null ? "Copie n/d" : copies + " copie in vendita"}${zeroCopies == null ? "" : " · " + zeroCopies + " Zero"}</p>
-      ${q.price == null && anyLang != null ? `<p class="quiet">Riferimento NM in altre lingue: ${money(anyLang)}. Non entra nel totale.</p>` : ""}
-      ${marketLine}
+      <p class="label">PREZZO MINIMO · NM · ${lang.flag} ${lang.name.toUpperCase()} · ${esc(sourceName(q.source))}</p>
+      <p class="big">${q.price == null ? "n/d" : money(q.price)}</p>
+      ${show30 ? `<p class="delta ${change30.diff < 0 ? "down" : "up"}">${change30.diff < 0 ? "▼" : "▲"} ${pct(change30.pct)} · ${signedMoney(change30.diff)} in 30 giorni</p>` : ""}
+      <p class="quiet">Prezzo medio ${avgPrice == null ? "n/d" : money(avgPrice)}</p>
+      <p class="quiet">${soldCopies == null ? "Copie n/d" : soldCopies + " copie in vendita"}${ctWhen ? " · " + esc(ctWhen) : ""}</p>
       <p><span class="pill ${today ? "today" : ""}">${today ? "Aggiornato oggi" : "Aggiornato il " + formatDay(updated)}</span></p>
-      ${stockLine}
+      ${link ? `<a class="cta-search" href="${esc(link)}" target="_blank" rel="noopener">Apri su CardTrader</a>` : ""}
+    </section>
+    <h2 class="section-title">Due mercati, mai mescolati</h2>
+    <div class="market-list">
+      <button class="market-row ${state.chartMarket === "cardtrader" ? "on" : ""}" type="button" data-chart-market="cardtrader">
+        <span class="who">CardTrader</span>
+        <span class="meta">${q.source === "ct" ? "normale" : "Zero"} · ${ctCopies == null ? "copie n/d" : ctCopies + " copie"}${ctWhen ? " · " + esc(ctWhen) : ""}</span>
+        <b class="nums">${ctPrice == null ? "n/d" : money(ctPrice)}</b>
+      </button>
+      <button class="market-row ${state.chartMarket === "cardmarket" ? "on" : ""}" type="button" data-chart-market="cardmarket">
+        <span class="who">Cardmarket</span>
+        <span class="meta">${cmCopies == null ? "copie n/d" : cmCopies + " copie"}${cmWhen ? " · " + esc(cmWhen) : ""}</span>
+        <b class="nums">${cmPrice == null ? "n/d" : money(cmPrice)}</b>
+      </button>
+    </div>
+    <section class="chart-card">
+      <h2 class="section-title">Storico</h2>
+      <div class="ranges">${options.map((p) => `<button class="chip ${p.id === state.cardRange ? "on" : ""}" type="button" data-card-range="${p.id}">${p.label}</button>`).join("")}</div>
+      <div class="statgrid">
+        <p><span>Minimo</span><b class="nums">${minShown.length ? money(minShown[minShown.length - 1].value) : "n/d"}</b></p>
+        <p><span>Medio</span><b class="nums">${avgShown.length ? money(avgShown[avgShown.length - 1].value) : "n/d"}</b></p>
+        <p><span>Copie</span><b class="nums">${copiesShown.length ? copiesShown[copiesShown.length - 1].value : "n/d"}</b></p>
+      </div>
+      ${minShown.length || avgShown.length ? chartSvg([
+        { id: "min", label: "Minimo", color: "#111", fillColor: "#5ff0c0", fill: true, points: minShown },
+        { id: "avg", label: "Medio", color: "#111", fill: false, dashed: true, points: avgShown },
+      ], false) : `<p class="quiet">${state.chartMarket === "cardmarket" ? "Cardmarket: n/d." : "Storico del minimo in arrivo."}</p>`}
+      <p class="quiet">Copie in vendita</p>
+      ${copiesShown.length ? chartSvg([{ id: "qty", label: "Copie", color: "#111", fillColor: "#c9b6ff", fill: true, points: copiesShown }], false) : ""}
+      <div class="hist-foot">
+        <p><span>MIN</span><b class="nums">${periodMin == null ? "n/d" : money(periodMin)}</b></p>
+        <p><span>MAX</span><b class="nums">${periodMax == null ? "n/d" : money(periodMax)}</b></p>
+        <p><span>VAR</span><b class="nums ${periodChange && periodChange.diff < 0 ? "down" : "up"}">${periodChange && periodChange.start ? arrow + " " + signedMoney(periodChange.diff) : "n/d"}</b></p>
+      </div>
+      ${pack.notify ? `<p class="quiet">storico TCGNotify</p>` : ""}
     </section>
     ${purchaseBox(card, q)}
     ${offersHtml}
-    <section class="chart-card">
-      <div class="ranges">${available.map((p) => `<button class="chip ${p.id === state.cardRange ? "on" : ""}" type="button" data-card-range="${p.id}">${p.label}</button>`).join("")}</div>
-      ${chartSvg(shown, false)}
-      <div class="legend">
-        <span><i class="swatch"></i>${esc(full[0].label)}</span>
-        <span><i class="swatch market"></i>mercato CardTrader, tutte le lingue</span>
-      </div>
-    </section>
     ${card.notes ? `<p class="note">${esc(card.notes)}</p>` : ""}
   `;
   let x0 = null;
@@ -883,7 +938,6 @@ async function renderPerformance() {
   const headline = state.perfBasket === "remain" ? basket.remain : basket.wishlist;
   const headlineLabel = state.perfBasket === "remain" ? "Resta da spendere" : "Totale wishlist";
   view.innerHTML = `
-    ${modeBar()}
     ${sourceStamp(current.generated_at)}
     <div class="ranges" style="margin-bottom:12px">${state.collections.map((c) => `<button class="chip ${c.id === meta.id ? "on" : ""}" type="button" data-perf-id="${esc(c.id)}">${esc(c.name)}</button>`).join("")}</div>
     <div class="seg" style="margin-bottom:12px">
@@ -955,33 +1009,27 @@ async function renderMovers() {
     });
     rows.sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff));
   }
-  const label = modeLabel(priceMode());
   const list = rows.slice(0, 12).map((r) => {
     const arrow = r.diff < 0 ? "▼" : r.diff > 0 ? "▲" : "●";
     const cls = r.diff < 0 ? "down" : r.diff > 0 ? "up" : "";
     return `<a class="mover" href="#/c/${encodeURIComponent(meta.id)}/card/${encodeURIComponent(r.card.id)}">
     <img alt="" src="${esc(safeUrl(r.card.image_url))}">
-    <div><strong>${esc(r.card.name)}</strong><p class="meta">${esc(r.card.set)} · ${formatDay(r.start)} → ${formatDay(r.end)}</p><span class="badge">${esc(label)}</span></div>
+    <div><strong>${esc(r.card.name)}</strong><p class="meta">${esc(r.card.set)} · ${formatDay(r.start)} → ${formatDay(r.end)}</p></div>
     <div class="chg delta ${cls}">${arrow} ${signedMoney(r.diff)}<br>${arrow} ${pct(r.pct)}</div>
   </a>`;
   }).join("");
   const note = rows.length
     ? ""
     : `<div class="empty" style="text-align:left"><strong>Movimenti — in arrivo</strong>
-    <p>Per ${esc(label)} servono due giorni di storico con quel prezzo. ${span ? "I due snapshot non hanno prezzi confrontabili in questo listino." : "C'è un solo snapshot giornaliero."}</p></div>`;
+    <p>${span ? "I due snapshot non hanno un prezzo confrontabile." : "C'è un solo snapshot giornaliero."}</p></div>`;
   view.innerHTML = `
-    ${modeBar()}
     ${sourceStamp(payload.generated_at)}
     ${note}
     <div class="list" style="margin-top:12px">${list}</div>`;
 }
 view.addEventListener("click", (e) => {
-  const modeBtn = e.target.closest("[data-mode]");
-  if (modeBtn && PRICE_MODES.some((m) => m.id === modeBtn.dataset.mode)) {
-    localStorage.setItem(MODE_KEY, modeBtn.dataset.mode);
-    render();
-    return;
-  }
+  const chartMarket = e.target.closest("[data-chart-market]");
+  if (chartMarket) { state.chartMarket = chartMarket.dataset.chartMarket; render(); return; }
   const buy = e.target.closest("[data-buy]");
   if (buy && buy.dataset.buy && ["all", "todo", "bought"].includes(buy.dataset.buy)) {
     const id = route().id;
@@ -1032,4 +1080,5 @@ document.addEventListener("keydown", (e) => {
   }
 });
 window.addEventListener("hashchange", render);
+try { localStorage.removeItem("wl-price-mode"); } catch (e) { /* ignore */ }
 render();

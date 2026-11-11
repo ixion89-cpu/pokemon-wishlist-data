@@ -3,20 +3,31 @@
 Backend statico (GitHub Pages) con la buying list della wishlist "Wishlist - modern" di Leopoldo Montini
 (67 carte), ordinata per prezzo. Pensato per essere collegato a ChatGPT Sites o a qualsiasi interfaccia.
 
-**Tre listini NM**, lingua target (italiano, oppure giapponese per la carta solo JP), non gradate, spedizione esclusa. Il prezzo è `price.cents / 100`: è già il prezzo mostrato da CardTrader, fee inclusa, senza un'altra fee aggiunta.
+**Prezzo unico (`price_final_eur`)**, Near Mint in lingua target (italiano, giapponese solo per Togepi), non gradato, spedizione esclusa. Il prezzo è `price.cents / 100`, già con la fee di CardTrader.
 
-| campo | significato |
-|---|---|
-| `price_ctz_eur` | minimo dei venditori CardTrader Zero (`user.can_sell_via_hub` true) |
-| `price_ct_eur` | minimo dei soli venditori normali (`can_sell_via_hub` false). Non è il minimo complessivo |
-| `price_avg_eur` | media pesata sulla `quantity` di tutti gli annunci NM validi (Zero e normali) con quantità > 0 |
-| `listings_ctz` / `qty_ctz` | annunci e copie Zero |
-| `listings_ct` / `qty_ct` | annunci e copie dei venditori normali |
-| `listings_nm` / `qty_nm` | annunci e copie di tutti i venditori |
+1. Default: minimo CardTrader Zero (`price_ctz_eur`).
+2. Si usa il CardTrader normale (`price_ct_eur`) se non c'è nessuno Zero, oppure se lo Zero costa più del 20% (`price_ctz_eur > price_ct_eur * 1.20`).
+3. Se mancano entrambi, si usa Cardmarket (`price_cm_eur`) quando c'è.
 
-L'app sceglie il listino (CTZ, CT o Media; default CTZ). Se manca quel prezzo usa il successivo disponibile e lo segnala.
+`price_final_source` vale `ctz`, `ct` o `cm`. `buy_price_eur` e `total_eur` sono lo stesso prezzo. `price_avg_eur` resta nei dati e non è un listino dell'app.
 
-**Prezzo di riferimento (`buy_price_eur`):** minimo Zero se c'è almeno una copia, altrimenti il minimo di tutti i venditori. `buy_price_source` vale `zero` oppure `cardtrader`. `total_eur` e tier nel JSON usano questo prezzo. Spedizione esclusa, copie gradate escluse.
+L'Action delle 07:00 (Roma) gira su un runner USA: CardTrader da lì nasconde molti venditori diretti italiani. Se `data/cardtrader_eu_raw.json` ha `date` uguale a oggi o a ieri, per quei blueprint i prezzi CTZ/CT/media si calcolano da quel file invece che dal fetch.
+
+```json
+{
+  "date": "2026-11-11",
+  "listings": {
+    "127519": [
+      {"price_eur": 2700.64, "qty": 1, "zero": true},
+      {"price_eur": 1100.64, "qty": 2, "zero": false}
+    ]
+  }
+}
+```
+
+`data/cardmarket.json` è un dizionario id carta → `{ "min_eur", "avg_eur", "copies", "date" }`. Vuoto finché non lo riempi. Lo script copia `min_eur` in `price_cm_eur`.
+
+`data/tcgnotify_history.json` è un dizionario id carta → `{ "cardtrader": [{"date","min","avg","copies"}], "cardmarket": [...] }`. Vuoto per ora. L'app lo disegna nello storico e, se c'è almeno un punto, scrive «storico TCGNotify». Lo script non lo sovrascrive, come non sovrascrive `purchases.json` né i due file sopra.
 
 **Totale Zero (`zero_total_eur`):** somma dei soli minimi Zero. Una carta senza copia Zero non entra in questo totale, ma resta in `total_eur` se ha un minimo CardTrader.
 

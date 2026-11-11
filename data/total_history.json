@@ -2,6 +2,7 @@
  "reconstruction": true,
  "real_from": "2026-11-10",
  "max_from": "2026-09-16",
+ "cards_total": 67,
  "discarded_cm_points": 87,
  "note": "Fino al giorno prima degli snapshot reali il totale è ricostruito: minimo CardTrader NM di TCGNotify, altrimenti Cardmarket se non supera 3 volte la mediana CardTrader della carta, altrimenti l'ultimo prezzo entro 7 giorni. Dal 2026-11-10 si usa price_final degli snapshot.",
  "days": [

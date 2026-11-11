@@ -1,0 +1,10 @@
+date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,listings_count,source,kind,price_ctz_eur,price_ct_eur,price_avg_eur
+2026-11-11,g1-4,370931,Mega Charizard Y ex,ASC,294,263.2,it,Near Mint,37,cardtrader_listings_min,daily_snapshot,263.2,263.64,315.48
+2026-11-11,g1-3,356916,Mega Charizard X ex,PFL,130,218.49,it,Near Mint,33,cardtrader_listings_min,daily_snapshot,218.49,220.64,520.03
+2026-11-11,g1-9,421157,Mega Rayquaza ex,DLR,141,216.8,it,Near Mint,15,cardtrader_listings_min,daily_snapshot,216.8,260.64,304.04
+2026-11-11,g1-2,351691,Mega Lucario ex,MEG,188,165.54,it,Near Mint,28,cardtrader_listings_min,daily_snapshot,165.54,164.64,206.29
+2026-11-11,g1-1,351690,Mega Gardevoir ex,MEG,187,120.42,it,Near Mint,28,cardtrader_listings_min,daily_snapshot,120.42,119.64,494.06
+2026-11-11,g1-5,370932,Mega Dragonite ex,ASC,295,109.23,it,Near Mint,45,cardtrader_listings_min,daily_snapshot,109.23,106.26,350.41
+2026-11-11,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,105.52,105.64,130.4
+2026-11-11,g1-7,390062,Mega Greninja ex,CRI,122,85.59,it,Near Mint,30,cardtrader_listings_min,daily_snapshot,85.59,115.64,117.06
+2026-11-11,g1-6,378969,Mega Zygarde ex,POR,124,70.55,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,70.55,67.64,98.69

@@ -1034,7 +1034,10 @@
   "target_language": "it",
   "italian_edition_exists": true,
   "confidence": "alta",
-  "notes": ""
+  "notes": "",
+  "name_it": "Mega Charizard Y-ex",
+  "set_it": "Ascesa Eroica",
+  "set_total": "217"
  },
  {
   "id": "p7-8",
@@ -1051,7 +1054,10 @@
   "target_language": "it",
   "italian_edition_exists": true,
   "confidence": "alta",
-  "notes": ""
+  "notes": "",
+  "name_it": "Mega Dragonite-ex",
+  "set_it": "Ascesa Eroica",
+  "set_total": "217"
  },
  {
   "id": "p7-9",
@@ -1068,7 +1074,10 @@
   "target_language": "it",
   "italian_edition_exists": true,
   "confidence": "alta",
-  "notes": ""
+  "notes": "",
+  "name_it": "Mega Rayquaza-ex",
+  "set_it": "Dominio Delta",
+  "set_total": "103"
  },
  {
   "id": "p8-1",
@@ -1085,7 +1094,10 @@
   "target_language": "it",
   "italian_edition_exists": true,
   "confidence": "alta",
-  "notes": ""
+  "notes": "",
+  "name_it": "Mega Lucario-ex",
+  "set_it": "Megaevoluzione",
+  "set_total": "132"
  },
  {
   "id": "p8-2",
@@ -1102,7 +1114,10 @@
   "target_language": "it",
   "italian_edition_exists": true,
   "confidence": "alta",
-  "notes": ""
+  "notes": "",
+  "name_it": "Mega Darkrai-ex",
+  "set_it": "Buio Pesto",
+  "set_total": "084"
  },
  {
   "id": "p8-3",
@@ -1119,7 +1134,10 @@
   "target_language": "it",
   "italian_edition_exists": true,
   "confidence": "alta",
-  "notes": ""
+  "notes": "",
+  "name_it": "Mega Greninja-ex",
+  "set_it": "Caos Nascente",
+  "set_total": "086"
  },
  {
   "id": "p8-4",
@@ -1136,6 +1154,9 @@
   "target_language": "it",
   "italian_edition_exists": true,
   "confidence": "alta",
-  "notes": ""
+  "notes": "",
+  "name_it": "Mega Zygarde-ex",
+  "set_it": "Equilibrio Perfetto",
+  "set_total": "088"
  }
 ]

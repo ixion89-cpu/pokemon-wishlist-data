@@ -128,20 +128,30 @@ function filtersFor(id) {
   if (!state.filters[id].buy) state.filters[id].buy = "todo";
   return state.filters[id];
 }
-const PURCHASE_KEY = "wl-purchases";
+function purchaseStorageKey() {
+  const id = state.collectionId || "wishlist-modern";
+  return id === "wishlist-modern" ? "wl-purchases" : "wl-purchases-" + id;
+}
 async function loadPurchaseFile() {
-  if (state.filePurchases) return state.filePurchases;
+  const meta = activeCollection();
+  const id = (meta && meta.id) || "wishlist-modern";
+  if (!state.purchaseFiles) state.purchaseFiles = {};
+  if (state.purchaseFiles[id]) {
+    state.filePurchases = state.purchaseFiles[id];
+    return state.filePurchases;
+  }
   try {
-    const data = await getJson("purchases.json");
+    const data = await getJson((meta && meta.purchases) || "purchases.json");
     state.filePurchases = Array.isArray(data) ? data : [];
   } catch (e) {
     state.filePurchases = [];
   }
+  state.purchaseFiles[id] = state.filePurchases;
   return state.filePurchases;
 }
 function localPurchaseOverrides() {
   try {
-    const raw = JSON.parse(localStorage.getItem(PURCHASE_KEY) || "{}");
+    const raw = JSON.parse(localStorage.getItem(purchaseStorageKey()) || "{}");
     return raw && typeof raw === "object" && !Array.isArray(raw) ? raw : {};
   } catch (e) {
     return {};
@@ -172,7 +182,7 @@ function purchaseOf(id) {
 function setPurchaseOverride(id, value) {
   const all = localPurchaseOverrides();
   all[String(id)] = value;
-  localStorage.setItem(PURCHASE_KEY, JSON.stringify(all));
+  localStorage.setItem(purchaseStorageKey(), JSON.stringify(all));
 }
 function basketOf(cards) {
   const map = purchaseMap();
@@ -241,9 +251,65 @@ function parseCsv(text) {
     return obj;
   });
 }
+function collectionFromUrl() {
+  const value = new URLSearchParams(location.search).get("c");
+  if (!value) return "";
+  if (value === "gold" || value === "gold-modern") return "gold-modern";
+  if (value === "wishlist" || value === "wishlist-modern") return "wishlist-modern";
+  return "";
+}
+function activeCollection() {
+  return state.collections.find((c) => c.id === state.collectionId) || state.collections[0];
+}
+function pickCollection() {
+  const fromUrl = collectionFromUrl();
+  if (fromUrl && state.collections.some((c) => c.id === fromUrl)) return fromUrl;
+  const saved = localStorage.getItem("wl-collection");
+  if (saved && state.collections.some((c) => c.id === saved)) return saved;
+  return state.collections[0] ? state.collections[0].id : "";
+}
+function cardTitle(card) { return card.name_it || card.name || ""; }
+function cardSetName(card) { return card.set_it || card.set || ""; }
+function cardNumber(card) {
+  if (card.number && card.set_total) return card.number + "/" + card.set_total;
+  return card.number || "";
+}
+function sortModeFor(id) {
+  const meta = state.collections.find((c) => c.id === id);
+  const saved = sessionStorage.getItem("wl-sort-" + id);
+  if (saved) return saved;
+  if (meta && meta.order === "release") return "release";
+  return state.sort || "desc";
+}
+function renderCollectionSwitch() {
+  const el = document.getElementById("collection-switch");
+  if (!el || !state.collections.length) return;
+  el.innerHTML = state.collections.map((c) =>
+    `<button class="chip ${c.id === state.collectionId ? "on" : ""}" type="button" data-collection="${esc(c.id)}">${esc(c.name)}</button>`
+  ).join("");
+}
+function setCollection(id) {
+  if (!id || id === state.collectionId) return;
+  state.collectionId = id;
+  localStorage.setItem("wl-collection", id);
+  const url = new URL(location.href);
+  url.searchParams.set("c", id === "gold-modern" ? "gold" : "wishlist");
+  const here = route();
+  if (here.name === "card" || here.name === "binder") url.hash = "#/c/" + encodeURIComponent(id);
+  history.replaceState(null, "", url.pathname + url.search + url.hash);
+  state.payloads = new Map();
+  state.historyIndex = null;
+  state.history = new Map();
+  state.csv = null;
+  state.extra = null;
+  state.filePurchases = null;
+  state.purchaseFiles = {};
+  render();
+}
 async function loadCollections() {
   if (state.collections.length) return;
   state.collections = await getJson("collections.json");
+  state.collectionId = pickCollection();
 }
 async function loadPayload(meta) {
   if (state.payloads.has(meta.id)) return state.payloads.get(meta.id);
@@ -253,16 +319,20 @@ async function loadPayload(meta) {
 }
 async function loadHistory() {
   if (state.historyIndex) return;
-  state.historyIndex = await getJson("history/index.json");
+  const meta = activeCollection();
+  const indexPath = (meta && meta.history) || "history/index.json";
+  state.historyIndex = await getJson(indexPath);
+  const prefix = indexPath.replace(/index\.json$/, "");
   await Promise.all(state.historyIndex.map(async (date) => {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return;
-    const payload = await getJson("history/" + date + ".json");
+    const payload = await getJson(prefix + date + ".json");
     state.history.set(date, payload);
   }));
 }
 async function loadCsv() {
   if (state.csv) return state.csv;
-  const rows = parseCsv(await getText("price_history.csv"));
+  const meta = activeCollection();
+  const rows = parseCsv(await getText((meta && meta.csv) || "price_history.csv"));
   const byCard = new Map();
   rows.forEach((r) => {
     if (!byCard.has(r.card_id)) byCard.set(r.card_id, []);
@@ -300,7 +370,8 @@ function applyFilters(cards, id) {
   const q = f.q.trim().toLowerCase();
   return cards.filter((card) => {
     const price = quote(card);
-    if (q && !(card.name || "").toLowerCase().includes(q) && !String(card.number || "").toLowerCase().includes(q)) return false;
+    const hay = (cardTitle(card) + " " + (card.name || "") + " " + cardSetName(card) + " " + cardNumber(card)).toLowerCase();
+    if (q && !hay.includes(q)) return false;
     if (f.years.length && !f.years.includes(String(card.release_year || ""))) return false;
     if (f.sets.length && !f.sets.includes(card.set)) return false;
     if (f.rarities.length && !f.rarities.includes(card.rarity)) return false;
@@ -316,7 +387,9 @@ function applyFilters(cards, id) {
     if (pa == null && pb == null) return a.name.localeCompare(b.name, "it");
     if (pa == null) return 1;
     if (pb == null) return -1;
-    return state.sort === "asc" ? pa - pb : pb - pa;
+    const mode = sortModeFor(id);
+    if (mode === "release") return (a.order || 0) - (b.order || 0) || cardTitle(a).localeCompare(cardTitle(b), "it");
+    return mode === "asc" ? pa - pb : pb - pa;
   });
 }
 function art(card, className) {
@@ -333,6 +406,7 @@ function setChrome(eyebrow, title, tab) {
   eyebrowEl.textContent = eyebrow;
   titleEl.textContent = title;
   document.querySelectorAll(".tabbar a").forEach((a) => a.classList.toggle("active", a.dataset.tab === tab));
+  renderCollectionSwitch();
 }
 function route() {
   const parts = (location.hash.replace(/^#/, "") || "/").split("/").filter(Boolean);
@@ -387,7 +461,8 @@ function sleeveHtml(card, collectionId) {
     <div class="art">${img}</div>
     ${q.badge ? `<span class="src-badge"><span class="badge partial">${esc(q.badge)}</span></span>` : ""}
     <div class="price-line"><span class="price">${q.price == null ? "n/d" : money(q.price)}</span></div>
-    <p class="name">${esc(card.name)}</p>
+    <p class="name">${esc(cardTitle(card))}</p>
+    <p class="meta">${esc(cardSetName(card))}${cardNumber(card) ? " · " + esc(cardNumber(card)) : ""}</p>
   </a>`;
 }
 function topPreview(collectionId, cards) {
@@ -405,14 +480,36 @@ const TOTAL_RANGES = [
   { id: "1A", label: "1A" },
   { id: "MAX", label: "MAX" },
 ];
-function totalSeries(range) {
+function totalPointMeta(book, day, names) {
+  const included = Array.isArray(day.cards_included) ? day.cards_included.length : day.cards_priced;
+  const first = book.card_first_price_day || {};
+  const added = Object.keys(first).filter((id) => first[id] === day.date).map((id) => names[id] || id);
+  const step = (book.steps || []).some((s) => s.date === day.date);
+  const noun = included === 1 ? "carta" : "carte";
+  let count = `${included} ${noun}`;
+  if (added.length) count += ` · + ${added.join(", ")}`;
+  else if (!day.cards_included) count = `carte conteggiate ${day.cards_priced}/${book.cards_total || 67}`;
+  return {
+    title: `${formatDay(day.date)} · ${money(day.total_eur)} · ${count}`,
+    marker: step,
+    markerLabel: step ? String(day.cards_count || included) : "",
+  };
+}
+function totalSeries(range, cards) {
   const book = (state.extra && state.extra.totals) || {};
-  let pts = (book.days || []).map((d) => ({
-    date: d.date,
-    value: d.total_eur,
-    reconstructed: d.source !== "snapshot",
-    title: `${formatDay(d.date)} · ${money(d.total_eur)} · carte conteggiate ${d.cards_priced}/67`,
-  }));
+  const names = {};
+  (cards || []).forEach((card) => { names[card.id] = cardTitle(card); });
+  let pts = (book.days || []).map((d) => {
+    const meta = totalPointMeta(book, d, names);
+    return {
+      date: d.date,
+      value: d.total_eur,
+      reconstructed: d.source !== "snapshot",
+      title: meta.title,
+      marker: meta.marker,
+      markerLabel: meta.markerLabel,
+    };
+  });
   if (!pts.length) return { pts: [], recon: [], real: [], delta: null, maxFrom: book.max_from };
   if (range === "MAX" && book.max_from) pts = pts.filter((p) => p.date >= book.max_from);
   else if (range !== "MAX") pts = filterPoints(pts, range, pts[pts.length - 1].date);
@@ -422,14 +519,17 @@ function totalSeries(range) {
   const delta = changeOver(pts, pts.length ? dateNum(pts[pts.length - 1].date) - dateNum(pts[0].date) + 1 : 0);
   return { pts, recon, real, delta, maxFrom: book.max_from };
 }
-function totalChartHtml() {
+function totalChartHtml(cards) {
   if (!TOTAL_RANGES.some((r) => r.id === state.totalRange)) state.totalRange = "MAX";
-  const view = totalSeries(state.totalRange);
+  const book = (state.extra && state.extra.totals) || {};
+  const view = totalSeries(state.totalRange, cards);
   let change = `<p class="quiet">Storico del totale non disponibile.</p>`;
   if (view.delta && view.delta.start) {
     const cls = view.delta.diff < 0 ? "down" : view.delta.diff > 0 ? "up" : "";
     const arrow = view.delta.diff < 0 ? "▼" : view.delta.diff > 0 ? "▲" : "●";
     change = `<p class="delta ${cls}">${arrow} ${signedMoney(view.delta.diff)} dal ${formatDay(view.delta.start.date)}</p>`;
+  } else if (view.pts.length) {
+    change = `<p class="quiet">Un solo giorno di storico.</p>`;
   }
   const series = [];
   if (view.recon.length) series.push({ id: "recon", label: "Ricostruito", color: "#111", fill: false, dashed: true, points: view.recon });
@@ -439,12 +539,13 @@ function totalChartHtml() {
     ${change}
     <div class="chart-card">${series.length ? chartSvg(series, false) : ""}</div>
     ${latest ? `<p class="quiet">${esc(latest.title)}</p>` : ""}
-    ${view.recon.length ? `<p class="quiet">Tratteggio: ricostruito da storico TCGNotify. Linea piena: snapshot dal 10 nov 2026.</p>` : ""}`;
+    ${view.recon.length ? `<p class="quiet">Tratteggio: ricostruito da storico TCGNotify. Linea piena: snapshot dal ${esc(formatDay(book.real_from || "2026-11-10"))}.${book.steps ? " Pallino giallo: quel giorno entra una carta, il salto non è solo un rialzo di prezzo." : ""}</p>` : ""}`;
 }
 async function renderHome() {
   setChrome("Inventario", "Collezioni", "home");
   const blocks = [];
-  for (const meta of state.collections) {
+  const only = activeCollection();
+  for (const meta of (only ? [only] : [])) {
     const payload = await loadPayload(meta);
     blocks.push(`<article class="collection">
       <h2>${esc(meta.name)}</h2>
@@ -452,7 +553,7 @@ async function renderHome() {
       <section class="perf">
         <p class="label">Resta da spendere</p>
         <h2>${esc(meta.name)}</h2>
-        ${totalChartHtml()}
+        ${totalChartHtml(payload.cards || [])}
       </section>
       ${topPreview(meta.id, payload.cards || [])}
       <a class="btn" href="#/c/${encodeURIComponent(meta.id)}">Apri il raccoglitore</a>
@@ -484,8 +585,9 @@ async function renderBinder(id) {
         <button class="chip ${buy === "bought" ? "on" : ""}" type="button" data-buy="bought">Acquistate</button>
       </div>
       <input class="search" id="q" type="search" placeholder="Cerca nome o numero" value="${esc(f.q)}" enterkeyhint="search">
-      <button class="chip ${state.sort === "desc" ? "on" : ""}" type="button" data-sort="desc">Prezzo ↓</button>
-      <button class="chip ${state.sort === "asc" ? "on" : ""}" type="button" data-sort="asc">Prezzo ↑</button>
+      <button class="chip ${sortModeFor(id) === "release" ? "on" : ""}" type="button" data-sort="release">Uscita</button>
+      <button class="chip ${sortModeFor(id) === "desc" ? "on" : ""}" type="button" data-sort="desc">Prezzo ↓</button>
+      <button class="chip ${sortModeFor(id) === "asc" ? "on" : ""}" type="button" data-sort="asc">Prezzo ↑</button>
       <button class="chip" type="button" data-open-filters>Filtri${active ? " · " + active : ""}</button>
     </div>
     <section class="binder" id="binder">
@@ -694,6 +796,7 @@ function chartSvg(series, dark, asMoney = true) {
   const xOf = (date) => t1 === t0 ? (pad.l + (w - pad.r)) / 2 : pad.l + ((dateNum(date) - t0) / (t1 - t0)) * (w - pad.l - pad.r);
   const yOf = (v) => pad.t + (1 - (v - y0) / (y1 - y0)) * (h - pad.t - pad.b);
   const parts = [];
+  let lastMarkerX = -999;
   series.forEach((s) => {
     let seg = [];
     const flush = () => {
@@ -704,7 +807,18 @@ function chartSvg(series, dark, asMoney = true) {
         parts.push(`<path d="${line} ${base}" fill="${s.fillColor || s.color}" opacity="0.55"></path>`);
       }
       parts.push(`<path d="${line}" fill="none" stroke="${s.color}" stroke-width="${s.fill ? 2.4 : 1.7}" ${s.dashed ? 'stroke-dasharray="5 4"' : ""} stroke-linejoin="round" stroke-linecap="round"></path>`);
-      seg.forEach((p) => parts.push(`<circle cx="${xOf(p.date).toFixed(1)}" cy="${yOf(p.value).toFixed(1)}" r="${seg.length === 1 ? 4.5 : 2.4}" fill="${s.color}">${p.title ? `<title>${esc(p.title)}</title>` : ""}</circle>`));
+      seg.forEach((p) => {
+        const x = xOf(p.date), y = yOf(p.value);
+        if (p.marker) {
+          parts.push(`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="5.5" fill="#FFE45C" stroke="#111" stroke-width="1.6">${p.title ? `<title>${esc(p.title)}</title>` : ""}</circle>`);
+          if (p.markerLabel && x - lastMarkerX > 22) {
+            parts.push(`<text x="${x.toFixed(1)}" y="${Math.max(11, y - 8).toFixed(1)}" text-anchor="middle" fill="#111" font-size="10" font-weight="700">${esc(p.markerLabel)}</text>`);
+            lastMarkerX = x;
+          }
+        } else {
+          parts.push(`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${seg.length === 1 ? 4.5 : 2.4}" fill="${s.color}">${p.title ? `<title>${esc(p.title)}</title>` : ""}</circle>`);
+        }
+      });
       seg = [];
     };
     s.points.forEach((p) => {
@@ -749,10 +863,11 @@ async function loadExtra() {
     try { return await getJson(name); }
     catch (e) { return {}; }
   };
+  const meta = activeCollection() || {};
   state.extra = {
-    cm: await read("cardmarket.json"),
-    hist: await read("tcgnotify_history.json"),
-    totals: await read("total_history.json"),
+    cm: await read(meta.cardmarket || "cardmarket.json"),
+    hist: await read(meta.tcgnotify || "tcgnotify_history.json"),
+    totals: await read(meta.totals || "total_history.json"),
   };
   return state.extra;
 }
@@ -839,7 +954,7 @@ async function renderCard(id, cardId) {
   const show30 = change30 && change30.start && change30.days >= 29;
   const updated = dayKey(card.last_updated);
   const today = updated && updated === romeToday();
-  setChrome(meta.name, card.name, "home");
+  setChrome(meta.name, cardTitle(card), "home");
   const link = safeUrl(card.cardtrader_link);
   const offersHtml = offersSection(card, link);
   const cm = (state.extra.cm && state.extra.cm[card.id]) || {};
@@ -865,8 +980,8 @@ async function renderCard(id, cardId) {
       ${art(card, purchaseOf(card.id) ? "hero bought" : "hero")}
       ${sideNum(next, "next")}
     </div>
-    <h2 class="card-name">${purchaseOf(card.id) ? "✅ " : ""}${esc(card.name)}</h2>
-    <p class="sub">${esc(card.set)} · ${esc(card.number)} · ${esc(card.rarity)} · ${lang.flag} ${lang.name}${card.release_year ? " · " + esc(card.release_year) : ""}</p>
+    <h2 class="card-name">${purchaseOf(card.id) ? "✅ " : ""}${esc(cardTitle(card))}</h2>
+    <p class="sub">${esc(cardSetName(card))} · ${esc(cardNumber(card))} · ${esc(card.rarity)} · ${lang.flag} ${lang.name}${card.release_year ? " · " + esc(card.release_year) : ""}</p>
     <section class="pricebox">
       <p class="label">PREZZO MINIMO · NM · ${lang.flag} ${lang.name.toUpperCase()} · ${esc(sourceName(q.source))}</p>
       <p class="big">${q.price == null ? "n/d" : money(q.price)}</p>
@@ -966,8 +1081,10 @@ function snapshotSeries(payloadsByDate, mode) {
 async function renderPerformance() {
   setChrome("Portafoglio", "Performance", "performance");
   await loadHistory();
-  if (!state.perfId) state.perfId = state.collections[0] ? state.collections[0].id : "";
-  const meta = state.collections.find((c) => c.id === state.perfId) || state.collections[0];
+  const currentMeta = activeCollection();
+  if (!state.perfId || !state.collections.some((c) => c.id === state.perfId)) state.perfId = currentMeta ? currentMeta.id : "";
+  if (currentMeta && state.perfId !== currentMeta.id) state.perfId = currentMeta.id;
+  const meta = state.collections.find((c) => c.id === state.perfId) || currentMeta;
   const current = await loadPayload(meta);
   const basket = basketOf(current.cards || []);
   if (!state.perfBasket) state.perfBasket = "remain";
@@ -987,7 +1104,7 @@ async function renderPerformance() {
       <h2>${esc(meta.name)}</h2>
       <p class="big">${money(headline)}</p>
       <p class="meta">Wishlist ${money(basket.wishlist)} · già acquistate ${basket.bought}/${basket.total}</p>
-      ${totalChartHtml()}
+      ${totalChartHtml(current.cards || [])}
     </section>
     <h2 class="section-title">Contributo sul totale</h2>
     ${contrib}
@@ -1027,7 +1144,7 @@ async function renderMovers() {
   setChrome("In arrivo", "Movimenti", "movers");
   await loadHistory();
   await loadCollections();
-  const meta = state.collections[0];
+  const meta = activeCollection();
   const payload = meta ? await loadPayload(meta) : { cards: [] };
   const snaps = [...state.history.entries()].sort((a, b) => a[0].localeCompare(b[0]));
   const rows = [];
@@ -1063,7 +1180,9 @@ async function renderMovers() {
     ${note}
     <div class="list" style="margin-top:12px">${list}</div>`;
 }
-view.addEventListener("click", (e) => {
+document.addEventListener("click", (e) => {
+  const collectionBtn = e.target.closest("[data-collection]");
+  if (collectionBtn) { setCollection(collectionBtn.dataset.collection); return; }
   const totalRange = e.target.closest("[data-total-range]");
   if (totalRange) { state.totalRange = totalRange.dataset.totalRange; render(); return; }
   const chartMarket = e.target.closest("[data-chart-market]");
@@ -1087,7 +1206,15 @@ view.addEventListener("click", (e) => {
   const basketBtn = e.target.closest("[data-basket]");
   if (basketBtn) { state.perfBasket = basketBtn.dataset.basket; render(); return; }
   const sort = e.target.closest("[data-sort]");
-  if (sort) { state.sort = sort.dataset.sort; state.page = 0; saveFilters(); render(); return; }
+  if (sort) {
+    const id = route().id || state.collectionId;
+    sessionStorage.setItem("wl-sort-" + id, sort.dataset.sort);
+    state.sort = sort.dataset.sort;
+    state.page = 0;
+    saveFilters();
+    render();
+    return;
+  }
   const page = e.target.closest("[data-page]");
   if (page && !page.disabled) { turn(Number(page.dataset.page)); return; }
   if (e.target.closest("[data-open-filters]")) {

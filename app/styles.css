@@ -40,6 +40,8 @@ img { max-width: 100%; display: block; }
   background-size: 18px 18px;
 }
 .top { padding: 10px 16px 0; max-width: 1040px; margin: 0 auto; }
+.collection-switch { margin: 10px 0 4px; }
+.collection-switch .chip { font-size: 12px; padding-left: 8px; padding-right: 8px; }
 .eyebrow { margin: 0 0 2px; font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 h1, h2.card-name, .section-title, .offers h2, .empty strong, .collection h2, .perf h2 {
   font-family: Nunito, Lexend, sans-serif;

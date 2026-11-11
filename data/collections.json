@@ -2,6 +2,24 @@
  {
   "id": "wishlist-modern",
   "name": "Wishlist - modern",
-  "file": "wishlist.json"
+  "file": "wishlist.json",
+  "purchases": "purchases.json",
+  "history": "history/index.json",
+  "csv": "price_history.csv",
+  "cardmarket": "cardmarket.json",
+  "tcgnotify": "tcgnotify_history.json",
+  "totals": "total_history.json"
+ },
+ {
+  "id": "gold-modern",
+  "name": "Gold - modern",
+  "file": "collections/gold/wishlist.json",
+  "purchases": "collections/gold/purchases.json",
+  "history": "collections/gold/history/index.json",
+  "csv": "collections/gold/price_history.csv",
+  "cardmarket": "collections/gold/cardmarket.json",
+  "tcgnotify": "collections/gold/tcgnotify_history.json",
+  "totals": "collections/gold/total_history.json",
+  "order": "release"
  }
 ]

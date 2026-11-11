@@ -29,7 +29,9 @@ L'Action delle 07:00 (Roma) gira su un runner USA: CardTrader da lì nasconde mo
 
 `data/tcgnotify_history.json` è un dizionario id carta → `{ "cardtrader": [{"date","min","avg","copies"}], "cardmarket": [...] }`. CardTrader è solo Near Mint. Cardmarket è la serie per lingua, tutte le condizioni. L'app usa i punti prima del 10 nov 2026 e li segna «storico TCGNotify». Lo script non sovrascrive questi file, come non sovrascrive `purchases.json`.
 
-`data/total_history.json` lo rigenera lo script. Fino al 9 nov 2026 il totale di ogni giorno è il minimo CardTrader NM di TCGNotify, altrimenti il minimo Cardmarket se non supera 3 volte la mediana CardTrader di quella carta, altrimenti l'ultimo prezzo entro 7 giorni. Dal 10 nov 2026 si usa `price_final` degli snapshot. Il tab MAX parte dal primo giorno con almeno 60 carte.
+`data/total_history.json` lo rigenera lo script. Fino al 9 nov 2026 il totale di ogni giorno è il minimo CardTrader NM di TCGNotify, altrimenti il minimo Cardmarket se non supera 3 volte la mediana CardTrader di quella carta, altrimenti l'ultimo prezzo entro 7 giorni. Dal 10 nov 2026 si usa `price_final` degli snapshot. Il tab MAX parte dal primo giorno con almeno 60 carte (o dal primo giorno, se la collezione ne ha meno di 60).
+
+La collezione Gold sta in `data/collections/gold/`. Il file EU da aggiornare ogni giorno prima delle 07:00 è `data/collections/gold/cardtrader_eu_raw.json`, stesso formato della wishlist. `cardmarket.json` e `tcgnotify_history.json` alimentano la pagina carta. `total_history.json` è una ricostruzione a gradini: una carta entra il primo giorno in cui ha un prezzo, e un giorno c'è solo se tutte le carte già uscite hanno un prezzo. Il grafico usa il tratteggio per i giorni ricostruiti e un pallino giallo nei giorni in cui sale il numero di carte. L'aggiornamento quotidiano lascia intatti quei gradini e ricalcola solo lo snapshot. L'Action delle 07:00 aggiorna la wishlist e poi Gold con `--collection gold --eu-only`.
 
 **Totale Zero (`zero_total_eur`):** somma dei soli minimi Zero. Una carta senza copia Zero non entra in questo totale, ma resta in `total_eur` se ha un minimo CardTrader.
 

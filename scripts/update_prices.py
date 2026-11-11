@@ -16,7 +16,8 @@ import csv, json, os, subprocess, sys, time, urllib.parse, urllib.request
 from datetime import datetime, timezone, timedelta
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA = os.path.join(ROOT, "data")
+ROOT_DATA = os.path.join(ROOT, "data")
+DATA = ROOT_DATA
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
 BASE = "https://www.cardtrader.com/en-EU/cards/{bid}.json"
 TZ = timezone(timedelta(hours=1))  # Europe/Rome (inverno); solo per la data del file
@@ -276,7 +277,22 @@ def tier(price):
     return "A: <50€" if price < 50 else ("B: 50-150€" if price <= 150 else "C: >150€")
 
 
+def configure_collection():
+    """--collection gold legge e scrive solo data/collections/gold/. Senza flag resta data/."""
+    global DATA
+    name = None
+    if "--collection" in sys.argv:
+        name = sys.argv[sys.argv.index("--collection") + 1]
+    if name and name not in ("wishlist", "wishlist-modern"):
+        DATA = os.path.join(ROOT_DATA, "collections", name)
+        os.makedirs(os.path.join(DATA, "history"), exist_ok=True)
+    else:
+        DATA = ROOT_DATA
+    return name
+
+
 def main():
+    configure_collection()
     commit = "--commit" in sys.argv
     cards = json.load(open(os.path.join(DATA, "cards.json")))
     set_years = load_set_years()
@@ -552,6 +568,23 @@ def summarize(cards):
 def refresh_today_history(cards, today):
     hist_path = os.path.join(DATA, "price_history.csv")
     if not os.path.exists(hist_path):
+        rows = []
+        for card in cards:
+            rows.append({
+                "date": today, "card_id": card["id"], "blueprint_id": card.get("cardtrader_blueprint_id"),
+                "name": card.get("name"), "set_code": card.get("set_code"), "number": card.get("number"),
+                "price_eur": "" if card.get("price_final_eur") is None else card["price_final_eur"],
+                "language": card.get("target_language") or "it", "condition": "Near Mint",
+                "listings_count": card.get("listings_nm") or "",
+                "source": "cardtrader_listings_min", "kind": "daily_snapshot",
+                "price_ctz_eur": "" if card.get("price_ctz_eur") is None else card["price_ctz_eur"],
+                "price_ct_eur": "" if card.get("price_ct_eur") is None else card["price_ct_eur"],
+                "price_avg_eur": "" if card.get("price_avg_eur") is None else card["price_avg_eur"],
+            })
+        with open(hist_path, "w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=HIST_FIELDS, extrasaction="ignore")
+            w.writeheader()
+            w.writerows(rows)
         return
     rows = list(csv.DictReader(open(hist_path, encoding="utf-8")))
     if not rows:
@@ -577,12 +610,16 @@ def refresh_today_history(cards, today):
 
 def reprice_from_files():
     """Ricalcola i prezzi di oggi dai file EU/Cardmarket, senza un nuovo fetch USA."""
+    configure_collection()
     today = datetime.now(TZ).strftime("%Y-%m-%d")
     stamp = datetime.now(TZ).isoformat(timespec="seconds")
     eu_map = eu_listings(today)
     cardmarket = cardmarket_table()
     path = os.path.join(DATA, "wishlist.json")
-    payload = json.load(open(path, encoding="utf-8"))
+    if os.path.exists(path):
+        payload = json.load(open(path, encoding="utf-8"))
+    else:
+        payload = {"currency": "EUR", "cards": json.load(open(os.path.join(DATA, "cards.json"), encoding="utf-8"))}
     moved = []
     for rec in payload["cards"]:
         before = rec.get("price_final_source")
@@ -609,15 +646,35 @@ def reprice_from_files():
     for row in moved:
         print("MOVE", row)
     print("TOTAL", info)
+    if "--commit" in sys.argv:
+        subprocess.run(["git", "-C", ROOT, "add", "data"], check=True)
+        r = subprocess.run(["git", "-C", ROOT, "commit", "-m", f"Aggiornamento prezzi {today}"])
+        if r.returncode == 0:
+            subprocess.run(["git", "-C", ROOT, "push"], check=False)
     return payload
 
 
 REAL_FROM = "2026-11-10"
+# Data da cui una carta entra nel totale ricostruito. Le 7 Gold già in wishlist
+# (p7-7, p7-8, p7-9, p8-1, p8-2, p8-3, p8-4) non sono qui: il loro storico è già
+# dentro i giorni prima del 2026-11-11. Toglierle li riscriverebbe (il 2025-10-07
+# passerebbe da 9285.94 a 8785.94). Il merge aggiunge solo il punto del 2026-11-11,
+# che questa ricostruzione non legge perché dal 2026-11-10 il totale è lo snapshot.
+WISHLIST_JOINED = {}
 
 
 def write_total_history():
     """Ricostruisce il totale giornaliero e lo salva in data/total_history.json."""
     import statistics
+    existing_path = os.path.join(DATA, "total_history.json")
+    existing = {}
+    if os.path.exists(existing_path):
+        try:
+            existing = json.load(open(existing_path, encoding="utf-8"))
+        except Exception:
+            existing = {}
+    if isinstance(existing, dict) and existing.get("steps"):
+        return write_step_total(existing)
     wishlist = json.load(open(os.path.join(DATA, "wishlist.json"), encoding="utf-8"))
     cards = wishlist["cards"]
     notify = load_named_json("tcgnotify_history.json") or {}
@@ -655,8 +712,6 @@ def write_total_history():
             first = min(days) if first is None else min(first, min(days))
             last = max(days) if last is None else max(last, max(days))
         per[card["id"]] = {"ct": ct, "cm": cm, "last": None, "last_day": None}
-    if not first:
-        return {"discarded_cm_points": discarded, "max_from": None}
     snapshots = {}
     hist_dir = os.path.join(DATA, "history")
     if os.path.isdir(hist_dir):
@@ -668,6 +723,9 @@ def write_total_history():
                     continue
                 snapshots[name[:10]] = {c["id"]: c for c in snap.get("cards") or []}
                 last = max(last, name[:10]) if last else name[:10]
+                first = min(first, name[:10]) if first else name[:10]
+    if not first:
+        return {"discarded_cm_points": discarded, "max_from": None}
     cursor = datetime.strptime(first, "%Y-%m-%d").date()
     end = datetime.strptime(last, "%Y-%m-%d").date()
     days = []
@@ -693,6 +751,9 @@ def write_total_history():
             total = 0.0
             priced = ct_n = cm_n = carry_n = 0
             for card in cards:
+                joined = WISHLIST_JOINED.get(card["id"])
+                if joined and day < joined:
+                    continue
                 slot = per[card["id"]]
                 value = slot["ct"].get(day)
                 kind = "ct"
@@ -722,11 +783,13 @@ def write_total_history():
                 "cards_ct": ct_n, "cards_cm": cm_n, "cards_carry": carry_n, "source": "reconstructed",
             })
         cursor += timedelta(days=1)
-    max_from = next((d["date"] for d in days if d["cards_priced"] >= 60), None)
+    threshold = 60 if len(cards) >= 60 else 1
+    max_from = next((d["date"] for d in days if d["cards_priced"] >= threshold), None)
     payload = {
         "reconstruction": True,
         "real_from": REAL_FROM,
         "max_from": max_from,
+        "cards_total": len(cards),
         "discarded_cm_points": discarded,
         "note": "Fino al giorno prima degli snapshot reali il totale è ricostruito: minimo CardTrader NM di TCGNotify, altrimenti Cardmarket se non supera 3 volte la mediana CardTrader della carta, altrimenti l'ultimo prezzo entro 7 giorni. Dal 2026-11-10 si usa price_final degli snapshot.",
         "days": days,
@@ -735,6 +798,54 @@ def write_total_history():
     print(f"total_history {len(days)} giorni, max_from {max_from}, CM scartati {discarded}")
     return {"days": len(days), "max_from": max_from, "discarded_cm_points": discarded,
             "first60": next((d for d in days if d["date"] == max_from), None)}
+
+
+def write_step_total(existing):
+    """Gold: tiene i gradini ricostruiti e aggiorna solo i giorni snapshot."""
+    wishlist = json.load(open(os.path.join(DATA, "wishlist.json"), encoding="utf-8"))
+    cards = wishlist["cards"]
+    real_from = existing.get("real_from") or REAL_FROM
+    days = [d for d in existing.get("days") or [] if d.get("date", "") < real_from or d.get("source") != "snapshot"]
+    hist_dir = os.path.join(DATA, "history")
+    snapshots = {}
+    if os.path.isdir(hist_dir):
+        for name in os.listdir(hist_dir):
+            if len(name) == 15 and name.endswith(".json") and name[:10] >= real_from:
+                try:
+                    snap = json.load(open(os.path.join(hist_dir, name), encoding="utf-8"))
+                except Exception:
+                    continue
+                snapshots[name[:10]] = {c["id"]: c for c in snap.get("cards") or []}
+    order = [c["id"] for c in sorted(cards, key=lambda c: (c.get("order") or 0, c.get("id") or ""))]
+    for day in sorted(snapshots):
+        snap = snapshots[day]
+        total = 0.0
+        included = []
+        for cid in order:
+            rec = snap.get(cid) or {}
+            value = rec.get("price_final_eur")
+            if not isinstance(value, (int, float)):
+                value = rec.get("buy_price_eur")
+            if isinstance(value, (int, float)):
+                total += value
+                included.append(cid)
+        days.append({
+            "date": day,
+            "total_eur": round(total, 2),
+            "cards_priced": len(included),
+            "cards_count": len(cards),
+            "cards_ct": len(included),
+            "cards_cm": 0,
+            "cards_carry": 0,
+            "source": "snapshot",
+            "cards_included": included,
+        })
+    days.sort(key=lambda d: d["date"])
+    existing["days"] = days
+    existing["cards_total"] = len(cards)
+    json.dump(existing, open(os.path.join(DATA, "total_history.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print(f"total_history gold {len(days)} giorni, snapshot da {real_from}, ultimo {days[-1]['date'] if days else '-'}")
+    return {"days": len(days), "max_from": existing.get("max_from"), "real_from": real_from}
 
 
 if __name__ == "__main__":

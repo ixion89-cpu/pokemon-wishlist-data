@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Wishlist">
+  <rect width="512" height="512" fill="#5FF0C0"/>
+  <g id="mark">
+    <rect x="156" y="128" width="252" height="308" rx="40" fill="#111"/>
+    <rect x="128" y="100" width="252" height="308" rx="40" fill="#FFFDF8" stroke="#111" stroke-width="16"/>
+    <rect x="156" y="132" width="196" height="128" rx="22" fill="#C9B6FF" stroke="#111" stroke-width="12"/>
+    <rect x="160" y="286" width="188" height="84" rx="42" fill="#FFE45C" stroke="#111" stroke-width="12"/>
+    <g fill="none" stroke="#111" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M286 304c-28 0-48 14-48 30s20 30 48 30"/>
+      <path d="M214 326h64"/>
+      <path d="M214 340h56"/>
+    </g>
+    <circle cx="360" cy="118" r="42" fill="#FF8FC7" stroke="#111" stroke-width="12"/>
+    <path d="M338 118l14 16 30-34" fill="none" stroke="#111" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

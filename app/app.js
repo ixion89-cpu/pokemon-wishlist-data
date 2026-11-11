@@ -11,6 +11,7 @@ const state = {
   sort: sessionStorage.getItem("wl-sort") || "desc",
   cardRange: "30G",
   chartMarket: "cardtrader",
+  totalRange: "MAX",
   perfRange: "MAX",
   perfId: sessionStorage.getItem("wl-perf") || "",
   sheet: false,
@@ -353,6 +354,7 @@ async function render() {
   try {
     await loadCollections();
     await loadPurchaseFile();
+    await loadExtra();
     if (r.name === "home") await renderHome();
     else if (r.name === "binder") await renderBinder(r.id);
     else if (r.name === "card") await renderCard(r.id, r.card);
@@ -396,6 +398,49 @@ function topPreview(collectionId, cards) {
     <div class="grid">${top.map((card) => sleeveHtml(card, collectionId)).join("")}</div>
   </section>`;
 }
+const TOTAL_RANGES = [
+  { id: "7G", label: "7G" },
+  { id: "30G", label: "30G" },
+  { id: "90G", label: "90G" },
+  { id: "1A", label: "1A" },
+  { id: "MAX", label: "MAX" },
+];
+function totalSeries(range) {
+  const book = (state.extra && state.extra.totals) || {};
+  let pts = (book.days || []).map((d) => ({
+    date: d.date,
+    value: d.total_eur,
+    reconstructed: d.source !== "snapshot",
+    title: `${formatDay(d.date)} · ${money(d.total_eur)} · carte conteggiate ${d.cards_priced}/67`,
+  }));
+  if (!pts.length) return { pts: [], recon: [], real: [], delta: null, maxFrom: book.max_from };
+  if (range === "MAX" && book.max_from) pts = pts.filter((p) => p.date >= book.max_from);
+  else if (range !== "MAX") pts = filterPoints(pts, range, pts[pts.length - 1].date);
+  const real = pts.filter((p) => !p.reconstructed);
+  const recon = pts.filter((p) => p.reconstructed);
+  if (recon.length && real.length) recon.push(real[0]);
+  const delta = changeOver(pts, pts.length ? dateNum(pts[pts.length - 1].date) - dateNum(pts[0].date) + 1 : 0);
+  return { pts, recon, real, delta, maxFrom: book.max_from };
+}
+function totalChartHtml() {
+  if (!TOTAL_RANGES.some((r) => r.id === state.totalRange)) state.totalRange = "MAX";
+  const view = totalSeries(state.totalRange);
+  let change = `<p class="quiet">Storico del totale non disponibile.</p>`;
+  if (view.delta && view.delta.start) {
+    const cls = view.delta.diff < 0 ? "down" : view.delta.diff > 0 ? "up" : "";
+    const arrow = view.delta.diff < 0 ? "▼" : view.delta.diff > 0 ? "▲" : "●";
+    change = `<p class="delta ${cls}">${arrow} ${signedMoney(view.delta.diff)} dal ${formatDay(view.delta.start.date)}</p>`;
+  }
+  const series = [];
+  if (view.recon.length) series.push({ id: "recon", label: "Ricostruito", color: "#111", fill: false, dashed: true, points: view.recon });
+  if (view.real.length) series.push({ id: "real", label: "Snapshot", color: "#111", fillColor: "#5ff0c0", fill: true, points: view.real });
+  const latest = view.pts[view.pts.length - 1];
+  return `<div class="ranges">${TOTAL_RANGES.map((r) => `<button class="chip ${r.id === state.totalRange ? "on" : ""}" type="button" data-total-range="${r.id}">${r.label}</button>`).join("")}</div>
+    ${change}
+    <div class="chart-card">${series.length ? chartSvg(series, false) : ""}</div>
+    ${latest ? `<p class="quiet">${esc(latest.title)}</p>` : ""}
+    ${view.recon.length ? `<p class="quiet">Tratteggio: ricostruito da storico TCGNotify. Linea piena: snapshot dal 10 nov 2026.</p>` : ""}`;
+}
 async function renderHome() {
   setChrome("Inventario", "Collezioni", "home");
   const blocks = [];
@@ -404,6 +449,11 @@ async function renderHome() {
     blocks.push(`<article class="collection">
       <h2>${esc(meta.name)}</h2>
       ${basketHtml(payload.cards || [], payload.generated_at)}
+      <section class="perf">
+        <p class="label">Resta da spendere</p>
+        <h2>${esc(meta.name)}</h2>
+        ${totalChartHtml()}
+      </section>
       ${topPreview(meta.id, payload.cards || [])}
       <a class="btn" href="#/c/${encodeURIComponent(meta.id)}">Apri il raccoglitore</a>
     </article>`);
@@ -631,7 +681,7 @@ function filterPoints(points, preset, end) {
   const start = addDays(end, -(days - 1));
   return points.filter((p) => p.date >= start && p.date <= end);
 }
-function chartSvg(series, dark) {
+function chartSvg(series, dark, asMoney = true) {
   const pts = series.flatMap((s) => s.points);
   if (!pts.length) return `<p class="quiet">Nessun punto in questo periodo.</p>`;
   const w = 360, h = 176, pad = { l: 12, r: 12, t: 18, b: 22 };
@@ -654,7 +704,7 @@ function chartSvg(series, dark) {
         parts.push(`<path d="${line} ${base}" fill="${s.fillColor || s.color}" opacity="0.55"></path>`);
       }
       parts.push(`<path d="${line}" fill="none" stroke="${s.color}" stroke-width="${s.fill ? 2.4 : 1.7}" ${s.dashed ? 'stroke-dasharray="5 4"' : ""} stroke-linejoin="round" stroke-linecap="round"></path>`);
-      seg.forEach((p) => parts.push(`<circle cx="${xOf(p.date).toFixed(1)}" cy="${yOf(p.value).toFixed(1)}" r="${seg.length === 1 ? 4.5 : 2.4}" fill="${s.color}"></circle>`));
+      seg.forEach((p) => parts.push(`<circle cx="${xOf(p.date).toFixed(1)}" cy="${yOf(p.value).toFixed(1)}" r="${seg.length === 1 ? 4.5 : 2.4}" fill="${s.color}">${p.title ? `<title>${esc(p.title)}</title>` : ""}</circle>`));
       seg = [];
     };
     s.points.forEach((p) => {
@@ -669,8 +719,9 @@ function chartSvg(series, dark) {
   if (max !== min) {
     parts.push(`<line x1="${pad.l}" x2="${w - pad.r}" y1="${yOf(max).toFixed(1)}" y2="${yOf(max).toFixed(1)}" stroke="${guide}" stroke-opacity="0.25" stroke-dasharray="3 4"></line>`);
     parts.push(`<line x1="${pad.l}" x2="${w - pad.r}" y1="${yOf(min).toFixed(1)}" y2="${yOf(min).toFixed(1)}" stroke="${guide}" stroke-opacity="0.25" stroke-dasharray="3 4"></line>`);
-    parts.push(`<text x="${w - pad.r}" y="${(yOf(max) - 3).toFixed(1)}" text-anchor="end" fill="${label}" font-size="10">max ${esc(money(max))}</text>`);
-    parts.push(`<text x="${w - pad.r}" y="${(yOf(min) - 3).toFixed(1)}" text-anchor="end" fill="${label}" font-size="10">min ${esc(money(min))}</text>`);
+    const axis = (v) => asMoney ? money(v) : new Intl.NumberFormat("it-IT", { maximumFractionDigits: 0 }).format(v);
+    parts.push(`<text x="${w - pad.r}" y="${(yOf(max) - 3).toFixed(1)}" text-anchor="end" fill="${label}" font-size="10">max ${esc(axis(max))}</text>`);
+    parts.push(`<text x="${w - pad.r}" y="${(yOf(min) - 3).toFixed(1)}" text-anchor="end" fill="${label}" font-size="10">min ${esc(axis(min))}</text>`);
   }
   parts.push(`<text x="${pad.l}" y="${h - 6}" fill="${label}" font-size="10">${esc(formatDay(dates[0]))}</text>`);
   if (dates[0] !== dates[dates.length - 1]) {
@@ -698,7 +749,11 @@ async function loadExtra() {
     try { return await getJson(name); }
     catch (e) { return {}; }
   };
-  state.extra = { cm: await read("cardmarket.json"), hist: await read("tcgnotify_history.json") };
+  state.extra = {
+    cm: await read("cardmarket.json"),
+    hist: await read("tcgnotify_history.json"),
+    totals: await read("total_history.json"),
+  };
   return state.extra;
 }
 function finalFromRow(row) {
@@ -722,11 +777,11 @@ function marketSeries(card) {
   });
   const extra = (state.extra && state.extra.hist && state.extra.hist[card.id]) || {};
   (extra.cardtrader || []).forEach((p) => {
-    if (!p || !p.date) return;
+    if (!p || !p.date || p.date >= "2026-11-10") return;
     notify = true;
-    if (num(p.min) != null && !min.some((x) => x.date === p.date)) min.push({ date: p.date, value: num(p.min) });
-    if (num(p.avg) != null && !avg.some((x) => x.date === p.date)) avg.push({ date: p.date, value: num(p.avg) });
-    if (num(p.copies) != null && !copies.some((x) => x.date === p.date)) copies.push({ date: p.date, value: num(p.copies) });
+    if (num(p.min) != null && !min.some((x) => x.date === p.date)) min.push({ date: p.date, value: num(p.min), notify: true });
+    if (num(p.avg) != null && !avg.some((x) => x.date === p.date)) avg.push({ date: p.date, value: num(p.avg), notify: true });
+    if (num(p.copies) != null && !copies.some((x) => x.date === p.date)) copies.push({ date: p.date, value: num(p.copies), notify: true });
   });
   const sort = (list) => list.sort((a, b) => a.date.localeCompare(b.date));
   return { min: sort(min), avg: sort(avg), copies: sort(copies), notify };
@@ -830,7 +885,7 @@ async function renderCard(id, cardId) {
       </button>
       <button class="market-row ${state.chartMarket === "cardmarket" ? "on" : ""}" type="button" data-chart-market="cardmarket">
         <span class="who">Cardmarket</span>
-        <span class="meta">${cmCopies == null ? "copie n/d" : cmCopies + " copie"}${cmWhen ? " · " + esc(cmWhen) : ""}</span>
+        <span class="meta">tutte le condizioni · ${cmCopies == null ? "copie n/d" : cmCopies + " copie"}${cmWhen ? " · " + esc(cmWhen) : ""}</span>
         <b class="nums">${cmPrice == null ? "n/d" : money(cmPrice)}</b>
       </button>
     </div>
@@ -847,13 +902,14 @@ async function renderCard(id, cardId) {
         { id: "avg", label: "Medio", color: "#111", fill: false, dashed: true, points: avgShown },
       ], false) : `<p class="quiet">${state.chartMarket === "cardmarket" ? "Cardmarket: n/d." : "Storico del minimo in arrivo."}</p>`}
       <p class="quiet">Copie in vendita</p>
-      ${copiesShown.length ? chartSvg([{ id: "qty", label: "Copie", color: "#111", fillColor: "#c9b6ff", fill: true, points: copiesShown }], false) : ""}
+      ${copiesShown.length ? chartSvg([{ id: "qty", label: "Copie", color: "#111", fillColor: "#c9b6ff", fill: true, points: copiesShown }], false, false) : ""}
       <div class="hist-foot">
         <p><span>MIN</span><b class="nums">${periodMin == null ? "n/d" : money(periodMin)}</b></p>
         <p><span>MAX</span><b class="nums">${periodMax == null ? "n/d" : money(periodMax)}</b></p>
         <p><span>VAR</span><b class="nums ${periodChange && periodChange.diff < 0 ? "down" : "up"}">${periodChange && periodChange.start ? arrow + " " + signedMoney(periodChange.diff) : "n/d"}</b></p>
       </div>
-      ${pack.notify ? `<p class="quiet">storico TCGNotify</p>` : ""}
+      ${pack.min.some((p) => p.notify) || pack.avg.some((p) => p.notify) ? `<p class="quiet">storico TCGNotify per i punti prima del 10 nov 2026</p>` : ""}
+      ${state.chartMarket === "cardmarket" ? `<p class="quiet">Cardmarket: tutte le condizioni</p>` : ""}
     </section>
     ${purchaseBox(card, q)}
     ${offersHtml}
@@ -916,24 +972,6 @@ async function renderPerformance() {
   const basket = basketOf(current.cards || []);
   if (!state.perfBasket) state.perfBasket = "remain";
   const points = snapshotSeries(state.history, state.perfBasket).filter((p) => p.payload && p.payload.cards);
-  const options = [
-    { id: "7G", label: "7G", min: 6 },
-    { id: "1M", label: "1M", min: 29 },
-    { id: "3M", label: "3M", min: 89 },
-    { id: "6M", label: "6M", min: 179 },
-    { id: "MAX", label: "MAX", min: 0 },
-  ];
-  const available = presetsFor(points, options);
-  if (!available.some((p) => p.id === state.perfRange)) state.perfRange = "MAX";
-  const end = points.length ? points[points.length - 1].date : null;
-  const shown = filterPoints(points, state.perfRange, end);
-  const delta = changeOver(shown, shown.length ? dateNum(shown[shown.length - 1].date) - dateNum(shown[0].date) + 1 : 0);
-  let changeHtml = `<p class="quiet">Dati in arrivo. Serve almeno un altro snapshot giornaliero per calcolare la variazione.</p>`;
-  if (delta && delta.start) {
-    const cls = delta.diff < 0 ? "down" : delta.diff > 0 ? "up" : "";
-    const arrow = delta.diff < 0 ? "▼" : delta.diff > 0 ? "▲" : "●";
-    changeHtml = `<p class="delta ${cls}">${arrow} ${signedMoney(delta.diff)} dal ${formatDay(delta.start.date)} al ${formatDay(delta.end.date)}</p>`;
-  }
   const contrib = contributionBlock(points, state.perfBasket);
   const headline = state.perfBasket === "remain" ? basket.remain : basket.wishlist;
   const headlineLabel = state.perfBasket === "remain" ? "Resta da spendere" : "Totale wishlist";
@@ -949,9 +987,7 @@ async function renderPerformance() {
       <h2>${esc(meta.name)}</h2>
       <p class="big">${money(headline)}</p>
       <p class="meta">Wishlist ${money(basket.wishlist)} · già acquistate ${basket.bought}/${basket.total}</p>
-      ${changeHtml}
-      <div class="chart-card">${points.length ? chartSvg([{ id: "tot", label: headlineLabel, color: "#111", fillColor: "#5ff0c0", fill: true, points: shown }], false) : ""}</div>
-      <div class="ranges">${available.map((p) => `<button class="chip ${p.id === state.perfRange ? "on" : ""}" type="button" data-perf-range="${p.id}">${p.label}</button>`).join("")}</div>
+      ${totalChartHtml()}
     </section>
     <h2 class="section-title">Contributo sul totale</h2>
     ${contrib}
@@ -1028,6 +1064,8 @@ async function renderMovers() {
     <div class="list" style="margin-top:12px">${list}</div>`;
 }
 view.addEventListener("click", (e) => {
+  const totalRange = e.target.closest("[data-total-range]");
+  if (totalRange) { state.totalRange = totalRange.dataset.totalRange; render(); return; }
   const chartMarket = e.target.closest("[data-chart-market]");
   if (chartMarket) { state.chartMarket = chartMarket.dataset.chartMarket; render(); return; }
   const buy = e.target.closest("[data-buy]");

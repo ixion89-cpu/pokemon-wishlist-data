@@ -27,7 +27,9 @@ L'Action delle 07:00 (Roma) gira su un runner USA: CardTrader da lì nasconde mo
 
 `data/cardmarket.json` è un dizionario id carta → `{ "min_eur", "avg_eur", "copies", "date" }`. Vuoto finché non lo riempi. Lo script copia `min_eur` in `price_cm_eur`.
 
-`data/tcgnotify_history.json` è un dizionario id carta → `{ "cardtrader": [{"date","min","avg","copies"}], "cardmarket": [...] }`. Vuoto per ora. L'app lo disegna nello storico e, se c'è almeno un punto, scrive «storico TCGNotify». Lo script non lo sovrascrive, come non sovrascrive `purchases.json` né i due file sopra.
+`data/tcgnotify_history.json` è un dizionario id carta → `{ "cardtrader": [{"date","min","avg","copies"}], "cardmarket": [...] }`. CardTrader è solo Near Mint. Cardmarket è la serie per lingua, tutte le condizioni. L'app usa i punti prima del 10 nov 2026 e li segna «storico TCGNotify». Lo script non sovrascrive questi file, come non sovrascrive `purchases.json`.
+
+`data/total_history.json` lo rigenera lo script. Fino al 9 nov 2026 il totale di ogni giorno è il minimo CardTrader NM di TCGNotify, altrimenti il minimo Cardmarket se non supera 3 volte la mediana CardTrader di quella carta, altrimenti l'ultimo prezzo entro 7 giorni. Dal 10 nov 2026 si usa `price_final` degli snapshot. Il tab MAX parte dal primo giorno con almeno 60 carte.
 
 **Totale Zero (`zero_total_eur`):** somma dei soli minimi Zero. Una carta senza copia Zero non entra in questo totale, ma resta in `total_eur` se ha un minimo CardTrader.
 

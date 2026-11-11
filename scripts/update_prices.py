@@ -478,9 +478,11 @@ def main():
         w = csv.DictWriter(f, fieldnames=HIST_FIELDS)
         w.writeheader()
         w.writerows(rows)
+    write_total_history()
     s = payload["summary"]
     print(f"OK {len(out)} carte, totale {s['total_eur']} EUR, "
-          f"zero {s['zero_priced']}/{len(out)} carte per {s['zero_total_eur']} EUR, +{len(new_rows)} righe storico")
+          f"ctz {s.get('final_ctz')} ct {s.get('final_ct')} cm {s.get('final_cm')}, "
+          f"+{len(new_rows)} righe storico")
     if commit:
         subprocess.run(["git", "-C", ROOT, "add", "data"], check=True)
         r = subprocess.run(["git", "-C", ROOT, "commit", "-m", f"Aggiornamento prezzi {today}"])
@@ -488,5 +490,255 @@ def main():
             subprocess.run(["git", "-C", ROOT, "push"], check=False)
 
 
+def apply_card_prices(rec, eu_map, cardmarket):
+    bid = str(rec.get("cardtrader_blueprint_id"))
+    rows = eu_map.get(bid)
+    if isinstance(rows, list) and rows:
+        zstats, cstats, astats = eu_groups(rows)
+        rec["price_ctz_eur"] = zstats["min"]
+        rec["listings_ctz"] = zstats["n"]
+        rec["qty_ctz"] = zstats["qty"]
+        rec["price_ct_eur"] = cstats["min"]
+        rec["listings_ct"] = cstats["n"]
+        rec["qty_ct"] = cstats["qty"]
+        rec["price_avg_eur"] = astats["avg"]
+        rec["listings_nm"] = astats["n"]
+        rec["qty_nm"] = astats["qty"]
+        rec["price_min_target_lang_nm_zero_eur"] = zstats["min"]
+        rec["listings_target_lang_nm_zero"] = zstats["n"]
+        if rec.get("target_language") == "it":
+            rec["price_min_ita_nm_zero_eur"] = zstats["min"]
+        both = [p for p in (zstats["min"], cstats["min"]) if p is not None]
+        if both:
+            rec["price_min_target_lang_nm_eur"] = min(both)
+            if rec.get("target_language") == "it":
+                rec["price_min_ita_nm_eur"] = min(both)
+    cm = cardmarket.get(rec["id"]) if isinstance(cardmarket.get(rec["id"]), dict) else {}
+    rec["price_cm_eur"] = cm.get("min_eur") if isinstance(cm.get("min_eur"), (int, float)) else None
+    rec["price_cm_avg_eur"] = cm.get("avg_eur") if isinstance(cm.get("avg_eur"), (int, float)) else None
+    rec["copies_cm"] = cm.get("copies") if isinstance(cm.get("copies"), (int, float)) else None
+    rec["price_cm_date"] = cm.get("date")
+    price, source = choose_final(rec.get("price_ctz_eur"), rec.get("price_ct_eur"), rec.get("price_cm_eur"))
+    rec["price_final_eur"] = price
+    rec["price_final_source"] = source
+    rec["buy_price_eur"] = price
+    rec["buy_price_source"] = source
+    rec["tier"] = tier(price)
+    return price, source
+
+
+def summarize(cards):
+    def mode_sum(key):
+        vals = [r[key] for r in cards if isinstance(r.get(key), (int, float))]
+        return len(vals), round(sum(vals), 2)
+    ctz_n, ctz_sum = mode_sum("price_ctz_eur")
+    ct_n, ct_sum = mode_sum("price_ct_eur")
+    avg_n, avg_sum = mode_sum("price_avg_eur")
+    priced = [r["buy_price_eur"] for r in cards if isinstance(r.get("buy_price_eur"), (int, float))]
+    zpriced = [r["price_min_target_lang_nm_zero_eur"] for r in cards if isinstance(r.get("price_min_target_lang_nm_zero_eur"), (int, float))]
+    return {
+        "cards": len(cards), "priced": len(priced), "total_eur": round(sum(priced), 2),
+        "zero_priced": len(zpriced), "zero_total_eur": round(sum(zpriced), 2) if zpriced else 0,
+        "ctz_priced": ctz_n, "total_ctz_eur": ctz_sum,
+        "ct_priced": ct_n, "total_ct_eur": ct_sum,
+        "avg_priced": avg_n, "total_avg_eur": avg_sum,
+        "final_ctz": sum(1 for r in cards if r.get("price_final_source") == "ctz"),
+        "final_ct": sum(1 for r in cards if r.get("price_final_source") == "ct"),
+        "final_cm": sum(1 for r in cards if r.get("price_final_source") == "cm"),
+        "tiers": {t: sum(1 for r in cards if r["tier"] == t) for t in ("A: <50€", "B: 50-150€", "C: >150€", "n/d")},
+    }
+
+
+def refresh_today_history(cards, today):
+    hist_path = os.path.join(DATA, "price_history.csv")
+    if not os.path.exists(hist_path):
+        return
+    rows = list(csv.DictReader(open(hist_path, encoding="utf-8")))
+    if not rows:
+        return
+    fields = list(rows[0].keys())
+    by = {c["id"]: c for c in cards}
+    for row in rows:
+        if row.get("date") != today or row.get("kind") != "daily_snapshot":
+            continue
+        card = by.get(row.get("card_id"))
+        if not card:
+            continue
+        row["price_ctz_eur"] = "" if card.get("price_ctz_eur") is None else card["price_ctz_eur"]
+        row["price_ct_eur"] = "" if card.get("price_ct_eur") is None else card["price_ct_eur"]
+        row["price_avg_eur"] = "" if card.get("price_avg_eur") is None else card["price_avg_eur"]
+        if row.get("language") == card.get("target_language") and card.get("price_final_eur") is not None:
+            row["price_eur"] = card["price_final_eur"]
+    with open(hist_path, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
+        w.writeheader()
+        w.writerows(rows)
+
+
+def reprice_from_files():
+    """Ricalcola i prezzi di oggi dai file EU/Cardmarket, senza un nuovo fetch USA."""
+    today = datetime.now(TZ).strftime("%Y-%m-%d")
+    stamp = datetime.now(TZ).isoformat(timespec="seconds")
+    eu_map = eu_listings(today)
+    cardmarket = cardmarket_table()
+    path = os.path.join(DATA, "wishlist.json")
+    payload = json.load(open(path, encoding="utf-8"))
+    moved = []
+    for rec in payload["cards"]:
+        before = rec.get("price_final_source")
+        apply_card_prices(rec, eu_map, cardmarket)
+        rec["last_updated"] = stamp
+        if rec.get("price_final_source") != before:
+            moved.append((rec["id"], rec["name"], rec.get("price_ctz_eur"), rec.get("price_ct_eur"), rec["price_final_eur"], rec["price_final_source"]))
+    cards = payload["cards"]
+    cards.sort(key=lambda r: (r["buy_price_eur"] is None, -(r["buy_price_eur"] or 0)))
+    for i, r in enumerate(cards, 1):
+        r["rank_by_price"] = i
+    payload["generated_at"] = stamp
+    payload["price_definition"] = PRICE_DEFINITION
+    payload["summary"] = summarize(cards)
+    payload["cards"] = cards
+    json.dump(payload, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    os.makedirs(os.path.join(DATA, "history"), exist_ok=True)
+    json.dump(payload, open(os.path.join(DATA, "history", f"{today}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    write_history_index()
+    refresh_today_history(cards, today)
+    info = write_total_history()
+    s = payload["summary"]
+    print(f"EU {len(eu_map)} blueprint, totale {s['total_eur']} EUR, ctz {s['final_ctz']} ct {s['final_ct']} cm {s['final_cm']}")
+    for row in moved:
+        print("MOVE", row)
+    print("TOTAL", info)
+    return payload
+
+
+REAL_FROM = "2026-11-10"
+
+
+def write_total_history():
+    """Ricostruisce il totale giornaliero e lo salva in data/total_history.json."""
+    import statistics
+    wishlist = json.load(open(os.path.join(DATA, "wishlist.json"), encoding="utf-8"))
+    cards = wishlist["cards"]
+    notify = load_named_json("tcgnotify_history.json") or {}
+    if not isinstance(notify, dict):
+        notify = {}
+    per = {}
+    discarded = 0
+    first = last = None
+    for card in cards:
+        series = notify.get(card["id"]) if isinstance(notify.get(card["id"]), dict) else {}
+        ct, cm = {}, {}
+        for point in series.get("cardtrader") or []:
+            if not isinstance(point, dict) or not point.get("date"):
+                continue
+            value = point.get("min")
+            if isinstance(value, (int, float)) and value > 0:
+                ct[point["date"][:10]] = float(value)
+        for point in series.get("cardmarket") or []:
+            if not isinstance(point, dict) or not point.get("date"):
+                continue
+            value = point.get("min")
+            if isinstance(value, (int, float)) and value > 0:
+                cm[point["date"][:10]] = float(value)
+        median = statistics.median(ct.values()) if ct else None
+        if median:
+            kept = {}
+            for day, value in cm.items():
+                if value > median * 3:
+                    discarded += 1
+                else:
+                    kept[day] = value
+            cm = kept
+        days = set(ct) | set(cm)
+        if days:
+            first = min(days) if first is None else min(first, min(days))
+            last = max(days) if last is None else max(last, max(days))
+        per[card["id"]] = {"ct": ct, "cm": cm, "last": None, "last_day": None}
+    if not first:
+        return {"discarded_cm_points": discarded, "max_from": None}
+    snapshots = {}
+    hist_dir = os.path.join(DATA, "history")
+    if os.path.isdir(hist_dir):
+        for name in os.listdir(hist_dir):
+            if len(name) == 15 and name.endswith(".json") and name[:10] >= REAL_FROM:
+                try:
+                    snap = json.load(open(os.path.join(hist_dir, name), encoding="utf-8"))
+                except Exception:
+                    continue
+                snapshots[name[:10]] = {c["id"]: c for c in snap.get("cards") or []}
+                last = max(last, name[:10]) if last else name[:10]
+    cursor = datetime.strptime(first, "%Y-%m-%d").date()
+    end = datetime.strptime(last, "%Y-%m-%d").date()
+    days = []
+    while cursor <= end:
+        day = cursor.isoformat()
+        if day >= REAL_FROM and day in snapshots:
+            total = ct_n = 0
+            priced = 0
+            for card in cards:
+                rec = snapshots[day].get(card["id"]) or {}
+                value = rec.get("price_final_eur")
+                if not isinstance(value, (int, float)):
+                    value = rec.get("buy_price_eur")
+                if isinstance(value, (int, float)):
+                    total += value
+                    priced += 1
+                    ct_n += 1
+            days.append({
+                "date": day, "total_eur": round(total, 2), "cards_priced": priced,
+                "cards_ct": ct_n, "cards_cm": 0, "cards_carry": 0, "source": "snapshot",
+            })
+        else:
+            total = 0.0
+            priced = ct_n = cm_n = carry_n = 0
+            for card in cards:
+                slot = per[card["id"]]
+                value = slot["ct"].get(day)
+                kind = "ct"
+                if value is None:
+                    value = slot["cm"].get(day)
+                    kind = "cm"
+                if value is None and slot["last"] is not None:
+                    gap = (cursor - datetime.strptime(slot["last_day"], "%Y-%m-%d").date()).days
+                    if 0 < gap <= 7:
+                        value = slot["last"]
+                        kind = "carry"
+                if value is None:
+                    continue
+                total += value
+                priced += 1
+                if kind == "ct":
+                    ct_n += 1
+                elif kind == "cm":
+                    cm_n += 1
+                else:
+                    carry_n += 1
+                if kind != "carry":
+                    slot["last"] = value
+                    slot["last_day"] = day
+            days.append({
+                "date": day, "total_eur": round(total, 2), "cards_priced": priced,
+                "cards_ct": ct_n, "cards_cm": cm_n, "cards_carry": carry_n, "source": "reconstructed",
+            })
+        cursor += timedelta(days=1)
+    max_from = next((d["date"] for d in days if d["cards_priced"] >= 60), None)
+    payload = {
+        "reconstruction": True,
+        "real_from": REAL_FROM,
+        "max_from": max_from,
+        "discarded_cm_points": discarded,
+        "note": "Fino al giorno prima degli snapshot reali il totale è ricostruito: minimo CardTrader NM di TCGNotify, altrimenti Cardmarket se non supera 3 volte la mediana CardTrader della carta, altrimenti l'ultimo prezzo entro 7 giorni. Dal 2026-11-10 si usa price_final degli snapshot.",
+        "days": days,
+    }
+    json.dump(payload, open(os.path.join(DATA, "total_history.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print(f"total_history {len(days)} giorni, max_from {max_from}, CM scartati {discarded}")
+    return {"days": len(days), "max_from": max_from, "discarded_cm_points": discarded,
+            "first60": next((d for d in days if d["date"] == max_from), None)}
+
+
 if __name__ == "__main__":
-    main()
+    if "--eu-only" in sys.argv:
+        reprice_from_files()
+    else:
+        main()

@@ -341,6 +341,39 @@ async function render() {
     showError(err);
   }
 }
+function topByPrice(cards, n) {
+  return cards.slice().sort((a, b) => {
+    const pa = quote(a).price, pb = quote(b).price;
+    if (pa == null && pb == null) return a.name.localeCompare(b.name, "it");
+    if (pa == null) return 1;
+    if (pb == null) return -1;
+    if (pb !== pa) return pb - pa;
+    return a.name.localeCompare(b.name, "it");
+  }).slice(0, n);
+}
+function sleeveHtml(card, collectionId) {
+  const q = quote(card);
+  const bought = purchaseOf(card.id);
+  const src = safeUrl(card.image_url);
+  const img = src
+    ? `<img src="${esc(src)}" alt="${esc(card.name)}">`
+    : `<span class="fallback">${esc((card.name || "?").slice(0, 1))}</span>`;
+  return `<a class="sleeve${bought ? " bought" : ""}" href="#/c/${encodeURIComponent(collectionId)}/card/${encodeURIComponent(card.id)}">
+    ${bought ? `<span class="bought-badge" aria-label="Acquistata">✅</span>` : ""}
+    <div class="art">${img}</div>
+    ${bought ? "" : `<span class="src-badge">${badge(q.source)}</span>`}
+    <div class="price-line"><span class="price">${q.price == null ? "n/d" : money(q.price)}</span></div>
+    <p class="name">${esc(card.name)}</p>
+  </a>`;
+}
+function topPreview(collectionId, cards) {
+  const top = topByPrice(cards, 3);
+  if (!top.length) return "";
+  return `<section class="top3" aria-label="Le tre carte più care">
+    <p class="k">Le più care</p>
+    <div class="grid">${top.map((card) => sleeveHtml(card, collectionId)).join("")}</div>
+  </section>`;
+}
 async function renderHome() {
   setChrome("Inventario", "Collezioni", "home");
   const blocks = [];
@@ -349,6 +382,7 @@ async function renderHome() {
     blocks.push(`<article class="collection">
       <h2>${esc(meta.name)}</h2>
       ${basketHtml(payload.cards || [], payload.generated_at)}
+      ${topPreview(meta.id, payload.cards || [])}
       <a class="btn" href="#/c/${encodeURIComponent(meta.id)}">Apri il raccoglitore</a>
     </article>`);
   }
@@ -367,21 +401,7 @@ async function renderBinder(id) {
   const f = filtersFor(id);
   const active = (f.years.length + f.sets.length + f.rarities.length + f.langs.length + f.tiers.length + (f.zeroOnly ? 1 : 0));
   setChrome(meta.name, "Raccoglitore", "home");
-    const cells = slice.map((card) => {
-    const q = quote(card);
-    const bought = purchaseOf(card.id);
-    const src = safeUrl(card.image_url);
-    const img = src
-      ? `<img src="${esc(src)}" alt="${esc(card.name)}">`
-      : `<span class="fallback">${esc((card.name || "?").slice(0, 1))}</span>`;
-    return `<a class="sleeve${bought ? " bought" : ""}" href="#/c/${encodeURIComponent(id)}/card/${encodeURIComponent(card.id)}">
-      ${bought ? `<span class="bought-badge" aria-label="Acquistata">✅</span>` : ""}
-      <div class="art">${img}</div>
-      ${bought ? "" : `<span class="src-badge">${badge(q.source)}</span>`}
-      <div class="price-line"><span class="price">${q.price == null ? "n/d" : money(q.price)}</span></div>
-      <p class="name">${esc(card.name)}</p>
-    </a>`;
-  }).join("");
+    const cells = slice.map((card) => sleeveHtml(card, id)).join("");
   const buy = f.buy || "todo";
   view.innerHTML = `
     ${basketHtml(payload.cards || [], payload.generated_at)}
@@ -400,9 +420,10 @@ async function renderBinder(id) {
       <div class="holes" aria-hidden="true"><span></span><span></span></div>
       <div class="pager">
         <button class="iconbtn" type="button" data-page="-1" ${state.page === 0 ? "disabled" : ""} aria-label="Pagina precedente">‹</button>
-        <p>Pagina ${state.page + 1} di ${pages}${slice.length ? `<span class="page-value nums">Valore pagina ${money(pageSum.total)}${pageSum.missing ? ` · ${pageSum.missing} senza prezzo` : ""}</span>` : ""}</p>
+        <p>Pagina ${state.page + 1} di ${pages}</p>
         <button class="iconbtn" type="button" data-page="1" ${state.page >= pages - 1 ? "disabled" : ""} aria-label="Pagina successiva">›</button>
       </div>
+      ${slice.length ? `<p class="page-value nums">Valore pagina ${money(pageSum.total)}${pageSum.missing ? ` · ${pageSum.missing} senza prezzo` : ""}</p>` : ""}
       ${cards.length ? `<div class="grid">${cells}</div>` : (buy === "bought" ? `<div class="empty"><strong>Nessuna carta acquistata</strong><p>Apri una carta e segna l'acquisto. Resta raggiungibile da Tutte.</p></div>` : `<div class="empty"><strong>Nessuna carta</strong><p>Prova a togliere un filtro, oppure guarda Tutte.</p></div>`)}
       <div class="arrows">
         <button class="iconbtn prev" type="button" data-page="-1" ${state.page === 0 ? "disabled" : ""} aria-label="Pagina precedente">‹</button>

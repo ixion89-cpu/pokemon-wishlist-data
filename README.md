@@ -3,7 +3,20 @@
 Backend statico (GitHub Pages) con la buying list della wishlist "Wishlist - modern" di Leopoldo Montini
 (67 carte), ordinata per prezzo. Pensato per essere collegato a ChatGPT Sites o a qualsiasi interfaccia.
 
-**Prezzo di riferimento (`buy_price_eur`):** minimo Near Mint nella lingua target (italiano, oppure giapponese se la carta esiste solo in JP) dei venditori **CardTrader Zero**, se c'è almeno una copia. Altrimenti lo stesso minimo calcolato su tutti i venditori CardTrader. `buy_price_source` vale `zero` oppure `cardtrader`. Ordinamento, `total_eur` e tier usano questo prezzo. Spedizione esclusa, copie gradate escluse.
+**Tre listini NM**, lingua target (italiano, oppure giapponese per la carta solo JP), non gradate, spedizione esclusa. Il prezzo è `price.cents / 100`: è già il prezzo mostrato da CardTrader, fee inclusa, senza un'altra fee aggiunta.
+
+| campo | significato |
+|---|---|
+| `price_ctz_eur` | minimo dei venditori CardTrader Zero (`user.can_sell_via_hub` true) |
+| `price_ct_eur` | minimo dei soli venditori normali (`can_sell_via_hub` false). Non è il minimo complessivo |
+| `price_avg_eur` | media pesata sulla `quantity` di tutti gli annunci NM validi (Zero e normali) con quantità > 0 |
+| `listings_ctz` / `qty_ctz` | annunci e copie Zero |
+| `listings_ct` / `qty_ct` | annunci e copie dei venditori normali |
+| `listings_nm` / `qty_nm` | annunci e copie di tutti i venditori |
+
+L'app sceglie il listino (CTZ, CT o Media; default CTZ). Se manca quel prezzo usa il successivo disponibile e lo segnala.
+
+**Prezzo di riferimento (`buy_price_eur`):** minimo Zero se c'è almeno una copia, altrimenti il minimo di tutti i venditori. `buy_price_source` vale `zero` oppure `cardtrader`. `total_eur` e tier nel JSON usano questo prezzo. Spedizione esclusa, copie gradate escluse.
 
 **Totale Zero (`zero_total_eur`):** somma dei soli minimi Zero. Una carta senza copia Zero non entra in questo totale, ma resta in `total_eur` se ha un minimo CardTrader.
 
@@ -60,7 +73,9 @@ Campi di ogni carta:
 | `cardtrader_link`, `cardtrader_blueprint_id`, `image_url` | link e immagine CardTrader |
 
 ## Schema `data/price_history.csv` (append-only)
-`date, card_id, blueprint_id, name, set_code, number, price_eur, language, condition, listings_count, source, kind`
+`date, card_id, blueprint_id, name, set_code, number, price_eur, language, condition, listings_count, source, kind, price_ctz_eur, price_ct_eur, price_avg_eur`
+
+Le righe già presenti restano. Le colonne nuove sono vuote finché lo snapshot del giorno non le compila. `price_eur` delle righe vecchie non cambia.
 - `kind = daily_snapshot`: minimo del giorno da annunci CardTrader, condizione Near Mint.
   - `language = it` o `jp`: lingua target, tutti i venditori, `source = cardtrader_listings_min`.
   - `language = it_zero` o `jp_zero`: stesso minimo ma solo venditori CardTrader Zero, `source = cardtrader_zero_listings_min`. La riga c'è anche se non c'è nessuna copia Zero (`price_eur` vuoto, `listings_count = 0`).

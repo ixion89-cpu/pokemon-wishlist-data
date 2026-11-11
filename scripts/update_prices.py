@@ -21,13 +21,18 @@ UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chr
 BASE = "https://www.cardtrader.com/en-EU/cards/{bid}.json"
 TZ = timezone(timedelta(hours=1))  # Europe/Rome (inverno); solo per la data del file
 HIST_FIELDS = ["date", "card_id", "blueprint_id", "name", "set_code", "number", "price_eur",
-               "language", "condition", "listings_count", "source", "kind"]
+               "language", "condition", "listings_count", "source", "kind",
+               "price_ctz_eur", "price_ct_eur", "price_avg_eur"]
 SET_YEARS_PATH = os.path.join(DATA, "set_years.json")
 PRICE_DEFINITION = (
-    "Prezzo di riferimento (buy_price_eur): minimo Near Mint nella lingua target "
-    "(ITA, o JP per carte solo giapponesi) dei venditori CardTrader Zero, se esiste una copia; "
-    "altrimenti minimo Near Mint nella lingua target di tutti i venditori. "
-    "Non gradate, spedizione esclusa. buy_price_source vale zero oppure cardtrader."
+    "Tre prezzi Near Mint separati, lingua target (ITA, o JP per carte solo giapponesi), "
+    "non gradate, spedizione esclusa. Il prezzo è price.cents/100: è già il prezzo che "
+    "mostra CardTrader, fee inclusa, senza aggiungere un'altra fee. "
+    "price_ctz_eur = minimo dei venditori Zero (user.can_sell_via_hub true). "
+    "price_ct_eur = minimo dei venditori normali (can_sell_via_hub false), non il minimo complessivo. "
+    "price_avg_eur = media pesata sulla quantità di tutti gli annunci NM validi (Zero e normali) "
+    "con quantity > 0. "
+    "buy_price_eur resta il minimo Zero se esiste, altrimenti il minimo di tutti i venditori."
 )
 ZERO_DEFINITION = (
     "zero_total_eur somma solo i minimi Near Mint in lingua target dei venditori CardTrader Zero. "
@@ -186,6 +191,35 @@ def ok(p, lang, cond):
         and (cond is None or h.get("condition") == cond)
 
 
+def price_eur(p):
+    cents = (p.get("price") or {}).get("cents")
+    if not isinstance(cents, (int, float)):
+        return None
+    return round(cents / 100, 2)
+
+
+def group_stats(listings):
+    """Minimo, numero di annunci e copie. La media pesata esclude quantity 0."""
+    prices, qty, weighted, weighted_qty = [], 0, 0.0, 0
+    for p in listings:
+        price = price_eur(p)
+        if price is None:
+            continue
+        prices.append(price)
+        q = listing_qty(p)
+        qty += max(q, 0)
+        if q > 0:
+            weighted += price * q
+            weighted_qty += q
+    prices.sort()
+    return {
+        "min": prices[0] if prices else None,
+        "n": len(prices),
+        "qty": qty,
+        "avg": round(weighted / weighted_qty, 2) if weighted_qty else None,
+    }
+
+
 def tier(price):
     if price is None:
         return "n/d"
@@ -218,8 +252,20 @@ def main():
             nm = [p for p in nm if ok(p, lang, "Near Mint")]
             # Il minimo normale include anche i venditori non-Zero (can_sell_via_hub false).
             # Il filtro Zero si applica solo a zprices, mai a questa lista.
-            prices = sorted(p["price"]["cents"] / 100 for p in nm)
-            zprices = sorted(p["price"]["cents"] / 100 for p in nm if is_zero_seller(p))
+            prices = sorted(price_eur(p) for p in nm if price_eur(p) is not None)
+            zero_listings = [p for p in nm if is_zero_seller(p)]
+            ct_listings = [p for p in nm if not is_zero_seller(p)]
+            zstats, cstats, astats = group_stats(zero_listings), group_stats(ct_listings), group_stats(nm)
+            zprices = [zstats["min"]] if zstats["min"] is not None else []
+            rec["price_ctz_eur"] = zstats["min"]
+            rec["listings_ctz"] = zstats["n"]
+            rec["qty_ctz"] = zstats["qty"]
+            rec["price_ct_eur"] = cstats["min"]
+            rec["listings_ct"] = cstats["n"]
+            rec["qty_ct"] = cstats["qty"]
+            rec["price_avg_eur"] = astats["avg"]
+            rec["listings_nm"] = astats["n"]
+            rec["qty_nm"] = astats["qty"]
             rec["offers_zero"] = top_offers(nm, nm_extra, True)
             rec["offers_ct"] = top_offers(nm, nm_extra, False)
             time.sleep(1)
@@ -259,21 +305,24 @@ def main():
                         set_code=c["set_code"], number=c["number"], price_eur=val, language="all",
                         condition="all", listings_count="", source="cardtrader_ct_market_graph_all_languages",
                         kind="backfill"))
+            modes = dict(price_ctz_eur=zstats["min"] if zstats["min"] is not None else "",
+                         price_ct_eur=cstats["min"] if cstats["min"] is not None else "",
+                         price_avg_eur=astats["avg"] if astats["avg"] is not None else "")
             if (c["id"], "daily_snapshot", lang) not in have_today:
                 new_rows.append(dict(date=today, card_id=c["id"], blueprint_id=bid, name=c["name"],
                     set_code=c["set_code"], number=c["number"], price_eur=prices[0] if prices else "",
                     language=lang, condition="Near Mint", listings_count=len(prices),
-                    source="cardtrader_listings_min", kind="daily_snapshot"))
+                    source="cardtrader_listings_min", kind="daily_snapshot", **modes))
             if (c["id"], "daily_snapshot", lang + "_zero") not in have_today:
                 new_rows.append(dict(date=today, card_id=c["id"], blueprint_id=bid, name=c["name"],
                     set_code=c["set_code"], number=c["number"], price_eur=zprices[0] if zprices else "",
                     language=lang + "_zero", condition="Near Mint", listings_count=len(zprices),
-                    source="cardtrader_zero_listings_min", kind="daily_snapshot"))
+                    source="cardtrader_zero_listings_min", kind="daily_snapshot", **modes))
             if anyp and (c["id"], "daily_snapshot", "any") not in have_today:
                 new_rows.append(dict(date=today, card_id=c["id"], blueprint_id=bid, name=c["name"],
                     set_code=c["set_code"], number=c["number"], price_eur=anyp[0], language="any",
                     condition="Near Mint", listings_count=len(anyp),
-                    source="cardtrader_listings_min", kind="daily_snapshot"))
+                    source="cardtrader_listings_min", kind="daily_snapshot", **modes))
         except Exception as e:
             prev = {}
             try:
@@ -285,7 +334,10 @@ def main():
                          "ct_market_all_lang_eur", "price_source", "price_min_ita_nm_zero_eur",
                          "price_min_target_lang_nm_zero_eur", "listings_target_lang_nm_zero",
                          "offers_zero", "offers_ct", "qty_mint_nm_target_lang",
-                         "listings_mint_nm_target_lang")})
+                         "listings_mint_nm_target_lang",
+                         "price_ctz_eur", "listings_ctz", "qty_ctz",
+                         "price_ct_eur", "listings_ct", "qty_ct",
+                         "price_avg_eur", "listings_nm", "qty_nm")})
             rec["fetch_error"] = str(e)[:200]
         rec["release_year"] = release_year_for(c, bp, set_years)
         price, source = buy_quote(rec)
@@ -300,12 +352,21 @@ def main():
     out.sort(key=lambda r: (r["buy_price_eur"] is None, -(r["buy_price_eur"] or 0)))
     for i, r in enumerate(out, 1):
         r["rank_by_price"] = i
+    def mode_sum(key):
+        vals = [r[key] for r in out if r.get(key) is not None]
+        return len(vals), round(sum(vals), 2)
+    ctz_n, ctz_sum = mode_sum("price_ctz_eur")
+    ct_n, ct_sum = mode_sum("price_ct_eur")
+    avg_n, avg_sum = mode_sum("price_avg_eur")
     priced = [r["buy_price_eur"] for r in out if r["buy_price_eur"] is not None]
     zpriced = [r["price_min_target_lang_nm_zero_eur"] for r in out if r.get("price_min_target_lang_nm_zero_eur") is not None]
     payload = {"generated_at": stamp, "currency": "EUR",
                "price_definition": PRICE_DEFINITION,
                "summary": {"cards": len(out), "priced": len(priced), "total_eur": round(sum(priced), 2),
                            "zero_priced": len(zpriced), "zero_total_eur": round(sum(zpriced), 2),
+                           "ctz_priced": ctz_n, "total_ctz_eur": ctz_sum,
+                           "ct_priced": ct_n, "total_ct_eur": ct_sum,
+                           "avg_priced": avg_n, "total_avg_eur": avg_sum,
                            "tiers": {t: sum(1 for r in out if r["tier"] == t) for t in ("A: <50€", "B: 50-150€", "C: >150€", "n/d")}},
                "zero_definition": ZERO_DEFINITION,
                "cards": out}
@@ -318,6 +379,8 @@ def main():
             "release_year", "price_min_ita_nm_eur", "price_min_target_lang_nm_eur", "price_2nd_target_lang_nm_eur",
             "listings_target_lang_nm", "price_min_ita_nm_zero_eur", "price_min_target_lang_nm_zero_eur",
             "listings_target_lang_nm_zero", "qty_mint_nm_target_lang", "listings_mint_nm_target_lang",
+            "price_ctz_eur", "listings_ctz", "qty_ctz", "price_ct_eur", "listings_ct", "qty_ct",
+            "price_avg_eur", "listings_nm", "qty_nm",
             "price_min_any_lang_nm_eur", "ct_market_all_lang_eur", "tier",
             "buy_price_eur", "buy_price_source", "price_source", "confidence", "notes", "cardtrader_link",
             "image_url", "last_updated"]

@@ -46,12 +46,55 @@ function pct(v) {
   const body = new Intl.NumberFormat("it-IT", { maximumFractionDigits: 1, minimumFractionDigits: 1 }).format(Math.abs(n));
   return (n > 0 ? "+" : n < 0 ? "−" : "") + body + "%";
 }
+const PRICE_MODES = [
+  { id: "ctz", label: "CTZ" },
+  { id: "ct", label: "CT" },
+  { id: "avg", label: "Media" },
+  // { id: "cm", label: "CM" }, Cardmarket: previsto, non mostrato.
+];
+const MODE_KEY = "wl-price-mode";
+const MODE_ORDER = {
+  ctz: ["ctz", "ct", "avg"],
+  ct: ["ct", "avg", "ctz"],
+  avg: ["avg", "ctz", "ct"],
+};
+const MODE_KEY_NAME = { ctz: "price_ctz_eur", ct: "price_ct_eur", avg: "price_avg_eur" };
+function priceMode() {
+  const saved = localStorage.getItem(MODE_KEY);
+  return PRICE_MODES.some((m) => m.id === saved) ? saved : "ctz";
+}
+function modeLabel(id) {
+  const found = PRICE_MODES.find((m) => m.id === id);
+  return found ? found.label : id;
+}
+function hasOwn(obj, key) {
+  return Object.prototype.hasOwnProperty.call(obj || {}, key);
+}
+function modePrice(card, mode) {
+  if (mode === "ctz") {
+    if (hasOwn(card, "price_ctz_eur")) return num(card.price_ctz_eur);
+    return num(card.price_min_target_lang_nm_zero_eur);
+  }
+  if (!hasOwn(card, MODE_KEY_NAME[mode])) return null;
+  return num(card[MODE_KEY_NAME[mode]]);
+}
 function quote(card) {
-  const zero = num(card.price_min_target_lang_nm_zero_eur);
-  const normal = num(card.price_min_target_lang_nm_eur);
-  if (zero != null) return { price: zero, source: "zero" };
-  if (normal != null) return { price: normal, source: "cardtrader" };
-  return { price: null, source: null };
+  const mode = priceMode();
+  const direct = modePrice(card, mode);
+  if (direct != null) return { price: direct, mode, fallback: false, badge: "" };
+  const known = hasOwn(card, MODE_KEY_NAME[mode]) || (mode === "ctz" && hasOwn(card, "price_min_target_lang_nm_zero_eur"));
+  if (!known) return { price: null, mode, fallback: false, badge: "" };
+  for (const next of MODE_ORDER[mode].slice(1)) {
+    const price = modePrice(card, next);
+    if (price != null) return { price, mode: next, fallback: true, badge: "solo " + modeLabel(next) };
+  }
+  return { price: null, mode, fallback: false, badge: "" };
+}
+function modeBar() {
+  const mode = priceMode();
+  return `<div class="seg modebar" role="tablist" aria-label="Listino">${PRICE_MODES.map((m) =>
+    `<button class="chip ${mode === m.id ? "on" : ""}" type="button" data-mode="${m.id}">${m.label}</button>`
+  ).join("")}</div>`;
 }
 function badge(source) {
   if (source === "zero") return '<span class="badge zero">Zero</span>';
@@ -171,10 +214,12 @@ function basketOf(cards) {
 }
 function basketHtml(cards, generatedAt) {
   const b = basketOf(cards);
+  const reserve = cards.filter((c) => quote(c).fallback).length;
   const paidNote = b.fallback ? ` · ${b.fallback} senza prezzo pagato, contato il prezzo attuale` : "";
+  const reserveNote = reserve ? ` · ${reserve} con prezzo di riserva` : "";
   return `<section class="basket" aria-label="Totali">
     ${sourceStamp(generatedAt)}
-    <div class="tile mint"><p class="k">Totale wishlist</p><b class="nums">${money(b.wishlist)}</b><p class="meta">${b.total} carte</p></div>
+    <div class="tile mint"><p class="k">Totale wishlist</p><b class="nums">${money(b.wishlist)}</b><p class="meta">${b.total} carte${esc(reserveNote)}</p></div>
     <div class="tile lilac"><p class="k">Già acquistate</p><b class="nums">${b.bought}/${b.total}</b><p class="meta">${money(b.spent)}${esc(paidNote)}</p></div>
     <div class="tile sun"><p class="k">Resta da spendere</p><b class="nums">${money(b.remain)}</b>
       <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(b.done)}" aria-label="Quota del valore già acquistata"><span style="width:${b.done.toFixed(1)}%"></span></div>
@@ -183,7 +228,7 @@ function basketHtml(cards, generatedAt) {
 }
 function sourceStamp(generatedAt) {
   const when = generatedAt ? formatDay(generatedAt) : "";
-  return `<p class="stamp">Fonte: CardTrader · NM, Zero se c’è${when ? " · " + esc(when) : ""}</p>`;
+  return `<p class="stamp">Fonte: CardTrader · ${esc(modeLabel(priceMode()))} · NM lingua target${when ? " · " + esc(when) : ""}</p>`;
 }
 async function getJson(path) {
   const res = await fetch(new URL(path, DATA));
@@ -361,7 +406,7 @@ function sleeveHtml(card, collectionId) {
   return `<a class="sleeve${bought ? " bought" : ""}" href="#/c/${encodeURIComponent(collectionId)}/card/${encodeURIComponent(card.id)}">
     ${bought ? `<span class="bought-badge" aria-label="Acquistata">✅</span>` : ""}
     <div class="art">${img}</div>
-    ${bought ? "" : `<span class="src-badge">${badge(q.source)}</span>`}
+    ${q.badge ? `<span class="src-badge"><span class="badge partial">${esc(q.badge)}</span></span>` : ""}
     <div class="price-line"><span class="price">${q.price == null ? "n/d" : money(q.price)}</span></div>
     <p class="name">${esc(card.name)}</p>
   </a>`;
@@ -386,7 +431,7 @@ async function renderHome() {
       <a class="btn" href="#/c/${encodeURIComponent(meta.id)}">Apri il raccoglitore</a>
     </article>`);
   }
-  view.innerHTML = `<div class="list home-grid">${blocks.join("") || '<div class="empty"><strong>Nessuna collezione</strong></div>'}</div>`;
+  view.innerHTML = modeBar() + `<div class="list home-grid">${blocks.join("") || '<div class="empty"><strong>Nessuna collezione</strong></div>'}</div>`;
 }
 async function renderBinder(id) {
   const meta = state.collections.find((c) => c.id === id);
@@ -404,6 +449,7 @@ async function renderBinder(id) {
     const cells = slice.map((card) => sleeveHtml(card, id)).join("");
   const buy = f.buy || "todo";
   view.innerHTML = `
+    ${modeBar()}
     ${basketHtml(payload.cards || [], payload.generated_at)}
     <div class="toolbar">
       <div class="seg" role="tablist" aria-label="Stato acquisto">
@@ -723,6 +769,7 @@ async function renderCard(id, cardId) {
   const stockLine = stockText(card);
   const offersHtml = offersSection(card, link);
   view.innerHTML = `
+    ${modeBar()}
     <p class="kicker"><a href="#/c/${encodeURIComponent(id)}">‹ Raccoglitore</a></p>
     ${sourceStamp(payload.generated_at)}
     <div class="stage">
@@ -734,8 +781,8 @@ async function renderCard(id, cardId) {
     <h2 class="card-name">${purchaseOf(card.id) ? "✅ " : ""}${esc(card.name)}</h2>
     <p class="sub">${esc(card.set)} · ${esc(card.number)} · ${esc(card.rarity)} · ${lang.flag} ${lang.name} · <span class="dot">●</span> Monitorato${card.release_year ? " · " + esc(card.release_year) : ""}</p>
     <section class="pricebox">
-      <p class="label">PREZZO MINIMO · NM · ${lang.flag} ${lang.name.toUpperCase()}</p>
-      <div class="row"><p class="big">${q.price == null ? "n/d" : money(q.price)}</p>${badge(q.source)}</div>
+      <p class="label">${esc(modeLabel(priceMode()))} · NM · ${lang.flag} ${lang.name.toUpperCase()}</p>
+      <div class="row"><p class="big">${q.price == null ? "n/d" : money(q.price)}</p>${q.badge ? `<span class="badge partial">${esc(q.badge)}</span>` : ""}</div>
       ${delta}
       ${q.price == null ? `<p class="quiet">Nessuna copia Near Mint non gradata nella lingua target.</p>` : ""}
       ${second != null ? `<p class="quiet">2ª offerta ${money(second)}</p>` : `<p class="quiet">2ª offerta non disponibile</p>`}
@@ -836,6 +883,7 @@ async function renderPerformance() {
   const headline = state.perfBasket === "remain" ? basket.remain : basket.wishlist;
   const headlineLabel = state.perfBasket === "remain" ? "Resta da spendere" : "Totale wishlist";
   view.innerHTML = `
+    ${modeBar()}
     ${sourceStamp(current.generated_at)}
     <div class="ranges" style="margin-bottom:12px">${state.collections.map((c) => `<button class="chip ${c.id === meta.id ? "on" : ""}" type="button" data-perf-id="${esc(c.id)}">${esc(c.name)}</button>`).join("")}</div>
     <div class="seg" style="margin-bottom:12px">
@@ -887,34 +935,53 @@ function contributionBlock(points, mode) {
 }
 async function renderMovers() {
   setChrome("In arrivo", "Movimenti", "movers");
-  await loadCsv();
+  await loadHistory();
   await loadCollections();
   const meta = state.collections[0];
   const payload = meta ? await loadPayload(meta) : { cards: [] };
+  const snaps = [...state.history.entries()].sort((a, b) => a[0].localeCompare(b[0]));
   const rows = [];
-  (payload.cards || []).forEach((card) => {
-    const market = seriesFor(card)[1].points;
-    const ch = changeOver(market, 30);
-    if (!ch || !ch.start) return;
-    rows.push({ card, ...ch });
-  });
-  rows.sort((a, b) => b.diff - a.diff);
-  const list = rows.map((r) => {
+  let span = null;
+  if (snaps.length >= 2) {
+    const [d0, p0] = snaps[snaps.length - 2];
+    const [d1, p1] = snaps[snaps.length - 1];
+    span = [d0, d1];
+    const before = new Map((p0.cards || []).map((c) => [c.id, quote(c).price]));
+    (p1.cards || []).forEach((card) => {
+      const now = quote(card).price;
+      const was = before.has(card.id) ? before.get(card.id) : null;
+      if (now == null || was == null) return;
+      rows.push({ card, diff: now - was, pct: was ? ((now - was) / was) * 100 : null, start: d0, end: d1 });
+    });
+    rows.sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff));
+  }
+  const label = modeLabel(priceMode());
+  const list = rows.slice(0, 12).map((r) => {
     const arrow = r.diff < 0 ? "▼" : r.diff > 0 ? "▲" : "●";
     const cls = r.diff < 0 ? "down" : r.diff > 0 ? "up" : "";
     return `<a class="mover" href="#/c/${encodeURIComponent(meta.id)}/card/${encodeURIComponent(r.card.id)}">
     <img alt="" src="${esc(safeUrl(r.card.image_url))}">
-    <div><strong>${esc(r.card.name)}</strong><p class="meta">${esc(r.card.set)} · ${formatDay(r.start.date)} → ${formatDay(r.end.date)}</p><span class="badge partial">tutte le lingue</span></div>
+    <div><strong>${esc(r.card.name)}</strong><p class="meta">${esc(r.card.set)} · ${formatDay(r.start)} → ${formatDay(r.end)}</p><span class="badge">${esc(label)}</span></div>
     <div class="chg delta ${cls}">${arrow} ${signedMoney(r.diff)}<br>${arrow} ${pct(r.pct)}</div>
   </a>`;
   }).join("");
+  const note = rows.length
+    ? ""
+    : `<div class="empty" style="text-align:left"><strong>Movimenti — in arrivo</strong>
+    <p>Per ${esc(label)} servono due giorni di storico con quel prezzo. ${span ? "I due snapshot non hanno prezzi confrontabili in questo listino." : "C'è un solo snapshot giornaliero."}</p></div>`;
   view.innerHTML = `
+    ${modeBar()}
     ${sourceStamp(payload.generated_at)}
-    <div class="empty" style="text-align:left"><strong>Movimenti a 30 giorni — in arrivo</strong>
-    <p>Lo storico Near Mint in lingua target parte dal 10 nov 2026 e ha un solo giorno, quindi la variazione ITA/JP non si può ancora calcolare. La lista usa il grafico di mercato CardTrader (tutte le lingue) ed è parziale.</p></div>
-    <div class="list" style="margin-top:12px">${list || ""}</div>`;
+    ${note}
+    <div class="list" style="margin-top:12px">${list}</div>`;
 }
 view.addEventListener("click", (e) => {
+  const modeBtn = e.target.closest("[data-mode]");
+  if (modeBtn && PRICE_MODES.some((m) => m.id === modeBtn.dataset.mode)) {
+    localStorage.setItem(MODE_KEY, modeBtn.dataset.mode);
+    render();
+    return;
+  }
   const buy = e.target.closest("[data-buy]");
   if (buy && buy.dataset.buy && ["all", "todo", "bought"].includes(buy.dataset.buy)) {
     const id = route().id;

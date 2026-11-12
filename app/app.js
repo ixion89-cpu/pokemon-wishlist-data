@@ -216,7 +216,7 @@ function basketHtml(cards, generatedAt) {
 }
 function sourceStamp(generatedAt) {
   const when = generatedAt ? formatDay(generatedAt) : "";
-  return `<p class="stamp">Fonte: CardTrader · NM lingua target${when ? " · " + esc(when) : ""}</p>`;
+  return "";
 }
 async function getJson(path) {
   const res = await fetch(new URL(path, DATA));
@@ -462,7 +462,7 @@ function sleeveHtml(card, collectionId) {
     ${q.badge ? `<span class="src-badge"><span class="badge partial">${esc(q.badge)}</span></span>` : ""}
     <div class="price-line"><span class="price">${q.price == null ? "n/d" : money(q.price)}</span></div>
     <p class="name">${esc(cardTitle(card))}</p>
-    <p class="meta">${esc(cardSetName(card))}${cardNumber(card) ? " · " + esc(cardNumber(card)) : ""}</p>
+    <p class="meta num">${esc(cardNumber(card))}</p>
   </a>`;
 }
 function topPreview(collectionId, cards) {
@@ -527,7 +527,8 @@ function totalChartHtml(cards) {
   if (view.delta && view.delta.start) {
     const cls = view.delta.diff < 0 ? "down" : view.delta.diff > 0 ? "up" : "";
     const arrow = view.delta.diff < 0 ? "▼" : view.delta.diff > 0 ? "▲" : "●";
-    change = `<p class="delta ${cls}">${arrow} ${signedMoney(view.delta.diff)} dal ${formatDay(view.delta.start.date)}</p>`;
+    const pctTxt = view.delta.start.value ? ` (${view.delta.diff >= 0 ? "+" : ""}${((view.delta.diff / view.delta.start.value) * 100).toLocaleString("it-IT", { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%)` : "";
+    change = `<p class="delta ${cls}">${arrow} ${signedMoney(view.delta.diff)}${pctTxt} dal ${formatDay(view.delta.start.date)}</p>`;
   } else if (view.pts.length) {
     change = `<p class="quiet">Un solo giorno di storico.</p>`;
   }
@@ -538,8 +539,7 @@ function totalChartHtml(cards) {
   return `<div class="ranges">${TOTAL_RANGES.map((r) => `<button class="chip ${r.id === state.totalRange ? "on" : ""}" type="button" data-total-range="${r.id}">${r.label}</button>`).join("")}</div>
     ${change}
     <div class="chart-card">${series.length ? chartSvg(series, false) : ""}</div>
-    ${latest ? `<p class="quiet">${esc(latest.title)}</p>` : ""}
-    ${view.recon.length ? `<p class="quiet">Tratteggio: ricostruito da storico TCGNotify. Linea piena: snapshot dal ${esc(formatDay(book.real_from || "2026-11-10"))}.${book.steps ? " Pallino giallo: quel giorno entra una carta, il salto non è solo un rialzo di prezzo." : ""}</p>` : ""}`;
+    ${latest ? `<p class="quiet">${esc(formatDay(latest.date))}</p>` : ""}`;
 }
 async function renderHome() {
   setChrome("Inventario", "Collezioni", "home");
@@ -1093,17 +1093,10 @@ async function renderPerformance() {
   const headline = state.perfBasket === "remain" ? basket.remain : basket.wishlist;
   const headlineLabel = state.perfBasket === "remain" ? "Resta da spendere" : "Totale wishlist";
   view.innerHTML = `
-    ${sourceStamp(current.generated_at)}
-    <div class="ranges" style="margin-bottom:12px">${state.collections.map((c) => `<button class="chip ${c.id === meta.id ? "on" : ""}" type="button" data-perf-id="${esc(c.id)}">${esc(c.name)}</button>`).join("")}</div>
-    <div class="seg" style="margin-bottom:12px">
-      <button class="chip ${state.perfBasket === "remain" ? "on" : ""}" type="button" data-basket="remain">Da comprare</button>
-      <button class="chip ${state.perfBasket === "all" ? "on" : ""}" type="button" data-basket="all">Tutta la lista</button>
-    </div>
     <section class="perf">
       <p class="label">${esc(headlineLabel)}</p>
       <h2>${esc(meta.name)}</h2>
       <p class="big">${money(headline)}</p>
-      <p class="meta">Wishlist ${money(basket.wishlist)} · già acquistate ${basket.bought}/${basket.total}</p>
       ${totalChartHtml(current.cards || [])}
     </section>
     <h2 class="section-title">Contributo sul totale</h2>

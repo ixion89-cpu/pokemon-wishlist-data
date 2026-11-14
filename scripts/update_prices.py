@@ -660,7 +660,18 @@ REAL_FROM = "2026-11-10"
 # dentro i giorni prima del 2026-11-11. Toglierle li riscriverebbe (il 2025-10-07
 # passerebbe da 9285.94 a 8785.94). Il merge aggiunge solo il punto del 2026-11-11,
 # che questa ricostruzione non legge perché dal 2026-11-10 il totale è lo snapshot.
-WISHLIST_JOINED = {}
+WISHLIST_JOINED = {
+    # 7 carte aggiunte il 14/11/2026: lo storico TCGNotify non deve entrare nei totali ricostruiti prima di quella data.
+    "p8-5": "2026-11-14",
+    "p8-6": "2026-11-14",
+    "p8-7": "2026-11-14",
+    "p8-8": "2026-11-14",
+    "p8-9": "2026-11-14",
+    "p9-1": "2026-11-14",
+    "p9-2": "2026-11-14",
+    # p4-5: corretta da 188/214 a 213/214 il 14/11; lo storico 213 non riscrive i totali precedenti.
+    "p4-5": "2026-11-14",
+}
 
 
 def write_total_history():

@@ -13,6 +13,7 @@
   "EVS": {"year": 2021, "release_date": "2021-08-27", "name": "Evolving Skies"},
   "FST": {"year": 2021, "release_date": "2021-11-12", "name": "Fusion Strike"},
   "BRS": {"year": 2022, "release_date": "2022-02-25", "name": "Brilliant Stars"},
+  "ASR": {"year": 2022, "release_date": "2022-05-27", "name": "Astral Radiance"},
   "LORG": {"year": 2022, "release_date": "2022-09-09", "name": "Lost Origin"},
   "SIT": {"year": 2022, "release_date": "2022-11-11", "name": "Silver Tempest"},
   "CRZ": {"year": 2023, "release_date": "2023-01-20", "name": "Crown Zenith"},

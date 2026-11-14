@@ -8,7 +8,9 @@
   "csv": "price_history.csv",
   "cardmarket": "cardmarket.json",
   "tcgnotify": "tcgnotify_history.json",
-  "totals": "total_history.json"
+  "totals": "total_history.json",
+  "pop": "pop_summary.json",
+  "pop_history": "pop_history.json"
  },
  {
   "id": "gold-modern",
@@ -20,6 +22,8 @@
   "cardmarket": "collections/gold/cardmarket.json",
   "tcgnotify": "collections/gold/tcgnotify_history.json",
   "totals": "collections/gold/total_history.json",
+  "pop": "collections/gold/pop_summary.json",
+  "pop_history": "collections/gold/pop_history.json",
   "order": "release"
  }
 ]

@@ -383,12 +383,34 @@ function applyFilters(cards, id) {
     if ((f.buy || "todo") === "todo" && bought) return false;
     return true;
   }).slice().sort((a, b) => {
+    const mode = sortModeFor(id);
+    const byName = () => cardTitle(a).localeCompare(cardTitle(b), "it");
+    const byPrice = () => {
+      const pa = quote(a).price, pb = quote(b).price;
+      if (pa == null && pb == null) return byName();
+      if (pa == null) return 1;
+      if (pb == null) return -1;
+      if (pb !== pa) return pb - pa;
+      return byName();
+    };
+    if (mode === "pop-desc" || mode === "pop-asc" || mode === "popchg-desc" || mode === "popchg-asc") {
+      const pop = (state.extra && state.extra.pop) || {};
+      const field = mode.indexOf("popchg") === 0 ? "pop_change_30d_pct" : "pop_total_now";
+      const rawA = pop[a.id] ? pop[a.id][field] : null;
+      const rawB = pop[b.id] ? pop[b.id][field] : null;
+      const va = typeof rawA === "number" ? rawA : null;
+      const vb = typeof rawB === "number" ? rawB : null;
+      if (va == null && vb == null) return byPrice();
+      if (va == null) return 1;
+      if (vb == null) return -1;
+      if (va !== vb) return mode.endsWith("asc") ? va - vb : vb - va;
+      return byPrice();
+    }
     const pa = quote(a).price, pb = quote(b).price;
-    if (pa == null && pb == null) return a.name.localeCompare(b.name, "it");
+    if (pa == null && pb == null) return byName();
     if (pa == null) return 1;
     if (pb == null) return -1;
-    const mode = sortModeFor(id);
-    if (mode === "release") return (a.order || 0) - (b.order || 0) || cardTitle(a).localeCompare(cardTitle(b), "it");
+    if (mode === "release") return (a.order || 0) - (b.order || 0) || byName();
     return mode === "asc" ? pa - pb : pb - pa;
   });
 }
@@ -449,6 +471,39 @@ function topByPrice(cards, n) {
     return a.name.localeCompare(b.name, "it");
   }).slice(0, n);
 }
+function popOf(card) {
+  const book = state.extra && state.extra.pop;
+  return (book && book[card.id]) || {};
+}
+function popPctText(value, spaced) {
+  const n = Number(value);
+  if (!Number.isFinite(n)) return "";
+  const text = Math.abs(n).toLocaleString("it-IT", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  const arrow = n < 0 ? "▼" : "▲";
+  return spaced ? `${arrow} ${text}%` : `${arrow}${text}%`;
+}
+function sleevePop(card) {
+  const pop = popOf(card);
+  if (typeof pop.pop_total_now !== "number") return "";
+  const pct = pop.pop_change_30d_pct == null ? "" : " " + popPctText(pop.pop_change_30d_pct, false);
+  const cls = pop.pop_change_30d_pct == null ? "" : pop.pop_change_30d_pct < 0 ? " down" : " up";
+  return `<p class="pop-line nums${cls}">👥 ${pop.pop_total_now}${pct}</p>`;
+}
+function popBlock(card) {
+  const pop = popOf(card);
+  const ctChange = pop.ct_change_30d_pct == null ? "" : ` · ${popPctText(pop.ct_change_30d_pct, true)} in 30 giorni`;
+  const ctLine = typeof pop.ct_latest === "number"
+    ? `<p class="quiet">Solo CardTrader: ${pop.ct_latest} copie al ${esc(formatDay(pop.ct_latest_date))}${ctChange}</p>`
+    : "";
+  if (!ctLine && typeof pop.pop_total_now !== "number") return "";
+  if (typeof pop.pop_total_now !== "number") {
+    return `<section class="popbox"><h2 class="section-title">Popolazione ITA</h2><p>Pop CT+CM non ancora disponibile</p>${ctLine}</section>`;
+  }
+  const delta = pop.pop_change_30d_pct == null ? "" : `<p class="delta ${pop.pop_change_30d_pct < 0 ? "down" : "up"}">${popPctText(pop.pop_change_30d_pct, true)} in 30 giorni</p>`;
+  return `<section class="popbox"><h2 class="section-title">Popolazione ITA</h2>
+    <p class="nums">${pop.pop_total_now} copie (CT ${pop.ct_it_now == null ? "n/d" : pop.ct_it_now} + CM ${pop.cm_it_now == null ? "n/d" : pop.cm_it_now}) · ${esc(formatDay(pop.pop_date))}</p>
+    ${delta}${ctLine}</section>`;
+}
 function sleeveHtml(card, collectionId) {
   const q = quote(card);
   const bought = purchaseOf(card.id);
@@ -463,6 +518,7 @@ function sleeveHtml(card, collectionId) {
     <div class="price-line"><span class="price">${q.price == null ? "n/d" : money(q.price)}</span></div>
     <p class="name">${esc(cardTitle(card))}</p>
     <p class="meta num">${esc(cardNumber(card))}</p>
+    ${sleevePop(card)}
   </a>`;
 }
 function topPreview(collectionId, cards) {
@@ -480,7 +536,20 @@ const TOTAL_RANGES = [
   { id: "1A", label: "1A" },
   { id: "MAX", label: "MAX" },
 ];
-function totalPointMeta(book, day, names) {
+function totalPointMeta(book, day, names, cardsTotal) {
+  const events = (book.events || []).filter((event) => event.date === day.date);
+  if (events.length) {
+    const text = events.map((event) => {
+      const who = (event.cards || []).map((id) => names[id] || id).filter(Boolean).join(", ");
+      return who ? `${event.label}: ${who}` : event.label;
+    }).join(" · ");
+    const count = events.reduce((sum, event) => sum + (Number(event.count) || (event.cards || []).length), 0);
+    return {
+      title: `${formatDay(day.date)} · ${money(day.total_eur)} · ${text}`,
+      marker: true,
+      markerLabel: "+" + count,
+    };
+  }
   const included = Array.isArray(day.cards_included) ? day.cards_included.length : day.cards_priced;
   const first = book.card_first_price_day || {};
   const added = Object.keys(first).filter((id) => first[id] === day.date).map((id) => names[id] || id);
@@ -488,7 +557,7 @@ function totalPointMeta(book, day, names) {
   const noun = included === 1 ? "carta" : "carte";
   let count = `${included} ${noun}`;
   if (added.length) count += ` · + ${added.join(", ")}`;
-  else if (!day.cards_included) count = `carte conteggiate ${day.cards_priced}/${book.cards_total || 67}`;
+  else if (!day.cards_included) count = `carte conteggiate ${day.cards_priced}/${book.cards_total || cardsTotal || day.cards_priced}`;
   return {
     title: `${formatDay(day.date)} · ${money(day.total_eur)} · ${count}`,
     marker: step,
@@ -500,7 +569,7 @@ function totalSeries(range, cards) {
   const names = {};
   (cards || []).forEach((card) => { names[card.id] = cardTitle(card); });
   let pts = (book.days || []).map((d) => {
-    const meta = totalPointMeta(book, d, names);
+    const meta = totalPointMeta(book, d, names, (cards || []).length);
     return {
       date: d.date,
       value: d.total_eur,
@@ -528,7 +597,8 @@ function totalChartHtml(cards) {
     const cls = view.delta.diff < 0 ? "down" : view.delta.diff > 0 ? "up" : "";
     const arrow = view.delta.diff < 0 ? "▼" : view.delta.diff > 0 ? "▲" : "●";
     const pctTxt = view.delta.start.value ? ` (${view.delta.diff >= 0 ? "+" : ""}${((view.delta.diff / view.delta.start.value) * 100).toLocaleString("it-IT", { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%)` : "";
-    change = `<p class="delta ${cls}">${arrow} ${signedMoney(view.delta.diff)}${pctTxt} dal ${formatDay(view.delta.start.date)}</p>`;
+    const added = view.pts.length && (book.events || []).some((event) => event.date > view.pts[0].date && event.date <= view.pts[view.pts.length - 1].date);
+    change = `<p class="delta ${cls}">${arrow} ${signedMoney(view.delta.diff)}${pctTxt} dal ${formatDay(view.delta.start.date)}${added ? " · include carte aggiunte" : ""}</p>`;
   } else if (view.pts.length) {
     change = `<p class="quiet">Un solo giorno di storico.</p>`;
   }
@@ -588,6 +658,8 @@ async function renderBinder(id) {
       <button class="chip ${sortModeFor(id) === "release" ? "on" : ""}" type="button" data-sort="release">Uscita</button>
       <button class="chip ${sortModeFor(id) === "desc" ? "on" : ""}" type="button" data-sort="desc">Prezzo ↓</button>
       <button class="chip ${sortModeFor(id) === "asc" ? "on" : ""}" type="button" data-sort="asc">Prezzo ↑</button>
+      ${sortToggle(id, "pop", "Pop")}
+      ${sortToggle(id, "popchg", "Pop %")}
       <button class="chip" type="button" data-open-filters>Filtri${active ? " · " + active : ""}</button>
     </div>
     <section class="binder" id="binder">
@@ -606,6 +678,15 @@ async function renderBinder(id) {
     </section>`;
   bindBinder(id, payload);
   if (state.sheet) openFilters(id, payload);
+}
+function sortToggle(id, base, label) {
+  const mode = sortModeFor(id);
+  const desc = base + "-desc";
+  const asc = base + "-asc";
+  const on = mode === desc || mode === asc;
+  const next = mode === desc ? asc : desc;
+  const arrow = mode === asc ? "↑" : "↓";
+  return `<button class="chip ${on ? "on" : ""}" type="button" data-sort="${on ? next : desc}">${label}${on ? " " + arrow : ""}</button>`;
 }
 function bindBinder(id, payload) {
   const binder = document.getElementById("binder");
@@ -864,10 +945,12 @@ async function loadExtra() {
     catch (e) { return {}; }
   };
   const meta = activeCollection() || {};
+  const popFile = await read(meta.pop || "pop_summary.json");
   state.extra = {
     cm: await read(meta.cardmarket || "cardmarket.json"),
     hist: await read(meta.tcgnotify || "tcgnotify_history.json"),
     totals: await read(meta.totals || "total_history.json"),
+    pop: (popFile && popFile.cards) || {},
   };
   return state.extra;
 }
@@ -1004,6 +1087,7 @@ async function renderCard(id, cardId) {
         <b class="nums">${cmPrice == null ? "n/d" : money(cmPrice)}</b>
       </button>
     </div>
+    ${popBlock(card)}
     <section class="chart-card">
       <h2 class="section-title">Storico</h2>
       <div class="ranges">${options.map((p) => `<button class="chip ${p.id === state.cardRange ? "on" : ""}" type="button" data-card-range="${p.id}">${p.label}</button>`).join("")}</div>

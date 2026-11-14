@@ -1,7 +1,7 @@
 # Pokémon Wishlist – modern · backend dati
 
 Backend statico (GitHub Pages) con la buying list della wishlist "Wishlist - modern" di Leopoldo Montini
-(67 carte), ordinata per prezzo. Pensato per essere collegato a ChatGPT Sites o a qualsiasi interfaccia.
+(74 carte), ordinata per prezzo. Pensato per essere collegato a ChatGPT Sites o a qualsiasi interfaccia.
 
 **Prezzo unico (`price_final_eur`)**, Near Mint in lingua target (italiano, giapponese solo per Togepi), non gradato, spedizione esclusa. Il prezzo è `price.cents / 100`, già con la fee di CardTrader.
 
@@ -33,6 +33,12 @@ L'Action delle 07:00 (Roma) gira su un runner USA: CardTrader da lì nasconde mo
 
 La collezione Gold sta in `data/collections/gold/`. Il file EU da aggiornare ogni giorno prima delle 07:00 è `data/collections/gold/cardtrader_eu_raw.json`, stesso formato della wishlist. `cardmarket.json` e `tcgnotify_history.json` alimentano la pagina carta. `total_history.json` è una ricostruzione a gradini: una carta entra il primo giorno in cui ha un prezzo, e un giorno c'è solo se tutte le carte già uscite hanno un prezzo. Il grafico usa il tratteggio per i giorni ricostruiti e un pallino giallo nei giorni in cui sale il numero di carte. L'aggiornamento quotidiano lascia intatti quei gradini e ricalcola solo lo snapshot. L'Action delle 07:00 aggiorna la wishlist e poi Gold con `--collection gold --eu-only`.
 
+## Pop
+
+`pop_history.json` è l'archivio delle copie italiane in vendita, una serie per carta: `{date, ct_it, ct_it_src, ct_it_all, ct_it_all_src, cm_it, total, total_all}`. `ct_it` sono le copie CardTrader in lingua target, Near Mint e non gradate. `ct_it_all` è lo stesso conteggio su tutte le condizioni. `cm_it` sono le copie Cardmarket in lingua target, tutte le condizioni, prese da TCGNotify. La formula della pop è `total = ct_it + cm_it` (CardTrader ITA NM + Cardmarket ITA). `total_all = ct_it_all + cm_it`. Un valore mancante resta `null` e un giorno mancante non viene riempito.
+
+`pop_summary.json` riassume l'ultimo giorno con un `total` (`pop_total_now`, `pop_date`, `ct_it_now`, `cm_it_now`) e la variazione a 30 giorni (`pop_change_30d_pct`): il totale di quel giorno contro il totale di 30 giorni prima, oppure il giorno più vicino entro ±3 giorni. `ct_latest` è solo CardTrader e si aggiorna dal box EU. `cm_it` cambia solo quando si unisce un dump TCGNotify con `scripts/update_pop.py --tcgnotify`, quindi `total` può restare indietro rispetto a `ct_latest`. Lo script gira sul box in Europa alle 06:30 e non è nell'Action di GitHub: da un IP USA i venditori italiani diretti non si vedono. Rieseguirlo lo stesso giorno sostituisce solo i valori di quella data.
+
 **Totale Zero (`zero_total_eur`):** somma dei soli minimi Zero. Una carta senza copia Zero non entra in questo totale, ma resta in `total_eur` se ha un minimo CardTrader.
 
 ## URL pubblici (dopo l'attivazione di GitHub Pages)
@@ -61,7 +67,7 @@ Campi di ogni carta:
 | campo | significato |
 |---|---|
 | `id` | id stabile `p<pagina>-<posizione>` nell'app (ordine di inserimento) |
-| `order` | posizione d'inserimento (1–67) |
+| `order` | posizione d'inserimento (1–74) |
 | `rank_by_price` | posizione nella classifica per prezzo (1 = più cara) |
 | `name`, `set`, `set_code`, `number`, `rarity` | identificazione carta |
 | `target_language` | `it` (oppure `jp` per carte solo giapponesi) |

@@ -128,6 +128,10 @@ h1 { margin: 0; font-size: 34px; }
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere;
 }
 .sleeve .meta.num { margin: 2px 2px 0; font-size: 10px; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sleeve .pop-line { margin: 2px 2px 0; font-size: 10px; font-weight: 700; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sleeve .pop-line.up { color: #0b7a45; }
+.sleeve .pop-line.down { color: #b42318; }
+.popbox { margin: 14px 0; }
 .price-line {
   position: relative; margin-top: 6px;
   display: flex; justify-content: center; align-items: center;

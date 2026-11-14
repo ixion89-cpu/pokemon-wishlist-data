@@ -1,0 +1,123 @@
+{
+ "generated_at": "2026-11-14T11:05:30+01:00",
+ "definition": "ct_it = copie CardTrader lingua target NM non gradate; ct_it_all = tutte le condizioni; cm_it = copie Cardmarket lingua target, tutte le condizioni (TCGNotify); total = ct_it + cm_it; total_all = ct_it_all + cm_it. Nessuna interpolazione.",
+ "cards": {
+  "g1-1": {
+   "pop_total_now": 99,
+   "pop_date": "2026-11-11",
+   "ct_it_now": 35,
+   "cm_it_now": 64,
+   "pop_change_30d_pct": -9.2,
+   "pop_base_date": "2026-10-12",
+   "pop_base_total": 109,
+   "ct_latest": 31,
+   "ct_latest_date": "2026-11-14",
+   "ct_change_30d_pct": -22.5,
+   "ct_base_date": "2026-10-15"
+  },
+  "g1-2": {
+   "pop_total_now": 91,
+   "pop_date": "2026-11-10",
+   "ct_it_now": 31,
+   "cm_it_now": 60,
+   "pop_change_30d_pct": -4.2,
+   "pop_base_date": "2026-10-12",
+   "pop_base_total": 95,
+   "ct_latest": 29,
+   "ct_latest_date": "2026-11-14",
+   "ct_change_30d_pct": -14.7,
+   "ct_base_date": "2026-10-15"
+  },
+  "g1-3": {
+   "pop_total_now": 144,
+   "pop_date": "2026-11-11",
+   "ct_it_now": 47,
+   "cm_it_now": 97,
+   "pop_change_30d_pct": 13.4,
+   "pop_base_date": "2026-10-12",
+   "pop_base_total": 127,
+   "ct_latest": 44,
+   "ct_latest_date": "2026-11-14",
+   "ct_change_30d_pct": 10.0,
+   "ct_base_date": "2026-10-15"
+  },
+  "g1-4": {
+   "pop_total_now": 110,
+   "pop_date": "2026-11-11",
+   "ct_it_now": 42,
+   "cm_it_now": 68,
+   "pop_change_30d_pct": 6.8,
+   "pop_base_date": "2026-10-12",
+   "pop_base_total": 103,
+   "ct_latest": 39,
+   "ct_latest_date": "2026-11-14",
+   "ct_change_30d_pct": 0.0,
+   "ct_base_date": "2026-10-15"
+  },
+  "g1-5": {
+   "pop_total_now": 128,
+   "pop_date": "2026-11-11",
+   "ct_it_now": 52,
+   "cm_it_now": 76,
+   "pop_change_30d_pct": 19.6,
+   "pop_base_date": "2026-10-12",
+   "pop_base_total": 107,
+   "ct_latest": 49,
+   "ct_latest_date": "2026-11-14",
+   "ct_change_30d_pct": 14.0,
+   "ct_base_date": "2026-10-15"
+  },
+  "g1-6": {
+   "pop_total_now": 74,
+   "pop_date": "2026-11-11",
+   "ct_it_now": 31,
+   "cm_it_now": 43,
+   "pop_change_30d_pct": 4.2,
+   "pop_base_date": "2026-10-12",
+   "pop_base_total": 71,
+   "ct_latest": 31,
+   "ct_latest_date": "2026-11-14",
+   "ct_change_30d_pct": 6.9,
+   "ct_base_date": "2026-10-15"
+  },
+  "g1-7": {
+   "pop_total_now": 121,
+   "pop_date": "2026-11-10",
+   "ct_it_now": 41,
+   "cm_it_now": 80,
+   "pop_change_30d_pct": 17.5,
+   "pop_base_date": "2026-10-12",
+   "pop_base_total": 103,
+   "ct_latest": 51,
+   "ct_latest_date": "2026-11-14",
+   "ct_change_30d_pct": 82.1,
+   "ct_base_date": "2026-10-15"
+  },
+  "g1-8": {
+   "pop_total_now": 86,
+   "pop_date": "2026-11-10",
+   "ct_it_now": 29,
+   "cm_it_now": 57,
+   "pop_change_30d_pct": 16.2,
+   "pop_base_date": "2026-10-12",
+   "pop_base_total": 74,
+   "ct_latest": 30,
+   "ct_latest_date": "2026-11-14",
+   "ct_change_30d_pct": 36.4,
+   "ct_base_date": "2026-10-15"
+  },
+  "g1-9": {
+   "pop_total_now": 41,
+   "pop_date": "2026-11-11",
+   "ct_it_now": 15,
+   "cm_it_now": 26,
+   "pop_change_30d_pct": null,
+   "pop_base_date": null,
+   "pop_base_total": null,
+   "ct_latest": 20,
+   "ct_latest_date": "2026-11-14",
+   "ct_change_30d_pct": null,
+   "ct_base_date": null
+  }
+ }
+}

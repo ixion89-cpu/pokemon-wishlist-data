@@ -783,6 +783,26 @@ def write_total_history():
                 "cards_ct": ct_n, "cards_cm": cm_n, "cards_carry": carry_n, "source": "reconstructed",
             })
         cursor += timedelta(days=1)
+    events = []
+    card_first = {}
+    prev_ids = None
+    order = [c["id"] for c in sorted(cards, key=lambda c: (c.get("order") or 0, c.get("id") or ""))]
+    for entry in days:
+        if entry.get("source") != "snapshot":
+            continue
+        ids = set((snapshots.get(entry["date"]) or {}))
+        if prev_ids is not None:
+            added = [cid for cid in order if cid in ids and cid not in prev_ids]
+            if added:
+                events.append({
+                    "date": entry["date"],
+                    "label": "carte aggiunte",
+                    "cards": added,
+                    "count": len(added),
+                })
+                for cid in added:
+                    card_first.setdefault(cid, entry["date"])
+        prev_ids = ids
     threshold = 60 if len(cards) >= 60 else 1
     max_from = next((d["date"] for d in days if d["cards_priced"] >= threshold), None)
     payload = {
@@ -792,6 +812,8 @@ def write_total_history():
         "cards_total": len(cards),
         "discarded_cm_points": discarded,
         "note": "Fino al giorno prima degli snapshot reali il totale è ricostruito: minimo CardTrader NM di TCGNotify, altrimenti Cardmarket se non supera 3 volte la mediana CardTrader della carta, altrimenti l'ultimo prezzo entro 7 giorni. Dal 2026-11-10 si usa price_final degli snapshot.",
+        "events": events,
+        "card_first_price_day": card_first,
         "days": days,
     }
     json.dump(payload, open(os.path.join(DATA, "total_history.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)

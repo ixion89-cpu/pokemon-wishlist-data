@@ -482,12 +482,29 @@ function popPctText(value, spaced) {
   const arrow = n < 0 ? "▼" : "▲";
   return spaced ? `${arrow} ${text}%` : `${arrow}${text}%`;
 }
+const SLEEVE_KEY = "wl-binder-view";
+function sleeveMode() {
+  const saved = localStorage.getItem(SLEEVE_KEY);
+  return saved === "expanded" ? "expanded" : "compact";
+}
+function sourceShort(source) {
+  if (source === "cm") return "CM";
+  if (source === "ct") return "CT";
+  if (source === "ctz") return "CT Zero";
+  return "";
+}
 function sleevePop(card) {
   const pop = popOf(card);
   if (typeof pop.pop_total_now !== "number") return "";
   const pct = pop.pop_change_30d_pct == null ? "" : " " + popPctText(pop.pop_change_30d_pct, false);
   const cls = pop.pop_change_30d_pct == null ? "" : pop.pop_change_30d_pct < 0 ? " down" : " up";
   return `<p class="pop-line nums${cls}">👥 ${pop.pop_total_now}${pct}</p>`;
+}
+function sleevePriceChange(card) {
+  const change = changeOver(marketSeries(card).min, 30);
+  if (!(change && change.start && change.days >= 29)) return "";
+  const down = change.diff < 0;
+  return `<p class="delta ${down ? "down" : "up"}">${down ? "▼" : "▲"} ${pct(change.pct)} · ${signedMoney(change.diff)}</p>`;
 }
 function popBlock(card) {
   const pop = popOf(card);
@@ -504,21 +521,50 @@ function popBlock(card) {
     <p class="nums">${pop.pop_total_now} copie (CT ${pop.ct_it_now == null ? "n/d" : pop.ct_it_now} + CM ${pop.cm_it_now == null ? "n/d" : pop.cm_it_now}) · ${esc(formatDay(pop.pop_date))}</p>
     ${delta}${ctLine}</section>`;
 }
-function sleeveHtml(card, collectionId) {
+function sleeveHtml(card, collectionId, mode) {
   const q = quote(card);
   const bought = purchaseOf(card.id);
   const src = safeUrl(card.image_url);
   const img = src
     ? `<img src="${esc(src)}" alt="${esc(card.name)}">`
     : `<span class="fallback">${esc((card.name || "?").slice(0, 1))}</span>`;
-  return `<a class="sleeve${bought ? " bought" : ""}" href="#/c/${encodeURIComponent(collectionId)}/card/${encodeURIComponent(card.id)}">
-    ${bought ? `<span class="bought-badge" aria-label="Acquistata">✅</span>` : ""}
+  const price = `<div class="price-line"><span class="price">${q.price == null ? "n/d" : money(q.price)}</span></div>`;
+  if (mode === "compact") {
+    return `<a class="sleeve sleeve-compact${bought ? " bought" : ""}" href="#/c/${encodeURIComponent(collectionId)}/card/${encodeURIComponent(card.id)}">
+      <div class="art">${img}</div>
+      ${price}
+    </a>`;
+  }
+  if (mode !== "expanded") {
+    return `<a class="sleeve${bought ? " bought" : ""}" href="#/c/${encodeURIComponent(collectionId)}/card/${encodeURIComponent(card.id)}">
+      ${bought ? `<span class="bought-badge" aria-label="Acquistata">✅</span>` : ""}
+      <div class="art">${img}</div>
+      ${q.badge ? `<span class="src-badge"><span class="badge partial">${esc(q.badge)}</span></span>` : ""}
+      ${price}
+      <p class="name">${esc(cardTitle(card))}</p>
+      <p class="meta num">${esc(cardNumber(card))}</p>
+      ${sleevePop(card)}
+    </a>`;
+  }
+  const pop = popOf(card);
+  const source = sourceShort(q.source);
+  const popLine = typeof pop.pop_total_now === "number"
+    ? `<p class="pop-line nums${pop.pop_change_30d_pct == null ? "" : pop.pop_change_30d_pct < 0 ? " down" : " up"}">Pop ${pop.pop_total_now}${pop.pop_change_30d_pct == null ? "" : " " + popPctText(pop.pop_change_30d_pct, false)}</p>`
+    : `<p class="meta">Pop CT+CM n/d</p>`;
+  const ctOnly = typeof pop.ct_latest === "number" ? `<p class="meta">Solo CT ${pop.ct_latest}</p>` : "";
+  const owned = bought ? `<p class="owned">✅ Acquistata${bought.purchased_on ? " · " + esc(formatDay(bought.purchased_on)) : ""}</p>` : "";
+  const rarity = card.rarity ? `<p class="meta">${esc(card.rarity)}</p>` : "";
+  return `<a class="sleeve sleeve-rich${bought ? " bought" : ""}" href="#/c/${encodeURIComponent(collectionId)}/card/${encodeURIComponent(card.id)}">
     <div class="art">${img}</div>
-    ${q.badge ? `<span class="src-badge"><span class="badge partial">${esc(q.badge)}</span></span>` : ""}
-    <div class="price-line"><span class="price">${q.price == null ? "n/d" : money(q.price)}</span></div>
+    ${price}
+    ${source ? `<p class="src-label">${esc(source)}</p>` : ""}
+    ${sleevePriceChange(card)}
     <p class="name">${esc(cardTitle(card))}</p>
-    <p class="meta num">${esc(cardNumber(card))}</p>
-    ${sleevePop(card)}
+    <p class="meta">${esc(cardSetName(card))}${cardNumber(card) ? " · " + esc(cardNumber(card)) : ""}</p>
+    ${rarity}
+    ${popLine}
+    ${ctOnly}
+    ${owned}
   </a>`;
 }
 function topPreview(collectionId, cards) {
@@ -644,11 +690,17 @@ async function renderBinder(id) {
   const f = filtersFor(id);
   const active = (f.years.length + f.sets.length + f.rarities.length + f.langs.length + f.tiers.length + (f.zeroOnly ? 1 : 0));
   setChrome(meta.name, "Raccoglitore", "home");
-    const cells = slice.map((card) => sleeveHtml(card, id)).join("");
+  const rich = sleeveMode() === "expanded";
+  if (rich) await loadCsv();
+  const cells = slice.map((card) => sleeveHtml(card, id, rich ? "expanded" : "compact")).join("");
   const buy = f.buy || "todo";
   view.innerHTML = `
     ${basketHtml(payload.cards || [], payload.generated_at)}
     <div class="toolbar">
+      <div class="seg view-toggle" role="group" aria-label="Vista del raccoglitore">
+        <button class="chip ${rich ? "" : "on"}" type="button" data-sleeve="compact">Solo carta e prezzo</button>
+        <button class="chip ${rich ? "on" : ""}" type="button" data-sleeve="expanded">Vista espansa</button>
+      </div>
       <div class="seg" role="tablist" aria-label="Stato acquisto">
         <button class="chip ${buy === "all" ? "on" : ""}" type="button" data-buy="all">Tutte</button>
         <button class="chip ${buy === "todo" ? "on" : ""}" type="button" data-buy="todo">Da comprare</button>
@@ -670,7 +722,7 @@ async function renderBinder(id) {
         <button class="iconbtn" type="button" data-page="1" ${state.page >= pages - 1 ? "disabled" : ""} aria-label="Pagina successiva">›</button>
       </div>
       ${slice.length ? `<p class="page-value nums">Valore pagina ${money(pageSum.total)}${pageSum.missing ? ` · ${pageSum.missing} senza prezzo` : ""}</p>` : ""}
-      ${cards.length ? `<div class="grid">${cells}</div>` : (buy === "bought" ? `<div class="empty"><strong>Nessuna carta acquistata</strong><p>Apri una carta e segna l'acquisto. Resta raggiungibile da Tutte.</p></div>` : `<div class="empty"><strong>Nessuna carta</strong><p>Prova a togliere un filtro, oppure guarda Tutte.</p></div>`)}
+      ${cards.length ? `<div class="grid${rich ? " rich" : ""}">${cells}</div>` : (buy === "bought" ? `<div class="empty"><strong>Nessuna carta acquistata</strong><p>Apri una carta e segna l'acquisto. Resta raggiungibile da Tutte.</p></div>` : `<div class="empty"><strong>Nessuna carta</strong><p>Prova a togliere un filtro, oppure guarda Tutte.</p></div>`)}
       <div class="arrows">
         <button class="iconbtn prev" type="button" data-page="-1" ${state.page === 0 ? "disabled" : ""} aria-label="Pagina precedente">‹</button>
         <button class="iconbtn next" type="button" data-page="1" ${state.page >= pages - 1 ? "disabled" : ""} aria-label="Pagina successiva">›</button>
@@ -1282,6 +1334,12 @@ document.addEventListener("click", (e) => {
   if (unbuy) { setPurchaseOverride(unbuy.dataset.unbuy, null); render(); return; }
   const basketBtn = e.target.closest("[data-basket]");
   if (basketBtn) { state.perfBasket = basketBtn.dataset.basket; render(); return; }
+  const sleeveBtn = e.target.closest("[data-sleeve]");
+  if (sleeveBtn && (sleeveBtn.dataset.sleeve === "compact" || sleeveBtn.dataset.sleeve === "expanded")) {
+    localStorage.setItem(SLEEVE_KEY, sleeveBtn.dataset.sleeve);
+    render();
+    return;
+  }
   const sort = e.target.closest("[data-sort]");
   if (sort) {
     const id = route().id || state.collectionId;

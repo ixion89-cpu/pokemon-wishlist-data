@@ -111,6 +111,7 @@ h1 { margin: 0; font-size: 34px; }
 }
 .seg { display: flex; gap: 6px; width: 100%; }
 .seg .chip { flex: 1; text-align: center; padding-left: 6px; padding-right: 6px; white-space: nowrap; font-size: 13px; }
+.view-toggle .chip { white-space: normal; line-height: 1.15; font-size: 12px; min-height: 44px; }
 .binder { background: var(--paper); border: var(--line); border-radius: 24px; padding: 8px 8px 12px; box-shadow: var(--shadow); position: relative; touch-action: pan-y; }
 .holes { display: none; }
 .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
@@ -139,6 +140,14 @@ h1 { margin: 0; font-size: 34px; }
 }
 .src-badge { position: absolute; top: 8px; left: 8px; z-index: 2; }
 .sleeve .price { font-size: 11px; letter-spacing: -0.04em; white-space: nowrap; }
+.sleeve-compact .price { font-size: 12px; }
+.grid.rich { grid-template-columns: 1fr 1fr; align-items: start; }
+.sleeve-rich .name { font-size: 13px; min-height: 0; -webkit-line-clamp: 3; }
+.sleeve-rich .meta { margin: 2px 2px 0; font-size: 11px; line-height: 1.25; overflow-wrap: anywhere; }
+.sleeve-rich .src-label { margin: 4px 0 0; text-align: center; font-size: 10px; font-weight: 800; letter-spacing: .03em; text-transform: uppercase; }
+.sleeve-rich .delta { margin: 4px 0 0; font-size: 12px; }
+.sleeve-rich .owned { margin: 4px 0 0; font-size: 11px; font-weight: 800; }
+.sleeve-rich .pop-line { white-space: normal; }
 .price { font-size: 13px; font-weight: 800; letter-spacing: -0.03em; }
 .sleeve.bought .art, .hero.bought { filter: grayscale(1); opacity: .72; }
 .bought-badge {

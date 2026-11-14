@@ -367,11 +367,8 @@ function tierOf(price) {
 }
 function applyFilters(cards, id) {
   const f = filtersFor(id);
-  const q = f.q.trim().toLowerCase();
   return cards.filter((card) => {
     const price = quote(card);
-    const hay = (cardTitle(card) + " " + (card.name || "") + " " + cardSetName(card) + " " + cardNumber(card)).toLowerCase();
-    if (q && !hay.includes(q)) return false;
     if (f.years.length && !f.years.includes(String(card.release_year || ""))) return false;
     if (f.sets.length && !f.sets.includes(card.set)) return false;
     if (f.rarities.length && !f.rarities.includes(card.rarity)) return false;
@@ -697,22 +694,23 @@ async function renderBinder(id) {
   view.innerHTML = `
     ${basketHtml(payload.cards || [], payload.generated_at)}
     <div class="toolbar">
-      <div class="seg view-toggle" role="group" aria-label="Vista del raccoglitore">
-        <button class="chip ${rich ? "" : "on"}" type="button" data-sleeve="compact">Solo carta e prezzo</button>
-        <button class="chip ${rich ? "on" : ""}" type="button" data-sleeve="expanded">Vista espansa</button>
+      <div class="toolbar-switch">
+        <button class="sleeve-switch ${rich ? "on" : ""}" type="button" data-sleeve-toggle aria-pressed="${rich ? "true" : "false"}">
+          <span class="track" aria-hidden="true"><span class="knob"></span></span>
+          <span>Espansa</span>
+        </button>
       </div>
-      <div class="seg" role="tablist" aria-label="Stato acquisto">
+      <div class="chip-scroller" role="toolbar" aria-label="Filtri e ordinamento">
         <button class="chip ${buy === "all" ? "on" : ""}" type="button" data-buy="all">Tutte</button>
         <button class="chip ${buy === "todo" ? "on" : ""}" type="button" data-buy="todo">Da comprare</button>
         <button class="chip ${buy === "bought" ? "on" : ""}" type="button" data-buy="bought">Acquistate</button>
+        <button class="chip ${sortModeFor(id) === "release" ? "on" : ""}" type="button" data-sort="release">Uscita</button>
+        <button class="chip ${sortModeFor(id) === "desc" ? "on" : ""}" type="button" data-sort="desc">Prezzo ↓</button>
+        <button class="chip ${sortModeFor(id) === "asc" ? "on" : ""}" type="button" data-sort="asc">Prezzo ↑</button>
+        ${sortToggle(id, "pop", "Pop")}
+        ${sortToggle(id, "popchg", "Pop %")}
+        <button class="chip" type="button" data-open-filters>Filtri${active ? " · " + active : ""}</button>
       </div>
-      <input class="search" id="q" type="search" placeholder="Cerca nome o numero" value="${esc(f.q)}" enterkeyhint="search">
-      <button class="chip ${sortModeFor(id) === "release" ? "on" : ""}" type="button" data-sort="release">Uscita</button>
-      <button class="chip ${sortModeFor(id) === "desc" ? "on" : ""}" type="button" data-sort="desc">Prezzo ↓</button>
-      <button class="chip ${sortModeFor(id) === "asc" ? "on" : ""}" type="button" data-sort="asc">Prezzo ↑</button>
-      ${sortToggle(id, "pop", "Pop")}
-      ${sortToggle(id, "popchg", "Pop %")}
-      <button class="chip" type="button" data-open-filters>Filtri${active ? " · " + active : ""}</button>
     </div>
     <section class="binder" id="binder">
       <div class="holes" aria-hidden="true"><span></span><span></span></div>
@@ -750,20 +748,6 @@ function bindBinder(id, payload) {
     if (Math.abs(dx) > 48) turn(dx < 0 ? 1 : -1);
     x0 = null;
   });
-  const input = view.querySelector("#q");
-  input.addEventListener("input", (e) => {
-    filtersFor(id).q = e.target.value;
-    state.page = 0;
-    state.restoreSearch = true;
-    saveFilters();
-    renderBinder(id);
-  });
-  if (state.restoreSearch) {
-    input.focus();
-    const end = input.value.length;
-    input.setSelectionRange(end, end);
-    state.restoreSearch = false;
-  }
 }
 function turn(delta) {
   state.page += delta;
@@ -1019,7 +1003,7 @@ function marketSeries(card) {
   let notify = false;
   rows.forEach((r) => {
     const value = finalFromRow(r);
-    if (value != null) min.push({ date: r.date, value });
+    if (value != null) min.push({ date: r.date, value, notify: r.source === "tcgnotify" });
     const mid = num(r.price_avg_eur);
     if (mid != null) avg.push({ date: r.date, value: mid });
     const n = num(r.listings_count);
@@ -1148,10 +1132,7 @@ async function renderCard(id, cardId) {
         <p><span>Medio</span><b class="nums">${avgShown.length ? money(avgShown[avgShown.length - 1].value) : "n/d"}</b></p>
         <p><span>Copie</span><b class="nums">${copiesShown.length ? copiesShown[copiesShown.length - 1].value : "n/d"}</b></p>
       </div>
-      ${minShown.length || avgShown.length ? chartSvg([
-        { id: "min", label: "Minimo", color: "#111", fillColor: "#5ff0c0", fill: true, points: minShown },
-        { id: "avg", label: "Medio", color: "#111", fill: false, dashed: true, points: avgShown },
-      ], false) : `<p class="quiet">${state.chartMarket === "cardmarket" ? "Cardmarket: n/d." : "Storico del minimo in arrivo."}</p>`}
+      ${minShown.length || avgShown.length ? chartSvg(minChartSeries(minShown, avgShown), false) : `<p class="quiet">${state.chartMarket === "cardmarket" ? "Cardmarket: n/d." : "Storico del minimo in arrivo."}</p>`}
       <p class="quiet">Copie in vendita</p>
       ${copiesShown.length ? chartSvg([{ id: "qty", label: "Copie", color: "#111", fillColor: "#c9b6ff", fill: true, points: copiesShown }], false, false) : ""}
       <div class="hist-foot">
@@ -1159,7 +1140,7 @@ async function renderCard(id, cardId) {
         <p><span>MAX</span><b class="nums">${periodMax == null ? "n/d" : money(periodMax)}</b></p>
         <p><span>VAR</span><b class="nums ${periodChange && periodChange.diff < 0 ? "down" : "up"}">${periodChange && periodChange.start ? arrow + " " + signedMoney(periodChange.diff) : "n/d"}</b></p>
       </div>
-      ${pack.min.some((p) => p.notify) || pack.avg.some((p) => p.notify) ? `<p class="quiet">storico TCGNotify per i punti prima del 10 nov 2026</p>` : ""}
+      ${minShown.some((p) => p.notify) ? `<p class="quiet">Tratteggio: storico ricostruito da TCGNotify.</p>` : ""}
       ${state.chartMarket === "cardmarket" ? `<p class="quiet">Cardmarket: tutte le condizioni</p>` : ""}
     </section>
     ${purchaseBox(card, q)}
@@ -1269,45 +1250,110 @@ function contributionBlock(points, mode) {
   };
   return `<div class="list">${item(top, "Maggior contributo")}${top.card.id === low.card.id ? "" : item(low, "Minor contributo")}</div>`;
 }
+const MOVERS_PERIODS = [
+  { id: "1G", label: "1G", days: 1 },
+  { id: "7G", label: "7G", days: 7 },
+  { id: "30G", label: "30G", days: 30 },
+];
+function moversPeriod() {
+  const saved = String(localStorage.getItem("wl-movers-period") || "").toUpperCase();
+  return MOVERS_PERIODS.some((p) => p.id === saved) ? saved : "1G";
+}
+function cardPriceSeries(card) {
+  const lang = card.target_language || "it";
+  const rows = ((state.csv && state.csv.get(card.id)) || []).filter((r) => r.kind === "daily_snapshot" && r.language === lang);
+  const byDate = new Map();
+  rows.forEach((r) => {
+    const value = finalFromRow(r);
+    if (value == null) return;
+    const date = String(r.date).slice(0, 10);
+    const reconstructed = r.source === "tcgnotify";
+    const prev = byDate.get(date);
+    if (!prev || (prev.reconstructed && !reconstructed)) byDate.set(date, { date, value, reconstructed });
+  });
+  const today = dayKey(card.last_updated);
+  const now = quote(card).price;
+  if (today && now != null && !byDate.has(today)) byDate.set(today, { date: today, value: now, reconstructed: false });
+  return [...byDate.values()].sort((a, b) => a.date.localeCompare(b.date));
+}
+function moverStart(points, end, daysBack) {
+  const boundary = addDays(end.date, -daysBack);
+  const floor = addDays(boundary, -7);
+  let start = null;
+  points.forEach((p) => {
+    if (p.date >= floor && p.date <= boundary) start = p;
+  });
+  return start;
+}
+function minChartSeries(minShown, avgShown) {
+  const real = minShown.filter((p) => !p.notify);
+  const recon = minShown.filter((p) => p.notify);
+  if (recon.length && real.length) {
+    const bridge = real.find((p) => p.date >= recon[recon.length - 1].date) || real[0];
+    if (bridge && recon[recon.length - 1].date !== bridge.date) recon.push(bridge);
+  }
+  const series = [];
+  if (recon.length) series.push({ id: "recon", label: "Ricostruito", color: "#111", fill: false, dashed: true, points: recon });
+  if (real.length) series.push({ id: "min", label: "Minimo", color: "#111", fillColor: "#5ff0c0", fill: true, points: real });
+  if (avgShown.length) series.push({ id: "avg", label: "Medio", color: "#111", fill: false, dashed: true, points: avgShown });
+  return series;
+}
+function moverList(rows, key) {
+  if (!state.moversMore) state.moversMore = {};
+  const open = !!state.moversMore[key];
+  const shown = open ? rows : rows.slice(0, 10);
+  const items = shown.map((r) => {
+    const arrow = r.diff < 0 ? "▼" : "▲";
+    const cls = r.diff < 0 ? "down" : "up";
+    return `<a class="mover" href="#/c/${encodeURIComponent(r.collectionId)}/card/${encodeURIComponent(r.card.id)}">
+      <img alt="" src="${esc(safeUrl(r.card.image_url))}">
+      <div><strong>${esc(cardTitle(r.card))}</strong><p class="meta">${formatDay(r.start)} → ${formatDay(r.end)}${r.reconstructed ? " · ricostruito" : ""}</p></div>
+      <div class="chg delta ${cls}">${arrow} ${signedMoney(r.diff)}<br>${arrow} ${pct(r.pct)}</div>
+    </a>`;
+  }).join("");
+  const more = !open && rows.length > 10
+    ? `<button class="chip" type="button" data-movers-more="${esc(key)}">Mostra tutti · ${rows.length}</button>`
+    : "";
+  return items + more;
+}
 async function renderMovers() {
-  setChrome("In arrivo", "Movimenti", "movers");
-  await loadHistory();
-  await loadCollections();
+  setChrome("Portafoglio", "Movimenti", "movers");
+  await loadCsv();
   const meta = activeCollection();
   const payload = meta ? await loadPayload(meta) : { cards: [] };
-  const snaps = [...state.history.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+  const period = MOVERS_PERIODS.find((p) => p.id === moversPeriod());
   const rows = [];
-  let span = null;
-  if (snaps.length >= 2) {
-    const [d0, p0] = snaps[snaps.length - 2];
-    const [d1, p1] = snaps[snaps.length - 1];
-    span = [d0, d1];
-    const before = new Map((p0.cards || []).map((c) => [c.id, quote(c).price]));
-    (p1.cards || []).forEach((card) => {
-      const now = quote(card).price;
-      const was = before.has(card.id) ? before.get(card.id) : null;
-      if (now == null || was == null) return;
-      rows.push({ card, diff: now - was, pct: was ? ((now - was) / was) * 100 : null, start: d0, end: d1 });
+  (payload.cards || []).forEach((card) => {
+    const series = cardPriceSeries(card);
+    if (!series.length) return;
+    const end = series[series.length - 1];
+    const start = moverStart(series, end, period.days);
+    if (!start || start.date === end.date) return;
+    const diff = Math.round((end.value - start.value) * 100) / 100;
+    if (!diff) return;
+    rows.push({
+      card,
+      collectionId: meta.id,
+      diff,
+      start: start.date,
+      end: end.date,
+      pct: start.value ? ((end.value - start.value) / start.value) * 100 : null,
+      reconstructed: !!start.reconstructed,
     });
-    rows.sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff));
-  }
-  const list = rows.slice(0, 12).map((r) => {
-    const arrow = r.diff < 0 ? "▼" : r.diff > 0 ? "▲" : "●";
-    const cls = r.diff < 0 ? "down" : r.diff > 0 ? "up" : "";
-    return `<a class="mover" href="#/c/${encodeURIComponent(meta.id)}/card/${encodeURIComponent(r.card.id)}">
-    <img alt="" src="${esc(safeUrl(r.card.image_url))}">
-    <div><strong>${esc(r.card.name)}</strong><p class="meta">${esc(r.card.set)} · ${formatDay(r.start)} → ${formatDay(r.end)}</p></div>
-    <div class="chg delta ${cls}">${arrow} ${signedMoney(r.diff)}<br>${arrow} ${pct(r.pct)}</div>
-  </a>`;
-  }).join("");
-  const note = rows.length
-    ? ""
-    : `<div class="empty" style="text-align:left"><strong>Movimenti — in arrivo</strong>
-    <p>${span ? "I due snapshot non hanno un prezzo confrontabile." : "C'è un solo snapshot giornaliero."}</p></div>`;
+  });
+  const up = rows.filter((r) => r.diff > 0).sort((a, b) => b.diff - a.diff);
+  const down = rows.filter((r) => r.diff < 0).sort((a, b) => a.diff - b.diff);
+  const reconstructed = rows.some((r) => r.reconstructed);
+  const empty = !rows.length
+    ? `<div class="empty"><strong>Nessun movimento</strong><p>Nessuna carta ha un prezzo confrontabile su questo periodo.</p></div>`
+    : "";
   view.innerHTML = `
-    ${sourceStamp(payload.generated_at)}
-    ${note}
-    <div class="list" style="margin-top:12px">${list}</div>`;
+    <div class="ranges">${MOVERS_PERIODS.map((p) => `<button class="chip ${p.id === period.id ? "on" : ""}" type="button" data-movers="${p.id}">${p.label}</button>`).join("")}</div>
+    ${reconstructed ? `<p class="quiet">storico ricostruito da TCGNotify</p>` : ""}
+    ${empty}
+    ${up.length ? `<h2 class="section-title">Rialzi · ${up.length}</h2><div class="list">${moverList(up, period.id + "-up")}</div>` : ""}
+    ${down.length ? `<h2 class="section-title">Ribassi · ${down.length}</h2><div class="list">${moverList(down, period.id + "-down")}</div>` : ""}
+  `;
 }
 document.addEventListener("click", (e) => {
   const collectionBtn = e.target.closest("[data-collection]");
@@ -1334,9 +1380,23 @@ document.addEventListener("click", (e) => {
   if (unbuy) { setPurchaseOverride(unbuy.dataset.unbuy, null); render(); return; }
   const basketBtn = e.target.closest("[data-basket]");
   if (basketBtn) { state.perfBasket = basketBtn.dataset.basket; render(); return; }
-  const sleeveBtn = e.target.closest("[data-sleeve]");
-  if (sleeveBtn && (sleeveBtn.dataset.sleeve === "compact" || sleeveBtn.dataset.sleeve === "expanded")) {
-    localStorage.setItem(SLEEVE_KEY, sleeveBtn.dataset.sleeve);
+  const sleeveToggle = e.target.closest("[data-sleeve-toggle]");
+  if (sleeveToggle) {
+    localStorage.setItem(SLEEVE_KEY, sleeveMode() === "expanded" ? "compact" : "expanded");
+    render();
+    return;
+  }
+  const moversBtn = e.target.closest("[data-movers]");
+  if (moversBtn && MOVERS_PERIODS.some((p) => p.id === moversBtn.dataset.movers)) {
+    localStorage.setItem("wl-movers-period", moversBtn.dataset.movers);
+    state.moversMore = {};
+    render();
+    return;
+  }
+  const moversMore = e.target.closest("[data-movers-more]");
+  if (moversMore) {
+    if (!state.moversMore) state.moversMore = {};
+    state.moversMore[moversMore.dataset.moversMore] = true;
     render();
     return;
   }

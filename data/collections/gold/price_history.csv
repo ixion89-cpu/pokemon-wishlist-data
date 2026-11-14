@@ -1,36 +1,264 @@
 date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,listings_count,source,kind,price_ctz_eur,price_ct_eur,price_avg_eur
+2026-10-15,g1-1,351690,Mega Gardevoir ex,MEG,187,128.04,it,Near Mint,40,tcgnotify,daily_snapshot,,128.04,140.21
+2026-10-16,g1-1,351690,Mega Gardevoir ex,MEG,187,128.04,it,Near Mint,37,tcgnotify,daily_snapshot,,128.04,140.21
+2026-10-17,g1-1,351690,Mega Gardevoir ex,MEG,187,128.04,it,Near Mint,37,tcgnotify,daily_snapshot,,128.04,140.21
+2026-10-18,g1-1,351690,Mega Gardevoir ex,MEG,187,128.04,it,Near Mint,37,tcgnotify,daily_snapshot,,128.04,140.21
+2026-10-19,g1-1,351690,Mega Gardevoir ex,MEG,187,128.04,it,Near Mint,,tcgnotify,daily_snapshot,,128.04,
+2026-10-20,g1-1,351690,Mega Gardevoir ex,MEG,187,128.04,it,Near Mint,38,tcgnotify,daily_snapshot,,128.04,141.0
+2026-10-21,g1-1,351690,Mega Gardevoir ex,MEG,187,128.04,it,Near Mint,37,tcgnotify,daily_snapshot,,128.04,141.0
+2026-10-22,g1-1,351690,Mega Gardevoir ex,MEG,187,128.04,it,Near Mint,36,tcgnotify,daily_snapshot,,128.04,141.95
+2026-10-23,g1-1,351690,Mega Gardevoir ex,MEG,187,128.04,it,Near Mint,37,tcgnotify,daily_snapshot,,128.04,141.67
+2026-10-24,g1-1,351690,Mega Gardevoir ex,MEG,187,128.04,it,Near Mint,37,tcgnotify,daily_snapshot,,128.04,141.67
+2026-10-25,g1-1,351690,Mega Gardevoir ex,MEG,187,128.04,it,Near Mint,38,tcgnotify,daily_snapshot,,128.04,141.67
+2026-10-26,g1-1,351690,Mega Gardevoir ex,MEG,187,128.04,it,Near Mint,37,tcgnotify,daily_snapshot,,128.04,141.67
+2026-10-27,g1-1,351690,Mega Gardevoir ex,MEG,187,128.04,it,Near Mint,37,tcgnotify,daily_snapshot,,128.04,141.67
+2026-10-28,g1-1,351690,Mega Gardevoir ex,MEG,187,128.04,it,Near Mint,37,tcgnotify,daily_snapshot,,128.04,142.28
+2026-10-29,g1-1,351690,Mega Gardevoir ex,MEG,187,128.04,it,Near Mint,38,tcgnotify,daily_snapshot,,128.04,141.13
+2026-10-30,g1-1,351690,Mega Gardevoir ex,MEG,187,128.04,it,Near Mint,39,tcgnotify,daily_snapshot,,128.04,139.09
+2026-10-31,g1-1,351690,Mega Gardevoir ex,MEG,187,128.04,it,Near Mint,38,tcgnotify,daily_snapshot,,128.04,139.09
+2026-11-01,g1-1,351690,Mega Gardevoir ex,MEG,187,128.02,it,Near Mint,38,tcgnotify,daily_snapshot,,128.02,139.5
+2026-11-02,g1-1,351690,Mega Gardevoir ex,MEG,187,128.02,it,Near Mint,38,tcgnotify,daily_snapshot,,128.02,139.5
+2026-11-03,g1-1,351690,Mega Gardevoir ex,MEG,187,130.64,it,Near Mint,37,tcgnotify,daily_snapshot,,130.64,140.32
+2026-11-04,g1-1,351690,Mega Gardevoir ex,MEG,187,130.64,it,Near Mint,36,tcgnotify,daily_snapshot,,130.64,140.29
+2026-11-05,g1-1,351690,Mega Gardevoir ex,MEG,187,120.63,it,Near Mint,36,tcgnotify,daily_snapshot,,120.63,128.97
+2026-11-06,g1-1,351690,Mega Gardevoir ex,MEG,187,120.63,it,Near Mint,33,tcgnotify,daily_snapshot,,120.63,127.3
+2026-11-07,g1-1,351690,Mega Gardevoir ex,MEG,187,120.61,it,Near Mint,34,tcgnotify,daily_snapshot,,120.61,123.96
+2026-11-08,g1-1,351690,Mega Gardevoir ex,MEG,187,120.61,it,Near Mint,34,tcgnotify,daily_snapshot,,120.61,123.96
+2026-11-09,g1-1,351690,Mega Gardevoir ex,MEG,187,120.61,it,Near Mint,34,tcgnotify,daily_snapshot,,120.61,123.96
+2026-11-10,g1-1,351690,Mega Gardevoir ex,MEG,187,119.64,it,Near Mint,35,tcgnotify,daily_snapshot,,119.64,122.35
 2026-11-11,g1-1,351690,Mega Gardevoir ex,MEG,187,120.42,it,Near Mint,28,cardtrader_listings_min,daily_snapshot,120.42,119.64,494.06
 2026-11-12,g1-1,351690,Mega Gardevoir ex,MEG,187,120.42,it,Near Mint,27,cardtrader_listings_min,daily_snapshot,120.42,119.64,196.83
 2026-11-13,g1-1,351690,Mega Gardevoir ex,MEG,187,120.42,it,Near Mint,26,cardtrader_listings_min,daily_snapshot,120.42,119.64,192.9
 2026-11-14,g1-1,351690,Mega Gardevoir ex,MEG,187,120.42,it,Near Mint,25,cardtrader_listings_min,daily_snapshot,120.42,119.64,194.62
+2026-10-15,g1-2,351691,Mega Lucario ex,MEG,188,167.23,it,Near Mint,34,tcgnotify,daily_snapshot,,167.23,169.02
+2026-10-16,g1-2,351691,Mega Lucario ex,MEG,188,167.13,it,Near Mint,33,tcgnotify,daily_snapshot,,167.13,168.74
+2026-10-17,g1-2,351691,Mega Lucario ex,MEG,188,167.13,it,Near Mint,32,tcgnotify,daily_snapshot,,167.13,168.74
+2026-10-18,g1-2,351691,Mega Lucario ex,MEG,188,167.02,it,Near Mint,32,tcgnotify,daily_snapshot,,167.02,168.71
+2026-10-19,g1-2,351691,Mega Lucario ex,MEG,188,160.0,it,Near Mint,58,tcgnotify,daily_snapshot,,,165.0
+2026-10-20,g1-2,351691,Mega Lucario ex,MEG,188,167.0,it,Near Mint,34,tcgnotify,daily_snapshot,,167.0,168.69
+2026-10-21,g1-2,351691,Mega Lucario ex,MEG,188,166.99,it,Near Mint,32,tcgnotify,daily_snapshot,,166.99,168.69
+2026-10-22,g1-2,351691,Mega Lucario ex,MEG,188,166.99,it,Near Mint,32,tcgnotify,daily_snapshot,,166.99,168.88
+2026-10-23,g1-2,351691,Mega Lucario ex,MEG,188,166.97,it,Near Mint,33,tcgnotify,daily_snapshot,,166.97,168.68
+2026-10-24,g1-2,351691,Mega Lucario ex,MEG,188,166.97,it,Near Mint,32,tcgnotify,daily_snapshot,,166.97,168.69
+2026-10-25,g1-2,351691,Mega Lucario ex,MEG,188,166.97,it,Near Mint,31,tcgnotify,daily_snapshot,,166.97,169.25
+2026-10-26,g1-2,351691,Mega Lucario ex,MEG,188,167.63,it,Near Mint,30,tcgnotify,daily_snapshot,,167.63,169.31
+2026-10-27,g1-2,351691,Mega Lucario ex,MEG,188,167.6,it,Near Mint,32,tcgnotify,daily_snapshot,,167.6,169.02
+2026-10-28,g1-2,351691,Mega Lucario ex,MEG,188,167.58,it,Near Mint,31,tcgnotify,daily_snapshot,,167.58,169.01
+2026-10-29,g1-2,351691,Mega Lucario ex,MEG,188,166.61,it,Near Mint,31,tcgnotify,daily_snapshot,,166.61,168.62
+2026-10-30,g1-2,351691,Mega Lucario ex,MEG,188,166.61,it,Near Mint,21,tcgnotify,daily_snapshot,,166.61,173.49
+2026-10-31,g1-2,351691,Mega Lucario ex,MEG,188,166.61,it,Near Mint,33,tcgnotify,daily_snapshot,,166.61,168.47
+2026-11-01,g1-2,351691,Mega Lucario ex,MEG,188,166.6,it,Near Mint,34,tcgnotify,daily_snapshot,,166.6,168.47
+2026-11-02,g1-2,351691,Mega Lucario ex,MEG,188,165.54,it,Near Mint,34,tcgnotify,daily_snapshot,,165.54,167.79
+2026-11-03,g1-2,351691,Mega Lucario ex,MEG,188,165.53,it,Near Mint,34,tcgnotify,daily_snapshot,,165.53,167.69
+2026-11-04,g1-2,351691,Mega Lucario ex,MEG,188,165.52,it,Near Mint,33,tcgnotify,daily_snapshot,,165.52,167.97
+2026-11-05,g1-2,351691,Mega Lucario ex,MEG,188,165.51,it,Near Mint,33,tcgnotify,daily_snapshot,,165.51,167.87
+2026-11-06,g1-2,351691,Mega Lucario ex,MEG,188,165.52,it,Near Mint,32,tcgnotify,daily_snapshot,,165.52,167.87
+2026-11-07,g1-2,351691,Mega Lucario ex,MEG,188,165.52,it,Near Mint,32,tcgnotify,daily_snapshot,,165.52,167.38
+2026-11-08,g1-2,351691,Mega Lucario ex,MEG,188,165.54,it,Near Mint,30,tcgnotify,daily_snapshot,,165.54,167.5
+2026-11-09,g1-2,351691,Mega Lucario ex,MEG,188,165.54,it,Near Mint,31,tcgnotify,daily_snapshot,,165.54,167.5
+2026-11-10,g1-2,351691,Mega Lucario ex,MEG,188,164.64,it,Near Mint,31,tcgnotify,daily_snapshot,,164.64,167.31
 2026-11-11,g1-2,351691,Mega Lucario ex,MEG,188,165.54,it,Near Mint,28,cardtrader_listings_min,daily_snapshot,165.54,164.64,206.29
 2026-11-12,g1-2,351691,Mega Lucario ex,MEG,188,165.54,it,Near Mint,27,cardtrader_listings_min,daily_snapshot,165.54,164.64,206.27
 2026-11-13,g1-2,351691,Mega Lucario ex,MEG,188,165.54,it,Near Mint,27,cardtrader_listings_min,daily_snapshot,165.54,164.64,206.65
 2026-11-14,g1-2,351691,Mega Lucario ex,MEG,188,163.64,it,Near Mint,26,cardtrader_listings_min,daily_snapshot,163.64,164.64,206.38
+2026-10-15,g1-3,356916,Mega Charizard X ex,PFL,130,228.44,it,Near Mint,40,tcgnotify,daily_snapshot,,228.44,230.09
+2026-10-16,g1-3,356916,Mega Charizard X ex,PFL,130,228.44,it,Near Mint,37,tcgnotify,daily_snapshot,,228.44,233.61
+2026-10-17,g1-3,356916,Mega Charizard X ex,PFL,130,228.44,it,Near Mint,38,tcgnotify,daily_snapshot,,228.44,236.1
+2026-10-18,g1-3,356916,Mega Charizard X ex,PFL,130,228.44,it,Near Mint,39,tcgnotify,daily_snapshot,,228.44,236.1
+2026-10-19,g1-3,356916,Mega Charizard X ex,PFL,130,214.9,it,Near Mint,93,tcgnotify,daily_snapshot,,,227.8
+2026-10-20,g1-3,356916,Mega Charizard X ex,PFL,130,200.64,it,Near Mint,43,tcgnotify,daily_snapshot,,200.64,200.64
+2026-10-21,g1-3,356916,Mega Charizard X ex,PFL,130,200.64,it,Near Mint,41,tcgnotify,daily_snapshot,,200.64,200.64
+2026-10-22,g1-3,356916,Mega Charizard X ex,PFL,130,200.64,it,Near Mint,40,tcgnotify,daily_snapshot,,200.64,200.64
+2026-10-23,g1-3,356916,Mega Charizard X ex,PFL,130,230.63,it,Near Mint,39,tcgnotify,daily_snapshot,,230.63,244.38
+2026-10-24,g1-3,356916,Mega Charizard X ex,PFL,130,230.63,it,Near Mint,39,tcgnotify,daily_snapshot,,230.63,244.38
+2026-10-25,g1-3,356916,Mega Charizard X ex,PFL,130,230.63,it,Near Mint,39,tcgnotify,daily_snapshot,,230.63,244.38
+2026-10-26,g1-3,356916,Mega Charizard X ex,PFL,130,228.64,it,Near Mint,39,tcgnotify,daily_snapshot,,228.64,241.23
+2026-10-27,g1-3,356916,Mega Charizard X ex,PFL,130,225.53,it,Near Mint,41,tcgnotify,daily_snapshot,,225.53,231.58
+2026-10-28,g1-3,356916,Mega Charizard X ex,PFL,130,225.53,it,Near Mint,41,tcgnotify,daily_snapshot,,225.53,231.58
+2026-10-29,g1-3,356916,Mega Charizard X ex,PFL,130,223.64,it,Near Mint,43,tcgnotify,daily_snapshot,,223.64,229.72
+2026-10-30,g1-3,356916,Mega Charizard X ex,PFL,130,223.64,it,Near Mint,43,tcgnotify,daily_snapshot,,223.64,229.72
+2026-10-31,g1-3,356916,Mega Charizard X ex,PFL,130,223.64,it,Near Mint,43,tcgnotify,daily_snapshot,,223.64,230.87
+2026-11-01,g1-3,356916,Mega Charizard X ex,PFL,130,223.62,it,Near Mint,43,tcgnotify,daily_snapshot,,223.62,228.69
+2026-11-02,g1-3,356916,Mega Charizard X ex,PFL,130,223.62,it,Near Mint,44,tcgnotify,daily_snapshot,,223.62,228.32
+2026-11-03,g1-3,356916,Mega Charizard X ex,PFL,130,223.62,it,Near Mint,44,tcgnotify,daily_snapshot,,223.62,228.32
+2026-11-04,g1-3,356916,Mega Charizard X ex,PFL,130,223.62,it,Near Mint,44,tcgnotify,daily_snapshot,,223.62,228.66
+2026-11-05,g1-3,356916,Mega Charizard X ex,PFL,130,223.62,it,Near Mint,45,tcgnotify,daily_snapshot,,223.62,228.32
+2026-11-06,g1-3,356916,Mega Charizard X ex,PFL,130,223.62,it,Near Mint,40,tcgnotify,daily_snapshot,,223.62,226.65
+2026-11-07,g1-3,356916,Mega Charizard X ex,PFL,130,217.88,it,Near Mint,40,tcgnotify,daily_snapshot,,217.88,226.23
+2026-11-08,g1-3,356916,Mega Charizard X ex,PFL,130,217.88,it,Near Mint,41,tcgnotify,daily_snapshot,,217.88,225.11
+2026-11-09,g1-3,356916,Mega Charizard X ex,PFL,130,219.04,it,Near Mint,41,tcgnotify,daily_snapshot,,219.04,225.36
+2026-11-10,g1-3,356916,Mega Charizard X ex,PFL,130,219.03,it,Near Mint,41,tcgnotify,daily_snapshot,,219.03,224.71
 2026-11-11,g1-3,356916,Mega Charizard X ex,PFL,130,218.49,it,Near Mint,33,cardtrader_listings_min,daily_snapshot,218.49,220.64,520.03
 2026-11-12,g1-3,356916,Mega Charizard X ex,PFL,130,218.36,it,Near Mint,32,cardtrader_listings_min,daily_snapshot,218.36,220.64,526.92
 2026-11-13,g1-3,356916,Mega Charizard X ex,PFL,130,216.17,it,Near Mint,33,cardtrader_listings_min,daily_snapshot,216.17,220.64,519.64
 2026-11-14,g1-3,356916,Mega Charizard X ex,PFL,130,216.17,it,Near Mint,32,cardtrader_listings_min,daily_snapshot,216.17,220.64,519.15
+2026-10-15,g1-4,370931,Mega Charizard Y ex,ASC,294,288.5,it,Near Mint,39,tcgnotify,daily_snapshot,,288.5,289.48
+2026-10-16,g1-4,370931,Mega Charizard Y ex,ASC,294,288.5,it,Near Mint,36,tcgnotify,daily_snapshot,,288.5,290.06
+2026-10-17,g1-4,370931,Mega Charizard Y ex,ASC,294,288.5,it,Near Mint,38,tcgnotify,daily_snapshot,,288.5,289.41
+2026-10-18,g1-4,370931,Mega Charizard Y ex,ASC,294,288.5,it,Near Mint,37,tcgnotify,daily_snapshot,,288.5,289.91
+2026-10-19,g1-4,370931,Mega Charizard Y ex,ASC,294,284.9,it,Near Mint,62,tcgnotify,daily_snapshot,,,289.9
+2026-10-20,g1-4,370931,Mega Charizard Y ex,ASC,294,287.64,it,Near Mint,41,tcgnotify,daily_snapshot,,287.64,289.22
+2026-10-21,g1-4,370931,Mega Charizard Y ex,ASC,294,287.64,it,Near Mint,41,tcgnotify,daily_snapshot,,287.64,289.19
+2026-10-22,g1-4,370931,Mega Charizard Y ex,ASC,294,287.64,it,Near Mint,40,tcgnotify,daily_snapshot,,287.64,289.69
+2026-10-23,g1-4,370931,Mega Charizard Y ex,ASC,294,280.64,it,Near Mint,41,tcgnotify,daily_snapshot,,280.64,287.9
+2026-10-24,g1-4,370931,Mega Charizard Y ex,ASC,294,279.64,it,Near Mint,38,tcgnotify,daily_snapshot,,279.64,285.31
+2026-10-25,g1-4,370931,Mega Charizard Y ex,ASC,294,279.64,it,Near Mint,38,tcgnotify,daily_snapshot,,279.64,285.25
+2026-10-26,g1-4,370931,Mega Charizard Y ex,ASC,294,279.64,it,Near Mint,36,tcgnotify,daily_snapshot,,279.64,285.14
+2026-10-27,g1-4,370931,Mega Charizard Y ex,ASC,294,279.64,it,Near Mint,37,tcgnotify,daily_snapshot,,279.64,285.14
+2026-10-28,g1-4,370931,Mega Charizard Y ex,ASC,294,274.79,it,Near Mint,35,tcgnotify,daily_snapshot,,274.79,283.78
+2026-10-29,g1-4,370931,Mega Charizard Y ex,ASC,294,274.79,it,Near Mint,35,tcgnotify,daily_snapshot,,274.79,283.3
+2026-10-30,g1-4,370931,Mega Charizard Y ex,ASC,294,274.79,it,Near Mint,35,tcgnotify,daily_snapshot,,274.79,282.67
+2026-10-31,g1-4,370931,Mega Charizard Y ex,ASC,294,274.79,it,Near Mint,35,tcgnotify,daily_snapshot,,274.79,282.67
+2026-11-01,g1-4,370931,Mega Charizard Y ex,ASC,294,274.79,it,Near Mint,36,tcgnotify,daily_snapshot,,274.79,282.67
+2026-11-02,g1-4,370931,Mega Charizard Y ex,ASC,294,274.79,it,Near Mint,36,tcgnotify,daily_snapshot,,274.79,283.46
+2026-11-03,g1-4,370931,Mega Charizard Y ex,ASC,294,274.79,it,Near Mint,35,tcgnotify,daily_snapshot,,274.79,283.46
+2026-11-04,g1-4,370931,Mega Charizard Y ex,ASC,294,274.79,it,Near Mint,35,tcgnotify,daily_snapshot,,274.79,283.46
+2026-11-05,g1-4,370931,Mega Charizard Y ex,ASC,294,271.64,it,Near Mint,38,tcgnotify,daily_snapshot,,271.64,280.77
+2026-11-06,g1-4,370931,Mega Charizard Y ex,ASC,294,263.51,it,Near Mint,38,tcgnotify,daily_snapshot,,263.51,279.21
+2026-11-07,g1-4,370931,Mega Charizard Y ex,ASC,294,262.46,it,Near Mint,38,tcgnotify,daily_snapshot,,262.46,278.73
+2026-11-08,g1-4,370931,Mega Charizard Y ex,ASC,294,262.46,it,Near Mint,39,tcgnotify,daily_snapshot,,262.46,278.08
+2026-11-09,g1-4,370931,Mega Charizard Y ex,ASC,294,263.85,it,Near Mint,38,tcgnotify,daily_snapshot,,263.85,278.22
+2026-11-10,g1-4,370931,Mega Charizard Y ex,ASC,294,263.64,it,Near Mint,38,tcgnotify,daily_snapshot,,263.64,276.02
 2026-11-11,g1-4,370931,Mega Charizard Y ex,ASC,294,263.2,it,Near Mint,37,cardtrader_listings_min,daily_snapshot,263.2,263.64,315.48
 2026-11-12,g1-4,370931,Mega Charizard Y ex,ASC,294,263.2,it,Near Mint,37,cardtrader_listings_min,daily_snapshot,263.2,263.64,315.48
 2026-11-13,g1-4,370931,Mega Charizard Y ex,ASC,294,264.74,it,Near Mint,37,cardtrader_listings_min,daily_snapshot,264.74,263.64,315.52
 2026-11-14,g1-4,370931,Mega Charizard Y ex,ASC,294,264.74,it,Near Mint,35,cardtrader_listings_min,daily_snapshot,264.74,263.64,317.64
+2026-10-15,g1-5,370932,Mega Dragonite ex,ASC,295,116.12,it,Near Mint,43,tcgnotify,daily_snapshot,,116.12,119.86
+2026-10-16,g1-5,370932,Mega Dragonite ex,ASC,295,116.09,it,Near Mint,41,tcgnotify,daily_snapshot,,116.09,118.93
+2026-10-17,g1-5,370932,Mega Dragonite ex,ASC,295,116.08,it,Near Mint,42,tcgnotify,daily_snapshot,,116.08,119.11
+2026-10-18,g1-5,370932,Mega Dragonite ex,ASC,295,116.06,it,Near Mint,40,tcgnotify,daily_snapshot,,116.06,119.1
+2026-10-19,g1-5,370932,Mega Dragonite ex,ASC,295,94.99,it,Near Mint,74,tcgnotify,daily_snapshot,,,110.0
+2026-10-20,g1-5,370932,Mega Dragonite ex,ASC,295,114.0,it,Near Mint,45,tcgnotify,daily_snapshot,,114.0,118.22
+2026-10-21,g1-5,370932,Mega Dragonite ex,ASC,295,105.64,it,Near Mint,45,tcgnotify,daily_snapshot,,105.64,114.01
+2026-10-22,g1-5,370932,Mega Dragonite ex,ASC,295,109.26,it,Near Mint,45,tcgnotify,daily_snapshot,,109.26,118.14
+2026-10-23,g1-5,370932,Mega Dragonite ex,ASC,295,109.26,it,Near Mint,45,tcgnotify,daily_snapshot,,109.26,118.12
+2026-10-24,g1-5,370932,Mega Dragonite ex,ASC,295,109.26,it,Near Mint,46,tcgnotify,daily_snapshot,,109.26,118.08
+2026-10-25,g1-5,370932,Mega Dragonite ex,ASC,295,109.26,it,Near Mint,46,tcgnotify,daily_snapshot,,109.26,117.97
+2026-10-26,g1-5,370932,Mega Dragonite ex,ASC,295,109.26,it,Near Mint,45,tcgnotify,daily_snapshot,,109.26,117.97
+2026-10-27,g1-5,370932,Mega Dragonite ex,ASC,295,109.26,it,Near Mint,45,tcgnotify,daily_snapshot,,109.26,117.7
+2026-10-28,g1-5,370932,Mega Dragonite ex,ASC,295,109.26,it,Near Mint,44,tcgnotify,daily_snapshot,,109.26,117.33
+2026-10-29,g1-5,370932,Mega Dragonite ex,ASC,295,110.64,it,Near Mint,47,tcgnotify,daily_snapshot,,110.64,114.5
+2026-10-30,g1-5,370932,Mega Dragonite ex,ASC,295,110.62,it,Near Mint,48,tcgnotify,daily_snapshot,,110.62,112.96
+2026-10-31,g1-5,370932,Mega Dragonite ex,ASC,295,110.26,it,Near Mint,48,tcgnotify,daily_snapshot,,110.26,112.89
+2026-11-01,g1-5,370932,Mega Dragonite ex,ASC,295,110.26,it,Near Mint,48,tcgnotify,daily_snapshot,,110.26,112.89
+2026-11-02,g1-5,370932,Mega Dragonite ex,ASC,295,110.26,it,Near Mint,48,tcgnotify,daily_snapshot,,110.26,112.89
+2026-11-03,g1-5,370932,Mega Dragonite ex,ASC,295,109.64,it,Near Mint,50,tcgnotify,daily_snapshot,,109.64,111.2
+2026-11-04,g1-5,370932,Mega Dragonite ex,ASC,295,106.26,it,Near Mint,50,tcgnotify,daily_snapshot,,106.26,110.89
+2026-11-05,g1-5,370932,Mega Dragonite ex,ASC,295,106.26,it,Near Mint,50,tcgnotify,daily_snapshot,,106.26,110.35
+2026-11-06,g1-5,370932,Mega Dragonite ex,ASC,295,106.26,it,Near Mint,49,tcgnotify,daily_snapshot,,106.26,110.02
+2026-11-07,g1-5,370932,Mega Dragonite ex,ASC,295,106.26,it,Near Mint,48,tcgnotify,daily_snapshot,,106.26,109.74
+2026-11-08,g1-5,370932,Mega Dragonite ex,ASC,295,106.26,it,Near Mint,47,tcgnotify,daily_snapshot,,106.26,109.65
+2026-11-09,g1-5,370932,Mega Dragonite ex,ASC,295,106.26,it,Near Mint,48,tcgnotify,daily_snapshot,,106.26,109.53
+2026-11-10,g1-5,370932,Mega Dragonite ex,ASC,295,106.26,it,Near Mint,49,tcgnotify,daily_snapshot,,106.26,109.25
 2026-11-11,g1-5,370932,Mega Dragonite ex,ASC,295,109.23,it,Near Mint,45,cardtrader_listings_min,daily_snapshot,109.23,106.26,350.41
 2026-11-12,g1-5,370932,Mega Dragonite ex,ASC,295,109.23,it,Near Mint,45,cardtrader_listings_min,daily_snapshot,109.23,106.26,348.88
 2026-11-13,g1-5,370932,Mega Dragonite ex,ASC,295,109.23,it,Near Mint,44,cardtrader_listings_min,daily_snapshot,109.23,106.26,352.37
 2026-11-14,g1-5,370932,Mega Dragonite ex,ASC,295,109.22,it,Near Mint,45,cardtrader_listings_min,daily_snapshot,109.22,106.26,342.62
+2026-10-15,g1-6,378969,Mega Zygarde ex,POR,124,79.6,it,Near Mint,29,tcgnotify,daily_snapshot,,79.6,87.48
+2026-10-16,g1-6,378969,Mega Zygarde ex,POR,124,79.6,it,Near Mint,29,tcgnotify,daily_snapshot,,79.6,86.23
+2026-10-17,g1-6,378969,Mega Zygarde ex,POR,124,79.6,it,Near Mint,31,tcgnotify,daily_snapshot,,79.6,83.85
+2026-10-18,g1-6,378969,Mega Zygarde ex,POR,124,79.6,it,Near Mint,31,tcgnotify,daily_snapshot,,79.6,82.9
+2026-10-19,g1-6,378969,Mega Zygarde ex,POR,124,75.0,it,Near Mint,45,tcgnotify,daily_snapshot,,,79.99
+2026-10-20,g1-6,378969,Mega Zygarde ex,POR,124,79.6,it,Near Mint,29,tcgnotify,daily_snapshot,,79.6,84.96
+2026-10-21,g1-6,378969,Mega Zygarde ex,POR,124,79.6,it,Near Mint,31,tcgnotify,daily_snapshot,,79.6,84.04
+2026-10-22,g1-6,378969,Mega Zygarde ex,POR,124,79.6,it,Near Mint,32,tcgnotify,daily_snapshot,,79.6,83.58
+2026-10-23,g1-6,378969,Mega Zygarde ex,POR,124,79.6,it,Near Mint,32,tcgnotify,daily_snapshot,,79.6,83.58
+2026-10-24,g1-6,378969,Mega Zygarde ex,POR,124,79.6,it,Near Mint,31,tcgnotify,daily_snapshot,,79.6,84.05
+2026-10-25,g1-6,378969,Mega Zygarde ex,POR,124,79.6,it,Near Mint,32,tcgnotify,daily_snapshot,,79.6,84.05
+2026-10-26,g1-6,378969,Mega Zygarde ex,POR,124,79.6,it,Near Mint,31,tcgnotify,daily_snapshot,,79.6,84.05
+2026-10-27,g1-6,378969,Mega Zygarde ex,POR,124,79.6,it,Near Mint,31,tcgnotify,daily_snapshot,,79.6,84.05
+2026-10-28,g1-6,378969,Mega Zygarde ex,POR,124,79.6,it,Near Mint,30,tcgnotify,daily_snapshot,,79.6,83.14
+2026-10-29,g1-6,378969,Mega Zygarde ex,POR,124,79.6,it,Near Mint,30,tcgnotify,daily_snapshot,,79.6,81.14
+2026-10-30,g1-6,378969,Mega Zygarde ex,POR,124,79.6,it,Near Mint,31,tcgnotify,daily_snapshot,,79.6,80.6
+2026-10-31,g1-6,378969,Mega Zygarde ex,POR,124,79.6,it,Near Mint,29,tcgnotify,daily_snapshot,,79.6,82.69
+2026-11-01,g1-6,378969,Mega Zygarde ex,POR,124,79.6,it,Near Mint,32,tcgnotify,daily_snapshot,,79.6,80.07
+2026-11-02,g1-6,378969,Mega Zygarde ex,POR,124,70.63,it,Near Mint,32,tcgnotify,daily_snapshot,,70.63,78.43
+2026-11-03,g1-6,378969,Mega Zygarde ex,POR,124,70.55,it,Near Mint,33,tcgnotify,daily_snapshot,,70.55,77.52
+2026-11-04,g1-6,378969,Mega Zygarde ex,POR,124,70.55,it,Near Mint,28,tcgnotify,daily_snapshot,,70.55,77.97
+2026-11-05,g1-6,378969,Mega Zygarde ex,POR,124,70.55,it,Near Mint,34,tcgnotify,daily_snapshot,,70.55,77.07
+2026-11-06,g1-6,378969,Mega Zygarde ex,POR,124,69.99,it,Near Mint,33,tcgnotify,daily_snapshot,,69.99,76.56
+2026-11-07,g1-6,378969,Mega Zygarde ex,POR,124,69.99,it,Near Mint,33,tcgnotify,daily_snapshot,,69.99,76.64
+2026-11-08,g1-6,378969,Mega Zygarde ex,POR,124,69.99,it,Near Mint,34,tcgnotify,daily_snapshot,,69.99,77.86
+2026-11-09,g1-6,378969,Mega Zygarde ex,POR,124,69.99,it,Near Mint,36,tcgnotify,daily_snapshot,,69.99,76.22
+2026-11-10,g1-6,378969,Mega Zygarde ex,POR,124,69.99,it,Near Mint,33,tcgnotify,daily_snapshot,,69.99,76.87
 2026-11-11,g1-6,378969,Mega Zygarde ex,POR,124,70.55,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,70.55,67.64,98.69
 2026-11-12,g1-6,378969,Mega Zygarde ex,POR,124,70.55,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,70.55,67.64,98.69
 2026-11-13,g1-6,378969,Mega Zygarde ex,POR,124,70.55,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,70.55,67.64,98.69
 2026-11-14,g1-6,378969,Mega Zygarde ex,POR,124,70.55,it,Near Mint,28,cardtrader_listings_min,daily_snapshot,70.55,67.64,98.95
+2026-10-15,g1-7,390062,Mega Greninja ex,CRI,122,91.25,it,Near Mint,28,tcgnotify,daily_snapshot,,91.25,97.79
+2026-10-16,g1-7,390062,Mega Greninja ex,CRI,122,90.63,it,Near Mint,31,tcgnotify,daily_snapshot,,90.63,95.0
+2026-10-17,g1-7,390062,Mega Greninja ex,CRI,122,90.63,it,Near Mint,32,tcgnotify,daily_snapshot,,90.63,93.89
+2026-10-18,g1-7,390062,Mega Greninja ex,CRI,122,90.63,it,Near Mint,32,tcgnotify,daily_snapshot,,90.63,93.37
+2026-10-19,g1-7,390062,Mega Greninja ex,CRI,122,89.94,it,Near Mint,74,tcgnotify,daily_snapshot,,,89.99
+2026-10-20,g1-7,390062,Mega Greninja ex,CRI,122,90.63,it,Near Mint,36,tcgnotify,daily_snapshot,,90.63,93.67
+2026-10-21,g1-7,390062,Mega Greninja ex,CRI,122,90.63,it,Near Mint,35,tcgnotify,daily_snapshot,,90.63,93.79
+2026-10-22,g1-7,390062,Mega Greninja ex,CRI,122,90.62,it,Near Mint,34,tcgnotify,daily_snapshot,,90.62,93.23
+2026-10-23,g1-7,390062,Mega Greninja ex,CRI,122,90.62,it,Near Mint,31,tcgnotify,daily_snapshot,,90.62,94.01
+2026-10-24,g1-7,390062,Mega Greninja ex,CRI,122,90.62,it,Near Mint,29,tcgnotify,daily_snapshot,,90.62,94.52
+2026-10-25,g1-7,390062,Mega Greninja ex,CRI,122,90.0,it,Near Mint,29,tcgnotify,daily_snapshot,,90.0,93.13
+2026-10-26,g1-7,390062,Mega Greninja ex,CRI,122,90.0,it,Near Mint,30,tcgnotify,daily_snapshot,,90.0,93.04
+2026-10-27,g1-7,390062,Mega Greninja ex,CRI,122,85.64,it,Near Mint,31,tcgnotify,daily_snapshot,,85.64,91.96
+2026-10-28,g1-7,390062,Mega Greninja ex,CRI,122,90.0,it,Near Mint,30,tcgnotify,daily_snapshot,,90.0,93.03
+2026-10-29,g1-7,390062,Mega Greninja ex,CRI,122,90.52,it,Near Mint,31,tcgnotify,daily_snapshot,,90.52,93.12
+2026-10-30,g1-7,390062,Mega Greninja ex,CRI,122,89.99,it,Near Mint,33,tcgnotify,daily_snapshot,,89.99,91.69
+2026-10-31,g1-7,390062,Mega Greninja ex,CRI,122,90.0,it,Near Mint,33,tcgnotify,daily_snapshot,,90.0,92.34
+2026-11-01,g1-7,390062,Mega Greninja ex,CRI,122,86.99,it,Near Mint,35,tcgnotify,daily_snapshot,,86.99,90.16
+2026-11-02,g1-7,390062,Mega Greninja ex,CRI,122,86.99,it,Near Mint,33,tcgnotify,daily_snapshot,,86.99,92.06
+2026-11-03,g1-7,390062,Mega Greninja ex,CRI,122,89.95,it,Near Mint,34,tcgnotify,daily_snapshot,,89.95,91.68
+2026-11-04,g1-7,390062,Mega Greninja ex,CRI,122,90.0,it,Near Mint,34,tcgnotify,daily_snapshot,,90.0,91.73
+2026-11-05,g1-7,390062,Mega Greninja ex,CRI,122,90.53,it,Near Mint,31,tcgnotify,daily_snapshot,,90.53,91.77
+2026-11-06,g1-7,390062,Mega Greninja ex,CRI,122,90.52,it,Near Mint,30,tcgnotify,daily_snapshot,,90.52,92.89
+2026-11-07,g1-7,390062,Mega Greninja ex,CRI,122,90.52,it,Near Mint,31,tcgnotify,daily_snapshot,,90.52,92.24
+2026-11-08,g1-7,390062,Mega Greninja ex,CRI,122,90.52,it,Near Mint,31,tcgnotify,daily_snapshot,,90.52,91.67
+2026-11-09,g1-7,390062,Mega Greninja ex,CRI,122,89.95,it,Near Mint,32,tcgnotify,daily_snapshot,,89.95,90.54
+2026-11-10,g1-7,390062,Mega Greninja ex,CRI,122,89.95,it,Near Mint,41,tcgnotify,daily_snapshot,,89.95,90.59
 2026-11-11,g1-7,390062,Mega Greninja ex,CRI,122,85.59,it,Near Mint,30,cardtrader_listings_min,daily_snapshot,85.59,115.64,117.06
 2026-11-12,g1-7,390062,Mega Greninja ex,CRI,122,78.13,it,Near Mint,30,cardtrader_listings_min,daily_snapshot,78.13,115.64,116.54
 2026-11-13,g1-7,390062,Mega Greninja ex,CRI,122,85.58,it,Near Mint,31,cardtrader_listings_min,daily_snapshot,85.58,115.64,116.38
 2026-11-14,g1-7,390062,Mega Greninja ex,CRI,122,85.58,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,85.58,115.64,117.36
+2026-10-15,g1-8,399466,Mega Darkrai ex,PBL,120,105.63,it,Near Mint,22,tcgnotify,daily_snapshot,,105.63,109.64
+2026-10-16,g1-8,399466,Mega Darkrai ex,PBL,120,105.63,it,Near Mint,22,tcgnotify,daily_snapshot,,105.63,109.25
+2026-10-17,g1-8,399466,Mega Darkrai ex,PBL,120,100.63,it,Near Mint,25,tcgnotify,daily_snapshot,,100.63,107.83
+2026-10-18,g1-8,399466,Mega Darkrai ex,PBL,120,100.63,it,Near Mint,26,tcgnotify,daily_snapshot,,100.63,105.88
+2026-10-19,g1-8,399466,Mega Darkrai ex,PBL,120,100.0,it,Near Mint,58,tcgnotify,daily_snapshot,,,104.56
+2026-10-20,g1-8,399466,Mega Darkrai ex,PBL,120,105.62,it,Near Mint,25,tcgnotify,daily_snapshot,,105.62,107.81
+2026-10-21,g1-8,399466,Mega Darkrai ex,PBL,120,105.64,it,Near Mint,26,tcgnotify,daily_snapshot,,105.64,108.42
+2026-10-22,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,26,tcgnotify,daily_snapshot,,105.52,107.7
+2026-10-23,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,26,tcgnotify,daily_snapshot,,105.52,107.7
+2026-10-24,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,25,tcgnotify,daily_snapshot,,105.52,109.96
+2026-10-25,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,25,tcgnotify,daily_snapshot,,105.52,109.96
+2026-10-26,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,25,tcgnotify,daily_snapshot,,105.52,109.96
+2026-10-27,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,25,tcgnotify,daily_snapshot,,105.52,109.96
+2026-10-28,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,25,tcgnotify,daily_snapshot,,105.52,111.75
+2026-10-29,g1-8,399466,Mega Darkrai ex,PBL,120,100.64,it,Near Mint,28,tcgnotify,daily_snapshot,,100.64,108.43
+2026-10-30,g1-8,399466,Mega Darkrai ex,PBL,120,100.64,it,Near Mint,31,tcgnotify,daily_snapshot,,100.64,106.34
+2026-10-31,g1-8,399466,Mega Darkrai ex,PBL,120,100.64,it,Near Mint,30,tcgnotify,daily_snapshot,,100.64,106.68
+2026-11-01,g1-8,399466,Mega Darkrai ex,PBL,120,100.64,it,Near Mint,32,tcgnotify,daily_snapshot,,100.64,105.65
+2026-11-02,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,30,tcgnotify,daily_snapshot,,105.52,107.72
+2026-11-03,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,30,tcgnotify,daily_snapshot,,105.52,107.66
+2026-11-04,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,28,tcgnotify,daily_snapshot,,105.52,107.67
+2026-11-05,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,28,tcgnotify,daily_snapshot,,105.52,107.47
+2026-11-06,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,28,tcgnotify,daily_snapshot,,105.52,106.65
+2026-11-07,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,27,tcgnotify,daily_snapshot,,105.52,107.18
+2026-11-08,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,29,tcgnotify,daily_snapshot,,105.52,105.82
+2026-11-09,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,29,tcgnotify,daily_snapshot,,105.52,105.82
+2026-11-10,g1-8,399466,Mega Darkrai ex,PBL,120,105.44,it,Near Mint,29,tcgnotify,daily_snapshot,,105.44,105.8
 2026-11-11,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,105.52,105.64,130.4
 2026-11-12,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,28,cardtrader_listings_min,daily_snapshot,105.52,105.64,129.41
 2026-11-13,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,27,cardtrader_listings_min,daily_snapshot,105.52,105.64,128.18
 2026-11-14,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,27,cardtrader_listings_min,daily_snapshot,105.52,105.64,128.18
+2026-10-30,g1-9,421157,Mega Rayquaza ex,DLR,141,439.95,it,Near Mint,6,tcgnotify,daily_snapshot,,,450.0
+2026-10-31,g1-9,421157,Mega Rayquaza ex,DLR,141,434.95,it,Near Mint,7,tcgnotify,daily_snapshot,,,440.0
+2026-11-01,g1-9,421157,Mega Rayquaza ex,DLR,141,434.95,it,Near Mint,7,tcgnotify,daily_snapshot,,,440.0
+2026-11-02,g1-9,421157,Mega Rayquaza ex,DLR,141,399.0,it,Near Mint,7,tcgnotify,daily_snapshot,,,435.0
+2026-11-03,g1-9,421157,Mega Rayquaza ex,DLR,141,399.0,it,Near Mint,8,tcgnotify,daily_snapshot,,,435.0
+2026-11-04,g1-9,421157,Mega Rayquaza ex,DLR,141,280.0,it,Near Mint,12,tcgnotify,daily_snapshot,,,340.0
+2026-11-05,g1-9,421157,Mega Rayquaza ex,DLR,141,230.0,it,Near Mint,14,tcgnotify,daily_snapshot,,,299.99
+2026-11-06,g1-9,421157,Mega Rayquaza ex,DLR,141,230.0,it,Near Mint,16,tcgnotify,daily_snapshot,,,277.49
+2026-11-07,g1-9,421157,Mega Rayquaza ex,DLR,141,298.64,it,Near Mint,10,tcgnotify,daily_snapshot,,298.64,300.06
+2026-11-08,g1-9,421157,Mega Rayquaza ex,DLR,141,285.62,it,Near Mint,10,tcgnotify,daily_snapshot,,285.62,297.63
+2026-11-09,g1-9,421157,Mega Rayquaza ex,DLR,141,263.8,it,Near Mint,10,tcgnotify,daily_snapshot,,263.8,272.22
+2026-11-10,g1-9,421157,Mega Rayquaza ex,DLR,141,260.64,it,Near Mint,14,tcgnotify,daily_snapshot,,260.64,270.58
 2026-11-11,g1-9,421157,Mega Rayquaza ex,DLR,141,216.8,it,Near Mint,15,cardtrader_listings_min,daily_snapshot,216.8,260.64,304.04
 2026-11-12,g1-9,421157,Mega Rayquaza ex,DLR,141,216.8,it,Near Mint,16,cardtrader_listings_min,daily_snapshot,216.8,259.18,300.79
 2026-11-13,g1-9,421157,Mega Rayquaza ex,DLR,141,216.8,it,Near Mint,17,cardtrader_listings_min,daily_snapshot,216.8,259.18,297.29

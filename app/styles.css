@@ -111,7 +111,29 @@ h1 { margin: 0; font-size: 34px; }
 }
 .seg { display: flex; gap: 6px; width: 100%; }
 .seg .chip { flex: 1; text-align: center; padding-left: 6px; padding-right: 6px; white-space: nowrap; font-size: 13px; }
-.view-toggle .chip { white-space: normal; line-height: 1.15; font-size: 12px; min-height: 44px; }
+.toolbar-switch { display: flex; justify-content: flex-end; width: 100%; }
+.sleeve-switch {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 0; background: transparent; padding: 0;
+  font-weight: 800; font-size: 13px;
+}
+.sleeve-switch .track {
+  width: 44px; height: 26px; border-radius: 999px; border: 2px solid #111;
+  background: #fff; position: relative; box-shadow: 2px 2px 0 #111;
+}
+.sleeve-switch.on .track { background: #5ff0c0; }
+.sleeve-switch .knob {
+  position: absolute; top: 2px; left: 2px; width: 18px; height: 18px;
+  border-radius: 50%; background: #111; transition: transform .15s ease;
+}
+.sleeve-switch.on .knob { transform: translateX(18px); }
+.chip-scroller {
+  display: flex; flex-wrap: nowrap; gap: 6px; width: 100%;
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; padding: 2px 0;
+}
+.chip-scroller::-webkit-scrollbar { display: none; }
+.chip-scroller .chip { flex: 0 0 auto; font-size: 12px; min-height: 34px; padding: 6px 10px; }
 .binder { background: var(--paper); border: var(--line); border-radius: 24px; padding: 8px 8px 12px; box-shadow: var(--shadow); position: relative; touch-action: pan-y; }
 .holes { display: none; }
 .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }

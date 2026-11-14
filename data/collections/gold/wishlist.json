@@ -48,7 +48,7 @@
    "buy_price_eur": 264.74,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-14T12:43:07+01:00",
+   "last_updated": "2026-11-14T14:53:03+01:00",
    "rank_by_price": 1,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/370931/show_mega-charizard-y-ex-gold-secret-rare-294-217-ascended-heroes.jpg"
   },
@@ -99,7 +99,7 @@
    "buy_price_eur": 216.8,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-14T12:43:07+01:00",
+   "last_updated": "2026-11-14T14:53:03+01:00",
    "rank_by_price": 2,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/421157/show_421157-mega-rayquaza-ex-gold-secret-rare-141-103-delta-reign.webp"
   },
@@ -150,7 +150,7 @@
    "buy_price_eur": 216.17,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-14T12:43:07+01:00",
+   "last_updated": "2026-11-14T14:53:03+01:00",
    "rank_by_price": 3,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/356916/show_mega-charizard-x-ex-gold-secret-rare-130-094-phantasmal-flames.jpg"
   },
@@ -201,7 +201,7 @@
    "buy_price_eur": 163.64,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-14T12:43:07+01:00",
+   "last_updated": "2026-11-14T14:53:03+01:00",
    "rank_by_price": 4,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/351691/show_mega-lucario-ex-gold-secret-rare-188-132-mega-evolution.jpg"
   },
@@ -252,7 +252,7 @@
    "buy_price_eur": 120.42,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-14T12:43:07+01:00",
+   "last_updated": "2026-11-14T14:53:03+01:00",
    "rank_by_price": 5,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/351690/show_mega-gardevoir-ex-gold-secret-rare-187-132-mega-evolution.jpg"
   },
@@ -303,7 +303,7 @@
    "buy_price_eur": 109.22,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-14T12:43:07+01:00",
+   "last_updated": "2026-11-14T14:53:03+01:00",
    "rank_by_price": 6,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/370932/show_mega-dragonite-ex-gold-secret-rare-295-217-ascended-heroes.jpg"
   },
@@ -354,7 +354,7 @@
    "buy_price_eur": 105.52,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-14T12:43:07+01:00",
+   "last_updated": "2026-11-14T14:53:03+01:00",
    "rank_by_price": 7,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/399466/show_399466-mega-darkrai-ex-gold-secret-rare-120-084-pitch-black(2).jpg"
   },
@@ -405,7 +405,7 @@
    "buy_price_eur": 85.58,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-14T12:43:07+01:00",
+   "last_updated": "2026-11-14T14:53:03+01:00",
    "rank_by_price": 8,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/390062/show_390062-mega-greninja-ex-gold-secret-rare-122-086-chaos-rising.jpg"
   },
@@ -456,12 +456,12 @@
    "buy_price_eur": 70.55,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-14T12:43:07+01:00",
+   "last_updated": "2026-11-14T14:53:03+01:00",
    "rank_by_price": 9,
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/378969/show_mega-zygarde-ex-gold-secret-rare-124-088-perfect-order.jpg"
   }
  ],
- "generated_at": "2026-11-14T12:43:07+01:00",
+ "generated_at": "2026-11-14T14:53:03+01:00",
  "price_definition": "price_final_eur è un solo prezzo Near Mint in lingua target (ITA, JP solo per Togepi), non gradato, spedizione esclusa. Il prezzo è price.cents/100, già con la fee di CardTrader. Default: minimo Zero (price_ctz_eur). Si usa il minimo CardTrader normale (price_ct_eur) se non c'è nessuno Zero, oppure se lo Zero costa più del 20% del normale (price_ctz_eur > price_ct_eur * 1.20). Se mancano entrambi, si usa price_cm_eur da Cardmarket. price_final_source vale ctz, ct o cm. buy_price_eur è uguale a price_final_eur.",
  "summary": {
   "cards": 9,

@@ -276,6 +276,20 @@ def eu_row_ok(row, card):
     return True
 
 
+def blueprint_show_url(blueprint):
+    """Solo l'URL che CardTrader pubblica in blueprint.image.show.url. Nessuno slug inventato."""
+    show = ((blueprint or {}).get("image") or {}).get("show") or {}
+    url = show.get("url") if isinstance(show, dict) else None
+    if not isinstance(url, str) or not url.strip():
+        return None
+    url = url.strip()
+    if url.startswith("/"):
+        return "https://www.cardtrader.com" + url
+    if url.startswith("https://") or url.startswith("http://"):
+        return url
+    return None
+
+
 def price_eur(p):
     cents = (p.get("price") or {}).get("cents")
     if not isinstance(cents, (int, float)):
@@ -400,8 +414,9 @@ def main():
             anynm, _, _ = products(bid, None, "Near Mint", reverse=reverse)
             anyp = sorted(p["price"]["cents"] / 100 for p in anynm if ok(p, None, "Near Mint", reverse))
             bp = d0["blueprint"]
-            img = (bp.get("image") or {}).get("show", {}).get("url") or bp.get("image_url")
-            rec["image_url"] = ("https://www.cardtrader.com" + img) if img and img.startswith("/") else img
+            img = blueprint_show_url(bp)
+            if img:
+                rec["image_url"] = img
             rec["price_min_ita_nm_eur"] = prices[0] if (prices and lang == "it") else None
             rec["price_min_target_lang_nm_eur"] = prices[0] if prices else None
             rec["listings_target_lang_nm"] = len(prices)

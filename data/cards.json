@@ -1314,12 +1314,12 @@
   "rarity": "Holo Rare",
   "cardtrader_blueprint_id": 109886,
   "cardtrader_link": "https://www.cardtrader.com/it/cards/109886-gyarados-holo-rare-double-21-98-ancient-origins",
-  "image_url": "https://www.cardtrader.com/uploads/blueprints/image/109886/show_gyarados-holo-rare-double-21-98-ancient-origins.jpg",
+  "image_url": "https://www.cardtrader.com/uploads/blueprints/image/109886/show_gyarados-holo-rare-double-21-98-ancient-origins.webp",
   "target_language": "it",
   "italian_edition_exists": true,
   "pokemon_reverse": true,
   "confidence": "alta",
-  "notes": "15/11/2026: solo la versione Reverse. Nessuna copia ITA NM reverse non gradata, prezzo nullo."
+  "notes": "15/11/2026: solo la versione Reverse. Nessuna copia ITA NM reverse non gradata su CardTrader. Cardmarket NM ITA 199,99 € (3 copie)."
  },
  {
   "id": "p9-4",
@@ -1359,7 +1359,7 @@
   "target_language": "en",
   "italian_edition_exists": true,
   "confidence": "alta",
-  "notes": "15/11/2026: carta inglese. L'annuncio ITA a 9.000,64 € è un segnaposto e non entra nel prezzo. Nessuna copia EN NM, prezzo nullo."
+  "notes": "15/11/2026: carta inglese. L'annuncio ITA a 9.000,64 € è un segnaposto e non entra nel prezzo. Nessuna copia EN NM su CardTrader. Cardmarket, etichettato Italiano da TCGNotify, minimo 299,00 € (4 copie)."
  },
  {
   "id": "p9-6",
@@ -1376,7 +1376,7 @@
   "rarity": "Ultra Rare",
   "cardtrader_blueprint_id": 129740,
   "cardtrader_link": "https://www.cardtrader.com/it/cards/129740-latias-latios-gx-ultra-rare-113-181-team-up",
-  "image_url": "https://www.cardtrader.com/uploads/blueprints/image/129740/show_latias-latios-gx-ultra-rare-113-181-team-up.jpg",
+  "image_url": "https://www.cardtrader.com/uploads/blueprints/image/129740/show_latias-latios-gx-rare-holo-113-181-team-up.jpg",
   "target_language": "it",
   "italian_edition_exists": true,
   "confidence": "alta",
@@ -1418,7 +1418,7 @@
   "rarity": "Rare Holo GX",
   "cardtrader_blueprint_id": 131073,
   "cardtrader_link": "https://www.cardtrader.com/it/cards/131073-slowpoke-psyduck-gx-full-art-35-236-unified-minds",
-  "image_url": "https://www.cardtrader.com/uploads/blueprints/image/131073/show_slowpoke-psyduck-gx-full-art-35-236-unified-minds.jpg",
+  "image_url": "https://www.cardtrader.com/uploads/blueprints/image/131073/show_slowpoke-psyduck-gx-secret-rare-rare-35-236-unified-minds.jpg",
   "target_language": "it",
   "italian_edition_exists": true,
   "confidence": "alta",
@@ -1438,7 +1438,7 @@
   "rarity": "Shiny Rare",
   "cardtrader_blueprint_id": 153134,
   "cardtrader_link": "https://www.cardtrader.com/it/cards/153134-charizard-vmax-shiny-rare-sv107-shining-fates",
-  "image_url": "https://www.cardtrader.com/uploads/blueprints/image/153134/show_charizard-vmax-shiny-rare-sv107-shining-fates.jpg",
+  "image_url": "https://www.cardtrader.com/uploads/blueprints/image/153134/show_charizard-vmax-rare-shiny-sv107-shining-fates.png",
   "target_language": "it",
   "italian_edition_exists": true,
   "confidence": "alta",

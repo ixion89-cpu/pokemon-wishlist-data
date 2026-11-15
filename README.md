@@ -36,7 +36,13 @@ La collezione 1999/2019 sta in `data/collections/vintage/`, Gold in `data/collec
 - `data/collections/vintage/cardtrader_eu_raw.json` (Wishlist - 1999/2019)
 - `data/collections/gold/cardtrader_eu_raw.json` (Gold - modern)
 
-Cardmarket e TCGNotify stanno nella stessa cartella di ciascuna collezione (`cardmarket.json`, `tcgnotify_history.json`) e non vengono sovrascritti dallo script. Per Gold, `total_history.json` è una ricostruzione a gradini: una carta entra il primo giorno in cui ha un prezzo, e un giorno c'è solo se tutte le carte già uscite hanno un prezzo. Il grafico usa il tratteggio per i giorni ricostruiti e un pallino giallo nei giorni in cui sale il numero di carte. L'aggiornamento quotidiano lascia intatti quei gradini e ricalcola solo lo snapshot. L'Action delle 07:00 aggiorna Wishlist - modern, poi Wishlist - 1999/2019 (`--collection vintage`) e infine Gold con `--collection gold --eu-only --commit`.
+Cardmarket e TCGNotify stanno nella stessa cartella di ciascuna collezione (`cardmarket.json`, `tcgnotify_history.json`) e non vengono sovrascritti dallo script. Per Gold, `total_history.json` è una ricostruzione a gradini: una carta entra il primo giorno in cui ha un prezzo, e un giorno c'è solo se tutte le carte già uscite hanno un prezzo. Il grafico usa il tratteggio per i giorni ricostruiti e un pallino giallo nei giorni in cui sale il numero di carte. L'aggiornamento quotidiano lascia intatti quei gradini e ricalcola solo lo snapshot. L'Action delle 07:00 aggiorna Wishlist - modern, poi Wishlist - 1999/2019 (`--collection vintage`), poi Gold con `--collection gold --eu-only`. Subito dopo `scripts/update_index.py` aggiunge la riga del giorno a ogni collezione di `data/collections.json` e il workflow fa un solo commit.
+
+## Indici
+
+Ogni collezione è anche un indice, archiviato in `index_history.csv` nella sua cartella (`data/index_history.csv`, `data/collections/vintage/index_history.csv`, `data/collections/gold/index_history.csv`). Una riga per giorno, dal 10 nov 2026, e una riga già scritta non si tocca. `index_value_eur` somma il prezzo unitario di tutte le carte dello snapshot, comprese quelle marcate come acquistate. `index_base100` parte da 100 e da lì segue solo il rendimento delle carte presenti sia ieri sia oggi: il `divisor` assorbe le carte aggiunte o tolte (`link_factor` è il rapporto fra i due divisor). `volume` somma i `total` CT+CM italiani già presenti in `pop_history`; se il totale di una carta manca, resta fuori. `ct_it` e `cm_it` sono le somme dei valori presenti. La colonna `constituents` è lo snapshot del giorno (id, prezzo, fonte, pop).
+
+`data/indices_summary.json` è il riepilogo, ricalcolato a ogni giro: ultimo valore e rendimenti a 1G, 7G, 30G, 90G, 1Y, YTD e dall'inizio. Un orizzonte senza il giorno esatto di confronto resta `null`. Una collezione nuova, aggiunta a `collections.json`, entra nell'archivio al giro successivo senza altre modifiche.
 
 ## Pop
 

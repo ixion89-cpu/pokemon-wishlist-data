@@ -30,6 +30,7 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-12,g1-1,351690,Mega Gardevoir ex,MEG,187,120.42,it,Near Mint,27,cardtrader_listings_min,daily_snapshot,120.42,119.64,196.83
 2026-11-13,g1-1,351690,Mega Gardevoir ex,MEG,187,120.42,it,Near Mint,26,cardtrader_listings_min,daily_snapshot,120.42,119.64,192.9
 2026-11-14,g1-1,351690,Mega Gardevoir ex,MEG,187,120.42,it,Near Mint,25,cardtrader_listings_min,daily_snapshot,120.42,119.64,194.62
+2026-11-15,g1-1,351690,Mega Gardevoir ex,MEG,187,120.42,it,Near Mint,25,cardtrader_listings_min,daily_snapshot,120.42,119.64,194.44
 2026-10-15,g1-2,351691,Mega Lucario ex,MEG,188,167.23,it,Near Mint,34,tcgnotify,daily_snapshot,,167.23,169.02
 2026-10-16,g1-2,351691,Mega Lucario ex,MEG,188,167.13,it,Near Mint,33,tcgnotify,daily_snapshot,,167.13,168.74
 2026-10-17,g1-2,351691,Mega Lucario ex,MEG,188,167.13,it,Near Mint,32,tcgnotify,daily_snapshot,,167.13,168.74
@@ -61,6 +62,7 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-12,g1-2,351691,Mega Lucario ex,MEG,188,165.54,it,Near Mint,27,cardtrader_listings_min,daily_snapshot,165.54,164.64,206.27
 2026-11-13,g1-2,351691,Mega Lucario ex,MEG,188,165.54,it,Near Mint,27,cardtrader_listings_min,daily_snapshot,165.54,164.64,206.65
 2026-11-14,g1-2,351691,Mega Lucario ex,MEG,188,163.64,it,Near Mint,26,cardtrader_listings_min,daily_snapshot,163.64,164.64,206.38
+2026-11-15,g1-2,351691,Mega Lucario ex,MEG,188,163.64,it,Near Mint,27,cardtrader_listings_min,daily_snapshot,163.64,164.64,206.14
 2026-10-15,g1-3,356916,Mega Charizard X ex,PFL,130,228.44,it,Near Mint,40,tcgnotify,daily_snapshot,,228.44,230.09
 2026-10-16,g1-3,356916,Mega Charizard X ex,PFL,130,228.44,it,Near Mint,37,tcgnotify,daily_snapshot,,228.44,233.61
 2026-10-17,g1-3,356916,Mega Charizard X ex,PFL,130,228.44,it,Near Mint,38,tcgnotify,daily_snapshot,,228.44,236.1
@@ -92,6 +94,7 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-12,g1-3,356916,Mega Charizard X ex,PFL,130,218.36,it,Near Mint,32,cardtrader_listings_min,daily_snapshot,218.36,220.64,526.92
 2026-11-13,g1-3,356916,Mega Charizard X ex,PFL,130,216.17,it,Near Mint,33,cardtrader_listings_min,daily_snapshot,216.17,220.64,519.64
 2026-11-14,g1-3,356916,Mega Charizard X ex,PFL,130,216.17,it,Near Mint,32,cardtrader_listings_min,daily_snapshot,216.17,220.64,519.15
+2026-11-15,g1-3,356916,Mega Charizard X ex,PFL,130,218.43,it,Near Mint,32,cardtrader_listings_min,daily_snapshot,218.43,220.64,519.35
 2026-10-15,g1-4,370931,Mega Charizard Y ex,ASC,294,288.5,it,Near Mint,39,tcgnotify,daily_snapshot,,288.5,289.48
 2026-10-16,g1-4,370931,Mega Charizard Y ex,ASC,294,288.5,it,Near Mint,36,tcgnotify,daily_snapshot,,288.5,290.06
 2026-10-17,g1-4,370931,Mega Charizard Y ex,ASC,294,288.5,it,Near Mint,38,tcgnotify,daily_snapshot,,288.5,289.41
@@ -123,6 +126,7 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-12,g1-4,370931,Mega Charizard Y ex,ASC,294,263.2,it,Near Mint,37,cardtrader_listings_min,daily_snapshot,263.2,263.64,315.48
 2026-11-13,g1-4,370931,Mega Charizard Y ex,ASC,294,264.74,it,Near Mint,37,cardtrader_listings_min,daily_snapshot,264.74,263.64,315.52
 2026-11-14,g1-4,370931,Mega Charizard Y ex,ASC,294,264.74,it,Near Mint,35,cardtrader_listings_min,daily_snapshot,264.74,263.64,317.64
+2026-11-15,g1-4,370931,Mega Charizard Y ex,ASC,294,265.83,it,Near Mint,35,cardtrader_listings_min,daily_snapshot,265.83,263.64,317.54
 2026-10-15,g1-5,370932,Mega Dragonite ex,ASC,295,116.12,it,Near Mint,43,tcgnotify,daily_snapshot,,116.12,119.86
 2026-10-16,g1-5,370932,Mega Dragonite ex,ASC,295,116.09,it,Near Mint,41,tcgnotify,daily_snapshot,,116.09,118.93
 2026-10-17,g1-5,370932,Mega Dragonite ex,ASC,295,116.08,it,Near Mint,42,tcgnotify,daily_snapshot,,116.08,119.11
@@ -154,6 +158,7 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-12,g1-5,370932,Mega Dragonite ex,ASC,295,109.23,it,Near Mint,45,cardtrader_listings_min,daily_snapshot,109.23,106.26,348.88
 2026-11-13,g1-5,370932,Mega Dragonite ex,ASC,295,109.23,it,Near Mint,44,cardtrader_listings_min,daily_snapshot,109.23,106.26,352.37
 2026-11-14,g1-5,370932,Mega Dragonite ex,ASC,295,109.22,it,Near Mint,45,cardtrader_listings_min,daily_snapshot,109.22,106.26,342.62
+2026-11-15,g1-5,370932,Mega Dragonite ex,ASC,295,109.22,it,Near Mint,44,cardtrader_listings_min,daily_snapshot,109.22,108.64,347.43
 2026-10-15,g1-6,378969,Mega Zygarde ex,POR,124,79.6,it,Near Mint,29,tcgnotify,daily_snapshot,,79.6,87.48
 2026-10-16,g1-6,378969,Mega Zygarde ex,POR,124,79.6,it,Near Mint,29,tcgnotify,daily_snapshot,,79.6,86.23
 2026-10-17,g1-6,378969,Mega Zygarde ex,POR,124,79.6,it,Near Mint,31,tcgnotify,daily_snapshot,,79.6,83.85
@@ -185,6 +190,7 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-12,g1-6,378969,Mega Zygarde ex,POR,124,70.55,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,70.55,67.64,98.69
 2026-11-13,g1-6,378969,Mega Zygarde ex,POR,124,70.55,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,70.55,67.64,98.69
 2026-11-14,g1-6,378969,Mega Zygarde ex,POR,124,70.55,it,Near Mint,28,cardtrader_listings_min,daily_snapshot,70.55,67.64,98.95
+2026-11-15,g1-6,378969,Mega Zygarde ex,POR,124,70.55,it,Near Mint,28,cardtrader_listings_min,daily_snapshot,70.55,67.64,98.95
 2026-10-15,g1-7,390062,Mega Greninja ex,CRI,122,91.25,it,Near Mint,28,tcgnotify,daily_snapshot,,91.25,97.79
 2026-10-16,g1-7,390062,Mega Greninja ex,CRI,122,90.63,it,Near Mint,31,tcgnotify,daily_snapshot,,90.63,95.0
 2026-10-17,g1-7,390062,Mega Greninja ex,CRI,122,90.63,it,Near Mint,32,tcgnotify,daily_snapshot,,90.63,93.89
@@ -216,6 +222,7 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-12,g1-7,390062,Mega Greninja ex,CRI,122,78.13,it,Near Mint,30,cardtrader_listings_min,daily_snapshot,78.13,115.64,116.54
 2026-11-13,g1-7,390062,Mega Greninja ex,CRI,122,85.58,it,Near Mint,31,cardtrader_listings_min,daily_snapshot,85.58,115.64,116.38
 2026-11-14,g1-7,390062,Mega Greninja ex,CRI,122,85.58,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,85.58,115.64,117.36
+2026-11-15,g1-7,390062,Mega Greninja ex,CRI,122,78.13,it,Near Mint,30,cardtrader_listings_min,daily_snapshot,78.13,115.64,116.33
 2026-10-15,g1-8,399466,Mega Darkrai ex,PBL,120,105.63,it,Near Mint,22,tcgnotify,daily_snapshot,,105.63,109.64
 2026-10-16,g1-8,399466,Mega Darkrai ex,PBL,120,105.63,it,Near Mint,22,tcgnotify,daily_snapshot,,105.63,109.25
 2026-10-17,g1-8,399466,Mega Darkrai ex,PBL,120,100.63,it,Near Mint,25,tcgnotify,daily_snapshot,,100.63,107.83
@@ -247,6 +254,7 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-12,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,28,cardtrader_listings_min,daily_snapshot,105.52,105.64,129.41
 2026-11-13,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,27,cardtrader_listings_min,daily_snapshot,105.52,105.64,128.18
 2026-11-14,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,27,cardtrader_listings_min,daily_snapshot,105.52,105.64,128.18
+2026-11-15,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,28,cardtrader_listings_min,daily_snapshot,105.52,105.64,129.41
 2026-10-30,g1-9,421157,Mega Rayquaza ex,DLR,141,439.95,it,Near Mint,6,tcgnotify,daily_snapshot,,,450.0
 2026-10-31,g1-9,421157,Mega Rayquaza ex,DLR,141,434.95,it,Near Mint,7,tcgnotify,daily_snapshot,,,440.0
 2026-11-01,g1-9,421157,Mega Rayquaza ex,DLR,141,434.95,it,Near Mint,7,tcgnotify,daily_snapshot,,,440.0
@@ -263,3 +271,4 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-12,g1-9,421157,Mega Rayquaza ex,DLR,141,216.8,it,Near Mint,16,cardtrader_listings_min,daily_snapshot,216.8,259.18,300.79
 2026-11-13,g1-9,421157,Mega Rayquaza ex,DLR,141,216.8,it,Near Mint,17,cardtrader_listings_min,daily_snapshot,216.8,259.18,297.29
 2026-11-14,g1-9,421157,Mega Rayquaza ex,DLR,141,216.8,it,Near Mint,16,cardtrader_listings_min,daily_snapshot,216.8,260.64,271.72
+2026-11-15,g1-9,421157,Mega Rayquaza ex,DLR,141,209.64,it,Near Mint,18,cardtrader_listings_min,daily_snapshot,209.64,200.64,259.75

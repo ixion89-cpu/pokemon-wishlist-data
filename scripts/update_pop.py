@@ -119,11 +119,23 @@ def is_graded(p: dict) -> bool:
     return False
 
 
-def ct_box_counts(bid, lang: str):
+def wants_reverse(card: dict) -> bool:
+    return card.get("pokemon_reverse") is True
+
+
+def listing_is_reverse(p: dict) -> bool:
+    props = p.get("properties_hash") or {}
+    value = props.get("pokemon_reverse")
+    return value is True or str(value).lower() == "true"
+
+
+def ct_box_counts(bid, lang: str, reverse: bool = False):
     """(nm_qty, all_qty) copie in lingua target, non gradate, da tutte le pagine."""
     seen, nm, allq, page = set(), 0, 0, 1
     while page <= 10:
         q = [("page", str(page)), ("q[terms][properties_hash.pokemon_language.keyword][]", lang)]
+        if reverse:
+            q.append(("q[terms][properties_hash.pokemon_reverse][]", "true"))
         data = fetch_json(BASE.format(bid=bid) + "?" + urllib.parse.urlencode(q))
         for p in data.get("products") or []:
             if p.get("id") in seen:
@@ -131,6 +143,8 @@ def ct_box_counts(bid, lang: str):
             seen.add(p.get("id"))
             props = p.get("properties_hash") or {}
             if props.get("pokemon_language") != lang or is_graded(p):
+                continue
+            if reverse and not listing_is_reverse(p):
                 continue
             if not isinstance((p.get("price") or {}).get("cents"), (int, float)):
                 continue
@@ -316,12 +330,27 @@ def run_collection(name: str, args) -> int:
         nm = allq = None
         if not args.no_fetch:
             try:
-                nm, allq = ct_box_counts(bid, lang_of(c))
+                nm, allq = ct_box_counts(bid, lang_of(c), wants_reverse(c))
             except Exception as exc:
                 errors.append(f"{c['id']} bid={bid}: {exc}")
             time.sleep(random.uniform(1.0, 1.5))
         if nm is None and str(bid) in eu_rows:
-            nm = sum(int(r.get("qty") or 0) for r in eu_rows[str(bid)])
+            rows = []
+            for row in eu_rows[str(bid)]:
+                if not isinstance(row, dict):
+                    continue
+                row_lang = str(row.get("language") or row.get("pokemon_language") or "").lower()
+                if row_lang in ("ja", "jp"):
+                    row_lang = "jp"
+                wanted = lang_of(c)
+                if row_lang and row_lang != wanted:
+                    continue
+                if wants_reverse(c):
+                    rev = row.get("reverse", row.get("pokemon_reverse"))
+                    if rev is not True and str(rev).lower() != "true":
+                        continue
+                rows.append(row)
+            nm = sum(int(r.get("qty") or 0) for r in rows)
         pt = by_date[c["id"]].setdefault(today, {"date": today})
         set_field(pt, "ct_it", nm, "cardtrader_box")
         set_field(pt, "ct_it_all", allq, "cardtrader_box")

@@ -155,12 +155,14 @@ def write_history_index():
         f.write("\n")
 
 
-def fetch(bid, lang=None, cond=None, page=1):
+def fetch(bid, lang=None, cond=None, page=1, reverse=False):
     q = [("page", str(page))]
     if lang:
         q.append(("q[terms][properties_hash.pokemon_language.keyword][]", lang))
     if cond:
         q.append(("q[terms][properties_hash.condition.keyword][]", cond))
+    if reverse:
+        q.append(("q[terms][properties_hash.pokemon_reverse][]", "true"))
     url = BASE.format(bid=bid) + "?" + urllib.parse.urlencode(q)
     for attempt in range(4):
         try:
@@ -173,10 +175,10 @@ def fetch(bid, lang=None, cond=None, page=1):
     raise err
 
 
-def products(bid, lang=None, cond=None):
+def products(bid, lang=None, cond=None, reverse=False):
     out, page, first, extra = [], 1, None, {}
     while page <= 10:
-        d = fetch(bid, lang, cond, page)
+        d = fetch(bid, lang, cond, page, reverse=reverse)
         first = first or d
         out += d.get("products") or []
         extra.update(d.get("users_extra_data") or {})
@@ -236,10 +238,42 @@ def mint_nm_stock(listings):
     return qty, len(listings)
 
 
-def ok(p, lang, cond):
+def is_reverse_listing(p):
+    h = p.get("properties_hash") or {}
+    value = h.get("pokemon_reverse")
+    return value is True or str(value).lower() == "true"
+
+
+def ok(p, lang, cond, reverse=False):
     h = p.get("properties_hash", {})
+    if reverse and not is_reverse_listing(p):
+        return False
     return (not p.get("graded")) and (lang is None or h.get("pokemon_language") == lang) \
         and (cond is None or h.get("condition") == cond)
+
+
+def eu_row_lang(row):
+    raw = row.get("language") or row.get("pokemon_language")
+    if not raw:
+        return ""
+    lang = str(raw).lower()
+    return "jp" if lang in ("jp", "ja") else lang
+
+
+def eu_row_ok(row, card):
+    """Listini EU: lingua della carta, e solo reverse se pokemon_reverse è true."""
+    if not isinstance(row, dict):
+        return False
+    wanted = (card.get("target_language") or "it").lower()
+    wanted = "jp" if wanted in ("jp", "ja") else wanted
+    found = eu_row_lang(row)
+    if found and found != wanted:
+        return False
+    if card.get("pokemon_reverse") is True:
+        rev = row.get("reverse", row.get("pokemon_reverse"))
+        if rev is not True and str(rev).lower() != "true":
+            return False
+    return True
 
 
 def price_eur(p):
@@ -309,6 +343,7 @@ def main():
     new_rows, out = [], []
     for c in cards:
         bid, lang = c["cardtrader_blueprint_id"], c.get("target_language", "it")
+        reverse = c.get("pokemon_reverse") is True
         rec = dict(c)
         bp = None
         try:
@@ -316,8 +351,8 @@ def main():
             # più i venditori Zero. Da un IP fuori dall'Italia le copie ITA non-Zero
             # (can_sell_via_hub false) possono mancare del tutto: non vanno scartate
             # se invece sono nella risposta.
-            nm, d0, nm_extra = products(bid, lang, "Near Mint")
-            nm = [p for p in nm if ok(p, lang, "Near Mint")]
+            nm, d0, nm_extra = products(bid, lang, "Near Mint", reverse=reverse)
+            nm = [p for p in nm if ok(p, lang, "Near Mint", reverse)]
             # Il minimo normale include anche i venditori non-Zero (can_sell_via_hub false).
             # Il filtro Zero si applica solo a zprices, mai a questa lista.
             prices = sorted(price_eur(p) for p in nm if price_eur(p) is not None)
@@ -336,6 +371,7 @@ def main():
             rec["qty_nm"] = astats["qty"]
             eu_rows = eu_map.get(str(bid))
             if isinstance(eu_rows, list) and eu_rows:
+                eu_rows = [row for row in eu_rows if eu_row_ok(row, rec)]
                 zstats, cstats, astats = eu_groups(eu_rows)
                 zprices = [zstats["min"]] if zstats["min"] is not None else []
                 prices = sorted(p for p in (zstats["min"], cstats["min"]) if p is not None)
@@ -355,14 +391,14 @@ def main():
             rec["offers_zero"] = top_offers(nm, nm_extra, True)
             rec["offers_ct"] = top_offers(nm, nm_extra, False)
             time.sleep(1)
-            mint, _, _ = products(bid, lang, "Mint")
-            mint = [p for p in mint if ok(p, lang, "Mint")]
+            mint, _, _ = products(bid, lang, "Mint", reverse=reverse)
+            mint = [p for p in mint if ok(p, lang, "Mint", reverse)]
             stock_qty, stock_n = mint_nm_stock(nm + mint)
             rec["qty_mint_nm_target_lang"] = stock_qty
             rec["listings_mint_nm_target_lang"] = stock_n
             time.sleep(1)
-            anynm, _, _ = products(bid, None, "Near Mint")
-            anyp = sorted(p["price"]["cents"] / 100 for p in anynm if ok(p, None, "Near Mint"))
+            anynm, _, _ = products(bid, None, "Near Mint", reverse=reverse)
+            anyp = sorted(p["price"]["cents"] / 100 for p in anynm if ok(p, None, "Near Mint", reverse))
             bp = d0["blueprint"]
             img = (bp.get("image") or {}).get("show", {}).get("url") or bp.get("image_url")
             rec["image_url"] = ("https://www.cardtrader.com" + img) if img and img.startswith("/") else img
@@ -510,6 +546,7 @@ def apply_card_prices(rec, eu_map, cardmarket):
     bid = str(rec.get("cardtrader_blueprint_id"))
     rows = eu_map.get(bid)
     if isinstance(rows, list) and rows:
+        rows = [row for row in rows if eu_row_ok(row, rec)]
         zstats, cstats, astats = eu_groups(rows)
         rec["price_ctz_eur"] = zstats["min"]
         rec["listings_ctz"] = zstats["n"]
@@ -671,6 +708,14 @@ WISHLIST_JOINED = {
     "p9-2": "2026-11-14",
     # p4-5: corretta da 188/214 a 213/214 il 14/11; lo storico 213 non riscrive i totali precedenti.
     "p4-5": "2026-11-14",
+    # 7 carte aggiunte il 15/11/2026. Senza storico TCGNotify: non devono entrare nei giorni precedenti.
+    "p9-3": "2026-11-15",
+    "p9-4": "2026-11-15",
+    "p9-5": "2026-11-15",
+    "p9-6": "2026-11-15",
+    "p9-7": "2026-11-15",
+    "p9-8": "2026-11-15",
+    "p9-9": "2026-11-15",
 }
 
 

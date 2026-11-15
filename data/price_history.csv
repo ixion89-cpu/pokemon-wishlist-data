@@ -2050,8 +2050,8 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-13,p3-9,113295,Pikachu,CEC,241,161.44,it_zero,Near Mint,2,cardtrader_zero_listings_min,daily_snapshot,161.44,125.0,158.16
 2026-11-14,p3-9,113295,Pikachu,CEC,241,125.0,it,Near Mint,4,cardtrader_listings_min,daily_snapshot,161.44,125.0,158.16
 2026-11-14,p3-9,113295,Pikachu,CEC,241,161.44,it_zero,Near Mint,2,cardtrader_zero_listings_min,daily_snapshot,161.44,125.0,158.16
-2026-11-15,p3-9,113295,Pikachu,CEC,241,125,it,Near Mint,4,cardtrader_listings_min,daily_snapshot,163.05,125,158.56
-2026-11-15,p3-9,113295,Pikachu,CEC,241,163.05,it_zero,Near Mint,2,cardtrader_zero_listings_min,daily_snapshot,163.05,125,158.56
+2026-11-15,p3-9,113295,Pikachu,CEC,241,125.0,it,Near Mint,4,cardtrader_listings_min,daily_snapshot,163.05,125.0,158.56
+2026-11-15,p3-9,113295,Pikachu,CEC,241,163.05,it_zero,Near Mint,2,cardtrader_zero_listings_min,daily_snapshot,163.05,125.0,158.56
 2026-10-01,p4-1,131420,Slowpoke & Psyduck GX,UNM,218/236,102.98,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p4-1,131420,Slowpoke & Psyduck GX,UNM,218/236,102.98,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p4-1,131420,Slowpoke & Psyduck GX,UNM,218/236,102.98,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -2852,8 +2852,8 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-13,p5-2,341102,Kyurem ex,BLK,165,44.69,it_zero,Near Mint,23,cardtrader_zero_listings_min,daily_snapshot,44.69,48.64,60.83
 2026-11-14,p5-2,341102,Kyurem ex,BLK,165,44.23,it,Near Mint,32,cardtrader_listings_min,daily_snapshot,44.23,48.64,60.08
 2026-11-14,p5-2,341102,Kyurem ex,BLK,165,44.23,it_zero,Near Mint,25,cardtrader_zero_listings_min,daily_snapshot,44.23,48.64,60.08
-2026-11-15,p5-2,341102,Kyurem ex,BLK,165,44.22,it,Near Mint,32,cardtrader_listings_min,daily_snapshot,44.22,48.64,60
-2026-11-15,p5-2,341102,Kyurem ex,BLK,165,44.22,it_zero,Near Mint,25,cardtrader_zero_listings_min,daily_snapshot,44.22,48.64,60
+2026-11-15,p5-2,341102,Kyurem ex,BLK,165,44.22,it,Near Mint,32,cardtrader_listings_min,daily_snapshot,44.22,48.64,60.0
+2026-11-15,p5-2,341102,Kyurem ex,BLK,165,44.22,it_zero,Near Mint,25,cardtrader_zero_listings_min,daily_snapshot,44.22,48.64,60.0
 2026-10-01,p5-3,316779,Leafeon ex,PRE,144,212.24,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p5-3,316779,Leafeon ex,PRE,144,212.6,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p5-3,316779,Leafeon ex,PRE,144,218.9,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -3544,8 +3544,8 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-13,p6-2,261321,Pikachu,MEW,173,57.63,it_zero,Near Mint,22,cardtrader_zero_listings_min,daily_snapshot,57.63,57.62,413.66
 2026-11-14,p6-2,261321,Pikachu,MEW,173,45.59,it,Near Mint,31,cardtrader_listings_min,daily_snapshot,45.59,57.62,413.34
 2026-11-14,p6-2,261321,Pikachu,MEW,173,45.59,it_zero,Near Mint,22,cardtrader_zero_listings_min,daily_snapshot,45.59,57.62,413.34
-2026-11-15,p6-2,261321,Pikachu,MEW,173,45.58,it,Near Mint,30,cardtrader_listings_min,daily_snapshot,57.69,45.58,397
-2026-11-15,p6-2,261321,Pikachu,MEW,173,57.69,it_zero,Near Mint,21,cardtrader_zero_listings_min,daily_snapshot,57.69,45.58,397
+2026-11-15,p6-2,261321,Pikachu,MEW,173,45.58,it,Near Mint,30,cardtrader_listings_min,daily_snapshot,57.69,45.58,397.0
+2026-11-15,p6-2,261321,Pikachu,MEW,173,57.69,it_zero,Near Mint,21,cardtrader_zero_listings_min,daily_snapshot,57.69,45.58,397.0
 2026-10-01,p6-3,255402,Charizard ex,OBF,223,74.78,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p6-3,255402,Charizard ex,OBF,223,73.43,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p6-3,255402,Charizard ex,OBF,223,75.37,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,

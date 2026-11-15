@@ -74,7 +74,8 @@ function quote(card) {
 function sourceName(source) {
   if (source === "cm") return "CARDMARKET";
   if (source === "ct") return "CARDTRADER";
-  return "CARDTRADER ZERO";
+  if (source === "ctz") return "CARDTRADER ZERO";
+  return "N/D";
 }
 function badge(source) {
   if (source === "zero") return '<span class="badge zero">Zero</span>';
@@ -83,6 +84,7 @@ function badge(source) {
 }
 function langOf(code) {
   if (code === "jp") return { flag: "🇯🇵", name: "Giapponese" };
+  if (code === "en") return { flag: "🇬🇧", name: "Inglese" };
   return { flag: "🇮🇹", name: "Italiano" };
 }
 function dayKey(iso) {
@@ -530,6 +532,7 @@ function sleeveHtml(card, collectionId, mode) {
     return `<a class="sleeve sleeve-compact${bought ? " bought" : ""}" href="#/c/${encodeURIComponent(collectionId)}/card/${encodeURIComponent(card.id)}">
       <div class="art">${img}</div>
       ${price}
+      ${card.pokemon_reverse ? `<p class="meta num">Reverse</p>` : ""}
     </a>`;
   }
   if (mode !== "expanded") {
@@ -557,7 +560,7 @@ function sleeveHtml(card, collectionId, mode) {
     ${source ? `<p class="src-label">${esc(source)}</p>` : ""}
     ${sleevePriceChange(card)}
     <p class="name">${esc(cardTitle(card))}</p>
-    <p class="meta">${esc(cardSetName(card))}${cardNumber(card) ? " · " + esc(cardNumber(card)) : ""}</p>
+    <p class="meta">${esc(cardSetName(card))}${cardNumber(card) ? " · " + esc(cardNumber(card)) : ""}${card.pokemon_reverse ? " · Reverse" : ""}</p>
     ${rarity}
     ${popLine}
     ${ctOnly}
@@ -773,6 +776,7 @@ function openFilters(id, payload) {
     <fieldset><legend>Rarità</legend><div class="checks">${checks("rarities", rarities, f.rarities)}</div></fieldset>
     <fieldset><legend>Lingua</legend><div class="checks">
       <label><input type="checkbox" name="langs" value="it" ${f.langs.includes("it") ? "checked" : ""}> Italiano</label>
+      <label><input type="checkbox" name="langs" value="en" ${f.langs.includes("en") ? "checked" : ""}> Inglese</label>
       <label><input type="checkbox" name="langs" value="jp" ${f.langs.includes("jp") ? "checked" : ""}> Giapponese</label>
     </div></fieldset>
     <fieldset><legend>Fascia di prezzo</legend><div class="checks">
@@ -1100,7 +1104,7 @@ async function renderCard(id, cardId) {
       ${sideNum(next, "next")}
     </div>
     <h2 class="card-name">${purchaseOf(card.id) ? "✅ " : ""}${esc(cardTitle(card))}</h2>
-    <p class="sub">${esc(cardSetName(card))} · ${esc(cardNumber(card))} · ${esc(card.rarity)} · ${lang.flag} ${lang.name}${card.release_year ? " · " + esc(card.release_year) : ""}</p>
+    <p class="sub">${esc(cardSetName(card))} · ${esc(cardNumber(card))} · ${esc(card.rarity)} · ${lang.flag} ${lang.name}${card.pokemon_reverse ? " · Reverse" : ""}${card.release_year ? " · " + esc(card.release_year) : ""}</p>
     <section class="pricebox">
       <p class="label">PREZZO MINIMO · NM · ${lang.flag} ${lang.name.toUpperCase()} · ${esc(sourceName(q.source))}</p>
       <p class="big">${q.price == null ? "n/d" : money(q.price)}</p>

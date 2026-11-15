@@ -1,6 +1,10 @@
 {
  "note": "Anno di uscita dell'espansione, usato se il blueprint CardTrader non ha released_at. SMBS è l'anno della carta in lista (Pikachu & Zekrom-GX SM168, 2019), non l'inizio del set promo.",
  "sets": {
+  "AOR": {"year": 2015, "release_date": "2015-08-12", "name": "Ancient Origins"},
+  "WBP": {"year": 1999, "release_date": "1999-10-01", "name": "Wizards Black Star Promos"},
+  "XYP": {"year": 2014, "release_date": "2014-02-12", "name": "XY Black Star Promos"},
+  "SHF": {"year": 2021, "release_date": "2021-02-19", "name": "Shining Fates"},
   "SLG": {"year": 2017, "release_date": "2017-10-06", "name": "Shining Legends"},
   "LOT": {"year": 2018, "release_date": "2018-11-02", "name": "Lost Thunder"},
   "TEU": {"year": 2019, "release_date": "2019-02-01", "name": "Team Up"},

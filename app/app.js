@@ -673,7 +673,6 @@ async function renderHome() {
       <h2>${esc(meta.name)}</h2>
       ${basketHtml(payload.cards || [], payload.generated_at)}
       <section class="perf">
-        <p class="label">Resta da spendere</p>
         <h2>${esc(meta.name)}</h2>
         ${totalChartHtml(payload.cards || [])}
       </section>
@@ -1213,17 +1212,12 @@ async function renderPerformance() {
   if (currentMeta && state.perfId !== currentMeta.id) state.perfId = currentMeta.id;
   const meta = state.collections.find((c) => c.id === state.perfId) || currentMeta;
   const current = await loadPayload(meta);
-  const basket = basketOf(current.cards || []);
   if (!state.perfBasket) state.perfBasket = "remain";
   const points = snapshotSeries(state.history, state.perfBasket).filter((p) => p.payload && p.payload.cards);
   const contrib = contributionBlock(points, state.perfBasket);
-  const headline = state.perfBasket === "remain" ? basket.remain : basket.wishlist;
-  const headlineLabel = state.perfBasket === "remain" ? "Resta da spendere" : "Totale wishlist";
   view.innerHTML = `
     <section class="perf">
-      <p class="label">${esc(headlineLabel)}</p>
       <h2>${esc(meta.name)}</h2>
-      <p class="big">${money(headline)}</p>
       ${totalChartHtml(current.cards || [])}
     </section>
     <h2 class="section-title">Contributo sul totale</h2>

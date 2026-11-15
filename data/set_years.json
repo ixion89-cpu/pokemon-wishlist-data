@@ -1,6 +1,8 @@
 {
  "note": "Anno di uscita dell'espansione, usato se il blueprint CardTrader non ha released_at. SMBS è l'anno della carta in lista (Pikachu & Zekrom-GX SM168, 2019), non l'inizio del set promo.",
  "sets": {
+  "N3": {"year": 2001, "release_date": "2001-09-19", "name": "Neo Revelation"},
+  "BKP": {"year": 2016, "release_date": "2016-02-03", "name": "BREAKpoint"},
   "AOR": {"year": 2015, "release_date": "2015-08-12", "name": "Ancient Origins"},
   "WBP": {"year": 1999, "release_date": "1999-10-01", "name": "Wizards Black Star Promos"},
   "XYP": {"year": 2014, "release_date": "2014-02-12", "name": "XY Black Star Promos"},

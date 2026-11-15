@@ -1,7 +1,7 @@
 # Pokémon Wishlist – modern · backend dati
 
 Backend statico (GitHub Pages) con la buying list della wishlist "Wishlist - modern" di Leopoldo Montini
-(81 carte), ordinata per prezzo. Pensato per essere collegato a ChatGPT Sites o a qualsiasi interfaccia.
+(84 carte), ordinata per prezzo. Pensato per essere collegato a ChatGPT Sites o a qualsiasi interfaccia.
 
 **Prezzo unico (`price_final_eur`)**, Near Mint in lingua target (italiano, giapponese solo per Togepi), non gradato, spedizione esclusa. Il prezzo è `price.cents / 100`, già con la fee di CardTrader.
 
@@ -67,7 +67,7 @@ Campi di ogni carta:
 | campo | significato |
 |---|---|
 | `id` | id stabile `p<pagina>-<posizione>` nell'app (ordine di inserimento) |
-| `order` | posizione d'inserimento (1–81) |
+| `order` | posizione d'inserimento (1–84) |
 | `rank_by_price` | posizione nella classifica per prezzo (1 = più cara) |
 | `name`, `set`, `set_code`, `number`, `rarity` | identificazione carta |
 | `target_language` | `it` (oppure `jp` per carte solo giapponesi) |

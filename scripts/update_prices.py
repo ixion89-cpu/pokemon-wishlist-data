@@ -731,6 +731,10 @@ WISHLIST_JOINED = {
     "p9-7": "2026-11-15",
     "p9-8": "2026-11-15",
     "p9-9": "2026-11-15",
+    # 3 carte aggiunte il 15/11/2026, prezzo solo Cardmarket. Nessuno storico TCGNotify da sommare prima.
+    "p10-1": "2026-11-15",
+    "p10-2": "2026-11-15",
+    "p10-3": "2026-11-15",
 }
 
 

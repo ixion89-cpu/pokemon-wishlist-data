@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
-"""Archivio giornaliero della "pop" (copie italiane in vendita) per Wishlist e Gold.
+"""Archivio giornaliero della "pop" (copie in vendita) per le tre collezioni.
 
 TCGNotify mostra la popolazione solo per gli ultimi 30 giorni, quindi la salviamo ogni giorno.
 
-  python3 scripts/update_pop.py                      # oggi, tutte le collezioni, fetch CardTrader dal box EU
+  python3 scripts/update_pop.py                      # oggi, wishlist + vintage + gold
   python3 scripts/update_pop.py --tcgnotify DUMP.json # unisce anche un dump TCGNotify (formato raw, vedi sotto)
-  python3 scripts/update_pop.py --collection gold --no-fetch --eu-raw data/collections/gold/cardtrader_eu_raw.json
+  python3 scripts/update_pop.py --collection vintage --no-fetch
+
+Senza --eu-raw ogni collezione usa il proprio cardtrader_eu_raw.json se la data è oggi.
+Il filtro lingua e, per le carte reverse, il filtro reverse restano quelli della carta.
 
 File scritti (per collezione, nella cartella dati della collezione):
   pop_history.json  {card_id: [{date, ct_it, ct_it_src, ct_it_all, ct_it_all_src, cm_it, total, total_all}]}
@@ -52,7 +55,11 @@ except Exception:  # pragma: no cover
     TZ = timezone(timedelta(hours=1))
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-COLLECTIONS = {"wishlist": "data", "gold": os.path.join("data", "collections", "gold")}
+COLLECTIONS = {
+    "wishlist": "data",
+    "vintage": os.path.join("data", "collections", "vintage"),
+    "gold": os.path.join("data", "collections", "gold"),
+}
 BASE = "https://www.cardtrader.com/en-EU/cards/{bid}.json"
 UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
@@ -317,12 +324,13 @@ def run_collection(name: str, args) -> int:
     today = args.date or today_rome()
     errors = []
     eu_rows = {}
-    if args.eu_raw:
-        eu = json.load(open(args.eu_raw, encoding="utf-8"))
+    eu_path = args.eu_raw or os.path.join(data_dir, "cardtrader_eu_raw.json")
+    if os.path.exists(eu_path):
+        eu = json.load(open(eu_path, encoding="utf-8"))
         if day(eu.get("date")) == today:
             eu_rows = eu.get("listings") or {}
         else:
-            print(f"[{name}] {args.eu_raw} ha date={eu.get('date')} != {today}: ignorato", flush=True)
+            print(f"[{name}] {eu_path} ha date={eu.get('date')} != {today}: ignorato", flush=True)
     for i, c in enumerate(cards, 1):
         bid = c.get("cardtrader_blueprint_id")
         if bid is None:
@@ -379,7 +387,7 @@ def run_collection(name: str, args) -> int:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--root", default=ROOT, help="root del repo (default: cartella sopra scripts/)")
-    ap.add_argument("--collection", choices=["wishlist", "gold", "all"], default="all")
+    ap.add_argument("--collection", choices=["wishlist", "vintage", "gold", "all"], default="all")
     ap.add_argument("--cards", help="cards.json alternativo (solo con una collezione)")
     ap.add_argument("--out", help="cartella di output alternativa (solo con una collezione)")
     ap.add_argument("--tcgnotify", action="append", help="dump TCGNotify da unire (ripetibile)")
@@ -388,9 +396,9 @@ def main() -> int:
     ap.add_argument("--date", help="data YYYY-MM-DD per i valori CardTrader (default oggi Europe/Rome)")
     ap.add_argument("--quiet", action="store_true")
     args = ap.parse_args()
-    names = ["wishlist", "gold"] if args.collection == "all" else [args.collection]
+    names = ["wishlist", "vintage", "gold"] if args.collection == "all" else [args.collection]
     if (args.cards or args.out) and len(names) > 1:
-        ap.error("--cards/--out richiedono --collection wishlist|gold")
+        ap.error("--cards/--out richiedono --collection wishlist|vintage|gold")
     return max(run_collection(n, args) for n in names)
 
 

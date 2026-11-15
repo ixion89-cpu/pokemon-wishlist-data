@@ -122,4 +122,5 @@ def backfill(data_dir):
 
 if __name__ == "__main__":
     backfill(os.path.join(ROOT, "data"))
+    backfill(os.path.join(ROOT, "data", "collections", "vintage"))
     backfill(os.path.join(ROOT, "data", "collections", "gold"))

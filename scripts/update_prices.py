@@ -5,7 +5,9 @@ Registra anche il minimo dei soli venditori CardTrader Zero (nel JSON pubblico:
 user.can_sell_via_hub, cioè chi spedisce tramite l'hub CardTrader).
 
 Uso:
-  python3 scripts/update_prices.py            # aggiorna data/*
+  python3 scripts/update_prices.py            # Wishlist - modern, data/*
+  python3 scripts/update_prices.py --collection vintage
+  python3 scripts/update_prices.py --collection gold --eu-only
   python3 scripts/update_prices.py --commit   # aggiorna e fa git commit + push
 
 Fonte: pagine pubbliche CardTrader (https://www.cardtrader.com/en-EU/cards/<blueprint_id>.json),
@@ -326,17 +328,30 @@ def tier(price):
 
 
 def configure_collection():
-    """--collection gold legge e scrive solo data/collections/gold/. Senza flag resta data/."""
+    """Sceglie la cartella dati. Senza flag, wishlist e wishlist-modern restano data/.
+
+    vintage e wishlist-vintage sono Wishlist - 1999/2019 (data/collections/vintage/).
+    gold e gold-modern sono Gold - modern. Un altro nome usa data/collections/<nome>/.
+    """
     global DATA
+    aliases = {
+        "wishlist": None,
+        "wishlist-modern": None,
+        "vintage": "vintage",
+        "wishlist-vintage": "vintage",
+        "gold": "gold",
+        "gold-modern": "gold",
+    }
     name = None
     if "--collection" in sys.argv:
         name = sys.argv[sys.argv.index("--collection") + 1]
-    if name and name not in ("wishlist", "wishlist-modern"):
-        DATA = os.path.join(ROOT_DATA, "collections", name)
+    folder = aliases.get(name, name)
+    if folder:
+        DATA = os.path.join(ROOT_DATA, "collections", folder)
         os.makedirs(os.path.join(DATA, "history"), exist_ok=True)
     else:
         DATA = ROOT_DATA
-    return name
+    return folder or "wishlist"
 
 
 def main():

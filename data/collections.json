@@ -13,6 +13,19 @@
   "pop_history": "pop_history.json"
  },
  {
+  "id": "wishlist-vintage",
+  "name": "Wishlist - 1999/2019",
+  "file": "collections/vintage/wishlist.json",
+  "purchases": "collections/vintage/purchases.json",
+  "history": "collections/vintage/history/index.json",
+  "csv": "collections/vintage/price_history.csv",
+  "cardmarket": "collections/vintage/cardmarket.json",
+  "tcgnotify": "collections/vintage/tcgnotify_history.json",
+  "totals": "collections/vintage/total_history.json",
+  "pop": "collections/vintage/pop_summary.json",
+  "pop_history": "collections/vintage/pop_history.json"
+ },
+ {
   "id": "gold-modern",
   "name": "Gold - modern",
   "file": "collections/gold/wishlist.json",

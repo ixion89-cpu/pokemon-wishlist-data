@@ -1,0 +1,4485 @@
+{
+ "reconstruction": true,
+ "real_from": "2026-11-10",
+ "max_from": "2025-07-11",
+ "cards_total": 22,
+ "discarded_cm_points": 21,
+ "note": "Fino al giorno prima degli snapshot reali il totale è ricostruito: minimo CardTrader NM di TCGNotify, altrimenti Cardmarket se non supera 3 volte la mediana CardTrader della carta, altrimenti l'ultimo prezzo entro 7 giorni. Dal 2026-11-10 si usa price_final degli snapshot.",
+ "events": [
+  {
+   "date": "2026-11-14",
+   "label": "carte aggiunte",
+   "cards": [
+    "p8-8"
+   ],
+   "count": 1
+  },
+  {
+   "date": "2026-11-15",
+   "label": "carte aggiunte",
+   "cards": [
+    "p9-3",
+    "p9-4",
+    "p9-5",
+    "p9-6",
+    "p9-7",
+    "p9-8",
+    "p10-1",
+    "p10-2",
+    "p10-3"
+   ],
+   "count": 9
+  }
+ ],
+ "card_first_price_day": {
+  "p8-8": "2026-11-14",
+  "p9-3": "2026-11-15",
+  "p9-4": "2026-11-15",
+  "p9-5": "2026-11-15",
+  "p9-6": "2026-11-15",
+  "p9-7": "2026-11-15",
+  "p9-8": "2026-11-15",
+  "p10-1": "2026-11-15",
+  "p10-2": "2026-11-15",
+  "p10-3": "2026-11-15"
+ },
+ "days": [
+  {
+   "date": "2025-07-11",
+   "total_eur": 85.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-07-12",
+   "total_eur": 85.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-07-13",
+   "total_eur": 85.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-07-14",
+   "total_eur": 85.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-07-15",
+   "total_eur": 85.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-07-16",
+   "total_eur": 85.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-07-17",
+   "total_eur": 85.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-07-18",
+   "total_eur": 85.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-07-19",
+   "total_eur": 85.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-07-20",
+   "total_eur": 85.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-07-21",
+   "total_eur": 85.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-07-22",
+   "total_eur": 85.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-07-23",
+   "total_eur": 85.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-07-24",
+   "total_eur": 85.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-07-25",
+   "total_eur": 85.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-07-26",
+   "total_eur": 84.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-07-27",
+   "total_eur": 84.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-07-28",
+   "total_eur": 52.5,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-07-29",
+   "total_eur": 80.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-07-30",
+   "total_eur": 77.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-07-31",
+   "total_eur": 77.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-01",
+   "total_eur": 77.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-02",
+   "total_eur": 77.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-03",
+   "total_eur": 77.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-04",
+   "total_eur": 77.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-05",
+   "total_eur": 77.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-06",
+   "total_eur": 70.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-07",
+   "total_eur": 70.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-08",
+   "total_eur": 70.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-09",
+   "total_eur": 90.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-10",
+   "total_eur": 70.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-11",
+   "total_eur": 70.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-12",
+   "total_eur": 70.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-13",
+   "total_eur": 70.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-14",
+   "total_eur": 70.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-15",
+   "total_eur": 70.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-16",
+   "total_eur": 70.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-17",
+   "total_eur": 70.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-18",
+   "total_eur": 70.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-19",
+   "total_eur": 90.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-20",
+   "total_eur": 90.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-21",
+   "total_eur": 90.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-22",
+   "total_eur": 90.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-23",
+   "total_eur": 90.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-24",
+   "total_eur": 90.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-25",
+   "total_eur": 90.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-26",
+   "total_eur": 90.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-27",
+   "total_eur": 90.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-28",
+   "total_eur": 90.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-29",
+   "total_eur": 90.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-30",
+   "total_eur": 90.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-08-31",
+   "total_eur": 95.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-01",
+   "total_eur": 95.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-02",
+   "total_eur": 95.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-03",
+   "total_eur": 95.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-04",
+   "total_eur": 95.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-05",
+   "total_eur": 95.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-06",
+   "total_eur": 95.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-07",
+   "total_eur": 95.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-08",
+   "total_eur": 95.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-09",
+   "total_eur": 95.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-10",
+   "total_eur": 95.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-11",
+   "total_eur": 95.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-12",
+   "total_eur": 95.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-13",
+   "total_eur": 95.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-14",
+   "total_eur": 94.95,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-15",
+   "total_eur": 94.99,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-16",
+   "total_eur": 604.99,
+   "cards_priced": 2,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-17",
+   "total_eur": 1513.79,
+   "cards_priced": 4,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-18",
+   "total_eur": 1513.79,
+   "cards_priced": 4,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-19",
+   "total_eur": 1513.79,
+   "cards_priced": 4,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-20",
+   "total_eur": 1513.79,
+   "cards_priced": 4,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-21",
+   "total_eur": 1513.79,
+   "cards_priced": 4,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-22",
+   "total_eur": 1523.79,
+   "cards_priced": 4,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-23",
+   "total_eur": 1513.79,
+   "cards_priced": 4,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-24",
+   "total_eur": 1513.79,
+   "cards_priced": 4,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-25",
+   "total_eur": 1512.9,
+   "cards_priced": 4,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-26",
+   "total_eur": 1512.9,
+   "cards_priced": 4,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-27",
+   "total_eur": 1522.9,
+   "cards_priced": 4,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-28",
+   "total_eur": 1503.0,
+   "cards_priced": 4,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-29",
+   "total_eur": 1682.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-09-30",
+   "total_eur": 1682.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-01",
+   "total_eur": 1682.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-02",
+   "total_eur": 1682.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-03",
+   "total_eur": 1682.89,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-04",
+   "total_eur": 1654.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-05",
+   "total_eur": 1654.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-06",
+   "total_eur": 1904.98,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-07",
+   "total_eur": 1684.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-08",
+   "total_eur": 1664.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-09",
+   "total_eur": 1664.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-10",
+   "total_eur": 1664.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-11",
+   "total_eur": 1664.0,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-12",
+   "total_eur": 1663.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-13",
+   "total_eur": 1664.0,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-14",
+   "total_eur": 1663.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-15",
+   "total_eur": 1653.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-16",
+   "total_eur": 1673.8,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-17",
+   "total_eur": 1653.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-18",
+   "total_eur": 1643.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-19",
+   "total_eur": 1623.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-20",
+   "total_eur": 1661.8,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-21",
+   "total_eur": 1643.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-22",
+   "total_eur": 1661.8,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-23",
+   "total_eur": 1661.8,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-24",
+   "total_eur": 1652.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-25",
+   "total_eur": 1670.4,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-26",
+   "total_eur": 1630.5,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-27",
+   "total_eur": 1630.5,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-28",
+   "total_eur": 1630.5,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-29",
+   "total_eur": 1630.5,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-30",
+   "total_eur": 1628.5,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-10-31",
+   "total_eur": 1628.5,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-01",
+   "total_eur": 1599.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-02",
+   "total_eur": 1619.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-03",
+   "total_eur": 1599.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-04",
+   "total_eur": 1799.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-05",
+   "total_eur": 1799.89,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-06",
+   "total_eur": 1839.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-07",
+   "total_eur": 1789.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-08",
+   "total_eur": 1799.89,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-09",
+   "total_eur": 1799.89,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-10",
+   "total_eur": 1799.89,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-11",
+   "total_eur": 1799.89,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-12",
+   "total_eur": 1859.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-13",
+   "total_eur": 1859.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-14",
+   "total_eur": 1861.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-15",
+   "total_eur": 1845.7,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-16",
+   "total_eur": 1831.12,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-17",
+   "total_eur": 1904.89,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-18",
+   "total_eur": 1806.22,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-19",
+   "total_eur": 1884.0,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-20",
+   "total_eur": 1864.8,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-21",
+   "total_eur": 1846.3,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-22",
+   "total_eur": 1829.65,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-23",
+   "total_eur": 1814.67,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-24",
+   "total_eur": 1858.3,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-25",
+   "total_eur": 2412.19,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-26",
+   "total_eur": 2418.69,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-27",
+   "total_eur": 2668.79,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-28",
+   "total_eur": 2668.79,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-29",
+   "total_eur": 2134.68,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-11-30",
+   "total_eur": 2084.79,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-01",
+   "total_eur": 1915.0,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-02",
+   "total_eur": 1904.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-03",
+   "total_eur": 1904.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-04",
+   "total_eur": 1886.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-05",
+   "total_eur": 1906.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-06",
+   "total_eur": 1906.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-07",
+   "total_eur": 1796.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-08",
+   "total_eur": 1806.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-09",
+   "total_eur": 1746.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-10",
+   "total_eur": 1736.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-11",
+   "total_eur": 1726.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-12",
+   "total_eur": 1743.6,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-13",
+   "total_eur": 1722.48,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-14",
+   "total_eur": 1743.78,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-15",
+   "total_eur": 1743.78,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-16",
+   "total_eur": 1743.78,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-17",
+   "total_eur": 1743.78,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-18",
+   "total_eur": 1813.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-19",
+   "total_eur": 1838.78,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-20",
+   "total_eur": 2212.78,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-21",
+   "total_eur": 2212.78,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-22",
+   "total_eur": 2212.78,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-23",
+   "total_eur": 2212.78,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-24",
+   "total_eur": 2212.78,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-25",
+   "total_eur": 2212.78,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-26",
+   "total_eur": 2212.78,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-27",
+   "total_eur": 2212.78,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-28",
+   "total_eur": 2212.78,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-29",
+   "total_eur": 2212.78,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-30",
+   "total_eur": 2212.78,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 5,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2025-12-31",
+   "total_eur": 2212.78,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-01",
+   "total_eur": 2187.78,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-02",
+   "total_eur": 2187.78,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-03",
+   "total_eur": 2177.78,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-04",
+   "total_eur": 1794.8,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-05",
+   "total_eur": 1753.8,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-06",
+   "total_eur": 1753.79,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-07",
+   "total_eur": 1804.79,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-08",
+   "total_eur": 1753.79,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-09",
+   "total_eur": 1753.79,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-10",
+   "total_eur": 1753.79,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 5,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-11",
+   "total_eur": 1753.79,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 5,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-12",
+   "total_eur": 1803.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-13",
+   "total_eur": 1807.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-14",
+   "total_eur": 1807.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 5,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-15",
+   "total_eur": 1807.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 5,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-16",
+   "total_eur": 1807.9,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-17",
+   "total_eur": 1728.0,
+   "cards_priced": 4,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-18",
+   "total_eur": 1728.0,
+   "cards_priced": 4,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-19",
+   "total_eur": 1728.0,
+   "cards_priced": 4,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-20",
+   "total_eur": 189.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-21",
+   "total_eur": 263.99,
+   "cards_priced": 2,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-22",
+   "total_eur": 2166.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-23",
+   "total_eur": 2166.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-24",
+   "total_eur": 2166.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 5,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-25",
+   "total_eur": 2166.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 5,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-26",
+   "total_eur": 2166.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-27",
+   "total_eur": 2166.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 5,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-28",
+   "total_eur": 2166.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 5,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-29",
+   "total_eur": 2092.0,
+   "cards_priced": 4,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-30",
+   "total_eur": 189.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-01-31",
+   "total_eur": 189.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-01",
+   "total_eur": 189.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-02",
+   "total_eur": 189.0,
+   "cards_priced": 1,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-03",
+   "total_eur": 0.0,
+   "cards_priced": 0,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-04",
+   "total_eur": 0.0,
+   "cards_priced": 0,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-05",
+   "total_eur": 0.0,
+   "cards_priced": 0,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-06",
+   "total_eur": 0.0,
+   "cards_priced": 0,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-07",
+   "total_eur": 0.0,
+   "cards_priced": 0,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-08",
+   "total_eur": 0.0,
+   "cards_priced": 0,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-09",
+   "total_eur": 0.0,
+   "cards_priced": 0,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-10",
+   "total_eur": 1863.0,
+   "cards_priced": 3,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-11",
+   "total_eur": 1863.0,
+   "cards_priced": 3,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-12",
+   "total_eur": 1863.0,
+   "cards_priced": 3,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-13",
+   "total_eur": 1863.0,
+   "cards_priced": 3,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-14",
+   "total_eur": 1863.0,
+   "cards_priced": 3,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-15",
+   "total_eur": 1863.0,
+   "cards_priced": 3,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-16",
+   "total_eur": 1863.0,
+   "cards_priced": 3,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-17",
+   "total_eur": 1863.0,
+   "cards_priced": 3,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-18",
+   "total_eur": 0.0,
+   "cards_priced": 0,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-19",
+   "total_eur": 0.0,
+   "cards_priced": 0,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-20",
+   "total_eur": 0.0,
+   "cards_priced": 0,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-21",
+   "total_eur": 0.0,
+   "cards_priced": 0,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-22",
+   "total_eur": 0.0,
+   "cards_priced": 0,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-23",
+   "total_eur": 0.0,
+   "cards_priced": 0,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-24",
+   "total_eur": 0.0,
+   "cards_priced": 0,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-25",
+   "total_eur": 0.0,
+   "cards_priced": 0,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-26",
+   "total_eur": 0.0,
+   "cards_priced": 0,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-27",
+   "total_eur": 0.0,
+   "cards_priced": 0,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-02-28",
+   "total_eur": 0.0,
+   "cards_priced": 0,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-01",
+   "total_eur": 0.0,
+   "cards_priced": 0,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-02",
+   "total_eur": 0.0,
+   "cards_priced": 0,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-03",
+   "total_eur": 1449.0,
+   "cards_priced": 2,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-04",
+   "total_eur": 1607.0,
+   "cards_priced": 4,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-05",
+   "total_eur": 1772.0,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-06",
+   "total_eur": 1772.0,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-07",
+   "total_eur": 1772.0,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-08",
+   "total_eur": 1772.0,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-09",
+   "total_eur": 1772.0,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-10",
+   "total_eur": 1772.0,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-11",
+   "total_eur": 1772.0,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-12",
+   "total_eur": 1772.0,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-13",
+   "total_eur": 1778.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-14",
+   "total_eur": 1778.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 5,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-15",
+   "total_eur": 1768.0,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-16",
+   "total_eur": 1768.0,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-17",
+   "total_eur": 1782.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-18",
+   "total_eur": 1782.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-19",
+   "total_eur": 1782.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-20",
+   "total_eur": 1782.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-21",
+   "total_eur": 1782.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-22",
+   "total_eur": 1782.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-23",
+   "total_eur": 1957.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-24",
+   "total_eur": 1957.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-25",
+   "total_eur": 1957.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-26",
+   "total_eur": 1957.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-27",
+   "total_eur": 1957.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-28",
+   "total_eur": 1957.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 5,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-29",
+   "total_eur": 1957.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-30",
+   "total_eur": 1958.0,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-03-31",
+   "total_eur": 1957.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-01",
+   "total_eur": 1957.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 5,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-02",
+   "total_eur": 2008.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-03",
+   "total_eur": 2013.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-04",
+   "total_eur": 2004.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-05",
+   "total_eur": 2004.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-06",
+   "total_eur": 2004.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-07",
+   "total_eur": 2004.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 5,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-08",
+   "total_eur": 2013.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-09",
+   "total_eur": 2013.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-10",
+   "total_eur": 1989.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-11",
+   "total_eur": 1989.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-12",
+   "total_eur": 1989.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-13",
+   "total_eur": 1984.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-14",
+   "total_eur": 1984.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-15",
+   "total_eur": 1984.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-16",
+   "total_eur": 1984.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-17",
+   "total_eur": 2004.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-18",
+   "total_eur": 2004.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-19",
+   "total_eur": 1954.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-20",
+   "total_eur": 1954.99,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-21",
+   "total_eur": 2253.97,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-22",
+   "total_eur": 2053.97,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-23",
+   "total_eur": 2178.97,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-24",
+   "total_eur": 2173.97,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-25",
+   "total_eur": 2168.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 5,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-26",
+   "total_eur": 2068.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-27",
+   "total_eur": 2063.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-28",
+   "total_eur": 2063.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-29",
+   "total_eur": 2063.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-04-30",
+   "total_eur": 2063.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-01",
+   "total_eur": 2063.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-02",
+   "total_eur": 2063.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-03",
+   "total_eur": 2513.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-04",
+   "total_eur": 2497.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-05",
+   "total_eur": 2521.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-06",
+   "total_eur": 2562.9,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-07",
+   "total_eur": 2582.9,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-08",
+   "total_eur": 2566.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-09",
+   "total_eur": 2566.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 6,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-10",
+   "total_eur": 2566.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-11",
+   "total_eur": 2566.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-12",
+   "total_eur": 2566.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-13",
+   "total_eur": 2566.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-14",
+   "total_eur": 2557.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-15",
+   "total_eur": 2557.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 6,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-16",
+   "total_eur": 2557.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-17",
+   "total_eur": 2566.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-18",
+   "total_eur": 2571.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-19",
+   "total_eur": 2571.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 5,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-20",
+   "total_eur": 2572.88,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 5,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-21",
+   "total_eur": 1368.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-22",
+   "total_eur": 1368.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-23",
+   "total_eur": 1368.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-24",
+   "total_eur": 1368.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 5,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-25",
+   "total_eur": 1368.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-26",
+   "total_eur": 1372.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-27",
+   "total_eur": 1372.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-28",
+   "total_eur": 1388.8,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-29",
+   "total_eur": 1388.8,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 5,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-30",
+   "total_eur": 1388.8,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-05-31",
+   "total_eur": 1372.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-01",
+   "total_eur": 1372.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-02",
+   "total_eur": 1372.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-03",
+   "total_eur": 1372.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 5,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-04",
+   "total_eur": 1372.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-05",
+   "total_eur": 1372.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-06",
+   "total_eur": 1372.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-07",
+   "total_eur": 1372.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 5,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-08",
+   "total_eur": 1357.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-09",
+   "total_eur": 1357.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 5,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-10",
+   "total_eur": 1357.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 4,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-11",
+   "total_eur": 1357.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-12",
+   "total_eur": 1357.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-13",
+   "total_eur": 1357.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-14",
+   "total_eur": 1357.88,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-15",
+   "total_eur": 1357.87,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-16",
+   "total_eur": 1123.89,
+   "cards_priced": 5,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-17",
+   "total_eur": 3123.89,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 2,
+   "cards_carry": 4,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-18",
+   "total_eur": 3633.89,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-19",
+   "total_eur": 3638.88,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 6,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-20",
+   "total_eur": 3638.88,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 6,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-21",
+   "total_eur": 3638.88,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 6,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-22",
+   "total_eur": 3638.88,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 6,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-23",
+   "total_eur": 3638.88,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 6,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-24",
+   "total_eur": 3638.88,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 6,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-25",
+   "total_eur": 3638.88,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 6,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-26",
+   "total_eur": 3638.88,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 6,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-27",
+   "total_eur": 3641.89,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 6,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-28",
+   "total_eur": 3641.89,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 6,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-29",
+   "total_eur": 3641.89,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 6,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-06-30",
+   "total_eur": 3630.88,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 6,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-01",
+   "total_eur": 3630.88,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 6,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-02",
+   "total_eur": 3630.88,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 6,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-03",
+   "total_eur": 3630.88,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 1,
+   "cards_carry": 5,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-04",
+   "total_eur": 3630.88,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 6,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-05",
+   "total_eur": 3630.88,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 6,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-06",
+   "total_eur": 3630.88,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 6,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-07",
+   "total_eur": 2630.88,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 6,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-08",
+   "total_eur": 2630.88,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 6,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-09",
+   "total_eur": 2630.88,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 5,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-10",
+   "total_eur": 2630.88,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 0,
+   "cards_carry": 6,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-11",
+   "total_eur": 2630.98,
+   "cards_priced": 6,
+   "cards_ct": 0,
+   "cards_cm": 3,
+   "cards_carry": 3,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-12",
+   "total_eur": 3344.99,
+   "cards_priced": 7,
+   "cards_ct": 0,
+   "cards_cm": 7,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-13",
+   "total_eur": 3344.99,
+   "cards_priced": 7,
+   "cards_ct": 0,
+   "cards_cm": 7,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-14",
+   "total_eur": 4344.99,
+   "cards_priced": 7,
+   "cards_ct": 0,
+   "cards_cm": 7,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-15",
+   "total_eur": 2045.79,
+   "cards_priced": 7,
+   "cards_ct": 6,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-16",
+   "total_eur": 2045.79,
+   "cards_priced": 7,
+   "cards_ct": 6,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-17",
+   "total_eur": 2045.79,
+   "cards_priced": 7,
+   "cards_ct": 6,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-18",
+   "total_eur": 2045.79,
+   "cards_priced": 7,
+   "cards_ct": 6,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-19",
+   "total_eur": 2045.79,
+   "cards_priced": 7,
+   "cards_ct": 6,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-20",
+   "total_eur": 12064.52,
+   "cards_priced": 9,
+   "cards_ct": 8,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-21",
+   "total_eur": 11940.07,
+   "cards_priced": 9,
+   "cards_ct": 8,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-22",
+   "total_eur": 11897.08,
+   "cards_priced": 9,
+   "cards_ct": 6,
+   "cards_cm": 1,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-23",
+   "total_eur": 12037.72,
+   "cards_priced": 9,
+   "cards_ct": 7,
+   "cards_cm": 0,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-24",
+   "total_eur": 12037.72,
+   "cards_priced": 9,
+   "cards_ct": 7,
+   "cards_cm": 0,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-25",
+   "total_eur": 12037.72,
+   "cards_priced": 9,
+   "cards_ct": 7,
+   "cards_cm": 0,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-26",
+   "total_eur": 12162.17,
+   "cards_priced": 9,
+   "cards_ct": 9,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-27",
+   "total_eur": 12162.17,
+   "cards_priced": 9,
+   "cards_ct": 9,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-28",
+   "total_eur": 12162.17,
+   "cards_priced": 9,
+   "cards_ct": 9,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-29",
+   "total_eur": 12162.17,
+   "cards_priced": 9,
+   "cards_ct": 9,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-30",
+   "total_eur": 12162.17,
+   "cards_priced": 9,
+   "cards_ct": 9,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-07-31",
+   "total_eur": 12157.72,
+   "cards_priced": 9,
+   "cards_ct": 9,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-01",
+   "total_eur": 12157.72,
+   "cards_priced": 9,
+   "cards_ct": 9,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-02",
+   "total_eur": 12209.71,
+   "cards_priced": 9,
+   "cards_ct": 9,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-03",
+   "total_eur": 12209.71,
+   "cards_priced": 9,
+   "cards_ct": 9,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-04",
+   "total_eur": 12209.71,
+   "cards_priced": 9,
+   "cards_ct": 9,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-05",
+   "total_eur": 12129.71,
+   "cards_priced": 9,
+   "cards_ct": 9,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-06",
+   "total_eur": 12129.71,
+   "cards_priced": 9,
+   "cards_ct": 9,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-07",
+   "total_eur": 12119.71,
+   "cards_priced": 9,
+   "cards_ct": 9,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-08",
+   "total_eur": 12119.71,
+   "cards_priced": 9,
+   "cards_ct": 9,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-09",
+   "total_eur": 12119.71,
+   "cards_priced": 9,
+   "cards_ct": 9,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-10",
+   "total_eur": 12119.71,
+   "cards_priced": 9,
+   "cards_ct": 9,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-11",
+   "total_eur": 12119.71,
+   "cards_priced": 9,
+   "cards_ct": 9,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-12",
+   "total_eur": 12119.71,
+   "cards_priced": 9,
+   "cards_ct": 9,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-13",
+   "total_eur": 12119.71,
+   "cards_priced": 9,
+   "cards_ct": 9,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-14",
+   "total_eur": 12129.71,
+   "cards_priced": 9,
+   "cards_ct": 9,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-15",
+   "total_eur": 12079.08,
+   "cards_priced": 9,
+   "cards_ct": 8,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-16",
+   "total_eur": 12079.08,
+   "cards_priced": 9,
+   "cards_ct": 8,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-17",
+   "total_eur": 12079.08,
+   "cards_priced": 9,
+   "cards_ct": 8,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-18",
+   "total_eur": 12123.12,
+   "cards_priced": 9,
+   "cards_ct": 8,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-19",
+   "total_eur": 12123.12,
+   "cards_priced": 9,
+   "cards_ct": 8,
+   "cards_cm": 0,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-20",
+   "total_eur": 12141.12,
+   "cards_priced": 9,
+   "cards_ct": 8,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-21",
+   "total_eur": 12141.12,
+   "cards_priced": 9,
+   "cards_ct": 8,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-22",
+   "total_eur": 12141.12,
+   "cards_priced": 9,
+   "cards_ct": 8,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-23",
+   "total_eur": 12441.11,
+   "cards_priced": 9,
+   "cards_ct": 8,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-24",
+   "total_eur": 12523.11,
+   "cards_priced": 9,
+   "cards_ct": 8,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-25",
+   "total_eur": 12523.11,
+   "cards_priced": 9,
+   "cards_ct": 8,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-26",
+   "total_eur": 3677.1,
+   "cards_priced": 9,
+   "cards_ct": 8,
+   "cards_cm": 0,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-27",
+   "total_eur": 3753.11,
+   "cards_priced": 9,
+   "cards_ct": 8,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-28",
+   "total_eur": 3753.11,
+   "cards_priced": 9,
+   "cards_ct": 8,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-29",
+   "total_eur": 3663.11,
+   "cards_priced": 9,
+   "cards_ct": 8,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-30",
+   "total_eur": 3663.11,
+   "cards_priced": 9,
+   "cards_ct": 8,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-08-31",
+   "total_eur": 3637.47,
+   "cards_priced": 9,
+   "cards_ct": 7,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-01",
+   "total_eur": 3637.47,
+   "cards_priced": 9,
+   "cards_ct": 7,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-02",
+   "total_eur": 3637.47,
+   "cards_priced": 9,
+   "cards_ct": 7,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-03",
+   "total_eur": 3637.47,
+   "cards_priced": 9,
+   "cards_ct": 7,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-04",
+   "total_eur": 3662.99,
+   "cards_priced": 9,
+   "cards_ct": 8,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-05",
+   "total_eur": 3662.99,
+   "cards_priced": 9,
+   "cards_ct": 7,
+   "cards_cm": 1,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-06",
+   "total_eur": 3662.99,
+   "cards_priced": 9,
+   "cards_ct": 7,
+   "cards_cm": 0,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-07",
+   "total_eur": 3662.99,
+   "cards_priced": 9,
+   "cards_ct": 7,
+   "cards_cm": 0,
+   "cards_carry": 2,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-08",
+   "total_eur": 3637.47,
+   "cards_priced": 9,
+   "cards_ct": 7,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-09",
+   "total_eur": 3695.47,
+   "cards_priced": 9,
+   "cards_ct": 7,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-10",
+   "total_eur": 3616.92,
+   "cards_priced": 9,
+   "cards_ct": 7,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-11",
+   "total_eur": 3616.92,
+   "cards_priced": 9,
+   "cards_ct": 7,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-12",
+   "total_eur": 3616.92,
+   "cards_priced": 9,
+   "cards_ct": 7,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-13",
+   "total_eur": 3566.82,
+   "cards_priced": 9,
+   "cards_ct": 7,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-14",
+   "total_eur": 3568.82,
+   "cards_priced": 9,
+   "cards_ct": 7,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-15",
+   "total_eur": 3658.81,
+   "cards_priced": 9,
+   "cards_ct": 7,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-16",
+   "total_eur": 3837.37,
+   "cards_priced": 10,
+   "cards_ct": 8,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-17",
+   "total_eur": 3687.47,
+   "cards_priced": 10,
+   "cards_ct": 9,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-18",
+   "total_eur": 3777.45,
+   "cards_priced": 10,
+   "cards_ct": 9,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-19",
+   "total_eur": 3777.45,
+   "cards_priced": 10,
+   "cards_ct": 9,
+   "cards_cm": 0,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-20",
+   "total_eur": 3687.47,
+   "cards_priced": 10,
+   "cards_ct": 9,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-21",
+   "total_eur": 3687.47,
+   "cards_priced": 10,
+   "cards_ct": 9,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-22",
+   "total_eur": 3777.45,
+   "cards_priced": 10,
+   "cards_ct": 9,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-23",
+   "total_eur": 3687.47,
+   "cards_priced": 10,
+   "cards_ct": 9,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-24",
+   "total_eur": 3687.47,
+   "cards_priced": 10,
+   "cards_ct": 9,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-25",
+   "total_eur": 3687.47,
+   "cards_priced": 10,
+   "cards_ct": 9,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-26",
+   "total_eur": 3687.47,
+   "cards_priced": 10,
+   "cards_ct": 9,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-27",
+   "total_eur": 3688.02,
+   "cards_priced": 10,
+   "cards_ct": 9,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-28",
+   "total_eur": 3787.38,
+   "cards_priced": 10,
+   "cards_ct": 8,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-29",
+   "total_eur": 3787.37,
+   "cards_priced": 10,
+   "cards_ct": 8,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-09-30",
+   "total_eur": 3787.37,
+   "cards_priced": 10,
+   "cards_ct": 8,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-01",
+   "total_eur": 3845.38,
+   "cards_priced": 10,
+   "cards_ct": 8,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-02",
+   "total_eur": 3787.37,
+   "cards_priced": 10,
+   "cards_ct": 8,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-03",
+   "total_eur": 3787.37,
+   "cards_priced": 10,
+   "cards_ct": 8,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-04",
+   "total_eur": 3787.38,
+   "cards_priced": 10,
+   "cards_ct": 8,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-05",
+   "total_eur": 3787.38,
+   "cards_priced": 10,
+   "cards_ct": 8,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-06",
+   "total_eur": 4238.0,
+   "cards_priced": 11,
+   "cards_ct": 9,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-07",
+   "total_eur": 4238.0,
+   "cards_priced": 11,
+   "cards_ct": 9,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-08",
+   "total_eur": 4238.0,
+   "cards_priced": 11,
+   "cards_ct": 9,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-09",
+   "total_eur": 4238.0,
+   "cards_priced": 11,
+   "cards_ct": 9,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-10",
+   "total_eur": 4238.0,
+   "cards_priced": 11,
+   "cards_ct": 9,
+   "cards_cm": 2,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-11",
+   "total_eur": 4178.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-12",
+   "total_eur": 4296.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-13",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-14",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-15",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-16",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-17",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-18",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-19",
+   "total_eur": 6024.6,
+   "cards_priced": 11,
+   "cards_ct": 0,
+   "cards_cm": 11,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-20",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-21",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-22",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-23",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 0,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-24",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-25",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-26",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-27",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-28",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-29",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-30",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-10-31",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-11-01",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-11-02",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 1,
+   "cards_carry": 0,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-11-03",
+   "total_eur": 4308.73,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 0,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-11-04",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 0,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-11-05",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 0,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-11-06",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 0,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-11-07",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 0,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-11-08",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 0,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-11-09",
+   "total_eur": 4308.74,
+   "cards_priced": 11,
+   "cards_ct": 10,
+   "cards_cm": 0,
+   "cards_carry": 1,
+   "source": "reconstructed"
+  },
+  {
+   "date": "2026-11-10",
+   "total_eur": 4592.36,
+   "cards_priced": 12,
+   "cards_ct": 12,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "snapshot"
+  },
+  {
+   "date": "2026-11-11",
+   "total_eur": 4364.17,
+   "cards_priced": 12,
+   "cards_ct": 12,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "snapshot"
+  },
+  {
+   "date": "2026-11-12",
+   "total_eur": 4364.17,
+   "cards_priced": 12,
+   "cards_ct": 12,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "snapshot"
+  },
+  {
+   "date": "2026-11-13",
+   "total_eur": 4366.06,
+   "cards_priced": 12,
+   "cards_ct": 12,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "snapshot"
+  },
+  {
+   "date": "2026-11-14",
+   "total_eur": 5286.35,
+   "cards_priced": 13,
+   "cards_ct": 13,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "snapshot"
+  },
+  {
+   "date": "2026-11-15",
+   "total_eur": 7975.58,
+   "cards_priced": 22,
+   "cards_ct": 22,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "snapshot"
+  }
+ ]
+}

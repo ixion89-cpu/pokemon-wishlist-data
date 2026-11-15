@@ -17,4 +17,5 @@ jobs:
           git config user.name "wishlist-bot"
           git config user.email "wishlist-bot@users.noreply.github.com"
           python3 scripts/update_prices.py
+          python3 scripts/update_prices.py --collection vintage
           python3 scripts/update_prices.py --collection gold --eu-only --commit

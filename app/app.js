@@ -253,10 +253,16 @@ function parseCsv(text) {
     return obj;
   });
 }
+function collectionParam(id) {
+  if (id === "gold-modern") return "gold";
+  if (id === "wishlist-vintage") return "vintage";
+  return "wishlist";
+}
 function collectionFromUrl() {
   const value = new URLSearchParams(location.search).get("c");
   if (!value) return "";
   if (value === "gold" || value === "gold-modern") return "gold-modern";
+  if (value === "vintage" || value === "wishlist-vintage") return "wishlist-vintage";
   if (value === "wishlist" || value === "wishlist-modern") return "wishlist-modern";
   return "";
 }
@@ -295,7 +301,7 @@ function setCollection(id) {
   state.collectionId = id;
   localStorage.setItem("wl-collection", id);
   const url = new URL(location.href);
-  url.searchParams.set("c", id === "gold-modern" ? "gold" : "wishlist");
+  url.searchParams.set("c", collectionParam(id));
   const here = route();
   if (here.name === "card" || here.name === "binder") url.hash = "#/c/" + encodeURIComponent(id);
   history.replaceState(null, "", url.pathname + url.search + url.hash);

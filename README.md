@@ -1,7 +1,6 @@
 # Pokémon Wishlist – modern · backend dati
 
-Backend statico (GitHub Pages) con la buying list della wishlist "Wishlist - modern" di Leopoldo Montini
-(84 carte), ordinata per prezzo. Pensato per essere collegato a ChatGPT Sites o a qualsiasi interfaccia.
+Backend statico (GitHub Pages) con tre collezioni: Wishlist - modern (62 carte, dal 2020), Wishlist - 1999/2019 (22 carte, `?c=vintage`) e Gold - modern (9 carte). Gli id `pX-Y` restano quelli della prima inserzione: pagina e posizione sono state ricalcolate dentro ogni collezione. Pensato per essere collegato a ChatGPT Sites o a qualsiasi interfaccia.
 
 **Prezzo unico (`price_final_eur`)**, Near Mint in lingua target (italiano, giapponese solo per Togepi), non gradato, spedizione esclusa. Il prezzo è `price.cents / 100`, già con la fee di CardTrader.
 
@@ -31,7 +30,13 @@ L'Action delle 07:00 (Roma) gira su un runner USA: CardTrader da lì nasconde mo
 
 `data/total_history.json` lo rigenera lo script. Fino al 9 nov 2026 il totale di ogni giorno è il minimo CardTrader NM di TCGNotify, altrimenti il minimo Cardmarket se non supera 3 volte la mediana CardTrader di quella carta, altrimenti l'ultimo prezzo entro 7 giorni. Dal 10 nov 2026 si usa `price_final` degli snapshot. Il tab MAX parte dal primo giorno con almeno 60 carte (o dal primo giorno, se la collezione ne ha meno di 60).
 
-La collezione Gold sta in `data/collections/gold/`. Il file EU da aggiornare ogni giorno prima delle 07:00 è `data/collections/gold/cardtrader_eu_raw.json`, stesso formato della wishlist. `cardmarket.json` e `tcgnotify_history.json` alimentano la pagina carta. `total_history.json` è una ricostruzione a gradini: una carta entra il primo giorno in cui ha un prezzo, e un giorno c'è solo se tutte le carte già uscite hanno un prezzo. Il grafico usa il tratteggio per i giorni ricostruiti e un pallino giallo nei giorni in cui sale il numero di carte. L'aggiornamento quotidiano lascia intatti quei gradini e ricalcola solo lo snapshot. L'Action delle 07:00 aggiorna la wishlist e poi Gold con `--collection gold --eu-only`.
+La collezione 1999/2019 sta in `data/collections/vintage/`, Gold in `data/collections/gold/`. Prima delle 07:00 vanno aggiornati tre file EU, stesso formato:
+
+- `data/cardtrader_eu_raw.json` (Wishlist - modern)
+- `data/collections/vintage/cardtrader_eu_raw.json` (Wishlist - 1999/2019)
+- `data/collections/gold/cardtrader_eu_raw.json` (Gold - modern)
+
+Cardmarket e TCGNotify stanno nella stessa cartella di ciascuna collezione (`cardmarket.json`, `tcgnotify_history.json`) e non vengono sovrascritti dallo script. Per Gold, `total_history.json` è una ricostruzione a gradini: una carta entra il primo giorno in cui ha un prezzo, e un giorno c'è solo se tutte le carte già uscite hanno un prezzo. Il grafico usa il tratteggio per i giorni ricostruiti e un pallino giallo nei giorni in cui sale il numero di carte. L'aggiornamento quotidiano lascia intatti quei gradini e ricalcola solo lo snapshot. L'Action delle 07:00 aggiorna Wishlist - modern, poi Wishlist - 1999/2019 (`--collection vintage`) e infine Gold con `--collection gold --eu-only --commit`.
 
 ## Pop
 
@@ -66,8 +71,8 @@ GitHub Pages risponde con `Access-Control-Allow-Origin: *`, quindi i file si pos
 Campi di ogni carta:
 | campo | significato |
 |---|---|
-| `id` | id stabile `p<pagina>-<posizione>` nell'app (ordine di inserimento) |
-| `order` | posizione d'inserimento (1–84) |
+| `id` | id stabile della prima inserzione. Non coincide più sempre con pagina e posizione |
+| `order` | ordine relativo dentro la collezione (Uscita). Pagina e posizione sono `page` e `position`, 9 carte per pagina |
 | `rank_by_price` | posizione nella classifica per prezzo (1 = più cara) |
 | `name`, `set`, `set_code`, `number`, `rarity` | identificazione carta |
 | `target_language` | `it` (oppure `jp` per carte solo giapponesi) |

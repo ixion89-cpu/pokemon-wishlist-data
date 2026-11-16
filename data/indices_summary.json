@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T06:40:54+01:00",
+ "generated_at": "2026-11-16T17:01:40+01:00",
  "base": 100,
  "real_from": "2026-11-10",
  "note": "index_value_eur somma i prezzi unitari di tutte le carte dello snapshot, anche quelle segnate come acquistate. index_base100 è a base 100 e si concatena sul rendimento delle carte in comune, così un'aggiunta non crea un salto. volume è la somma dei total CT+CM italiani già noti; un dato mancante resta null. I rendimenti sono percentuali e sono null se manca il giorno esatto di confronto.",

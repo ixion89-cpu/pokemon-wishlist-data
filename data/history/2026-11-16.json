@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T06:40:16+01:00",
+ "generated_at": "2026-11-16T16:17:03+01:00",
  "currency": "EUR",
  "price_definition": "price_final_eur è un solo prezzo Near Mint in lingua target (ITA, JP solo per Togepi), non gradato, spedizione esclusa. Il prezzo è price.cents/100, già con la fee di CardTrader. Default: minimo Zero (price_ctz_eur). Si usa il minimo CardTrader normale (price_ct_eur) se non c'è nessuno Zero, oppure se lo Zero costa più del 20% del normale (price_ctz_eur > price_ct_eur * 1.20). Se mancano entrambi, si usa price_cm_eur da Cardmarket. price_final_source vale ctz, ct o cm. buy_price_eur è uguale a price_final_eur.",
  "summary": {
@@ -128,7 +128,7 @@
    "buy_price_eur": 900.64,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 1
   },
   {
@@ -232,7 +232,7 @@
    "buy_price_eur": 700.59,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 2
   },
   {
@@ -297,7 +297,7 @@
    "buy_price_eur": 644.38,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 3
   },
   {
@@ -402,7 +402,7 @@
    "buy_price_eur": 545.63,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 4
   },
   {
@@ -497,7 +497,7 @@
    "buy_price_eur": 529.64,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 5
   },
   {
@@ -602,7 +602,7 @@
    "buy_price_eur": 470.64,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 6
   },
   {
@@ -697,7 +697,7 @@
    "buy_price_eur": 400.53,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 7
   },
   {
@@ -802,7 +802,7 @@
    "buy_price_eur": 389.63,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 8
   },
   {
@@ -907,7 +907,7 @@
    "buy_price_eur": 340.64,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 9
   },
   {
@@ -1002,7 +1002,7 @@
    "buy_price_eur": 319.64,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 10
   },
   {
@@ -1110,7 +1110,7 @@
    "buy_price_eur": 266.53,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 11
   },
   {
@@ -1218,7 +1218,7 @@
    "buy_price_eur": 209.64,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 12
   },
   {
@@ -1303,7 +1303,7 @@
    "buy_price_eur": 200.64,
    "buy_price_source": "ct",
    "tier": "C: >150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 13
   },
   {
@@ -1360,7 +1360,7 @@
    "buy_price_eur": 180.54,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 14
   },
   {
@@ -1465,7 +1465,7 @@
    "buy_price_eur": 169.44,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 15
   },
   {
@@ -1573,7 +1573,7 @@
    "buy_price_eur": 163.64,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 16
   },
   {
@@ -1668,7 +1668,7 @@
    "buy_price_eur": 160.63,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 17
   },
   {
@@ -1773,7 +1773,7 @@
    "buy_price_eur": 150.57,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 18
   },
   {
@@ -1878,7 +1878,7 @@
    "buy_price_eur": 140.54,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 19
   },
   {
@@ -1900,6 +1900,20 @@
    "italian_edition_exists": true,
    "confidence": "alta",
    "notes": "",
+   "price_min_ita_nm_eur": 130.64,
+   "price_min_target_lang_nm_eur": 130.64,
+   "listings_target_lang_nm": null,
+   "price_2nd_target_lang_nm_eur": null,
+   "price_min_any_lang_nm_eur": null,
+   "ct_market_all_lang_eur": null,
+   "price_source": null,
+   "price_min_ita_nm_zero_eur": 130.64,
+   "price_min_target_lang_nm_zero_eur": 130.64,
+   "listings_target_lang_nm_zero": 11,
+   "offers_zero": null,
+   "offers_ct": null,
+   "qty_mint_nm_target_lang": null,
+   "listings_mint_nm_target_lang": null,
    "price_ctz_eur": 130.64,
    "listings_ctz": 11,
    "qty_ctz": 13,
@@ -1909,21 +1923,18 @@
    "price_avg_eur": 187.52,
    "listings_nm": 15,
    "qty_nm": 17,
-   "price_min_target_lang_nm_zero_eur": 130.64,
-   "listings_target_lang_nm_zero": 11,
-   "price_min_ita_nm_zero_eur": 130.64,
-   "price_min_target_lang_nm_eur": 130.64,
-   "price_min_ita_nm_eur": 130.64,
    "price_cm_eur": null,
    "price_cm_avg_eur": null,
    "copies_cm": null,
    "price_cm_date": null,
    "price_final_eur": 130.64,
    "price_final_source": "ctz",
+   "fetch_error": "HTTP Error 403: Forbidden",
+   "release_year": 2021,
    "buy_price_eur": 130.64,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 20
   },
   {
@@ -2028,7 +2039,7 @@
    "buy_price_eur": 119.52,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 21
   },
   {
@@ -2133,7 +2144,7 @@
    "buy_price_eur": 115.62,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 22
   },
   {
@@ -2241,7 +2252,7 @@
    "buy_price_eur": 109.22,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 23
   },
   {
@@ -2346,7 +2357,7 @@
    "buy_price_eur": 109.14,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 24
   },
   {
@@ -2403,7 +2414,7 @@
    "buy_price_eur": 108.99,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 25
   },
   {
@@ -2508,7 +2519,7 @@
    "buy_price_eur": 105.64,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 26
   },
   {
@@ -2616,7 +2627,7 @@
    "buy_price_eur": 105.52,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 27
   },
   {
@@ -2673,7 +2684,7 @@
    "buy_price_eur": 100.64,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 28
   },
   {
@@ -2778,7 +2789,7 @@
    "buy_price_eur": 99.27,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 29
   },
   {
@@ -2883,7 +2894,7 @@
    "buy_price_eur": 99.02,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 30
   },
   {
@@ -2988,7 +2999,7 @@
    "buy_price_eur": 94.52,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 31
   },
   {
@@ -3093,7 +3104,7 @@
    "buy_price_eur": 90.61,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 32
   },
   {
@@ -3198,7 +3209,7 @@
    "buy_price_eur": 90.54,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 33
   },
   {
@@ -3303,7 +3314,7 @@
    "buy_price_eur": 86.43,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 34
   },
   {
@@ -3408,7 +3419,7 @@
    "buy_price_eur": 84.4,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 35
   },
   {
@@ -3465,7 +3476,7 @@
    "buy_price_eur": 78.61,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 36
   },
   {
@@ -3570,7 +3581,7 @@
    "buy_price_eur": 78.14,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 37
   },
   {
@@ -3678,7 +3689,7 @@
    "buy_price_eur": 78.13,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 38
   },
   {
@@ -3783,7 +3794,7 @@
    "buy_price_eur": 75.64,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 39
   },
   {
@@ -3888,7 +3899,7 @@
    "buy_price_eur": 70.64,
    "buy_price_source": "ct",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 40
   },
   {
@@ -3993,7 +4004,7 @@
    "buy_price_eur": 70.64,
    "buy_price_source": "ct",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 41
   },
   {
@@ -4099,7 +4110,7 @@
    "buy_price_eur": 70.59,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 42
   },
   {
@@ -4204,7 +4215,7 @@
    "buy_price_eur": 65.64,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 43
   },
   {
@@ -4328,7 +4339,7 @@
    "buy_price_eur": 60.84,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 44
   },
   {
@@ -4433,7 +4444,7 @@
    "buy_price_eur": 57.18,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 45
   },
   {
@@ -4538,7 +4549,7 @@
    "buy_price_eur": 52.36,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 46
   },
   {
@@ -4643,7 +4654,7 @@
    "buy_price_eur": 49.25,
    "buy_price_source": "ctz",
    "tier": "A: <50€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 47
   },
   {
@@ -4748,7 +4759,7 @@
    "buy_price_eur": 48.05,
    "buy_price_source": "ctz",
    "tier": "A: <50€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 48
   },
   {
@@ -4852,7 +4863,7 @@
    "buy_price_eur": 45.58,
    "buy_price_source": "ct",
    "tier": "A: <50€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 49
   },
   {
@@ -4957,7 +4968,7 @@
    "buy_price_eur": 43.59,
    "buy_price_source": "ctz",
    "tier": "A: <50€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 50
   },
   {
@@ -5062,7 +5073,7 @@
    "buy_price_eur": 42.42,
    "buy_price_source": "ctz",
    "tier": "A: <50€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 51
   },
   {
@@ -5119,7 +5130,7 @@
    "buy_price_eur": 40.22,
    "buy_price_source": "ctz",
    "tier": "A: <50€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 52
   },
   {
@@ -5224,7 +5235,7 @@
    "buy_price_eur": 37.52,
    "buy_price_source": "ctz",
    "tier": "A: <50€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 53
   },
   {
@@ -5329,7 +5340,7 @@
    "buy_price_eur": 35.52,
    "buy_price_source": "ctz",
    "tier": "A: <50€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 54
   },
   {
@@ -5434,7 +5445,7 @@
    "buy_price_eur": 25.48,
    "buy_price_source": "ctz",
    "tier": "A: <50€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 55
   },
   {
@@ -5539,7 +5550,7 @@
    "buy_price_eur": 25.19,
    "buy_price_source": "ctz",
    "tier": "A: <50€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 56
   },
   {
@@ -5644,7 +5655,7 @@
    "buy_price_eur": 21.81,
    "buy_price_source": "ctz",
    "tier": "A: <50€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 57
   },
   {
@@ -5749,7 +5760,7 @@
    "buy_price_eur": 20.27,
    "buy_price_source": "ct",
    "tier": "A: <50€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 58
   },
   {
@@ -5854,7 +5865,7 @@
    "buy_price_eur": 18.07,
    "buy_price_source": "ctz",
    "tier": "A: <50€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 59
   },
   {
@@ -5911,7 +5922,7 @@
    "buy_price_eur": 12.2,
    "buy_price_source": "ct",
    "tier": "A: <50€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 60
   },
   {
@@ -6016,7 +6027,7 @@
    "buy_price_eur": 10.15,
    "buy_price_source": "ct",
    "tier": "A: <50€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 61
   },
   {
@@ -6121,7 +6132,7 @@
    "buy_price_eur": 7.13,
    "buy_price_source": "ctz",
    "tier": "A: <50€",
-   "last_updated": "2026-11-16T06:40:16+01:00",
+   "last_updated": "2026-11-16T16:17:03+01:00",
    "rank_by_price": 62
   }
  ]

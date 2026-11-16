@@ -1,244 +1,442 @@
 {
- "date": "2026-11-15",
- "listings": {
-  "127519": [
-   {
-    "price_eur": 1100.64,
-    "qty": 1,
-    "zero": false,
-    "seller_country": "IT"
-   },
-   {
-    "price_eur": 10000.64,
-    "qty": 1,
-    "zero": false,
-    "seller_country": "IT"
-   }
-  ],
-  "113275": [],
-  "129834": [
-   {
-    "price_eur": 700.64,
-    "qty": 1,
-    "zero": true,
-    "seller_country": "IT"
-   }
-  ],
-  "129830": [
-   {
-    "price_eur": 600.64,
-    "qty": 1,
-    "zero": false,
-    "seller_country": "IT"
-   },
-   {
-    "price_eur": 800.63,
-    "qty": 1,
-    "zero": true,
-    "seller_country": "IT"
-   }
-  ],
-  "260585": [
-   {
-    "price_eur": 450.62,
-    "qty": 2,
-    "zero": true,
-    "seller_country": "DE"
-   }
-  ],
-  "113276": [
-   {
-    "price_eur": 375.64,
-    "qty": 1,
-    "zero": true,
-    "seller_country": "IT"
-   }
-  ],
-  "126964": [
-   {
-    "price_eur": 330.64,
-    "qty": 1,
-    "zero": true,
-    "seller_country": "IT"
-   },
-   {
-    "price_eur": 340.53,
-    "qty": 1,
-    "zero": true,
-    "seller_country": "IT"
-   },
-   {
-    "price_eur": 371.24,
-    "qty": 1,
-    "zero": false,
-    "seller_country": "IT"
-   }
-  ],
-  "131420": [
-   {
-    "price_eur": 250.09,
-    "qty": 1,
-    "zero": true,
-    "seller_country": "IT"
-   },
-   {
-    "price_eur": 250.54,
-    "qty": 1,
-    "zero": true,
-    "seller_country": "IT"
-   },
-   {
-    "price_eur": 270.64,
-    "qty": 1,
-    "zero": true,
-    "seller_country": "IT"
-   },
-   {
-    "price_eur": 271.28,
-    "qty": 1,
-    "zero": false,
-    "seller_country": "IT"
-   }
-  ],
-  "113269": [
-   {
-    "price_eur": 235.64,
-    "qty": 1,
-    "zero": true,
-    "seller_country": "IT"
-   },
-   {
-    "price_eur": 250.58,
-    "qty": 1,
-    "zero": true,
-    "seller_country": "IT"
-   },
-   {
-    "price_eur": 250.64,
-    "qty": 1,
-    "zero": true,
-    "seller_country": "IT"
-   },
-   {
-    "price_eur": 261.22,
-    "qty": 1,
-    "zero": true,
-    "seller_country": "IT"
-   }
-  ],
-  "113295": [
-   {
-    "price_eur": 125.0,
-    "qty": 1,
-    "zero": false,
-    "seller_country": "IT"
-   },
-   {
-    "price_eur": 145.64,
-    "qty": 1,
-    "zero": false,
-    "seller_country": "IT"
-   },
-   {
-    "price_eur": 163.05,
-    "qty": 1,
-    "zero": true,
-    "seller_country": "IT"
-   },
-   {
-    "price_eur": 200.54,
-    "qty": 1,
-    "zero": true,
-    "seller_country": "IT"
-   }
-  ],
-  "122678": [
-   {
-    "price_eur": 120.63,
-    "qty": 1,
-    "zero": false,
-    "seller_country": "IT"
-   },
-   {
-    "price_eur": 10001.64,
-    "qty": 1,
-    "zero": true,
-    "seller_country": "IT"
-   }
-  ],
-  "129626": [
-   {
-    "price_eur": 100.64,
-    "qty": 1,
-    "zero": false,
-    "seller_country": "IT"
-   },
-   {
-    "price_eur": 190.54,
-    "qty": 1,
-    "zero": true,
-    "seller_country": "IT"
-   }
-  ],
-  "113265": [
-   {
-    "price_eur": 95.08,
-    "qty": 1,
-    "zero": false,
-    "seller_country": "IT"
-   },
-   {
-    "price_eur": 120.69,
-    "qty": 1,
-    "zero": false,
-    "seller_country": "IT"
-   },
-   {
-    "price_eur": 150.64,
-    "qty": 1,
-    "zero": false,
-    "seller_country": "IT"
-   }
-  ],
-  "131768": [
-   {
-    "price_eur": 449.63,
-    "qty": 1,
-    "zero": true,
-    "language": "en"
-   }
-  ],
-  "129740": [
-   {
-    "price_eur": 34.4,
-    "qty": 1,
-    "zero": true,
-    "language": "it"
-   }
-  ],
-  "131283": [
-   {
-    "price_eur": 16.26,
-    "qty": 1,
-    "zero": false,
-    "language": "it"
-   }
-  ],
-  "131073": [
-   {
-    "price_eur": 25.4,
-    "qty": 1,
-    "zero": false,
-    "language": "it"
-   }
-  ],
-  "132188": [
-   {
-    "price_eur": 9000.64,
-    "qty": 1,
-    "zero": true,
-    "language": "it"
-   }
-  ]
- }
+  "date": "2026-11-16",
+  "listings": {
+    "127519": [
+      {
+        "price_eur": 1100.64,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 10000.64,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      }
+    ],
+    "113275": [],
+    "123762": [],
+    "129834": [
+      {
+        "price_eur": 700.64,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      }
+    ],
+    "129830": [
+      {
+        "price_eur": 600.64,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 800.63,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      }
+    ],
+    "123763": [],
+    "260585": [
+      {
+        "price_eur": 450.62,
+        "qty": 2,
+        "zero": true,
+        "seller_country": "DE",
+        "reverse": false
+      }
+    ],
+    "131768": [
+      {
+        "price_eur": 449.63,
+        "qty": 2,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      }
+    ],
+    "113276": [
+      {
+        "price_eur": 375.64,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      }
+    ],
+    "110587": [],
+    "126964": [
+      {
+        "price_eur": 330.64,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 340.53,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 371.24,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      }
+    ],
+    "132188": [],
+    "131420": [
+      {
+        "price_eur": 250.09,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 250.54,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 270.64,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 271.28,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      }
+    ],
+    "113269": [
+      {
+        "price_eur": 235.64,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 250.58,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 250.64,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 261.22,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      }
+    ],
+    "109886": [],
+    "113295": [
+      {
+        "price_eur": 125.0,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 145.64,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 163.05,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 200.54,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      }
+    ],
+    "122678": [
+      {
+        "price_eur": 120.63,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 10001.64,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      }
+    ],
+    "129626": [
+      {
+        "price_eur": 100.64,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 190.54,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      }
+    ],
+    "113265": [
+      {
+        "price_eur": 95.08,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 120.69,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 150.64,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      }
+    ],
+    "129740": [
+      {
+        "price_eur": 34.4,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 34.45,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 34.46,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 34.52,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 35.52,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 35.52,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 38.23,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 38.36,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 39.52,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 55.63,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      }
+    ],
+    "131073": [
+      {
+        "price_eur": 25.4,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 50.64,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 51.42,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 51.64,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 55.63,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      }
+    ],
+    "131283": [
+      {
+        "price_eur": 16.26,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 16.27,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 18.27,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 20.27,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 23.8,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 24.93,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 25.4,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 26.24,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 28.4,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 30.29,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 30.76,
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 34.04,
+        "qty": 3,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      }
+    ]
+  }
 }

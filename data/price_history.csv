@@ -4223,3 +4223,127 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-14,p9-2,235145,Origin Forme Palkia VSTAR,CRZ,GG67,109.54,it_zero,Near Mint,8,cardtrader_zero_listings_min,daily_snapshot,109.54,110.64,857.96
 2026-11-15,p9-2,235145,Origin Forme Palkia VSTAR,CRZ,GG67,108.99,it,Near Mint,15,cardtrader_listings_min,daily_snapshot,108.99,110.64,808.03
 2026-11-15,p9-2,235145,Origin Forme Palkia VSTAR,CRZ,GG67,108.99,it_zero,Near Mint,9,cardtrader_zero_listings_min,daily_snapshot,108.99,110.64,808.03
+2026-11-16,p1-1,166432,Rayquaza V,EVS,194,400.53,it,Near Mint,6,cardtrader_listings_min,daily_snapshot,400.53,500.64,612.93
+2026-11-16,p1-1,166432,Rayquaza V,EVS,194,400.53,it_zero,Near Mint,5,cardtrader_zero_listings_min,daily_snapshot,400.53,500.64,612.93
+2026-11-16,p1-2,154020,Tyranitar V,BST,155,300.64,it,Near Mint,5,cardtrader_listings_min,daily_snapshot,319.64,300.64,332.17
+2026-11-16,p1-2,154020,Tyranitar V,BST,155,319.64,it_zero,Near Mint,4,cardtrader_zero_listings_min,daily_snapshot,319.64,300.64,332.17
+2026-11-16,p1-3,166430,Dragonite V,EVS,192,545.63,it,Near Mint,11,cardtrader_listings_min,daily_snapshot,545.63,549.99,569.17
+2026-11-16,p1-3,166430,Dragonite V,EVS,192,545.63,it_zero,Near Mint,9,cardtrader_zero_listings_min,daily_snapshot,545.63,549.99,569.17
+2026-11-16,p1-4,221558,Giratina V,LORG,186,700.59,it,Near Mint,6,cardtrader_listings_min,daily_snapshot,700.59,10000.64,2080.15
+2026-11-16,p1-4,221558,Giratina V,LORG,186,700.59,it_zero,Near Mint,5,cardtrader_zero_listings_min,daily_snapshot,700.59,10000.64,2080.15
+2026-11-16,p1-5,200493,Gengar VMAX,FST,271,900.64,it,Near Mint,9,cardtrader_listings_min,daily_snapshot,900.64,10000.64,3261.85
+2026-11-16,p1-5,200493,Gengar VMAX,FST,271,900.64,it_zero,Near Mint,8,cardtrader_zero_listings_min,daily_snapshot,900.64,10000.64,3261.85
+2026-11-16,p1-6,166450,Sylveon VMAX,EVS,212,450.64,it,Near Mint,7,cardtrader_listings_min,daily_snapshot,470.64,450.64,534.76
+2026-11-16,p1-6,166450,Sylveon VMAX,EVS,212,470.64,it_zero,Near Mint,5,cardtrader_zero_listings_min,daily_snapshot,470.64,450.64,534.76
+2026-11-16,p1-7,166427,Umbreon V,EVS,189,644.38,it,Near Mint,1,cardtrader_listings_min,daily_snapshot,644.38,,644.38
+2026-11-16,p1-7,166427,Umbreon V,EVS,189,644.38,it_zero,Near Mint,1,cardtrader_zero_listings_min,daily_snapshot,644.38,,644.38
+2026-11-16,p1-8,235164,Leafeon VSTAR,CRZ,GG35,49.25,it,Near Mint,27,cardtrader_listings_min,daily_snapshot,49.25,58.69,364.83
+2026-11-16,p1-8,235164,Leafeon VSTAR,CRZ,GG35,49.25,it_zero,Near Mint,19,cardtrader_zero_listings_min,daily_snapshot,49.25,58.69,364.83
+2026-11-16,p1-9,235190,Deoxys VMAX,CRZ,GG45,25.19,it,Near Mint,15,cardtrader_listings_min,daily_snapshot,25.19,25.38,32.61
+2026-11-16,p1-9,235190,Deoxys VMAX,CRZ,GG45,25.19,it_zero,Near Mint,9,cardtrader_zero_listings_min,daily_snapshot,25.19,25.38,32.61
+2026-11-16,p2-1,227867,Rayquaza VMAX,SIT,TG20,90.61,it,Near Mint,14,cardtrader_listings_min,daily_snapshot,90.61,101.26,117.91
+2026-11-16,p2-1,227867,Rayquaza VMAX,SIT,TG20,90.61,it_zero,Near Mint,11,cardtrader_zero_listings_min,daily_snapshot,90.61,101.26,117.91
+2026-11-16,p2-2,221650,Pikachu V,LORG,TG16,85.64,it,Near Mint,23,cardtrader_listings_min,daily_snapshot,86.43,85.64,497.91
+2026-11-16,p2-2,221650,Pikachu V,LORG,TG16,86.43,it_zero,Near Mint,18,cardtrader_zero_listings_min,daily_snapshot,86.43,85.64,497.91
+2026-11-16,p2-3,221651,Pikachu VMAX,LORG,TG17,64.64,it,Near Mint,17,cardtrader_listings_min,daily_snapshot,65.64,64.64,94.08
+2026-11-16,p2-3,221651,Pikachu VMAX,LORG,TG17,65.64,it_zero,Near Mint,14,cardtrader_zero_listings_min,daily_snapshot,65.64,64.64,94.08
+2026-11-16,p2-4,206475,Arceus V,BRS,166,37.52,it,Near Mint,19,cardtrader_listings_min,daily_snapshot,37.52,38.52,50.46
+2026-11-16,p2-4,206475,Arceus V,BRS,166,37.52,it_zero,Near Mint,14,cardtrader_zero_listings_min,daily_snapshot,37.52,38.52,50.46
+2026-11-16,p2-5,206453,Umbreon V,BRS,TG22,34.52,it,Near Mint,41,cardtrader_listings_min,daily_snapshot,35.52,34.52,54.04
+2026-11-16,p2-5,206453,Umbreon V,BRS,TG22,35.52,it_zero,Near Mint,30,cardtrader_zero_listings_min,daily_snapshot,35.52,34.52,54.04
+2026-11-16,p2-6,206580,Mimikyu V,BRS,TG16,25.4,it,Near Mint,23,cardtrader_listings_min,daily_snapshot,25.48,25.4,35.43
+2026-11-16,p2-6,206580,Mimikyu V,BRS,TG16,25.48,it_zero,Near Mint,17,cardtrader_zero_listings_min,daily_snapshot,25.48,25.4,35.43
+2026-11-16,p2-7,206626,Sylveon VMAX,BRS,TG15,21.81,it,Near Mint,24,cardtrader_listings_min,daily_snapshot,21.81,30.4,36.36
+2026-11-16,p2-7,206626,Sylveon VMAX,BRS,TG15,21.81,it_zero,Near Mint,18,cardtrader_zero_listings_min,daily_snapshot,21.81,30.4,36.36
+2026-11-16,p2-8,206627,Sylveon V,BRS,TG14,20.27,it,Near Mint,19,cardtrader_listings_min,daily_snapshot,24.35,20.27,31.6
+2026-11-16,p2-8,206627,Sylveon V,BRS,TG14,24.35,it_zero,Near Mint,16,cardtrader_zero_listings_min,daily_snapshot,24.35,20.27,31.6
+2026-11-16,p2-9,200745,Mew V,FST,251,70.64,it,Near Mint,12,cardtrader_listings_min,daily_snapshot,100.63,70.64,140.11
+2026-11-16,p2-9,200745,Mew V,FST,251,100.63,it_zero,Near Mint,7,cardtrader_zero_listings_min,daily_snapshot,100.63,70.64,140.11
+2026-11-16,p3-1,200739,Celebi V,FST,245,70.64,it,Near Mint,16,cardtrader_listings_min,daily_snapshot,86.32,70.64,93.67
+2026-11-16,p3-1,200739,Celebi V,FST,245,86.32,it_zero,Near Mint,12,cardtrader_zero_listings_min,daily_snapshot,86.32,70.64,93.67
+2026-11-16,p3-2,166422,Sylveon V,EVS,184,105.64,it,Near Mint,9,cardtrader_listings_min,daily_snapshot,105.64,105.64,122.28
+2026-11-16,p3-2,166422,Sylveon V,EVS,184,105.64,it_zero,Near Mint,7,cardtrader_zero_listings_min,daily_snapshot,105.64,105.64,122.28
+2026-11-16,p3-3,166405,Leafeon V,EVS,167,109.14,it,Near Mint,14,cardtrader_listings_min,daily_snapshot,109.14,115.64,138.05
+2026-11-16,p3-3,166405,Leafeon V,EVS,167,109.14,it_zero,Near Mint,11,cardtrader_zero_listings_min,daily_snapshot,109.14,115.64,138.05
+2026-11-16,p3-4,166313,Sylveon VMAX,EVS,075,7.12,it,Near Mint,11,cardtrader_listings_min,daily_snapshot,7.13,7.12,18.06
+2026-11-16,p3-4,166313,Sylveon VMAX,EVS,075,7.13,it_zero,Near Mint,7,cardtrader_zero_listings_min,daily_snapshot,7.13,7.12,18.06
+2026-11-16,p4-7,370914,Pikachu ex,ASC,277,150.57,it,Near Mint,18,cardtrader_listings_min,daily_snapshot,150.57,241.28,187.85
+2026-11-16,p4-7,370914,Pikachu ex,ASC,277,150.57,it_zero,Near Mint,15,cardtrader_zero_listings_min,daily_snapshot,150.57,241.28,187.85
+2026-11-16,p4-8,347566,Mega Lucario ex,MEG,179,94.52,it,Near Mint,55,cardtrader_listings_min,daily_snapshot,94.52,95.7,130.89
+2026-11-16,p4-8,347566,Mega Lucario ex,MEG,179,94.52,it_zero,Near Mint,40,cardtrader_zero_listings_min,daily_snapshot,94.52,95.7,130.89
+2026-11-16,p4-9,341099,Zekrom ex,BLK,166,169.43,it,Near Mint,28,cardtrader_listings_min,daily_snapshot,169.44,169.43,198.44
+2026-11-16,p4-9,341099,Zekrom ex,BLK,166,169.44,it_zero,Near Mint,20,cardtrader_zero_listings_min,daily_snapshot,169.44,169.43,198.44
+2026-11-16,p5-2,341102,Kyurem ex,BLK,165,43.59,it,Near Mint,32,cardtrader_listings_min,daily_snapshot,43.59,48.64,59.86
+2026-11-16,p5-2,341102,Kyurem ex,BLK,165,43.59,it_zero,Near Mint,25,cardtrader_zero_listings_min,daily_snapshot,43.59,48.64,59.86
+2026-11-16,p5-3,316779,Leafeon ex,PRE,144,119.52,it,Near Mint,26,cardtrader_listings_min,daily_snapshot,119.52,140.64,180.18
+2026-11-16,p5-3,316779,Leafeon ex,PRE,144,119.52,it_zero,Near Mint,19,cardtrader_zero_listings_min,daily_snapshot,119.52,140.64,180.18
+2026-11-16,p5-4,316788,Glaceon ex,PRE,150,99.02,it,Near Mint,30,cardtrader_listings_min,daily_snapshot,99.02,105.64,146.57
+2026-11-16,p5-4,316788,Glaceon ex,PRE,150,99.02,it_zero,Near Mint,26,cardtrader_zero_listings_min,daily_snapshot,99.02,105.64,146.57
+2026-11-16,p5-5,315076,Espeon ex,PRE,155,115.62,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,115.62,130.64,226.26
+2026-11-16,p5-5,315076,Espeon ex,PRE,155,115.62,it_zero,Near Mint,19,cardtrader_zero_listings_min,daily_snapshot,115.62,130.64,226.26
+2026-11-16,p5-6,316792,Jolteon ex,PRE,153,99.27,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,99.27,105.44,159.76
+2026-11-16,p5-6,316792,Jolteon ex,PRE,153,99.27,it_zero,Near Mint,20,cardtrader_zero_listings_min,daily_snapshot,99.27,105.44,159.76
+2026-11-16,p5-7,316783,Flareon ex,PRE,146,90.54,it,Near Mint,35,cardtrader_listings_min,daily_snapshot,90.54,90.64,141.95
+2026-11-16,p5-7,316783,Flareon ex,PRE,146,90.54,it_zero,Near Mint,27,cardtrader_zero_listings_min,daily_snapshot,90.54,90.64,141.95
+2026-11-16,p5-8,316812,Eevee ex,PRE,167,57.18,it,Near Mint,35,cardtrader_listings_min,daily_snapshot,57.18,70.64,89.05
+2026-11-16,p5-8,316812,Eevee ex,PRE,167,57.18,it_zero,Near Mint,31,cardtrader_zero_listings_min,daily_snapshot,57.18,70.64,89.05
+2026-11-16,p5-9,265325,Altaria ex,PAR,253,50.64,it,Near Mint,38,cardtrader_listings_min,daily_snapshot,52.36,50.64,759.31
+2026-11-16,p5-9,265325,Altaria ex,PAR,253,52.36,it_zero,Near Mint,28,cardtrader_zero_listings_min,daily_snapshot,52.36,50.64,759.31
+2026-11-16,p6-1,261380,Zapdos ex,MEW,202,84.4,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,84.4,84.5,375.81
+2026-11-16,p6-1,261380,Zapdos ex,MEW,202,84.4,it_zero,Near Mint,22,cardtrader_zero_listings_min,daily_snapshot,84.4,84.5,375.81
+2026-11-16,p6-2,261321,Pikachu,MEW,173,45.58,it,Near Mint,30,cardtrader_listings_min,daily_snapshot,57.69,45.58,389.0
+2026-11-16,p6-2,261321,Pikachu,MEW,173,57.69,it_zero,Near Mint,21,cardtrader_zero_listings_min,daily_snapshot,57.69,45.58,389.0
+2026-11-16,p6-3,255402,Charizard ex,OBF,223,60.84,it,Near Mint,58,cardtrader_listings_min,daily_snapshot,60.84,70.31,517.43
+2026-11-16,p6-3,255402,Charizard ex,OBF,223,60.84,it_zero,Near Mint,29,cardtrader_zero_listings_min,daily_snapshot,60.84,70.31,517.43
+2026-11-16,p6-4,235179,Darkrai VSTAR,CRZ,GG50,75.63,it,Near Mint,16,cardtrader_listings_min,daily_snapshot,75.64,75.63,99.23
+2026-11-16,p6-4,235179,Darkrai VSTAR,CRZ,GG50,75.64,it_zero,Near Mint,12,cardtrader_zero_listings_min,daily_snapshot,75.64,75.63,99.23
+2026-11-16,p6-5,265525,Groudon,PAR,199,42.42,it,Near Mint,26,cardtrader_listings_min,daily_snapshot,42.42,48.64,785.72
+2026-11-16,p6-5,265525,Groudon,PAR,199,42.42,it_zero,Near Mint,19,cardtrader_zero_listings_min,daily_snapshot,42.42,48.64,785.72
+2026-11-16,p6-6,248874,Tyranitar,PAL,222,18.07,it,Near Mint,40,cardtrader_listings_min,daily_snapshot,18.07,26.9,247.85
+2026-11-16,p6-6,248874,Tyranitar,PAL,222,18.07,it_zero,Near Mint,31,cardtrader_zero_listings_min,daily_snapshot,18.07,26.9,247.85
+2026-11-16,p6-7,158385,Galarian Slowking V,CRE,179,200.64,it,Near Mint,3,cardtrader_listings_min,daily_snapshot,248.04,200.64,232.43
+2026-11-16,p6-7,158385,Galarian Slowking V,CRE,179,248.04,it_zero,Near Mint,2,cardtrader_zero_listings_min,daily_snapshot,248.04,200.64,232.43
+2026-11-16,p6-8,158383,Galarian Moltres V,CRE,177,529.64,it,Near Mint,5,cardtrader_listings_min,daily_snapshot,529.64,570.7,619.46
+2026-11-16,p6-8,158383,Galarian Moltres V,CRE,177,529.64,it_zero,Near Mint,4,cardtrader_zero_listings_min,daily_snapshot,529.64,570.7,619.46
+2026-11-16,p6-9,166418,Espeon V,EVS,180,160.63,it,Near Mint,5,cardtrader_listings_min,daily_snapshot,160.63,230.54,195.78
+2026-11-16,p6-9,166418,Espeon V,EVS,180,160.63,it_zero,Near Mint,4,cardtrader_zero_listings_min,daily_snapshot,160.63,230.54,195.78
+2026-11-16,p7-1,221482,Aerodactyl V,LORG,180,140.54,it,Near Mint,15,cardtrader_listings_min,daily_snapshot,140.54,140.63,196.53
+2026-11-16,p7-1,221482,Aerodactyl V,LORG,180,140.54,it_zero,Near Mint,10,cardtrader_zero_listings_min,daily_snapshot,140.54,140.63,196.53
+2026-11-16,p7-2,359488,Mega Gengar ex,ASC,284,389.63,it,Near Mint,35,cardtrader_listings_min,daily_snapshot,389.63,390.14,733.36
+2026-11-16,p7-2,359488,Mega Gengar ex,ASC,284,389.63,it_zero,Near Mint,24,cardtrader_zero_listings_min,daily_snapshot,389.63,390.14,733.36
+2026-11-16,p7-3,370918,Lillie's Clefairy ex,ASC,280,40.52,it,Near Mint,40,cardtrader_listings_min,daily_snapshot,48.05,40.52,57.81
+2026-11-16,p7-3,370918,Lillie's Clefairy ex,ASC,280,48.05,it_zero,Near Mint,30,cardtrader_zero_listings_min,daily_snapshot,48.05,40.52,57.81
+2026-11-16,p7-4,418446,Mega Rayquaza ex,DLR,138,340.63,it,Near Mint,16,cardtrader_listings_min,daily_snapshot,340.64,340.63,385.61
+2026-11-16,p7-4,418446,Mega Rayquaza ex,DLR,138,340.64,it_zero,Near Mint,11,cardtrader_zero_listings_min,daily_snapshot,340.64,340.63,385.61
+2026-11-16,p7-5,421153,Raikou ex,DLR,136,78.14,it,Near Mint,13,cardtrader_listings_min,daily_snapshot,78.14,90.64,93.64
+2026-11-16,p7-5,421153,Raikou ex,DLR,136,78.14,it_zero,Near Mint,11,cardtrader_zero_listings_min,daily_snapshot,78.14,90.64,93.64
+2026-11-16,p7-6,421131,Eevee,DLR,114,10.15,it,Near Mint,20,cardtrader_listings_min,daily_snapshot,12.2,10.15,14.8
+2026-11-16,p7-6,421131,Eevee,DLR,114,12.2,it_zero,Near Mint,15,cardtrader_zero_listings_min,daily_snapshot,12.2,10.15,14.8
+2026-11-16,p7-7,370931,Mega Charizard Y ex,ASC,294,263.64,it,Near Mint,35,cardtrader_listings_min,daily_snapshot,266.53,263.64,318.81
+2026-11-16,p7-7,370931,Mega Charizard Y ex,ASC,294,266.53,it_zero,Near Mint,25,cardtrader_zero_listings_min,daily_snapshot,266.53,263.64,318.81
+2026-11-16,p7-8,370932,Mega Dragonite ex,ASC,295,108.64,it,Near Mint,44,cardtrader_listings_min,daily_snapshot,109.22,108.64,348.81
+2026-11-16,p7-8,370932,Mega Dragonite ex,ASC,295,109.22,it_zero,Near Mint,33,cardtrader_zero_listings_min,daily_snapshot,109.22,108.64,348.81
+2026-11-16,p7-9,421157,Mega Rayquaza ex,DLR,141,190.59,it,Near Mint,18,cardtrader_listings_min,daily_snapshot,209.64,190.59,253.31
+2026-11-16,p7-9,421157,Mega Rayquaza ex,DLR,141,209.64,it_zero,Near Mint,13,cardtrader_zero_listings_min,daily_snapshot,209.64,190.59,253.31
+2026-11-16,p8-1,351691,Mega Lucario ex,MEG,188,163.64,it,Near Mint,27,cardtrader_listings_min,daily_snapshot,163.64,164.64,205.98
+2026-11-16,p8-1,351691,Mega Lucario ex,MEG,188,163.64,it_zero,Near Mint,19,cardtrader_zero_listings_min,daily_snapshot,163.64,164.64,205.98
+2026-11-16,p8-2,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,27,cardtrader_listings_min,daily_snapshot,105.52,105.64,129.36
+2026-11-16,p8-2,399466,Mega Darkrai ex,PBL,120,105.52,it_zero,Near Mint,21,cardtrader_zero_listings_min,daily_snapshot,105.52,105.64,129.36
+2026-11-16,p8-3,390062,Mega Greninja ex,CRI,122,78.13,it,Near Mint,31,cardtrader_listings_min,daily_snapshot,78.13,115.64,116.48
+2026-11-16,p8-3,390062,Mega Greninja ex,CRI,122,78.13,it_zero,Near Mint,26,cardtrader_zero_listings_min,daily_snapshot,78.13,115.64,116.48
+2026-11-16,p8-4,378969,Mega Zygarde ex,POR,124,67.64,it,Near Mint,27,cardtrader_listings_min,daily_snapshot,70.59,67.64,99.23
+2026-11-16,p8-4,378969,Mega Zygarde ex,POR,124,70.59,it_zero,Near Mint,21,cardtrader_zero_listings_min,daily_snapshot,70.59,67.64,99.23
+2026-11-16,p8-5,235166,Arceus VSTAR,CRZ,GG70,160.64,it,Near Mint,7,cardtrader_listings_min,daily_snapshot,180.54,160.64,207.47
+2026-11-16,p8-5,235166,Arceus VSTAR,CRZ,GG70,180.54,it_zero,Near Mint,3,cardtrader_zero_listings_min,daily_snapshot,180.54,160.64,207.47
+2026-11-16,p8-6,235186,Deoxys VSTAR,CRZ,GG46,39.8,it,Near Mint,12,cardtrader_listings_min,daily_snapshot,40.22,39.8,44.34
+2026-11-16,p8-6,235186,Deoxys VSTAR,CRZ,GG46,40.22,it_zero,Near Mint,9,cardtrader_zero_listings_min,daily_snapshot,40.22,39.8,44.34
+2026-11-16,p8-7,235189,Deoxys,CRZ,GG12,12.2,it,Near Mint,12,cardtrader_listings_min,daily_snapshot,15.77,12.2,16.59
+2026-11-16,p8-7,235189,Deoxys,CRZ,GG12,15.77,it_zero,Near Mint,6,cardtrader_zero_listings_min,daily_snapshot,15.77,12.2,16.59
+2026-11-16,p8-9,235153,Origin Forme Dialga VSTAR,CRZ,GG68,97.64,it,Near Mint,15,cardtrader_listings_min,daily_snapshot,100.64,97.64,784.62
+2026-11-16,p8-9,235153,Origin Forme Dialga VSTAR,CRZ,GG68,100.64,it_zero,Near Mint,7,cardtrader_zero_listings_min,daily_snapshot,100.64,97.64,784.62
+2026-11-16,p9-1,212736,Origin Forme Palkia V,ASR,167,75.64,it,Near Mint,17,cardtrader_listings_min,daily_snapshot,78.61,75.64,114.47
+2026-11-16,p9-1,212736,Origin Forme Palkia V,ASR,167,78.61,it_zero,Near Mint,12,cardtrader_zero_listings_min,daily_snapshot,78.61,75.64,114.47
+2026-11-16,p9-2,235145,Origin Forme Palkia VSTAR,CRZ,GG67,108.99,it,Near Mint,15,cardtrader_listings_min,daily_snapshot,108.99,110.64,808.03
+2026-11-16,p9-2,235145,Origin Forme Palkia VSTAR,CRZ,GG67,108.99,it_zero,Near Mint,9,cardtrader_zero_listings_min,daily_snapshot,108.99,110.64,808.03
+2026-11-16,p9-9,153134,Charizard VMAX,SHF,SV107,130.64,it,Near Mint,15,cardtrader_listings_min,daily_snapshot,130.64,150.64,187.52
+2026-11-16,p9-9,153134,Charizard VMAX,SHF,SV107,130.64,it_zero,Near Mint,11,cardtrader_zero_listings_min,daily_snapshot,130.64,150.64,187.52

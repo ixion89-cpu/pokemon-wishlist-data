@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T00:51:24+01:00",
+ "generated_at": "2026-11-16T06:40:54+01:00",
  "base": 100,
  "real_from": "2026-11-10",
  "note": "index_value_eur somma i prezzi unitari di tutte le carte dello snapshot, anche quelle segnate come acquistate. index_base100 è a base 100 e si concatena sul rendimento delle carte in comune, così un'aggiunta non crea un salto. volume è la somma dei total CT+CM italiani già noti; un dato mancante resta null. I rendimenti sono percentuali e sono null se manca il giorno esatto di confronto.",
@@ -7,41 +7,41 @@
   {
    "id": "wishlist-modern",
    "name": "Wishlist - modern",
-   "date": "2026-11-15",
+   "date": "2026-11-16",
    "n_cards": 62,
    "n_priced": 62,
-   "index_value_eur": 9773.55,
-   "index_base100": 98.597045,
-   "divisor": 99.12619592,
+   "index_value_eur": 9774.71,
+   "index_base100": 98.608747,
+   "divisor": 99.12619618,
    "volume": null,
-   "ct_it": 1580.0,
+   "ct_it": 1592.0,
    "cm_it": null,
-   "n_pop": 61,
+   "n_pop": 62,
    "returns_pct": {
-    "1G": -0.215032,
+    "1G": 0.011869,
     "7G": null,
     "30G": null,
     "90G": null,
     "1Y": null,
     "YTD": null,
-    "inception": -1.402955
+    "inception": -1.391253
    }
   },
   {
    "id": "wishlist-vintage",
    "name": "Wishlist - 1999/2019",
-   "date": "2026-11-15",
+   "date": "2026-11-16",
    "n_cards": 22,
    "n_priced": 22,
    "index_value_eur": 7975.58,
    "index_base100": 97.683284,
    "divisor": 81.64733692,
    "volume": null,
-   "ct_it": 28.0,
+   "ct_it": 57.0,
    "cm_it": null,
-   "n_pop": 12,
+   "n_pop": 19,
    "returns_pct": {
-    "1G": -0.008513,
+    "1G": 0.0,
     "7G": null,
     "30G": null,
     "90G": null,
@@ -53,24 +53,24 @@
   {
    "id": "gold-modern",
    "name": "Gold - modern",
-   "date": "2026-11-15",
+   "date": "2026-11-16",
    "n_cards": 9,
    "n_priced": 9,
-   "index_value_eur": 1341.38,
-   "index_base100": 98.97,
-   "divisor": 13.55340002,
+   "index_value_eur": 1342.14,
+   "index_base100": 99.026074,
+   "divisor": 13.55340009,
    "volume": null,
-   "ct_it": 325.0,
+   "ct_it": 323.0,
    "cm_it": null,
    "n_pop": 9,
    "returns_pct": {
-    "1G": -0.832446,
+    "1G": 0.056658,
     "7G": null,
     "30G": null,
     "90G": null,
     "1Y": null,
     "YTD": null,
-    "inception": -1.03
+    "inception": -0.973926
    }
   }
  ]

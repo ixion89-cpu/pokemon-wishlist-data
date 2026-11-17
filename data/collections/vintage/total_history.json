@@ -4489,6 +4489,15 @@
    "cards_cm": 0,
    "cards_carry": 0,
    "source": "snapshot"
+  },
+  {
+   "date": "2026-11-17",
+   "total_eur": 7915.59,
+   "cards_priced": 22,
+   "cards_ct": 22,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "snapshot"
   }
  ]
 }

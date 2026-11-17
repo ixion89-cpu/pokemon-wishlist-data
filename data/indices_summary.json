@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T17:01:40+01:00",
+ "generated_at": "2026-11-17T06:44:41+01:00",
  "base": 100,
  "real_from": "2026-11-10",
  "note": "index_value_eur somma i prezzi unitari di tutte le carte dello snapshot, anche quelle segnate come acquistate. index_base100 è a base 100 e si concatena sul rendimento delle carte in comune, così un'aggiunta non crea un salto. volume è la somma dei total CT+CM italiani già noti; un dato mancante resta null. I rendimenti sono percentuali e sono null se manca il giorno esatto di confronto.",
@@ -7,70 +7,70 @@
   {
    "id": "wishlist-modern",
    "name": "Wishlist - modern",
-   "date": "2026-11-16",
+   "date": "2026-11-17",
    "n_cards": 62,
    "n_priced": 62,
-   "index_value_eur": 9774.71,
-   "index_base100": 98.608747,
-   "divisor": 99.12619618,
+   "index_value_eur": 9806.81,
+   "index_base100": 98.932577,
+   "divisor": 99.12619581,
    "volume": null,
-   "ct_it": 1592.0,
+   "ct_it": 1595.0,
    "cm_it": null,
    "n_pop": 62,
    "returns_pct": {
-    "1G": 0.011869,
-    "7G": null,
+    "1G": 0.328399,
+    "7G": -1.067423,
     "30G": null,
     "90G": null,
     "1Y": null,
     "YTD": null,
-    "inception": -1.391253
+    "inception": -1.067423
    }
   },
   {
    "id": "wishlist-vintage",
    "name": "Wishlist - 1999/2019",
-   "date": "2026-11-16",
+   "date": "2026-11-17",
    "n_cards": 22,
    "n_priced": 22,
-   "index_value_eur": 7975.58,
-   "index_base100": 97.683284,
-   "divisor": 81.64733692,
+   "index_value_eur": 7915.59,
+   "index_base100": 96.948539,
+   "divisor": 81.64733663,
    "volume": null,
-   "ct_it": 57.0,
+   "ct_it": 58.0,
    "cm_it": null,
    "n_pop": 19,
    "returns_pct": {
-    "1G": 0.0,
-    "7G": null,
+    "1G": -0.752171,
+    "7G": -3.051461,
     "30G": null,
     "90G": null,
     "1Y": null,
     "YTD": null,
-    "inception": -2.316716
+    "inception": -3.051461
    }
   },
   {
    "id": "gold-modern",
    "name": "Gold - modern",
-   "date": "2026-11-16",
+   "date": "2026-11-17",
    "n_cards": 9,
    "n_priced": 9,
-   "index_value_eur": 1342.14,
-   "index_base100": 99.026074,
-   "divisor": 13.55340009,
+   "index_value_eur": 1340.54,
+   "index_base100": 98.908022,
+   "divisor": 13.55340015,
    "volume": null,
-   "ct_it": 323.0,
+   "ct_it": 324.0,
    "cm_it": null,
    "n_pop": 9,
    "returns_pct": {
-    "1G": 0.056658,
+    "1G": -0.119213,
     "7G": null,
     "30G": null,
     "90G": null,
     "1Y": null,
     "YTD": null,
-    "inception": -0.973926
+    "inception": -1.091978
    }
   }
  ]

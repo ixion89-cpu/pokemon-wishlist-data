@@ -954,3 +954,47 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p9-7,131283,Garchomp & Giratina GX,UNM,146,25.4,it_zero,Near Mint,4,cardtrader_zero_listings_min,daily_snapshot,25.4,16.26,25.93
 2026-11-16,p9-8,131073,Slowpoke & Psyduck GX,UNM,35,25.4,it,Near Mint,5,cardtrader_listings_min,daily_snapshot,50.64,25.4,46.95
 2026-11-16,p9-8,131073,Slowpoke & Psyduck GX,UNM,35,50.64,it_zero,Near Mint,3,cardtrader_zero_listings_min,daily_snapshot,50.64,25.4,46.95
+2026-11-17,p10-1,110587,M Gyarados EX,BKP,115,375.0,it,Near Mint,,cardtrader_listings_min,daily_snapshot,,,
+2026-11-17,p10-1,110587,M Gyarados EX,BKP,115,,it_zero,Near Mint,0,cardtrader_zero_listings_min,daily_snapshot,,,
+2026-11-17,p10-2,123762,Shining Gyarados,N3,65,790.0,it,Near Mint,,cardtrader_listings_min,daily_snapshot,,,
+2026-11-17,p10-2,123762,Shining Gyarados,N3,65,,it_zero,Near Mint,0,cardtrader_zero_listings_min,daily_snapshot,,,
+2026-11-17,p10-3,123763,Shining Magikarp,N3,66,500.0,it,Near Mint,,cardtrader_listings_min,daily_snapshot,,,
+2026-11-17,p10-3,123763,Shining Magikarp,N3,66,,it_zero,Near Mint,0,cardtrader_zero_listings_min,daily_snapshot,,,
+2026-11-17,p3-5,127519,Mewtwo GX,SLG,078,1100.64,it,Near Mint,2,cardtrader_listings_min,daily_snapshot,,1100.64,5550.64
+2026-11-17,p3-5,127519,Mewtwo GX,SLG,078,,it_zero,Near Mint,0,cardtrader_zero_listings_min,daily_snapshot,,1100.64,5550.64
+2026-11-17,p3-6,113276,Reshiram & Zekrom GX,CEC,222,375.64,it,Near Mint,1,cardtrader_listings_min,daily_snapshot,375.64,,375.64
+2026-11-17,p3-6,113276,Reshiram & Zekrom GX,CEC,222,375.64,it_zero,Near Mint,1,cardtrader_zero_listings_min,daily_snapshot,375.64,,375.64
+2026-11-17,p3-7,113269,Blastoise & Piplup GX,CEC,215,235.64,it,Near Mint,4,cardtrader_listings_min,daily_snapshot,235.64,,249.52
+2026-11-17,p3-7,113269,Blastoise & Piplup GX,CEC,215,235.64,it_zero,Near Mint,4,cardtrader_zero_listings_min,daily_snapshot,235.64,,249.52
+2026-11-17,p3-8,113265,Vileplume GX,CEC,211,95.08,it,Near Mint,3,cardtrader_listings_min,daily_snapshot,,95.08,122.14
+2026-11-17,p3-8,113265,Vileplume GX,CEC,211,,it_zero,Near Mint,0,cardtrader_zero_listings_min,daily_snapshot,,95.08,122.14
+2026-11-17,p3-9,113295,Pikachu,CEC,241,125.0,it,Near Mint,4,cardtrader_listings_min,daily_snapshot,164.67,125.0,158.96
+2026-11-17,p3-9,113295,Pikachu,CEC,241,164.67,it_zero,Near Mint,2,cardtrader_zero_listings_min,daily_snapshot,164.67,125.0,158.96
+2026-11-17,p4-1,131420,Slowpoke & Psyduck GX,UNM,218/236,250.09,it,Near Mint,4,cardtrader_listings_min,daily_snapshot,250.09,271.28,260.64
+2026-11-17,p4-1,131420,Slowpoke & Psyduck GX,UNM,218/236,250.09,it_zero,Near Mint,3,cardtrader_zero_listings_min,daily_snapshot,250.09,271.28,260.64
+2026-11-17,p4-2,129830,Magikarp & Wailord GX,TEU,161/181,550.64,it,Near Mint,3,cardtrader_listings_min,daily_snapshot,800.63,550.64,650.64
+2026-11-17,p4-2,129830,Magikarp & Wailord GX,TEU,161/181,800.63,it_zero,Near Mint,1,cardtrader_zero_listings_min,daily_snapshot,800.63,550.64,650.64
+2026-11-17,p4-3,129834,Gengar & Mimikyu GX,TEU,165/181,700.64,it,Near Mint,1,cardtrader_listings_min,daily_snapshot,700.64,,700.64
+2026-11-17,p4-3,129834,Gengar & Mimikyu GX,TEU,165/181,700.64,it_zero,Near Mint,1,cardtrader_zero_listings_min,daily_snapshot,700.64,,700.64
+2026-11-17,p4-4,129626,Gengar & Mimikyu GX,TEU,053/181,100.64,it,Near Mint,2,cardtrader_listings_min,daily_snapshot,190.54,100.64,145.59
+2026-11-17,p4-4,129626,Gengar & Mimikyu GX,TEU,053/181,190.54,it_zero,Near Mint,1,cardtrader_zero_listings_min,daily_snapshot,190.54,100.64,145.59
+2026-11-17,p4-5,122678,Professor Elm's Lecture,LOT,213,120.63,it,Near Mint,2,cardtrader_listings_min,daily_snapshot,10001.64,120.63,5061.13
+2026-11-17,p4-5,122678,Professor Elm's Lecture,LOT,213,10001.64,it_zero,Near Mint,1,cardtrader_zero_listings_min,daily_snapshot,10001.64,120.63,5061.13
+2026-11-17,p4-6,260585,Togepi & Cleffa & Igglybuff GX,SM12A,186,450.62,jp,Near Mint,1,cardtrader_listings_min,daily_snapshot,450.62,,450.62
+2026-11-17,p4-6,260585,Togepi & Cleffa & Igglybuff GX,SM12A,186,450.62,jp_zero,Near Mint,1,cardtrader_zero_listings_min,daily_snapshot,450.62,,450.62
+2026-11-17,p5-1,126964,Pikachu & Zekrom GX,SMBS,SM168,330.64,it,Near Mint,3,cardtrader_listings_min,daily_snapshot,330.64,371.24,347.47
+2026-11-17,p5-1,126964,Pikachu & Zekrom GX,SMBS,SM168,330.64,it_zero,Near Mint,2,cardtrader_zero_listings_min,daily_snapshot,330.64,371.24,347.47
+2026-11-17,p8-8,113275,Arceus & Dialga & Palkia GX,CEC,221,800,it,Near Mint,0,cardtrader_listings_min,daily_snapshot,,,
+2026-11-17,p8-8,113275,Arceus & Dialga & Palkia GX,CEC,221,,it_zero,Near Mint,0,cardtrader_zero_listings_min,daily_snapshot,,,
+2026-11-17,p9-3,109886,Gyarados,AOR,21,199.99,it,Near Mint,,cardtrader_listings_min,daily_snapshot,,,
+2026-11-17,p9-3,109886,Gyarados,AOR,21,,it_zero,Near Mint,0,cardtrader_zero_listings_min,daily_snapshot,,,
+2026-11-17,p9-4,131768,Snorlax,WBP,49,439.65,en,Near Mint,2,cardtrader_listings_min,daily_snapshot,439.65,,446.3
+2026-11-17,p9-4,131768,Snorlax,WBP,49,439.65,en_zero,Near Mint,2,cardtrader_zero_listings_min,daily_snapshot,439.65,,446.3
+2026-11-17,p9-5,132188,Blastoise EX,XYP,XY122,299.0,en,Near Mint,0,cardtrader_listings_min,daily_snapshot,,,
+2026-11-17,p9-5,132188,Blastoise EX,XYP,XY122,,en_zero,Near Mint,0,cardtrader_zero_listings_min,daily_snapshot,,,
+2026-11-17,p9-6,129740,Latias & Latios GX,TEU,113,34.39,it,Near Mint,10,cardtrader_listings_min,daily_snapshot,34.39,35.52,38.05
+2026-11-17,p9-6,129740,Latias & Latios GX,TEU,113,34.39,it_zero,Near Mint,6,cardtrader_zero_listings_min,daily_snapshot,34.39,35.52,38.05
+2026-11-17,p9-7,131283,Garchomp & Giratina GX,UNM,146,16.26,it,Near Mint,12,cardtrader_listings_min,daily_snapshot,25.4,16.26,25.89
+2026-11-17,p9-7,131283,Garchomp & Giratina GX,UNM,146,25.4,it_zero,Near Mint,4,cardtrader_zero_listings_min,daily_snapshot,25.4,16.26,25.89
+2026-11-17,p9-8,131073,Slowpoke & Psyduck GX,UNM,35,25.4,it,Near Mint,5,cardtrader_listings_min,daily_snapshot,50.64,25.4,46.95
+2026-11-17,p9-8,131073,Slowpoke & Psyduck GX,UNM,35,50.64,it_zero,Near Mint,3,cardtrader_zero_listings_min,daily_snapshot,50.64,25.4,46.95

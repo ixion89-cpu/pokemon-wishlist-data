@@ -459,7 +459,7 @@ async function render() {
   try {
     await loadCollections();
     await loadPurchaseFile();
-    await loadExtra();
+    await loadExtra(r.name === "card" || r.name === "binder" ? r.id : state.collectionId);
     if (r.name === "home") await renderHome();
     else if (r.name === "binder") await renderBinder(r.id);
     else if (r.name === "card") await renderCard(r.id, r.card);
@@ -952,11 +952,7 @@ function chartSvg(series, dark, asMoney = true) {
       });
       seg = [];
     };
-    s.points.forEach((p) => {
-      const prev = seg[seg.length - 1];
-      if (prev && dateNum(p.date) - dateNum(prev.date) > 1) flush();
-      seg.push(p);
-    });
+    s.points.forEach((p) => { seg.push(p); });
     flush();
   });
   const guide = "#111";
@@ -988,19 +984,21 @@ function changeOver(points, days) {
   const span = dateNum(end.date) - dateNum(start.date);
   return { start, end, days: span, diff: end.value - start.value, pct: start.value ? ((end.value - start.value) / start.value) * 100 : null };
 }
-async function loadExtra() {
-  if (state.extra) return state.extra;
+async function loadExtra(forId) {
+  const meta = state.collections.find((c) => c.id === forId) || activeCollection() || {};
+  if (state.extra && state.extra.id === meta.id) return state.extra;
   const read = async (name) => {
     try { return await getJson(name); }
     catch (e) { return {}; }
   };
-  const meta = activeCollection() || {};
   const popFile = await read(meta.pop || "pop_summary.json");
   state.extra = {
+    id: meta.id || "",
     cm: await read(meta.cardmarket || "cardmarket.json"),
     hist: await read(meta.tcgnotify || "tcgnotify_history.json"),
     totals: await read(meta.totals || "total_history.json"),
     pop: (popFile && popFile.cards) || {},
+    popSeries: await read(meta.pop_history || "pop_history.json"),
   };
   return state.extra;
 }
@@ -1009,50 +1007,70 @@ function finalFromRow(row) {
   const ct = num(row.price_ct_eur);
   const picked = chooseFinal(ctz, ct, null);
   if (picked.price != null) return picked.price;
-  return num(row.price_eur);
+  if (row.source === "tcgnotify") return num(row.price_eur);
+  // Il 10/11 lo snapshot CardTrader è solo in price_eur. Dal giorno dopo, price_eur senza Zero né normale è il prezzo Cardmarket.
+  if (row.source === "cardtrader_listings_min" && String(row.date).slice(0, 10) <= "2026-11-10") return num(row.price_eur);
+  return null;
+}
+function dedupePoints(points) {
+  const by = new Map();
+  points.forEach((p) => {
+    const prev = by.get(p.date);
+    if (!prev || (prev.notify && !p.notify)) by.set(p.date, p);
+  });
+  return [...by.values()].sort((a, b) => a.date.localeCompare(b.date));
+}
+function addSnapshotPrice(card, points, sources) {
+  const updated = dayKey(card.last_updated);
+  const value = num(card.price_final_eur);
+  if (!updated || value == null || !sources.includes(card.price_final_source)) return points;
+  if (points.some((p) => p.date === updated)) return points;
+  return dedupePoints(points.concat([{ date: updated, value, notify: false }]));
 }
 function marketSeries(card) {
   const rows = ((state.csv && state.csv.get(card.id)) || []).filter((r) => r.kind === "daily_snapshot" && r.language === card.target_language);
-  const min = [], avg = [], copies = [];
+  const min = [], avg = [];
   let notify = false;
   rows.forEach((r) => {
     const value = finalFromRow(r);
-    if (value != null) min.push({ date: r.date, value, notify: r.source === "tcgnotify" });
+    if (value != null) min.push({ date: String(r.date).slice(0, 10), value, notify: r.source === "tcgnotify" });
     const mid = num(r.price_avg_eur);
-    if (mid != null) avg.push({ date: r.date, value: mid });
-    const n = num(r.listings_count);
-    if (n != null) copies.push({ date: r.date, value: n });
+    if (mid != null && (num(r.price_ctz_eur) != null || num(r.price_ct_eur) != null || r.source === "tcgnotify")) {
+      avg.push({ date: String(r.date).slice(0, 10), value: mid });
+    }
   });
   const extra = (state.extra && state.extra.hist && state.extra.hist[card.id]) || {};
   (extra.cardtrader || []).forEach((p) => {
     if (!p || !p.date || p.date >= "2026-11-10") return;
     notify = true;
     if (num(p.min) != null && !min.some((x) => x.date === p.date)) min.push({ date: p.date, value: num(p.min), notify: true });
-    if (num(p.avg) != null && !avg.some((x) => x.date === p.date)) avg.push({ date: p.date, value: num(p.avg), notify: true });
-    if (num(p.copies) != null && !copies.some((x) => x.date === p.date)) copies.push({ date: p.date, value: num(p.copies), notify: true });
+    if (num(p.avg) != null && !avg.some((x) => x.date === p.date)) avg.push({ date: p.date, value: num(p.avg) });
   });
-  const sort = (list) => list.sort((a, b) => a.date.localeCompare(b.date));
-  return { min: sort(min), avg: sort(avg), copies: sort(copies), notify };
+  return { min: addSnapshotPrice(card, dedupePoints(min), ["ct", "ctz"]), avg: dedupePoints(avg.map((p) => ({ ...p, notify: false }))), copies: copySeries(card, "ct_it"), notify };
 }
 function cardmarketSeries(card) {
-  const extra = (state.extra && state.extra.hist && state.extra.hist[card.id]) || {};
-  const min = [], avg = [], copies = [];
-  (extra.cardmarket || []).forEach((p) => {
-    if (!p || !p.date) return;
-    if (num(p.min) != null) min.push({ date: p.date, value: num(p.min) });
-    if (num(p.avg) != null) avg.push({ date: p.date, value: num(p.avg) });
-    if (num(p.copies) != null) copies.push({ date: p.date, value: num(p.copies) });
-  });
+  // Lo storico TCGNotify di Cardmarket è tutte le condizioni: non entra nella linea Near Mint.
+  const min = [], avg = [];
   const current = state.extra && state.extra.cm && state.extra.cm[card.id];
   if (current && current.date) {
-    if (num(current.min_eur) != null && !min.some((x) => x.date === String(current.date).slice(0, 10))) {
-      min.push({ date: String(current.date).slice(0, 10), value: num(current.min_eur) });
-    }
-    if (num(current.avg_eur) != null) avg.push({ date: String(current.date).slice(0, 10), value: num(current.avg_eur) });
-    if (num(current.copies) != null) copies.push({ date: String(current.date).slice(0, 10), value: num(current.copies) });
+    const date = String(current.date).slice(0, 10);
+    if (num(current.min_eur) != null) min.push({ date, value: num(current.min_eur), notify: false });
+    if (num(current.avg_eur) != null) avg.push({ date, value: num(current.avg_eur), notify: false });
   }
-  const sort = (list) => list.sort((a, b) => a.date.localeCompare(b.date));
-  return { min: sort(min), avg: sort(avg), copies: sort(copies), notify: min.length + avg.length + copies.length > 0 };
+  return { min: addSnapshotPrice(card, min, ["cm"]), avg, copies: copySeries(card, "cm_it"), notify: false };
+}
+function copySeries(card, field) {
+  const book = (state.extra && state.extra.popSeries) || {};
+  const series = Array.isArray(book[card.id]) ? book[card.id] : [];
+  return dedupePoints(series.filter((p) => p && p.date && num(p[field]) != null).map((p) => ({
+    date: String(p.date).slice(0, 10),
+    value: num(p[field]),
+    notify: false,
+  })));
+}
+function onePointNote(point, asMoney) {
+  const value = asMoney ? money(point.value) : new Intl.NumberFormat("it-IT", { maximumFractionDigits: 0 }).format(point.value);
+  return `<p class="quiet">Un solo giorno: ${esc(value)} · ${esc(formatDay(point.date))}. Servono almeno due giorni per la linea.</p>`;
 }
 async function renderCard(id, cardId) {
   const meta = state.collections.find((c) => c.id === id);
@@ -1128,12 +1146,12 @@ async function renderCard(id, cardId) {
     <div class="market-list">
       <button class="market-row ${state.chartMarket === "cardtrader" ? "on" : ""}" type="button" data-chart-market="cardtrader">
         <span class="who">CardTrader</span>
-        <span class="meta">${q.source === "ct" ? "normale" : "Zero"} · ${ctCopies == null ? "copie n/d" : ctCopies + " copie"}${ctWhen ? " · " + esc(ctWhen) : ""}</span>
+        <span class="meta">${q.source === "ct" ? "Near Mint · normale" : q.source === "ctz" ? "Near Mint · Zero" : "Near Mint"} · ${ctCopies == null ? "copie n/d" : ctCopies + " copie"}${ctWhen ? " · " + esc(ctWhen) : ""}</span>
         <b class="nums">${ctPrice == null ? "n/d" : money(ctPrice)}</b>
       </button>
       <button class="market-row ${state.chartMarket === "cardmarket" ? "on" : ""}" type="button" data-chart-market="cardmarket">
         <span class="who">Cardmarket</span>
-        <span class="meta">tutte le condizioni · ${cmCopies == null ? "copie n/d" : cmCopies + " copie"}${cmWhen ? " · " + esc(cmWhen) : ""}</span>
+        <span class="meta">Near Mint · ${cmCopies == null ? "copie n/d" : cmCopies + " copie"}${cmWhen ? " · " + esc(cmWhen) : ""}</span>
         <b class="nums">${cmPrice == null ? "n/d" : money(cmPrice)}</b>
       </button>
     </div>
@@ -1146,16 +1164,16 @@ async function renderCard(id, cardId) {
         <p><span>Medio</span><b class="nums">${avgShown.length ? money(avgShown[avgShown.length - 1].value) : "n/d"}</b></p>
         <p><span>Copie</span><b class="nums">${copiesShown.length ? copiesShown[copiesShown.length - 1].value : "n/d"}</b></p>
       </div>
-      ${minShown.length || avgShown.length ? chartSvg(minChartSeries(minShown, avgShown), false) : `<p class="quiet">${state.chartMarket === "cardmarket" ? "Cardmarket: n/d." : "Storico del minimo in arrivo."}</p>`}
-      <p class="quiet">Copie in vendita</p>
-      ${copiesShown.length ? chartSvg([{ id: "qty", label: "Copie", color: "#111", fillColor: "#c9b6ff", fill: true, points: copiesShown }], false, false) : ""}
+      ${priceChartHtml(minShown, avgShown)}
+      <p class="quiet">${state.chartMarket === "cardmarket" ? "Copie Cardmarket, tutte le condizioni" : "Copie CardTrader Near Mint"}</p>
+      ${copiesShown.length > 1 ? chartSvg([{ id: "qty", label: "Copie", color: "#111", fillColor: "#c9b6ff", fill: true, points: copiesShown }], false, false) : copiesShown.length === 1 ? onePointNote(copiesShown[0], false) : `<p class="quiet">Nessuna copia archiviata in questo periodo.</p>`}
       <div class="hist-foot">
         <p><span>MIN</span><b class="nums">${periodMin == null ? "n/d" : money(periodMin)}</b></p>
         <p><span>MAX</span><b class="nums">${periodMax == null ? "n/d" : money(periodMax)}</b></p>
         <p><span>VAR</span><b class="nums ${periodChange && periodChange.diff < 0 ? "down" : "up"}">${periodChange && periodChange.start ? arrow + " " + signedMoney(periodChange.diff) : "n/d"}</b></p>
       </div>
       ${minShown.some((p) => p.notify) ? `<p class="quiet">Tratteggio: storico ricostruito da TCGNotify.</p>` : ""}
-      ${state.chartMarket === "cardmarket" ? `<p class="quiet">Cardmarket: tutte le condizioni</p>` : ""}
+      <p class="quiet">${state.chartMarket === "cardmarket" ? "Cardmarket · Near Mint" : "CardTrader · Near Mint"}</p>
     </section>
     ${purchaseBox(card, q)}
     ${offersHtml}
@@ -1296,16 +1314,23 @@ function moverStart(points, end, daysBack) {
 }
 function minChartSeries(minShown, avgShown) {
   const real = minShown.filter((p) => !p.notify);
-  const recon = minShown.filter((p) => p.notify);
+  const recon = minShown.filter((p) => p.notify).map((p) => ({ ...p }));
   if (recon.length && real.length) {
     const bridge = real.find((p) => p.date >= recon[recon.length - 1].date) || real[0];
-    if (bridge && recon[recon.length - 1].date !== bridge.date) recon.push(bridge);
+    if (bridge && recon[recon.length - 1].date !== bridge.date) recon.push({ ...bridge, notify: true });
   }
   const series = [];
-  if (recon.length) series.push({ id: "recon", label: "Ricostruito", color: "#111", fill: false, dashed: true, points: recon });
-  if (real.length) series.push({ id: "min", label: "Minimo", color: "#111", fillColor: "#5ff0c0", fill: true, points: real });
-  if (avgShown.length) series.push({ id: "avg", label: "Medio", color: "#111", fill: false, dashed: true, points: avgShown });
+  if (recon.length >= 2) series.push({ id: "recon", label: "Ricostruito", color: "#111", fill: false, dashed: true, points: recon });
+  if (real.length >= 2) series.push({ id: "min", label: "Minimo", color: "#111", fillColor: "#5ff0c0", fill: true, points: real });
+  if (avgShown.length >= 2) series.push({ id: "avg", label: "Medio", color: "#111", fill: false, dashed: true, points: avgShown });
   return series;
+}
+function priceChartHtml(minShown, avgShown) {
+  const series = minChartSeries(minShown, avgShown);
+  if (series.length) return chartSvg(series, false);
+  const only = minShown[0] || avgShown[0];
+  if (only) return onePointNote(only, true);
+  return `<p class="quiet">Nessun prezzo Near Mint in questo periodo.</p>`;
 }
 function moverList(rows, key) {
   if (!state.moversMore) state.moversMore = {};

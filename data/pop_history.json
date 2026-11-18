@@ -306,8 +306,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 19,
+   "total": 25,
    "total_all": null
   },
   {
@@ -316,8 +316,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 19,
+   "total": 25,
    "total_all": null
   },
   {
@@ -326,8 +326,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 18,
+   "total": 24,
    "total_all": null
   },
   {
@@ -336,9 +336,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 17,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 18,
+   "total": 25,
+   "total_all": 35
   },
   {
    "date": "2026-11-15",
@@ -346,9 +346,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 17,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 17,
+   "total": 24,
+   "total_all": 34
   },
   {
    "date": "2026-11-16",
@@ -356,9 +356,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 17,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 17,
+   "total": 24,
+   "total_all": 34
   },
   {
    "date": "2026-11-17",
@@ -366,9 +366,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 17,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 16,
+   "total": 23,
+   "total_all": 33
   },
   {
    "date": "2026-11-18",
@@ -698,8 +698,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 17,
+   "total": 23,
    "total_all": null
   },
   {
@@ -708,8 +708,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 18,
+   "total": 24,
    "total_all": null
   },
   {
@@ -728,9 +728,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 31,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 20,
+   "total": 27,
+   "total_all": 51
   },
   {
    "date": "2026-11-16",
@@ -738,9 +738,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 32,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 20,
+   "total": 27,
+   "total_all": 52
   },
   {
    "date": "2026-11-17",
@@ -1080,8 +1080,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 24,
+   "total": 36,
    "total_all": null
   },
   {
@@ -1100,9 +1100,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 22,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 24,
+   "total": 36,
+   "total_all": 46
   },
   {
    "date": "2026-11-15",
@@ -1120,9 +1120,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 21,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 25,
+   "total": 36,
+   "total_all": 46
   },
   {
    "date": "2026-11-17",
@@ -1462,8 +1462,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 31,
+   "total": 38,
    "total_all": null
   },
   {
@@ -1472,8 +1472,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 31,
+   "total": 38,
    "total_all": null
   },
   {
@@ -1482,9 +1482,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 15,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 30,
+   "total": 37,
+   "total_all": 45
   },
   {
    "date": "2026-11-15",
@@ -1492,9 +1492,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 15,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 30,
+   "total": 37,
+   "total_all": 45
   },
   {
    "date": "2026-11-16",
@@ -1502,9 +1502,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 15,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 30,
+   "total": 37,
+   "total_all": 45
   },
   {
    "date": "2026-11-17",
@@ -1512,9 +1512,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 15,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 31,
+   "total": 38,
+   "total_all": 46
   },
   {
    "date": "2026-11-18",
@@ -1834,8 +1834,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 28,
+   "total": 35,
    "total_all": null
   },
   {
@@ -1844,8 +1844,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 30,
+   "total": 38,
    "total_all": null
   },
   {
@@ -1854,8 +1854,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 30,
+   "total": 38,
    "total_all": null
   },
   {
@@ -1864,9 +1864,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 19,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 29,
+   "total": 37,
+   "total_all": 48
   },
   {
    "date": "2026-11-15",
@@ -1874,9 +1874,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 19,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 30,
+   "total": 38,
+   "total_all": 49
   },
   {
    "date": "2026-11-16",
@@ -1884,9 +1884,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 21,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 30,
+   "total": 39,
+   "total_all": 51
   },
   {
    "date": "2026-11-17",
@@ -1894,9 +1894,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 21,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 30,
+   "total": 38,
+   "total_all": 51
   },
   {
    "date": "2026-11-18",
@@ -2608,8 +2608,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 24,
+   "total": 25,
    "total_all": null
   },
   {
@@ -2618,8 +2618,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 24,
+   "total": 25,
    "total_all": null
   },
   {
@@ -2628,9 +2628,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 13,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 23,
+   "total": 24,
+   "total_all": 36
   },
   {
    "date": "2026-11-15",
@@ -2638,9 +2638,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 13,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 23,
+   "total": 24,
+   "total_all": 36
   },
   {
    "date": "2026-11-16",
@@ -2658,9 +2658,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 14,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 23,
+   "total": 24,
+   "total_all": 37
   },
   {
    "date": "2026-11-18",
@@ -2990,8 +2990,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 81,
+   "total": 115,
    "total_all": null
   },
   {
@@ -3000,8 +3000,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 84,
+   "total": 118,
    "total_all": null
   },
   {
@@ -3010,9 +3010,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 52,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 85,
+   "total": 120,
+   "total_all": 137
   },
   {
    "date": "2026-11-15",
@@ -3020,9 +3020,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 51,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 85,
+   "total": 119,
+   "total_all": 136
   },
   {
    "date": "2026-11-16",
@@ -3030,9 +3030,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 53,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 85,
+   "total": 119,
+   "total_all": 138
   },
   {
    "date": "2026-11-17",
@@ -3040,9 +3040,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 56,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 87,
+   "total": 123,
+   "total_all": 143
   },
   {
    "date": "2026-11-18",
@@ -3372,8 +3372,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 40,
+   "total": 59,
    "total_all": null
   },
   {
@@ -3382,8 +3382,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 41,
+   "total": 57,
    "total_all": null
   },
   {
@@ -3392,9 +3392,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 37,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 40,
+   "total": 59,
+   "total_all": 77
   },
   {
    "date": "2026-11-15",
@@ -3402,9 +3402,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 38,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 37,
+   "total": 57,
+   "total_all": 75
   },
   {
    "date": "2026-11-16",
@@ -3412,9 +3412,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 37,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 39,
+   "total": 58,
+   "total_all": 76
   },
   {
    "date": "2026-11-17",
@@ -3422,9 +3422,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 37,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 39,
+   "total": 58,
+   "total_all": 76
   },
   {
    "date": "2026-11-18",
@@ -3754,8 +3754,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 60,
+   "total": 77,
    "total_all": null
   },
   {
@@ -3764,8 +3764,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 60,
+   "total": 76,
    "total_all": null
   },
   {
@@ -3774,9 +3774,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 34,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 58,
+   "total": 74,
+   "total_all": 92
   },
   {
    "date": "2026-11-15",
@@ -3784,9 +3784,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 34,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 58,
+   "total": 74,
+   "total_all": 92
   },
   {
    "date": "2026-11-16",
@@ -3794,9 +3794,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 33,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 57,
+   "total": 72,
+   "total_all": 90
   },
   {
    "date": "2026-11-17",
@@ -3804,9 +3804,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 32,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 58,
+   "total": 72,
+   "total_all": 90
   },
   {
    "date": "2026-11-18",
@@ -4136,8 +4136,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 59,
+   "total": 85,
    "total_all": null
   },
   {
@@ -4146,8 +4146,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 60,
+   "total": 87,
    "total_all": null
   },
   {
@@ -4156,9 +4156,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 36,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 58,
+   "total": 85,
+   "total_all": 94
   },
   {
    "date": "2026-11-15",
@@ -4166,9 +4166,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 36,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 55,
+   "total": 82,
+   "total_all": 91
   },
   {
    "date": "2026-11-16",
@@ -4176,9 +4176,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 33,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 54,
+   "total": 79,
+   "total_all": 87
   },
   {
    "date": "2026-11-17",
@@ -4186,9 +4186,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 33,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 53,
+   "total": 78,
+   "total_all": 86
   },
   {
    "date": "2026-11-18",
@@ -4518,8 +4518,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 47,
+   "total": 64,
    "total_all": null
   },
   {
@@ -4528,8 +4528,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 48,
+   "total": 65,
    "total_all": null
   },
   {
@@ -4538,9 +4538,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 34,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 48,
+   "total": 65,
+   "total_all": 82
   },
   {
    "date": "2026-11-15",
@@ -4548,9 +4548,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 33,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 47,
+   "total": 63,
+   "total_all": 80
   },
   {
    "date": "2026-11-16",
@@ -4558,9 +4558,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 34,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 46,
+   "total": 63,
+   "total_all": 80
   },
   {
    "date": "2026-11-17",
@@ -4568,9 +4568,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 34,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 46,
+   "total": 63,
+   "total_all": 80
   },
   {
    "date": "2026-11-18",
@@ -4900,8 +4900,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 71,
+   "total": 91,
    "total_all": null
   },
   {
@@ -4910,8 +4910,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 70,
+   "total": 91,
    "total_all": null
   },
   {
@@ -4920,9 +4920,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 46,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 71,
+   "total": 92,
+   "total_all": 117
   },
   {
    "date": "2026-11-15",
@@ -4930,9 +4930,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 47,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 72,
+   "total": 93,
+   "total_all": 119
   },
   {
    "date": "2026-11-16",
@@ -4940,9 +4940,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 48,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 70,
+   "total": 92,
+   "total_all": 118
   },
   {
    "date": "2026-11-17",
@@ -4950,9 +4950,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 46,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 69,
+   "total": 90,
+   "total_all": 115
   },
   {
    "date": "2026-11-18",
@@ -5282,8 +5282,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 105,
+   "total": 155,
    "total_all": null
   },
   {
@@ -5292,8 +5292,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 104,
+   "total": 154,
    "total_all": null
   },
   {
@@ -5302,9 +5302,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 78,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 100,
+   "total": 151,
+   "total_all": 178
   },
   {
    "date": "2026-11-15",
@@ -5312,9 +5312,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 76,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 100,
+   "total": 149,
+   "total_all": 176
   },
   {
    "date": "2026-11-16",
@@ -5322,9 +5322,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 75,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 93,
+   "total": 142,
+   "total_all": 168
   },
   {
    "date": "2026-11-17",
@@ -5332,9 +5332,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 74,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 101,
+   "total": 150,
+   "total_all": 175
   },
   {
    "date": "2026-11-18",
@@ -5664,8 +5664,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 40,
+   "total": 68,
    "total_all": null
   },
   {
@@ -5674,8 +5674,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 41,
+   "total": 69,
    "total_all": null
   },
   {
@@ -5684,9 +5684,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 40,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 40,
+   "total": 67,
+   "total_all": 80
   },
   {
    "date": "2026-11-15",
@@ -5694,9 +5694,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 38,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 39,
+   "total": 65,
+   "total_all": 77
   },
   {
    "date": "2026-11-16",
@@ -5704,9 +5704,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 40,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 39,
+   "total": 67,
+   "total_all": 79
   },
   {
    "date": "2026-11-17",
@@ -5714,9 +5714,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 42,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 39,
+   "total": 69,
+   "total_all": 81
   },
   {
    "date": "2026-11-18",
@@ -6036,8 +6036,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 77,
+   "total": 107,
    "total_all": null
   },
   {
@@ -6046,8 +6046,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 77,
+   "total": 106,
    "total_all": null
   },
   {
@@ -6056,9 +6056,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 53,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 67,
+   "total": 99,
+   "total_all": 120
   },
   {
    "date": "2026-11-15",
@@ -6066,9 +6066,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 53,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 75,
+   "total": 107,
+   "total_all": 128
   },
   {
    "date": "2026-11-16",
@@ -6076,9 +6076,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 51,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 75,
+   "total": 106,
+   "total_all": 126
   },
   {
    "date": "2026-11-17",
@@ -6086,9 +6086,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 52,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 76,
+   "total": 108,
+   "total_all": 128
   },
   {
    "date": "2026-11-18",
@@ -6408,8 +6408,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 59,
+   "total": 79,
    "total_all": null
   },
   {
@@ -6418,8 +6418,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 61,
+   "total": 82,
    "total_all": null
   },
   {
@@ -6428,9 +6428,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 39,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 60,
+   "total": 82,
+   "total_all": 99
   },
   {
    "date": "2026-11-15",
@@ -6438,9 +6438,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 39,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 60,
+   "total": 82,
+   "total_all": 99
   },
   {
    "date": "2026-11-16",
@@ -6448,9 +6448,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 40,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 61,
+   "total": 84,
+   "total_all": 101
   },
   {
    "date": "2026-11-17",
@@ -6458,9 +6458,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 41,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 61,
+   "total": 84,
+   "total_all": 102
   },
   {
    "date": "2026-11-18",
@@ -6790,8 +6790,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 41,
+   "total": 54,
    "total_all": null
   },
   {
@@ -6800,8 +6800,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 40,
+   "total": 53,
    "total_all": null
   },
   {
@@ -6810,9 +6810,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 39,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 38,
+   "total": 51,
+   "total_all": 77
   },
   {
    "date": "2026-11-15",
@@ -6830,9 +6830,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 37,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 38,
+   "total": 50,
+   "total_all": 75
   },
   {
    "date": "2026-11-17",
@@ -7172,8 +7172,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 32,
+   "total": 47,
    "total_all": null
   },
   {
@@ -7182,8 +7182,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 32,
+   "total": 47,
    "total_all": null
   },
   {
@@ -7192,9 +7192,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 40,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 32,
+   "total": 48,
+   "total_all": 72
   },
   {
    "date": "2026-11-15",
@@ -7202,9 +7202,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 40,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 32,
+   "total": 48,
+   "total_all": 72
   },
   {
    "date": "2026-11-16",
@@ -7212,9 +7212,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 41,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 31,
+   "total": 47,
+   "total_all": 72
   },
   {
    "date": "2026-11-17",
@@ -7222,9 +7222,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 41,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 31,
+   "total": 47,
+   "total_all": 72
   },
   {
    "date": "2026-11-18",
@@ -7926,8 +7926,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 29,
+   "total": 48,
    "total_all": null
   },
   {
@@ -7936,8 +7936,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 29,
+   "total": 48,
    "total_all": null
   },
   {
@@ -7946,8 +7946,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 29,
+   "total": 47,
    "total_all": null
   },
   {
@@ -7956,9 +7956,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 22,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 28,
+   "total": 45,
+   "total_all": 50
   },
   {
    "date": "2026-11-15",
@@ -7966,9 +7966,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 22,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 27,
+   "total": 44,
+   "total_all": 49
   },
   {
    "date": "2026-11-16",
@@ -7976,9 +7976,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 22,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 27,
+   "total": 44,
+   "total_all": 49
   },
   {
    "date": "2026-11-17",
@@ -7986,9 +7986,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 21,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 26,
+   "total": 43,
+   "total_all": 47
   },
   {
    "date": "2026-11-18",
@@ -8390,8 +8390,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 59,
+   "total": 86,
    "total_all": null
   },
   {
@@ -8400,8 +8400,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 62,
+   "total": 86,
    "total_all": null
   },
   {
@@ -8410,9 +8410,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 28,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 60,
+   "total": 87,
+   "total_all": 88
   },
   {
    "date": "2026-11-15",
@@ -8420,9 +8420,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 26,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 60,
+   "total": 85,
+   "total_all": 86
   },
   {
    "date": "2026-11-16",
@@ -8430,9 +8430,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 26,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 61,
+   "total": 86,
+   "total_all": 87
   },
   {
    "date": "2026-11-17",
@@ -8440,9 +8440,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 27,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 59,
+   "total": 85,
+   "total_all": 86
   },
   {
    "date": "2026-11-18",
@@ -8772,8 +8772,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 111,
+   "total": 173,
    "total_all": null
   },
   {
@@ -8782,8 +8782,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 112,
+   "total": 172,
    "total_all": null
   },
   {
@@ -8792,9 +8792,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 64,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 113,
+   "total": 174,
+   "total_all": 177
   },
   {
    "date": "2026-11-15",
@@ -8802,9 +8802,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 65,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 112,
+   "total": 174,
+   "total_all": 177
   },
   {
    "date": "2026-11-16",
@@ -8812,9 +8812,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 65,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 115,
+   "total": 177,
+   "total_all": 180
   },
   {
    "date": "2026-11-17",
@@ -8822,9 +8822,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 65,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 112,
+   "total": 174,
+   "total_all": 177
   },
   {
    "date": "2026-11-18",
@@ -9154,8 +9154,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 79,
+   "total": 111,
    "total_all": null
   },
   {
@@ -9164,8 +9164,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 78,
+   "total": 112,
    "total_all": null
   },
   {
@@ -9174,9 +9174,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 34,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 77,
+   "total": 110,
+   "total_all": 111
   },
   {
    "date": "2026-11-15",
@@ -9184,9 +9184,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 33,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 76,
+   "total": 108,
+   "total_all": 109
   },
   {
    "date": "2026-11-16",
@@ -9194,9 +9194,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 33,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 76,
+   "total": 108,
+   "total_all": 109
   },
   {
    "date": "2026-11-17",
@@ -9204,9 +9204,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 32,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 77,
+   "total": 108,
+   "total_all": 109
   },
   {
    "date": "2026-11-18",
@@ -9526,8 +9526,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 65,
+   "total": 103,
    "total_all": null
   },
   {
@@ -9536,8 +9536,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 66,
+   "total": 104,
    "total_all": null
   },
   {
@@ -9546,9 +9546,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 41,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 67,
+   "total": 107,
+   "total_all": 108
   },
   {
    "date": "2026-11-15",
@@ -9556,9 +9556,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 41,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 68,
+   "total": 108,
+   "total_all": 109
   },
   {
    "date": "2026-11-16",
@@ -9566,9 +9566,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 41,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 67,
+   "total": 107,
+   "total_all": 108
   },
   {
    "date": "2026-11-17",
@@ -9576,9 +9576,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 41,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 66,
+   "total": 106,
+   "total_all": 107
   },
   {
    "date": "2026-11-18",
@@ -9898,8 +9898,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 61,
+   "total": 93,
    "total_all": null
   },
   {
@@ -9908,8 +9908,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 61,
+   "total": 93,
    "total_all": null
   },
   {
@@ -9918,9 +9918,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 37,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 61,
+   "total": 93,
+   "total_all": 98
   },
   {
    "date": "2026-11-15",
@@ -9928,9 +9928,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 37,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 62,
+   "total": 94,
+   "total_all": 99
   },
   {
    "date": "2026-11-16",
@@ -9938,9 +9938,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 36,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 63,
+   "total": 94,
+   "total_all": 99
   },
   {
    "date": "2026-11-17",
@@ -10270,8 +10270,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 78,
+   "total": 116,
    "total_all": null
   },
   {
@@ -10280,8 +10280,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 79,
+   "total": 119,
    "total_all": null
   },
   {
@@ -10290,9 +10290,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 46,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 79,
+   "total": 117,
+   "total_all": 125
   },
   {
    "date": "2026-11-15",
@@ -10300,9 +10300,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 45,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 80,
+   "total": 118,
+   "total_all": 125
   },
   {
    "date": "2026-11-16",
@@ -10310,9 +10310,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 45,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 78,
+   "total": 116,
+   "total_all": 123
   },
   {
    "date": "2026-11-17",
@@ -10642,8 +10642,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 74,
+   "total": 106,
    "total_all": null
   },
   {
@@ -10652,8 +10652,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 72,
+   "total": 106,
    "total_all": null
   },
   {
@@ -10662,9 +10662,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 35,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 72,
+   "total": 105,
+   "total_all": 107
   },
   {
    "date": "2026-11-15",
@@ -10672,9 +10672,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 35,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 72,
+   "total": 105,
+   "total_all": 107
   },
   {
    "date": "2026-11-16",
@@ -10682,9 +10682,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 35,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 71,
+   "total": 104,
+   "total_all": 106
   },
   {
    "date": "2026-11-17",
@@ -10692,9 +10692,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 34,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 75,
+   "total": 107,
+   "total_all": 109
   },
   {
    "date": "2026-11-18",
@@ -11024,8 +11024,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 75,
+   "total": 111,
    "total_all": null
   },
   {
@@ -11034,8 +11034,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 75,
+   "total": 110,
    "total_all": null
   },
   {
@@ -11044,9 +11044,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 38,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 73,
+   "total": 107,
+   "total_all": 111
   },
   {
    "date": "2026-11-15",
@@ -11054,9 +11054,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 38,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 73,
+   "total": 107,
+   "total_all": 111
   },
   {
    "date": "2026-11-16",
@@ -11064,9 +11064,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 39,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 75,
+   "total": 110,
+   "total_all": 114
   },
   {
    "date": "2026-11-17",
@@ -11074,9 +11074,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 39,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 75,
+   "total": 110,
+   "total_all": 114
   },
   {
    "date": "2026-11-18",
@@ -11396,8 +11396,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 70,
+   "total": 108,
    "total_all": null
   },
   {
@@ -11406,8 +11406,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 70,
+   "total": 109,
    "total_all": null
   },
   {
@@ -11416,9 +11416,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 43,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 68,
+   "total": 107,
+   "total_all": 111
   },
   {
    "date": "2026-11-15",
@@ -11426,9 +11426,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 43,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 69,
+   "total": 108,
+   "total_all": 112
   },
   {
    "date": "2026-11-16",
@@ -11436,9 +11436,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 43,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 69,
+   "total": 108,
+   "total_all": 112
   },
   {
    "date": "2026-11-17",
@@ -11446,9 +11446,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 42,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 70,
+   "total": 108,
+   "total_all": 112
   },
   {
    "date": "2026-11-18",
@@ -11778,8 +11778,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 59,
+   "total": 102,
    "total_all": null
   },
   {
@@ -11788,8 +11788,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 60,
+   "total": 103,
    "total_all": null
   },
   {
@@ -11798,9 +11798,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 50,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 60,
+   "total": 104,
+   "total_all": 110
   },
   {
    "date": "2026-11-15",
@@ -11808,9 +11808,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 49,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 61,
+   "total": 104,
+   "total_all": 110
   },
   {
    "date": "2026-11-16",
@@ -11818,9 +11818,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 49,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 61,
+   "total": 104,
+   "total_all": 110
   },
   {
    "date": "2026-11-17",
@@ -11828,9 +11828,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 49,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 59,
+   "total": 102,
+   "total_all": 108
   },
   {
    "date": "2026-11-18",
@@ -12160,8 +12160,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 96,
+   "total": 146,
    "total_all": null
   },
   {
@@ -12170,8 +12170,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 96,
+   "total": 146,
    "total_all": null
   },
   {
@@ -12180,9 +12180,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 67,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 98,
+   "total": 145,
+   "total_all": 165
   },
   {
    "date": "2026-11-15",
@@ -12190,9 +12190,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 66,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 98,
+   "total": 144,
+   "total_all": 164
   },
   {
    "date": "2026-11-16",
@@ -12200,9 +12200,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 66,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 99,
+   "total": 145,
+   "total_all": 165
   },
   {
    "date": "2026-11-17",
@@ -12210,9 +12210,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 67,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 100,
+   "total": 147,
+   "total_all": 167
   },
   {
    "date": "2026-11-18",
@@ -12532,8 +12532,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 108,
+   "total": 141,
    "total_all": null
   },
   {
@@ -12542,8 +12542,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 107,
+   "total": 143,
    "total_all": null
   },
   {
@@ -12552,8 +12552,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 112,
+   "total": 147,
    "total_all": null
   },
   {
@@ -12562,9 +12562,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 51,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 114,
+   "total": 151,
+   "total_all": 165
   },
   {
    "date": "2026-11-15",
@@ -12572,9 +12572,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 48,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 110,
+   "total": 146,
+   "total_all": 158
   },
   {
    "date": "2026-11-16",
@@ -12582,9 +12582,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 49,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 109,
+   "total": 146,
+   "total_all": 158
   },
   {
    "date": "2026-11-17",
@@ -12592,9 +12592,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 49,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 107,
+   "total": 144,
+   "total_all": 156
   },
   {
    "date": "2026-11-18",
@@ -12914,8 +12914,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 98,
+   "total": 141,
    "total_all": null
   },
   {
@@ -12924,8 +12924,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 102,
+   "total": 146,
    "total_all": null
   },
   {
@@ -12934,8 +12934,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 104,
+   "total": 141,
    "total_all": null
   },
   {
@@ -12944,9 +12944,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 51,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 105,
+   "total": 147,
+   "total_all": 156
   },
   {
    "date": "2026-11-15",
@@ -12954,9 +12954,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 48,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 98,
+   "total": 137,
+   "total_all": 146
   },
   {
    "date": "2026-11-16",
@@ -12964,9 +12964,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 48,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 101,
+   "total": 141,
+   "total_all": 149
   },
   {
    "date": "2026-11-17",
@@ -12974,9 +12974,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 47,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 101,
+   "total": 141,
+   "total_all": 148
   },
   {
    "date": "2026-11-18",
@@ -13296,8 +13296,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 190,
+   "total": 262,
    "total_all": null
   },
   {
@@ -13306,8 +13306,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 186,
+   "total": 259,
    "total_all": null
   },
   {
@@ -13316,8 +13316,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 187,
+   "total": 262,
    "total_all": null
   },
   {
@@ -13326,9 +13326,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 120,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 188,
+   "total": 264,
+   "total_all": 308
   },
   {
    "date": "2026-11-15",
@@ -13336,9 +13336,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 120,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 181,
+   "total": 257,
+   "total_all": 301
   },
   {
    "date": "2026-11-16",
@@ -13346,9 +13346,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 119,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 183,
+   "total": 258,
+   "total_all": 302
   },
   {
    "date": "2026-11-17",
@@ -13356,9 +13356,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 115,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 174,
+   "total": 249,
+   "total_all": 289
   },
   {
    "date": "2026-11-18",
@@ -13678,8 +13678,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 53,
+   "total": 75,
    "total_all": null
   },
   {
@@ -13688,8 +13688,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 52,
+   "total": 74,
    "total_all": null
   },
   {
@@ -13698,9 +13698,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 26,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 50,
+   "total": 69,
+   "total_all": 76
   },
   {
    "date": "2026-11-15",
@@ -13708,9 +13708,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 27,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 49,
+   "total": 69,
+   "total_all": 76
   },
   {
    "date": "2026-11-16",
@@ -13718,9 +13718,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 26,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 50,
+   "total": 69,
+   "total_all": 76
   },
   {
    "date": "2026-11-17",
@@ -13728,9 +13728,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 26,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 50,
+   "total": 69,
+   "total_all": 76
   },
   {
    "date": "2026-11-18",
@@ -14060,8 +14060,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 92,
+   "total": 129,
    "total_all": null
   },
   {
@@ -14070,8 +14070,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 94,
+   "total": 135,
    "total_all": null
   },
   {
@@ -14080,9 +14080,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 62,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 95,
+   "total": 136,
+   "total_all": 157
   },
   {
    "date": "2026-11-15",
@@ -14090,9 +14090,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 61,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 94,
+   "total": 135,
+   "total_all": 155
   },
   {
    "date": "2026-11-16",
@@ -14100,9 +14100,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 60,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 92,
+   "total": 133,
+   "total_all": 152
   },
   {
    "date": "2026-11-17",
@@ -14110,9 +14110,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 57,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 89,
+   "total": 128,
+   "total_all": 146
   },
   {
    "date": "2026-11-18",
@@ -14442,8 +14442,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 97,
+   "total": 140,
    "total_all": null
   },
   {
@@ -14452,8 +14452,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 102,
+   "total": 146,
    "total_all": null
   },
   {
@@ -14462,9 +14462,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 61,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 103,
+   "total": 150,
+   "total_all": 164
   },
   {
    "date": "2026-11-15",
@@ -14472,9 +14472,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 60,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 104,
+   "total": 150,
+   "total_all": 164
   },
   {
    "date": "2026-11-16",
@@ -14482,9 +14482,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 60,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 103,
+   "total": 149,
+   "total_all": 163
   },
   {
    "date": "2026-11-17",
@@ -14492,9 +14492,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 60,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 102,
+   "total": 148,
+   "total_all": 162
   },
   {
    "date": "2026-11-18",
@@ -14804,8 +14804,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 17,
+   "total": 21,
    "total_all": null
   },
   {
@@ -14824,8 +14824,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 17,
+   "total": 21,
    "total_all": null
   },
   {
@@ -14834,9 +14834,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 9,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 15,
+   "total": 19,
+   "total_all": 24
   },
   {
    "date": "2026-11-15",
@@ -14854,9 +14854,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 7,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 15,
+   "total": 18,
+   "total_all": 22
   },
   {
    "date": "2026-11-17",
@@ -15186,8 +15186,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 15,
+   "total": 20,
    "total_all": null
   },
   {
@@ -15196,8 +15196,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 15,
+   "total": 20,
    "total_all": null
   },
   {
@@ -15206,8 +15206,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 15,
+   "total": 20,
    "total_all": null
   },
   {
@@ -15216,9 +15216,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 13,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 15,
+   "total": 20,
+   "total_all": 28
   },
   {
    "date": "2026-11-15",
@@ -15226,9 +15226,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 13,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 15,
+   "total": 20,
+   "total_all": 28
   },
   {
    "date": "2026-11-16",
@@ -15236,9 +15236,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 13,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 16,
+   "total": 21,
+   "total_all": 29
   },
   {
    "date": "2026-11-17",
@@ -15246,9 +15246,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 13,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 16,
+   "total": 21,
+   "total_all": 29
   },
   {
    "date": "2026-11-18",
@@ -15568,8 +15568,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 29,
+   "total": 34,
    "total_all": null
   },
   {
@@ -15578,8 +15578,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 28,
+   "total": 33,
    "total_all": null
   },
   {
@@ -15588,8 +15588,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 29,
+   "total": 34,
    "total_all": null
   },
   {
@@ -15598,9 +15598,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 20,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 29,
+   "total": 34,
+   "total_all": 49
   },
   {
    "date": "2026-11-15",
@@ -15608,9 +15608,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 20,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 28,
+   "total": 33,
+   "total_all": 48
   },
   {
    "date": "2026-11-16",
@@ -15618,9 +15618,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 20,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 29,
+   "total": 34,
+   "total_all": 49
   },
   {
    "date": "2026-11-17",
@@ -15628,9 +15628,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 20,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 29,
+   "total": 34,
+   "total_all": 49
   },
   {
    "date": "2026-11-18",
@@ -15960,8 +15960,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 50,
+   "total": 70,
    "total_all": null
   },
   {
@@ -15970,8 +15970,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 51,
+   "total": 69,
    "total_all": null
   },
   {
@@ -15980,9 +15980,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 28,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 52,
+   "total": 70,
+   "total_all": 80
   },
   {
    "date": "2026-11-15",
@@ -15990,9 +15990,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 29,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 52,
+   "total": 71,
+   "total_all": 81
   },
   {
    "date": "2026-11-16",
@@ -16000,9 +16000,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 28,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 50,
+   "total": 68,
+   "total_all": 78
   },
   {
    "date": "2026-11-17",
@@ -16010,9 +16010,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 26,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 49,
+   "total": 65,
+   "total_all": 75
   },
   {
    "date": "2026-11-18",
@@ -16332,8 +16332,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 88,
+   "total": 129,
    "total_all": null
   },
   {
@@ -16342,8 +16342,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 90,
+   "total": 131,
    "total_all": null
   },
   {
@@ -16352,8 +16352,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 89,
+   "total": 129,
    "total_all": null
   },
   {
@@ -16362,9 +16362,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 40,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 89,
+   "total": 129,
+   "total_all": 129
   },
   {
    "date": "2026-11-15",
@@ -16372,9 +16372,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 40,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 85,
+   "total": 125,
+   "total_all": 125
   },
   {
    "date": "2026-11-16",
@@ -16382,9 +16382,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 40,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 87,
+   "total": 127,
+   "total_all": 127
   },
   {
    "date": "2026-11-17",
@@ -16392,9 +16392,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 40,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 90,
+   "total": 130,
+   "total_all": 130
   },
   {
    "date": "2026-11-18",
@@ -16724,8 +16724,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 71,
+   "total": 121,
    "total_all": null
   },
   {
@@ -16734,8 +16734,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 72,
+   "total": 120,
    "total_all": null
   },
   {
@@ -16744,9 +16744,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 49,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 70,
+   "total": 118,
+   "total_all": 119
   },
   {
    "date": "2026-11-15",
@@ -16754,9 +16754,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 50,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 70,
+   "total": 119,
+   "total_all": 120
   },
   {
    "date": "2026-11-16",
@@ -16764,9 +16764,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 49,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 73,
+   "total": 121,
+   "total_all": 122
   },
   {
    "date": "2026-11-17",
@@ -16774,9 +16774,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 49,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 70,
+   "total": 118,
+   "total_all": 119
   },
   {
    "date": "2026-11-18",
@@ -16926,8 +16926,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 33,
+   "total": 47,
    "total_all": null
   },
   {
@@ -16936,8 +16936,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 33,
+   "total": 47,
    "total_all": null
   },
   {
@@ -16946,8 +16946,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 37,
+   "total": 48,
    "total_all": null
   },
   {
@@ -16956,9 +16956,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 13,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 44,
+   "total": 57,
+   "total_all": 57
   },
   {
    "date": "2026-11-15",
@@ -16966,9 +16966,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 15,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 38,
+   "total": 53,
+   "total_all": 53
   },
   {
    "date": "2026-11-16",
@@ -16976,9 +16976,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 16,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 42,
+   "total": 58,
+   "total_all": 58
   },
   {
    "date": "2026-11-17",
@@ -16986,9 +16986,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 14,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 38,
+   "total": 52,
+   "total_all": 52
   },
   {
    "date": "2026-11-18",
@@ -17148,8 +17148,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 27,
+   "total": 38,
    "total_all": null
   },
   {
@@ -17158,8 +17158,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 26,
+   "total": 35,
    "total_all": null
   },
   {
@@ -17168,9 +17168,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 12,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 28,
+   "total": 39,
+   "total_all": 40
   },
   {
    "date": "2026-11-15",
@@ -17178,9 +17178,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 15,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 29,
+   "total": 43,
+   "total_all": 44
   },
   {
    "date": "2026-11-16",
@@ -17188,9 +17188,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 15,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 31,
+   "total": 46,
+   "total_all": 46
   },
   {
    "date": "2026-11-17",
@@ -17198,9 +17198,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 15,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 31,
+   "total": 45,
+   "total_all": 46
   },
   {
    "date": "2026-11-18",
@@ -17350,8 +17350,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 71,
+   "total": 101,
    "total_all": null
   },
   {
@@ -17360,8 +17360,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 82,
+   "total": 110,
    "total_all": null
   },
   {
@@ -17370,8 +17370,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 90,
+   "total": 125,
    "total_all": null
   },
   {
@@ -17380,9 +17380,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 30,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 90,
+   "total": 120,
+   "total_all": 120
   },
   {
    "date": "2026-11-15",
@@ -17390,9 +17390,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 26,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 87,
+   "total": 113,
+   "total_all": 113
   },
   {
    "date": "2026-11-16",
@@ -17400,9 +17400,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 25,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 95,
+   "total": 120,
+   "total_all": 120
   },
   {
    "date": "2026-11-17",
@@ -17410,9 +17410,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 34,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 98,
+   "total": 132,
+   "total_all": 132
   },
   {
    "date": "2026-11-18",
@@ -17742,8 +17742,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 70,
+   "total": 110,
    "total_all": null
   },
   {
@@ -17752,8 +17752,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 70,
+   "total": 110,
    "total_all": null
   },
   {
@@ -17762,9 +17762,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 42,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 71,
+   "total": 110,
+   "total_all": 113
   },
   {
    "date": "2026-11-15",
@@ -17772,9 +17772,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 41,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 66,
+   "total": 104,
+   "total_all": 107
   },
   {
    "date": "2026-11-16",
@@ -17782,9 +17782,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 40,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 70,
+   "total": 107,
+   "total_all": 110
   },
   {
    "date": "2026-11-17",
@@ -17792,9 +17792,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 38,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 69,
+   "total": 104,
+   "total_all": 107
   },
   {
    "date": "2026-11-18",
@@ -18124,8 +18124,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 79,
+   "total": 128,
    "total_all": null
   },
   {
@@ -18134,8 +18134,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 82,
+   "total": 130,
    "total_all": null
   },
   {
@@ -18144,9 +18144,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 50,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 81,
+   "total": 130,
+   "total_all": 131
   },
   {
    "date": "2026-11-15",
@@ -18154,9 +18154,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 50,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 83,
+   "total": 132,
+   "total_all": 133
   },
   {
    "date": "2026-11-16",
@@ -18164,9 +18164,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 50,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 83,
+   "total": 132,
+   "total_all": 133
   },
   {
    "date": "2026-11-17",
@@ -18174,9 +18174,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 51,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 82,
+   "total": 132,
+   "total_all": 133
   },
   {
    "date": "2026-11-18",
@@ -18316,8 +18316,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 26,
+   "total": 43,
    "total_all": null
   },
   {
@@ -18326,8 +18326,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 43,
+   "total": 61,
    "total_all": null
   },
   {
@@ -18336,8 +18336,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 40,
+   "total": 59,
    "total_all": null
   },
   {
@@ -18346,9 +18346,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 20,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 34,
+   "total": 54,
+   "total_all": 54
   },
   {
    "date": "2026-11-15",
@@ -18356,9 +18356,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 21,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 38,
+   "total": 59,
+   "total_all": 59
   },
   {
    "date": "2026-11-16",
@@ -18366,9 +18366,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 21,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 38,
+   "total": 59,
+   "total_all": 59
   },
   {
    "date": "2026-11-17",
@@ -18376,9 +18376,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 21,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 39,
+   "total": 60,
+   "total_all": 60
   },
   {
    "date": "2026-11-18",
@@ -18708,8 +18708,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 60,
+   "total": 89,
    "total_all": null
   },
   {
@@ -18718,8 +18718,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 58,
+   "total": 87,
    "total_all": null
   },
   {
@@ -18738,9 +18738,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 30,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 57,
+   "total": 86,
+   "total_all": 87
   },
   {
    "date": "2026-11-16",
@@ -18748,9 +18748,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 30,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 58,
+   "total": 87,
+   "total_all": 88
   },
   {
    "date": "2026-11-17",
@@ -19090,8 +19090,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 58,
+   "total": 88,
    "total_all": null
   },
   {
@@ -19100,8 +19100,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 56,
+   "total": 85,
    "total_all": null
   },
   {
@@ -19110,9 +19110,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 31,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 60,
+   "total": 90,
+   "total_all": 91
   },
   {
    "date": "2026-11-15",
@@ -19120,9 +19120,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 31,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 57,
+   "total": 87,
+   "total_all": 88
   },
   {
    "date": "2026-11-16",
@@ -19130,9 +19130,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 30,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 59,
+   "total": 88,
+   "total_all": 89
   },
   {
    "date": "2026-11-17",
@@ -19140,9 +19140,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 31,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 59,
+   "total": 89,
+   "total_all": 90
   },
   {
    "date": "2026-11-18",
@@ -19472,8 +19472,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 82,
+   "total": 134,
    "total_all": null
   },
   {
@@ -19492,9 +19492,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 53,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 81,
+   "total": 132,
+   "total_all": 134
   },
   {
    "date": "2026-11-15",
@@ -19502,9 +19502,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 54,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 79,
+   "total": 131,
+   "total_all": 133
   },
   {
    "date": "2026-11-16",
@@ -19522,9 +19522,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 56,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 76,
+   "total": 130,
+   "total_all": 132
   },
   {
    "date": "2026-11-18",
@@ -19844,8 +19844,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 43,
+   "total": 75,
    "total_all": null
   },
   {
@@ -19854,8 +19854,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 43,
+   "total": 75,
    "total_all": null
   },
   {
@@ -19864,8 +19864,8 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": null,
    "ct_it_all_src": null,
-   "cm_it": null,
-   "total": null,
+   "cm_it": 43,
+   "total": 75,
    "total_all": null
   },
   {
@@ -19874,9 +19874,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 36,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 44,
+   "total": 75,
+   "total_all": 80
   },
   {
    "date": "2026-11-15",
@@ -19884,9 +19884,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 36,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 43,
+   "total": 74,
+   "total_all": 79
   },
   {
    "date": "2026-11-16",
@@ -19894,9 +19894,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 35,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 44,
+   "total": 74,
+   "total_all": 79
   },
   {
    "date": "2026-11-17",
@@ -19904,9 +19904,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 36,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 46,
+   "total": 77,
+   "total_all": 82
   },
   {
    "date": "2026-11-18",
@@ -20226,9 +20226,9 @@
    "ct_it_src": "tcgnotify",
    "ct_it_all": 15,
    "ct_it_all_src": "tcgnotify",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 50,
+   "total": 58,
+   "total_all": 65
   },
   {
    "date": "2026-11-15",
@@ -20236,9 +20236,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 14,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 50,
+   "total": 57,
+   "total_all": 64
   },
   {
    "date": "2026-11-16",
@@ -20246,9 +20246,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 14,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 49,
+   "total": 56,
+   "total_all": 63
   },
   {
    "date": "2026-11-17",
@@ -20256,9 +20256,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 14,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 48,
+   "total": 55,
+   "total_all": 62
   },
   {
    "date": "2026-11-18",
@@ -20588,9 +20588,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 26,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 33,
+   "total": 48,
+   "total_all": 59
   },
   {
    "date": "2026-11-16",
@@ -20598,9 +20598,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 27,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 35,
+   "total": 51,
+   "total_all": 62
   },
   {
    "date": "2026-11-17",
@@ -20608,9 +20608,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 28,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 35,
+   "total": 51,
+   "total_all": 63
   },
   {
    "date": "2026-11-18",
@@ -20940,9 +20940,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 21,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 36,
+   "total": 51,
+   "total_all": 57
   },
   {
    "date": "2026-11-16",
@@ -20950,9 +20950,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 20,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 35,
+   "total": 49,
+   "total_all": 55
   },
   {
    "date": "2026-11-17",
@@ -20960,9 +20960,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 23,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 34,
+   "total": 51,
+   "total_all": 57
   },
   {
    "date": "2026-11-18",
@@ -21282,9 +21282,9 @@
    "ct_it_src": "tcgnotify",
    "ct_it_all": 27,
    "ct_it_all_src": "tcgnotify",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 60,
+   "total": 78,
+   "total_all": 87
   },
   {
    "date": "2026-11-15",
@@ -21292,9 +21292,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 25,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 59,
+   "total": 75,
+   "total_all": 84
   },
   {
    "date": "2026-11-16",
@@ -21302,9 +21302,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 24,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 58,
+   "total": 73,
+   "total_all": 82
   },
   {
    "date": "2026-11-17",
@@ -21312,9 +21312,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 23,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 57,
+   "total": 71,
+   "total_all": 80
   },
   {
    "date": "2026-11-18",
@@ -21624,9 +21624,9 @@
    "ct_it_src": "tcgnotify",
    "ct_it_all": 41,
    "ct_it_all_src": "tcgnotify",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 41,
+   "total": 63,
+   "total_all": 82
   },
   {
    "date": "2026-11-15",
@@ -21634,9 +21634,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 39,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 45,
+   "total": 66,
+   "total_all": 84
   },
   {
    "date": "2026-11-16",
@@ -21644,9 +21644,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 39,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 45,
+   "total": 66,
+   "total_all": 84
   },
   {
    "date": "2026-11-17",
@@ -21976,9 +21976,9 @@
    "ct_it_src": "tcgnotify",
    "ct_it_all": 26,
    "ct_it_all_src": "tcgnotify",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 54,
+   "total": 69,
+   "total_all": 80
   },
   {
    "date": "2026-11-15",
@@ -21986,9 +21986,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 27,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 54,
+   "total": 69,
+   "total_all": 81
   },
   {
    "date": "2026-11-16",
@@ -21996,9 +21996,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 27,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 54,
+   "total": 69,
+   "total_all": 81
   },
   {
    "date": "2026-11-17",
@@ -22006,9 +22006,9 @@
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 27,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 53,
+   "total": 68,
+   "total_all": 80
   },
   {
    "date": "2026-11-18",
@@ -22023,14 +22023,34 @@
  ],
  "p9-9": [
   {
+   "date": "2026-11-12",
+   "ct_it": null,
+   "ct_it_src": null,
+   "ct_it_all": null,
+   "ct_it_all_src": null,
+   "cm_it": 65,
+   "total": null,
+   "total_all": null
+  },
+  {
+   "date": "2026-11-14",
+   "ct_it": null,
+   "ct_it_src": null,
+   "ct_it_all": null,
+   "ct_it_all_src": null,
+   "cm_it": 65,
+   "total": null,
+   "total_all": null
+  },
+  {
    "date": "2026-11-16",
    "ct_it": 17,
    "ct_it_src": "cardtrader_box",
    "ct_it_all": 26,
    "ct_it_all_src": "cardtrader_box",
-   "cm_it": null,
-   "total": null,
-   "total_all": null
+   "cm_it": 67,
+   "total": 84,
+   "total_all": 93
   },
   {
    "date": "2026-11-17",

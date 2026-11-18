@@ -2300,6 +2300,34 @@
     "min": 119.99,
     "avg": null,
     "copies": null
+   },
+   {
+    "date": "2026-11-11",
+    "min": 119.98,
+    "avg": 119.99,
+    "copies": 70,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-13",
+    "min": 119.99,
+    "avg": 119.99,
+    "copies": 70,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-14",
+    "min": 119.99,
+    "avg": 119.99,
+    "copies": 68,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-16",
+    "min": 118.0,
+    "avg": 119.99,
+    "copies": 68,
+    "condition": "NM"
    }
   ]
  },
@@ -4550,6 +4578,34 @@
     "min": 160,
     "avg": null,
     "copies": null
+   },
+   {
+    "date": "2026-11-12",
+    "min": 159.0,
+    "avg": 164.9,
+    "copies": 60,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-13",
+    "min": 159.0,
+    "avg": 164.9,
+    "copies": 58,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-15",
+    "min": 159.0,
+    "avg": 164.9,
+    "copies": 57,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-16",
+    "min": 159.0,
+    "avg": 164.9,
+    "copies": 58,
+    "condition": "NM"
    }
   ]
  },
@@ -6590,6 +6646,55 @@
     "min": 205,
     "avg": 219.01,
     "copies": 97
+   },
+   {
+    "date": "2026-11-11",
+    "min": 205.0,
+    "avg": 219.01,
+    "copies": 97,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-12",
+    "min": 205.0,
+    "avg": 219.01,
+    "copies": 97,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-13",
+    "min": 205.0,
+    "avg": 219.01,
+    "copies": 94,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-14",
+    "min": 205.0,
+    "avg": 219.01,
+    "copies": 93,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-15",
+    "min": 200.0,
+    "avg": 205.0,
+    "copies": 91,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-16",
+    "min": 200.0,
+    "avg": 205.0,
+    "copies": 96,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-17",
+    "min": 200.0,
+    "avg": 205.0,
+    "copies": 92,
+    "condition": "NM"
    }
   ]
  },
@@ -8246,6 +8351,55 @@
     "min": 279.99,
     "avg": 280,
     "copies": 68
+   },
+   {
+    "date": "2026-11-11",
+    "min": 279.99,
+    "avg": 280.0,
+    "copies": 68,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-12",
+    "min": 239.0,
+    "avg": 279.98,
+    "copies": 70,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-13",
+    "min": 239.0,
+    "avg": 279.98,
+    "copies": 70,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-14",
+    "min": 239.0,
+    "avg": 279.98,
+    "copies": 71,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-15",
+    "min": 239.0,
+    "avg": 279.99,
+    "copies": 66,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-16",
+    "min": 239.0,
+    "avg": 274.9,
+    "copies": 70,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-17",
+    "min": 239.0,
+    "avg": 269.9,
+    "copies": 69,
+    "condition": "NM"
    }
   ]
  },
@@ -9878,6 +10032,55 @@
     "min": 96.67,
     "avg": 109,
     "copies": 76
+   },
+   {
+    "date": "2026-11-11",
+    "min": 96.67,
+    "avg": 109.0,
+    "copies": 76,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-12",
+    "min": 96.0,
+    "avg": 109.0,
+    "copies": 79,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-13",
+    "min": 96.0,
+    "avg": 109.0,
+    "copies": 82,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-14",
+    "min": 96.0,
+    "avg": 96.7,
+    "copies": 81,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-15",
+    "min": 96.0,
+    "avg": 96.7,
+    "copies": 83,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-16",
+    "min": 96.67,
+    "avg": 98.0,
+    "copies": 83,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-17",
+    "min": 96.0,
+    "avg": 96.7,
+    "copies": 82,
+    "condition": "NM"
    }
   ]
  },
@@ -11066,6 +11269,55 @@
     "min": 78.49,
     "avg": 78.9,
     "copies": 43
+   },
+   {
+    "date": "2026-11-11",
+    "min": 78.49,
+    "avg": 78.9,
+    "copies": 43,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-12",
+    "min": 74.5,
+    "avg": 78.9,
+    "copies": 43,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-13",
+    "min": 74.5,
+    "avg": 78.9,
+    "copies": 43,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-14",
+    "min": 74.5,
+    "avg": 78.49,
+    "copies": 44,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-15",
+    "min": 74.5,
+    "avg": 78.49,
+    "copies": 43,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-16",
+    "min": 74.5,
+    "avg": 78.49,
+    "copies": 44,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-17",
+    "min": 74.5,
+    "avg": 78.49,
+    "copies": 46,
+    "condition": "NM"
    }
   ]
  },
@@ -12380,6 +12632,34 @@
     "min": 77.5,
     "avg": null,
     "copies": null
+   },
+   {
+    "date": "2026-11-12",
+    "min": 80.0,
+    "avg": 84.95,
+    "copies": 82,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-14",
+    "min": 79.9,
+    "avg": 84.95,
+    "copies": 81,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-15",
+    "min": 79.9,
+    "avg": 84.95,
+    "copies": 79,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-17",
+    "min": 79.9,
+    "avg": 84.93,
+    "copies": 76,
+    "condition": "NM"
    }
   ]
  },
@@ -13550,6 +13830,48 @@
     "min": 104.94,
     "avg": null,
     "copies": null
+   },
+   {
+    "date": "2026-11-12",
+    "min": 103.0,
+    "avg": 105.0,
+    "copies": 58,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-13",
+    "min": 103.0,
+    "avg": 105.0,
+    "copies": 56,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-14",
+    "min": 103.0,
+    "avg": 104.99,
+    "copies": 60,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-15",
+    "min": 103.0,
+    "avg": 105.0,
+    "copies": 57,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-16",
+    "min": 103.0,
+    "avg": 105.0,
+    "copies": 59,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-17",
+    "min": 103.0,
+    "avg": 105.0,
+    "copies": 59,
+    "condition": "NM"
    }
   ]
  },
@@ -13664,6 +13986,55 @@
     "min": 245,
     "avg": 249,
     "copies": 26
+   },
+   {
+    "date": "2026-11-11",
+    "min": 245.0,
+    "avg": 249.0,
+    "copies": 26,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-12",
+    "min": 220.0,
+    "avg": 249.0,
+    "copies": 43,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-13",
+    "min": 225.0,
+    "avg": 229.0,
+    "copies": 40,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-14",
+    "min": 223.0,
+    "avg": 228.0,
+    "copies": 34,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-15",
+    "min": 199.0,
+    "avg": 223.0,
+    "copies": 38,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-16",
+    "min": 189.95,
+    "avg": 200.0,
+    "copies": 38,
+    "condition": "NM"
+   },
+   {
+    "date": "2026-11-17",
+    "min": 185.0,
+    "avg": 189.0,
+    "copies": 39,
+    "condition": "NM"
    }
   ]
  }

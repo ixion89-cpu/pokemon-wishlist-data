@@ -1049,15 +1049,22 @@ function marketSeries(card) {
   return { min: addSnapshotPrice(card, dedupePoints(min), ["ct", "ctz"]), avg: dedupePoints(avg.map((p) => ({ ...p, notify: false }))), copies: copySeries(card, "ct_it"), notify };
 }
 function cardmarketSeries(card) {
-  // Lo storico TCGNotify di Cardmarket è tutte le condizioni: non entra nella linea Near Mint.
+  // Solo i punti marcati condition NM. Lo storico vecchio, senza condizione, è tutte le condizioni e non entra.
   const min = [], avg = [];
+  const extra = (state.extra && state.extra.hist && state.extra.hist[card.id]) || {};
+  (extra.cardmarket || []).forEach((p) => {
+    if (!p || !p.date || p.condition !== "NM") return;
+    const date = String(p.date).slice(0, 10);
+    if (num(p.min) != null) min.push({ date, value: num(p.min), notify: false });
+    if (num(p.avg) != null) avg.push({ date, value: num(p.avg), notify: false });
+  });
   const current = state.extra && state.extra.cm && state.extra.cm[card.id];
   if (current && current.date) {
     const date = String(current.date).slice(0, 10);
-    if (num(current.min_eur) != null) min.push({ date, value: num(current.min_eur), notify: false });
-    if (num(current.avg_eur) != null) avg.push({ date, value: num(current.avg_eur), notify: false });
+    if (num(current.min_eur) != null && !min.some((x) => x.date === date)) min.push({ date, value: num(current.min_eur), notify: false });
+    if (num(current.avg_eur) != null && !avg.some((x) => x.date === date)) avg.push({ date, value: num(current.avg_eur), notify: false });
   }
-  return { min: addSnapshotPrice(card, min, ["cm"]), avg, copies: copySeries(card, "cm_it"), notify: false };
+  return { min: addSnapshotPrice(card, dedupePoints(min), ["cm"]), avg: dedupePoints(avg), copies: copySeries(card, "cm_it"), notify: false };
 }
 function copySeries(card, field) {
   const book = (state.extra && state.extra.popSeries) || {};

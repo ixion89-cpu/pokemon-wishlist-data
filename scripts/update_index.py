@@ -137,6 +137,7 @@ def constituents_for(cards, day, pop, notify):
             "pop": None if total is None else round(total, 2),
             "ct_it": None if ct is None else round(ct, 2),
             "cm_it": None if cm is None else round(cm, 2),
+            "condition": card.get("price_condition") or None,
             "ita": is_italian(card),
         })
     rows.sort(key=lambda row: row["id"])
@@ -152,6 +153,7 @@ def public_constituents(rows):
             "pop": row["pop"],
             "ct_it": row["ct_it"],
             "cm_it": row["cm_it"],
+            "condition": row.get("condition"),
         }
         for row in rows
     ]

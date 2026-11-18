@@ -171,8 +171,12 @@ h1 { margin: 0; font-size: 34px; }
 .popbox { margin: 14px 0; }
 .price-line {
   position: relative; margin-top: 6px;
-  display: flex; justify-content: center; align-items: center;
+  display: flex; justify-content: center; align-items: center; gap: 4px;
   background: var(--sun); border: 2px solid #111; border-radius: 999px; padding: 1px 4px;
+}
+.price-line .cond {
+  font-size: 9px; font-weight: 800; letter-spacing: .02em;
+  background: #111; color: #fff; border-radius: 999px; padding: 1px 4px;
 }
 .src-badge { position: absolute; top: 8px; left: 8px; z-index: 2; }
 .sleeve .price { font-size: 11px; letter-spacing: -0.04em; white-space: nowrap; }

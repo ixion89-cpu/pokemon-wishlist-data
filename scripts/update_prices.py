@@ -33,7 +33,12 @@ PRICE_DEFINITION = (
     "Default: minimo Zero (price_ctz_eur). Si usa il minimo CardTrader normale (price_ct_eur) "
     "se non c'è nessuno Zero, oppure se lo Zero costa più del 20% del normale "
     "(price_ctz_eur > price_ct_eur * 1.20). Se mancano entrambi, si usa price_cm_eur da Cardmarket. "
-    "price_final_source vale ctz, ct o cm. buy_price_eur è uguale a price_final_eur."
+    "price_final_source vale ctz, ct o cm. buy_price_eur è uguale a price_final_eur. "
+    "Se non c'è un Near Mint non gradato (Zero, poi CardTrader, poi Cardmarket), "
+    "si usa la condizione migliore tra SP, MP, PL e PO: il minimo CardTrader di quella condizione, "
+    "altrimenti niente. price_condition vale NM, SP, MP, PL o PO. "
+    "Un annuncio gradato si ignora. Un annuncio che costa più di 10 volte il successivo, "
+    "o almeno 10.000 € quando ne esiste uno più basso, si ignora."
 )
 ZERO_DEFINITION = (
     "zero_total_eur somma solo i minimi Near Mint in lingua target dei venditori CardTrader Zero. "
@@ -260,6 +265,45 @@ def eu_row_lang(row):
         return ""
     lang = str(raw).lower()
     return "jp" if lang in ("jp", "ja") else lang
+
+
+CONDITION_ORDER = ("NM", "SP", "MP", "PL", "PO")
+CONDITION_ALIASES = {
+    "NM": "NM", "NEAR MINT": "NM", "NEARMINT": "NM", "MINT": "NM", "M": "NM",
+    "SP": "SP", "EXCELLENT": "SP", "EX": "SP", "SLIGHTLY PLAYED": "SP", "LP": "SP",
+    "MP": "MP", "MODERATELY PLAYED": "MP",
+    "PL": "PL", "PLAYED": "PL", "HEAVILY PLAYED": "PL", "HP": "PL",
+    "PO": "PO", "POOR": "PO", "DAMAGED": "PO", "DMG": "PO",
+}
+
+
+def listing_condition(row):
+    """Manca il campo: il file vecchio è solo Near Mint. Mint conta come NM."""
+    raw = row.get("condition") or row.get("pokemon_condition") or "NM"
+    return CONDITION_ALIASES.get(str(raw).strip().upper())
+
+
+def listing_graded(row):
+    value = row.get("graded")
+    return value is True or str(value).lower() == "true"
+
+
+def drop_absurd(rows):
+    """Toglie i segnaposto: più di 10 volte il prezzo tenuto precedente, o almeno 10.000 € se ne esiste uno più basso."""
+    priced = [row for row in rows if isinstance(row.get("price_eur"), (int, float)) and row["price_eur"] > 0]
+    priced.sort(key=lambda row: (float(row["price_eur"]), 0 if row.get("zero") else 1))
+    if not priced:
+        return []
+    kept = [priced[0]]
+    for row in priced[1:]:
+        price = float(row["price_eur"])
+        prev = float(kept[-1]["price_eur"])
+        if price > prev * 10:
+            continue
+        if price >= 10000 and price > prev:
+            continue
+        kept.append(row)
+    return kept
 
 
 def eu_row_ok(row, card):
@@ -575,10 +619,19 @@ def main():
 def apply_card_prices(rec, eu_map, cardmarket):
     bid = str(rec.get("cardtrader_blueprint_id"))
     rows = eu_map.get(bid)
-    # Una lista vuota nel file di oggi significa zero annunci NM: non si tiene il prezzo CT di ieri.
+    # Una lista presente, anche vuota, è il listino di oggi: non si tiene il CardTrader di ieri.
+    usable = None
     if isinstance(rows, list):
-        rows = [row for row in rows if eu_row_ok(row, rec)]
-        zstats, cstats, astats = eu_groups(rows)
+        filtered = []
+        for row in rows:
+            if not isinstance(row, dict) or not eu_row_ok(row, rec) or listing_graded(row):
+                continue
+            if listing_condition(row) is None or not isinstance(row.get("price_eur"), (int, float)):
+                continue
+            filtered.append(row)
+        usable = drop_absurd(filtered)
+        nm_rows = [row for row in usable if listing_condition(row) == "NM"]
+        zstats, cstats, astats = eu_groups(nm_rows)
         rec["price_ctz_eur"] = zstats["min"]
         rec["listings_ctz"] = zstats["n"]
         rec["qty_ctz"] = zstats["qty"]
@@ -597,12 +650,28 @@ def apply_card_prices(rec, eu_map, cardmarket):
             rec["price_min_target_lang_nm_eur"] = min(both)
             if rec.get("target_language") == "it":
                 rec["price_min_ita_nm_eur"] = min(both)
+        else:
+            rec["price_min_target_lang_nm_eur"] = None
+            if rec.get("target_language") == "it":
+                rec["price_min_ita_nm_eur"] = None
     cm = cardmarket.get(rec["id"]) if isinstance(cardmarket.get(rec["id"]), dict) else {}
     rec["price_cm_eur"] = cm.get("min_eur") if isinstance(cm.get("min_eur"), (int, float)) else None
     rec["price_cm_avg_eur"] = cm.get("avg_eur") if isinstance(cm.get("avg_eur"), (int, float)) else None
     rec["copies_cm"] = cm.get("copies") if isinstance(cm.get("copies"), (int, float)) else None
     rec["price_cm_date"] = cm.get("date")
     price, source = choose_final(rec.get("price_ctz_eur"), rec.get("price_ct_eur"), rec.get("price_cm_eur"))
+    condition = "NM" if price is not None else None
+    if price is None and usable:
+        for cond in ("SP", "MP", "PL", "PO"):
+            pool = [row for row in usable if listing_condition(row) == cond]
+            if not pool:
+                continue
+            best = min(pool, key=lambda row: float(row["price_eur"]))
+            price = round(float(best["price_eur"]), 2)
+            source = "ctz" if best.get("zero") else "ct"
+            condition = cond
+            break
+    rec["price_condition"] = condition
     rec["price_final_eur"] = price
     rec["price_final_source"] = source
     rec["buy_price_eur"] = price

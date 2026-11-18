@@ -79,8 +79,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p1-1,166432,Rayquaza V,EVS,194,400.53,it_zero,Near Mint,5,cardtrader_zero_listings_min,daily_snapshot,400.53,500.64,612.93
 2026-11-17,p1-1,166432,Rayquaza V,EVS,194,400.53,it,Near Mint,6,cardtrader_listings_min,daily_snapshot,400.53,500.64,612.93
 2026-11-17,p1-1,166432,Rayquaza V,EVS,194,400.53,it_zero,Near Mint,5,cardtrader_zero_listings_min,daily_snapshot,400.53,500.64,612.93
-2026-11-18,p1-1,166432,Rayquaza V,EVS,194,400.53,it,Near Mint,6,cardtrader_listings_min,daily_snapshot,400.53,500.64,612.93
-2026-11-18,p1-1,166432,Rayquaza V,EVS,194,400.53,it_zero,Near Mint,5,cardtrader_zero_listings_min,daily_snapshot,400.53,500.64,612.93
 2026-10-01,p1-2,154020,Tyranitar V,BST,155,216.61,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p1-2,154020,Tyranitar V,BST,155,216.58,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p1-2,154020,Tyranitar V,BST,155,216.31,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -159,8 +157,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p1-2,154020,Tyranitar V,BST,155,319.64,it_zero,Near Mint,4,cardtrader_zero_listings_min,daily_snapshot,319.64,300.64,332.17
 2026-11-17,p1-2,154020,Tyranitar V,BST,155,300.64,it,Near Mint,5,cardtrader_listings_min,daily_snapshot,319.64,300.64,335.4
 2026-11-17,p1-2,154020,Tyranitar V,BST,155,319.64,it_zero,Near Mint,4,cardtrader_zero_listings_min,daily_snapshot,319.64,300.64,335.4
-2026-11-18,p1-2,154020,Tyranitar V,BST,155,300.64,it,Near Mint,5,cardtrader_listings_min,daily_snapshot,319.64,300.64,335.4
-2026-11-18,p1-2,154020,Tyranitar V,BST,155,319.64,it_zero,Near Mint,4,cardtrader_zero_listings_min,daily_snapshot,319.64,300.64,335.4
 2026-10-01,p1-3,166430,Dragonite V,EVS,192,547.73,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p1-3,166430,Dragonite V,EVS,192,545.05,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p1-3,166430,Dragonite V,EVS,192,547.48,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -242,8 +238,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p1-3,166430,Dragonite V,EVS,192,545.63,it_zero,Near Mint,9,cardtrader_zero_listings_min,daily_snapshot,545.63,549.99,569.17
 2026-11-17,p1-3,166430,Dragonite V,EVS,192,549.99,it,Near Mint,11,cardtrader_listings_min,daily_snapshot,550.48,549.99,569.61
 2026-11-17,p1-3,166430,Dragonite V,EVS,192,550.48,it_zero,Near Mint,9,cardtrader_zero_listings_min,daily_snapshot,550.48,549.99,569.61
-2026-11-18,p1-3,166430,Dragonite V,EVS,192,549.99,it,Near Mint,11,cardtrader_listings_min,daily_snapshot,550.48,549.99,569.61
-2026-11-18,p1-3,166430,Dragonite V,EVS,192,550.48,it_zero,Near Mint,9,cardtrader_zero_listings_min,daily_snapshot,550.48,549.99,569.61
 2026-10-01,p1-4,221558,Giratina V,LORG,186,630.72,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p1-4,221558,Giratina V,LORG,186,630.72,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p1-4,221558,Giratina V,LORG,186,630.72,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -325,8 +319,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p1-4,221558,Giratina V,LORG,186,700.59,it_zero,Near Mint,5,cardtrader_zero_listings_min,daily_snapshot,700.59,10000.64,2080.15
 2026-11-17,p1-4,221558,Giratina V,LORG,186,700.59,it,Near Mint,6,cardtrader_listings_min,daily_snapshot,700.59,10000.64,2080.15
 2026-11-17,p1-4,221558,Giratina V,LORG,186,700.59,it_zero,Near Mint,5,cardtrader_zero_listings_min,daily_snapshot,700.59,10000.64,2080.15
-2026-11-18,p1-4,221558,Giratina V,LORG,186,700.59,it,Near Mint,6,cardtrader_listings_min,daily_snapshot,700.59,10000.64,2073.79
-2026-11-18,p1-4,221558,Giratina V,LORG,186,700.59,it_zero,Near Mint,5,cardtrader_zero_listings_min,daily_snapshot,700.59,10000.64,2073.79
 2026-10-01,p1-5,200493,Gengar VMAX,FST,271,1018.25,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p1-5,200493,Gengar VMAX,FST,271,879.05,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p1-5,200493,Gengar VMAX,FST,271,873.11,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -409,8 +401,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p1-5,200493,Gengar VMAX,FST,271,900.64,it_zero,Near Mint,8,cardtrader_zero_listings_min,daily_snapshot,900.64,10000.64,3261.85
 2026-11-17,p1-5,200493,Gengar VMAX,FST,271,900.64,it,Near Mint,8,cardtrader_listings_min,daily_snapshot,900.64,10000.64,3556.92
 2026-11-17,p1-5,200493,Gengar VMAX,FST,271,900.64,it_zero,Near Mint,7,cardtrader_zero_listings_min,daily_snapshot,900.64,10000.64,3556.92
-2026-11-18,p1-5,200493,Gengar VMAX,FST,271,900.64,it,Near Mint,8,cardtrader_listings_min,daily_snapshot,900.64,10000.64,3556.92
-2026-11-18,p1-5,200493,Gengar VMAX,FST,271,900.64,it_zero,Near Mint,7,cardtrader_zero_listings_min,daily_snapshot,900.64,10000.64,3556.92
 2026-10-01,p1-6,166450,Sylveon VMAX,EVS,212,458.82,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p1-6,166450,Sylveon VMAX,EVS,212,458.82,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p1-6,166450,Sylveon VMAX,EVS,212,456.5,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -492,8 +482,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p1-6,166450,Sylveon VMAX,EVS,212,470.64,it_zero,Near Mint,5,cardtrader_zero_listings_min,daily_snapshot,470.64,450.64,534.76
 2026-11-17,p1-6,166450,Sylveon VMAX,EVS,212,450.64,it,Near Mint,7,cardtrader_listings_min,daily_snapshot,470.64,450.64,534.76
 2026-11-17,p1-6,166450,Sylveon VMAX,EVS,212,470.64,it_zero,Near Mint,5,cardtrader_zero_listings_min,daily_snapshot,470.64,450.64,534.76
-2026-11-18,p1-6,166450,Sylveon VMAX,EVS,212,450.64,it,Near Mint,7,cardtrader_listings_min,daily_snapshot,470.64,450.64,534.76
-2026-11-18,p1-6,166450,Sylveon VMAX,EVS,212,470.64,it_zero,Near Mint,5,cardtrader_zero_listings_min,daily_snapshot,470.64,450.64,534.76
 2026-10-01,p1-7,166427,Umbreon V,EVS,189,394.83,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p1-7,166427,Umbreon V,EVS,189,394.83,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p1-7,166427,Umbreon V,EVS,189,376.37,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -576,8 +564,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p1-7,166427,Umbreon V,EVS,189,644.38,it_zero,Near Mint,1,cardtrader_zero_listings_min,daily_snapshot,644.38,,644.38
 2026-11-17,p1-7,166427,Umbreon V,EVS,189,644.38,it,Near Mint,1,cardtrader_listings_min,daily_snapshot,644.38,,644.38
 2026-11-17,p1-7,166427,Umbreon V,EVS,189,644.38,it_zero,Near Mint,1,cardtrader_zero_listings_min,daily_snapshot,644.38,,644.38
-2026-11-18,p1-7,166427,Umbreon V,EVS,189,644.38,it,Near Mint,1,cardtrader_listings_min,daily_snapshot,644.38,,644.38
-2026-11-18,p1-7,166427,Umbreon V,EVS,189,644.38,it_zero,Near Mint,1,cardtrader_zero_listings_min,daily_snapshot,644.38,,644.38
 2026-10-01,p1-8,235164,Leafeon VSTAR,CRZ,GG35,63.96,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p1-8,235164,Leafeon VSTAR,CRZ,GG35,63.44,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p1-8,235164,Leafeon VSTAR,CRZ,GG35,58.92,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -660,8 +646,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p1-8,235164,Leafeon VSTAR,CRZ,GG35,49.25,it_zero,Near Mint,19,cardtrader_zero_listings_min,daily_snapshot,49.25,58.69,364.83
 2026-11-17,p1-8,235164,Leafeon VSTAR,CRZ,GG35,49.25,it,Near Mint,28,cardtrader_listings_min,daily_snapshot,49.25,58.69,347.25
 2026-11-17,p1-8,235164,Leafeon VSTAR,CRZ,GG35,49.25,it_zero,Near Mint,20,cardtrader_zero_listings_min,daily_snapshot,49.25,58.69,347.25
-2026-11-18,p1-8,235164,Leafeon VSTAR,CRZ,GG35,45.63,it,Near Mint,26,cardtrader_listings_min,daily_snapshot,45.63,58.69,364.42
-2026-11-18,p1-8,235164,Leafeon VSTAR,CRZ,GG35,45.63,it_zero,Near Mint,18,cardtrader_zero_listings_min,daily_snapshot,45.63,58.69,364.42
 2026-10-01,p1-9,235190,Deoxys VMAX,CRZ,GG45,49.67,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p1-9,235190,Deoxys VMAX,CRZ,GG45,49.67,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p1-9,235190,Deoxys VMAX,CRZ,GG45,48.5,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -742,8 +726,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p1-9,235190,Deoxys VMAX,CRZ,GG45,25.19,it_zero,Near Mint,9,cardtrader_zero_listings_min,daily_snapshot,25.19,25.38,32.61
 2026-11-17,p1-9,235190,Deoxys VMAX,CRZ,GG45,25.18,it,Near Mint,15,cardtrader_listings_min,daily_snapshot,25.19,25.18,32.51
 2026-11-17,p1-9,235190,Deoxys VMAX,CRZ,GG45,25.19,it_zero,Near Mint,9,cardtrader_zero_listings_min,daily_snapshot,25.19,25.18,32.51
-2026-11-18,p1-9,235190,Deoxys VMAX,CRZ,GG45,25.18,it,Near Mint,14,cardtrader_listings_min,daily_snapshot,25.19,25.18,32.6
-2026-11-18,p1-9,235190,Deoxys VMAX,CRZ,GG45,25.19,it_zero,Near Mint,8,cardtrader_zero_listings_min,daily_snapshot,25.19,25.18,32.6
 2026-10-01,p2-1,227867,Rayquaza VMAX,SIT,TG20,151.18,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p2-1,227867,Rayquaza VMAX,SIT,TG20,151.16,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p2-1,227867,Rayquaza VMAX,SIT,TG20,150.16,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -824,8 +806,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p2-1,227867,Rayquaza VMAX,SIT,TG20,90.61,it_zero,Near Mint,11,cardtrader_zero_listings_min,daily_snapshot,90.61,101.26,117.91
 2026-11-17,p2-1,227867,Rayquaza VMAX,SIT,TG20,90.61,it,Near Mint,13,cardtrader_listings_min,daily_snapshot,90.61,101.26,118.11
 2026-11-17,p2-1,227867,Rayquaza VMAX,SIT,TG20,90.61,it_zero,Near Mint,10,cardtrader_zero_listings_min,daily_snapshot,90.61,101.26,118.11
-2026-11-18,p2-1,227867,Rayquaza VMAX,SIT,TG20,90.61,it,Near Mint,12,cardtrader_listings_min,daily_snapshot,90.61,101.26,119.42
-2026-11-18,p2-1,227867,Rayquaza VMAX,SIT,TG20,90.61,it_zero,Near Mint,9,cardtrader_zero_listings_min,daily_snapshot,90.61,101.26,119.42
 2026-10-01,p2-2,221650,Pikachu V,LORG,TG16,80.07,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p2-2,221650,Pikachu V,LORG,TG16,80.13,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p2-2,221650,Pikachu V,LORG,TG16,78.99,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -908,8 +888,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p2-2,221650,Pikachu V,LORG,TG16,86.43,it_zero,Near Mint,18,cardtrader_zero_listings_min,daily_snapshot,86.43,85.64,497.91
 2026-11-17,p2-2,221650,Pikachu V,LORG,TG16,85.64,it,Near Mint,23,cardtrader_listings_min,daily_snapshot,86.43,85.64,497.17
 2026-11-17,p2-2,221650,Pikachu V,LORG,TG16,86.43,it_zero,Near Mint,18,cardtrader_zero_listings_min,daily_snapshot,86.43,85.64,497.17
-2026-11-18,p2-2,221650,Pikachu V,LORG,TG16,85.64,it,Near Mint,21,cardtrader_listings_min,daily_snapshot,86.43,85.64,551.99
-2026-11-18,p2-2,221650,Pikachu V,LORG,TG16,86.43,it_zero,Near Mint,16,cardtrader_zero_listings_min,daily_snapshot,86.43,85.64,551.99
 2026-10-01,p2-3,221651,Pikachu VMAX,LORG,TG17,48.53,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p2-3,221651,Pikachu VMAX,LORG,TG17,49.24,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p2-3,221651,Pikachu VMAX,LORG,TG17,49.24,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -992,8 +970,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p2-3,221651,Pikachu VMAX,LORG,TG17,65.64,it_zero,Near Mint,14,cardtrader_zero_listings_min,daily_snapshot,65.64,64.64,94.08
 2026-11-17,p2-3,221651,Pikachu VMAX,LORG,TG17,64.64,it,Near Mint,17,cardtrader_listings_min,daily_snapshot,65.64,64.64,94.08
 2026-11-17,p2-3,221651,Pikachu VMAX,LORG,TG17,65.64,it_zero,Near Mint,14,cardtrader_zero_listings_min,daily_snapshot,65.64,64.64,94.08
-2026-11-18,p2-3,221651,Pikachu VMAX,LORG,TG17,64.64,it,Near Mint,17,cardtrader_listings_min,daily_snapshot,65.14,64.64,93.94
-2026-11-18,p2-3,221651,Pikachu VMAX,LORG,TG17,65.14,it_zero,Near Mint,14,cardtrader_zero_listings_min,daily_snapshot,65.14,64.64,93.94
 2026-10-01,p2-4,206475,Arceus V,BRS,166,54.31,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p2-4,206475,Arceus V,BRS,166,53.89,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p2-4,206475,Arceus V,BRS,166,53.89,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -1076,8 +1052,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p2-4,206475,Arceus V,BRS,166,37.52,it_zero,Near Mint,14,cardtrader_zero_listings_min,daily_snapshot,37.52,38.52,50.46
 2026-11-17,p2-4,206475,Arceus V,BRS,166,38.03,it,Near Mint,18,cardtrader_listings_min,daily_snapshot,38.03,38.52,51.07
 2026-11-17,p2-4,206475,Arceus V,BRS,166,38.03,it_zero,Near Mint,13,cardtrader_zero_listings_min,daily_snapshot,38.03,38.52,51.07
-2026-11-18,p2-4,206475,Arceus V,BRS,166,38.52,it,Near Mint,17,cardtrader_listings_min,daily_snapshot,38.52,38.52,51.72
-2026-11-18,p2-4,206475,Arceus V,BRS,166,38.52,it_zero,Near Mint,12,cardtrader_zero_listings_min,daily_snapshot,38.52,38.52,51.72
 2026-10-01,p2-5,206453,Umbreon V,BRS,TG22,64.39,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p2-5,206453,Umbreon V,BRS,TG22,64.07,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p2-5,206453,Umbreon V,BRS,TG22,64.07,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -1160,8 +1134,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p2-5,206453,Umbreon V,BRS,TG22,35.52,it_zero,Near Mint,30,cardtrader_zero_listings_min,daily_snapshot,35.52,34.52,54.04
 2026-11-17,p2-5,206453,Umbreon V,BRS,TG22,34.52,it,Near Mint,41,cardtrader_listings_min,daily_snapshot,35.52,34.52,53.96
 2026-11-17,p2-5,206453,Umbreon V,BRS,TG22,35.52,it_zero,Near Mint,30,cardtrader_zero_listings_min,daily_snapshot,35.52,34.52,53.96
-2026-11-18,p2-5,206453,Umbreon V,BRS,TG22,34.52,it,Near Mint,39,cardtrader_listings_min,daily_snapshot,35.52,34.52,54.73
-2026-11-18,p2-5,206453,Umbreon V,BRS,TG22,35.52,it_zero,Near Mint,28,cardtrader_zero_listings_min,daily_snapshot,35.52,34.52,54.73
 2026-10-01,p2-6,206580,Mimikyu V,BRS,TG16,40.5,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p2-6,206580,Mimikyu V,BRS,TG16,41.88,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p2-6,206580,Mimikyu V,BRS,TG16,41.83,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -1242,8 +1214,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p2-6,206580,Mimikyu V,BRS,TG16,25.48,it_zero,Near Mint,17,cardtrader_zero_listings_min,daily_snapshot,25.48,25.4,35.43
 2026-11-17,p2-6,206580,Mimikyu V,BRS,TG16,25.16,it,Near Mint,25,cardtrader_listings_min,daily_snapshot,25.16,25.4,34.61
 2026-11-17,p2-6,206580,Mimikyu V,BRS,TG16,25.16,it_zero,Near Mint,19,cardtrader_zero_listings_min,daily_snapshot,25.16,25.4,34.61
-2026-11-18,p2-6,206580,Mimikyu V,BRS,TG16,24.9,it,Near Mint,23,cardtrader_listings_min,daily_snapshot,24.9,25.4,35.54
-2026-11-18,p2-6,206580,Mimikyu V,BRS,TG16,24.9,it_zero,Near Mint,17,cardtrader_zero_listings_min,daily_snapshot,24.9,25.4,35.54
 2026-10-01,p2-7,206626,Sylveon VMAX,BRS,TG15,43.09,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p2-7,206626,Sylveon VMAX,BRS,TG15,37.15,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p2-7,206626,Sylveon VMAX,BRS,TG15,36.99,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -1324,8 +1294,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p2-7,206626,Sylveon VMAX,BRS,TG15,21.81,it_zero,Near Mint,18,cardtrader_zero_listings_min,daily_snapshot,21.81,30.4,36.36
 2026-11-17,p2-7,206626,Sylveon VMAX,BRS,TG15,21.81,it,Near Mint,25,cardtrader_listings_min,daily_snapshot,21.81,30.4,35.96
 2026-11-17,p2-7,206626,Sylveon VMAX,BRS,TG15,21.81,it_zero,Near Mint,19,cardtrader_zero_listings_min,daily_snapshot,21.81,30.4,35.96
-2026-11-18,p2-7,206626,Sylveon VMAX,BRS,TG15,21.88,it,Near Mint,24,cardtrader_listings_min,daily_snapshot,21.88,30.4,36.33
-2026-11-18,p2-7,206626,Sylveon VMAX,BRS,TG15,21.88,it_zero,Near Mint,18,cardtrader_zero_listings_min,daily_snapshot,21.88,30.4,36.33
 2026-10-01,p2-8,206627,Sylveon V,BRS,TG14,45.43,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p2-8,206627,Sylveon V,BRS,TG14,44.89,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p2-8,206627,Sylveon V,BRS,TG14,45.29,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -1408,8 +1376,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p2-8,206627,Sylveon V,BRS,TG14,24.35,it_zero,Near Mint,16,cardtrader_zero_listings_min,daily_snapshot,24.35,20.27,31.6
 2026-11-17,p2-8,206627,Sylveon V,BRS,TG14,20.27,it,Near Mint,19,cardtrader_listings_min,daily_snapshot,24.33,20.27,31.56
 2026-11-17,p2-8,206627,Sylveon V,BRS,TG14,24.33,it_zero,Near Mint,16,cardtrader_zero_listings_min,daily_snapshot,24.33,20.27,31.56
-2026-11-18,p2-8,206627,Sylveon V,BRS,TG14,20.27,it,Near Mint,19,cardtrader_listings_min,daily_snapshot,24.33,20.27,31.21
-2026-11-18,p2-8,206627,Sylveon V,BRS,TG14,24.33,it_zero,Near Mint,16,cardtrader_zero_listings_min,daily_snapshot,24.33,20.27,31.21
 2026-10-01,p2-9,200745,Mew V,FST,251,67.65,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p2-9,200745,Mew V,FST,251,67.4,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p2-9,200745,Mew V,FST,251,67.4,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -1491,8 +1457,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p2-9,200745,Mew V,FST,251,100.63,it_zero,Near Mint,7,cardtrader_zero_listings_min,daily_snapshot,100.63,70.64,140.11
 2026-11-17,p2-9,200745,Mew V,FST,251,80.64,it,Near Mint,11,cardtrader_listings_min,daily_snapshot,100.63,80.64,146.43
 2026-11-17,p2-9,200745,Mew V,FST,251,100.63,it_zero,Near Mint,7,cardtrader_zero_listings_min,daily_snapshot,100.63,80.64,146.43
-2026-11-18,p2-9,200745,Mew V,FST,251,80.64,it,Near Mint,11,cardtrader_listings_min,daily_snapshot,100.63,80.64,146.43
-2026-11-18,p2-9,200745,Mew V,FST,251,100.63,it_zero,Near Mint,7,cardtrader_zero_listings_min,daily_snapshot,100.63,80.64,146.43
 2026-10-01,p3-1,200739,Celebi V,FST,245,62.63,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p3-1,200739,Celebi V,FST,245,62.63,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p3-1,200739,Celebi V,FST,245,62.63,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -1575,8 +1539,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p3-1,200739,Celebi V,FST,245,86.32,it_zero,Near Mint,12,cardtrader_zero_listings_min,daily_snapshot,86.32,70.64,93.67
 2026-11-17,p3-1,200739,Celebi V,FST,245,70.64,it,Near Mint,16,cardtrader_listings_min,daily_snapshot,86.32,70.64,93.67
 2026-11-17,p3-1,200739,Celebi V,FST,245,86.32,it_zero,Near Mint,12,cardtrader_zero_listings_min,daily_snapshot,86.32,70.64,93.67
-2026-11-18,p3-1,200739,Celebi V,FST,245,70.64,it,Near Mint,14,cardtrader_listings_min,daily_snapshot,86.32,70.64,94.26
-2026-11-18,p3-1,200739,Celebi V,FST,245,86.32,it_zero,Near Mint,10,cardtrader_zero_listings_min,daily_snapshot,86.32,70.64,94.26
 2026-10-01,p3-2,166422,Sylveon V,EVS,184,109.81,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p3-2,166422,Sylveon V,EVS,184,107.83,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p3-2,166422,Sylveon V,EVS,184,107.82,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -1658,8 +1620,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p3-2,166422,Sylveon V,EVS,184,105.64,it_zero,Near Mint,7,cardtrader_zero_listings_min,daily_snapshot,105.64,105.64,122.28
 2026-11-17,p3-2,166422,Sylveon V,EVS,184,105.64,it,Near Mint,9,cardtrader_listings_min,daily_snapshot,105.64,105.64,122.28
 2026-11-17,p3-2,166422,Sylveon V,EVS,184,105.64,it_zero,Near Mint,7,cardtrader_zero_listings_min,daily_snapshot,105.64,105.64,122.28
-2026-11-18,p3-2,166422,Sylveon V,EVS,184,105.64,it,Near Mint,9,cardtrader_listings_min,daily_snapshot,105.64,105.64,122.28
-2026-11-18,p3-2,166422,Sylveon V,EVS,184,105.64,it_zero,Near Mint,7,cardtrader_zero_listings_min,daily_snapshot,105.64,105.64,122.28
 2026-10-01,p3-3,166405,Leafeon V,EVS,167,117.58,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p3-3,166405,Leafeon V,EVS,167,117.58,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p3-3,166405,Leafeon V,EVS,167,117.6,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -1741,8 +1701,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p3-3,166405,Leafeon V,EVS,167,109.14,it_zero,Near Mint,11,cardtrader_zero_listings_min,daily_snapshot,109.14,115.64,138.05
 2026-11-17,p3-3,166405,Leafeon V,EVS,167,109.14,it,Near Mint,14,cardtrader_listings_min,daily_snapshot,109.14,115.64,138.05
 2026-11-17,p3-3,166405,Leafeon V,EVS,167,109.14,it_zero,Near Mint,11,cardtrader_zero_listings_min,daily_snapshot,109.14,115.64,138.05
-2026-11-18,p3-3,166405,Leafeon V,EVS,167,100.64,it,Near Mint,15,cardtrader_listings_min,daily_snapshot,100.64,115.64,135.97
-2026-11-18,p3-3,166405,Leafeon V,EVS,167,100.64,it_zero,Near Mint,12,cardtrader_zero_listings_min,daily_snapshot,100.64,115.64,135.97
 2026-10-01,p3-4,166313,Sylveon VMAX,EVS,075,10.18,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p3-4,166313,Sylveon VMAX,EVS,075,9.71,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p3-4,166313,Sylveon VMAX,EVS,075,9.68,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -1799,8 +1757,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p3-4,166313,Sylveon VMAX,EVS,075,7.13,it_zero,Near Mint,7,cardtrader_zero_listings_min,daily_snapshot,7.13,7.12,18.06
 2026-11-17,p3-4,166313,Sylveon VMAX,EVS,075,7.12,it,Near Mint,11,cardtrader_listings_min,daily_snapshot,7.13,7.12,18.06
 2026-11-17,p3-4,166313,Sylveon VMAX,EVS,075,7.13,it_zero,Near Mint,7,cardtrader_zero_listings_min,daily_snapshot,7.13,7.12,18.06
-2026-11-18,p3-4,166313,Sylveon VMAX,EVS,075,7.12,it,Near Mint,10,cardtrader_listings_min,daily_snapshot,9.96,7.12,18.84
-2026-11-18,p3-4,166313,Sylveon VMAX,EVS,075,9.96,it_zero,Near Mint,6,cardtrader_zero_listings_min,daily_snapshot,9.96,7.12,18.84
 2026-10-01,p4-7,370914,Pikachu ex,ASC,277,292.21,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p4-7,370914,Pikachu ex,ASC,277,270.9,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p4-7,370914,Pikachu ex,ASC,277,287.98,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -1883,8 +1839,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p4-7,370914,Pikachu ex,ASC,277,150.57,it_zero,Near Mint,15,cardtrader_zero_listings_min,daily_snapshot,150.57,241.28,187.85
 2026-11-17,p4-7,370914,Pikachu ex,ASC,277,149.12,it,Near Mint,18,cardtrader_listings_min,daily_snapshot,149.12,241.28,184.17
 2026-11-17,p4-7,370914,Pikachu ex,ASC,277,149.12,it_zero,Near Mint,15,cardtrader_zero_listings_min,daily_snapshot,149.12,241.28,184.17
-2026-11-18,p4-7,370914,Pikachu ex,ASC,277,148.63,it,Near Mint,18,cardtrader_listings_min,daily_snapshot,148.63,241.28,182.05
-2026-11-18,p4-7,370914,Pikachu ex,ASC,277,148.63,it_zero,Near Mint,15,cardtrader_zero_listings_min,daily_snapshot,148.63,241.28,182.05
 2026-10-01,p4-8,347566,Mega Lucario ex,MEG,179,162.53,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p4-8,347566,Mega Lucario ex,MEG,179,161.31,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p4-8,347566,Mega Lucario ex,MEG,179,156.14,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -1966,8 +1920,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p4-8,347566,Mega Lucario ex,MEG,179,94.52,it_zero,Near Mint,40,cardtrader_zero_listings_min,daily_snapshot,94.52,95.7,130.89
 2026-11-17,p4-8,347566,Mega Lucario ex,MEG,179,94.48,it,Near Mint,54,cardtrader_listings_min,daily_snapshot,94.48,95.7,129.91
 2026-11-17,p4-8,347566,Mega Lucario ex,MEG,179,94.48,it_zero,Near Mint,40,cardtrader_zero_listings_min,daily_snapshot,94.48,95.7,129.91
-2026-11-18,p4-8,347566,Mega Lucario ex,MEG,179,94.45,it,Near Mint,51,cardtrader_listings_min,daily_snapshot,94.45,95.7,129.93
-2026-11-18,p4-8,347566,Mega Lucario ex,MEG,179,94.45,it_zero,Near Mint,39,cardtrader_zero_listings_min,daily_snapshot,94.45,95.7,129.93
 2026-10-01,p4-9,341099,Zekrom ex,BLK,166,246.16,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p4-9,341099,Zekrom ex,BLK,166,245.16,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p4-9,341099,Zekrom ex,BLK,166,245.02,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -2049,8 +2001,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p4-9,341099,Zekrom ex,BLK,166,169.44,it_zero,Near Mint,20,cardtrader_zero_listings_min,daily_snapshot,169.44,169.43,198.44
 2026-11-17,p4-9,341099,Zekrom ex,BLK,166,169.43,it,Near Mint,27,cardtrader_listings_min,daily_snapshot,169.44,169.43,199.28
 2026-11-17,p4-9,341099,Zekrom ex,BLK,166,169.44,it_zero,Near Mint,19,cardtrader_zero_listings_min,daily_snapshot,169.44,169.43,199.28
-2026-11-18,p4-9,341099,Zekrom ex,BLK,166,169.43,it,Near Mint,27,cardtrader_listings_min,daily_snapshot,169.44,169.43,199.31
-2026-11-18,p4-9,341099,Zekrom ex,BLK,166,169.44,it_zero,Near Mint,19,cardtrader_zero_listings_min,daily_snapshot,169.44,169.43,199.31
 2026-10-01,p5-2,341102,Kyurem ex,BLK,165,56.02,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p5-2,341102,Kyurem ex,BLK,165,55.66,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p5-2,341102,Kyurem ex,BLK,165,55.43,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -2131,8 +2081,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p5-2,341102,Kyurem ex,BLK,165,43.59,it_zero,Near Mint,25,cardtrader_zero_listings_min,daily_snapshot,43.59,48.64,59.86
 2026-11-17,p5-2,341102,Kyurem ex,BLK,165,43.59,it,Near Mint,32,cardtrader_listings_min,daily_snapshot,43.59,48.64,59.79
 2026-11-17,p5-2,341102,Kyurem ex,BLK,165,43.59,it_zero,Near Mint,25,cardtrader_zero_listings_min,daily_snapshot,43.59,48.64,59.79
-2026-11-18,p5-2,341102,Kyurem ex,BLK,165,43.14,it,Near Mint,32,cardtrader_listings_min,daily_snapshot,43.14,48.64,59.75
-2026-11-18,p5-2,341102,Kyurem ex,BLK,165,43.14,it_zero,Near Mint,25,cardtrader_zero_listings_min,daily_snapshot,43.14,48.64,59.75
 2026-10-01,p5-3,316779,Leafeon ex,PRE,144,212.24,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p5-3,316779,Leafeon ex,PRE,144,212.6,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p5-3,316779,Leafeon ex,PRE,144,218.9,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -2215,8 +2163,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p5-3,316779,Leafeon ex,PRE,144,119.52,it_zero,Near Mint,19,cardtrader_zero_listings_min,daily_snapshot,119.52,140.64,180.18
 2026-11-17,p5-3,316779,Leafeon ex,PRE,144,119.52,it,Near Mint,26,cardtrader_listings_min,daily_snapshot,119.52,140.64,180.18
 2026-11-17,p5-3,316779,Leafeon ex,PRE,144,119.52,it_zero,Near Mint,19,cardtrader_zero_listings_min,daily_snapshot,119.52,140.64,180.18
-2026-11-18,p5-3,316779,Leafeon ex,PRE,144,119.52,it,Near Mint,25,cardtrader_listings_min,daily_snapshot,119.52,140.64,182.24
-2026-11-18,p5-3,316779,Leafeon ex,PRE,144,119.52,it_zero,Near Mint,18,cardtrader_zero_listings_min,daily_snapshot,119.52,140.64,182.24
 2026-10-01,p5-4,316788,Glaceon ex,PRE,150,217.17,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p5-4,316788,Glaceon ex,PRE,150,214.72,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p5-4,316788,Glaceon ex,PRE,150,214.19,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -2297,8 +2243,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p5-4,316788,Glaceon ex,PRE,150,99.02,it_zero,Near Mint,26,cardtrader_zero_listings_min,daily_snapshot,99.02,105.64,146.57
 2026-11-17,p5-4,316788,Glaceon ex,PRE,150,99.02,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,99.02,130.64,148.43
 2026-11-17,p5-4,316788,Glaceon ex,PRE,150,99.02,it_zero,Near Mint,26,cardtrader_zero_listings_min,daily_snapshot,99.02,130.64,148.43
-2026-11-18,p5-4,316788,Glaceon ex,PRE,150,99.02,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,99.02,130.64,148.43
-2026-11-18,p5-4,316788,Glaceon ex,PRE,150,99.02,it_zero,Near Mint,26,cardtrader_zero_listings_min,daily_snapshot,99.02,130.64,148.43
 2026-10-01,p5-5,315076,Espeon ex,PRE,155,243.33,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p5-5,315076,Espeon ex,PRE,155,248.07,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p5-5,315076,Espeon ex,PRE,155,244.97,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -2381,8 +2325,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p5-5,315076,Espeon ex,PRE,155,115.62,it_zero,Near Mint,19,cardtrader_zero_listings_min,daily_snapshot,115.62,130.64,226.26
 2026-11-17,p5-5,315076,Espeon ex,PRE,155,114.14,it,Near Mint,28,cardtrader_listings_min,daily_snapshot,114.14,130.64,229.2
 2026-11-17,p5-5,315076,Espeon ex,PRE,155,114.14,it_zero,Near Mint,18,cardtrader_zero_listings_min,daily_snapshot,114.14,130.64,229.2
-2026-11-18,p5-5,315076,Espeon ex,PRE,155,114.14,it,Near Mint,28,cardtrader_listings_min,daily_snapshot,114.14,130.64,229.99
-2026-11-18,p5-5,315076,Espeon ex,PRE,155,114.14,it_zero,Near Mint,18,cardtrader_zero_listings_min,daily_snapshot,114.14,130.64,229.99
 2026-10-01,p5-6,316792,Jolteon ex,PRE,153,128.03,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p5-6,316792,Jolteon ex,PRE,153,128.03,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p5-6,316792,Jolteon ex,PRE,153,126.28,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -2465,8 +2407,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p5-6,316792,Jolteon ex,PRE,153,99.27,it_zero,Near Mint,20,cardtrader_zero_listings_min,daily_snapshot,99.27,105.44,159.76
 2026-11-17,p5-6,316792,Jolteon ex,PRE,153,99.27,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,99.27,105.44,159.76
 2026-11-17,p5-6,316792,Jolteon ex,PRE,153,99.27,it_zero,Near Mint,20,cardtrader_zero_listings_min,daily_snapshot,99.27,105.44,159.76
-2026-11-18,p5-6,316792,Jolteon ex,PRE,153,99.27,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,99.27,105.44,159.76
-2026-11-18,p5-6,316792,Jolteon ex,PRE,153,99.27,it_zero,Near Mint,20,cardtrader_zero_listings_min,daily_snapshot,99.27,105.44,159.76
 2026-10-01,p5-7,316783,Flareon ex,PRE,146,149.56,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p5-7,316783,Flareon ex,PRE,146,148.85,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p5-7,316783,Flareon ex,PRE,146,148.58,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -2548,8 +2488,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p5-7,316783,Flareon ex,PRE,146,90.54,it_zero,Near Mint,27,cardtrader_zero_listings_min,daily_snapshot,90.54,90.64,141.95
 2026-11-17,p5-7,316783,Flareon ex,PRE,146,90.54,it,Near Mint,34,cardtrader_listings_min,daily_snapshot,90.54,90.64,143.06
 2026-11-17,p5-7,316783,Flareon ex,PRE,146,90.54,it_zero,Near Mint,26,cardtrader_zero_listings_min,daily_snapshot,90.54,90.64,143.06
-2026-11-18,p5-7,316783,Flareon ex,PRE,146,90.54,it,Near Mint,33,cardtrader_listings_min,daily_snapshot,90.54,90.64,145.42
-2026-11-18,p5-7,316783,Flareon ex,PRE,146,90.54,it_zero,Near Mint,25,cardtrader_zero_listings_min,daily_snapshot,90.54,90.64,145.42
 2026-10-01,p5-8,316812,Eevee ex,PRE,167,121.47,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p5-8,316812,Eevee ex,PRE,167,121.4,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p5-8,316812,Eevee ex,PRE,167,121.11,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -2631,8 +2569,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p5-8,316812,Eevee ex,PRE,167,57.18,it_zero,Near Mint,31,cardtrader_zero_listings_min,daily_snapshot,57.18,70.64,89.05
 2026-11-17,p5-8,316812,Eevee ex,PRE,167,56.58,it,Near Mint,35,cardtrader_listings_min,daily_snapshot,56.58,70.64,89.02
 2026-11-17,p5-8,316812,Eevee ex,PRE,167,56.58,it_zero,Near Mint,31,cardtrader_zero_listings_min,daily_snapshot,56.58,70.64,89.02
-2026-11-18,p5-8,316812,Eevee ex,PRE,167,56.56,it,Near Mint,34,cardtrader_listings_min,daily_snapshot,56.56,70.64,88.42
-2026-11-18,p5-8,316812,Eevee ex,PRE,167,56.56,it_zero,Near Mint,30,cardtrader_zero_listings_min,daily_snapshot,56.56,70.64,88.42
 2026-10-01,p5-9,265325,Altaria ex,PAR,253,52.62,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p5-9,265325,Altaria ex,PAR,253,52.17,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p5-9,265325,Altaria ex,PAR,253,53.38,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -2712,8 +2648,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p5-9,265325,Altaria ex,PAR,253,52.36,it_zero,Near Mint,28,cardtrader_zero_listings_min,daily_snapshot,52.36,50.64,759.31
 2026-11-17,p5-9,265325,Altaria ex,PAR,253,50.64,it,Near Mint,39,cardtrader_listings_min,daily_snapshot,52.35,50.64,744.38
 2026-11-17,p5-9,265325,Altaria ex,PAR,253,52.35,it_zero,Near Mint,29,cardtrader_zero_listings_min,daily_snapshot,52.35,50.64,744.38
-2026-11-18,p5-9,265325,Altaria ex,PAR,253,50.64,it,Near Mint,38,cardtrader_listings_min,daily_snapshot,52.35,50.64,744.31
-2026-11-18,p5-9,265325,Altaria ex,PAR,253,52.35,it_zero,Near Mint,28,cardtrader_zero_listings_min,daily_snapshot,52.35,50.64,744.31
 2026-10-01,p6-1,261380,Zapdos ex,MEW,202,95.52,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p6-1,261380,Zapdos ex,MEW,202,94.22,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p6-1,261380,Zapdos ex,MEW,202,94.3,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -2795,8 +2729,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p6-1,261380,Zapdos ex,MEW,202,84.4,it_zero,Near Mint,22,cardtrader_zero_listings_min,daily_snapshot,84.4,84.5,375.81
 2026-11-17,p6-1,261380,Zapdos ex,MEW,202,84.39,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,84.4,84.39,375.94
 2026-11-17,p6-1,261380,Zapdos ex,MEW,202,84.4,it_zero,Near Mint,22,cardtrader_zero_listings_min,daily_snapshot,84.4,84.39,375.94
-2026-11-18,p6-1,261380,Zapdos ex,MEW,202,84.39,it,Near Mint,27,cardtrader_listings_min,daily_snapshot,84.53,84.39,391.87
-2026-11-18,p6-1,261380,Zapdos ex,MEW,202,84.53,it_zero,Near Mint,20,cardtrader_zero_listings_min,daily_snapshot,84.53,84.39,391.87
 2026-10-01,p6-2,261321,Pikachu,MEW,173,77.79,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p6-2,261321,Pikachu,MEW,173,76.41,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p6-2,261321,Pikachu,MEW,173,78.71,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -2877,8 +2809,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p6-2,261321,Pikachu,MEW,173,57.69,it_zero,Near Mint,21,cardtrader_zero_listings_min,daily_snapshot,57.69,45.58,389.0
 2026-11-17,p6-2,261321,Pikachu,MEW,173,57.68,it,Near Mint,30,cardtrader_listings_min,daily_snapshot,57.69,57.68,389.62
 2026-11-17,p6-2,261321,Pikachu,MEW,173,57.69,it_zero,Near Mint,21,cardtrader_zero_listings_min,daily_snapshot,57.69,57.68,389.62
-2026-11-18,p6-2,261321,Pikachu,MEW,173,57.64,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,57.69,57.64,398.0
-2026-11-18,p6-2,261321,Pikachu,MEW,173,57.69,it_zero,Near Mint,20,cardtrader_zero_listings_min,daily_snapshot,57.69,57.64,398.0
 2026-10-01,p6-3,255402,Charizard ex,OBF,223,74.78,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p6-3,255402,Charizard ex,OBF,223,73.43,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p6-3,255402,Charizard ex,OBF,223,75.37,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -2959,8 +2889,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p6-3,255402,Charizard ex,OBF,223,60.84,it_zero,Near Mint,29,cardtrader_zero_listings_min,daily_snapshot,60.84,70.31,517.43
 2026-11-17,p6-3,255402,Charizard ex,OBF,223,60.84,it,Near Mint,58,cardtrader_listings_min,daily_snapshot,60.84,65.6,517.36
 2026-11-17,p6-3,255402,Charizard ex,OBF,223,60.84,it_zero,Near Mint,29,cardtrader_zero_listings_min,daily_snapshot,60.84,65.6,517.36
-2026-11-18,p6-3,255402,Charizard ex,OBF,223,60.84,it,Near Mint,56,cardtrader_listings_min,daily_snapshot,60.84,65.6,549.39
-2026-11-18,p6-3,255402,Charizard ex,OBF,223,60.84,it_zero,Near Mint,27,cardtrader_zero_listings_min,daily_snapshot,60.84,65.6,549.39
 2026-10-01,p6-4,235179,Darkrai VSTAR,CRZ,GG50,98.15,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p6-4,235179,Darkrai VSTAR,CRZ,GG50,95.25,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p6-4,235179,Darkrai VSTAR,CRZ,GG50,95.72,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -3042,8 +2970,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p6-4,235179,Darkrai VSTAR,CRZ,GG50,75.64,it_zero,Near Mint,12,cardtrader_zero_listings_min,daily_snapshot,75.64,75.63,99.23
 2026-11-17,p6-4,235179,Darkrai VSTAR,CRZ,GG50,75.63,it,Near Mint,16,cardtrader_listings_min,daily_snapshot,75.64,75.63,98.6
 2026-11-17,p6-4,235179,Darkrai VSTAR,CRZ,GG50,75.64,it_zero,Near Mint,12,cardtrader_zero_listings_min,daily_snapshot,75.64,75.63,98.6
-2026-11-18,p6-4,235179,Darkrai VSTAR,CRZ,GG50,75.63,it,Near Mint,16,cardtrader_listings_min,daily_snapshot,75.64,75.63,98.6
-2026-11-18,p6-4,235179,Darkrai VSTAR,CRZ,GG50,75.64,it_zero,Near Mint,12,cardtrader_zero_listings_min,daily_snapshot,75.64,75.63,98.6
 2026-10-01,p6-5,265525,Groudon,PAR,199,86.05,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p6-5,265525,Groudon,PAR,199,85.17,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p6-5,265525,Groudon,PAR,199,83.89,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -3125,8 +3051,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p6-5,265525,Groudon,PAR,199,42.42,it_zero,Near Mint,19,cardtrader_zero_listings_min,daily_snapshot,42.42,48.64,785.72
 2026-11-17,p6-5,265525,Groudon,PAR,199,41.97,it,Near Mint,24,cardtrader_listings_min,daily_snapshot,41.97,48.64,823.81
 2026-11-17,p6-5,265525,Groudon,PAR,199,41.97,it_zero,Near Mint,17,cardtrader_zero_listings_min,daily_snapshot,41.97,48.64,823.81
-2026-11-18,p6-5,265525,Groudon,PAR,199,41.95,it,Near Mint,23,cardtrader_listings_min,daily_snapshot,41.95,48.64,844.15
-2026-11-18,p6-5,265525,Groudon,PAR,199,41.95,it_zero,Near Mint,16,cardtrader_zero_listings_min,daily_snapshot,41.95,48.64,844.15
 2026-10-01,p6-6,248874,Tyranitar,PAL,222,52.0,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p6-6,248874,Tyranitar,PAL,222,51.99,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p6-6,248874,Tyranitar,PAL,222,50.84,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -3208,8 +3132,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p6-6,248874,Tyranitar,PAL,222,18.07,it_zero,Near Mint,31,cardtrader_zero_listings_min,daily_snapshot,18.07,26.9,247.85
 2026-11-17,p6-6,248874,Tyranitar,PAL,222,18.07,it,Near Mint,40,cardtrader_listings_min,daily_snapshot,18.07,26.9,247.86
 2026-11-17,p6-6,248874,Tyranitar,PAL,222,18.07,it_zero,Near Mint,31,cardtrader_zero_listings_min,daily_snapshot,18.07,26.9,247.86
-2026-11-18,p6-6,248874,Tyranitar,PAL,222,18.07,it,Near Mint,38,cardtrader_listings_min,daily_snapshot,18.07,26.9,257.87
-2026-11-18,p6-6,248874,Tyranitar,PAL,222,18.07,it_zero,Near Mint,29,cardtrader_zero_listings_min,daily_snapshot,18.07,26.9,257.87
 2026-10-01,p6-7,158385,Galarian Slowking V,CRE,179,161.81,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p6-7,158385,Galarian Slowking V,CRE,179,163.61,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p6-7,158385,Galarian Slowking V,CRE,179,174.04,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -3291,8 +3213,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p6-7,158385,Galarian Slowking V,CRE,179,248.04,it_zero,Near Mint,2,cardtrader_zero_listings_min,daily_snapshot,248.04,200.64,232.43
 2026-11-17,p6-7,158385,Galarian Slowking V,CRE,179,200.64,it,Near Mint,3,cardtrader_listings_min,daily_snapshot,248.04,200.64,232.43
 2026-11-17,p6-7,158385,Galarian Slowking V,CRE,179,248.04,it_zero,Near Mint,2,cardtrader_zero_listings_min,daily_snapshot,248.04,200.64,232.43
-2026-11-18,p6-7,158385,Galarian Slowking V,CRE,179,200.64,it,Near Mint,3,cardtrader_listings_min,daily_snapshot,248.04,200.64,232.43
-2026-11-18,p6-7,158385,Galarian Slowking V,CRE,179,248.04,it_zero,Near Mint,2,cardtrader_zero_listings_min,daily_snapshot,248.04,200.64,232.43
 2026-10-01,p6-8,158383,Galarian Moltres V,CRE,177,226.42,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p6-8,158383,Galarian Moltres V,CRE,177,226.41,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p6-8,158383,Galarian Moltres V,CRE,177,226.41,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -3375,8 +3295,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p6-8,158383,Galarian Moltres V,CRE,177,529.64,it_zero,Near Mint,4,cardtrader_zero_listings_min,daily_snapshot,529.64,570.7,619.46
 2026-11-17,p6-8,158383,Galarian Moltres V,CRE,177,529.64,it,Near Mint,5,cardtrader_listings_min,daily_snapshot,529.64,570.7,619.46
 2026-11-17,p6-8,158383,Galarian Moltres V,CRE,177,529.64,it_zero,Near Mint,4,cardtrader_zero_listings_min,daily_snapshot,529.64,570.7,619.46
-2026-11-18,p6-8,158383,Galarian Moltres V,CRE,177,529.64,it,Near Mint,4,cardtrader_listings_min,daily_snapshot,529.64,570.7,631.8
-2026-11-18,p6-8,158383,Galarian Moltres V,CRE,177,529.64,it_zero,Near Mint,3,cardtrader_zero_listings_min,daily_snapshot,529.64,570.7,631.8
 2026-10-01,p6-9,166418,Espeon V,EVS,180,178.25,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p6-9,166418,Espeon V,EVS,180,178.25,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p6-9,166418,Espeon V,EVS,180,171.17,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -3458,8 +3376,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p6-9,166418,Espeon V,EVS,180,160.63,it_zero,Near Mint,4,cardtrader_zero_listings_min,daily_snapshot,160.63,230.54,195.78
 2026-11-17,p6-9,166418,Espeon V,EVS,180,160.63,it,Near Mint,5,cardtrader_listings_min,daily_snapshot,160.63,230.54,195.78
 2026-11-17,p6-9,166418,Espeon V,EVS,180,160.63,it_zero,Near Mint,4,cardtrader_zero_listings_min,daily_snapshot,160.63,230.54,195.78
-2026-11-18,p6-9,166418,Espeon V,EVS,180,160.63,it,Near Mint,5,cardtrader_listings_min,daily_snapshot,160.63,230.54,195.78
-2026-11-18,p6-9,166418,Espeon V,EVS,180,160.63,it_zero,Near Mint,4,cardtrader_zero_listings_min,daily_snapshot,160.63,230.54,195.78
 2026-10-01,p7-1,221482,Aerodactyl V,LORG,180,198.01,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p7-1,221482,Aerodactyl V,LORG,180,198.01,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p7-1,221482,Aerodactyl V,LORG,180,197.92,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -3541,8 +3457,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p7-1,221482,Aerodactyl V,LORG,180,140.54,it_zero,Near Mint,10,cardtrader_zero_listings_min,daily_snapshot,140.54,140.63,196.53
 2026-11-17,p7-1,221482,Aerodactyl V,LORG,180,140.63,it,Near Mint,13,cardtrader_listings_min,daily_snapshot,174.47,140.63,201.71
 2026-11-17,p7-1,221482,Aerodactyl V,LORG,180,174.47,it_zero,Near Mint,9,cardtrader_zero_listings_min,daily_snapshot,174.47,140.63,201.71
-2026-11-18,p7-1,221482,Aerodactyl V,LORG,180,140.63,it,Near Mint,13,cardtrader_listings_min,daily_snapshot,174.47,140.63,202.27
-2026-11-18,p7-1,221482,Aerodactyl V,LORG,180,174.47,it_zero,Near Mint,9,cardtrader_zero_listings_min,daily_snapshot,174.47,140.63,202.27
 2026-10-01,p7-2,359488,Mega Gengar ex,ASC,284,716.22,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p7-2,359488,Mega Gengar ex,ASC,284,709.7,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p7-2,359488,Mega Gengar ex,ASC,284,708.98,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -3624,8 +3538,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p7-2,359488,Mega Gengar ex,ASC,284,389.63,it_zero,Near Mint,24,cardtrader_zero_listings_min,daily_snapshot,389.63,390.14,733.36
 2026-11-17,p7-2,359488,Mega Gengar ex,ASC,284,389.63,it,Near Mint,35,cardtrader_listings_min,daily_snapshot,389.63,390.14,733.36
 2026-11-17,p7-2,359488,Mega Gengar ex,ASC,284,389.63,it_zero,Near Mint,24,cardtrader_zero_listings_min,daily_snapshot,389.63,390.14,733.36
-2026-11-18,p7-2,359488,Mega Gengar ex,ASC,284,387.64,it,Near Mint,35,cardtrader_listings_min,daily_snapshot,387.64,390.14,721.26
-2026-11-18,p7-2,359488,Mega Gengar ex,ASC,284,387.64,it_zero,Near Mint,24,cardtrader_zero_listings_min,daily_snapshot,387.64,390.14,721.26
 2026-10-01,p7-3,370918,Lillie's Clefairy ex,ASC,280,123.98,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p7-3,370918,Lillie's Clefairy ex,ASC,280,108.82,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p7-3,370918,Lillie's Clefairy ex,ASC,280,112.81,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -3706,8 +3618,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p7-3,370918,Lillie's Clefairy ex,ASC,280,48.05,it_zero,Near Mint,30,cardtrader_zero_listings_min,daily_snapshot,48.05,40.52,57.81
 2026-11-17,p7-3,370918,Lillie's Clefairy ex,ASC,280,40.52,it,Near Mint,40,cardtrader_listings_min,daily_snapshot,48.15,40.52,57.85
 2026-11-17,p7-3,370918,Lillie's Clefairy ex,ASC,280,48.15,it_zero,Near Mint,30,cardtrader_zero_listings_min,daily_snapshot,48.15,40.52,57.85
-2026-11-18,p7-3,370918,Lillie's Clefairy ex,ASC,280,40.52,it,Near Mint,37,cardtrader_listings_min,daily_snapshot,48.61,40.52,57.33
-2026-11-18,p7-3,370918,Lillie's Clefairy ex,ASC,280,48.61,it_zero,Near Mint,27,cardtrader_zero_listings_min,daily_snapshot,48.61,40.52,57.33
 2026-10-29,p7-4,418446,Mega Rayquaza ex,DLR,138,450.0,it,Near Mint,11,tcgnotify,daily_snapshot,,,478.95
 2026-10-30,p7-4,418446,Mega Rayquaza ex,DLR,138,450.0,it,Near Mint,13,tcgnotify,daily_snapshot,,,478.95
 2026-10-31,p7-4,418446,Mega Rayquaza ex,DLR,138,450.0,it,Near Mint,13,tcgnotify,daily_snapshot,,,478.95
@@ -3743,8 +3653,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p7-4,418446,Mega Rayquaza ex,DLR,138,340.64,it_zero,Near Mint,11,cardtrader_zero_listings_min,daily_snapshot,340.64,340.63,385.61
 2026-11-17,p7-4,418446,Mega Rayquaza ex,DLR,138,340.63,it,Near Mint,14,cardtrader_listings_min,daily_snapshot,340.64,340.63,372.26
 2026-11-17,p7-4,418446,Mega Rayquaza ex,DLR,138,340.64,it_zero,Near Mint,10,cardtrader_zero_listings_min,daily_snapshot,340.64,340.63,372.26
-2026-11-18,p7-4,418446,Mega Rayquaza ex,DLR,138,340.63,it,Near Mint,14,cardtrader_listings_min,daily_snapshot,340.64,340.63,370.83
-2026-11-18,p7-4,418446,Mega Rayquaza ex,DLR,138,340.64,it_zero,Near Mint,10,cardtrader_zero_listings_min,daily_snapshot,340.64,340.63,370.83
 2026-10-29,p7-5,421153,Raikou ex,DLR,136,149.9,it,Near Mint,8,tcgnotify,daily_snapshot,,,160.0
 2026-10-30,p7-5,421153,Raikou ex,DLR,136,100.0,it,Near Mint,9,tcgnotify,daily_snapshot,,,100.0
 2026-10-31,p7-5,421153,Raikou ex,DLR,136,100.0,it,Near Mint,9,tcgnotify,daily_snapshot,,,100.0
@@ -3780,8 +3688,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p7-5,421153,Raikou ex,DLR,136,78.14,it_zero,Near Mint,11,cardtrader_zero_listings_min,daily_snapshot,78.14,90.64,93.64
 2026-11-17,p7-5,421153,Raikou ex,DLR,136,78.64,it,Near Mint,12,cardtrader_listings_min,daily_snapshot,78.64,90.64,92.8
 2026-11-17,p7-5,421153,Raikou ex,DLR,136,78.64,it_zero,Near Mint,10,cardtrader_zero_listings_min,daily_snapshot,78.64,90.64,92.8
-2026-11-18,p7-5,421153,Raikou ex,DLR,136,80.43,it,Near Mint,13,cardtrader_listings_min,daily_snapshot,80.43,90.64,91.96
-2026-11-18,p7-5,421153,Raikou ex,DLR,136,80.43,it_zero,Near Mint,11,cardtrader_zero_listings_min,daily_snapshot,80.43,90.64,91.96
 2026-10-29,p7-6,421131,Eevee,DLR,114,19.95,it,Near Mint,12,tcgnotify,daily_snapshot,,,20.0
 2026-10-30,p7-6,421131,Eevee,DLR,114,13.0,it,Near Mint,15,tcgnotify,daily_snapshot,,,15.0
 2026-10-31,p7-6,421131,Eevee,DLR,114,15.0,it,Near Mint,16,tcgnotify,daily_snapshot,,,16.0
@@ -3816,8 +3722,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p7-6,421131,Eevee,DLR,114,12.2,it_zero,Near Mint,15,cardtrader_zero_listings_min,daily_snapshot,12.2,10.15,14.8
 2026-11-17,p7-6,421131,Eevee,DLR,114,10.15,it,Near Mint,25,cardtrader_listings_min,daily_snapshot,12.2,10.15,14.61
 2026-11-17,p7-6,421131,Eevee,DLR,114,12.2,it_zero,Near Mint,21,cardtrader_zero_listings_min,daily_snapshot,12.2,10.15,14.61
-2026-11-18,p7-6,421131,Eevee,DLR,114,10.15,it,Near Mint,25,cardtrader_listings_min,daily_snapshot,12.21,10.15,14.78
-2026-11-18,p7-6,421131,Eevee,DLR,114,12.21,it_zero,Near Mint,21,cardtrader_zero_listings_min,daily_snapshot,12.21,10.15,14.78
 2026-10-01,p7-7,370931,Mega Charizard Y ex,ASC,294,309.66,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p7-7,370931,Mega Charizard Y ex,ASC,294,309.27,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p7-7,370931,Mega Charizard Y ex,ASC,294,305.92,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -3897,8 +3801,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p7-7,370931,Mega Charizard Y ex,ASC,294,266.53,it_zero,Near Mint,25,cardtrader_zero_listings_min,daily_snapshot,266.53,263.64,318.81
 2026-11-17,p7-7,370931,Mega Charizard Y ex,ASC,294,266.53,it,Near Mint,33,cardtrader_listings_min,daily_snapshot,266.53,271.64,320.74
 2026-11-17,p7-7,370931,Mega Charizard Y ex,ASC,294,266.53,it_zero,Near Mint,24,cardtrader_zero_listings_min,daily_snapshot,266.53,271.64,320.74
-2026-11-18,p7-7,370931,Mega Charizard Y ex,ASC,294,266.53,it,Near Mint,31,cardtrader_listings_min,daily_snapshot,266.53,271.64,322.05
-2026-11-18,p7-7,370931,Mega Charizard Y ex,ASC,294,266.53,it_zero,Near Mint,22,cardtrader_zero_listings_min,daily_snapshot,266.53,271.64,322.05
 2026-10-01,p7-8,370932,Mega Dragonite ex,ASC,295,208.27,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p7-8,370932,Mega Dragonite ex,ASC,295,199.56,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p7-8,370932,Mega Dragonite ex,ASC,295,202.74,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -3980,8 +3882,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p7-8,370932,Mega Dragonite ex,ASC,295,109.22,it_zero,Near Mint,33,cardtrader_zero_listings_min,daily_snapshot,109.22,108.64,348.81
 2026-11-17,p7-8,370932,Mega Dragonite ex,ASC,295,109.22,it,Near Mint,45,cardtrader_listings_min,daily_snapshot,109.22,145.14,344.05
 2026-11-17,p7-8,370932,Mega Dragonite ex,ASC,295,109.22,it_zero,Near Mint,35,cardtrader_zero_listings_min,daily_snapshot,109.22,145.14,344.05
-2026-11-18,p7-8,370932,Mega Dragonite ex,ASC,295,108.65,it,Near Mint,44,cardtrader_listings_min,daily_snapshot,108.65,145.14,352.64
-2026-11-18,p7-8,370932,Mega Dragonite ex,ASC,295,108.65,it_zero,Near Mint,34,cardtrader_zero_listings_min,daily_snapshot,108.65,145.14,352.64
 2026-10-30,p7-9,421157,Mega Rayquaza ex,DLR,141,439.95,it,Near Mint,6,tcgnotify,daily_snapshot,,,450.0
 2026-10-31,p7-9,421157,Mega Rayquaza ex,DLR,141,434.95,it,Near Mint,7,tcgnotify,daily_snapshot,,,440.0
 2026-11-01,p7-9,421157,Mega Rayquaza ex,DLR,141,434.95,it,Near Mint,7,tcgnotify,daily_snapshot,,,440.0
@@ -4015,8 +3915,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p7-9,421157,Mega Rayquaza ex,DLR,141,209.64,it_zero,Near Mint,13,cardtrader_zero_listings_min,daily_snapshot,209.64,190.59,253.31
 2026-11-17,p7-9,421157,Mega Rayquaza ex,DLR,141,188.69,it,Near Mint,19,cardtrader_listings_min,daily_snapshot,209.53,188.69,248.9
 2026-11-17,p7-9,421157,Mega Rayquaza ex,DLR,141,209.53,it_zero,Near Mint,14,cardtrader_zero_listings_min,daily_snapshot,209.53,188.69,248.9
-2026-11-18,p7-9,421157,Mega Rayquaza ex,DLR,141,189.59,it,Near Mint,21,cardtrader_listings_min,daily_snapshot,209.51,189.59,248.37
-2026-11-18,p7-9,421157,Mega Rayquaza ex,DLR,141,209.51,it_zero,Near Mint,16,cardtrader_zero_listings_min,daily_snapshot,209.51,189.59,248.37
 2026-10-01,p8-1,351691,Mega Lucario ex,MEG,188,223.89,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p8-1,351691,Mega Lucario ex,MEG,188,222.76,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p8-1,351691,Mega Lucario ex,MEG,188,229.98,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -4099,8 +3997,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p8-1,351691,Mega Lucario ex,MEG,188,163.64,it_zero,Near Mint,19,cardtrader_zero_listings_min,daily_snapshot,163.64,164.64,205.98
 2026-11-17,p8-1,351691,Mega Lucario ex,MEG,188,163.64,it,Near Mint,26,cardtrader_listings_min,daily_snapshot,163.64,190.64,207.41
 2026-11-17,p8-1,351691,Mega Lucario ex,MEG,188,163.64,it_zero,Near Mint,19,cardtrader_zero_listings_min,daily_snapshot,163.64,190.64,207.41
-2026-11-18,p8-1,351691,Mega Lucario ex,MEG,188,163.64,it,Near Mint,25,cardtrader_listings_min,daily_snapshot,163.64,165.64,205.49
-2026-11-18,p8-1,351691,Mega Lucario ex,MEG,188,163.64,it_zero,Near Mint,19,cardtrader_zero_listings_min,daily_snapshot,163.64,165.64,205.49
 2026-10-01,p8-2,399466,Mega Darkrai ex,PBL,120,118.48,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p8-2,399466,Mega Darkrai ex,PBL,120,117.8,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p8-2,399466,Mega Darkrai ex,PBL,120,116.1,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -4181,8 +4077,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p8-2,399466,Mega Darkrai ex,PBL,120,105.52,it_zero,Near Mint,21,cardtrader_zero_listings_min,daily_snapshot,105.52,105.64,129.36
 2026-11-17,p8-2,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,28,cardtrader_listings_min,daily_snapshot,105.52,105.64,128.59
 2026-11-17,p8-2,399466,Mega Darkrai ex,PBL,120,105.52,it_zero,Near Mint,22,cardtrader_zero_listings_min,daily_snapshot,105.52,105.64,128.59
-2026-11-18,p8-2,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,28,cardtrader_listings_min,daily_snapshot,105.52,105.64,128.59
-2026-11-18,p8-2,399466,Mega Darkrai ex,PBL,120,105.52,it_zero,Near Mint,22,cardtrader_zero_listings_min,daily_snapshot,105.52,105.64,128.59
 2026-10-01,p8-3,390062,Mega Greninja ex,CRI,122,128.2,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p8-3,390062,Mega Greninja ex,CRI,122,121.02,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p8-3,390062,Mega Greninja ex,CRI,122,107.8,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -4264,8 +4158,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p8-3,390062,Mega Greninja ex,CRI,122,78.13,it_zero,Near Mint,26,cardtrader_zero_listings_min,daily_snapshot,78.13,115.64,116.48
 2026-11-17,p8-3,390062,Mega Greninja ex,CRI,122,76.64,it,Near Mint,32,cardtrader_listings_min,daily_snapshot,76.64,115.64,115.65
 2026-11-17,p8-3,390062,Mega Greninja ex,CRI,122,76.64,it_zero,Near Mint,27,cardtrader_zero_listings_min,daily_snapshot,76.64,115.64,115.65
-2026-11-18,p8-3,390062,Mega Greninja ex,CRI,122,78.13,it,Near Mint,30,cardtrader_listings_min,daily_snapshot,78.13,115.64,117.28
-2026-11-18,p8-3,390062,Mega Greninja ex,CRI,122,78.13,it_zero,Near Mint,25,cardtrader_zero_listings_min,daily_snapshot,78.13,115.64,117.28
 2026-10-01,p8-4,378969,Mega Zygarde ex,POR,124,89.33,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-02,p8-4,378969,Mega Zygarde ex,POR,124,88.49,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
 2026-10-03,p8-4,378969,Mega Zygarde ex,POR,124,87.98,all,all,,cardtrader_ct_market_graph_all_languages,backfill,,,
@@ -4347,8 +4239,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p8-4,378969,Mega Zygarde ex,POR,124,70.59,it_zero,Near Mint,21,cardtrader_zero_listings_min,daily_snapshot,70.59,67.64,99.23
 2026-11-17,p8-4,378969,Mega Zygarde ex,POR,124,67.64,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,70.59,67.64,98.87
 2026-11-17,p8-4,378969,Mega Zygarde ex,POR,124,70.59,it_zero,Near Mint,23,cardtrader_zero_listings_min,daily_snapshot,70.59,67.64,98.87
-2026-11-18,p8-4,378969,Mega Zygarde ex,POR,124,67.64,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,70.59,67.64,98.87
-2026-11-18,p8-4,378969,Mega Zygarde ex,POR,124,70.59,it_zero,Near Mint,23,cardtrader_zero_listings_min,daily_snapshot,70.59,67.64,98.87
 2026-10-15,p8-5,235166,Arceus VSTAR,CRZ,GG70,160.64,it,Near Mint,15,tcgnotify,daily_snapshot,,160.64,174.04
 2026-10-16,p8-5,235166,Arceus VSTAR,CRZ,GG70,160.64,it,Near Mint,16,tcgnotify,daily_snapshot,,160.64,174.24
 2026-10-17,p8-5,235166,Arceus VSTAR,CRZ,GG70,160.64,it,Near Mint,14,tcgnotify,daily_snapshot,,160.64,173.47
@@ -4387,8 +4277,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p8-5,235166,Arceus VSTAR,CRZ,GG70,180.54,it_zero,Near Mint,3,cardtrader_zero_listings_min,daily_snapshot,180.54,160.64,207.47
 2026-11-17,p8-5,235166,Arceus VSTAR,CRZ,GG70,160.64,it,Near Mint,7,cardtrader_listings_min,daily_snapshot,180.54,160.64,207.47
 2026-11-17,p8-5,235166,Arceus VSTAR,CRZ,GG70,180.54,it_zero,Near Mint,3,cardtrader_zero_listings_min,daily_snapshot,180.54,160.64,207.47
-2026-11-18,p8-5,235166,Arceus VSTAR,CRZ,GG70,160.64,it,Near Mint,7,cardtrader_listings_min,daily_snapshot,180.54,160.64,207.47
-2026-11-18,p8-5,235166,Arceus VSTAR,CRZ,GG70,180.54,it_zero,Near Mint,3,cardtrader_zero_listings_min,daily_snapshot,180.54,160.64,207.47
 2026-10-15,p8-6,235186,Deoxys VSTAR,CRZ,GG46,35.92,it,Near Mint,19,tcgnotify,daily_snapshot,,35.92,40.53
 2026-10-16,p8-6,235186,Deoxys VSTAR,CRZ,GG46,35.92,it,Near Mint,20,tcgnotify,daily_snapshot,,35.92,40.41
 2026-10-17,p8-6,235186,Deoxys VSTAR,CRZ,GG46,35.92,it,Near Mint,19,tcgnotify,daily_snapshot,,35.92,40.3
@@ -4427,8 +4315,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p8-6,235186,Deoxys VSTAR,CRZ,GG46,40.22,it_zero,Near Mint,9,cardtrader_zero_listings_min,daily_snapshot,40.22,39.8,44.34
 2026-11-17,p8-6,235186,Deoxys VSTAR,CRZ,GG46,40.21,it,Near Mint,12,cardtrader_listings_min,daily_snapshot,40.22,40.21,44.37
 2026-11-17,p8-6,235186,Deoxys VSTAR,CRZ,GG46,40.22,it_zero,Near Mint,9,cardtrader_zero_listings_min,daily_snapshot,40.22,40.21,44.37
-2026-11-18,p8-6,235186,Deoxys VSTAR,CRZ,GG46,40.13,it,Near Mint,12,cardtrader_listings_min,daily_snapshot,40.13,40.21,44.36
-2026-11-18,p8-6,235186,Deoxys VSTAR,CRZ,GG46,40.13,it_zero,Near Mint,9,cardtrader_zero_listings_min,daily_snapshot,40.13,40.21,44.36
 2026-10-15,p8-7,235189,Deoxys,CRZ,GG12,14.05,it,Near Mint,20,tcgnotify,daily_snapshot,,14.05,15.41
 2026-10-16,p8-7,235189,Deoxys,CRZ,GG12,14.05,it,Near Mint,21,tcgnotify,daily_snapshot,,14.05,15.14
 2026-10-17,p8-7,235189,Deoxys,CRZ,GG12,13.99,it,Near Mint,20,tcgnotify,daily_snapshot,,13.99,14.9
@@ -4467,8 +4353,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p8-7,235189,Deoxys,CRZ,GG12,15.77,it_zero,Near Mint,6,cardtrader_zero_listings_min,daily_snapshot,15.77,12.2,16.59
 2026-11-17,p8-7,235189,Deoxys,CRZ,GG12,12.2,it,Near Mint,14,cardtrader_listings_min,daily_snapshot,15.77,12.2,16.82
 2026-11-17,p8-7,235189,Deoxys,CRZ,GG12,15.77,it_zero,Near Mint,7,cardtrader_zero_listings_min,daily_snapshot,15.77,12.2,16.82
-2026-11-18,p8-7,235189,Deoxys,CRZ,GG12,12.2,it,Near Mint,13,cardtrader_listings_min,daily_snapshot,15.77,12.2,16.56
-2026-11-18,p8-7,235189,Deoxys,CRZ,GG12,15.77,it_zero,Near Mint,6,cardtrader_zero_listings_min,daily_snapshot,15.77,12.2,16.56
 2026-10-15,p8-9,235153,Origin Forme Dialga VSTAR,CRZ,GG68,97.64,it,Near Mint,19,tcgnotify,daily_snapshot,,97.64,104.82
 2026-10-16,p8-9,235153,Origin Forme Dialga VSTAR,CRZ,GG68,97.64,it,Near Mint,19,tcgnotify,daily_snapshot,,97.64,104.82
 2026-10-17,p8-9,235153,Origin Forme Dialga VSTAR,CRZ,GG68,70.62,it,Near Mint,24,tcgnotify,daily_snapshot,,70.62,70.62
@@ -4507,8 +4391,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p8-9,235153,Origin Forme Dialga VSTAR,CRZ,GG68,100.64,it_zero,Near Mint,7,cardtrader_zero_listings_min,daily_snapshot,100.64,97.64,784.62
 2026-11-17,p8-9,235153,Origin Forme Dialga VSTAR,CRZ,GG68,97.64,it,Near Mint,14,cardtrader_listings_min,daily_snapshot,110.53,97.64,833.48
 2026-11-17,p8-9,235153,Origin Forme Dialga VSTAR,CRZ,GG68,110.53,it_zero,Near Mint,6,cardtrader_zero_listings_min,daily_snapshot,110.53,97.64,833.48
-2026-11-18,p8-9,235153,Origin Forme Dialga VSTAR,CRZ,GG68,97.64,it,Near Mint,14,cardtrader_listings_min,daily_snapshot,115.63,97.64,785.96
-2026-11-18,p8-9,235153,Origin Forme Dialga VSTAR,CRZ,GG68,115.63,it_zero,Near Mint,6,cardtrader_zero_listings_min,daily_snapshot,115.63,97.64,785.96
 2026-10-15,p9-1,212736,Origin Forme Palkia V,ASR,167,77.64,it,Near Mint,17,tcgnotify,daily_snapshot,,77.64,84.83
 2026-10-16,p9-1,212736,Origin Forme Palkia V,ASR,167,77.64,it,Near Mint,17,tcgnotify,daily_snapshot,,77.64,84.83
 2026-10-17,p9-1,212736,Origin Forme Palkia V,ASR,167,77.64,it,Near Mint,20,tcgnotify,daily_snapshot,,77.64,84.51
@@ -4547,8 +4429,6 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p9-1,212736,Origin Forme Palkia V,ASR,167,78.61,it_zero,Near Mint,12,cardtrader_zero_listings_min,daily_snapshot,78.61,75.64,114.47
 2026-11-17,p9-1,212736,Origin Forme Palkia V,ASR,167,75.64,it,Near Mint,17,cardtrader_listings_min,daily_snapshot,78.61,75.64,114.47
 2026-11-17,p9-1,212736,Origin Forme Palkia V,ASR,167,78.61,it_zero,Near Mint,12,cardtrader_zero_listings_min,daily_snapshot,78.61,75.64,114.47
-2026-11-18,p9-1,212736,Origin Forme Palkia V,ASR,167,75.64,it,Near Mint,17,cardtrader_listings_min,daily_snapshot,78.61,75.64,114.47
-2026-11-18,p9-1,212736,Origin Forme Palkia V,ASR,167,78.61,it_zero,Near Mint,12,cardtrader_zero_listings_min,daily_snapshot,78.61,75.64,114.47
 2026-10-15,p9-2,235145,Origin Forme Palkia VSTAR,CRZ,GG67,100.64,it,Near Mint,16,tcgnotify,daily_snapshot,,100.64,107.3
 2026-10-16,p9-2,235145,Origin Forme Palkia VSTAR,CRZ,GG67,100.64,it,Near Mint,16,tcgnotify,daily_snapshot,,100.64,107.3
 2026-10-17,p9-2,235145,Origin Forme Palkia VSTAR,CRZ,GG67,100.63,it,Near Mint,16,tcgnotify,daily_snapshot,,100.63,107.3
@@ -4587,11 +4467,131 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-16,p9-2,235145,Origin Forme Palkia VSTAR,CRZ,GG67,108.99,it_zero,Near Mint,9,cardtrader_zero_listings_min,daily_snapshot,108.99,110.64,808.03
 2026-11-17,p9-2,235145,Origin Forme Palkia VSTAR,CRZ,GG67,108.99,it,Near Mint,15,cardtrader_listings_min,daily_snapshot,108.99,110.64,808.03
 2026-11-17,p9-2,235145,Origin Forme Palkia VSTAR,CRZ,GG67,108.99,it_zero,Near Mint,9,cardtrader_zero_listings_min,daily_snapshot,108.99,110.64,808.03
-2026-11-18,p9-2,235145,Origin Forme Palkia VSTAR,CRZ,GG67,108.99,it,Near Mint,16,cardtrader_listings_min,daily_snapshot,108.99,110.64,765.09
-2026-11-18,p9-2,235145,Origin Forme Palkia VSTAR,CRZ,GG67,108.99,it_zero,Near Mint,10,cardtrader_zero_listings_min,daily_snapshot,108.99,110.64,765.09
 2026-11-16,p9-9,153134,Charizard VMAX,SHF,SV107,130.64,it,Near Mint,15,cardtrader_listings_min,daily_snapshot,130.64,150.64,187.52
 2026-11-16,p9-9,153134,Charizard VMAX,SHF,SV107,130.64,it_zero,Near Mint,11,cardtrader_zero_listings_min,daily_snapshot,130.64,150.64,187.52
 2026-11-17,p9-9,153134,Charizard VMAX,SHF,SV107,130.64,it,Near Mint,15,cardtrader_listings_min,daily_snapshot,130.64,150.64,187.52
 2026-11-17,p9-9,153134,Charizard VMAX,SHF,SV107,130.64,it_zero,Near Mint,11,cardtrader_zero_listings_min,daily_snapshot,130.64,150.64,187.52
+2026-11-18,p1-1,166432,Rayquaza V,EVS,194,400.53,it,Near Mint,6,cardtrader_listings_min,daily_snapshot,400.53,500.64,612.93
+2026-11-18,p1-1,166432,Rayquaza V,EVS,194,400.53,it_zero,Near Mint,5,cardtrader_zero_listings_min,daily_snapshot,400.53,500.64,612.93
+2026-11-18,p1-2,154020,Tyranitar V,BST,155,300.64,it,Near Mint,5,cardtrader_listings_min,daily_snapshot,319.64,300.64,335.4
+2026-11-18,p1-2,154020,Tyranitar V,BST,155,319.64,it_zero,Near Mint,4,cardtrader_zero_listings_min,daily_snapshot,319.64,300.64,335.4
+2026-11-18,p1-3,166430,Dragonite V,EVS,192,549.99,it,Near Mint,11,cardtrader_listings_min,daily_snapshot,550.48,549.99,569.61
+2026-11-18,p1-3,166430,Dragonite V,EVS,192,550.48,it_zero,Near Mint,9,cardtrader_zero_listings_min,daily_snapshot,550.48,549.99,569.61
+2026-11-18,p1-4,221558,Giratina V,LORG,186,700.59,it,Near Mint,5,cardtrader_listings_min,daily_snapshot,700.59,,752.65
+2026-11-18,p1-4,221558,Giratina V,LORG,186,700.59,it_zero,Near Mint,5,cardtrader_zero_listings_min,daily_snapshot,700.59,,752.65
+2026-11-18,p1-5,200493,Gengar VMAX,FST,271,900.64,it,Near Mint,6,cardtrader_listings_min,daily_snapshot,900.64,,1408.85
+2026-11-18,p1-5,200493,Gengar VMAX,FST,271,900.64,it_zero,Near Mint,6,cardtrader_zero_listings_min,daily_snapshot,900.64,,1408.85
+2026-11-18,p1-6,166450,Sylveon VMAX,EVS,212,450.64,it,Near Mint,7,cardtrader_listings_min,daily_snapshot,470.64,450.64,534.76
+2026-11-18,p1-6,166450,Sylveon VMAX,EVS,212,470.64,it_zero,Near Mint,5,cardtrader_zero_listings_min,daily_snapshot,470.64,450.64,534.76
+2026-11-18,p1-7,166427,Umbreon V,EVS,189,644.38,it,Near Mint,1,cardtrader_listings_min,daily_snapshot,644.38,,644.38
+2026-11-18,p1-7,166427,Umbreon V,EVS,189,644.38,it_zero,Near Mint,1,cardtrader_zero_listings_min,daily_snapshot,644.38,,644.38
+2026-11-18,p1-8,235164,Leafeon VSTAR,CRZ,GG35,45.63,it,Near Mint,25,cardtrader_listings_min,daily_snapshot,45.63,58.69,72.41
+2026-11-18,p1-8,235164,Leafeon VSTAR,CRZ,GG35,45.63,it_zero,Near Mint,18,cardtrader_zero_listings_min,daily_snapshot,45.63,58.69,72.41
+2026-11-18,p1-9,235190,Deoxys VMAX,CRZ,GG45,25.18,it,Near Mint,14,cardtrader_listings_min,daily_snapshot,25.19,25.18,32.6
+2026-11-18,p1-9,235190,Deoxys VMAX,CRZ,GG45,25.19,it_zero,Near Mint,8,cardtrader_zero_listings_min,daily_snapshot,25.19,25.18,32.6
+2026-11-18,p2-1,227867,Rayquaza VMAX,SIT,TG20,90.61,it,Near Mint,12,cardtrader_listings_min,daily_snapshot,90.61,101.26,119.42
+2026-11-18,p2-1,227867,Rayquaza VMAX,SIT,TG20,90.61,it_zero,Near Mint,9,cardtrader_zero_listings_min,daily_snapshot,90.61,101.26,119.42
+2026-11-18,p2-2,221650,Pikachu V,LORG,TG16,85.64,it,Near Mint,20,cardtrader_listings_min,daily_snapshot,86.43,85.64,102.06
+2026-11-18,p2-2,221650,Pikachu V,LORG,TG16,86.43,it_zero,Near Mint,16,cardtrader_zero_listings_min,daily_snapshot,86.43,85.64,102.06
+2026-11-18,p2-3,221651,Pikachu VMAX,LORG,TG17,64.64,it,Near Mint,17,cardtrader_listings_min,daily_snapshot,65.14,64.64,93.94
+2026-11-18,p2-3,221651,Pikachu VMAX,LORG,TG17,65.14,it_zero,Near Mint,14,cardtrader_zero_listings_min,daily_snapshot,65.14,64.64,93.94
+2026-11-18,p2-4,206475,Arceus V,BRS,166,38.52,it,Near Mint,17,cardtrader_listings_min,daily_snapshot,38.52,38.52,51.72
+2026-11-18,p2-4,206475,Arceus V,BRS,166,38.52,it_zero,Near Mint,12,cardtrader_zero_listings_min,daily_snapshot,38.52,38.52,51.72
+2026-11-18,p2-5,206453,Umbreon V,BRS,TG22,34.52,it,Near Mint,39,cardtrader_listings_min,daily_snapshot,35.52,34.52,54.73
+2026-11-18,p2-5,206453,Umbreon V,BRS,TG22,35.52,it_zero,Near Mint,28,cardtrader_zero_listings_min,daily_snapshot,35.52,34.52,54.73
+2026-11-18,p2-6,206580,Mimikyu V,BRS,TG16,24.9,it,Near Mint,23,cardtrader_listings_min,daily_snapshot,24.9,25.4,35.54
+2026-11-18,p2-6,206580,Mimikyu V,BRS,TG16,24.9,it_zero,Near Mint,17,cardtrader_zero_listings_min,daily_snapshot,24.9,25.4,35.54
+2026-11-18,p2-7,206626,Sylveon VMAX,BRS,TG15,21.88,it,Near Mint,24,cardtrader_listings_min,daily_snapshot,21.88,30.4,36.33
+2026-11-18,p2-7,206626,Sylveon VMAX,BRS,TG15,21.88,it_zero,Near Mint,18,cardtrader_zero_listings_min,daily_snapshot,21.88,30.4,36.33
+2026-11-18,p2-8,206627,Sylveon V,BRS,TG14,20.27,it,Near Mint,19,cardtrader_listings_min,daily_snapshot,24.33,20.27,31.21
+2026-11-18,p2-8,206627,Sylveon V,BRS,TG14,24.33,it_zero,Near Mint,16,cardtrader_zero_listings_min,daily_snapshot,24.33,20.27,31.21
+2026-11-18,p2-9,200745,Mew V,FST,251,80.64,it,Near Mint,11,cardtrader_listings_min,daily_snapshot,100.63,80.64,146.43
+2026-11-18,p2-9,200745,Mew V,FST,251,100.63,it_zero,Near Mint,7,cardtrader_zero_listings_min,daily_snapshot,100.63,80.64,146.43
+2026-11-18,p3-1,200739,Celebi V,FST,245,70.64,it,Near Mint,14,cardtrader_listings_min,daily_snapshot,86.32,70.64,94.26
+2026-11-18,p3-1,200739,Celebi V,FST,245,86.32,it_zero,Near Mint,10,cardtrader_zero_listings_min,daily_snapshot,86.32,70.64,94.26
+2026-11-18,p3-2,166422,Sylveon V,EVS,184,105.64,it,Near Mint,9,cardtrader_listings_min,daily_snapshot,105.64,105.64,122.28
+2026-11-18,p3-2,166422,Sylveon V,EVS,184,105.64,it_zero,Near Mint,7,cardtrader_zero_listings_min,daily_snapshot,105.64,105.64,122.28
+2026-11-18,p3-3,166405,Leafeon V,EVS,167,100.64,it,Near Mint,15,cardtrader_listings_min,daily_snapshot,100.64,115.64,135.97
+2026-11-18,p3-3,166405,Leafeon V,EVS,167,100.64,it_zero,Near Mint,12,cardtrader_zero_listings_min,daily_snapshot,100.64,115.64,135.97
+2026-11-18,p3-4,166313,Sylveon VMAX,EVS,075,8.06,it,Near Mint,5,cardtrader_listings_min,daily_snapshot,11.28,8.06,11.38
+2026-11-18,p3-4,166313,Sylveon VMAX,EVS,075,11.28,it_zero,Near Mint,3,cardtrader_zero_listings_min,daily_snapshot,11.28,8.06,11.38
+2026-11-18,p4-7,370914,Pikachu ex,ASC,277,148.63,it,Near Mint,18,cardtrader_listings_min,daily_snapshot,148.63,241.28,182.05
+2026-11-18,p4-7,370914,Pikachu ex,ASC,277,148.63,it_zero,Near Mint,15,cardtrader_zero_listings_min,daily_snapshot,148.63,241.28,182.05
+2026-11-18,p4-8,347566,Mega Lucario ex,MEG,179,94.45,it,Near Mint,51,cardtrader_listings_min,daily_snapshot,94.45,95.7,129.93
+2026-11-18,p4-8,347566,Mega Lucario ex,MEG,179,94.45,it_zero,Near Mint,39,cardtrader_zero_listings_min,daily_snapshot,94.45,95.7,129.93
+2026-11-18,p4-9,341099,Zekrom ex,BLK,166,169.43,it,Near Mint,27,cardtrader_listings_min,daily_snapshot,169.44,169.43,199.31
+2026-11-18,p4-9,341099,Zekrom ex,BLK,166,169.44,it_zero,Near Mint,19,cardtrader_zero_listings_min,daily_snapshot,169.44,169.43,199.31
+2026-11-18,p5-2,341102,Kyurem ex,BLK,165,43.14,it,Near Mint,32,cardtrader_listings_min,daily_snapshot,43.14,48.64,59.75
+2026-11-18,p5-2,341102,Kyurem ex,BLK,165,43.14,it_zero,Near Mint,25,cardtrader_zero_listings_min,daily_snapshot,43.14,48.64,59.75
+2026-11-18,p5-3,316779,Leafeon ex,PRE,144,119.52,it,Near Mint,25,cardtrader_listings_min,daily_snapshot,119.52,140.64,182.24
+2026-11-18,p5-3,316779,Leafeon ex,PRE,144,119.52,it_zero,Near Mint,18,cardtrader_zero_listings_min,daily_snapshot,119.52,140.64,182.24
+2026-11-18,p5-4,316788,Glaceon ex,PRE,150,99.02,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,99.02,130.64,148.43
+2026-11-18,p5-4,316788,Glaceon ex,PRE,150,99.02,it_zero,Near Mint,26,cardtrader_zero_listings_min,daily_snapshot,99.02,130.64,148.43
+2026-11-18,p5-5,315076,Espeon ex,PRE,155,114.14,it,Near Mint,28,cardtrader_listings_min,daily_snapshot,114.14,130.64,229.99
+2026-11-18,p5-5,315076,Espeon ex,PRE,155,114.14,it_zero,Near Mint,18,cardtrader_zero_listings_min,daily_snapshot,114.14,130.64,229.99
+2026-11-18,p5-6,316792,Jolteon ex,PRE,153,99.27,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,99.27,105.44,159.76
+2026-11-18,p5-6,316792,Jolteon ex,PRE,153,99.27,it_zero,Near Mint,20,cardtrader_zero_listings_min,daily_snapshot,99.27,105.44,159.76
+2026-11-18,p5-7,316783,Flareon ex,PRE,146,90.54,it,Near Mint,33,cardtrader_listings_min,daily_snapshot,90.54,90.64,145.42
+2026-11-18,p5-7,316783,Flareon ex,PRE,146,90.54,it_zero,Near Mint,25,cardtrader_zero_listings_min,daily_snapshot,90.54,90.64,145.42
+2026-11-18,p5-8,316812,Eevee ex,PRE,167,56.56,it,Near Mint,34,cardtrader_listings_min,daily_snapshot,56.56,70.64,88.42
+2026-11-18,p5-8,316812,Eevee ex,PRE,167,56.56,it_zero,Near Mint,30,cardtrader_zero_listings_min,daily_snapshot,56.56,70.64,88.42
+2026-11-18,p5-9,265325,Altaria ex,PAR,253,50.64,it,Near Mint,35,cardtrader_listings_min,daily_snapshot,52.35,50.64,69.3
+2026-11-18,p5-9,265325,Altaria ex,PAR,253,52.35,it_zero,Near Mint,28,cardtrader_zero_listings_min,daily_snapshot,52.35,50.64,69.3
+2026-11-18,p6-1,261380,Zapdos ex,MEW,202,84.39,it,Near Mint,26,cardtrader_listings_min,daily_snapshot,84.53,84.39,109.26
+2026-11-18,p6-1,261380,Zapdos ex,MEW,202,84.53,it_zero,Near Mint,20,cardtrader_zero_listings_min,daily_snapshot,84.53,84.39,109.26
+2026-11-18,p6-2,261321,Pikachu,MEW,173,57.64,it,Near Mint,28,cardtrader_listings_min,daily_snapshot,57.69,57.64,145.3
+2026-11-18,p6-2,261321,Pikachu,MEW,173,57.69,it_zero,Near Mint,20,cardtrader_zero_listings_min,daily_snapshot,57.69,57.64,145.3
+2026-11-18,p6-3,255402,Charizard ex,OBF,223,60.84,it,Near Mint,53,cardtrader_listings_min,daily_snapshot,60.84,65.6,126.2
+2026-11-18,p6-3,255402,Charizard ex,OBF,223,60.84,it_zero,Near Mint,27,cardtrader_zero_listings_min,daily_snapshot,60.84,65.6,126.2
+2026-11-18,p6-4,235179,Darkrai VSTAR,CRZ,GG50,75.63,it,Near Mint,16,cardtrader_listings_min,daily_snapshot,75.64,75.63,98.6
+2026-11-18,p6-4,235179,Darkrai VSTAR,CRZ,GG50,75.64,it_zero,Near Mint,12,cardtrader_zero_listings_min,daily_snapshot,75.64,75.63,98.6
+2026-11-18,p6-5,265525,Groudon,PAR,199,41.95,it,Near Mint,21,cardtrader_listings_min,daily_snapshot,41.95,48.64,59.3
+2026-11-18,p6-5,265525,Groudon,PAR,199,41.95,it_zero,Near Mint,16,cardtrader_zero_listings_min,daily_snapshot,41.95,48.64,59.3
+2026-11-18,p6-6,248874,Tyranitar,PAL,222,18.07,it,Near Mint,37,cardtrader_listings_min,daily_snapshot,18.07,26.9,31.29
+2026-11-18,p6-6,248874,Tyranitar,PAL,222,18.07,it_zero,Near Mint,29,cardtrader_zero_listings_min,daily_snapshot,18.07,26.9,31.29
+2026-11-18,p6-7,158385,Galarian Slowking V,CRE,179,200.64,it,Near Mint,3,cardtrader_listings_min,daily_snapshot,248.04,200.64,232.43
+2026-11-18,p6-7,158385,Galarian Slowking V,CRE,179,248.04,it_zero,Near Mint,2,cardtrader_zero_listings_min,daily_snapshot,248.04,200.64,232.43
+2026-11-18,p6-8,158383,Galarian Moltres V,CRE,177,529.64,it,Near Mint,4,cardtrader_listings_min,daily_snapshot,529.64,570.7,631.8
+2026-11-18,p6-8,158383,Galarian Moltres V,CRE,177,529.64,it_zero,Near Mint,3,cardtrader_zero_listings_min,daily_snapshot,529.64,570.7,631.8
+2026-11-18,p6-9,166418,Espeon V,EVS,180,160.63,it,Near Mint,5,cardtrader_listings_min,daily_snapshot,160.63,230.54,195.78
+2026-11-18,p6-9,166418,Espeon V,EVS,180,160.63,it_zero,Near Mint,4,cardtrader_zero_listings_min,daily_snapshot,160.63,230.54,195.78
+2026-11-18,p7-1,221482,Aerodactyl V,LORG,180,140.63,it,Near Mint,13,cardtrader_listings_min,daily_snapshot,174.47,140.63,202.27
+2026-11-18,p7-1,221482,Aerodactyl V,LORG,180,174.47,it_zero,Near Mint,9,cardtrader_zero_listings_min,daily_snapshot,174.47,140.63,202.27
+2026-11-18,p7-2,359488,Mega Gengar ex,ASC,284,387.64,it,Near Mint,34,cardtrader_listings_min,daily_snapshot,387.64,390.14,489.27
+2026-11-18,p7-2,359488,Mega Gengar ex,ASC,284,387.64,it_zero,Near Mint,24,cardtrader_zero_listings_min,daily_snapshot,387.64,390.14,489.27
+2026-11-18,p7-3,370918,Lillie's Clefairy ex,ASC,280,40.52,it,Near Mint,37,cardtrader_listings_min,daily_snapshot,48.61,40.52,57.33
+2026-11-18,p7-3,370918,Lillie's Clefairy ex,ASC,280,48.61,it_zero,Near Mint,27,cardtrader_zero_listings_min,daily_snapshot,48.61,40.52,57.33
+2026-11-18,p7-4,418446,Mega Rayquaza ex,DLR,138,340.63,it,Near Mint,14,cardtrader_listings_min,daily_snapshot,340.64,340.63,370.83
+2026-11-18,p7-4,418446,Mega Rayquaza ex,DLR,138,340.64,it_zero,Near Mint,10,cardtrader_zero_listings_min,daily_snapshot,340.64,340.63,370.83
+2026-11-18,p7-5,421153,Raikou ex,DLR,136,80.43,it,Near Mint,13,cardtrader_listings_min,daily_snapshot,80.43,90.64,91.96
+2026-11-18,p7-5,421153,Raikou ex,DLR,136,80.43,it_zero,Near Mint,11,cardtrader_zero_listings_min,daily_snapshot,80.43,90.64,91.96
+2026-11-18,p7-6,421131,Eevee,DLR,114,10.15,it,Near Mint,25,cardtrader_listings_min,daily_snapshot,12.21,10.15,14.78
+2026-11-18,p7-6,421131,Eevee,DLR,114,12.21,it_zero,Near Mint,21,cardtrader_zero_listings_min,daily_snapshot,12.21,10.15,14.78
+2026-11-18,p7-7,370931,Mega Charizard Y ex,ASC,294,266.53,it,Near Mint,31,cardtrader_listings_min,daily_snapshot,266.53,271.64,322.05
+2026-11-18,p7-7,370931,Mega Charizard Y ex,ASC,294,266.53,it_zero,Near Mint,22,cardtrader_zero_listings_min,daily_snapshot,266.53,271.64,322.05
+2026-11-18,p7-8,370932,Mega Dragonite ex,ASC,295,108.65,it,Near Mint,43,cardtrader_listings_min,daily_snapshot,108.65,145.14,147.35
+2026-11-18,p7-8,370932,Mega Dragonite ex,ASC,295,108.65,it_zero,Near Mint,33,cardtrader_zero_listings_min,daily_snapshot,108.65,145.14,147.35
+2026-11-18,p7-9,421157,Mega Rayquaza ex,DLR,141,189.59,it,Near Mint,21,cardtrader_listings_min,daily_snapshot,209.51,189.59,248.37
+2026-11-18,p7-9,421157,Mega Rayquaza ex,DLR,141,209.51,it_zero,Near Mint,16,cardtrader_zero_listings_min,daily_snapshot,209.51,189.59,248.37
+2026-11-18,p8-1,351691,Mega Lucario ex,MEG,188,163.64,it,Near Mint,25,cardtrader_listings_min,daily_snapshot,163.64,165.64,205.49
+2026-11-18,p8-1,351691,Mega Lucario ex,MEG,188,163.64,it_zero,Near Mint,19,cardtrader_zero_listings_min,daily_snapshot,163.64,165.64,205.49
+2026-11-18,p8-2,399466,Mega Darkrai ex,PBL,120,105.52,it,Near Mint,28,cardtrader_listings_min,daily_snapshot,105.52,105.64,128.59
+2026-11-18,p8-2,399466,Mega Darkrai ex,PBL,120,105.52,it_zero,Near Mint,22,cardtrader_zero_listings_min,daily_snapshot,105.52,105.64,128.59
+2026-11-18,p8-3,390062,Mega Greninja ex,CRI,122,78.13,it,Near Mint,30,cardtrader_listings_min,daily_snapshot,78.13,115.64,117.28
+2026-11-18,p8-3,390062,Mega Greninja ex,CRI,122,78.13,it_zero,Near Mint,25,cardtrader_zero_listings_min,daily_snapshot,78.13,115.64,117.28
+2026-11-18,p8-4,378969,Mega Zygarde ex,POR,124,67.64,it,Near Mint,29,cardtrader_listings_min,daily_snapshot,70.59,67.64,98.87
+2026-11-18,p8-4,378969,Mega Zygarde ex,POR,124,70.59,it_zero,Near Mint,23,cardtrader_zero_listings_min,daily_snapshot,70.59,67.64,98.87
+2026-11-18,p8-5,235166,Arceus VSTAR,CRZ,GG70,160.64,it,Near Mint,7,cardtrader_listings_min,daily_snapshot,180.54,160.64,207.47
+2026-11-18,p8-5,235166,Arceus VSTAR,CRZ,GG70,180.54,it_zero,Near Mint,3,cardtrader_zero_listings_min,daily_snapshot,180.54,160.64,207.47
+2026-11-18,p8-6,235186,Deoxys VSTAR,CRZ,GG46,40.13,it,Near Mint,12,cardtrader_listings_min,daily_snapshot,40.13,40.21,44.36
+2026-11-18,p8-6,235186,Deoxys VSTAR,CRZ,GG46,40.13,it_zero,Near Mint,9,cardtrader_zero_listings_min,daily_snapshot,40.13,40.21,44.36
+2026-11-18,p8-7,235189,Deoxys,CRZ,GG12,12.2,it,Near Mint,13,cardtrader_listings_min,daily_snapshot,15.77,12.2,16.56
+2026-11-18,p8-7,235189,Deoxys,CRZ,GG12,15.77,it_zero,Near Mint,6,cardtrader_zero_listings_min,daily_snapshot,15.77,12.2,16.56
+2026-11-18,p8-9,235153,Origin Forme Dialga VSTAR,CRZ,GG68,97.64,it,Near Mint,13,cardtrader_listings_min,daily_snapshot,115.63,97.64,127.77
+2026-11-18,p8-9,235153,Origin Forme Dialga VSTAR,CRZ,GG68,115.63,it_zero,Near Mint,6,cardtrader_zero_listings_min,daily_snapshot,115.63,97.64,127.77
+2026-11-18,p9-1,212736,Origin Forme Palkia V,ASR,167,75.64,it,Near Mint,17,cardtrader_listings_min,daily_snapshot,78.61,75.64,114.47
+2026-11-18,p9-1,212736,Origin Forme Palkia V,ASR,167,78.61,it_zero,Near Mint,12,cardtrader_zero_listings_min,daily_snapshot,78.61,75.64,114.47
+2026-11-18,p9-2,235145,Origin Forme Palkia VSTAR,CRZ,GG67,108.99,it,Near Mint,15,cardtrader_listings_min,daily_snapshot,108.99,110.64,149.39
+2026-11-18,p9-2,235145,Origin Forme Palkia VSTAR,CRZ,GG67,108.99,it_zero,Near Mint,10,cardtrader_zero_listings_min,daily_snapshot,108.99,110.64,149.39
 2026-11-18,p9-9,153134,Charizard VMAX,SHF,SV107,150.02,it,Near Mint,14,cardtrader_listings_min,daily_snapshot,150.02,150.64,191.08
 2026-11-18,p9-9,153134,Charizard VMAX,SHF,SV107,150.02,it_zero,Near Mint,10,cardtrader_zero_listings_min,daily_snapshot,150.02,150.64,191.08

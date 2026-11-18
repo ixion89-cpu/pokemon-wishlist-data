@@ -1,19 +1,19 @@
 {
- "generated_at": "2026-11-18T16:56:13+01:00",
+ "generated_at": "2026-11-18T20:07:52+01:00",
  "currency": "EUR",
- "price_definition": "price_final_eur è un solo prezzo Near Mint in lingua target (ITA, JP solo per Togepi), non gradato, spedizione esclusa. Il prezzo è price.cents/100, già con la fee di CardTrader. Default: minimo Zero (price_ctz_eur). Si usa il minimo CardTrader normale (price_ct_eur) se non c'è nessuno Zero, oppure se lo Zero costa più del 20% del normale (price_ctz_eur > price_ct_eur * 1.20). Se mancano entrambi, si usa price_cm_eur da Cardmarket. price_final_source vale ctz, ct o cm. buy_price_eur è uguale a price_final_eur.",
+ "price_definition": "price_final_eur è un solo prezzo Near Mint in lingua target (ITA, JP solo per Togepi), non gradato, spedizione esclusa. Il prezzo è price.cents/100, già con la fee di CardTrader. Default: minimo Zero (price_ctz_eur). Si usa il minimo CardTrader normale (price_ct_eur) se non c'è nessuno Zero, oppure se lo Zero costa più del 20% del normale (price_ctz_eur > price_ct_eur * 1.20). Se mancano entrambi, si usa price_cm_eur da Cardmarket. price_final_source vale ctz, ct o cm. buy_price_eur è uguale a price_final_eur. Se non c'è un Near Mint non gradato (Zero, poi CardTrader, poi Cardmarket), si usa la condizione migliore tra SP, MP, PL e PO: il minimo CardTrader di quella condizione, altrimenti niente. price_condition vale NM, SP, MP, PL o PO. Un annuncio gradato si ignora. Un annuncio che costa più di 10 volte il successivo, o almeno 10.000 € quando ne esiste uno più basso, si ignora.",
  "summary": {
   "cards": 22,
   "priced": 22,
-  "total_eur": 7640.95,
-  "zero_priced": 13,
-  "zero_total_eur": 13675.19,
-  "ctz_priced": 13,
-  "total_ctz_eur": 13675.19,
+  "total_eur": 7656.89,
+  "zero_priced": 12,
+  "zero_total_eur": 3673.55,
+  "ctz_priced": 12,
+  "total_ctz_eur": 3673.55,
   "ct_priced": 11,
-  "total_ct_eur": 2812.33,
+  "total_ct_eur": 2828.27,
   "avg_priced": 15,
-  "total_avg_eur": 14254.61,
+  "total_avg_eur": 4880.05,
   "final_ctz": 7,
   "final_ct": 8,
   "final_cm": 7,
@@ -61,11 +61,11 @@
    "listings_ctz": 0,
    "qty_ctz": 0,
    "price_ct_eur": 1100.64,
-   "listings_ct": 2,
-   "qty_ct": 2,
-   "price_avg_eur": 5550.64,
-   "listings_nm": 2,
-   "qty_nm": 2,
+   "listings_ct": 1,
+   "qty_ct": 1,
+   "price_avg_eur": 1100.64,
+   "listings_nm": 1,
+   "qty_nm": 1,
    "price_cm_eur": 1299,
    "price_cm_avg_eur": 1450,
    "copies_cm": 14,
@@ -77,8 +77,9 @@
    "buy_price_eur": 1100.64,
    "buy_price_source": "ct",
    "tier": "C: >150€",
-   "last_updated": "2026-11-18T16:56:13+01:00",
-   "rank_by_price": 1
+   "last_updated": "2026-11-18T20:07:52+01:00",
+   "rank_by_price": 1,
+   "price_condition": "NM"
   },
   {
    "id": "p8-8",
@@ -134,8 +135,9 @@
    "buy_price_eur": 800,
    "buy_price_source": "cm",
    "tier": "C: >150€",
-   "last_updated": "2026-11-18T16:56:13+01:00",
-   "rank_by_price": 2
+   "last_updated": "2026-11-18T20:07:52+01:00",
+   "rank_by_price": 2,
+   "price_condition": "NM"
   },
   {
    "id": "p10-2",
@@ -191,8 +193,9 @@
    "buy_price_eur": 790,
    "buy_price_source": "cm",
    "tier": "C: >150€",
-   "last_updated": "2026-11-18T16:56:13+01:00",
-   "rank_by_price": 3
+   "last_updated": "2026-11-18T20:07:52+01:00",
+   "rank_by_price": 3,
+   "price_condition": "NM"
   },
   {
    "id": "p4-3",
@@ -256,8 +259,9 @@
    "buy_price_eur": 700.64,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-18T16:56:13+01:00",
-   "rank_by_price": 4
+   "last_updated": "2026-11-18T20:07:52+01:00",
+   "rank_by_price": 4,
+   "price_condition": "NM"
   },
   {
    "id": "p4-2",
@@ -321,8 +325,9 @@
    "buy_price_eur": 550.64,
    "buy_price_source": "ct",
    "tier": "C: >150€",
-   "last_updated": "2026-11-18T16:56:13+01:00",
-   "rank_by_price": 5
+   "last_updated": "2026-11-18T20:07:52+01:00",
+   "rank_by_price": 5,
+   "price_condition": "NM"
   },
   {
    "id": "p10-3",
@@ -378,8 +383,9 @@
    "buy_price_eur": 500,
    "buy_price_source": "cm",
    "tier": "C: >150€",
-   "last_updated": "2026-11-18T16:56:13+01:00",
-   "rank_by_price": 6
+   "last_updated": "2026-11-18T20:07:52+01:00",
+   "rank_by_price": 6,
+   "price_condition": "NM"
   },
   {
    "id": "p4-6",
@@ -443,8 +449,9 @@
    "buy_price_eur": 450.62,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-18T16:56:13+01:00",
-   "rank_by_price": 7
+   "last_updated": "2026-11-18T20:07:52+01:00",
+   "rank_by_price": 7,
+   "price_condition": "NM"
   },
   {
    "id": "p9-4",
@@ -499,8 +506,9 @@
    "buy_price_eur": 439.65,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-18T16:56:13+01:00",
-   "rank_by_price": 8
+   "last_updated": "2026-11-18T20:07:52+01:00",
+   "rank_by_price": 8,
+   "price_condition": "NM"
   },
   {
    "id": "p10-1",
@@ -556,8 +564,9 @@
    "buy_price_eur": 375,
    "buy_price_source": "cm",
    "tier": "C: >150€",
-   "last_updated": "2026-11-18T16:56:13+01:00",
-   "rank_by_price": 9
+   "last_updated": "2026-11-18T20:07:52+01:00",
+   "rank_by_price": 9,
+   "price_condition": "NM"
   },
   {
    "id": "p5-1",
@@ -641,8 +650,9 @@
    "buy_price_eur": 330.64,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-18T16:56:13+01:00",
-   "rank_by_price": 10
+   "last_updated": "2026-11-18T20:07:52+01:00",
+   "rank_by_price": 10,
+   "price_condition": "NM"
   },
   {
    "id": "p3-6",
@@ -661,8 +671,8 @@
    "confidence": "alta",
    "notes": "",
    "image_url": "https://www.cardtrader.com/uploads/blueprints/image/113276/show_reshiram-zekrom-gx-secret-rare-222-236-cosmic-eclipse.jpg",
-   "price_min_ita_nm_eur": 375.64,
-   "price_min_target_lang_nm_eur": 375.64,
+   "price_min_ita_nm_eur": null,
+   "price_min_target_lang_nm_eur": null,
    "listings_target_lang_nm": 1,
    "price_2nd_target_lang_nm_eur": null,
    "price_min_any_lang_nm_eur": 375.64,
@@ -706,8 +716,9 @@
    "buy_price_eur": 260,
    "buy_price_source": "cm",
    "tier": "C: >150€",
-   "last_updated": "2026-11-18T16:56:13+01:00",
-   "rank_by_price": 11
+   "last_updated": "2026-11-18T20:07:52+01:00",
+   "rank_by_price": 11,
+   "price_condition": "NM"
   },
   {
    "id": "p4-1",
@@ -791,8 +802,9 @@
    "buy_price_eur": 250.09,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-18T16:56:13+01:00",
-   "rank_by_price": 12
+   "last_updated": "2026-11-18T20:07:52+01:00",
+   "rank_by_price": 12,
+   "price_condition": "NM"
   },
   {
    "id": "p3-7",
@@ -876,8 +888,9 @@
    "buy_price_eur": 235.64,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-18T16:56:13+01:00",
-   "rank_by_price": 13
+   "last_updated": "2026-11-18T20:07:52+01:00",
+   "rank_by_price": 13,
+   "price_condition": "NM"
   },
   {
    "id": "p9-3",
@@ -934,8 +947,9 @@
    "buy_price_eur": 199.99,
    "buy_price_source": "cm",
    "tier": "C: >150€",
-   "last_updated": "2026-11-18T16:56:13+01:00",
-   "rank_by_price": 14
+   "last_updated": "2026-11-18T20:07:52+01:00",
+   "rank_by_price": 14,
+   "price_condition": "NM"
   },
   {
    "id": "p9-5",
@@ -990,8 +1004,75 @@
    "buy_price_eur": 140,
    "buy_price_source": "cm",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-18T16:56:13+01:00",
-   "rank_by_price": 15
+   "last_updated": "2026-11-18T20:07:52+01:00",
+   "rank_by_price": 15,
+   "price_condition": "NM"
+  },
+  {
+   "id": "p4-5",
+   "order": 10,
+   "page": 2,
+   "position": 1,
+   "name": "Professor Elm's Lecture",
+   "set": "Lost Thunder",
+   "set_code": "LOT",
+   "number": "213",
+   "rarity": "213/214",
+   "cardtrader_blueprint_id": 122678,
+   "cardtrader_link": "https://www.cardtrader.com/it/cards/122678-professor-elm-s-lecture-ultra-rare-213-214-lost-thunder",
+   "target_language": "it",
+   "italian_edition_exists": true,
+   "confidence": "alta",
+   "notes": "14/11/2026: sostituita la 188/214 uncommon (blueprint 122648) con la secret rare full art 213/214 Lost Thunder (blueprint 122678), confermata da Leopoldo. Su CardTrader EU ITA NM non gradata: 1 copia CT a 120,63 € e 1 copia Zero a 10.001,64 € (la regola Zero > CT×1,20 scarta lo Zero). Prezzo finale 120,63 € (ct). Cardmarket ITA NM min 165,00 € (6 copie, dump TCGNotify 14/11).",
+   "image_url": "https://www.cardtrader.com/uploads/blueprints/image/122678/show_professor-elm-s-lecture-rare-ultra-213-214-lost-thunder.jpg",
+   "price_min_ita_nm_eur": 136.57,
+   "price_min_target_lang_nm_eur": 136.57,
+   "listings_target_lang_nm": 1,
+   "price_2nd_target_lang_nm_eur": null,
+   "price_min_any_lang_nm_eur": 0.21,
+   "ct_market_all_lang_eur": 1.39,
+   "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
+   "price_min_ita_nm_zero_eur": null,
+   "price_min_target_lang_nm_zero_eur": null,
+   "listings_target_lang_nm_zero": 0,
+   "offers_zero": [
+    {
+     "user_id": 253321,
+     "username": "Maverik54",
+     "country_code": "IT",
+     "price_eur": 2.9,
+     "quantity": 3,
+     "avg_rating_percentage": 100.0,
+     "feedbacks_count": 5521,
+     "ct_zero_avg_shipping_days": 8
+    }
+   ],
+   "offers_ct": [],
+   "qty_mint_nm_target_lang": 3,
+   "listings_mint_nm_target_lang": 1,
+   "price_ctz_eur": null,
+   "listings_ctz": 0,
+   "qty_ctz": 0,
+   "price_ct_eur": 136.57,
+   "listings_ct": 1,
+   "qty_ct": 1,
+   "price_avg_eur": 136.57,
+   "listings_nm": 1,
+   "qty_nm": 1,
+   "price_cm_eur": 165,
+   "price_cm_avg_eur": 169.9,
+   "copies_cm": 6,
+   "price_cm_date": "2026-11-17",
+   "price_final_eur": 136.57,
+   "price_final_source": "ct",
+   "fetch_error": "HTTP Error 403: Forbidden",
+   "release_year": 2018,
+   "buy_price_eur": 136.57,
+   "buy_price_source": "ct",
+   "tier": "B: 50-150€",
+   "last_updated": "2026-11-18T20:07:52+01:00",
+   "rank_by_price": 16,
+   "price_condition": "NM"
   },
   {
    "id": "p3-9",
@@ -1075,73 +1156,9 @@
    "buy_price_eur": 125.0,
    "buy_price_source": "ct",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-18T16:56:13+01:00",
-   "rank_by_price": 16
-  },
-  {
-   "id": "p4-5",
-   "order": 10,
-   "page": 2,
-   "position": 1,
-   "name": "Professor Elm's Lecture",
-   "set": "Lost Thunder",
-   "set_code": "LOT",
-   "number": "213",
-   "rarity": "213/214",
-   "cardtrader_blueprint_id": 122678,
-   "cardtrader_link": "https://www.cardtrader.com/it/cards/122678-professor-elm-s-lecture-ultra-rare-213-214-lost-thunder",
-   "target_language": "it",
-   "italian_edition_exists": true,
-   "confidence": "alta",
-   "notes": "14/11/2026: sostituita la 188/214 uncommon (blueprint 122648) con la secret rare full art 213/214 Lost Thunder (blueprint 122678), confermata da Leopoldo. Su CardTrader EU ITA NM non gradata: 1 copia CT a 120,63 € e 1 copia Zero a 10.001,64 € (la regola Zero > CT×1,20 scarta lo Zero). Prezzo finale 120,63 € (ct). Cardmarket ITA NM min 165,00 € (6 copie, dump TCGNotify 14/11).",
-   "image_url": "https://www.cardtrader.com/uploads/blueprints/image/122678/show_professor-elm-s-lecture-rare-ultra-213-214-lost-thunder.jpg",
-   "price_min_ita_nm_eur": 120.63,
-   "price_min_target_lang_nm_eur": 120.63,
-   "listings_target_lang_nm": 1,
-   "price_2nd_target_lang_nm_eur": null,
-   "price_min_any_lang_nm_eur": 0.21,
-   "ct_market_all_lang_eur": 1.39,
-   "price_source": "CardTrader min IT Near Mint (non gradata, spedizione esclusa)",
-   "price_min_ita_nm_zero_eur": 10001.64,
-   "price_min_target_lang_nm_zero_eur": 10001.64,
-   "listings_target_lang_nm_zero": 1,
-   "offers_zero": [
-    {
-     "user_id": 253321,
-     "username": "Maverik54",
-     "country_code": "IT",
-     "price_eur": 2.9,
-     "quantity": 3,
-     "avg_rating_percentage": 100.0,
-     "feedbacks_count": 5521,
-     "ct_zero_avg_shipping_days": 8
-    }
-   ],
-   "offers_ct": [],
-   "qty_mint_nm_target_lang": 3,
-   "listings_mint_nm_target_lang": 1,
-   "price_ctz_eur": 10001.64,
-   "listings_ctz": 1,
-   "qty_ctz": 1,
-   "price_ct_eur": 120.63,
-   "listings_ct": 1,
-   "qty_ct": 1,
-   "price_avg_eur": 5061.13,
-   "listings_nm": 2,
-   "qty_nm": 2,
-   "price_cm_eur": 165,
-   "price_cm_avg_eur": 169.9,
-   "copies_cm": 6,
-   "price_cm_date": "2026-11-17",
-   "price_final_eur": 120.63,
-   "price_final_source": "ct",
-   "fetch_error": "HTTP Error 403: Forbidden",
-   "release_year": 2018,
-   "buy_price_eur": 120.63,
-   "buy_price_source": "ct",
-   "tier": "B: 50-150€",
-   "last_updated": "2026-11-18T16:56:13+01:00",
-   "rank_by_price": 17
+   "last_updated": "2026-11-18T20:07:52+01:00",
+   "rank_by_price": 17,
+   "price_condition": "NM"
   },
   {
    "id": "p4-4",
@@ -1194,8 +1211,9 @@
    "buy_price_eur": 100.64,
    "buy_price_source": "ct",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-18T16:56:13+01:00",
-   "rank_by_price": 18
+   "last_updated": "2026-11-18T20:07:52+01:00",
+   "rank_by_price": 18,
+   "price_condition": "NM"
   },
   {
    "id": "p3-8",
@@ -1248,8 +1266,9 @@
    "buy_price_eur": 95.08,
    "buy_price_source": "ct",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-18T16:56:13+01:00",
-   "rank_by_price": 19
+   "last_updated": "2026-11-18T20:07:52+01:00",
+   "rank_by_price": 19,
+   "price_condition": "NM"
   },
   {
    "id": "p9-6",
@@ -1305,8 +1324,9 @@
    "buy_price_eur": 34.39,
    "buy_price_source": "ctz",
    "tier": "A: <50€",
-   "last_updated": "2026-11-18T16:56:13+01:00",
-   "rank_by_price": 20
+   "last_updated": "2026-11-18T20:07:52+01:00",
+   "rank_by_price": 20,
+   "price_condition": "NM"
   },
   {
    "id": "p9-8",
@@ -1362,8 +1382,9 @@
    "buy_price_eur": 25.4,
    "buy_price_source": "ct",
    "tier": "A: <50€",
-   "last_updated": "2026-11-18T16:56:13+01:00",
-   "rank_by_price": 21
+   "last_updated": "2026-11-18T20:07:52+01:00",
+   "rank_by_price": 21,
+   "price_condition": "NM"
   },
   {
    "id": "p9-7",
@@ -1419,8 +1440,9 @@
    "buy_price_eur": 16.26,
    "buy_price_source": "ct",
    "tier": "A: <50€",
-   "last_updated": "2026-11-18T16:56:13+01:00",
-   "rank_by_price": 22
+   "last_updated": "2026-11-18T20:07:52+01:00",
+   "rank_by_price": 22,
+   "price_condition": "NM"
   }
  ]
 }

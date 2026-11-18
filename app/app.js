@@ -58,10 +58,14 @@ function chooseFinal(ctz, ct, cm) {
   if (cm != null) return { price: cm, source: "cm" };
   return { price: null, source: null };
 }
+function priceCondition(card) {
+  const raw = String(card.price_condition || "NM").trim().toUpperCase();
+  return raw === "MINT" || raw === "M" ? "NM" : raw;
+}
 function quote(card) {
   if (hasOwn(card, "price_final_eur")) {
     const price = num(card.price_final_eur);
-    if (price != null) return { price, source: card.price_final_source || null };
+    if (price != null) return { price, source: card.price_final_source || null, condition: priceCondition(card) };
   }
   const ctz = num(card.price_ctz_eur);
   const ctzLegacy = ctz != null || hasOwn(card, "price_ctz_eur") ? ctz : num(card.price_min_target_lang_nm_zero_eur);
@@ -533,7 +537,8 @@ function sleeveHtml(card, collectionId, mode) {
   const img = src
     ? `<img src="${esc(src)}" alt="${esc(card.name)}">`
     : `<span class="fallback">${esc((card.name || "?").slice(0, 1))}</span>`;
-  const price = `<div class="price-line"><span class="price">${q.price == null ? "n/d" : money(q.price)}</span></div>`;
+  const cond = q.condition && q.condition !== "NM" ? `<span class="cond">${esc(q.condition)}</span>` : "";
+  const price = `<div class="price-line">${cond}<span class="price">${q.price == null ? "n/d" : money(q.price)}</span></div>`;
   if (mode === "compact") {
     return `<a class="sleeve sleeve-compact${bought ? " bought" : ""}" href="#/c/${encodeURIComponent(collectionId)}/card/${encodeURIComponent(card.id)}">
       <div class="art">${img}</div>
@@ -1111,7 +1116,7 @@ async function renderCard(id, cardId) {
     <h2 class="card-name">${purchaseOf(card.id) ? "✅ " : ""}${esc(cardTitle(card))}</h2>
     <p class="sub">${esc(cardSetName(card))} · ${esc(cardNumber(card))} · ${esc(card.rarity)} · ${lang.flag} ${lang.name}${card.pokemon_reverse ? " · Reverse" : ""}${card.release_year ? " · " + esc(card.release_year) : ""}</p>
     <section class="pricebox">
-      <p class="label">PREZZO MINIMO · NM · ${lang.flag} ${lang.name.toUpperCase()} · ${esc(sourceName(q.source))}</p>
+      <p class="label">PREZZO MINIMO · ${esc(q.condition || "NM")} · ${lang.flag} ${lang.name.toUpperCase()} · ${esc(sourceName(q.source))}</p>
       <p class="big">${q.price == null ? "n/d" : money(q.price)}</p>
       ${show30 ? `<p class="delta ${change30.diff < 0 ? "down" : "up"}">${change30.diff < 0 ? "▼" : "▲"} ${pct(change30.pct)} · ${signedMoney(change30.diff)} in 30 giorni</p>` : ""}
       <p class="quiet">Prezzo medio ${avgPrice == null ? "n/d" : money(avgPrice)}</p>

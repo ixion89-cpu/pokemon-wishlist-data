@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T17:07:56+01:00",
+ "generated_at": "2026-11-18T20:08:04+01:00",
  "base": 100,
  "real_from": "2026-11-10",
  "note": "index_value_eur somma i prezzi unitari di tutte le carte dello snapshot, anche quelle segnate come acquistate. index_base100 è a base 100 e si concatena sul rendimento delle carte in comune, così un'aggiunta non crea un salto. volume è la somma dei total CT+CM italiani già noti; un dato mancante resta null. I rendimenti sono percentuali e sono null se manca il giorno esatto di confronto.",
@@ -10,21 +10,21 @@
    "date": "2026-11-18",
    "n_cards": 62,
    "n_priced": 62,
-   "index_value_eur": 9819.15,
-   "index_base100": 99.057065,
-   "divisor": 99.12619559,
+   "index_value_eur": 9820.09,
+   "index_base100": 99.066548,
+   "divisor": 99.12619545,
    "volume": 5185.0,
    "ct_it": 1618.0,
    "cm_it": 3582.0,
    "n_pop": 62,
    "returns_pct": {
-    "1G": 0.125831,
-    "7G": -0.282394,
+    "1G": 0.135416,
+    "7G": -0.272847,
     "30G": null,
     "90G": null,
     "1Y": null,
     "YTD": null,
-    "inception": -0.942935
+    "inception": -0.933452
    }
   },
   {
@@ -33,21 +33,21 @@
    "date": "2026-11-18",
    "n_cards": 22,
    "n_priced": 22,
-   "index_value_eur": 7640.95,
-   "index_base100": 93.584804,
-   "divisor": 81.64733668,
+   "index_value_eur": 7656.89,
+   "index_base100": 93.780034,
+   "divisor": 81.64733657,
    "volume": 265.0,
    "ct_it": 61.0,
    "cm_it": 204.0,
    "n_pop": 19,
    "returns_pct": {
-    "1G": -3.469609,
-    "7G": -1.521913,
+    "1G": -3.268234,
+    "7G": -1.316475,
     "30G": null,
     "90G": null,
     "1Y": null,
     "YTD": null,
-    "inception": -6.415196
+    "inception": -6.219966
    }
   },
   {

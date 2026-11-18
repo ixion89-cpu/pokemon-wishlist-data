@@ -4,9 +4,12 @@ Backend statico (GitHub Pages) con tre collezioni: Wishlist - modern (62 carte, 
 
 **Prezzo unico (`price_final_eur`)**, Near Mint in lingua target (italiano, giapponese solo per Togepi), non gradato, spedizione esclusa. Il prezzo è `price.cents / 100`, già con la fee di CardTrader.
 
-1. Default: minimo CardTrader Zero (`price_ctz_eur`).
+1. Default, solo Near Mint non gradato: minimo CardTrader Zero (`price_ctz_eur`).
 2. Si usa il CardTrader normale (`price_ct_eur`) se non c'è nessuno Zero, oppure se lo Zero costa più del 20% (`price_ctz_eur > price_ct_eur * 1.20`).
-3. Se mancano entrambi, si usa Cardmarket (`price_cm_eur`) quando c'è.
+3. Se mancano entrambi, si usa Cardmarket Near Mint (`price_cm_eur`) quando c'è.
+4. Se non c'è nessun Near Mint, si scende a SP, poi MP, poi PL, poi PO. In ogni condizione si prende il minimo CardTrader non gradato. `price_condition` è `NM`, `SP`, `MP`, `PL` o `PO`. Un annuncio gradato non entra. Un annuncio che costa più di 10 volte il successivo, o almeno 10.000 € quando ne esiste uno più basso, non entra.
+
+Nel file EU ogni annuncio può avere `condition` (`NM`, `SP`, `MP`, `PL`, `PO`; se manca è NM; Mint si scrive NM) e `graded` (true se è slab/PSA/BGS; se manca è false). Servono anche `price_eur` già in euro, `qty`, `zero`, e se noti `language` (`it`/`en`/`jp`) e `reverse`. Il fetch quotidiano deve scaricare tutte le condizioni non gradate nella lingua della carta, non solo il Near Mint, e marcare i gradati invece di spacciarli per NM. I prezzi del sito in dollari vanno convertiti prima, con il cambio di riferimento BCE del giorno (dollari per un euro).
 
 `price_final_source` vale `ctz`, `ct` o `cm`. `buy_price_eur` e `total_eur` sono lo stesso prezzo. `price_avg_eur` resta nei dati e non è un listino dell'app.
 

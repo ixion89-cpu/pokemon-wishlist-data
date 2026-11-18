@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-17",
+  "date": "2026-11-18",
   "listings": {
     "127519": [
       {
@@ -77,15 +77,7 @@
         "reverse": false
       }
     ],
-    "113276": [
-      {
-        "price_eur": 375.64,
-        "qty": 1,
-        "zero": true,
-        "seller_country": "IT",
-        "reverse": false
-      }
-    ],
+    "113276": [],
     "110587": [],
     "126964": [
       {
@@ -389,6 +381,13 @@
         "reverse": false
       },
       {
+        "price_eur": 18.27,
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
         "price_eur": 20.27,
         "qty": 1,
         "zero": false,
@@ -413,13 +412,6 @@
         "price_eur": 25.4,
         "qty": 1,
         "zero": true,
-        "seller_country": "IT",
-        "reverse": false
-      },
-      {
-        "price_eur": 26.24,
-        "qty": 1,
-        "zero": false,
         "seller_country": "IT",
         "reverse": false
       },

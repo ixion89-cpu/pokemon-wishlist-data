@@ -1,56 +1,56 @@
 {
  "g1-1": {
-  "min_eur": 119.99,
-  "avg_eur": 120,
-  "copies": 64,
-  "date": "2026-11-11"
+  "min_eur": 118,
+  "avg_eur": 119.99,
+  "copies": 67,
+  "date": "2026-11-18"
  },
  "g1-2": {
-  "min_eur": 160,
-  "avg_eur": 165,
-  "copies": 60,
-  "date": "2026-11-10"
+  "min_eur": 159,
+  "avg_eur": 164.9,
+  "copies": 58,
+  "date": "2026-11-17"
  },
  "g1-3": {
-  "min_eur": 205,
-  "avg_eur": 219.01,
-  "copies": 97,
-  "date": "2026-11-11"
+  "min_eur": 200,
+  "avg_eur": 205,
+  "copies": 92,
+  "date": "2026-11-17"
  },
  "g1-4": {
-  "min_eur": 279.99,
-  "avg_eur": 280,
-  "copies": 68,
-  "date": "2026-11-11"
+  "min_eur": 239,
+  "avg_eur": 269.9,
+  "copies": 69,
+  "date": "2026-11-17"
  },
  "g1-5": {
-  "min_eur": 96.67,
-  "avg_eur": 109,
-  "copies": 76,
-  "date": "2026-11-11"
+  "min_eur": 96,
+  "avg_eur": 96.7,
+  "copies": 82,
+  "date": "2026-11-17"
  },
  "g1-6": {
-  "min_eur": 78.49,
-  "avg_eur": 78.9,
-  "copies": 43,
-  "date": "2026-11-11"
+  "min_eur": 74.5,
+  "avg_eur": 78.49,
+  "copies": 46,
+  "date": "2026-11-17"
  },
  "g1-7": {
-  "min_eur": 80,
-  "avg_eur": 87.9,
-  "copies": 80,
-  "date": "2026-11-10"
+  "min_eur": 79.9,
+  "avg_eur": 84.93,
+  "copies": 76,
+  "date": "2026-11-17"
  },
  "g1-8": {
-  "min_eur": 104.94,
+  "min_eur": 103,
   "avg_eur": 105,
-  "copies": 57,
-  "date": "2026-11-10"
+  "copies": 59,
+  "date": "2026-11-17"
  },
  "g1-9": {
-  "min_eur": 245,
-  "avg_eur": 249,
-  "copies": 26,
-  "date": "2026-11-11"
+  "min_eur": 188.05,
+  "avg_eur": 195,
+  "copies": 38,
+  "date": "2026-11-18"
  }
 }

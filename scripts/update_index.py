@@ -138,6 +138,7 @@ def constituents_for(cards, day, pop, notify):
             "ct_it": None if ct is None else round(ct, 2),
             "cm_it": None if cm is None else round(cm, 2),
             "condition": card.get("price_condition") or None,
+            "qty": int(card["quantity"]) if isinstance(card.get("quantity"), (int, float)) and card["quantity"] > 0 else 1,
             "ita": is_italian(card),
         })
     rows.sort(key=lambda row: row["id"])
@@ -216,7 +217,7 @@ def prev_state(row):
 def build_row(day, cards, pop, notify, prev):
     detailed = constituents_for(cards, day, pop, notify)
     published = public_constituents(detailed)
-    prices = [row["price"] for row in detailed if row["price"] is not None]
+    prices = [row["price"] * (row.get("qty") or 1) for row in detailed if row["price"] is not None]
     value = round(sum(prices), 2) if prices else None
     index, divisor, link, daily = chain(value, published, prev)
     ita = [row for row in detailed if row["ita"]]

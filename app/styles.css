@@ -174,10 +174,26 @@ h1 { margin: 0; font-size: 34px; }
   display: flex; justify-content: center; align-items: center; gap: 4px;
   background: var(--sun); border: 2px solid #111; border-radius: 999px; padding: 1px 4px;
 }
-.price-line .cond {
+.marks { display: flex; gap: 3px; justify-content: center; flex-wrap: wrap; margin: 4px 0 0; }
+.marks .cond, .price-line .cond {
   font-size: 9px; font-weight: 800; letter-spacing: .02em;
   background: #111; color: #fff; border-radius: 999px; padding: 1px 4px;
 }
+.cond.psa { background: #5b4bdb; }
+.cond.fallback { background: #a31d32; }
+.cond.lang { background: #0c6b32; }
+.set-list { display: grid; gap: 8px; }
+.set-row {
+  display: grid; grid-template-columns: 72px 1fr auto; gap: 10px; align-items: center;
+  background: var(--paper); border: var(--line); border-radius: 18px; padding: 8px 10px;
+}
+.set-logo { width: 72px; height: 36px; object-fit: contain; }
+.set-badge {
+  width: 72px; height: 36px; display: grid; place-items: center;
+  border: 2px solid #111; border-radius: 10px; font-size: 11px; font-weight: 800;
+  background: var(--sun);
+}
+.owned-total { grid-column: 1 / -1; }
 .src-badge { position: absolute; top: 8px; left: 8px; z-index: 2; }
 .sleeve .price { font-size: 11px; letter-spacing: -0.04em; white-space: nowrap; }
 .sleeve-compact .price { font-size: 12px; }

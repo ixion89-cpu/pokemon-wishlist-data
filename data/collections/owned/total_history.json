@@ -1,0 +1,17 @@
+{
+ "reconstruction": false,
+ "real_from": "2026-11-18",
+ "cards_total": 150,
+ "note": "My Collection: il totale è prezzo unitario per quantità. Base 100 dal 2026-11-18.",
+ "days": [
+  {
+   "date": "2026-11-18",
+   "total_eur": 11540.46,
+   "cards_priced": 145,
+   "cards_ct": 145,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "snapshot"
+  }
+ ]
+}

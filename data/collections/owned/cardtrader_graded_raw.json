@@ -1,0 +1,175 @@
+{
+  "date": "2026-11-18",
+  "listings": {
+    "274416": [
+      {
+        "price_eur": 1399.64,
+        "condition": "NM",
+        "graded": true,
+        "grader": "PSA",
+        "grade": 10,
+        "language": "it",
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "description": "[PSA 10.0 Gem-Mint] PSA 10",
+        "product_id": 468081758
+      },
+      {
+        "price_eur": 1700.64,
+        "condition": "NM",
+        "graded": true,
+        "grader": "PSA",
+        "grade": 10,
+        "language": "it",
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "description": "Psa 10 ita",
+        "product_id": 442353130
+      }
+    ],
+    "316797": [
+      {
+        "price_eur": 599.64,
+        "condition": "NM",
+        "graded": true,
+        "grader": "PSA",
+        "grade": 10,
+        "language": "it",
+        "qty": 1,
+        "zero": false,
+        "seller_country": "IT",
+        "description": "GRAAD 9,5 MT+, possible PSA 10",
+        "product_id": 367431578
+      }
+    ],
+    "258696": [
+      {
+        "price_eur": 450.54,
+        "condition": "NM",
+        "graded": true,
+        "grader": "PSA",
+        "grade": 10,
+        "language": "it",
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "description": "[PSA 10.0]",
+        "product_id": 433219903
+      },
+      {
+        "price_eur": 450.63,
+        "condition": "NM",
+        "graded": true,
+        "grader": "PSA",
+        "grade": 10,
+        "language": "it",
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "description": "[PSA 10.0]",
+        "product_id": 456907670
+      },
+      {
+        "price_eur": 570.64,
+        "condition": "NM",
+        "graded": true,
+        "grader": "PSA",
+        "grade": 10,
+        "language": "it",
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "description": "[PSA 10.0]",
+        "product_id": 419530533
+      }
+    ],
+    "258697": [
+      {
+        "price_eur": 249.64,
+        "condition": "NM",
+        "graded": true,
+        "grader": "PSA",
+        "grade": 10,
+        "language": "it",
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "description": "[PSA 10.0 Gem-Mint]",
+        "product_id": 468870103
+      },
+      {
+        "price_eur": 250.64,
+        "condition": "NM",
+        "graded": true,
+        "grader": "PSA",
+        "grade": 10,
+        "language": "it",
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "description": "[PSA 10.0]",
+        "product_id": 439217174
+      },
+      {
+        "price_eur": 250.64,
+        "condition": "NM",
+        "graded": true,
+        "grader": "PSA",
+        "grade": 10,
+        "language": "it",
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "description": "PSA 10 - GEM MINT",
+        "product_id": 407430918
+      },
+      {
+        "price_eur": 300.53,
+        "condition": "NM",
+        "graded": true,
+        "grader": "PSA",
+        "grade": 10,
+        "language": "it",
+        "qty": 2,
+        "zero": true,
+        "seller_country": "IT",
+        "description": "[PSA 10.0] PSA10 - 115100453 #PK0000014236",
+        "product_id": 392377365
+      }
+    ],
+    "265293": [],
+    "338960": [
+      {
+        "price_eur": 280.64,
+        "condition": "NM",
+        "graded": true,
+        "grader": "PSA",
+        "grade": 10,
+        "language": "jp",
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "description": "PSA10",
+        "product_id": 463625803
+      }
+    ],
+    "287882": [
+      {
+        "price_eur": 169.64,
+        "condition": "NM",
+        "graded": true,
+        "grader": "PSA",
+        "grade": 10,
+        "language": "it",
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "description": "[PSA 10.0]",
+        "product_id": 427808548
+      }
+    ]
+  },
+  "errors": []
+}

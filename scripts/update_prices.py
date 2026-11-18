@@ -390,6 +390,9 @@ def configure_collection():
     if "--collection" in sys.argv:
         name = sys.argv[sys.argv.index("--collection") + 1]
     folder = aliases.get(name, name)
+    if folder == "owned":
+        print("My Collection si aggiorna con scripts/owned_fetch.py, non con questa regola wishlist.")
+        raise SystemExit(0)
     if folder:
         DATA = os.path.join(ROOT_DATA, "collections", folder)
         os.makedirs(os.path.join(DATA, "history"), exist_ok=True)

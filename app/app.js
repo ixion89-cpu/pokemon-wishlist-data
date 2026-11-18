@@ -87,9 +87,31 @@ function badge(source) {
   return "";
 }
 function langOf(code) {
-  if (code === "jp") return { flag: "🇯🇵", name: "Giapponese" };
-  if (code === "en") return { flag: "🇬🇧", name: "Inglese" };
+  const c = String(code || "").toLowerCase();
+  if (c === "jp" || c === "ja") return { flag: "🇯🇵", name: "Giapponese" };
+  if (c === "en") return { flag: "🇬🇧", name: "Inglese" };
+  if (c === "zh-cn" || c === "zh") return { flag: "🇨🇳", name: "zh-CN" };
   return { flag: "🇮🇹", name: "Italiano" };
+}
+function rawConditionLabel(card) {
+  const c = String(card.condition || card.condition_code || "").toUpperCase();
+  if (c === "LP" || c === "SP") return "LP/SP";
+  if (c === "HP" || c === "PL") return "HP/PL";
+  if (c === "MP") return "MP";
+  if (c === "NM") return "NM";
+  return c;
+}
+function sleeveMarks(card) {
+  const bits = [];
+  if (card.graded) bits.push(`<span class="cond psa">PSA ${esc(card.grade || "10")}</span>`);
+  else if (card.condition || card.condition_code) {
+    bits.push(`<span class="cond">${esc(rawConditionLabel(card))}</span>`);
+    if (card.fallback) bits.push(`<span class="cond fallback">→ NM</span>`);
+  } else if (priceCondition(card) !== "NM") bits.push(`<span class="cond">${esc(priceCondition(card))}</span>`);
+  const lang = String(card.language || "").toLowerCase();
+  if (lang && lang !== "it") bits.push(`<span class="cond lang">${esc(lang === "jp" || lang === "ja" ? "JP" : lang === "zh-cn" ? "zh-CN" : lang.toUpperCase())}</span>`);
+  if (card.quantity && copiesOf(card) > 1) bits.push(`<span class="cond">×${esc(card.quantity)}</span>`);
+  return bits.length ? `<p class="marks">${bits.join("")}</p>` : "";
 }
 function dayKey(iso) {
   return String(iso || "").slice(0, 10);
@@ -132,7 +154,17 @@ function filtersFor(id) {
     state.filters[id] = { q: "", years: [], sets: [], rarities: [], langs: [], tiers: [], zeroOnly: false, buy: "todo" };
   }
   if (!state.filters[id].buy) state.filters[id].buy = "todo";
+  if (isOwned(id)) state.filters[id].buy = "all";
   return state.filters[id];
+}
+function copiesOf(card) {
+  const q = num(card.quantity);
+  return q != null && q > 0 ? q : 1;
+}
+function lineValue(card) {
+  const price = quote(card).price;
+  if (price == null) return null;
+  return Math.round(price * copiesOf(card) * 100) / 100;
 }
 function purchaseStorageKey() {
   const id = state.collectionId || "wishlist-modern";
@@ -208,7 +240,15 @@ function basketOf(cards) {
     done: wishlist > 0 ? Math.max(0, Math.min(100, ((wishlist - remain) / wishlist) * 100)) : 0,
   };
 }
-function basketHtml(cards, generatedAt) {
+function basketHtml(cards, generatedAt, meta) {
+  if (meta && meta.owned) {
+    const tot = collectionTotal(cards);
+    const copies = cards.reduce((sum, card) => sum + copiesOf(card), 0);
+    const unpriced = cards.length - tot.priced;
+    return `<section class="basket" aria-label="Totali">
+      <div class="tile mint owned-total"><p class="k">Totale</p><b class="nums">${money(tot.total)}</b><p class="meta">${tot.priced} prezzi · ${copies} copie${unpriced ? ` · ${unpriced} non prezzate` : ""}</p></div>
+    </section>`;
+  }
   const b = basketOf(cards);
   const paidNote = b.fallback ? ` · ${b.fallback} senza prezzo pagato, contato il prezzo attuale` : "";
   return `<section class="basket" aria-label="Totali">
@@ -260,6 +300,7 @@ function parseCsv(text) {
 function collectionParam(id) {
   if (id === "gold-modern") return "gold";
   if (id === "wishlist-vintage") return "vintage";
+  if (id === "my-collection") return "owned";
   return "wishlist";
 }
 function collectionFromUrl() {
@@ -267,8 +308,13 @@ function collectionFromUrl() {
   if (!value) return "";
   if (value === "gold" || value === "gold-modern") return "gold-modern";
   if (value === "vintage" || value === "wishlist-vintage") return "wishlist-vintage";
+  if (value === "owned" || value === "my-collection") return "my-collection";
   if (value === "wishlist" || value === "wishlist-modern") return "wishlist-modern";
   return "";
+}
+function isOwned(id) {
+  const meta = state.collections.find((c) => c.id === (id || state.collectionId));
+  return !!(meta && meta.owned);
 }
 function activeCollection() {
   return state.collections.find((c) => c.id === state.collectionId) || state.collections[0];
@@ -356,18 +402,18 @@ async function loadCsv() {
 function pageValueOf(cards) {
   let total = 0, missing = 0;
   for (const card of cards) {
-    const price = quote(card).price;
-    if (price == null) missing += 1;
-    else total += price;
+    const value = lineValue(card);
+    if (value == null) missing += 1;
+    else total += value;
   }
   return { total: Math.round(total * 100) / 100, missing };
 }
 function collectionTotal(cards) {
   let total = 0, priced = 0, zero = 0;
   cards.forEach((card) => {
-    const q = quote(card);
-    if (q.price != null) { total += q.price; priced += 1; }
-    if (q.source === "zero") zero += 1;
+    const value = lineValue(card);
+    if (value != null) { total += value; priced += 1; }
+    if (quote(card).source === "zero") zero += 1;
   });
   return { total, priced, cards: cards.length, zero };
 }
@@ -458,6 +504,7 @@ async function render() {
   }
   try {
     await loadCollections();
+    await loadSetCatalog();
     await loadPurchaseFile();
     await loadExtra(r.name === "card" || r.name === "binder" ? r.id : state.collectionId);
     if (r.name === "home") await renderHome();
@@ -537,12 +584,14 @@ function sleeveHtml(card, collectionId, mode) {
   const img = src
     ? `<img src="${esc(src)}" alt="${esc(card.name)}">`
     : `<span class="fallback">${esc((card.name || "?").slice(0, 1))}</span>`;
-  const cond = q.condition && q.condition !== "NM" ? `<span class="cond">${esc(q.condition)}</span>` : "";
-  const price = `<div class="price-line">${cond}<span class="price">${q.price == null ? "n/d" : money(q.price)}</span></div>`;
+  const shown = card.quantity ? lineValue(card) : q.price;
+  const price = `<div class="price-line"><span class="price">${shown == null ? "n.d." : money(shown)}</span></div>`;
+  const marks = sleeveMarks(card, q);
   if (mode === "compact") {
     return `<a class="sleeve sleeve-compact${bought ? " bought" : ""}" href="#/c/${encodeURIComponent(collectionId)}/card/${encodeURIComponent(card.id)}">
       <div class="art">${img}</div>
       ${price}
+      ${marks}
       ${card.pokemon_reverse ? `<p class="meta num">Reverse</p>` : ""}
     </a>`;
   }
@@ -552,6 +601,7 @@ function sleeveHtml(card, collectionId, mode) {
       <div class="art">${img}</div>
       ${q.badge ? `<span class="src-badge"><span class="badge partial">${esc(q.badge)}</span></span>` : ""}
       ${price}
+      ${marks}
       <p class="name">${esc(cardTitle(card))}</p>
       <p class="meta num">${esc(cardNumber(card))}</p>
       ${sleevePop(card)}
@@ -568,6 +618,7 @@ function sleeveHtml(card, collectionId, mode) {
   return `<a class="sleeve sleeve-rich${bought ? " bought" : ""}" href="#/c/${encodeURIComponent(collectionId)}/card/${encodeURIComponent(card.id)}">
     <div class="art">${img}</div>
     ${price}
+    ${marks}
     ${source ? `<p class="src-label">${esc(source)}</p>` : ""}
     ${sleevePriceChange(card)}
     <p class="name">${esc(cardTitle(card))}</p>
@@ -676,7 +727,7 @@ async function renderHome() {
     const payload = await loadPayload(meta);
     blocks.push(`<article class="collection">
       <h2>${esc(meta.name)}</h2>
-      ${basketHtml(payload.cards || [], payload.generated_at)}
+      ${basketHtml(payload.cards || [], payload.generated_at, meta)}
       <section class="perf">
         <h2>${esc(meta.name)}</h2>
         ${totalChartHtml(payload.cards || [])}
@@ -704,8 +755,9 @@ async function renderBinder(id) {
   if (rich) await loadCsv();
   const cells = slice.map((card) => sleeveHtml(card, id, rich ? "expanded" : "compact")).join("");
   const buy = f.buy || "todo";
+  const owned = !!(meta && meta.owned);
   view.innerHTML = `
-    ${basketHtml(payload.cards || [], payload.generated_at)}
+    ${basketHtml(payload.cards || [], payload.generated_at, meta)}
     <div class="toolbar">
       <div class="toolbar-switch">
         <button class="sleeve-switch ${rich ? "on" : ""}" type="button" data-sleeve-toggle aria-pressed="${rich ? "true" : "false"}">
@@ -714,9 +766,9 @@ async function renderBinder(id) {
         </button>
       </div>
       <div class="chip-scroller" role="toolbar" aria-label="Filtri e ordinamento">
-        <button class="chip ${buy === "all" ? "on" : ""}" type="button" data-buy="all">Tutte</button>
+        ${owned ? "" : `<button class="chip ${buy === "all" ? "on" : ""}" type="button" data-buy="all">Tutte</button>
         <button class="chip ${buy === "todo" ? "on" : ""}" type="button" data-buy="todo">Da comprare</button>
-        <button class="chip ${buy === "bought" ? "on" : ""}" type="button" data-buy="bought">Acquistate</button>
+        <button class="chip ${buy === "bought" ? "on" : ""}" type="button" data-buy="bought">Acquistate</button>`}
         <button class="chip ${sortModeFor(id) === "release" ? "on" : ""}" type="button" data-sort="release">Uscita</button>
         <button class="chip ${sortModeFor(id) === "desc" ? "on" : ""}" type="button" data-sort="desc">Prezzo ↓</button>
         <button class="chip ${sortModeFor(id) === "asc" ? "on" : ""}" type="button" data-sort="asc">Prezzo ↑</button>
@@ -738,7 +790,8 @@ async function renderBinder(id) {
         <button class="iconbtn prev" type="button" data-page="-1" ${state.page === 0 ? "disabled" : ""} aria-label="Pagina precedente">‹</button>
         <button class="iconbtn next" type="button" data-page="1" ${state.page >= pages - 1 ? "disabled" : ""} aria-label="Pagina successiva">›</button>
       </div>
-    </section>`;
+    </section>
+    ${setSummaryHtml(payload.cards || [])}`;
   bindBinder(id, payload);
   if (state.sheet) openFilters(id, payload);
 }
@@ -754,6 +807,14 @@ function sortToggle(id, base, label) {
 function bindBinder(id, payload) {
   const binder = document.getElementById("binder");
   let x0 = null;
+  document.querySelectorAll("img.set-logo").forEach((img) => {
+    img.addEventListener("error", () => {
+      const badge = document.createElement("span");
+      badge.className = "set-badge";
+      badge.textContent = img.dataset.code || "";
+      img.replaceWith(badge);
+    });
+  });
   binder.addEventListener("touchstart", (e) => { x0 = e.changedTouches[0].clientX; }, { passive: true });
   binder.addEventListener("touchend", (e) => {
     if (x0 == null) return;
@@ -984,6 +1045,44 @@ function changeOver(points, days) {
   const span = dateNum(end.date) - dateNum(start.date);
   return { start, end, days: span, diff: end.value - start.value, pct: start.value ? ((end.value - start.value) / start.value) * 100 : null };
 }
+async function loadSetCatalog() {
+  if (state.setCatalog) return state.setCatalog;
+  try { state.setCatalog = await getJson("set_catalog.json"); }
+  catch (e) { state.setCatalog = { sets: {} }; }
+  return state.setCatalog;
+}
+function setSummaryHtml(cards) {
+  const catalog = (state.setCatalog && state.setCatalog.sets) || {};
+  const groups = new Map();
+  cards.forEach((card) => {
+    const code = card.set_code || card.set || "?";
+    if (!groups.has(code)) groups.set(code, []);
+    groups.get(code).push(card);
+  });
+  const rows = [...groups.entries()].map(([code, list]) => {
+    const info = catalog[String(code).toUpperCase()] || {};
+    const copies = list.reduce((sum, card) => sum + copiesOf(card), 0);
+    let value = 0, missing = 0;
+    list.forEach((card) => {
+      const v = lineValue(card);
+      if (v == null) missing += 1;
+      else value += v;
+    });
+    const years = [...new Set(list.map((card) => card.release_year).filter(Boolean))];
+    const year = info.year || (years.length === 1 ? years[0] : null);
+    return {
+      code, year, logo: info.logo || "",
+      name: info.name || list[0].set || list[0].set_it || code,
+      copies, value: Math.round(value * 100) / 100, missing,
+    };
+  }).sort((a, b) => b.value - a.value || String(a.name).localeCompare(String(b.name), "it"));
+  return `<section class="sets"><h2 class="section-title">Espansioni</h2><div class="set-list">${rows.map((r) => `
+    <article class="set-row">
+      ${r.logo ? `<img class="set-logo" alt="" data-code="${esc(r.code)}" src="${esc(r.logo)}">` : `<span class="set-badge">${esc(String(r.code).slice(0, 4))}</span>`}
+      <div><strong>${esc(r.name)}</strong><p class="meta">${r.year ? esc(String(r.year)) : "anno n.d."} · ${r.copies} copie${r.missing ? ` · ${r.missing} n.d.` : ""}</p></div>
+      <b class="nums">${money(r.value)}</b>
+    </article>`).join("")}</div></section>`;
+}
 async function loadExtra(forId) {
   const meta = state.collections.find((c) => c.id === forId) || activeCollection() || {};
   if (state.extra && state.extra.id === meta.id) return state.extra;
@@ -1094,7 +1193,9 @@ async function renderCard(id, cardId) {
   const next = here >= 0 && here < list.length - 1 ? list[here + 1] : null;
   await loadExtra();
   const q = quote(card);
-  const lang = langOf(card.target_language);
+  const lang = langOf(card.language || card.target_language);
+  const condLabel = card.graded ? `PSA ${card.grade || 10}` : ((card.condition || card.condition_code) ? rawConditionLabel(card) : (q.condition || "NM"));
+  const holding = card.quantity ? lineValue(card) : q.price;
   const pack = state.chartMarket === "cardmarket" ? cardmarketSeries(card) : marketSeries(card);
   const options = [
     { id: "7G", label: "7G", min: 6 },
@@ -1141,8 +1242,9 @@ async function renderCard(id, cardId) {
     <h2 class="card-name">${purchaseOf(card.id) ? "✅ " : ""}${esc(cardTitle(card))}</h2>
     <p class="sub">${esc(cardSetName(card))} · ${esc(cardNumber(card))} · ${esc(card.rarity)} · ${lang.flag} ${lang.name}${card.pokemon_reverse ? " · Reverse" : ""}${card.release_year ? " · " + esc(card.release_year) : ""}</p>
     <section class="pricebox">
-      <p class="label">PREZZO MINIMO · ${esc(q.condition || "NM")} · ${lang.flag} ${lang.name.toUpperCase()} · ${esc(sourceName(q.source))}</p>
-      <p class="big">${q.price == null ? "n/d" : money(q.price)}</p>
+      <p class="label">PREZZO MINIMO · ${esc(condLabel)} · ${lang.flag} ${lang.name.toUpperCase()} · ${esc(sourceName(q.source))}${card.fallback ? " · DA NM" : ""}</p>
+      <p class="big">${holding == null ? "n.d." : money(holding)}</p>
+      ${card.quantity && copiesOf(card) > 1 ? `<p class="quiet">${esc(card.quantity)} copie · unitario ${q.price == null ? "n.d." : money(q.price)}</p>` : ""}
       ${show30 ? `<p class="delta ${change30.diff < 0 ? "down" : "up"}">${change30.diff < 0 ? "▼" : "▲"} ${pct(change30.pct)} · ${signedMoney(change30.diff)} in 30 giorni</p>` : ""}
       <p class="quiet">Prezzo medio ${avgPrice == null ? "n/d" : money(avgPrice)}</p>
       <p class="quiet">${soldCopies == null ? "Copie n/d" : soldCopies + " copie in vendita"}${ctWhen ? " · " + esc(ctWhen) : ""}</p>

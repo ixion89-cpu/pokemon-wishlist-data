@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T20:08:04+01:00",
+ "generated_at": "2026-11-18T23:43:08+01:00",
  "base": 100,
  "real_from": "2026-11-10",
  "note": "index_value_eur somma i prezzi unitari di tutte le carte dello snapshot, anche quelle segnate come acquistate. index_base100 è a base 100 e si concatena sul rendimento delle carte in comune, così un'aggiunta non crea un salto. volume è la somma dei total CT+CM italiani già noti; un dato mancante resta null. I rendimenti sono percentuali e sono null se manca il giorno esatto di confronto.",
@@ -71,6 +71,29 @@
     "1Y": null,
     "YTD": null,
     "inception": -1.025574
+   }
+  },
+  {
+   "id": "my-collection",
+   "name": "My Collection",
+   "date": "2026-11-18",
+   "n_cards": 150,
+   "n_priced": 145,
+   "index_value_eur": 11540.46,
+   "index_base100": 100.0,
+   "divisor": 115.4046,
+   "volume": null,
+   "ct_it": 6417.0,
+   "cm_it": null,
+   "n_pop": 149,
+   "returns_pct": {
+    "1G": null,
+    "7G": null,
+    "30G": null,
+    "90G": null,
+    "1Y": null,
+    "YTD": null,
+    "inception": 0.0
    }
   }
  ]

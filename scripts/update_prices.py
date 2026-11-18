@@ -575,7 +575,8 @@ def main():
 def apply_card_prices(rec, eu_map, cardmarket):
     bid = str(rec.get("cardtrader_blueprint_id"))
     rows = eu_map.get(bid)
-    if isinstance(rows, list) and rows:
+    # Una lista vuota nel file di oggi significa zero annunci NM: non si tiene il prezzo CT di ieri.
+    if isinstance(rows, list):
         rows = [row for row in rows if eu_row_ok(row, rec)]
         zstats, cstats, astats = eu_groups(rows)
         rec["price_ctz_eur"] = zstats["min"]

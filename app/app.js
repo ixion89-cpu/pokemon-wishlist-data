@@ -1131,7 +1131,9 @@ function marketSeries(card) {
   const min = [], avg = [];
   let notify = false;
   rows.forEach((r) => {
-    const value = finalFromRow(r);
+    const cond = String(r.condition || "NM").toUpperCase();
+    const explicit = cond !== "NM" && cond !== "NEAR MINT" && cond !== "MINT" && cond !== "M";
+    const value = explicit ? num(r.price_eur) : finalFromRow(r);
     if (value != null) min.push({ date: String(r.date).slice(0, 10), value, notify: r.source === "tcgnotify" });
     const mid = num(r.price_avg_eur);
     if (mid != null && (num(r.price_ctz_eur) != null || num(r.price_ct_eur) != null || r.source === "tcgnotify")) {
@@ -1145,7 +1147,7 @@ function marketSeries(card) {
     if (num(p.min) != null && !min.some((x) => x.date === p.date)) min.push({ date: p.date, value: num(p.min), notify: true });
     if (num(p.avg) != null && !avg.some((x) => x.date === p.date)) avg.push({ date: p.date, value: num(p.avg) });
   });
-  return { min: addSnapshotPrice(card, dedupePoints(min), ["ct", "ctz"]), avg: dedupePoints(avg.map((p) => ({ ...p, notify: false }))), copies: copySeries(card, "ct_it"), notify };
+  return { min: addSnapshotPrice(card, dedupePoints(min), ["ct", "ctz", "ct_condition", "ct_psa10"]), avg: dedupePoints(avg.map((p) => ({ ...p, notify: false }))), copies: copySeries(card, "ct_it"), notify };
 }
 function cardmarketSeries(card) {
   // Solo i punti marcati condition NM. Lo storico vecchio, senza condizione, è tutte le condizioni e non entra.

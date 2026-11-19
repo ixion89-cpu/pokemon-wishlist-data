@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T23:38:15+01:00",
+ "generated_at": "2026-11-19T06:36:00+01:00",
  "definition": "ct_it = copie CardTrader nella lingua e condizione prezzata; cm_it vuoto.",
  "cards": {
   "o1-1": {
@@ -7,1050 +7,1050 @@
    "ct_it_now": 38,
    "cm_it_now": null,
    "ct_latest": 38,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o1-2": {
    "pop_total_now": null,
-   "ct_it_now": 10,
+   "ct_it_now": 11,
    "cm_it_now": null,
-   "ct_latest": 10,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 11,
+   "ct_latest_date": "2026-11-19"
   },
   "o1-3": {
    "pop_total_now": null,
    "ct_it_now": 2,
    "cm_it_now": null,
    "ct_latest": 2,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o1-4": {
    "pop_total_now": null,
-   "ct_it_now": 46,
+   "ct_it_now": 47,
    "cm_it_now": null,
-   "ct_latest": 46,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 47,
+   "ct_latest_date": "2026-11-19"
   },
   "o1-5": {
    "pop_total_now": null,
-   "ct_it_now": 32,
+   "ct_it_now": 31,
    "cm_it_now": null,
-   "ct_latest": 32,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 31,
+   "ct_latest_date": "2026-11-19"
   },
   "o1-6": {
    "pop_total_now": null,
    "ct_it_now": 12,
    "cm_it_now": null,
    "ct_latest": 12,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o1-7": {
    "pop_total_now": null,
    "ct_it_now": 1,
    "cm_it_now": null,
    "ct_latest": 1,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o1-8": {
    "pop_total_now": null,
    "ct_it_now": 6,
    "cm_it_now": null,
    "ct_latest": 6,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o1-9": {
    "pop_total_now": null,
    "ct_it_now": 52,
    "cm_it_now": null,
    "ct_latest": 52,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o2-1": {
    "pop_total_now": null,
    "ct_it_now": 0,
    "cm_it_now": null,
    "ct_latest": 0,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o2-2": {
    "pop_total_now": null,
    "ct_it_now": 29,
    "cm_it_now": null,
    "ct_latest": 29,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o2-3": {
    "pop_total_now": null,
    "ct_it_now": 33,
    "cm_it_now": null,
    "ct_latest": 33,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o2-4": {
    "pop_total_now": null,
    "ct_it_now": 0,
    "cm_it_now": null,
    "ct_latest": 0,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o2-5": {
    "pop_total_now": null,
    "ct_it_now": 5,
    "cm_it_now": null,
    "ct_latest": 5,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o2-6": {
    "pop_total_now": null,
    "ct_it_now": 29,
    "cm_it_now": null,
    "ct_latest": 29,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o2-7": {
    "pop_total_now": null,
    "ct_it_now": 5,
    "cm_it_now": null,
    "ct_latest": 5,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o2-8": {
    "pop_total_now": null,
    "ct_it_now": 7,
    "cm_it_now": null,
    "ct_latest": 7,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o2-9": {
    "pop_total_now": null,
    "ct_it_now": 31,
    "cm_it_now": null,
    "ct_latest": 31,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o3-1": {
    "pop_total_now": null,
    "ct_it_now": 41,
    "cm_it_now": null,
    "ct_latest": 41,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o3-2": {
    "pop_total_now": null,
    "ct_it_now": 4,
    "cm_it_now": null,
    "ct_latest": 4,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o3-3": {
    "pop_total_now": null,
    "ct_it_now": 50,
    "cm_it_now": null,
    "ct_latest": 50,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o3-4": {
    "pop_total_now": null,
    "ct_it_now": 29,
    "cm_it_now": null,
    "ct_latest": 29,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o3-5": {
    "pop_total_now": null,
    "ct_it_now": 11,
    "cm_it_now": null,
    "ct_latest": 11,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o3-6": {
    "pop_total_now": null,
    "ct_it_now": 4,
    "cm_it_now": null,
    "ct_latest": 4,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o3-7": {
    "pop_total_now": null,
    "ct_it_now": 5,
    "cm_it_now": null,
    "ct_latest": 5,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o3-8": {
    "pop_total_now": null,
    "ct_it_now": 25,
    "cm_it_now": null,
    "ct_latest": 25,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o3-9": {
    "pop_total_now": null,
    "ct_it_now": 8,
    "cm_it_now": null,
    "ct_latest": 8,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o4-1": {
    "pop_total_now": null,
-   "ct_it_now": 32,
+   "ct_it_now": 34,
    "cm_it_now": null,
-   "ct_latest": 32,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 34,
+   "ct_latest_date": "2026-11-19"
   },
   "o4-2": {
    "pop_total_now": null,
    "ct_it_now": 6,
    "cm_it_now": null,
    "ct_latest": 6,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o4-3": {
    "pop_total_now": null,
    "ct_it_now": 3,
    "cm_it_now": null,
    "ct_latest": 3,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o4-4": {
    "pop_total_now": null,
-   "ct_it_now": 27,
+   "ct_it_now": 28,
    "cm_it_now": null,
-   "ct_latest": 27,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 28,
+   "ct_latest_date": "2026-11-19"
   },
   "o4-5": {
    "pop_total_now": null,
-   "ct_it_now": 38,
+   "ct_it_now": 39,
    "cm_it_now": null,
-   "ct_latest": 38,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 39,
+   "ct_latest_date": "2026-11-19"
   },
   "o4-6": {
    "pop_total_now": null,
    "ct_it_now": 46,
    "cm_it_now": null,
    "ct_latest": 46,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o4-7": {
    "pop_total_now": null,
    "ct_it_now": 5,
    "cm_it_now": null,
    "ct_latest": 5,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o4-8": {
    "pop_total_now": null,
-   "ct_it_now": 35,
+   "ct_it_now": 36,
    "cm_it_now": null,
-   "ct_latest": 35,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 36,
+   "ct_latest_date": "2026-11-19"
   },
   "o4-9": {
    "pop_total_now": null,
    "ct_it_now": 33,
    "cm_it_now": null,
    "ct_latest": 33,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o5-1": {
    "pop_total_now": null,
-   "ct_it_now": 26,
+   "ct_it_now": 28,
    "cm_it_now": null,
-   "ct_latest": 26,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 28,
+   "ct_latest_date": "2026-11-19"
   },
   "o5-2": {
    "pop_total_now": null,
-   "ct_it_now": 9,
+   "ct_it_now": 10,
    "cm_it_now": null,
-   "ct_latest": 9,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 10,
+   "ct_latest_date": "2026-11-19"
   },
   "o5-3": {
    "pop_total_now": null,
    "ct_it_now": 28,
    "cm_it_now": null,
    "ct_latest": 28,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o5-4": {
    "pop_total_now": null,
    "ct_it_now": 47,
    "cm_it_now": null,
    "ct_latest": 47,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o5-5": {
    "pop_total_now": null,
    "ct_it_now": 25,
    "cm_it_now": null,
    "ct_latest": 25,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o5-6": {
    "pop_total_now": null,
-   "ct_it_now": 18,
+   "ct_it_now": 19,
    "cm_it_now": null,
-   "ct_latest": 18,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 19,
+   "ct_latest_date": "2026-11-19"
   },
   "o5-7": {
    "pop_total_now": null,
-   "ct_it_now": 10,
+   "ct_it_now": 11,
    "cm_it_now": null,
-   "ct_latest": 10,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 11,
+   "ct_latest_date": "2026-11-19"
   },
   "o5-8": {
+   "pop_total_now": null,
+   "ct_it_now": 17,
+   "cm_it_now": null,
+   "ct_latest": 17,
+   "ct_latest_date": "2026-11-19"
+  },
+  "o5-9": {
    "pop_total_now": null,
    "ct_it_now": 16,
    "cm_it_now": null,
    "ct_latest": 16,
-   "ct_latest_date": "2026-11-18"
-  },
-  "o5-9": {
-   "pop_total_now": null,
-   "ct_it_now": 15,
-   "cm_it_now": null,
-   "ct_latest": 15,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o6-1": {
    "pop_total_now": null,
    "ct_it_now": 12,
    "cm_it_now": null,
    "ct_latest": 12,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o6-2": {
    "pop_total_now": null,
    "ct_it_now": 33,
    "cm_it_now": null,
    "ct_latest": 33,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o6-3": {
    "pop_total_now": null,
    "ct_it_now": 1,
    "cm_it_now": null,
    "ct_latest": 1,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o6-4": {
    "pop_total_now": null,
    "ct_it_now": 33,
    "cm_it_now": null,
    "ct_latest": 33,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o6-5": {
    "pop_total_now": null,
    "ct_it_now": 39,
    "cm_it_now": null,
    "ct_latest": 39,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o6-6": {
    "pop_total_now": null,
-   "ct_it_now": 44,
+   "ct_it_now": 48,
    "cm_it_now": null,
-   "ct_latest": 44,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 48,
+   "ct_latest_date": "2026-11-19"
   },
   "o6-7": {
    "pop_total_now": null,
    "ct_it_now": 50,
    "cm_it_now": null,
    "ct_latest": 50,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o6-8": {
    "pop_total_now": null,
-   "ct_it_now": 39,
+   "ct_it_now": 40,
    "cm_it_now": null,
-   "ct_latest": 39,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 40,
+   "ct_latest_date": "2026-11-19"
   },
   "o6-9": {
    "pop_total_now": null,
    "ct_it_now": 5,
    "cm_it_now": null,
    "ct_latest": 5,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o7-1": {
    "pop_total_now": null,
-   "ct_it_now": 46,
+   "ct_it_now": 47,
    "cm_it_now": null,
-   "ct_latest": 46,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 47,
+   "ct_latest_date": "2026-11-19"
   },
   "o7-2": {
    "pop_total_now": null,
-   "ct_it_now": 30,
+   "ct_it_now": 31,
    "cm_it_now": null,
-   "ct_latest": 30,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 31,
+   "ct_latest_date": "2026-11-19"
   },
   "o7-3": {
    "pop_total_now": null,
    "ct_it_now": 39,
    "cm_it_now": null,
    "ct_latest": 39,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o7-4": {
    "pop_total_now": null,
-   "ct_it_now": 30,
+   "ct_it_now": 32,
    "cm_it_now": null,
-   "ct_latest": 30,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 32,
+   "ct_latest_date": "2026-11-19"
   },
   "o7-5": {
    "pop_total_now": null,
    "ct_it_now": 40,
    "cm_it_now": null,
    "ct_latest": 40,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o7-6": {
    "pop_total_now": null,
-   "ct_it_now": 10,
+   "ct_it_now": 11,
    "cm_it_now": null,
-   "ct_latest": 10,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 11,
+   "ct_latest_date": "2026-11-19"
   },
   "o7-7": {
    "pop_total_now": null,
-   "ct_it_now": 52,
+   "ct_it_now": 53,
    "cm_it_now": null,
-   "ct_latest": 52,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 53,
+   "ct_latest_date": "2026-11-19"
   },
   "o7-8": {
    "pop_total_now": null,
-   "ct_it_now": 43,
+   "ct_it_now": 45,
    "cm_it_now": null,
-   "ct_latest": 43,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 45,
+   "ct_latest_date": "2026-11-19"
   },
   "o7-9": {
    "pop_total_now": null,
    "ct_it_now": 51,
    "cm_it_now": null,
    "ct_latest": 51,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o8-1": {
    "pop_total_now": null,
    "ct_it_now": 18,
    "cm_it_now": null,
    "ct_latest": 18,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o8-2": {
    "pop_total_now": null,
    "ct_it_now": 93,
    "cm_it_now": null,
    "ct_latest": 93,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o8-3": {
    "pop_total_now": null,
    "ct_it_now": 47,
    "cm_it_now": null,
    "ct_latest": 47,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o8-4": {
    "pop_total_now": null,
    "ct_it_now": 32,
    "cm_it_now": null,
    "ct_latest": 32,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o8-5": {
    "pop_total_now": null,
-   "ct_it_now": 35,
+   "ct_it_now": 36,
    "cm_it_now": null,
-   "ct_latest": 35,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 36,
+   "ct_latest_date": "2026-11-19"
   },
   "o8-6": {
    "pop_total_now": null,
    "ct_it_now": 40,
    "cm_it_now": null,
    "ct_latest": 40,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o8-7": {
    "pop_total_now": null,
-   "ct_it_now": 47,
+   "ct_it_now": 48,
    "cm_it_now": null,
-   "ct_latest": 47,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 48,
+   "ct_latest_date": "2026-11-19"
   },
   "o8-8": {
    "pop_total_now": null,
    "ct_it_now": 0,
    "cm_it_now": null,
    "ct_latest": 0,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o8-9": {
    "pop_total_now": null,
-   "ct_it_now": 36,
+   "ct_it_now": 37,
    "cm_it_now": null,
-   "ct_latest": 36,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 37,
+   "ct_latest_date": "2026-11-19"
   },
   "o9-1": {
    "pop_total_now": null,
    "ct_it_now": 33,
    "cm_it_now": null,
    "ct_latest": 33,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o9-2": {
    "pop_total_now": null,
-   "ct_it_now": 26,
+   "ct_it_now": 27,
    "cm_it_now": null,
-   "ct_latest": 26,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 27,
+   "ct_latest_date": "2026-11-19"
   },
   "o9-3": {
    "pop_total_now": null,
    "ct_it_now": 50,
    "cm_it_now": null,
    "ct_latest": 50,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o9-4": {
    "pop_total_now": null,
-   "ct_it_now": 42,
+   "ct_it_now": 41,
    "cm_it_now": null,
-   "ct_latest": 42,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 41,
+   "ct_latest_date": "2026-11-19"
   },
   "o9-5": {
    "pop_total_now": null,
    "ct_it_now": 16,
    "cm_it_now": null,
    "ct_latest": 16,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o9-6": {
    "pop_total_now": null,
    "ct_it_now": 33,
    "cm_it_now": null,
    "ct_latest": 33,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o9-7": {
    "pop_total_now": null,
    "ct_it_now": 39,
    "cm_it_now": null,
    "ct_latest": 39,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o9-8": {
    "pop_total_now": null,
    "ct_it_now": 54,
    "cm_it_now": null,
    "ct_latest": 54,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o9-9": {
    "pop_total_now": null,
-   "ct_it_now": 62,
+   "ct_it_now": 63,
    "cm_it_now": null,
-   "ct_latest": 62,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 63,
+   "ct_latest_date": "2026-11-19"
   },
   "o10-1": {
    "pop_total_now": null,
    "ct_it_now": 9,
    "cm_it_now": null,
    "ct_latest": 9,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o10-2": {
    "pop_total_now": null,
    "ct_it_now": 55,
    "cm_it_now": null,
    "ct_latest": 55,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o10-3": {
    "pop_total_now": null,
    "ct_it_now": 47,
    "cm_it_now": null,
    "ct_latest": 47,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o10-4": {
    "pop_total_now": null,
    "ct_it_now": 33,
    "cm_it_now": null,
    "ct_latest": 33,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o10-5": {
    "pop_total_now": null,
    "ct_it_now": 23,
    "cm_it_now": null,
    "ct_latest": 23,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o10-6": {
    "pop_total_now": null,
-   "ct_it_now": 159,
+   "ct_it_now": 160,
    "cm_it_now": null,
-   "ct_latest": 159,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 160,
+   "ct_latest_date": "2026-11-19"
   },
   "o10-7": {
    "pop_total_now": null,
    "ct_it_now": 93,
    "cm_it_now": null,
    "ct_latest": 93,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o10-8": {
    "pop_total_now": null,
    "ct_it_now": 27,
    "cm_it_now": null,
    "ct_latest": 27,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o10-9": {
    "pop_total_now": null,
    "ct_it_now": 27,
    "cm_it_now": null,
    "ct_latest": 27,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o11-1": {
    "pop_total_now": null,
-   "ct_it_now": 107,
+   "ct_it_now": 108,
    "cm_it_now": null,
-   "ct_latest": 107,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 108,
+   "ct_latest_date": "2026-11-19"
   },
   "o11-2": {
    "pop_total_now": null,
    "ct_it_now": 64,
    "cm_it_now": null,
    "ct_latest": 64,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o11-3": {
    "pop_total_now": null,
-   "ct_it_now": 111,
+   "ct_it_now": 112,
    "cm_it_now": null,
-   "ct_latest": 111,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 112,
+   "ct_latest_date": "2026-11-19"
   },
   "o11-4": {
    "pop_total_now": null,
-   "ct_it_now": 85,
+   "ct_it_now": 84,
    "cm_it_now": null,
-   "ct_latest": 85,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 84,
+   "ct_latest_date": "2026-11-19"
   },
   "o11-5": {
    "pop_total_now": null,
    "ct_it_now": 33,
    "cm_it_now": null,
    "ct_latest": 33,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o11-6": {
    "pop_total_now": null,
    "ct_it_now": 37,
    "cm_it_now": null,
    "ct_latest": 37,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o11-7": {
    "pop_total_now": null,
    "ct_it_now": 14,
    "cm_it_now": null,
    "ct_latest": 14,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o11-8": {
    "pop_total_now": null,
    "ct_it_now": 74,
    "cm_it_now": null,
    "ct_latest": 74,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o11-9": {
    "pop_total_now": null,
-   "ct_it_now": 64,
+   "ct_it_now": 63,
    "cm_it_now": null,
-   "ct_latest": 64,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 63,
+   "ct_latest_date": "2026-11-19"
   },
   "o12-1": {
    "pop_total_now": null,
-   "ct_it_now": 24,
+   "ct_it_now": 25,
    "cm_it_now": null,
-   "ct_latest": 24,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 25,
+   "ct_latest_date": "2026-11-19"
   },
   "o12-2": {
    "pop_total_now": null,
    "ct_it_now": 88,
    "cm_it_now": null,
    "ct_latest": 88,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o12-3": {
    "pop_total_now": null,
    "ct_it_now": 3,
    "cm_it_now": null,
    "ct_latest": 3,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o12-4": {
    "pop_total_now": null,
    "ct_it_now": 38,
    "cm_it_now": null,
    "ct_latest": 38,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o12-5": {
    "pop_total_now": null,
    "ct_it_now": 99,
    "cm_it_now": null,
    "ct_latest": 99,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o12-6": {
    "pop_total_now": null,
    "ct_it_now": 76,
    "cm_it_now": null,
    "ct_latest": 76,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o12-7": {
    "pop_total_now": null,
    "ct_it_now": 27,
    "cm_it_now": null,
    "ct_latest": 27,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o12-8": {
    "pop_total_now": null,
    "ct_it_now": 33,
    "cm_it_now": null,
    "ct_latest": 33,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o12-9": {
    "pop_total_now": null,
    "ct_it_now": 71,
    "cm_it_now": null,
    "ct_latest": 71,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o13-1": {
    "pop_total_now": null,
    "ct_it_now": 40,
    "cm_it_now": null,
    "ct_latest": 40,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o13-2": {
    "pop_total_now": null,
    "ct_it_now": 5,
    "cm_it_now": null,
    "ct_latest": 5,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o13-3": {
    "pop_total_now": null,
    "ct_it_now": 19,
    "cm_it_now": null,
    "ct_latest": 19,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o13-4": {
    "pop_total_now": null,
-   "ct_it_now": 59,
+   "ct_it_now": 58,
    "cm_it_now": null,
-   "ct_latest": 59,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 58,
+   "ct_latest_date": "2026-11-19"
   },
   "o13-5": {
    "pop_total_now": null,
-   "ct_it_now": 22,
+   "ct_it_now": 23,
    "cm_it_now": null,
-   "ct_latest": 22,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 23,
+   "ct_latest_date": "2026-11-19"
   },
   "o13-6": {
    "pop_total_now": null,
-   "ct_it_now": 19,
+   "ct_it_now": 18,
    "cm_it_now": null,
-   "ct_latest": 19,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 18,
+   "ct_latest_date": "2026-11-19"
   },
   "o13-7": {
    "pop_total_now": null,
    "ct_it_now": 36,
    "cm_it_now": null,
    "ct_latest": 36,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o13-8": {
    "pop_total_now": null,
    "ct_it_now": 4,
    "cm_it_now": null,
    "ct_latest": 4,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o13-9": {
    "pop_total_now": null,
    "ct_it_now": 24,
    "cm_it_now": null,
    "ct_latest": 24,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o14-1": {
    "pop_total_now": null,
    "ct_it_now": 62,
    "cm_it_now": null,
    "ct_latest": 62,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o14-2": {
    "pop_total_now": null,
    "ct_it_now": 108,
    "cm_it_now": null,
    "ct_latest": 108,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o14-3": {
    "pop_total_now": null,
    "ct_it_now": 41,
    "cm_it_now": null,
    "ct_latest": 41,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o14-4": {
    "pop_total_now": null,
    "ct_it_now": 99,
    "cm_it_now": null,
    "ct_latest": 99,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o14-5": {
    "pop_total_now": null,
    "ct_it_now": 41,
    "cm_it_now": null,
    "ct_latest": 41,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o14-6": {
    "pop_total_now": null,
-   "ct_it_now": 184,
+   "ct_it_now": 185,
    "cm_it_now": null,
-   "ct_latest": 184,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 185,
+   "ct_latest_date": "2026-11-19"
   },
   "o14-7": {
    "pop_total_now": null,
    "ct_it_now": 35,
    "cm_it_now": null,
    "ct_latest": 35,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o14-8": {
    "pop_total_now": null,
    "ct_it_now": 47,
    "cm_it_now": null,
    "ct_latest": 47,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o14-9": {
    "pop_total_now": null,
    "ct_it_now": 5,
    "cm_it_now": null,
    "ct_latest": 5,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o15-1": {
    "pop_total_now": null,
    "ct_it_now": 86,
    "cm_it_now": null,
    "ct_latest": 86,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o15-2": {
    "pop_total_now": null,
    "ct_it_now": 49,
    "cm_it_now": null,
    "ct_latest": 49,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o15-3": {
    "pop_total_now": null,
    "ct_it_now": 91,
    "cm_it_now": null,
    "ct_latest": 91,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o15-4": {
    "pop_total_now": null,
    "ct_it_now": 264,
    "cm_it_now": null,
    "ct_latest": 264,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o15-5": {
    "pop_total_now": null,
-   "ct_it_now": 141,
+   "ct_it_now": 140,
    "cm_it_now": null,
-   "ct_latest": 141,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 140,
+   "ct_latest_date": "2026-11-19"
   },
   "o15-6": {
    "pop_total_now": null,
-   "ct_it_now": 95,
+   "ct_it_now": 94,
    "cm_it_now": null,
-   "ct_latest": 95,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 94,
+   "ct_latest_date": "2026-11-19"
   },
   "o15-7": {
    "pop_total_now": null,
    "ct_it_now": 115,
    "cm_it_now": null,
    "ct_latest": 115,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o15-8": {
    "pop_total_now": null,
    "ct_it_now": 69,
    "cm_it_now": null,
    "ct_latest": 69,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o15-9": {
    "pop_total_now": null,
    "ct_it_now": 70,
    "cm_it_now": null,
    "ct_latest": 70,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o16-1": {
    "pop_total_now": null,
-   "ct_it_now": 194,
+   "ct_it_now": 192,
    "cm_it_now": null,
-   "ct_latest": 194,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 192,
+   "ct_latest_date": "2026-11-19"
   },
   "o16-2": {
    "pop_total_now": null,
-   "ct_it_now": 158,
+   "ct_it_now": 154,
    "cm_it_now": null,
-   "ct_latest": 158,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 154,
+   "ct_latest_date": "2026-11-19"
   },
   "o16-3": {
    "pop_total_now": null,
-   "ct_it_now": 103,
+   "ct_it_now": 102,
    "cm_it_now": null,
-   "ct_latest": 103,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 102,
+   "ct_latest_date": "2026-11-19"
   },
   "o16-4": {
    "pop_total_now": null,
    "ct_it_now": 66,
    "cm_it_now": null,
    "ct_latest": 66,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o16-5": {
    "pop_total_now": null,
    "ct_it_now": 49,
    "cm_it_now": null,
    "ct_latest": 49,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o16-6": {
    "pop_total_now": null,
-   "ct_it_now": 224,
+   "ct_it_now": 223,
    "cm_it_now": null,
-   "ct_latest": 224,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest": 223,
+   "ct_latest_date": "2026-11-19"
   },
   "o16-7": {
    "pop_total_now": null,
    "ct_it_now": 21,
    "cm_it_now": null,
    "ct_latest": 21,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o16-8": {
    "pop_total_now": null,
    "ct_it_now": 5,
    "cm_it_now": null,
    "ct_latest": 5,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o16-9": {
    "pop_total_now": null,
    "ct_it_now": 2,
    "cm_it_now": null,
    "ct_latest": 2,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o17-1": {
    "pop_total_now": null,
    "ct_it_now": 1,
    "cm_it_now": null,
    "ct_latest": 1,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o17-2": {
    "pop_total_now": null,
    "ct_it_now": 3,
    "cm_it_now": null,
    "ct_latest": 3,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o17-3": {
    "pop_total_now": null,
    "ct_it_now": 5,
    "cm_it_now": null,
    "ct_latest": 5,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o17-4": {
    "pop_total_now": null,
    "ct_it_now": 0,
    "cm_it_now": null,
    "ct_latest": 0,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o17-5": {
    "pop_total_now": null,
    "ct_it_now": 1,
    "cm_it_now": null,
    "ct_latest": 1,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   },
   "o17-6": {
    "pop_total_now": null,
    "ct_it_now": 1,
    "cm_it_now": null,
    "ct_latest": 1,
-   "ct_latest_date": "2026-11-18"
+   "ct_latest_date": "2026-11-19"
   }
  }
 }

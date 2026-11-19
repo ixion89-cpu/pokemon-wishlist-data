@@ -34,6 +34,12 @@
   "POR": {"year": 2026, "release_date": "2026-03-27", "name": "Perfect Order"},
   "CRI": {"year": 2026, "release_date": "2026-05-22", "name": "Chaos Rising"},
   "PBL": {"year": 2026, "release_date": "2026-07-17", "name": "Pitch Black"},
-  "DLR": {"year": 2026, "release_date": "2026-11-06", "name": "Delta Reign"}
+  "DLR": {"year": 2026, "release_date": "2026-11-06", "name": "Delta Reign"},
+  "C25": {"year": 2021, "release_date": "2021-10-08", "name": "Celebrations"},
+  "FCO": {"year": 2016, "release_date": "2016-05-02", "name": "Fates Collide"},
+  "SCR": {"year": 2024, "release_date": "2024-09-13", "name": "Stellar Crown"},
+  "N2": {"year": 2001, "release_date": "2001-06-01", "name": "Neo Discovery"},
+  "30C": {"year": 2026, "release_date": "2026-09-16", "name": "30th Celebration"},
+  "GYARADOS": {"year": 2010, "release_date": "2010-05-12", "name": "HS Trainer Kit (Gyarados)"}
  }
 }

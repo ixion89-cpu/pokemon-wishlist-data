@@ -194,6 +194,30 @@ h1 { margin: 0; font-size: 34px; }
   background: var(--sun);
 }
 .owned-total { grid-column: 1 / -1; }
+.owned-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.owned-stats p { margin: 0; min-width: 0; }
+.owned-stats .k { display: block; }
+.gain-line { margin: 8px 0 0; font-size: 16px; font-weight: 800; }
+.paid-line {
+  margin: 3px 0 0; font-size: 9px; font-weight: 800; line-height: 1.25;
+  text-align: center; overflow-wrap: anywhere;
+}
+.paid-line.muted, .paid-missing { color: #5c564e; font-weight: 700; }
+.paid-detail { margin: 4px 0 0; font-size: 16px; font-weight: 800; }
+.paid-detail .k { margin-right: 6px; font-size: 12px; letter-spacing: .04em; }
+.set-controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 10px; }
+.set-sort { display: flex; gap: 6px; }
+.set-year { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 800; }
+.set-year select {
+  min-height: 40px; border: 3px solid #111; border-radius: 999px;
+  background: #fff; padding: 0 12px; font: inherit; font-weight: 800;
+}
+.owned-stats b { font-size: 18px; letter-spacing: -0.03em; }
+@media (max-width: 420px) {
+  .owned-stats { grid-template-columns: 1fr; gap: 6px; }
+  .set-year { flex: 1 1 100%; }
+  .set-year select { flex: 1; min-width: 0; width: 100%; }
+}
 .src-badge { position: absolute; top: 8px; left: 8px; z-index: 2; }
 .sleeve .price { font-size: 11px; letter-spacing: -0.04em; white-space: nowrap; }
 .sleeve-compact .price { font-size: 12px; }

@@ -14,6 +14,9 @@ const state = {
   totalRange: "MAX",
   perfRange: "MAX",
   perfId: sessionStorage.getItem("wl-perf") || "",
+  setSort: sessionStorage.getItem("wl-set-sort") || "value",
+  setSortDir: sessionStorage.getItem("wl-set-dir") || "desc",
+  setYear: sessionStorage.getItem("wl-set-year") || "",
   sheet: false,
 };
 
@@ -47,6 +50,20 @@ function pct(v) {
   if (n == null) return "";
   const body = new Intl.NumberFormat("it-IT", { maximumFractionDigits: 1, minimumFractionDigits: 1 }).format(Math.abs(n));
   return (n > 0 ? "+" : n < 0 ? "−" : "") + body + "%";
+}
+function pct2(v) {
+  const n = num(v);
+  if (n == null) return "";
+  const body = new Intl.NumberFormat("it-IT", { maximumFractionDigits: 2, minimumFractionDigits: 2 }).format(Math.abs(n));
+  return (n > 0 ? "+" : n < 0 ? "−" : "") + body + "%";
+}
+function round2(v) {
+  return Math.round(v * 100) / 100;
+}
+function gainClass(v) {
+  const n = num(v);
+  if (n == null || n === 0) return "";
+  return n < 0 ? "down" : "up";
 }
 function hasOwn(obj, key) {
   return Object.prototype.hasOwnProperty.call(obj || {}, key);
@@ -240,13 +257,70 @@ function basketOf(cards) {
     done: wishlist > 0 ? Math.max(0, Math.min(100, ((wishlist - remain) / wishlist) * 100)) : 0,
   };
 }
+function cardPaid(card) {
+  const market = lineValue(card);
+  const cost = num(card.purchase_cost_eur);
+  const fallback = card.purchase_source === "market_fallback";
+  if (cost == null && market == null) return null;
+  if (fallback) return { fallback: true, cost, gain: market != null && cost != null ? round2(market - cost) : 0, gainPct: 0, market };
+  if (cost == null) return { fallback: true, cost: market, gain: 0, gainPct: 0, market };
+  if (market == null) return { fallback: false, cost, gain: null, gainPct: null, market: null };
+  const gain = round2(market - cost);
+  return { fallback: false, cost, gain, gainPct: cost ? (gain / cost) * 100 : null, market };
+}
+function ownedPortfolio(cards) {
+  let value = 0, spent = 0, priced = 0;
+  const copies = cards.reduce((sum, card) => sum + copiesOf(card), 0);
+  cards.forEach((card) => {
+    const market = lineValue(card);
+    let cost = num(card.purchase_cost_eur);
+    if (market == null && cost == null) return;
+    if (market != null) { value += market; priced += 1; }
+    if (cost == null) cost = market;
+    if (cost != null) spent += cost;
+  });
+  value = round2(value);
+  spent = round2(spent);
+  const gain = round2(value - spent);
+  return {
+    value, spent, gain, gainPct: spent ? (gain / spent) * 100 : null,
+    priced, copies, unpriced: cards.length - priced,
+  };
+}
+function paidMark(card, collectionId) {
+  if (!isOwned(collectionId)) return "";
+  const paid = cardPaid(card);
+  if (!paid) return "";
+  if (paid.fallback) return `<p class="paid-line muted">acquisto n.d.</p>`;
+  const gain = paid.gainPct == null ? "" : `<span class="delta ${gainClass(paid.gain)}">${pct2(paid.gainPct)}</span>`;
+  return `<p class="paid-line"><span>Pagato ${money(paid.cost)}</span>${gain}</p>`;
+}
+function ownedPaidHtml(card) {
+  const paid = cardPaid(card);
+  const lines = [];
+  if (!paid || paid.fallback) {
+    lines.push(`<p class="quiet paid-missing">Prezzo d'acquisto non disponibile</p>`);
+  } else {
+    const gain = paid.gain == null ? "" : ` · <span class="delta ${gainClass(paid.gain)}">${signedMoney(paid.gain)} (${pct2(paid.gainPct)})</span>`;
+    lines.push(`<p class="paid-detail"><span class="k">Pagato</span> <b class="nums">${money(paid.cost)}</b>${gain}</p>`);
+  }
+  if (card.purchase_date) lines.push(`<p class="quiet">Acquisto del ${esc(formatDay(card.purchase_date))}</p>`);
+  if (card.purchase_status === "in_magazzino_zero") lines.push(`<p class="quiet">In magazzino Zero</p>`);
+  return lines.join("");
+}
 function basketHtml(cards, generatedAt, meta) {
   if (meta && meta.owned) {
-    const tot = collectionTotal(cards);
-    const copies = cards.reduce((sum, card) => sum + copiesOf(card), 0);
-    const unpriced = cards.length - tot.priced;
-    return `<section class="basket" aria-label="Totali">
-      <div class="tile mint owned-total"><p class="k">Totale</p><b class="nums">${money(tot.total)}</b><p class="meta">${tot.priced} prezzi · ${copies} copie${unpriced ? ` · ${unpriced} non prezzate` : ""}</p></div>
+    const tot = ownedPortfolio(cards);
+    const cls = gainClass(tot.gain);
+    return `<section class="basket owned-basket" aria-label="Totali">
+      <div class="tile mint owned-total">
+        <div class="owned-stats">
+          <p><span class="k">Valore</span><b class="nums">${money(tot.value)}</b></p>
+          <p><span class="k">Importo speso</span><b class="nums">${money(tot.spent)}</b></p>
+        </div>
+        <p class="gain-line delta ${cls}">${signedMoney(tot.gain)} (${pct2(tot.gainPct)})</p>
+        <p class="meta">${tot.priced} prezzi · ${tot.copies} copie${tot.unpriced ? ` · ${tot.unpriced} non prezzate` : ""}</p>
+      </div>
     </section>`;
   }
   const b = basketOf(cards);
@@ -322,8 +396,6 @@ function activeCollection() {
 function pickCollection() {
   const fromUrl = collectionFromUrl();
   if (fromUrl && state.collections.some((c) => c.id === fromUrl)) return fromUrl;
-  const saved = localStorage.getItem("wl-collection");
-  if (saved && state.collections.some((c) => c.id === saved)) return saved;
   return state.collections[0] ? state.collections[0].id : "";
 }
 function cardTitle(card) { return card.name_it || card.name || ""; }
@@ -592,6 +664,7 @@ function sleeveHtml(card, collectionId, mode) {
       <div class="art">${img}</div>
       ${price}
       ${marks}
+      ${paidMark(card, collectionId)}
       ${card.pokemon_reverse ? `<p class="meta num">Reverse</p>` : ""}
     </a>`;
   }
@@ -602,6 +675,7 @@ function sleeveHtml(card, collectionId, mode) {
       ${q.badge ? `<span class="src-badge"><span class="badge partial">${esc(q.badge)}</span></span>` : ""}
       ${price}
       ${marks}
+      ${paidMark(card, collectionId)}
       <p class="name">${esc(cardTitle(card))}</p>
       <p class="meta num">${esc(cardNumber(card))}</p>
       ${sleevePop(card)}
@@ -619,6 +693,7 @@ function sleeveHtml(card, collectionId, mode) {
     <div class="art">${img}</div>
     ${price}
     ${marks}
+    ${paidMark(card, collectionId)}
     ${source ? `<p class="src-label">${esc(source)}</p>` : ""}
     ${sleevePriceChange(card)}
     <p class="name">${esc(cardTitle(card))}</p>
@@ -1059,7 +1134,7 @@ function setSummaryHtml(cards) {
     if (!groups.has(code)) groups.set(code, []);
     groups.get(code).push(card);
   });
-  const rows = [...groups.entries()].map(([code, list]) => {
+  let rows = [...groups.entries()].map(([code, list]) => {
     const info = catalog[String(code).toUpperCase()] || {};
     const copies = list.reduce((sum, card) => sum + copiesOf(card), 0);
     let value = 0, missing = 0;
@@ -1071,17 +1146,48 @@ function setSummaryHtml(cards) {
     const years = [...new Set(list.map((card) => card.release_year).filter(Boolean))];
     const year = info.year || (years.length === 1 ? years[0] : null);
     return {
-      code, year, logo: info.logo || "",
+      code, year: year == null ? null : Number(year), logo: info.logo || "",
       name: info.name || list[0].set || list[0].set_it || code,
       copies, value: Math.round(value * 100) / 100, missing,
     };
-  }).sort((a, b) => b.value - a.value || String(a.name).localeCompare(String(b.name), "it"));
-  return `<section class="sets"><h2 class="section-title">Espansioni</h2><div class="set-list">${rows.map((r) => `
+  });
+  const years = [...new Set(rows.map((row) => row.year).filter((year) => year != null))].sort((a, b) => b - a);
+  const selectedYear = state.setYear && years.some((year) => String(year) === String(state.setYear)) ? String(state.setYear) : "";
+  if (selectedYear) rows = rows.filter((row) => String(row.year) === selectedYear);
+  const dir = state.setSortDir === "asc" ? 1 : -1;
+  const byName = (a, b) => String(a.name).localeCompare(String(b.name), "it");
+  rows.sort((a, b) => {
+    if (state.setSort === "year") {
+      if (a.year == null && b.year == null) return byName(a, b);
+      if (a.year == null) return 1;
+      if (b.year == null) return -1;
+      if (a.year !== b.year) return (a.year - b.year) * dir;
+      return byName(a, b);
+    }
+    if (a.value !== b.value) return (a.value - b.value) * dir;
+    return byName(a, b);
+  });
+  const arrow = (key) => state.setSort === key ? (state.setSortDir === "asc" ? "↑" : "↓") : "";
+  const list = rows.length ? rows.map((r) => `
     <article class="set-row">
       ${r.logo ? `<img class="set-logo" alt="" data-code="${esc(r.code)}" src="${esc(r.logo)}">` : `<span class="set-badge">${esc(String(r.code).slice(0, 4))}</span>`}
       <div><strong>${esc(r.name)}</strong><p class="meta">${r.year ? esc(String(r.year)) : "anno n.d."} · ${r.copies} copie${r.missing ? ` · ${r.missing} n.d.` : ""}</p></div>
       <b class="nums">${money(r.value)}</b>
-    </article>`).join("")}</div></section>`;
+    </article>`).join("") : `<p class="quiet">Nessuna espansione in questo anno.</p>`;
+  return `<section class="sets"><h2 class="section-title">Espansioni</h2>
+    <div class="set-controls">
+      <div class="set-sort" role="group" aria-label="Ordina le espansioni">
+        <button class="chip ${state.setSort === "value" ? "on" : ""}" type="button" data-set-sort="value">Valore set ${arrow("value")}</button>
+        <button class="chip ${state.setSort === "year" ? "on" : ""}" type="button" data-set-sort="year">Anno ${arrow("year")}</button>
+      </div>
+      <label class="set-year">Anno
+        <select data-set-year aria-label="Filtra per anno">
+          <option value="">Tutti</option>
+          ${years.map((year) => `<option value="${year}" ${String(year) === selectedYear ? "selected" : ""}>${year}</option>`).join("")}
+        </select>
+      </label>
+    </div>
+    <div class="set-list">${list}</div></section>`;
 }
 async function loadExtra(forId) {
   const meta = state.collections.find((c) => c.id === forId) || activeCollection() || {};
@@ -1246,6 +1352,7 @@ async function renderCard(id, cardId) {
     <section class="pricebox">
       <p class="label">PREZZO MINIMO · ${esc(condLabel)} · ${lang.flag} ${lang.name.toUpperCase()} · ${esc(sourceName(q.source))}${card.fallback ? " · DA NM" : ""}</p>
       <p class="big">${holding == null ? "n.d." : money(holding)}</p>
+      ${meta.owned ? ownedPaidHtml(card) : ""}
       ${card.quantity && copiesOf(card) > 1 ? `<p class="quiet">${esc(card.quantity)} copie · unitario ${q.price == null ? "n.d." : money(q.price)}</p>` : ""}
       ${show30 ? `<p class="delta ${change30.diff < 0 ? "down" : "up"}">${change30.diff < 0 ? "▼" : "▲"} ${pct(change30.pct)} · ${signedMoney(change30.diff)} in 30 giorni</p>` : ""}
       <p class="quiet">Prezzo medio ${avgPrice == null ? "n/d" : money(avgPrice)}</p>
@@ -1286,7 +1393,7 @@ async function renderCard(id, cardId) {
       ${minShown.some((p) => p.notify) ? `<p class="quiet">Tratteggio: storico ricostruito da TCGNotify.</p>` : ""}
       <p class="quiet">${state.chartMarket === "cardmarket" ? "Cardmarket · Near Mint" : "CardTrader · Near Mint"}</p>
     </section>
-    ${purchaseBox(card, q)}
+    ${meta.owned ? "" : purchaseBox(card, q)}
     ${offersHtml}
     ${card.notes ? `<p class="note">${esc(card.notes)}</p>` : ""}
   `;
@@ -1545,6 +1652,16 @@ document.addEventListener("click", (e) => {
     render();
     return;
   }
+  const setSort = e.target.closest("[data-set-sort]");
+  if (setSort) {
+    const key = setSort.dataset.setSort;
+    if (state.setSort === key) state.setSortDir = state.setSortDir === "desc" ? "asc" : "desc";
+    else { state.setSort = key; state.setSortDir = "desc"; }
+    sessionStorage.setItem("wl-set-sort", state.setSort);
+    sessionStorage.setItem("wl-set-dir", state.setSortDir);
+    render();
+    return;
+  }
   const sort = e.target.closest("[data-sort]");
   if (sort) {
     const id = route().id || state.collectionId;
@@ -1583,6 +1700,13 @@ document.addEventListener("keydown", (e) => {
   } else if (e.key === "ArrowLeft") {
     if (r.name === "binder") turn(-1);
   }
+});
+document.addEventListener("change", (e) => {
+  const year = e.target.closest("[data-set-year]");
+  if (!year) return;
+  state.setYear = year.value || "";
+  sessionStorage.setItem("wl-set-year", state.setYear);
+  render();
 });
 window.addEventListener("hashchange", render);
 try { localStorage.removeItem("wl-price-mode"); } catch (e) { /* ignore */ }

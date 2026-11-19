@@ -490,6 +490,58 @@
    "year_source": "pokemontcg.io",
    "logo_source": "pokemontcg.io",
    "ptcg_id": "sv6"
+  },
+  "C25": {
+   "name": "Celebrations",
+   "year": 2021,
+   "logo": "https://images.pokemontcg.io/cel25/logo.png",
+   "year_source": "pokemontcg.io",
+   "logo_source": "pokemontcg.io",
+   "ptcg_id": "cel25",
+   "release_date": "2021-10-08"
+  },
+  "FCO": {
+   "name": "Fates Collide",
+   "year": 2016,
+   "logo": "https://images.pokemontcg.io/xy10/logo.png",
+   "year_source": "pokemontcg.io",
+   "logo_source": "pokemontcg.io",
+   "ptcg_id": "xy10",
+   "release_date": "2016-05-02"
+  },
+  "SCR": {
+   "name": "Stellar Crown",
+   "year": 2024,
+   "logo": "https://images.pokemontcg.io/sv7/logo.png",
+   "year_source": "pokemon.com",
+   "logo_source": "pokemontcg.io",
+   "ptcg_id": "sv7",
+   "release_date": "2024-09-13"
+  },
+  "N2": {
+   "name": "Neo Discovery",
+   "year": 2001,
+   "logo": "https://images.pokemontcg.io/neo2/logo.png",
+   "year_source": "bulbapedia",
+   "logo_source": "pokemontcg.io",
+   "ptcg_id": "neo2",
+   "release_date": "2001-06-01"
+  },
+  "30C": {
+   "name": "30th Celebration",
+   "year": 2026,
+   "logo": null,
+   "year_source": "pokemon.com",
+   "logo_source": null,
+   "release_date": "2026-09-16"
+  },
+  "GYARADOS": {
+   "name": "HS Trainer Kit (Gyarados)",
+   "year": 2010,
+   "logo": null,
+   "year_source": "bulbapedia",
+   "logo_source": null,
+   "release_date": "2010-05-12"
   }
  }
 }

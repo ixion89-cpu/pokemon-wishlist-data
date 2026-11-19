@@ -1,5 +1,19 @@
 [
  {
+  "id": "my-collection",
+  "name": "My Collection",
+  "owned": true,
+  "file": "collections/owned/wishlist.json",
+  "purchases": "collections/owned/purchases.json",
+  "history": "collections/owned/history/index.json",
+  "csv": "collections/owned/price_history.csv",
+  "cardmarket": "collections/owned/cardmarket.json",
+  "tcgnotify": "collections/owned/tcgnotify_history.json",
+  "totals": "collections/owned/total_history.json",
+  "pop": "collections/owned/pop_summary.json",
+  "pop_history": "collections/owned/pop_history.json"
+ },
+ {
   "id": "wishlist-modern",
   "name": "Wishlist - modern",
   "file": "wishlist.json",
@@ -38,19 +52,5 @@
   "pop": "collections/gold/pop_summary.json",
   "pop_history": "collections/gold/pop_history.json",
   "order": "release"
- },
- {
-  "id": "my-collection",
-  "name": "My Collection",
-  "owned": true,
-  "file": "collections/owned/wishlist.json",
-  "purchases": "collections/owned/purchases.json",
-  "history": "collections/owned/history/index.json",
-  "csv": "collections/owned/price_history.csv",
-  "cardmarket": "collections/owned/cardmarket.json",
-  "tcgnotify": "collections/owned/tcgnotify_history.json",
-  "totals": "collections/owned/total_history.json",
-  "pop": "collections/owned/pop_summary.json",
-  "pop_history": "collections/owned/pop_history.json"
  }
 ]

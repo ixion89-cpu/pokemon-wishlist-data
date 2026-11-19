@@ -426,11 +426,60 @@ def apply_prices(cards: list[dict], raw: dict, graded: dict) -> None:
         card["price_ct_eur"] = drop_placeholders(c)[0]["price_eur"] if drop_placeholders(c) else None
 
 
+def refresh_purchase(card: dict) -> None:
+    """Keep purchase gain aligned with today's market price.
+
+    CardTrader and Collectr costs stay as recorded. A market_fallback cost
+    tracks the current Italian price, so its gain stays zero. Cards with
+    neither a market price nor a purchase cost are left unset.
+    """
+    price = card.get("price_final_eur")
+    qty = card.get("quantity") or 1
+    if card.get("purchase_source") == "market_fallback" and isinstance(price, (int, float)):
+        card["purchase_price_eur"] = price
+        card["purchase_cost_eur"] = round(price * qty, 2)
+        prices = card.get("purchase_prices_eur")
+        if isinstance(prices, list) and len(prices) == qty:
+            card["purchase_prices_eur"] = [price] * qty
+    cost = card.get("purchase_cost_eur")
+    if isinstance(price, (int, float)) and isinstance(cost, (int, float)):
+        gain = round(price * qty - cost, 2)
+        card["gain_eur"] = gain
+        card["gain_pct"] = round(gain / cost * 100, 2) if cost else None
+    else:
+        card["gain_eur"] = None
+        card["gain_pct"] = None
+
+
+def portfolio_totals(cards: list[dict]) -> dict:
+    value = spent = 0.0
+    for card in cards:
+        price = card.get("price_final_eur")
+        qty = card.get("quantity") or 1
+        line = round(price * qty, 2) if isinstance(price, (int, float)) else None
+        cost = card.get("purchase_cost_eur")
+        if line is None and not isinstance(cost, (int, float)):
+            continue
+        if line is not None:
+            value += line
+        spent += cost if isinstance(cost, (int, float)) else line
+    value = round(value, 2)
+    spent = round(spent, 2)
+    gain = round(value - spent, 2)
+    return {
+        "value_total_eur": value,
+        "spent_total_eur": spent,
+        "gain_eur": gain,
+        "gain_pct": round(gain / spent * 100, 2) if spent else None,
+    }
+
+
 def update_wishlist(cards: list[dict], date: str) -> None:
     data = json.loads(WISHLIST.read_text())
     idmap = {c["id"]: c for c in cards}
     for rec in data["cards"]:
         rec.update(idmap.get(rec["id"], {}))
+        refresh_purchase(rec)
     priced = [c for c in data["cards"] if isinstance(c.get("price_final_eur"), (int, float))]
     total = round(sum(c["price_final_eur"] * c.get("quantity", 1) for c in priced), 2)
     non_nm = [c for c in data["cards"] if not c.get("graded") and (c.get("condition_code") or "NM") != "NM"]
@@ -453,6 +502,7 @@ def update_wishlist(cards: list[dict], date: str) -> None:
         "graded": len(graded),
         "graded_priced": sum(1 for c in graded if c.get("price_final_eur") is not None),
         "date": date,
+        **portfolio_totals(data["cards"]),
     })
     WISHLIST.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
     print(

@@ -2,7 +2,7 @@
  "reconstruction": true,
  "real_from": "2026-11-10",
  "max_from": "2026-11-14",
- "cards_total": 62,
+ "cards_total": 73,
  "discarded_cm_points": 66,
  "note": "Fino al giorno prima degli snapshot reali il totale è ricostruito: minimo CardTrader NM di TCGNotify, altrimenti Cardmarket se non supera 3 volte la mediana CardTrader della carta, altrimenti l'ultimo prezzo entro 7 giorni. Dal 2026-11-10 si usa price_final degli snapshot.",
  "events": [
@@ -26,6 +26,24 @@
     "p9-9"
    ],
    "count": 1
+  },
+  {
+   "date": "2026-11-20",
+   "label": "carte aggiunte",
+   "cards": [
+    "p14-1",
+    "p14-2",
+    "p14-3",
+    "p14-4",
+    "p14-5",
+    "p14-6",
+    "p14-7",
+    "p14-8",
+    "p14-9",
+    "p15-1",
+    "p15-2"
+   ],
+   "count": 11
   }
  ],
  "card_first_price_day": {
@@ -35,7 +53,18 @@
   "p8-9": "2026-11-14",
   "p9-1": "2026-11-14",
   "p9-2": "2026-11-14",
-  "p9-9": "2026-11-15"
+  "p9-9": "2026-11-15",
+  "p14-1": "2026-11-20",
+  "p14-2": "2026-11-20",
+  "p14-3": "2026-11-20",
+  "p14-4": "2026-11-20",
+  "p14-5": "2026-11-20",
+  "p14-6": "2026-11-20",
+  "p14-7": "2026-11-20",
+  "p14-8": "2026-11-20",
+  "p14-9": "2026-11-20",
+  "p15-1": "2026-11-20",
+  "p15-2": "2026-11-20"
  },
  "days": [
   {
@@ -6082,6 +6111,15 @@
    "total_eur": 9714.89,
    "cards_priced": 62,
    "cards_ct": 62,
+   "cards_cm": 0,
+   "cards_carry": 0,
+   "source": "snapshot"
+  },
+  {
+   "date": "2026-11-20",
+   "total_eur": 10036.08,
+   "cards_priced": 73,
+   "cards_ct": 73,
    "cards_cm": 0,
    "cards_carry": 0,
    "source": "snapshot"

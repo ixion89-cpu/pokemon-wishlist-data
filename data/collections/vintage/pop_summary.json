@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-19T06:36:00+01:00",
+ "generated_at": "2026-11-20T06:42:00+01:00",
  "definition": "ct_it = copie CardTrader lingua target NM non gradate; ct_it_all = tutte le condizioni; cm_it = copie Cardmarket lingua target, tutte le condizioni (TCGNotify); total = ct_it + cm_it; total_all = ct_it_all + cm_it. Nessuna interpolazione.",
  "cards": {
   "p3-5": {
@@ -11,7 +11,7 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 13,
    "ct_latest": 2,
-   "ct_latest_date": "2026-11-19",
+   "ct_latest_date": "2026-11-20",
    "ct_change_30d_pct": 0.0,
    "ct_base_date": "2026-10-18"
   },
@@ -24,7 +24,7 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 12,
    "ct_latest": 0,
-   "ct_latest_date": "2026-11-19",
+   "ct_latest_date": "2026-11-20",
    "ct_change_30d_pct": null,
    "ct_base_date": "2026-10-18"
   },
@@ -37,7 +37,7 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 13,
    "ct_latest": 4,
-   "ct_latest_date": "2026-11-19",
+   "ct_latest_date": "2026-11-20",
    "ct_change_30d_pct": 33.3,
    "ct_base_date": "2026-10-18"
   },
@@ -50,7 +50,7 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 14,
    "ct_latest": 3,
-   "ct_latest_date": "2026-11-19",
+   "ct_latest_date": "2026-11-20",
    "ct_change_30d_pct": -40.0,
    "ct_base_date": "2026-10-18"
   },
@@ -63,7 +63,7 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 20,
    "ct_latest": 4,
-   "ct_latest_date": "2026-11-19",
+   "ct_latest_date": "2026-11-20",
    "ct_change_30d_pct": 0.0,
    "ct_base_date": "2026-10-18"
   },
@@ -76,7 +76,7 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 12,
    "ct_latest": 4,
-   "ct_latest_date": "2026-11-19",
+   "ct_latest_date": "2026-11-20",
    "ct_change_30d_pct": 0.0,
    "ct_base_date": "2026-10-18"
   },
@@ -89,7 +89,7 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 16,
    "ct_latest": 3,
-   "ct_latest_date": "2026-11-19",
+   "ct_latest_date": "2026-11-20",
    "ct_change_30d_pct": 50.0,
    "ct_base_date": "2026-10-18"
   },
@@ -102,7 +102,7 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 13,
    "ct_latest": 1,
-   "ct_latest_date": "2026-11-19",
+   "ct_latest_date": "2026-11-20",
    "ct_change_30d_pct": 0.0,
    "ct_base_date": "2026-10-18"
   },
@@ -115,7 +115,7 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 21,
    "ct_latest": 3,
-   "ct_latest_date": "2026-11-19",
+   "ct_latest_date": "2026-11-20",
    "ct_change_30d_pct": -50.0,
    "ct_base_date": "2026-10-18"
   },
@@ -128,7 +128,7 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 9,
    "ct_latest": 2,
-   "ct_latest_date": "2026-11-19",
+   "ct_latest_date": "2026-11-20",
    "ct_change_30d_pct": 0.0,
    "ct_base_date": "2026-10-18"
   },
@@ -141,7 +141,7 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 23,
    "ct_latest": 2,
-   "ct_latest_date": "2026-11-19",
+   "ct_latest_date": "2026-11-20",
    "ct_change_30d_pct": 0.0,
    "ct_base_date": "2026-10-18"
   },
@@ -154,7 +154,7 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 16,
    "ct_latest": 3,
-   "ct_latest_date": "2026-11-19",
+   "ct_latest_date": "2026-11-20",
    "ct_change_30d_pct": -20.0,
    "ct_base_date": "2026-10-18"
   },
@@ -167,7 +167,7 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 5,
    "ct_latest": 0,
-   "ct_latest_date": "2026-11-19",
+   "ct_latest_date": "2026-11-20",
    "ct_change_30d_pct": null,
    "ct_base_date": "2026-10-18"
   },
@@ -180,7 +180,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 0,
-   "ct_latest_date": "2026-11-19",
+   "ct_latest_date": "2026-11-20",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -193,7 +193,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 3,
-   "ct_latest_date": "2026-11-19",
+   "ct_latest_date": "2026-11-20",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -206,7 +206,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 0,
-   "ct_latest_date": "2026-11-19",
+   "ct_latest_date": "2026-11-20",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -219,7 +219,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 10,
-   "ct_latest_date": "2026-11-19",
+   "ct_latest_date": "2026-11-20",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -232,20 +232,20 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 14,
-   "ct_latest_date": "2026-11-19",
+   "ct_latest_date": "2026-11-20",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
   "p9-8": {
    "pop_total_now": 15,
    "pop_date": "2026-11-18",
-   "ct_it_now": 5,
+   "ct_it_now": 4,
    "cm_it_now": 10,
    "pop_change_30d_pct": null,
    "pop_base_date": null,
    "pop_base_total": null,
-   "ct_latest": 5,
-   "ct_latest_date": "2026-11-19",
+   "ct_latest": 4,
+   "ct_latest_date": "2026-11-20",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -258,7 +258,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 0,
-   "ct_latest_date": "2026-11-19",
+   "ct_latest_date": "2026-11-20",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -271,7 +271,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 0,
-   "ct_latest_date": "2026-11-19",
+   "ct_latest_date": "2026-11-20",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -284,9 +284,114 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 0,
-   "ct_latest_date": "2026-11-19",
+   "ct_latest_date": "2026-11-20",
    "ct_change_30d_pct": null,
    "ct_base_date": null
+  },
+  "p12-9": {
+   "ct_it_now": 3,
+   "ct_latest": 3,
+   "ct_latest_date": "2026-11-20"
+  },
+  "p12-8": {
+   "ct_it_now": 1,
+   "ct_latest": 1,
+   "ct_latest_date": "2026-11-20"
+  },
+  "p11-8": {
+   "ct_it_now": 12,
+   "ct_latest": 12,
+   "ct_latest_date": "2026-11-20"
+  },
+  "p11-7": {
+   "ct_it_now": 5,
+   "ct_latest": 5,
+   "ct_latest_date": "2026-11-20"
+  },
+  "p11-2": {
+   "ct_it_now": 8,
+   "ct_latest": 8,
+   "ct_latest_date": "2026-11-20"
+  },
+  "p13-2": {
+   "ct_it_now": 20,
+   "ct_latest": 20,
+   "ct_latest_date": "2026-11-20"
+  },
+  "p12-7": {
+   "ct_it_now": 1,
+   "ct_latest": 1,
+   "ct_latest_date": "2026-11-20"
+  },
+  "p13-3": {
+   "ct_it_now": 4,
+   "ct_latest": 4,
+   "ct_latest_date": "2026-11-20"
+  },
+  "p11-9": {
+   "ct_it_now": 16,
+   "ct_latest": 16,
+   "ct_latest_date": "2026-11-20"
+  },
+  "p12-1": {
+   "ct_it_now": 17,
+   "ct_latest": 17,
+   "ct_latest_date": "2026-11-20"
+  },
+  "p12-3": {
+   "ct_it_now": 12,
+   "ct_latest": 12,
+   "ct_latest_date": "2026-11-20"
+  },
+  "p11-3": {
+   "ct_it_now": 17,
+   "ct_latest": 17,
+   "ct_latest_date": "2026-11-20"
+  },
+  "p12-2": {
+   "ct_it_now": 6,
+   "ct_latest": 6,
+   "ct_latest_date": "2026-11-20"
+  },
+  "p11-6": {
+   "ct_it_now": 29,
+   "ct_latest": 29,
+   "ct_latest_date": "2026-11-20"
+  },
+  "p12-6": {
+   "ct_it_now": 0,
+   "ct_latest": 0,
+   "ct_latest_date": "2026-11-20"
+  },
+  "p13-1": {
+   "ct_it_now": 10,
+   "ct_latest": 10,
+   "ct_latest_date": "2026-11-20"
+  },
+  "p12-5": {
+   "ct_it_now": 1,
+   "ct_latest": 1,
+   "ct_latest_date": "2026-11-20"
+  },
+  "p11-4": {
+   "ct_it_now": 16,
+   "ct_latest": 16,
+   "ct_latest_date": "2026-11-20"
+  },
+  "p11-1": {
+   "ct_it_now": 17,
+   "ct_latest": 17,
+   "ct_latest_date": "2026-11-20"
+  },
+  "p12-4": {
+   "ct_it_now": 10,
+   "ct_latest": 10,
+   "ct_latest_date": "2026-11-20"
+  },
+  "p11-5": {
+   "ct_it_now": 16,
+   "ct_latest": 16,
+   "ct_latest_date": "2026-11-20"
   }
  }
 }

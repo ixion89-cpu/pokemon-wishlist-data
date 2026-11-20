@@ -446,7 +446,9 @@ function cardNumber(card) {
 function sortModeFor(id) {
   const meta = state.collections.find((c) => c.id === id);
   const saved = sessionStorage.getItem("wl-sort-" + id);
-  if (saved) return saved;
+  const owned = isOwned(id);
+  const stale = saved && ((owned && saved.startsWith("pop")) || (!owned && (saved.startsWith("pctchg") || saved.startsWith("pricechg"))));
+  if (saved && !stale) return saved;
   if (meta && meta.order === "release") return "release";
   return state.sort || "desc";
 }
@@ -566,6 +568,20 @@ function applyFilters(cards, id) {
       const rawB = pop[b.id] ? pop[b.id][field] : null;
       const va = typeof rawA === "number" ? rawA : null;
       const vb = typeof rawB === "number" ? rawB : null;
+      if (va == null && vb == null) return byPrice();
+      if (va == null) return 1;
+      if (vb == null) return -1;
+      if (va !== vb) return mode.endsWith("asc") ? va - vb : vb - va;
+      return byPrice();
+    }
+    if (mode === "pctchg-desc" || mode === "pctchg-asc" || mode === "pricechg-desc" || mode === "pricechg-asc") {
+      const metric = (card) => {
+        const paid = cardPaid(card);
+        if (mode.indexOf("pctchg") === 0) return paid && !paid.fallback && typeof paid.gainPct === "number" ? paid.gainPct : null;
+        return paid && !paid.fallback && typeof paid.gain === "number" ? paid.gain : null;
+      };
+      const va = metric(a);
+      const vb = metric(b);
       if (va == null && vb == null) return byPrice();
       if (va == null) return 1;
       if (vb == null) return -1;
@@ -895,8 +911,9 @@ async function renderBinder(id) {
         <button class="chip ${sortModeFor(id) === "release" ? "on" : ""}" type="button" data-sort="release">Uscita</button>
         <button class="chip ${sortModeFor(id) === "desc" ? "on" : ""}" type="button" data-sort="desc">Prezzo ↓</button>
         <button class="chip ${sortModeFor(id) === "asc" ? "on" : ""}" type="button" data-sort="asc">Prezzo ↑</button>
-        ${sortToggle(id, "pop", "Pop")}
-        ${sortToggle(id, "popchg", "Pop %")}
+        ${owned
+          ? `${sortToggle(id, "pctchg", "Percent Change")}${sortToggle(id, "pricechg", "Price Change")}`
+          : `${sortToggle(id, "pop", "Pop")}${sortToggle(id, "popchg", "Pop %")}`}
         <button class="chip" type="button" data-open-filters>Filtri${active ? " · " + active : ""}</button>
       </div>
     </div>

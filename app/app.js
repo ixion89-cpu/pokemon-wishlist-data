@@ -17,6 +17,7 @@ const state = {
   setSort: sessionStorage.getItem("wl-set-sort") || "value",
   setSortDir: sessionStorage.getItem("wl-set-dir") || "desc",
   setYear: sessionStorage.getItem("wl-set-year") || "",
+  openSets: {},
   sheet: false,
 };
 
@@ -39,6 +40,17 @@ function money(v) {
   if (n == null) return "n/d";
   return new Intl.NumberFormat("it-IT", { style: "currency", currency: "EUR", useGrouping: true }).format(n);
 }
+function moneyShort(v) {
+  const n = num(v);
+  if (n == null) return "";
+  return new Intl.NumberFormat("it-IT", {
+    style: "currency",
+    currency: "EUR",
+    useGrouping: true,
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(n);
+}
 function signedMoney(v) {
   const n = num(v);
   if (n == null) return "";
@@ -49,6 +61,13 @@ function pct(v) {
   const n = num(v);
   if (n == null) return "";
   const body = new Intl.NumberFormat("it-IT", { maximumFractionDigits: 1, minimumFractionDigits: 1 }).format(Math.abs(n));
+  return (n > 0 ? "+" : n < 0 ? "−" : "") + body + "%";
+}
+function pctShort(v) {
+  const n = num(v);
+  if (n == null) return "";
+  const digits = Math.abs(n) >= 100 ? 0 : 1;
+  const body = new Intl.NumberFormat("it-IT", { maximumFractionDigits: digits, minimumFractionDigits: digits }).format(Math.abs(n));
   return (n > 0 ? "+" : n < 0 ? "−" : "") + body + "%";
 }
 function pct2(v) {
@@ -292,21 +311,43 @@ function paidMark(card, collectionId) {
   const paid = cardPaid(card);
   if (!paid) return "";
   if (paid.fallback) return `<p class="paid-line muted">acquisto n.d.</p>`;
-  const gain = paid.gainPct == null ? "" : `<span class="delta ${gainClass(paid.gain)}">${pct2(paid.gainPct)}</span>`;
-  return `<p class="paid-line"><span>Pagato ${money(paid.cost)}</span>${gain}</p>`;
+  const cls = gainClass(paid.gain);
+  const fullPct = paid.gainPct == null ? "" : pct2(paid.gainPct);
+  const shortPct = paid.gainPct == null ? "" : pctShort(paid.gainPct);
+  const gain = fullPct
+    ? `<span class="paid-pct delta ${cls}" data-full="${esc(fullPct)}" data-short="${esc(shortPct)}">${esc(fullPct)}</span>`
+    : "";
+  return `<p class="paid-line"><span class="paid-label">Pagato</span><span class="paid-amt" data-full="${esc(money(paid.cost))}" data-short="${esc(moneyShort(paid.cost))}">${esc(money(paid.cost))}</span>${gain}</p>`;
+}
+function fitOwnedPaid(root) {
+  (root || document).querySelectorAll(".owned-tile .paid-line").forEach((line) => {
+    const amt = line.querySelector(".paid-amt");
+    const pctEl = line.querySelector(".paid-pct");
+    if (!amt) return;
+    line.classList.remove("wrap");
+    line.style.fontSize = "";
+    const apply = (mode) => {
+      amt.textContent = amt.dataset[mode] || amt.textContent;
+      if (pctEl) pctEl.textContent = pctEl.dataset[mode] || pctEl.textContent;
+    };
+    const overflow = () => line.scrollWidth > line.clientWidth + 1;
+    apply("full");
+    if (!overflow()) return;
+    apply("short");
+    if (!overflow()) return;
+    let size = 10;
+    while (overflow() && size > 7.5) {
+      size -= 0.5;
+      line.style.fontSize = size + "px";
+    }
+    if (overflow()) line.classList.add("wrap");
+  });
 }
 function ownedPaidHtml(card) {
   const paid = cardPaid(card);
-  const lines = [];
-  if (!paid || paid.fallback) {
-    lines.push(`<p class="quiet paid-missing">Prezzo d'acquisto non disponibile</p>`);
-  } else {
-    const gain = paid.gain == null ? "" : ` · <span class="delta ${gainClass(paid.gain)}">${signedMoney(paid.gain)} (${pct2(paid.gainPct)})</span>`;
-    lines.push(`<p class="paid-detail"><span class="k">Pagato</span> <b class="nums">${money(paid.cost)}</b>${gain}</p>`);
-  }
-  if (card.purchase_date) lines.push(`<p class="quiet">Acquisto del ${esc(formatDay(card.purchase_date))}</p>`);
-  if (card.purchase_status === "in_magazzino_zero") lines.push(`<p class="quiet">In magazzino Zero</p>`);
-  return lines.join("");
+  if (!paid || paid.fallback) return `<p class="quiet paid-missing">Prezzo d'acquisto non disponibile</p>`;
+  const gain = paid.gain == null ? "" : ` · <span class="delta ${gainClass(paid.gain)}">${signedMoney(paid.gain)} (${pct2(paid.gainPct)})</span>`;
+  return `<p class="paid-detail"><span class="k">Pagato</span> <b class="nums">${money(paid.cost)}</b>${gain}</p>`;
 }
 function basketHtml(cards, generatedAt, meta) {
   if (meta && meta.owned) {
@@ -659,6 +700,13 @@ function sleeveHtml(card, collectionId, mode) {
   const shown = card.quantity ? lineValue(card) : q.price;
   const price = `<div class="price-line"><span class="price">${shown == null ? "n.d." : money(shown)}</span></div>`;
   const marks = sleeveMarks(card, q);
+  if (isOwned(collectionId) && mode !== "expanded") {
+    return `<a class="sleeve sleeve-compact owned-tile${bought ? " bought" : ""}" href="#/c/${encodeURIComponent(collectionId)}/card/${encodeURIComponent(card.id)}">
+      <div class="art">${img}</div>
+      ${price}
+      ${paidMark(card, collectionId)}
+    </a>`;
+  }
   if (mode === "compact") {
     return `<a class="sleeve sleeve-compact${bought ? " bought" : ""}" href="#/c/${encodeURIComponent(collectionId)}/card/${encodeURIComponent(card.id)}">
       <div class="art">${img}</div>
@@ -812,6 +860,7 @@ async function renderHome() {
     </article>`);
   }
   view.innerHTML = `<div class="list home-grid">${blocks.join("") || '<div class="empty"><strong>Nessuna collezione</strong></div>'}</div>`;
+  fitOwnedPaid(view);
 }
 async function renderBinder(id) {
   const meta = state.collections.find((c) => c.id === id);
@@ -866,7 +915,7 @@ async function renderBinder(id) {
         <button class="iconbtn next" type="button" data-page="1" ${state.page >= pages - 1 ? "disabled" : ""} aria-label="Pagina successiva">›</button>
       </div>
     </section>
-    ${setSummaryHtml(payload.cards || [])}`;
+    ${setSummaryHtml(payload.cards || [], id)}`;
   bindBinder(id, payload);
   if (state.sheet) openFilters(id, payload);
 }
@@ -890,6 +939,7 @@ function bindBinder(id, payload) {
       img.replaceWith(badge);
     });
   });
+  fitOwnedPaid(view);
   binder.addEventListener("touchstart", (e) => { x0 = e.changedTouches[0].clientX; }, { passive: true });
   binder.addEventListener("touchend", (e) => {
     if (x0 == null) return;
@@ -1126,7 +1176,25 @@ async function loadSetCatalog() {
   catch (e) { state.setCatalog = { sets: {} }; }
   return state.setCatalog;
 }
-function setSummaryHtml(cards) {
+function setPreviewCards(list) {
+  return list.slice().sort((a, b) => {
+    const pa = lineValue(a), pb = lineValue(b);
+    if (pa == null && pb == null) return cardTitle(a).localeCompare(cardTitle(b), "it");
+    if (pa == null) return 1;
+    if (pb == null) return -1;
+    if (pb !== pa) return pb - pa;
+    return cardTitle(a).localeCompare(cardTitle(b), "it");
+  });
+}
+function setStripHtml(list, collectionId) {
+  return `<div class="set-strip">${setPreviewCards(list).map((card) => {
+    const src = safeUrl(card.image_url);
+    const label = [cardTitle(card), cardSetName(card), cardNumber(card)].filter(Boolean).join(", ");
+    const art = src ? `<img alt="" src="${esc(src)}">` : `<span class="set-card-fallback" aria-hidden="true"></span>`;
+    return `<a class="set-card" href="#/c/${encodeURIComponent(collectionId)}/card/${encodeURIComponent(card.id)}" aria-label="${esc(label)}" title="${esc(label)}">${art}</a>`;
+  }).join("")}</div>`;
+}
+function setSummaryHtml(cards, collectionId) {
   const catalog = (state.setCatalog && state.setCatalog.sets) || {};
   const groups = new Map();
   cards.forEach((card) => {
@@ -1148,7 +1216,7 @@ function setSummaryHtml(cards) {
     return {
       code, year: year == null ? null : Number(year), logo: info.logo || "",
       name: info.name || list[0].set || list[0].set_it || code,
-      copies, value: Math.round(value * 100) / 100, missing,
+      copies, value: Math.round(value * 100) / 100, missing, cards: list,
     };
   });
   const years = [...new Set(rows.map((row) => row.year).filter((year) => year != null))].sort((a, b) => b - a);
@@ -1168,12 +1236,18 @@ function setSummaryHtml(cards) {
     return byName(a, b);
   });
   const arrow = (key) => state.setSort === key ? (state.setSortDir === "asc" ? "↑" : "↓") : "";
-  const list = rows.length ? rows.map((r) => `
-    <article class="set-row">
-      ${r.logo ? `<img class="set-logo" alt="" data-code="${esc(r.code)}" src="${esc(r.logo)}">` : `<span class="set-badge">${esc(String(r.code).slice(0, 4))}</span>`}
-      <div><strong>${esc(r.name)}</strong><p class="meta">${r.year ? esc(String(r.year)) : "anno n.d."} · ${r.copies} copie${r.missing ? ` · ${r.missing} n.d.` : ""}</p></div>
-      <b class="nums">${money(r.value)}</b>
-    </article>`).join("") : `<p class="quiet">Nessuna espansione in questo anno.</p>`;
+  const list = rows.length ? rows.map((r) => {
+    const open = !!(state.openSets && state.openSets[collectionId + ":" + r.code]);
+    return `<div class="set-block">
+      <button class="set-row" type="button" data-set-toggle="${esc(r.code)}" aria-expanded="${open ? "true" : "false"}">
+        ${r.logo ? `<img class="set-logo" alt="" data-code="${esc(r.code)}" src="${esc(r.logo)}">` : `<span class="set-badge">${esc(String(r.code).slice(0, 4))}</span>`}
+        <span class="set-copy"><strong>${esc(r.name)}</strong><span class="meta">${r.year ? esc(String(r.year)) : "anno n.d."} · ${r.copies} copie${r.missing ? ` · ${r.missing} n.d.` : ""}</span></span>
+        <b class="nums">${money(r.value)}</b>
+        <span class="set-chevron" aria-hidden="true">›</span>
+      </button>
+      ${open ? setStripHtml(r.cards, collectionId) : ""}
+    </div>`;
+  }).join("") : `<p class="quiet">Nessuna espansione in questo anno.</p>`;
   return `<section class="sets"><h2 class="section-title">Espansioni</h2>
     <div class="set-controls">
       <div class="set-sort" role="group" aria-label="Ordina le espansioni">
@@ -1340,26 +1414,17 @@ async function renderCard(id, cardId) {
   const periodChange = changeOver(minShown, minShown.length ? dateNum(minShown[minShown.length - 1].date) - dateNum(minShown[0].date) + 1 : 0);
   const arrow = periodChange && periodChange.diff < 0 ? "▼" : "▲";
   const sideNum = (other, dir) => other ? `<button class="peek" type="button" data-goto="${esc(other.id)}" aria-label="${dir === "prev" ? "Carta precedente" : "Carta successiva"} ${esc(other.name)}"><span>${esc(other.number || "")}</span></button>` : "<span></span>";
-  view.innerHTML = `
-    <p class="kicker"><a href="#/c/${encodeURIComponent(id)}">‹ Raccoglitore</a></p>
-    <div class="stage">
-      ${sideNum(prev, "prev")}
-      ${art(card, purchaseOf(card.id) ? "hero bought" : "hero")}
-      ${sideNum(next, "next")}
-    </div>
-    <h2 class="card-name">${purchaseOf(card.id) ? "✅ " : ""}${esc(cardTitle(card))}</h2>
-    <p class="sub">${esc(cardSetName(card))} · ${esc(cardNumber(card))} · ${esc(card.rarity)} · ${lang.flag} ${lang.name}${card.pokemon_reverse ? " · Reverse" : ""}${card.release_year ? " · " + esc(card.release_year) : ""}</p>
-    <section class="pricebox">
-      <p class="label">PREZZO MINIMO · ${esc(condLabel)} · ${lang.flag} ${lang.name.toUpperCase()} · ${esc(sourceName(q.source))}${card.fallback ? " · DA NM" : ""}</p>
-      <p class="big">${holding == null ? "n.d." : money(holding)}</p>
-      ${meta.owned ? ownedPaidHtml(card) : ""}
+  const owned = !!meta.owned;
+  const sourceLabel = sourceName(q.source);
+  const sourceBit = owned && sourceLabel === "N/D" ? "" : ` · ${esc(sourceLabel)}`;
+  const priceExtras = owned ? "" : `
       ${card.quantity && copiesOf(card) > 1 ? `<p class="quiet">${esc(card.quantity)} copie · unitario ${q.price == null ? "n.d." : money(q.price)}</p>` : ""}
       ${show30 ? `<p class="delta ${change30.diff < 0 ? "down" : "up"}">${change30.diff < 0 ? "▼" : "▲"} ${pct(change30.pct)} · ${signedMoney(change30.diff)} in 30 giorni</p>` : ""}
       <p class="quiet">Prezzo medio ${avgPrice == null ? "n/d" : money(avgPrice)}</p>
       <p class="quiet">${soldCopies == null ? "Copie n/d" : soldCopies + " copie in vendita"}${ctWhen ? " · " + esc(ctWhen) : ""}</p>
       <p><span class="pill ${today ? "today" : ""}">${today ? "Aggiornato oggi" : "Aggiornato il " + formatDay(updated)}</span></p>
-      ${link ? `<a class="cta-search" href="${esc(link)}" target="_blank" rel="noopener">Apri su CardTrader</a>` : ""}
-    </section>
+      ${link ? `<a class="cta-search" href="${esc(link)}" target="_blank" rel="noopener">Apri su CardTrader</a>` : ""}`;
+  const markets = owned ? "" : `
     <h2 class="section-title">Due mercati, mai mescolati</h2>
     <div class="market-list">
       <button class="market-row ${state.chartMarket === "cardtrader" ? "on" : ""}" type="button" data-chart-market="cardtrader">
@@ -1373,29 +1438,47 @@ async function renderCard(id, cardId) {
         <b class="nums">${cmPrice == null ? "n/d" : money(cmPrice)}</b>
       </button>
     </div>
-    ${popBlock(card)}
+    ${popBlock(card)}`;
+  const copiesBlock = owned ? "" : `
+      <p class="quiet">${state.chartMarket === "cardmarket" ? "Copie Cardmarket, tutte le condizioni" : "Copie CardTrader Near Mint"}</p>
+      ${copiesShown.length > 1 ? chartSvg([{ id: "qty", label: "Copie", color: "#111", fillColor: "#c9b6ff", fill: true, points: copiesShown }], false, false) : copiesShown.length === 1 ? onePointNote(copiesShown[0], false) : `<p class="quiet">Nessuna copia archiviata in questo periodo.</p>`}`;
+  view.innerHTML = `
+    <p class="kicker"><a href="#/c/${encodeURIComponent(id)}">‹ Raccoglitore</a></p>
+    <div class="stage">
+      ${sideNum(prev, "prev")}
+      ${art(card, purchaseOf(card.id) ? "hero bought" : "hero")}
+      ${sideNum(next, "next")}
+    </div>
+    <h2 class="card-name">${purchaseOf(card.id) ? "✅ " : ""}${esc(cardTitle(card))}</h2>
+    <p class="sub">${esc(cardSetName(card))} · ${esc(cardNumber(card))} · ${esc(card.rarity)} · ${lang.flag} ${lang.name}${card.pokemon_reverse ? " · Reverse" : ""}${card.release_year ? " · " + esc(card.release_year) : ""}</p>
+    <section class="pricebox">
+      <p class="label">PREZZO MINIMO · ${esc(condLabel)} · ${lang.flag} ${lang.name.toUpperCase()}${sourceBit}${card.fallback ? " · DA NM" : ""}</p>
+      <p class="big">${holding == null ? "n.d." : money(holding)}</p>
+      ${owned ? ownedPaidHtml(card) : ""}
+      ${priceExtras}
+    </section>
+    ${markets}
     <section class="chart-card">
       <h2 class="section-title">Storico</h2>
       <div class="ranges">${options.map((p) => `<button class="chip ${p.id === state.cardRange ? "on" : ""}" type="button" data-card-range="${p.id}">${p.label}</button>`).join("")}</div>
       <div class="statgrid">
         <p><span>Minimo</span><b class="nums">${minShown.length ? money(minShown[minShown.length - 1].value) : "n/d"}</b></p>
         <p><span>Medio</span><b class="nums">${avgShown.length ? money(avgShown[avgShown.length - 1].value) : "n/d"}</b></p>
-        <p><span>Copie</span><b class="nums">${copiesShown.length ? copiesShown[copiesShown.length - 1].value : "n/d"}</b></p>
+        ${owned ? "" : `<p><span>Copie</span><b class="nums">${copiesShown.length ? copiesShown[copiesShown.length - 1].value : "n/d"}</b></p>`}
       </div>
       ${priceChartHtml(minShown, avgShown)}
-      <p class="quiet">${state.chartMarket === "cardmarket" ? "Copie Cardmarket, tutte le condizioni" : "Copie CardTrader Near Mint"}</p>
-      ${copiesShown.length > 1 ? chartSvg([{ id: "qty", label: "Copie", color: "#111", fillColor: "#c9b6ff", fill: true, points: copiesShown }], false, false) : copiesShown.length === 1 ? onePointNote(copiesShown[0], false) : `<p class="quiet">Nessuna copia archiviata in questo periodo.</p>`}
+      ${copiesBlock}
       <div class="hist-foot">
         <p><span>MIN</span><b class="nums">${periodMin == null ? "n/d" : money(periodMin)}</b></p>
         <p><span>MAX</span><b class="nums">${periodMax == null ? "n/d" : money(periodMax)}</b></p>
         <p><span>VAR</span><b class="nums ${periodChange && periodChange.diff < 0 ? "down" : "up"}">${periodChange && periodChange.start ? arrow + " " + signedMoney(periodChange.diff) : "n/d"}</b></p>
       </div>
       ${minShown.some((p) => p.notify) ? `<p class="quiet">Tratteggio: storico ricostruito da TCGNotify.</p>` : ""}
-      <p class="quiet">${state.chartMarket === "cardmarket" ? "Cardmarket · Near Mint" : "CardTrader · Near Mint"}</p>
+      ${owned ? "" : `<p class="quiet">${state.chartMarket === "cardmarket" ? "Cardmarket · Near Mint" : "CardTrader · Near Mint"}</p>`}
     </section>
-    ${meta.owned ? "" : purchaseBox(card, q)}
-    ${offersHtml}
-    ${card.notes ? `<p class="note">${esc(card.notes)}</p>` : ""}
+    ${owned ? "" : purchaseBox(card, q)}
+    ${owned ? "" : offersHtml}
+    ${!owned && card.notes ? `<p class="note">${esc(card.notes)}</p>` : ""}
   `;
   let x0 = null;
   const stage = view.querySelector(".stage");
@@ -1652,6 +1735,16 @@ document.addEventListener("click", (e) => {
     render();
     return;
   }
+  const setToggle = e.target.closest("[data-set-toggle]");
+  if (setToggle && !e.target.closest(".set-card")) {
+    const id = route().id || state.collectionId;
+    const key = id + ":" + setToggle.dataset.setToggle;
+    if (!state.openSets) state.openSets = {};
+    state.openSets[key] = !state.openSets[key];
+    const y = window.scrollY;
+    Promise.resolve(render()).then(() => window.scrollTo(0, y));
+    return;
+  }
   const setSort = e.target.closest("[data-set-sort]");
   if (setSort) {
     const key = setSort.dataset.setSort;
@@ -1709,5 +1802,6 @@ document.addEventListener("change", (e) => {
   render();
 });
 window.addEventListener("hashchange", render);
+window.addEventListener("resize", () => fitOwnedPaid(view));
 try { localStorage.removeItem("wl-price-mode"); } catch (e) { /* ignore */ }
 render();

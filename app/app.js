@@ -353,15 +353,12 @@ function basketHtml(cards, generatedAt, meta) {
   if (meta && meta.owned) {
     const tot = ownedPortfolio(cards);
     const cls = gainClass(tot.gain);
+    const gainLabel = tot.gain < 0 ? "Perdita" : "Guadagno";
+    const pricedNote = `${tot.priced} prezzate${tot.unpriced ? ` · ${tot.unpriced} non prezzate` : ""}`;
     return `<section class="basket owned-basket" aria-label="Totali">
-      <div class="tile mint owned-total">
-        <div class="owned-stats">
-          <p><span class="k">Valore</span><b class="nums">${money(tot.value)}</b></p>
-          <p><span class="k">Importo speso</span><b class="nums">${money(tot.spent)}</b></p>
-        </div>
-        <p class="gain-line delta ${cls}">${signedMoney(tot.gain)} (${pct2(tot.gainPct)})</p>
-        <p class="meta">${tot.priced} prezzi · ${tot.copies} copie${tot.unpriced ? ` · ${tot.unpriced} non prezzate` : ""}</p>
-      </div>
+      <div class="tile mint"><p class="k">Valore</p><b class="nums">${money(tot.value)}</b><p class="meta">${tot.copies} copie</p></div>
+      <div class="tile lilac"><p class="k">Importo speso</p><b class="nums">${money(tot.spent)}</b><p class="meta">su ${tot.copies} copie</p></div>
+      <div class="tile sun"><p class="k">${gainLabel}</p><b class="nums gain-figure ${cls}">${signedMoney(tot.gain)} (${pct2(tot.gainPct)})</b><p class="meta">${pricedNote}</p></div>
     </section>`;
   }
   const b = basketOf(cards);

@@ -375,7 +375,7 @@ def configure_collection():
     """Sceglie la cartella dati. Senza flag, wishlist e wishlist-modern restano data/.
 
     vintage e wishlist-vintage sono Wishlist - 1999/2019 (data/collections/vintage/).
-    gold e gold-modern sono Gold - modern. Un altro nome usa data/collections/<nome>/.
+    gold e gold-modern sono Wishlist - Gold. Un altro nome usa data/collections/<nome>/.
     """
     global DATA
     aliases = {
@@ -986,7 +986,7 @@ def write_total_history():
 
 
 def write_step_total(existing):
-    """Gold: tiene i gradini ricostruiti e aggiorna solo i giorni snapshot."""
+    """Wishlist - Gold: tiene i gradini ricostruiti e aggiorna solo i giorni snapshot."""
     wishlist = json.load(open(os.path.join(DATA, "wishlist.json"), encoding="utf-8"))
     cards = wishlist["cards"]
     real_from = existing.get("real_from") or REAL_FROM

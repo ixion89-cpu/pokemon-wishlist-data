@@ -1,547 +1,612 @@
 {
- "note": "Anni e loghi da pokemontcg.io o, se il codice è già in set_years.json, da quel file. Nessun anno inventato.",
- "sets": {
-  "FST": {
-   "name": "Fusion Strike",
-   "year": 2021,
-   "logo": "https://images.pokemontcg.io/swsh8/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "swsh8"
-  },
-  "LORG": {
-   "name": "Lost Origin",
-   "year": 2022,
-   "logo": "https://images.pokemontcg.io/swsh11/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "swsh11"
-  },
-  "EVS": {
-   "name": "Evolving Skies",
-   "year": 2021,
-   "logo": "https://images.pokemontcg.io/swsh7/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "swsh7"
-  },
-  "CRE": {
-   "name": "Chilling Reign",
-   "year": 2021,
-   "logo": "https://images.pokemontcg.io/swsh6/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "swsh6"
-  },
-  "ASC": {
-   "name": "Ascended Heroes",
-   "year": 2026,
-   "logo": "https://images.scrydex.com/pokemon/me2pt5-logo/logo",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "me2pt5"
-  },
-  "DLR": {
-   "name": "Delta Reign",
-   "year": 2026,
-   "logo": "https://images.scrydex.com/pokemon/me6-logo/logo",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "me6"
-  },
-  "BST": {
-   "name": "Battle Styles",
-   "year": 2021,
-   "logo": "https://images.pokemontcg.io/swsh5/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "swsh5"
-  },
-  "CRZ": {
-   "name": "Crown Zenith",
-   "year": 2023,
-   "logo": "https://images.pokemontcg.io/swsh12pt5/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "swsh12pt5"
-  },
-  "BLK": {
-   "name": "Black Bolt",
-   "year": 2025,
-   "logo": "https://images.pokemontcg.io/zsv10pt5/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "zsv10pt5"
-  },
-  "MEG": {
-   "name": "Mega Evolution",
-   "year": 2025,
-   "logo": "https://images.pokemontcg.io/me1/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "me1"
-  },
-  "SHF": {
-   "name": "Shining Fates",
-   "year": 2021,
-   "logo": "https://images.pokemontcg.io/swsh45/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "swsh45"
-  },
-  "PRE": {
-   "name": "Prismatic Evolutions",
-   "year": 2025,
-   "logo": "https://images.pokemontcg.io/sv8pt5/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "sv8pt5"
-  },
-  "PBL": {
-   "name": "Pitch Black",
-   "year": 2026,
-   "logo": "https://images.scrydex.com/pokemon/me5-logo/logo",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "me5"
-  },
-  "SIT": {
-   "name": "Silver Tempest",
-   "year": 2022,
-   "logo": "https://images.pokemontcg.io/swsh12/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "swsh12"
-  },
-  "MEW": {
-   "name": "151",
-   "year": 2023,
-   "logo": "https://images.pokemontcg.io/sv3pt5/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "sv3pt5"
-  },
-  "ASR": {
-   "name": "Astral Radiance",
-   "year": 2022,
-   "logo": "https://images.pokemontcg.io/swsh10/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "swsh10"
-  },
-  "CRI": {
-   "name": "Chaos Rising",
-   "year": 2026,
-   "logo": "https://images.scrydex.com/pokemon/me4-logo/logo",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "me4"
-  },
-  "POR": {
-   "name": "Perfect Order",
-   "year": 2026,
-   "logo": "https://images.scrydex.com/pokemon/me3-logo/logo",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "me3"
-  },
-  "OBF": {
-   "name": "Obsidian Flames",
-   "year": 2023,
-   "logo": "https://images.pokemontcg.io/sv3/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "sv3"
-  },
-  "PAR": {
-   "name": "Paradox Rift",
-   "year": 2023,
-   "logo": "https://images.pokemontcg.io/sv4/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "sv4"
-  },
-  "BRS": {
-   "name": "Brilliant Stars",
-   "year": 2022,
-   "logo": "https://images.pokemontcg.io/swsh9/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "swsh9"
-  },
-  "PAL": {
-   "name": "Paldea Evolved",
-   "year": 2023,
-   "logo": "https://images.pokemontcg.io/sv2/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "sv2"
-  },
-  "SLG": {
-   "name": "Shining Legends",
-   "year": 2017,
-   "logo": "https://images.pokemontcg.io/sm35/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "sm35"
-  },
-  "CEC": {
-   "name": "Cosmic Eclipse",
-   "year": 2019,
-   "logo": "https://images.pokemontcg.io/sm12/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "sm12"
-  },
-  "N3": {
-   "name": "Neo Revelation",
-   "year": 2001,
-   "logo": "https://images.pokemontcg.io/neo3/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "neo3"
-  },
-  "TEU": {
-   "name": "Team Up",
-   "year": 2019,
-   "logo": "https://images.pokemontcg.io/sm9/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "sm9"
-  },
-  "SM12A": {
-   "name": "Tag Team GX: Tag All Stars",
-   "year": 2019,
-   "logo": null,
-   "year_source": null,
-   "logo_source": null
-  },
-  "WBP": {
-   "name": "Wizards Black Star Promos",
-   "year": 1999,
-   "logo": "https://images.pokemontcg.io/basep/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "basep"
-  },
-  "BKP": {
-   "name": "BREAKpoint",
-   "year": 2016,
-   "logo": "https://images.pokemontcg.io/xy9/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "xy9"
-  },
-  "SMBS": {
-   "name": "SM Black Star Promos",
-   "year": 2017,
-   "logo": "https://images.pokemontcg.io/smp/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "smp"
-  },
-  "UNM": {
-   "name": "Unified Minds",
-   "year": 2019,
-   "logo": "https://images.pokemontcg.io/sm11/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "sm11"
-  },
-  "AOR": {
-   "name": "Ancient Origins",
-   "year": 2015,
-   "logo": "https://images.pokemontcg.io/xy7/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "xy7"
-  },
-  "XYP": {
-   "name": "XY Black Star Promos",
-   "year": 2013,
-   "logo": "https://images.pokemontcg.io/xyp/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "xyp"
-  },
-  "LOT": {
-   "name": "Lost Thunder",
-   "year": 2018,
-   "logo": "https://images.pokemontcg.io/sm8/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "sm8"
-  },
-  "PFL": {
-   "name": "Phantasmal Flames",
-   "year": 2025,
-   "logo": "https://images.pokemontcg.io/me2/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "me2"
-  },
-  "BS": {
-   "name": "Base Set",
-   "year": 1999,
-   "logo": "https://images.pokemontcg.io/base1/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "base1"
-  },
-  "PHF": {
-   "name": "Phantom Forces",
-   "year": 2014,
-   "logo": "https://images.pokemontcg.io/xy4/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "xy4"
-  },
-  "HP": {
-   "name": "EX Holon Phantoms",
-   "year": 2006,
-   "logo": "https://images.pokemontcg.io/ex13/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "ex13"
-  },
-  "TR": {
-   "name": "Team Rocket",
-   "year": 2000,
-   "logo": "https://images.pokemontcg.io/base5/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "base5"
-  },
-  "CLO": {
-   "name": "Call of Legends",
-   "year": 2011,
-   "logo": "https://images.pokemontcg.io/col1/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "col1"
-  },
-  "PAF": {
-   "name": "Paldean Fates",
-   "year": 2024,
-   "logo": "https://images.pokemontcg.io/sv4pt5/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "sv4pt5"
-  },
-  "CG": {
-   "name": "EX Crystal Guardians",
-   "year": 2006,
-   "logo": "https://images.pokemontcg.io/ex14/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "ex14"
-  },
-  "DRI": {
-   "name": "Destined Rivals",
-   "year": 2025,
-   "logo": "https://images.pokemontcg.io/sv10/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "sv10"
-  },
-  "ASTR": {
-   "name": "Astral Radiance",
-   "year": 2022,
-   "logo": "https://images.pokemontcg.io/swsh10/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "swsh10"
-  },
-  "CBB3C": {
-   "name": "Gem Pack Vol.3",
-   "year": null,
-   "logo": null,
-   "year_source": null,
-   "logo_source": null
-  },
-  "VIV": {
-   "name": "Vivid Voltage",
-   "year": 2020,
-   "logo": "https://images.pokemontcg.io/swsh4/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "swsh4"
-  },
-  "DX": {
-   "name": "EX Deoxys",
-   "year": 2005,
-   "logo": "https://images.pokemontcg.io/ex8/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "ex8"
-  },
-  "EVO": {
-   "name": "Evolutions",
-   "year": 2016,
-   "logo": "https://images.pokemontcg.io/xy12/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "xy12"
-  },
-  "TEF": {
-   "name": "Temporal Forces",
-   "year": 2024,
-   "logo": "https://images.pokemontcg.io/sv5/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "sv5"
-  },
-  "SVPROMO": {
-   "name": "SV Black Star Promos",
-   "year": 2023,
-   "logo": "https://images.pokemontcg.io/svp/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "svp"
-  },
-  "SVI": {
-   "name": "Scarlet & Violet",
-   "year": 2023,
-   "logo": "https://images.pokemontcg.io/sv1/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "sv1"
-  },
-  "WIZ": {
-   "name": "Wizards Black Star Promos",
-   "year": 1999,
-   "logo": "https://images.pokemontcg.io/basep/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "basep"
-  },
-  "SFA": {
-   "name": "Shrouded Fable",
-   "year": 2024,
-   "logo": "https://images.pokemontcg.io/sv6pt5/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "sv6pt5"
-  },
-  "PROMO-RETAIL": {
-   "name": "Retail Exclusive Promos",
-   "year": null,
-   "logo": null,
-   "year_source": null,
-   "logo_source": null
-  },
-  "SSP": {
-   "name": "Surging Sparks",
-   "year": 2024,
-   "logo": "https://images.pokemontcg.io/sv8/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "sv8"
-  },
-  "MEP": {
-   "name": "MEP Black Star Promos",
-   "year": null,
-   "logo": null,
-   "year_source": null,
-   "logo_source": null
-  },
-  "JTG": {
-   "name": "Journey Together",
-   "year": 2025,
-   "logo": "https://images.pokemontcg.io/sv9/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "sv9"
-  },
-  "SWSHBS": {
-   "name": "SWSH Black Star Promos",
-   "year": 2019,
-   "logo": "https://images.pokemontcg.io/swshp/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "swshp"
-  },
-  "CS55": {
-   "name": "CS5.5: Shadow of Glory",
-   "year": null,
-   "logo": null,
-   "year_source": null,
-   "logo_source": null
-  },
-  "JU": {
-   "name": "Jungle",
-   "year": 1999,
-   "logo": "https://images.pokemontcg.io/base2/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "base2"
-  },
-  "PROMOSV": {
-   "name": "Scarlet & Violet Promos",
-   "year": null,
-   "logo": null,
-   "year_source": null,
-   "logo_source": null
-  },
-  "TWM": {
-   "name": "Twilight Masquerade",
-   "year": 2024,
-   "logo": "https://images.pokemontcg.io/sv6/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "sv6"
-  },
-  "C25": {
-   "name": "Celebrations",
-   "year": 2021,
-   "logo": "https://images.pokemontcg.io/cel25/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "cel25",
-   "release_date": "2021-10-08"
-  },
-  "FCO": {
-   "name": "Fates Collide",
-   "year": 2016,
-   "logo": "https://images.pokemontcg.io/xy10/logo.png",
-   "year_source": "pokemontcg.io",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "xy10",
-   "release_date": "2016-05-02"
-  },
-  "SCR": {
-   "name": "Stellar Crown",
-   "year": 2024,
-   "logo": "https://images.pokemontcg.io/sv7/logo.png",
-   "year_source": "pokemon.com",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "sv7",
-   "release_date": "2024-09-13"
-  },
-  "N2": {
-   "name": "Neo Discovery",
-   "year": 2001,
-   "logo": "https://images.pokemontcg.io/neo2/logo.png",
-   "year_source": "bulbapedia",
-   "logo_source": "pokemontcg.io",
-   "ptcg_id": "neo2",
-   "release_date": "2001-06-01"
-  },
-  "30C": {
-   "name": "30th Celebration",
-   "year": 2026,
-   "logo": null,
-   "year_source": "pokemon.com",
-   "logo_source": null,
-   "release_date": "2026-09-16"
-  },
-  "GYARADOS": {
-   "name": "HS Trainer Kit (Gyarados)",
-   "year": 2010,
-   "logo": null,
-   "year_source": "bulbapedia",
-   "logo_source": null,
-   "release_date": "2010-05-12"
+  "note": "Anni e loghi da pokemontcg.io o, se il codice è già in set_years.json, da quel file. Nessun anno inventato.",
+  "sets": {
+    "FST": {
+      "name": "Fusion Strike",
+      "year": 2021,
+      "logo": "https://images.pokemontcg.io/swsh8/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "swsh8"
+    },
+    "LORG": {
+      "name": "Lost Origin",
+      "year": 2022,
+      "logo": "https://images.pokemontcg.io/swsh11/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "swsh11"
+    },
+    "EVS": {
+      "name": "Evolving Skies",
+      "year": 2021,
+      "logo": "https://images.pokemontcg.io/swsh7/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "swsh7"
+    },
+    "CRE": {
+      "name": "Chilling Reign",
+      "year": 2021,
+      "logo": "https://images.pokemontcg.io/swsh6/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "swsh6"
+    },
+    "ASC": {
+      "name": "Ascended Heroes",
+      "year": 2026,
+      "logo": "https://images.scrydex.com/pokemon/me2pt5-logo/logo",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "me2pt5"
+    },
+    "DLR": {
+      "name": "Delta Reign",
+      "year": 2026,
+      "logo": "https://images.scrydex.com/pokemon/me6-logo/logo",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "me6"
+    },
+    "BST": {
+      "name": "Battle Styles",
+      "year": 2021,
+      "logo": "https://images.pokemontcg.io/swsh5/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "swsh5"
+    },
+    "CRZ": {
+      "name": "Crown Zenith",
+      "year": 2023,
+      "logo": "https://images.pokemontcg.io/swsh12pt5/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "swsh12pt5"
+    },
+    "BLK": {
+      "name": "Black Bolt",
+      "year": 2025,
+      "logo": "https://images.pokemontcg.io/zsv10pt5/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "zsv10pt5"
+    },
+    "MEG": {
+      "name": "Mega Evolution",
+      "year": 2025,
+      "logo": "https://images.pokemontcg.io/me1/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "me1"
+    },
+    "SHF": {
+      "name": "Shining Fates",
+      "year": 2021,
+      "logo": "https://images.pokemontcg.io/swsh45/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "swsh45"
+    },
+    "PRE": {
+      "name": "Prismatic Evolutions",
+      "year": 2025,
+      "logo": "https://images.pokemontcg.io/sv8pt5/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "sv8pt5"
+    },
+    "PBL": {
+      "name": "Pitch Black",
+      "year": 2026,
+      "logo": "https://images.scrydex.com/pokemon/me5-logo/logo",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "me5"
+    },
+    "SIT": {
+      "name": "Silver Tempest",
+      "year": 2022,
+      "logo": "https://images.pokemontcg.io/swsh12/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "swsh12"
+    },
+    "MEW": {
+      "name": "151",
+      "year": 2023,
+      "logo": "https://images.pokemontcg.io/sv3pt5/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "sv3pt5"
+    },
+    "ASR": {
+      "name": "Astral Radiance",
+      "year": 2022,
+      "logo": "https://images.pokemontcg.io/swsh10/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "swsh10"
+    },
+    "CRI": {
+      "name": "Chaos Rising",
+      "year": 2026,
+      "logo": "https://images.scrydex.com/pokemon/me4-logo/logo",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "me4"
+    },
+    "POR": {
+      "name": "Perfect Order",
+      "year": 2026,
+      "logo": "https://images.scrydex.com/pokemon/me3-logo/logo",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "me3"
+    },
+    "OBF": {
+      "name": "Obsidian Flames",
+      "year": 2023,
+      "logo": "https://images.pokemontcg.io/sv3/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "sv3"
+    },
+    "PAR": {
+      "name": "Paradox Rift",
+      "year": 2023,
+      "logo": "https://images.pokemontcg.io/sv4/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "sv4"
+    },
+    "BRS": {
+      "name": "Brilliant Stars",
+      "year": 2022,
+      "logo": "https://images.pokemontcg.io/swsh9/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "swsh9"
+    },
+    "PAL": {
+      "name": "Paldea Evolved",
+      "year": 2023,
+      "logo": "https://images.pokemontcg.io/sv2/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "sv2"
+    },
+    "SLG": {
+      "name": "Shining Legends",
+      "year": 2017,
+      "logo": "https://images.pokemontcg.io/sm35/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "sm35"
+    },
+    "CEC": {
+      "name": "Cosmic Eclipse",
+      "year": 2019,
+      "logo": "https://images.pokemontcg.io/sm12/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "sm12"
+    },
+    "N3": {
+      "name": "Neo Revelation",
+      "year": 2001,
+      "logo": "https://images.pokemontcg.io/neo3/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "neo3"
+    },
+    "TEU": {
+      "name": "Team Up",
+      "year": 2019,
+      "logo": "https://images.pokemontcg.io/sm9/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "sm9"
+    },
+    "SM12A": {
+      "name": "Tag Team GX: Tag All Stars",
+      "year": 2019,
+      "logo": null,
+      "year_source": null,
+      "logo_source": null
+    },
+    "WBP": {
+      "name": "Wizards Black Star Promos",
+      "year": 1999,
+      "logo": "https://images.pokemontcg.io/basep/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "basep"
+    },
+    "BKP": {
+      "name": "BREAKpoint",
+      "year": 2016,
+      "logo": "https://images.pokemontcg.io/xy9/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "xy9"
+    },
+    "SMBS": {
+      "name": "SM Black Star Promos",
+      "year": 2017,
+      "logo": "https://images.pokemontcg.io/smp/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "smp"
+    },
+    "UNM": {
+      "name": "Unified Minds",
+      "year": 2019,
+      "logo": "https://images.pokemontcg.io/sm11/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "sm11"
+    },
+    "AOR": {
+      "name": "Ancient Origins",
+      "year": 2015,
+      "logo": "https://images.pokemontcg.io/xy7/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "xy7"
+    },
+    "XYP": {
+      "name": "XY Black Star Promos",
+      "year": 2013,
+      "logo": "https://images.pokemontcg.io/xyp/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "xyp"
+    },
+    "LOT": {
+      "name": "Lost Thunder",
+      "year": 2018,
+      "logo": "https://images.pokemontcg.io/sm8/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "sm8"
+    },
+    "PFL": {
+      "name": "Phantasmal Flames",
+      "year": 2025,
+      "logo": "https://images.pokemontcg.io/me2/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "me2"
+    },
+    "BS": {
+      "name": "Base Set",
+      "year": 1999,
+      "logo": "https://images.pokemontcg.io/base1/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "base1"
+    },
+    "PHF": {
+      "name": "Phantom Forces",
+      "year": 2014,
+      "logo": "https://images.pokemontcg.io/xy4/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "xy4"
+    },
+    "HP": {
+      "name": "EX Holon Phantoms",
+      "year": 2006,
+      "logo": "https://images.pokemontcg.io/ex13/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "ex13"
+    },
+    "TR": {
+      "name": "Team Rocket",
+      "year": 2000,
+      "logo": "https://images.pokemontcg.io/base5/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "base5"
+    },
+    "CLO": {
+      "name": "Call of Legends",
+      "year": 2011,
+      "logo": "https://images.pokemontcg.io/col1/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "col1"
+    },
+    "PAF": {
+      "name": "Paldean Fates",
+      "year": 2024,
+      "logo": "https://images.pokemontcg.io/sv4pt5/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "sv4pt5"
+    },
+    "CG": {
+      "name": "EX Crystal Guardians",
+      "year": 2006,
+      "logo": "https://images.pokemontcg.io/ex14/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "ex14"
+    },
+    "DRI": {
+      "name": "Destined Rivals",
+      "year": 2025,
+      "logo": "https://images.pokemontcg.io/sv10/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "sv10"
+    },
+    "ASTR": {
+      "name": "Astral Radiance",
+      "year": 2022,
+      "logo": "https://images.pokemontcg.io/swsh10/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "swsh10"
+    },
+    "CBB3C": {
+      "name": "Gem Pack Vol.3",
+      "year": null,
+      "logo": null,
+      "year_source": null,
+      "logo_source": null
+    },
+    "VIV": {
+      "name": "Vivid Voltage",
+      "year": 2020,
+      "logo": "https://images.pokemontcg.io/swsh4/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "swsh4"
+    },
+    "DX": {
+      "name": "EX Deoxys",
+      "year": 2005,
+      "logo": "https://images.pokemontcg.io/ex8/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "ex8"
+    },
+    "EVO": {
+      "name": "Evolutions",
+      "year": 2016,
+      "logo": "https://images.pokemontcg.io/xy12/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "xy12"
+    },
+    "TEF": {
+      "name": "Temporal Forces",
+      "year": 2024,
+      "logo": "https://images.pokemontcg.io/sv5/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "sv5"
+    },
+    "SVPROMO": {
+      "name": "SV Black Star Promos",
+      "year": 2023,
+      "logo": "https://images.pokemontcg.io/svp/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "svp"
+    },
+    "SVI": {
+      "name": "Scarlet & Violet",
+      "year": 2023,
+      "logo": "https://images.pokemontcg.io/sv1/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "sv1"
+    },
+    "WIZ": {
+      "name": "Wizards Black Star Promos",
+      "year": 1999,
+      "logo": "https://images.pokemontcg.io/basep/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "basep"
+    },
+    "SFA": {
+      "name": "Shrouded Fable",
+      "year": 2024,
+      "logo": "https://images.pokemontcg.io/sv6pt5/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "sv6pt5"
+    },
+    "PROMO-RETAIL": {
+      "name": "Retail Exclusive Promos",
+      "year": null,
+      "logo": null,
+      "year_source": null,
+      "logo_source": null
+    },
+    "SSP": {
+      "name": "Surging Sparks",
+      "year": 2024,
+      "logo": "https://images.pokemontcg.io/sv8/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "sv8"
+    },
+    "MEP": {
+      "name": "MEP Black Star Promos",
+      "year": null,
+      "logo": null,
+      "year_source": null,
+      "logo_source": null
+    },
+    "JTG": {
+      "name": "Journey Together",
+      "year": 2025,
+      "logo": "https://images.pokemontcg.io/sv9/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "sv9"
+    },
+    "SWSHBS": {
+      "name": "SWSH Black Star Promos",
+      "year": 2019,
+      "logo": "https://images.pokemontcg.io/swshp/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "swshp"
+    },
+    "CS55": {
+      "name": "CS5.5: Shadow of Glory",
+      "year": null,
+      "logo": null,
+      "year_source": null,
+      "logo_source": null
+    },
+    "JU": {
+      "name": "Jungle",
+      "year": 1999,
+      "logo": "https://images.pokemontcg.io/base2/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "base2"
+    },
+    "PROMOSV": {
+      "name": "Scarlet & Violet Promos",
+      "year": null,
+      "logo": null,
+      "year_source": null,
+      "logo_source": null
+    },
+    "TWM": {
+      "name": "Twilight Masquerade",
+      "year": 2024,
+      "logo": "https://images.pokemontcg.io/sv6/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "sv6"
+    },
+    "C25": {
+      "name": "Celebrations",
+      "year": 2021,
+      "logo": "https://images.pokemontcg.io/cel25/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "cel25",
+      "release_date": "2021-10-08"
+    },
+    "FCO": {
+      "name": "Fates Collide",
+      "year": 2016,
+      "logo": "https://images.pokemontcg.io/xy10/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "xy10",
+      "release_date": "2016-05-02"
+    },
+    "SCR": {
+      "name": "Stellar Crown",
+      "year": 2024,
+      "logo": "https://images.pokemontcg.io/sv7/logo.png",
+      "year_source": "pokemon.com",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "sv7",
+      "release_date": "2024-09-13"
+    },
+    "N2": {
+      "name": "Neo Discovery",
+      "year": 2001,
+      "logo": "https://images.pokemontcg.io/neo2/logo.png",
+      "year_source": "bulbapedia",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "neo2",
+      "release_date": "2001-06-01"
+    },
+    "30C": {
+      "name": "30th Celebration",
+      "year": 2026,
+      "logo": null,
+      "year_source": "pokemon.com",
+      "logo_source": null,
+      "release_date": "2026-09-16"
+    },
+    "GYARADOS": {
+      "name": "HS Trainer Kit (Gyarados)",
+      "year": 2010,
+      "logo": null,
+      "year_source": "bulbapedia",
+      "logo_source": null,
+      "release_date": "2010-05-12"
+    },
+    "UNB": {
+      "name": "Unbroken Bonds",
+      "year": 2019,
+      "logo": "https://images.pokemontcg.io/sm10/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "sm10"
+    },
+    "HIF": {
+      "name": "Hidden Fates",
+      "year": 2019,
+      "logo": "https://images.pokemontcg.io/sm115/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "sm115"
+    },
+    "SW": {
+      "name": "Secret Wonders",
+      "year": 2007,
+      "logo": "https://images.pokemontcg.io/dp3/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "dp3"
+    },
+    "LA": {
+      "name": "Legends Awakened",
+      "year": 2008,
+      "logo": "https://images.pokemontcg.io/dp6/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "dp6"
+    },
+    "DP": {
+      "name": "Diamond & Pearl",
+      "year": 2007,
+      "logo": "https://images.pokemontcg.io/dp1/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "dp1"
+    },
+    "MT": {
+      "name": "Mysterious Treasures",
+      "year": 2007,
+      "logo": "https://images.pokemontcg.io/dp2/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "dp2"
+    },
+    "DAA": {
+      "name": "Darkness Ablaze",
+      "year": 2020,
+      "logo": "https://images.pokemontcg.io/swsh3/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "swsh3"
+    },
+    "C25C": {
+      "name": "Celebrations: Classic Collection",
+      "year": 2021,
+      "logo": "https://images.pokemontcg.io/cel25c/logo.png",
+      "year_source": "pokemontcg.io",
+      "logo_source": "pokemontcg.io",
+      "ptcg_id": "cel25c",
+      "release_date": "2021-10-08"
+    }
   }
- }
 }

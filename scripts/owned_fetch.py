@@ -18,6 +18,10 @@ Raw cards:
 Graded PSA 10:
   - cheapest CardTrader graded listing whose description identifies PSA 10,
     same language; never the raw NM price.
+
+Cards with fallback_to_purchase_price=true use purchase_price_eur when no
+CardTrader market listing is found (price_final_source=purchase_fallback).
+A real market price always wins over the purchase fallback.
 """
 from __future__ import annotations
 
@@ -364,6 +368,30 @@ def rows_for(listings: dict, card: dict) -> list[dict]:
     return listings.get(str(bid)) or []
 
 
+def apply_purchase_fallback(card: dict) -> None:
+    """Use purchase_price_eur when a flagged card has no market listing.
+
+    A real CardTrader/Cardmarket price always wins. If the next daily run
+    finds a listing, price_final_eur becomes that market price. If it does
+    not, the paid price is shown again (gain 0) until a useful reference
+    exists.
+    """
+    if not card.get("fallback_to_purchase_price"):
+        return
+    if isinstance(card.get("price_final_eur"), (int, float)):
+        return
+    paid = card.get("purchase_price_eur")
+    if not isinstance(paid, (int, float)):
+        return
+    card["price_final_eur"] = paid
+    card["price_final_source"] = "purchase_fallback"
+    if not card.get("price_condition"):
+        if card.get("graded"):
+            card["price_condition"] = f"PSA{card.get('grade') or 10}"
+        else:
+            card["price_condition"] = card.get("condition_code") or "NM"
+
+
 def apply_prices(cards: list[dict], raw: dict, graded: dict) -> None:
     raw_map = raw.get("listings") or {}
     grd_map = graded.get("listings") or {}
@@ -377,6 +405,7 @@ def apply_prices(cards: list[dict], raw: dict, graded: dict) -> None:
         card["price_date"] = now
         if not card.get("cardtrader_blueprint_id"):
             card["notes"] = (card.get("notes") or "").rstrip() + (" " if card.get("notes") else "") + "Senza blueprint, non prezzata."
+            apply_purchase_fallback(card)
             continue
         if card.get("graded"):
             psa = drop_placeholders(grd_map.get(str(card["cardtrader_blueprint_id"])) or [])
@@ -391,6 +420,7 @@ def apply_prices(cards: list[dict], raw: dict, graded: dict) -> None:
                 card["price_condition"] = "PSA10"
                 card["listings_psa10"] = 0
                 # never fall back to raw
+            apply_purchase_fallback(card)
             continue
 
         rows = rows_for(raw_map, card)
@@ -424,6 +454,7 @@ def apply_prices(cards: list[dict], raw: dict, graded: dict) -> None:
         z, c = split(nm)
         card["price_ctz_eur"] = drop_placeholders(z)[0]["price_eur"] if drop_placeholders(z) else None
         card["price_ct_eur"] = drop_placeholders(c)[0]["price_eur"] if drop_placeholders(c) else None
+        apply_purchase_fallback(card)
 
 
 def refresh_purchase(card: dict) -> None:
@@ -479,11 +510,12 @@ def update_wishlist(cards: list[dict], date: str) -> None:
     idmap = {c["id"]: c for c in cards}
     for rec in data["cards"]:
         rec.update(idmap.get(rec["id"], {}))
+        apply_purchase_fallback(rec)
         refresh_purchase(rec)
     priced = [c for c in data["cards"] if isinstance(c.get("price_final_eur"), (int, float))]
     total = round(sum(c["price_final_eur"] * c.get("quantity", 1) for c in priced), 2)
     non_nm = [c for c in data["cards"] if not c.get("graded") and (c.get("condition_code") or "NM") != "NM"]
-    same_ok = [c for c in non_nm if c.get("price_final_eur") is not None and not c.get("fallback") and c.get("price_condition") == c.get("condition_code")]
+    same_ok = [c for c in non_nm if c.get("price_final_eur") is not None and not c.get("fallback") and c.get("price_condition") == c.get("condition_code") and c.get("price_final_source") != "purchase_fallback"]
     fell = [c for c in non_nm if c.get("fallback")]
     unpriced_nnm = [c for c in non_nm if c.get("price_final_eur") is None]
     graded = [c for c in data["cards"] if c.get("graded")]

@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-11-21T06:49:26+01:00",
+ "generated_at": "2026-11-21T16:04:15+01:00",
  "currency": "EUR",
  "price_definition": "price_final_eur è un solo prezzo Near Mint in lingua target (ITA, JP solo per Togepi), non gradato, spedizione esclusa. Il prezzo è price.cents/100, già con la fee di CardTrader. Default: minimo Zero (price_ctz_eur). Si usa il minimo CardTrader normale (price_ct_eur) se non c'è nessuno Zero, oppure se lo Zero costa più del 20% del normale (price_ctz_eur > price_ct_eur * 1.20). Se mancano entrambi, si usa price_cm_eur da Cardmarket. price_final_source vale ctz, ct o cm. buy_price_eur è uguale a price_final_eur. Se non c'è un Near Mint non gradato (Zero, poi CardTrader, poi Cardmarket), si usa la condizione migliore tra SP, MP, PL e PO: il minimo CardTrader di quella condizione, altrimenti niente. price_condition vale NM, SP, MP, PL o PO. Un annuncio gradato si ignora. Un annuncio che costa più di 10 volte il successivo, o almeno 10.000 € quando ne esiste uno più basso, si ignora.",
  "summary": {
   "cards": 43,
-  "priced": 43,
-  "total_eur": 8213.62,
+  "priced": 41,
+  "total_eur": 8201.37,
   "zero_priced": 30,
   "zero_total_eur": 4898.72,
   "ctz_priced": 30,
@@ -15,13 +15,13 @@
   "avg_priced": 34,
   "total_avg_eur": 5987.35,
   "final_ctz": 14,
-  "final_ct": 22,
+  "final_ct": 20,
   "final_cm": 7,
   "tiers": {
-   "A: <50€": 20,
+   "A: <50€": 18,
    "B: 50-150€": 9,
    "C: >150€": 14,
-   "n/d": 0
+   "n/d": 2
   }
  },
  "zero_definition": "zero_total_eur somma solo i minimi Near Mint in lingua target dei venditori CardTrader Zero. Una carta senza copia Zero non entra in quel totale, ma resta in total_eur se ha un minimo CardTrader.",
@@ -77,9 +77,8 @@
    "buy_price_eur": 1100.64,
    "buy_price_source": "ct",
    "tier": "C: >150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 1,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 1
   },
   {
    "id": "p8-8",
@@ -135,9 +134,8 @@
    "buy_price_eur": 800,
    "buy_price_source": "cm",
    "tier": "C: >150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 2,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 2
   },
   {
    "id": "p10-2",
@@ -193,9 +191,8 @@
    "buy_price_eur": 790,
    "buy_price_source": "cm",
    "tier": "C: >150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 3,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 3
   },
   {
    "id": "p4-3",
@@ -259,9 +256,8 @@
    "buy_price_eur": 700.64,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 4,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 4
   },
   {
    "id": "p4-2",
@@ -325,9 +321,8 @@
    "buy_price_eur": 550.64,
    "buy_price_source": "ct",
    "tier": "C: >150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 5,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 5
   },
   {
    "id": "p10-3",
@@ -383,9 +378,8 @@
    "buy_price_eur": 500,
    "buy_price_source": "cm",
    "tier": "C: >150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 6,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 6
   },
   {
    "id": "p4-6",
@@ -449,9 +443,8 @@
    "buy_price_eur": 450.62,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 7,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 7
   },
   {
    "id": "p9-4",
@@ -506,9 +499,8 @@
    "buy_price_eur": 439.65,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 8,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 8
   },
   {
    "id": "p10-1",
@@ -564,9 +556,8 @@
    "buy_price_eur": 375,
    "buy_price_source": "cm",
    "tier": "C: >150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 9,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 9
   },
   {
    "id": "p5-1",
@@ -650,9 +641,8 @@
    "buy_price_eur": 330.64,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 10,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 10
   },
   {
    "id": "p3-6",
@@ -716,9 +706,8 @@
    "buy_price_eur": 260,
    "buy_price_source": "cm",
    "tier": "C: >150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 11,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 11
   },
   {
    "id": "p4-1",
@@ -802,9 +791,8 @@
    "buy_price_eur": 250.09,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 12,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 12
   },
   {
    "id": "p3-7",
@@ -888,9 +876,8 @@
    "buy_price_eur": 235.64,
    "buy_price_source": "ctz",
    "tier": "C: >150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 13,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 13
   },
   {
    "id": "p9-3",
@@ -947,9 +934,8 @@
    "buy_price_eur": 199.99,
    "buy_price_source": "cm",
    "tier": "C: >150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 14,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 14
   },
   {
    "id": "p9-5",
@@ -1004,9 +990,8 @@
    "buy_price_eur": 140,
    "buy_price_source": "cm",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 15,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 15
   },
   {
    "id": "p3-9",
@@ -1090,9 +1075,8 @@
    "buy_price_eur": 125.0,
    "buy_price_source": "ct",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 16,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 16
   },
   {
    "id": "p4-5",
@@ -1156,9 +1140,8 @@
    "buy_price_eur": 120.63,
    "buy_price_source": "ct",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 17,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 17
   },
   {
    "id": "p4-4",
@@ -1211,9 +1194,8 @@
    "buy_price_eur": 100.64,
    "buy_price_source": "ct",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 18,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 18
   },
   {
    "id": "p3-8",
@@ -1266,9 +1248,8 @@
    "buy_price_eur": 95.08,
    "buy_price_source": "ct",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 19,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 19
   },
   {
    "id": "p12-9",
@@ -1324,9 +1305,8 @@
    "buy_price_eur": 90.64,
    "buy_price_source": "ct",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 20,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 20
   },
   {
    "id": "p12-8",
@@ -1382,9 +1362,8 @@
    "buy_price_eur": 80.64,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 21,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 21
   },
   {
    "id": "p11-8",
@@ -1440,9 +1419,8 @@
    "buy_price_eur": 78.62,
    "buy_price_source": "ctz",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 22,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 22
   },
   {
    "id": "p11-7",
@@ -1498,9 +1476,8 @@
    "buy_price_eur": 50.64,
    "buy_price_source": "ct",
    "tier": "B: 50-150€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 23,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 23
   },
   {
    "id": "p11-2",
@@ -1556,9 +1533,8 @@
    "buy_price_eur": 40.52,
    "buy_price_source": "ctz",
    "tier": "A: <50€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 24,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 24
   },
   {
    "id": "p13-2",
@@ -1614,9 +1590,8 @@
    "buy_price_eur": 35.51,
    "buy_price_source": "ctz",
    "tier": "A: <50€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 25,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 25
   },
   {
    "id": "p9-6",
@@ -1672,9 +1647,8 @@
    "buy_price_eur": 34.39,
    "buy_price_source": "ctz",
    "tier": "A: <50€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 26,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 26
   },
   {
    "id": "p12-7",
@@ -1730,9 +1704,8 @@
    "buy_price_eur": 30.53,
    "buy_price_source": "ct",
    "tier": "A: <50€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 27,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 27
   },
   {
    "id": "p9-8",
@@ -1788,9 +1761,8 @@
    "buy_price_eur": 25.4,
    "buy_price_source": "ct",
    "tier": "A: <50€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 28,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 28
   },
   {
    "id": "p13-3",
@@ -1846,9 +1818,8 @@
    "buy_price_eur": 25.4,
    "buy_price_source": "ct",
    "tier": "A: <50€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 29,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 29
   },
   {
    "id": "p11-9",
@@ -1904,9 +1875,8 @@
    "buy_price_eur": 24.39,
    "buy_price_source": "ct",
    "tier": "A: <50€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 30,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 30
   },
   {
    "id": "p12-1",
@@ -1962,9 +1932,8 @@
    "buy_price_eur": 24.29,
    "buy_price_source": "ctz",
    "tier": "A: <50€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 31,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 31
   },
   {
    "id": "p12-3",
@@ -2020,9 +1989,8 @@
    "buy_price_eur": 20.2,
    "buy_price_source": "ctz",
    "tier": "A: <50€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 32,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 32
   },
   {
    "id": "p9-7",
@@ -2078,9 +2046,8 @@
    "buy_price_eur": 16.26,
    "buy_price_source": "ct",
    "tier": "A: <50€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 33,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 33
   },
   {
    "id": "p11-3",
@@ -2136,9 +2103,8 @@
    "buy_price_eur": 15.21,
    "buy_price_source": "ct",
    "tier": "A: <50€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 34,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 34
   },
   {
    "id": "p12-2",
@@ -2194,9 +2160,8 @@
    "buy_price_eur": 15.21,
    "buy_price_source": "ct",
    "tier": "A: <50€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 35,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 35
   },
   {
    "id": "p11-6",
@@ -2252,67 +2217,8 @@
    "buy_price_eur": 11.21,
    "buy_price_source": "ctz",
    "tier": "A: <50€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 36,
-   "price_condition": "NM"
-  },
-  {
-   "id": "p12-6",
-   "order": 37,
-   "page": 5,
-   "position": 1,
-   "name": "Snorlax",
-   "name_it": "Snorlax",
-   "set": "Call of Legends",
-   "set_it": "Richiamo delle Leggende",
-   "set_code": "CLO",
-   "number": "33",
-   "set_total": "95",
-   "rarity": "Rare",
-   "cardtrader_blueprint_id": 112365,
-   "cardtrader_link": "https://www.cardtrader.com/it/cards/112365-snorlax-33-95-call-of-legends",
-   "image_url": "https://www.cardtrader.com/uploads/blueprints/image/112365/show_snorlax-33-95-call-of-legends.jpg",
-   "target_language": "it",
-   "italian_edition_exists": true,
-   "confidence": "alta",
-   "notes": "",
-   "price_min_ita_nm_eur": null,
-   "price_min_target_lang_nm_eur": null,
-   "listings_target_lang_nm": null,
-   "price_2nd_target_lang_nm_eur": null,
-   "price_min_any_lang_nm_eur": null,
-   "ct_market_all_lang_eur": null,
-   "price_source": null,
-   "price_min_ita_nm_zero_eur": null,
-   "price_min_target_lang_nm_zero_eur": null,
-   "listings_target_lang_nm_zero": 0,
-   "offers_zero": null,
-   "offers_ct": null,
-   "qty_mint_nm_target_lang": null,
-   "listings_mint_nm_target_lang": null,
-   "price_ctz_eur": null,
-   "listings_ctz": 0,
-   "qty_ctz": 0,
-   "price_ct_eur": null,
-   "listings_ct": 0,
-   "qty_ct": 0,
-   "price_avg_eur": null,
-   "listings_nm": 0,
-   "qty_nm": 0,
-   "price_cm_eur": null,
-   "price_cm_avg_eur": null,
-   "copies_cm": null,
-   "price_cm_date": null,
-   "price_final_eur": 7.14,
-   "price_final_source": "ct",
-   "fetch_error": "HTTP Error 403: Forbidden",
-   "release_year": 2011,
-   "buy_price_eur": 7.14,
-   "buy_price_source": "ct",
-   "tier": "A: <50€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 37,
-   "price_condition": "SP"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 36
   },
   {
    "id": "p13-1",
@@ -2368,67 +2274,8 @@
    "buy_price_eur": 5.28,
    "buy_price_source": "ct",
    "tier": "A: <50€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 38,
-   "price_condition": "NM"
-  },
-  {
-   "id": "p12-5",
-   "order": 36,
-   "page": 4,
-   "position": 9,
-   "name": "Gyarados",
-   "name_it": "Gyarados",
-   "set": "Call of Legends",
-   "set_it": "Richiamo delle Leggende",
-   "set_code": "CLO",
-   "number": "7",
-   "set_total": "95",
-   "rarity": "Rare Holo",
-   "cardtrader_blueprint_id": 112313,
-   "cardtrader_link": "https://www.cardtrader.com/it/cards/112313-gyarados-holo-rare-7-95-call-of-legends",
-   "image_url": "https://www.cardtrader.com/uploads/blueprints/image/112313/show_gyarados-rare-holo-7-95-call-of-legends.jpg",
-   "target_language": "it",
-   "italian_edition_exists": true,
-   "confidence": "alta",
-   "notes": "",
-   "price_min_ita_nm_eur": null,
-   "price_min_target_lang_nm_eur": null,
-   "listings_target_lang_nm": null,
-   "price_2nd_target_lang_nm_eur": null,
-   "price_min_any_lang_nm_eur": null,
-   "ct_market_all_lang_eur": null,
-   "price_source": null,
-   "price_min_ita_nm_zero_eur": null,
-   "price_min_target_lang_nm_zero_eur": null,
-   "listings_target_lang_nm_zero": 0,
-   "offers_zero": null,
-   "offers_ct": null,
-   "qty_mint_nm_target_lang": null,
-   "listings_mint_nm_target_lang": null,
-   "price_ctz_eur": null,
-   "listings_ctz": 0,
-   "qty_ctz": 0,
-   "price_ct_eur": null,
-   "listings_ct": 0,
-   "qty_ct": 0,
-   "price_avg_eur": null,
-   "listings_nm": 0,
-   "qty_nm": 0,
-   "price_cm_eur": null,
-   "price_cm_avg_eur": null,
-   "copies_cm": null,
-   "price_cm_date": null,
-   "price_final_eur": 5.11,
-   "price_final_source": "ct",
-   "fetch_error": "HTTP Error 403: Forbidden",
-   "release_year": 2011,
-   "buy_price_eur": 5.11,
-   "buy_price_source": "ct",
-   "tier": "A: <50€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 39,
-   "price_condition": "SP"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 37
   },
   {
    "id": "p11-4",
@@ -2484,9 +2331,8 @@
    "buy_price_eur": 4.11,
    "buy_price_source": "ct",
    "tier": "A: <50€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 40,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 38
   },
   {
    "id": "p11-1",
@@ -2542,9 +2388,8 @@
    "buy_price_eur": 3.91,
    "buy_price_source": "ct",
    "tier": "A: <50€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 41,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 39
   },
   {
    "id": "p12-4",
@@ -2600,9 +2445,8 @@
    "buy_price_eur": 2.95,
    "buy_price_source": "ct",
    "tier": "A: <50€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 42,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 40
   },
   {
    "id": "p11-5",
@@ -2658,9 +2502,122 @@
    "buy_price_eur": 1.16,
    "buy_price_source": "ct",
    "tier": "A: <50€",
-   "last_updated": "2026-11-21T06:49:26+01:00",
-   "rank_by_price": 43,
-   "price_condition": "NM"
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 41
+  },
+  {
+   "id": "p12-5",
+   "order": 36,
+   "page": 4,
+   "position": 9,
+   "name": "Gyarados",
+   "name_it": "Gyarados",
+   "set": "Call of Legends",
+   "set_it": "Richiamo delle Leggende",
+   "set_code": "CLO",
+   "number": "7",
+   "set_total": "95",
+   "rarity": "Rare Holo",
+   "cardtrader_blueprint_id": 112313,
+   "cardtrader_link": "https://www.cardtrader.com/it/cards/112313-gyarados-holo-rare-7-95-call-of-legends",
+   "image_url": "https://www.cardtrader.com/uploads/blueprints/image/112313/show_gyarados-rare-holo-7-95-call-of-legends.jpg",
+   "target_language": "it",
+   "italian_edition_exists": true,
+   "confidence": "alta",
+   "notes": "",
+   "price_min_ita_nm_eur": null,
+   "price_min_target_lang_nm_eur": null,
+   "listings_target_lang_nm": null,
+   "price_2nd_target_lang_nm_eur": null,
+   "price_min_any_lang_nm_eur": null,
+   "ct_market_all_lang_eur": null,
+   "price_source": null,
+   "price_min_ita_nm_zero_eur": null,
+   "price_min_target_lang_nm_zero_eur": null,
+   "listings_target_lang_nm_zero": 0,
+   "offers_zero": null,
+   "offers_ct": null,
+   "qty_mint_nm_target_lang": null,
+   "listings_mint_nm_target_lang": null,
+   "price_ctz_eur": null,
+   "listings_ctz": 0,
+   "qty_ctz": 0,
+   "price_ct_eur": null,
+   "listings_ct": 0,
+   "qty_ct": 0,
+   "price_avg_eur": null,
+   "listings_nm": 0,
+   "qty_nm": 0,
+   "price_cm_eur": null,
+   "price_cm_avg_eur": null,
+   "copies_cm": null,
+   "price_cm_date": null,
+   "price_final_eur": null,
+   "price_final_source": null,
+   "fetch_error": "HTTP Error 403: Forbidden",
+   "release_year": 2011,
+   "buy_price_eur": null,
+   "buy_price_source": null,
+   "tier": "n/d",
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 42
+  },
+  {
+   "id": "p12-6",
+   "order": 37,
+   "page": 5,
+   "position": 1,
+   "name": "Snorlax",
+   "name_it": "Snorlax",
+   "set": "Call of Legends",
+   "set_it": "Richiamo delle Leggende",
+   "set_code": "CLO",
+   "number": "33",
+   "set_total": "95",
+   "rarity": "Rare",
+   "cardtrader_blueprint_id": 112365,
+   "cardtrader_link": "https://www.cardtrader.com/it/cards/112365-snorlax-33-95-call-of-legends",
+   "image_url": "https://www.cardtrader.com/uploads/blueprints/image/112365/show_snorlax-33-95-call-of-legends.jpg",
+   "target_language": "it",
+   "italian_edition_exists": true,
+   "confidence": "alta",
+   "notes": "",
+   "price_min_ita_nm_eur": null,
+   "price_min_target_lang_nm_eur": null,
+   "listings_target_lang_nm": null,
+   "price_2nd_target_lang_nm_eur": null,
+   "price_min_any_lang_nm_eur": null,
+   "ct_market_all_lang_eur": null,
+   "price_source": null,
+   "price_min_ita_nm_zero_eur": null,
+   "price_min_target_lang_nm_zero_eur": null,
+   "listings_target_lang_nm_zero": 0,
+   "offers_zero": null,
+   "offers_ct": null,
+   "qty_mint_nm_target_lang": null,
+   "listings_mint_nm_target_lang": null,
+   "price_ctz_eur": null,
+   "listings_ctz": 0,
+   "qty_ctz": 0,
+   "price_ct_eur": null,
+   "listings_ct": 0,
+   "qty_ct": 0,
+   "price_avg_eur": null,
+   "listings_nm": 0,
+   "qty_nm": 0,
+   "price_cm_eur": null,
+   "price_cm_avg_eur": null,
+   "copies_cm": null,
+   "price_cm_date": null,
+   "price_final_eur": null,
+   "price_final_source": null,
+   "fetch_error": "HTTP Error 403: Forbidden",
+   "release_year": 2011,
+   "buy_price_eur": null,
+   "buy_price_source": null,
+   "tier": "n/d",
+   "last_updated": "2026-11-21T16:04:15+01:00",
+   "rank_by_price": 43
   }
  ]
 }

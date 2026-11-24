@@ -59,6 +59,7 @@ COLLECTIONS = {
     "wishlist": "data",
     "vintage": os.path.join("data", "collections", "vintage"),
     "gold": os.path.join("data", "collections", "gold"),
+    "owned": os.path.join("data", "collections", "owned"),
 }
 BASE = "https://www.cardtrader.com/en-EU/cards/{bid}.json"
 UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
@@ -387,7 +388,7 @@ def run_collection(name: str, args) -> int:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--root", default=ROOT, help="root del repo (default: cartella sopra scripts/)")
-    ap.add_argument("--collection", choices=["wishlist", "vintage", "gold", "all"], default="all")
+    ap.add_argument("--collection", choices=["wishlist", "vintage", "gold", "owned", "all"], default="all")
     ap.add_argument("--cards", help="cards.json alternativo (solo con una collezione)")
     ap.add_argument("--out", help="cartella di output alternativa (solo con una collezione)")
     ap.add_argument("--tcgnotify", action="append", help="dump TCGNotify da unire (ripetibile)")

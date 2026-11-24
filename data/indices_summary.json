@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T06:45:23+01:00",
+ "generated_at": "2026-11-24T08:35:49+01:00",
  "base": 100,
  "real_from": "2026-11-10",
  "note": "index_value_eur somma i prezzi unitari di tutte le carte dello snapshot, anche quelle segnate come acquistate. index_base100 è a base 100 e si concatena sul rendimento delle carte in comune, così un'aggiunta non crea un salto. volume è la somma dei total CT+CM italiani già noti; un dato mancante resta null. I rendimenti sono percentuali e sono null se manca il giorno esatto di confronto.",
@@ -56,21 +56,21 @@
    "date": "2026-11-24",
    "n_cards": 43,
    "n_priced": 43,
-   "index_value_eur": 8245.67,
-   "index_base100": 93.961722,
-   "divisor": 87.75562883,
+   "index_value_eur": 8266.43,
+   "index_base100": 94.132906,
+   "divisor": 87.81658138,
    "volume": null,
    "ct_it": 276.0,
    "cm_it": null,
    "n_pop": 40,
    "returns_pct": {
-    "1G": 0.382955,
-    "7G": -3.080827,
+    "1G": 0.565837,
+    "7G": -2.904255,
     "30G": null,
     "90G": null,
     "1Y": null,
     "YTD": null,
-    "inception": -6.038278
+    "inception": -5.867094
    }
   },
   {

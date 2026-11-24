@@ -1,87 +1,87 @@
 {
  "p1-5": {
-  "min_eur": 850,
-  "avg_eur": 850,
+  "min_eur": 840,
+  "avg_eur": 840,
   "copies": 30,
-  "date": "2026-11-17"
+  "date": "2026-11-23"
  },
  "p1-4": {
   "min_eur": 600,
   "avg_eur": 609,
-  "copies": 31,
-  "date": "2026-11-18"
+  "copies": 36,
+  "date": "2026-11-23"
  },
  "p1-7": {
-  "min_eur": 380,
-  "avg_eur": 449.98,
-  "copies": 23,
-  "date": "2026-11-17"
+  "min_eur": 349.99,
+  "avg_eur": 430,
+  "copies": 25,
+  "date": "2026-11-23"
  },
  "p1-3": {
   "min_eur": 500,
-  "avg_eur": 549.84,
-  "copies": 25,
-  "date": "2026-11-18"
+  "avg_eur": 549.9,
+  "copies": 23,
+  "date": "2026-11-23"
  },
  "p6-8": {
   "min_eur": 440,
   "avg_eur": 440,
-  "copies": 16,
-  "date": "2026-11-18"
+  "copies": 17,
+  "date": "2026-11-23"
  },
  "p1-6": {
-  "min_eur": 390,
+  "min_eur": 380,
   "avg_eur": 400,
-  "copies": 24,
-  "date": "2026-11-18"
+  "copies": 23,
+  "date": "2026-11-23"
  },
  "p1-1": {
   "min_eur": 355,
-  "avg_eur": 400,
-  "copies": 16,
-  "date": "2026-11-17"
+  "avg_eur": 399.89,
+  "copies": 17,
+  "date": "2026-11-23"
  },
  "p7-2": {
   "min_eur": 375,
   "avg_eur": 380,
-  "copies": 90,
-  "date": "2026-11-17"
+  "copies": 88,
+  "date": "2026-11-23"
  },
  "p7-4": {
-  "min_eur": 334.99,
-  "avg_eur": 348.9,
-  "copies": 43,
-  "date": "2026-11-18"
+  "min_eur": 320,
+  "avg_eur": 331,
+  "copies": 42,
+  "date": "2026-11-23"
  },
  "p1-2": {
   "min_eur": 249,
-  "avg_eur": 280,
-  "copies": 19,
-  "date": "2026-11-18"
+  "avg_eur": 320,
+  "copies": 17,
+  "date": "2026-11-23"
  },
  "p7-7": {
-  "min_eur": 239,
-  "avg_eur": 269.9,
-  "copies": 69,
-  "date": "2026-11-17"
+  "min_eur": 230,
+  "avg_eur": 270,
+  "copies": 64,
+  "date": "2026-11-23"
  },
  "p7-9": {
-  "min_eur": 188.05,
-  "avg_eur": 195,
-  "copies": 38,
-  "date": "2026-11-18"
+  "min_eur": 160,
+  "avg_eur": 180,
+  "copies": 41,
+  "date": "2026-11-23"
  },
  "p6-7": {
   "min_eur": 200,
   "avg_eur": 239.98,
-  "copies": 15,
-  "date": "2026-11-16"
+  "copies": 17,
+  "date": "2026-11-23"
  },
  "p4-9": {
   "min_eur": 156.9,
   "avg_eur": 160,
-  "copies": 77,
-  "date": "2026-11-17"
+  "copies": 72,
+  "date": "2026-11-23"
  },
  "p8-1": {
   "min_eur": 159,
@@ -92,50 +92,50 @@
  "p6-9": {
   "min_eur": 120,
   "avg_eur": 150,
-  "copies": 29,
-  "date": "2026-11-17"
+  "copies": 31,
+  "date": "2026-11-23"
  },
  "p4-7": {
   "min_eur": 139.9,
-  "avg_eur": 144,
-  "copies": 59,
-  "date": "2026-11-17"
+  "avg_eur": 140,
+  "copies": 57,
+  "date": "2026-11-23"
  },
  "p7-1": {
-  "min_eur": 130,
-  "avg_eur": 134,
-  "copies": 49,
-  "date": "2026-11-17"
+  "min_eur": 129,
+  "avg_eur": 138.9,
+  "copies": 50,
+  "date": "2026-11-23"
  },
  "p5-3": {
   "min_eur": 119.99,
-  "avg_eur": 120,
-  "copies": 64,
-  "date": "2026-11-18"
+  "avg_eur": 123,
+  "copies": 61,
+  "date": "2026-11-23"
  },
  "p5-5": {
-  "min_eur": 105,
+  "min_eur": 99.5,
   "avg_eur": 110,
-  "copies": 75,
-  "date": "2026-11-17"
+  "copies": 72,
+  "date": "2026-11-23"
  },
  "p3-2": {
   "min_eur": 105,
   "avg_eur": 108,
-  "copies": 27,
-  "date": "2026-11-18"
+  "copies": 22,
+  "date": "2026-11-23"
  },
  "p7-8": {
-  "min_eur": 96,
-  "avg_eur": 96.7,
+  "min_eur": 94.99,
+  "avg_eur": 96.67,
   "copies": 82,
-  "date": "2026-11-17"
+  "date": "2026-11-23"
  },
  "p3-3": {
-  "min_eur": 109.94,
-  "avg_eur": 144.94,
+  "min_eur": 108.99,
+  "avg_eur": 114.99,
   "copies": 25,
-  "date": "2026-11-18"
+  "date": "2026-11-23"
  },
  "p8-2": {
   "min_eur": 103,
@@ -153,25 +153,25 @@
   "min_eur": 99.99,
   "avg_eur": 103.9,
   "copies": 78,
-  "date": "2026-11-18"
+  "date": "2026-11-23"
  },
  "p5-6": {
-  "min_eur": 109,
-  "avg_eur": 109.99,
-  "copies": 75,
-  "date": "2026-11-17"
+  "min_eur": 108.99,
+  "avg_eur": 109.9,
+  "copies": 71,
+  "date": "2026-11-23"
  },
  "p4-8": {
-  "min_eur": 93.95,
-  "avg_eur": 94,
-  "copies": 112,
-  "date": "2026-11-17"
+  "min_eur": 94,
+  "avg_eur": 94.9,
+  "copies": 104,
+  "date": "2026-11-23"
  },
  "p2-1": {
   "min_eur": 93,
   "avg_eur": 94,
-  "copies": 58,
-  "date": "2026-11-17"
+  "copies": 54,
+  "date": "2026-11-23"
  },
  "p5-7": {
   "min_eur": 80,
@@ -180,28 +180,28 @@
   "date": "2026-11-17"
  },
  "p7-5": {
-  "min_eur": 77,
-  "avg_eur": 79,
-  "copies": 33,
-  "date": "2026-11-18"
+  "min_eur": 76,
+  "avg_eur": 77.99,
+  "copies": 40,
+  "date": "2026-11-23"
  },
  "p2-2": {
-  "min_eur": 84.9,
-  "avg_eur": 85,
-  "copies": 53,
-  "date": "2026-11-17"
+  "min_eur": 80,
+  "avg_eur": 84.99,
+  "copies": 55,
+  "date": "2026-11-23"
  },
  "p3-1": {
-  "min_eur": 79.5,
+  "min_eur": 75,
   "avg_eur": 84,
   "copies": 31,
-  "date": "2026-11-17"
+  "date": "2026-11-23"
  },
  "p6-1": {
-  "min_eur": 83.95,
-  "avg_eur": 84.9,
-  "copies": 107,
-  "date": "2026-11-17"
+  "min_eur": 79.99,
+  "avg_eur": 83.95,
+  "copies": 108,
+  "date": "2026-11-23"
  },
  "p8-3": {
   "min_eur": 79.9,
@@ -210,159 +210,201 @@
   "date": "2026-11-17"
  },
  "p6-4": {
-  "min_eur": 75,
+  "min_eur": 74.9,
   "avg_eur": 80,
-  "copies": 50,
-  "date": "2026-11-17"
+  "copies": 48,
+  "date": "2026-11-23"
  },
  "p8-4": {
   "min_eur": 74.5,
-  "avg_eur": 78.49,
+  "avg_eur": 78,
   "copies": 46,
-  "date": "2026-11-17"
+  "date": "2026-11-23"
  },
  "p2-3": {
   "min_eur": 55,
   "avg_eur": 59,
-  "copies": 46,
-  "date": "2026-11-17"
+  "copies": 45,
+  "date": "2026-11-23"
  },
  "p6-3": {
-  "min_eur": 52,
-  "avg_eur": 59.89,
-  "copies": 174,
-  "date": "2026-11-17"
+  "min_eur": 57,
+  "avg_eur": 59.9,
+  "copies": 175,
+  "date": "2026-11-23"
  },
  "p5-8": {
-  "min_eur": 69.99,
+  "min_eur": 68.5,
   "avg_eur": 70,
-  "copies": 59,
-  "date": "2026-11-17"
+  "copies": 57,
+  "date": "2026-11-23"
  },
  "p6-2": {
   "min_eur": 42,
-  "avg_eur": 44,
-  "copies": 101,
-  "date": "2026-11-17"
+  "avg_eur": 44.9,
+  "copies": 97,
+  "date": "2026-11-23"
  },
  "p5-9": {
   "min_eur": 50,
-  "avg_eur": 50.49,
-  "copies": 100,
-  "date": "2026-11-17"
+  "avg_eur": 51.5,
+  "copies": 94,
+  "date": "2026-11-23"
  },
  "p1-8": {
-  "min_eur": 48.5,
-  "avg_eur": 48.8,
-  "copies": 87,
-  "date": "2026-11-17"
+  "min_eur": 48.49,
+  "avg_eur": 48.5,
+  "copies": 81,
+  "date": "2026-11-23"
  },
  "p7-3": {
-  "min_eur": 47,
-  "avg_eur": 48.53,
-  "copies": 70,
-  "date": "2026-11-17"
+  "min_eur": 48,
+  "avg_eur": 49,
+  "copies": 66,
+  "date": "2026-11-23"
  },
  "p6-5": {
-  "min_eur": 38,
-  "avg_eur": 44.89,
-  "copies": 89,
-  "date": "2026-11-17"
+  "min_eur": 42.99,
+  "avg_eur": 44,
+  "copies": 88,
+  "date": "2026-11-23"
  },
  "p5-2": {
-  "min_eur": 39.9,
-  "avg_eur": 40,
-  "copies": 66,
-  "date": "2026-11-17"
+  "min_eur": 40,
+  "avg_eur": 44.19,
+  "copies": 62,
+  "date": "2026-11-23"
  },
  "p2-4": {
-  "min_eur": 38,
-  "avg_eur": 38.5,
-  "copies": 69,
-  "date": "2026-11-17"
+  "min_eur": 32,
+  "avg_eur": 35,
+  "copies": 70,
+  "date": "2026-11-23"
  },
  "p2-5": {
   "min_eur": 35,
-  "avg_eur": 35,
-  "copies": 101,
-  "date": "2026-11-17"
+  "avg_eur": 36,
+  "copies": 92,
+  "date": "2026-11-23"
  },
  "p2-8": {
-  "min_eur": 23,
-  "avg_eur": 24.5,
-  "copies": 61,
-  "date": "2026-11-17"
+  "min_eur": 23.98,
+  "avg_eur": 24.9,
+  "copies": 55,
+  "date": "2026-11-23"
  },
  "p1-9": {
   "min_eur": 22,
-  "avg_eur": 24.8,
-  "copies": 39,
-  "date": "2026-11-17"
+  "avg_eur": 24.79,
+  "copies": 40,
+  "date": "2026-11-23"
  },
  "p2-6": {
-  "min_eur": 25.38,
-  "avg_eur": 28.5,
-  "copies": 40,
-  "date": "2026-11-18"
+  "min_eur": 25.27,
+  "avg_eur": 31,
+  "copies": 39,
+  "date": "2026-11-23"
  },
  "p2-7": {
-  "min_eur": 21.98,
-  "avg_eur": 24.8,
-  "copies": 76,
-  "date": "2026-11-17"
+  "min_eur": 19.9,
+  "avg_eur": 22.5,
+  "copies": 77,
+  "date": "2026-11-23"
  },
  "p6-6": {
-  "min_eur": 18,
-  "avg_eur": 18.95,
-  "copies": 102,
-  "date": "2026-11-17"
+  "min_eur": 18.05,
+  "avg_eur": 19.95,
+  "copies": 94,
+  "date": "2026-11-23"
  },
  "p7-6": {
-  "min_eur": 7.5,
-  "avg_eur": 7.98,
-  "copies": 96,
-  "date": "2026-11-18"
+  "min_eur": 7.9,
+  "avg_eur": 8.9,
+  "copies": 100,
+  "date": "2026-11-23"
  },
  "p8-5": {
   "min_eur": 145,
-  "avg_eur": 161.6,
+  "avg_eur": 159.99,
   "copies": 48,
-  "date": "2026-11-17"
+  "date": "2026-11-23"
  },
  "p8-6": {
-  "min_eur": 35,
+  "min_eur": 35.3,
   "avg_eur": 39,
-  "copies": 35,
-  "date": "2026-11-18"
+  "copies": 34,
+  "date": "2026-11-23"
  },
  "p8-7": {
   "min_eur": 12.99,
   "avg_eur": 13.4,
-  "copies": 34,
-  "date": "2026-11-17"
+  "copies": 32,
+  "date": "2026-11-23"
  },
  "p8-9": {
-  "min_eur": 99.9,
+  "min_eur": 93,
   "avg_eur": 100,
-  "copies": 57,
-  "date": "2026-11-17"
+  "copies": 59,
+  "date": "2026-11-23"
  },
  "p9-1": {
-  "min_eur": 81.99,
-  "avg_eur": 82.99,
-  "copies": 42,
-  "date": "2026-11-18"
+  "min_eur": 70,
+  "avg_eur": 81.98,
+  "copies": 45,
+  "date": "2026-11-23"
  },
  "p9-2": {
   "min_eur": 90,
-  "avg_eur": 94.9,
-  "copies": 53,
-  "date": "2026-11-17"
+  "avg_eur": 95,
+  "copies": 48,
+  "date": "2026-11-23"
  },
  "p9-9": {
   "min_eur": 109.99,
   "avg_eur": 129,
   "copies": 67,
   "date": "2026-11-18"
+ },
+ "p14-1": {
+  "min_eur": 3.5,
+  "avg_eur": 4,
+  "copies": 77,
+  "date": "2026-11-23"
+ },
+ "p14-2": {
+  "min_eur": 38,
+  "avg_eur": 39.7,
+  "copies": 75,
+  "date": "2026-11-23"
+ },
+ "p14-5": {
+  "min_eur": 190,
+  "avg_eur": 204,
+  "copies": 62,
+  "date": "2026-11-23"
+ },
+ "p14-6": {
+  "min_eur": 65,
+  "avg_eur": 80,
+  "copies": 42,
+  "date": "2026-11-23"
+ },
+ "p14-7": {
+  "min_eur": 18,
+  "avg_eur": 20.9,
+  "copies": 84,
+  "date": "2026-11-23"
+ },
+ "p14-8": {
+  "min_eur": 15,
+  "avg_eur": 17.5,
+  "copies": 70,
+  "date": "2026-11-23"
+ },
+ "p15-2": {
+  "min_eur": 44,
+  "avg_eur": 44.99,
+  "copies": 64,
+  "date": "2026-11-23"
  }
 }

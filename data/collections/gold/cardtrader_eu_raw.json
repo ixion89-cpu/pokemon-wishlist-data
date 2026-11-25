@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24",
+  "date": "2026-11-25",
   "listings": {
     "351690": [
       {
@@ -43,7 +43,7 @@
         "reverse": false
       },
       {
-        "price_eur": 129.05,
+        "price_eur": 126.49,
         "condition": "NM",
         "graded": false,
         "language": "it",
@@ -54,16 +54,6 @@
       },
       {
         "price_eur": 129.06,
-        "condition": "NM",
-        "graded": false,
-        "language": "it",
-        "qty": 1,
-        "zero": true,
-        "seller_country": "IT",
-        "reverse": false
-      },
-      {
-        "price_eur": 130.64,
         "condition": "NM",
         "graded": false,
         "language": "it",
@@ -103,16 +93,6 @@
         "reverse": false
       },
       {
-        "price_eur": 150.61,
-        "condition": "NM",
-        "graded": false,
-        "language": "it",
-        "qty": 2,
-        "zero": true,
-        "seller_country": "IT",
-        "reverse": false
-      },
-      {
         "price_eur": 150.64,
         "condition": "NM",
         "graded": false,
@@ -134,6 +114,16 @@
       },
       {
         "price_eur": 161.9,
+        "condition": "NM",
+        "graded": false,
+        "language": "it",
+        "qty": 2,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 164.61,
         "condition": "NM",
         "graded": false,
         "language": "it",
@@ -265,26 +255,6 @@
     ],
     "351691": [
       {
-        "price_eur": 150.63,
-        "condition": "NM",
-        "graded": false,
-        "language": "it",
-        "qty": 1,
-        "zero": true,
-        "seller_country": "IT",
-        "reverse": false
-      },
-      {
-        "price_eur": 160.64,
-        "condition": "NM",
-        "graded": false,
-        "language": "it",
-        "qty": 1,
-        "zero": true,
-        "seller_country": "IT",
-        "reverse": false
-      },
-      {
         "price_eur": 162.22,
         "condition": "NM",
         "graded": false,
@@ -321,16 +291,6 @@
         "language": "it",
         "qty": 1,
         "zero": false,
-        "seller_country": "IT",
-        "reverse": false
-      },
-      {
-        "price_eur": 165.54,
-        "condition": "NM",
-        "graded": false,
-        "language": "it",
-        "qty": 1,
-        "zero": true,
         "seller_country": "IT",
         "reverse": false
       },
@@ -406,6 +366,16 @@
       },
       {
         "price_eur": 170.53,
+        "condition": "NM",
+        "graded": false,
+        "language": "it",
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 170.64,
         "condition": "NM",
         "graded": false,
         "language": "it",
@@ -547,7 +517,7 @@
     ],
     "356916": [
       {
-        "price_eur": 179.9,
+        "price_eur": 174.9,
         "condition": "PL",
         "graded": false,
         "language": "it",
@@ -607,6 +577,16 @@
         "reverse": false
       },
       {
+        "price_eur": 215.64,
+        "condition": "NM",
+        "graded": false,
+        "language": "it",
+        "qty": 2,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
         "price_eur": 216.87,
         "condition": "NM",
         "graded": false,
@@ -632,16 +612,6 @@
         "graded": false,
         "language": "it",
         "qty": 1,
-        "zero": true,
-        "seller_country": "IT",
-        "reverse": false
-      },
-      {
-        "price_eur": 220.64,
-        "condition": "NM",
-        "graded": false,
-        "language": "it",
-        "qty": 2,
         "zero": true,
         "seller_country": "IT",
         "reverse": false
@@ -732,16 +702,6 @@
         "graded": false,
         "language": "it",
         "qty": 1,
-        "zero": true,
-        "seller_country": "IT",
-        "reverse": false
-      },
-      {
-        "price_eur": 229.54,
-        "condition": "NM",
-        "graded": false,
-        "language": "it",
-        "qty": 2,
         "zero": true,
         "seller_country": "IT",
         "reverse": false
@@ -969,7 +929,7 @@
         "reverse": false
       },
       {
-        "price_eur": 275.53,
+        "price_eur": 275.52,
         "condition": "NM",
         "graded": false,
         "language": "it",
@@ -999,7 +959,7 @@
         "reverse": false
       },
       {
-        "price_eur": 277.57,
+        "price_eur": 275.53,
         "condition": "NM",
         "graded": false,
         "language": "it",
@@ -1105,16 +1065,6 @@
         "language": "it",
         "qty": 1,
         "zero": false,
-        "seller_country": "IT",
-        "reverse": false
-      },
-      {
-        "price_eur": 300.63,
-        "condition": "NM",
-        "graded": false,
-        "language": "it",
-        "qty": 1,
-        "zero": true,
         "seller_country": "IT",
         "reverse": false
       },
@@ -1271,7 +1221,17 @@
         "reverse": false
       },
       {
-        "price_eur": 107.1,
+        "price_eur": 105.06,
+        "condition": "NM",
+        "graded": false,
+        "language": "it",
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 105.55,
         "condition": "NM",
         "graded": false,
         "language": "it",
@@ -1292,16 +1252,6 @@
       },
       {
         "price_eur": 108.65,
-        "condition": "NM",
-        "graded": false,
-        "language": "it",
-        "qty": 1,
-        "zero": true,
-        "seller_country": "IT",
-        "reverse": false
-      },
-      {
-        "price_eur": 108.78,
         "condition": "NM",
         "graded": false,
         "language": "it",
@@ -1683,27 +1633,7 @@
         "reverse": false
       },
       {
-        "price_eur": 62.43,
-        "condition": "PO",
-        "graded": false,
-        "language": "it",
-        "qty": 1,
-        "zero": true,
-        "seller_country": "IT",
-        "reverse": false
-      },
-      {
         "price_eur": 67.63,
-        "condition": "NM",
-        "graded": false,
-        "language": "it",
-        "qty": 1,
-        "zero": false,
-        "seller_country": "IT",
-        "reverse": false
-      },
-      {
-        "price_eur": 67.64,
         "condition": "NM",
         "graded": false,
         "language": "it",
@@ -1803,16 +1733,6 @@
         "reverse": false
       },
       {
-        "price_eur": 80.54,
-        "condition": "NM",
-        "graded": false,
-        "language": "it",
-        "qty": 1,
-        "zero": true,
-        "seller_country": "IT",
-        "reverse": false
-      },
-      {
         "price_eur": 80.62,
         "condition": "NM",
         "graded": false,
@@ -1825,16 +1745,6 @@
       {
         "price_eur": 80.64,
         "condition": "NM",
-        "graded": false,
-        "language": "it",
-        "qty": 1,
-        "zero": true,
-        "seller_country": "IT",
-        "reverse": false
-      },
-      {
-        "price_eur": 80.64,
-        "condition": "SP",
         "graded": false,
         "language": "it",
         "qty": 1,
@@ -2005,21 +1915,21 @@
     ],
     "390062": [
       {
-        "price_eur": 78.27,
-        "condition": "NM",
-        "graded": false,
-        "language": "it",
-        "qty": 5,
-        "zero": true,
-        "seller_country": "IT",
-        "reverse": false
-      },
-      {
         "price_eur": 80.64,
         "condition": "NM",
         "graded": false,
         "language": "it",
         "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
+        "price_eur": 80.78,
+        "condition": "NM",
+        "graded": false,
+        "language": "it",
+        "qty": 5,
         "zero": true,
         "seller_country": "IT",
         "reverse": false
@@ -2059,7 +1969,7 @@
         "condition": "NM",
         "graded": false,
         "language": "it",
-        "qty": 1,
+        "qty": 2,
         "zero": true,
         "seller_country": "IT",
         "reverse": false
@@ -2170,16 +2080,6 @@
         "graded": false,
         "language": "it",
         "qty": 1,
-        "zero": true,
-        "seller_country": "IT",
-        "reverse": false
-      },
-      {
-        "price_eur": 95.63,
-        "condition": "NM",
-        "graded": false,
-        "language": "it",
-        "qty": 3,
         "zero": true,
         "seller_country": "IT",
         "reverse": false
@@ -2337,16 +2237,6 @@
         "reverse": false
       },
       {
-        "price_eur": 95.64,
-        "condition": "NM",
-        "graded": false,
-        "language": "it",
-        "qty": 1,
-        "zero": true,
-        "seller_country": "IT",
-        "reverse": false
-      },
-      {
         "price_eur": 105.52,
         "condition": "NM",
         "graded": false,
@@ -2477,16 +2367,6 @@
         "reverse": false
       },
       {
-        "price_eur": 120.54,
-        "condition": "NM",
-        "graded": false,
-        "language": "it",
-        "qty": 2,
-        "zero": true,
-        "seller_country": "IT",
-        "reverse": false
-      },
-      {
         "price_eur": 120.64,
         "condition": "NM",
         "graded": false,
@@ -2609,27 +2489,7 @@
     ],
     "421157": [
       {
-        "price_eur": 180.63,
-        "condition": "NM",
-        "graded": false,
-        "language": "it",
-        "qty": 1,
-        "zero": true,
-        "seller_country": "IT",
-        "reverse": false
-      },
-      {
-        "price_eur": 180.64,
-        "condition": "NM",
-        "graded": false,
-        "language": "it",
-        "qty": 1,
-        "zero": true,
-        "seller_country": "IT",
-        "reverse": false
-      },
-      {
-        "price_eur": 182.15,
+        "price_eur": 180.33,
         "condition": "NM",
         "graded": false,
         "language": "it",
@@ -2669,6 +2529,16 @@
         "reverse": false
       },
       {
+        "price_eur": 190.13,
+        "condition": "NM",
+        "graded": false,
+        "language": "it",
+        "qty": 1,
+        "zero": true,
+        "seller_country": "IT",
+        "reverse": false
+      },
+      {
         "price_eur": 200.64,
         "condition": "NM",
         "graded": false,
@@ -2680,16 +2550,6 @@
       },
       {
         "price_eur": 209.51,
-        "condition": "NM",
-        "graded": false,
-        "language": "it",
-        "qty": 1,
-        "zero": true,
-        "seller_country": "IT",
-        "reverse": false
-      },
-      {
-        "price_eur": 209.64,
         "condition": "NM",
         "graded": false,
         "language": "it",
@@ -2734,16 +2594,6 @@
         "graded": false,
         "language": "it",
         "qty": 2,
-        "zero": true,
-        "seller_country": "IT",
-        "reverse": false
-      },
-      {
-        "price_eur": 245.64,
-        "condition": "NM",
-        "graded": false,
-        "language": "it",
-        "qty": 1,
         "zero": true,
         "seller_country": "IT",
         "reverse": false

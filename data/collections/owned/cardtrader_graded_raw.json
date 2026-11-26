@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-25",
+  "date": "2026-11-26",
   "listings": {
     "274416": [
       {
@@ -45,19 +45,6 @@
       }
     ],
     "258696": [
-      {
-        "price_eur": 450.54,
-        "condition": "NM",
-        "graded": true,
-        "grader": "PSA",
-        "grade": 10,
-        "language": "it",
-        "qty": 1,
-        "zero": true,
-        "seller_country": "IT",
-        "description": "[PSA 10.0]",
-        "product_id": 433219903
-      },
       {
         "price_eur": 450.63,
         "condition": "NM",

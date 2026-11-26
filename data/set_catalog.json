@@ -607,6 +607,14 @@
       "logo_source": "pokemontcg.io",
       "ptcg_id": "cel25c",
       "release_date": "2021-10-08"
+    },
+    "151C": {
+      "name": "151C",
+      "year": 2025,
+      "logo": null,
+      "year_source": "bulbapedia",
+      "logo_source": null,
+      "release_date": "2025-01-17"
     }
   }
 }

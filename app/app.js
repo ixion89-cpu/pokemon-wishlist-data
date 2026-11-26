@@ -116,6 +116,7 @@ function sourceName(source) {
   if (source === "ct") return "CARDTRADER";
   if (source === "ctz") return "CARDTRADER ZERO";
   if (source === "purchase_fallback") return "PREZZO D'ACQUISTO";
+  if (String(source || "").startsWith("manual_market_")) return "RIFERIMENTO";
   return "N/D";
 }
 function badge(source) {
@@ -675,6 +676,7 @@ function sourceShort(source) {
   if (source === "ct") return "CT";
   if (source === "ctz") return "CT Zero";
   if (source === "purchase_fallback") return "Acquisto";
+  if (String(source || "").startsWith("manual_market_")) return "Manuale";
   return "";
 }
 function sleevePop(card) {

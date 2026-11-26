@@ -418,9 +418,21 @@ def main():
     cardmarket = cardmarket_table()
     new_rows, out = [], []
     for c in cards:
+        rec = dict(c)
+        if not c.get("cardtrader_blueprint_id"):
+            # Nessun blueprint: non si chiama CardTrader e non si azzera un prezzo manuale.
+            if not is_manual_price(rec):
+                rec["price_final_eur"] = None
+                rec["price_final_source"] = None
+                rec["buy_price_eur"] = None
+                rec["buy_price_source"] = None
+                rec["tier"] = tier(None)
+            rec["last_updated"] = stamp
+            out.append(rec)
+            print(f'{c["id"]:6} {c["name"][:32]:32} {rec.get("price_final_eur")} {rec.get("price_final_source") or "-"} (senza blueprint)', flush=True)
+            continue
         bid, lang = c["cardtrader_blueprint_id"], c.get("target_language", "it")
         reverse = c.get("pokemon_reverse") is True
-        rec = dict(c)
         bp = None
         try:
             # CardTrader include nel JSON solo chi spedisce nel paese del client,
@@ -547,6 +559,8 @@ def main():
         rec["copies_cm"] = cm.get("copies") if isinstance(cm.get("copies"), (int, float)) else None
         rec["price_cm_date"] = cm.get("date")
         price, source = choose_final(rec.get("price_ctz_eur"), rec.get("price_ct_eur"), rec.get("price_cm_eur"))
+        if is_manual_price(c) and price is None:
+            price, source = c.get("price_final_eur"), c.get("price_final_source")
         rec["price_final_eur"] = price
         rec["price_final_source"] = source
         rec["buy_price_eur"] = price
@@ -619,7 +633,31 @@ def main():
             subprocess.run(["git", "-C", ROOT, "push"], check=False)
 
 
+def is_manual_price(rec):
+    return str(rec.get("price_final_source") or "").startswith("manual_market_")
+
+
+def eu_has_listing(rec, eu_map):
+    """True solo se il file EU ha un annuncio usabile per questa carta."""
+    bid = rec.get("cardtrader_blueprint_id")
+    if not bid:
+        return False
+    rows = eu_map.get(str(bid)) if isinstance(eu_map, dict) else None
+    if not isinstance(rows, list):
+        return False
+    for row in rows:
+        if not isinstance(row, dict) or not eu_row_ok(row, rec) or listing_graded(row):
+            continue
+        if listing_condition(row) is None or not isinstance(row.get("price_eur"), (int, float)):
+            continue
+        return True
+    return False
+
+
 def apply_card_prices(rec, eu_map, cardmarket):
+    # Prezzo manuale: resta finché non compare un listino CardTrader vero.
+    if is_manual_price(rec) and not eu_has_listing(rec, eu_map):
+        return rec.get("price_final_eur"), rec.get("price_final_source")
     bid = str(rec.get("cardtrader_blueprint_id"))
     rows = eu_map.get(bid)
     # Una lista presente, anche vuota, è il listino di oggi: non si tiene il CardTrader di ieri.

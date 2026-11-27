@@ -362,3 +362,12 @@ date,card_id,blueprint_id,name,set_code,number,price_eur,language,condition,list
 2026-11-26,g1-7,390062,Mega Greninja ex,CRI,122,80.53,it,NM,30,cardtrader_listings_min,daily_snapshot,80.53,115.64,116.01
 2026-11-26,g1-8,399466,Mega Darkrai ex,PBL,120,105.52,it,NM,25,cardtrader_listings_min,daily_snapshot,105.52,105.64,131.65
 2026-11-26,g1-9,421157,Mega Rayquaza ex,DLR,141,184.61,it,NM,19,cardtrader_listings_min,daily_snapshot,184.61,178.53,230.82
+2026-11-27,g1-1,351690,Mega Gardevoir ex,MEG,187,120.62,it,NM,26,cardtrader_listings_min,daily_snapshot,120.62,100.64,191.24
+2026-11-27,g1-2,351691,Mega Lucario ex,MEG,188,160.36,it,NM,27,cardtrader_listings_min,daily_snapshot,160.36,164.64,203.26
+2026-11-27,g1-3,356916,Mega Charizard X ex,PFL,130,210.51,it,NM,31,cardtrader_listings_min,daily_snapshot,210.51,210.64,287.16
+2026-11-27,g1-4,370931,Mega Charizard Y ex,ASC,294,226.21,it,NM,29,cardtrader_listings_min,daily_snapshot,226.21,263.64,322.15
+2026-11-27,g1-5,370932,Mega Dragonite ex,ASC,295,100.62,it,NM,44,cardtrader_listings_min,daily_snapshot,100.62,108.64,142.92
+2026-11-27,g1-6,378969,Mega Zygarde ex,POR,124,71.27,it,NM,26,cardtrader_listings_min,daily_snapshot,71.27,80.24,99.87
+2026-11-27,g1-7,390062,Mega Greninja ex,CRI,122,80.53,it,NM,31,cardtrader_listings_min,daily_snapshot,80.53,115.64,114.89
+2026-11-27,g1-8,399466,Mega Darkrai ex,PBL,120,96.26,it,NM,27,cardtrader_listings_min,daily_snapshot,96.26,105.64,128.32
+2026-11-27,g1-9,421157,Mega Rayquaza ex,DLR,141,184.61,it,NM,16,cardtrader_listings_min,daily_snapshot,184.61,200.64,242.94

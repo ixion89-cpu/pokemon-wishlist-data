@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "listings": {
     "274416": [
       {
@@ -73,19 +73,6 @@
       }
     ],
     "258697": [
-      {
-        "price_eur": 245.63,
-        "condition": "NM",
-        "graded": true,
-        "grader": "PSA",
-        "grade": 10,
-        "language": "it",
-        "qty": 1,
-        "zero": true,
-        "seller_country": "IT",
-        "description": "[PSA 10.0 Gem-Mint]",
-        "product_id": 468870103
-      },
       {
         "price_eur": 250.64,
         "condition": "NM",

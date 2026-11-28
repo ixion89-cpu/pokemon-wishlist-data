@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T06:52:03+01:00",
+ "generated_at": "2026-11-28T06:50:29+01:00",
  "definition": "ct_it = copie CardTrader lingua target NM non gradate; ct_it_all = tutte le condizioni; cm_it = copie Cardmarket lingua target, tutte le condizioni (TCGNotify); total = ct_it + cm_it; total_all = ct_it_all + cm_it. Nessuna interpolazione.",
  "cards": {
   "p3-5": {
@@ -11,9 +11,9 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 13,
    "ct_latest": 8,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": 166.7,
-   "ct_base_date": "2026-10-28"
+   "ct_base_date": "2026-10-29"
   },
   "p3-6": {
    "pop_total_now": 14,
@@ -24,9 +24,9 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 12,
    "ct_latest": 8,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
-   "ct_base_date": "2026-10-28"
+   "ct_base_date": "2026-10-29"
   },
   "p3-7": {
    "pop_total_now": 16,
@@ -37,9 +37,9 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 13,
    "ct_latest": 15,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": 400.0,
-   "ct_base_date": "2026-10-28"
+   "ct_base_date": "2026-10-29"
   },
   "p3-8": {
    "pop_total_now": 10,
@@ -50,9 +50,9 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 14,
    "ct_latest": 16,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": 300.0,
-   "ct_base_date": "2026-10-28"
+   "ct_base_date": "2026-10-29"
   },
   "p3-9": {
    "pop_total_now": 23,
@@ -63,9 +63,9 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 20,
    "ct_latest": 17,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": 183.3,
-   "ct_base_date": "2026-10-28"
+   "ct_base_date": "2026-10-29"
   },
   "p4-1": {
    "pop_total_now": 11,
@@ -76,9 +76,9 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 12,
    "ct_latest": 20,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": 300.0,
-   "ct_base_date": "2026-10-28"
+   "ct_base_date": "2026-10-29"
   },
   "p4-2": {
    "pop_total_now": 17,
@@ -88,10 +88,10 @@
    "pop_change_30d_pct": 6.2,
    "pop_base_date": "2026-10-18",
    "pop_base_total": 16,
-   "ct_latest": 15,
-   "ct_latest_date": "2026-11-27",
-   "ct_change_30d_pct": 650.0,
-   "ct_base_date": "2026-10-28"
+   "ct_latest": 14,
+   "ct_latest_date": "2026-11-28",
+   "ct_change_30d_pct": 600.0,
+   "ct_base_date": "2026-10-29"
   },
   "p4-3": {
    "pop_total_now": 13,
@@ -102,9 +102,9 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 13,
    "ct_latest": 12,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": 1100.0,
-   "ct_base_date": "2026-10-28"
+   "ct_base_date": "2026-10-29"
   },
   "p4-4": {
    "pop_total_now": 20,
@@ -114,10 +114,10 @@
    "pop_change_30d_pct": -4.8,
    "pop_base_date": "2026-10-18",
    "pop_base_total": 21,
-   "ct_latest": 35,
-   "ct_latest_date": "2026-11-27",
-   "ct_change_30d_pct": 3400.0,
-   "ct_base_date": "2026-10-28"
+   "ct_latest": 33,
+   "ct_latest_date": "2026-11-28",
+   "ct_change_30d_pct": 3200.0,
+   "ct_base_date": "2026-10-29"
   },
   "p4-5": {
    "pop_total_now": 8,
@@ -128,9 +128,9 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 9,
    "ct_latest": 8,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": 300.0,
-   "ct_base_date": "2026-10-28"
+   "ct_base_date": "2026-10-29"
   },
   "p4-6": {
    "pop_total_now": 20,
@@ -141,9 +141,9 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 23,
    "ct_latest": 2,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": 0.0,
-   "ct_base_date": "2026-10-28"
+   "ct_base_date": "2026-10-29"
   },
   "p5-1": {
    "pop_total_now": 17,
@@ -154,9 +154,9 @@
    "pop_base_date": "2026-10-18",
    "pop_base_total": 16,
    "ct_latest": 32,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": 700.0,
-   "ct_base_date": "2026-10-28"
+   "ct_base_date": "2026-10-29"
   },
   "p8-8": {
    "pop_total_now": 4,
@@ -166,10 +166,10 @@
    "pop_change_30d_pct": -20.0,
    "pop_base_date": "2026-10-18",
    "pop_base_total": 5,
-   "ct_latest": 9,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest": 8,
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
-   "ct_base_date": "2026-10-28"
+   "ct_base_date": "2026-10-29"
   },
   "p9-3": {
    "pop_total_now": 3,
@@ -180,7 +180,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 5,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -192,8 +192,8 @@
    "pop_change_30d_pct": null,
    "pop_base_date": null,
    "pop_base_total": null,
-   "ct_latest": 9,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest": 8,
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -205,8 +205,8 @@
    "pop_change_30d_pct": null,
    "pop_base_date": null,
    "pop_base_total": null,
-   "ct_latest": 39,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest": 38,
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -219,7 +219,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 57,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -232,7 +232,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 63,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -244,8 +244,8 @@
    "pop_change_30d_pct": null,
    "pop_base_date": null,
    "pop_base_total": null,
-   "ct_latest": 20,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest": 19,
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -258,7 +258,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 4,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -270,8 +270,8 @@
    "pop_change_30d_pct": null,
    "pop_base_date": null,
    "pop_base_total": null,
-   "ct_latest": 20,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest": 18,
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -284,7 +284,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 17,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -297,7 +297,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 19,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -310,7 +310,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 30,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -323,7 +323,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 38,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -336,7 +336,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 19,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -349,7 +349,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 40,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -361,8 +361,8 @@
    "pop_change_30d_pct": null,
    "pop_base_date": null,
    "pop_base_total": null,
-   "ct_latest": 68,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest": 67,
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -374,8 +374,8 @@
    "pop_change_30d_pct": null,
    "pop_base_date": null,
    "pop_base_total": null,
-   "ct_latest": 17,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest": 16,
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -388,7 +388,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 35,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -401,7 +401,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 33,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -413,8 +413,8 @@
    "pop_change_30d_pct": null,
    "pop_base_date": null,
    "pop_base_total": null,
-   "ct_latest": 50,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest": 51,
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -427,7 +427,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 42,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -439,8 +439,8 @@
    "pop_change_30d_pct": null,
    "pop_base_date": null,
    "pop_base_total": null,
-   "ct_latest": 28,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest": 29,
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -452,8 +452,8 @@
    "pop_change_30d_pct": null,
    "pop_base_date": null,
    "pop_base_total": null,
-   "ct_latest": 37,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest": 38,
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -466,7 +466,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 48,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -479,7 +479,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 22,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -492,7 +492,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 21,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -505,7 +505,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 14,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -517,8 +517,8 @@
    "pop_change_30d_pct": null,
    "pop_base_date": null,
    "pop_base_total": null,
-   "ct_latest": 29,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest": 28,
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -531,7 +531,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 31,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -543,8 +543,8 @@
    "pop_change_30d_pct": null,
    "pop_base_date": null,
    "pop_base_total": null,
-   "ct_latest": 73,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest": 74,
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   },
@@ -557,7 +557,7 @@
    "pop_base_date": null,
    "pop_base_total": null,
    "ct_latest": 17,
-   "ct_latest_date": "2026-11-27",
+   "ct_latest_date": "2026-11-28",
    "ct_change_30d_pct": null,
    "ct_base_date": null
   }
